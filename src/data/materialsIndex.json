@@ -1,0 +1,98 @@
+[
+  {
+    "week": 1,
+    "slug": "semana-01",
+    "title": "Leer los estados contables sin miedo",
+    "word": "/materiales/semana-01/Semana-01-Teoria.docx",
+    "excel": "/materiales/semana-01/Semana-01-Modelo.xlsx",
+    "prompt": "/materiales/semana-01/Semana-01-Prompts.md"
+  },
+  {
+    "week": 2,
+    "slug": "semana-02",
+    "title": "Contabilidad de presentación vs. información de gestión",
+    "word": "/materiales/semana-02/Semana-02-Teoria.docx",
+    "excel": "/materiales/semana-02/Semana-02-Modelo.xlsx",
+    "prompt": "/materiales/semana-02/Semana-02-Prompts.md"
+  },
+  {
+    "week": 3,
+    "slug": "semana-03",
+    "title": "De la utilidad al valor operativo: NOPAT, Capital Invertido y ROIC",
+    "word": "/materiales/semana-03/Semana-03-Teoria.docx",
+    "excel": "/materiales/semana-03/Semana-03-Modelo.xlsx",
+    "prompt": "/materiales/semana-03/Semana-03-Prompts.md"
+  },
+  {
+    "week": 4,
+    "slug": "semana-04",
+    "title": "EVA y el spread ROIC − WACC: ganar plata y destruir valor a la vez",
+    "word": "/materiales/semana-04/Semana-04-Teoria.docx",
+    "excel": "/materiales/semana-04/Semana-04-Modelo.xlsx",
+    "prompt": "/materiales/semana-04/Semana-04-Prompts.md"
+  },
+  {
+    "week": 5,
+    "slug": "semana-05",
+    "title": "Lo económico vs lo financiero",
+    "word": "/materiales/semana-05/Semana-05-Teoria.docx",
+    "excel": "/materiales/semana-05/Semana-05-Modelo.xlsx",
+    "prompt": "/materiales/semana-05/Semana-05-Prompts.md"
+  },
+  {
+    "week": 6,
+    "slug": "semana-06",
+    "title": "Free Cash Flow: FCFF, FCFE y FCFD",
+    "word": "/materiales/semana-06/Semana-06-Teoria.docx",
+    "excel": "/materiales/semana-06/Semana-06-Modelo.xlsx",
+    "prompt": "/materiales/semana-06/Semana-06-Prompts.md"
+  },
+  {
+    "week": 7,
+    "slug": "semana-07",
+    "title": "Capital de trabajo: el ciclo de conversión de caja",
+    "word": "/materiales/semana-07/Semana-07-Teoria.docx",
+    "excel": "/materiales/semana-07/Semana-07-Modelo.xlsx",
+    "prompt": "/materiales/semana-07/Semana-07-Prompts.md"
+  },
+  {
+    "week": 8,
+    "slug": "semana-08",
+    "title": "Bienes de uso y CAPEX: lo que dice el libro y lo que vale en serio",
+    "word": "/materiales/semana-08/Semana-08-Teoria.docx",
+    "excel": "/materiales/semana-08/Semana-08-Modelo.xlsx",
+    "prompt": "/materiales/semana-08/Semana-08-Prompts.md"
+  },
+  {
+    "week": 9,
+    "slug": "semana-09",
+    "title": "El costo del capital: WACC en mercados emergentes",
+    "word": "/materiales/semana-09/Semana-09-Teoria.docx",
+    "excel": "/materiales/semana-09/Semana-09-Modelo.xlsx",
+    "prompt": "/materiales/semana-09/Semana-09-Prompts.md"
+  },
+  {
+    "week": 10,
+    "slug": "semana-10",
+    "title": "Apalancamiento: la deuda como multiplicador de ganancias y de pérdidas",
+    "word": "/materiales/semana-10/Semana-10-Teoria.docx",
+    "excel": "/materiales/semana-10/Semana-10-Modelo.xlsx",
+    "prompt": "/materiales/semana-10/Semana-10-Prompts.md"
+  },
+  {
+    "week": 11,
+    "slug": "semana-11",
+    "title": "Tasas, tiempo y financiamiento inteligente",
+    "word": "/materiales/semana-11/Semana-11-Teoria.docx",
+    "excel": "/materiales/semana-11/Semana-11-Modelo.xlsx",
+    "prompt": "/materiales/semana-11/Semana-11-Prompts.md"
+  },
+  {
+    "week": 12,
+    "slug": "semana-12",
+    "title": "Valuación integral por DCF y plan de creación de valor",
+    "word": "/materiales/semana-12/Semana-12-Teoria.docx",
+    "excel": "/materiales/semana-12/Semana-12-Modelo.xlsx",
+    "prompt": "/materiales/semana-12/Semana-12-Prompts.md"
+  }
+]

@@ -3,7 +3,8 @@ import { Link, useParams, useNavigate } from 'react-router-dom'
 import { useStore } from '../store/store'
 import { LessonBlockView } from '../components/LessonBlock'
 import type { QuizQuestion } from '../types'
-import { ArrowLeft, ArrowRight, CheckCircle2, Clock, Target } from 'lucide-react'
+import { ArrowLeft, ArrowRight, CheckCircle2, Clock, Target, FileText, FileSpreadsheet, Sparkles, Download } from 'lucide-react'
+import materialsIndex from '../data/materialsIndex.json'
 
 export default function LessonPage() {
   const { lessonId } = useParams()
@@ -59,6 +60,9 @@ export default function LessonPage() {
         </ul>
       </div>
 
+      {/* Material descargable de la semana */}
+      <MaterialDownloads week={lesson.week} />
+
       {/* Contenido */}
       <div>
         {lesson.blocks.map((b, i) => (
@@ -92,6 +96,60 @@ export default function LessonPage() {
         )}
       </div>
     </article>
+  )
+}
+
+function MaterialDownloads({ week }: { week: number }) {
+  const entry = (materialsIndex as { week: number; word: string; excel: string; prompt: string }[]).find(
+    (m) => m.week === week,
+  )
+  if (!entry) return null
+  const items = [
+    {
+      href: entry.word,
+      icon: FileText,
+      label: 'Documento Word',
+      desc: 'Teoría detallada y didáctica con técnicas modernas.',
+      tone: 'text-blue-300',
+    },
+    {
+      href: entry.excel,
+      icon: FileSpreadsheet,
+      label: 'Modelo Excel interactivo',
+      desc: 'Editá las celdas amarillas; matrices dinámicas y conclusiones automáticas.',
+      tone: 'text-value-400',
+    },
+    {
+      href: entry.prompt,
+      icon: Sparkles,
+      label: 'Guía de Prompt Engineering',
+      desc: 'Generá tu propio caso y simulador con Gemini, ChatGPT o Claude.',
+      tone: 'text-gold-300',
+    },
+  ]
+  return (
+    <div className="card mb-8 p-5">
+      <div className="mb-3 flex items-center gap-2 text-gold-300">
+        <Download size={18} /> <h2 className="text-sm font-bold uppercase tracking-wider">Material descargable de la semana</h2>
+      </div>
+      <div className="grid gap-3 sm:grid-cols-3">
+        {items.map((it) => (
+          <a
+            key={it.href}
+            href={it.href}
+            download
+            className="group flex flex-col rounded-xl border border-ink-600 bg-ink-900/60 p-4 transition hover:border-gold-400/40 hover:shadow-glow"
+          >
+            <it.icon size={24} className={`mb-2 ${it.tone}`} />
+            <span className="text-sm font-semibold text-slate-100">{it.label}</span>
+            <span className="mt-1 flex-1 text-xs text-slate-400">{it.desc}</span>
+            <span className="mt-3 inline-flex items-center gap-1.5 text-xs font-semibold text-gold-300">
+              <Download size={13} /> Descargar
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
   )
 }
 
