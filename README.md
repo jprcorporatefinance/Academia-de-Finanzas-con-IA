@@ -65,6 +65,26 @@ npm run build    # build de producción + type-check
 npm run preview  # previsualizar el build
 ```
 
+## Despliegue automático (GitHub Actions → Netlify)
+
+El repo incluye `.github/workflows/deploy.yml`, que en cada push hace **build + type-check**
+y, al integrar en `main` (o ejecutándolo manualmente desde la pestaña **Actions →
+Run workflow**), publica el sitio en Netlify.
+
+El proyecto de Netlify ya está creado: **`academia-finanzas-corporativas-ia`**
+(URL: `https://academia-finanzas-corporativas-ia.netlify.app`, Site ID
+`3831feb3-951b-41f3-a9ff-7009d110b2b0`).
+
+**Único paso manual:** agregar el token de Netlify como secret del repositorio.
+
+1. En Netlify: *User settings → Applications → Personal access tokens → New access token*.
+2. En GitHub: *Settings → Secrets and variables → Actions → New repository secret*,
+   nombre **`NETLIFY_AUTH_TOKEN`**, valor el token generado.
+3. Hacé push a `main` (o corré el workflow a mano) y el deploy queda en vivo.
+
+> Alternativa sin secret: conectar el repo directamente al proyecto de Netlify desde el
+> dashboard (*Connect to a Git repository*); el `netlify.toml` ya define build y redirects.
+
 ## Accesos de demostración
 
 | Rol | Email | Contraseña |
