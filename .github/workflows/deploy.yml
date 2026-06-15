@@ -22,9 +22,6 @@ jobs:
           cache: npm
       - run: npm ci
       - name: Type-check + build
-        env:
-          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
-          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
         run: npm run build
       - name: Guardar artefacto del build
         uses: actions/upload-artifact@v4
@@ -48,11 +45,7 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm ci
-      - name: Build con variables de entorno
-        env:
-          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
-          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
-        run: npm run build
+      - run: npm run build
       - name: Publicar en Netlify
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
