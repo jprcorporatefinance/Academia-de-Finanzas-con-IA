@@ -5,7 +5,8 @@
     "title": "Leer los estados contables sin miedo",
     "word": "/materiales/semana-01/Semana-01-Teoria.docx",
     "excel": "/materiales/semana-01/Semana-01-Modelo.xlsx",
-    "prompt": "/materiales/semana-01/Semana-01-Prompts.md"
+    "prompt": "/materiales/semana-01/Semana-01-Prompts.md",
+    "workbook": "/materiales/estados-contables/Estados-Contables-Interactivo.xlsx"
   },
   {
     "week": 2,
@@ -13,7 +14,8 @@
     "title": "Contabilidad de presentación vs. información de gestión",
     "word": "/materiales/semana-02/Semana-02-Teoria.docx",
     "excel": "/materiales/semana-02/Semana-02-Modelo.xlsx",
-    "prompt": "/materiales/semana-02/Semana-02-Prompts.md"
+    "prompt": "/materiales/semana-02/Semana-02-Prompts.md",
+    "workbook": "/materiales/estados-contables/Estados-Contables-Interactivo.xlsx"
   },
   {
     "week": 3,
@@ -37,7 +39,8 @@
     "title": "Lo económico vs lo financiero",
     "word": "/materiales/semana-05/Semana-05-Teoria.docx",
     "excel": "/materiales/semana-05/Semana-05-Modelo.xlsx",
-    "prompt": "/materiales/semana-05/Semana-05-Prompts.md"
+    "prompt": "/materiales/semana-05/Semana-05-Prompts.md",
+    "workbook": "/materiales/estados-contables/Estados-Contables-Interactivo.xlsx"
   },
   {
     "week": 6,

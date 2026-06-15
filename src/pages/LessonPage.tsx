@@ -100,11 +100,22 @@ export default function LessonPage() {
 }
 
 function MaterialDownloads({ week }: { week: number }) {
-  const entry = (materialsIndex as { week: number; word: string; excel: string; prompt: string }[]).find(
+  const entry = (materialsIndex as { week: number; word: string; excel: string; prompt: string; workbook?: string }[]).find(
     (m) => m.week === week,
   )
   if (!entry) return null
   const items = [
+    ...(entry.workbook
+      ? [
+          {
+            href: entry.workbook,
+            icon: FileSpreadsheet,
+            label: 'Workbook Estados Contables',
+            desc: 'Balance y Resultados con drill-down, articulación de la partida doble e indicadores vinculados.',
+            tone: 'text-gold-300',
+          },
+        ]
+      : []),
     {
       href: entry.word,
       icon: FileText,

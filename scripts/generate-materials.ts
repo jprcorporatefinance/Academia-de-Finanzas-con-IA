@@ -28,6 +28,8 @@ import { fileURLToPath } from 'node:url'
 import { curriculum } from '../src/data/curriculum/index'
 import type { ContentBlock, Lesson } from '../src/types'
 import { weekMaterials } from './materials'
+import { buildEstadosWorkbook } from './estadosWorkbook'
+import { deepDiveByWeek } from './deepdive/index'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const ROOT = join(__dirname, '..')
@@ -140,7 +142,17 @@ function docxTable(headers: string[], rows: string[][]): Table {
   })
 }
 
-async function buildWord(lesson: Lesson, modernIntro: string[]) {
+function deepSection(heading: string, paragraphs: string[]): Paragraph[] {
+  const out: Paragraph[] = [new Paragraph({ heading: HeadingLevel.HEADING_2, children: runs(heading), spacing: { before: 220, after: 100 } })]
+  for (const p of paragraphs) {
+    if (p.split('\n').every((l) => l.trim().startsWith('- ')))
+      p.split('\n').forEach((l) => out.push(new Paragraph({ children: runs(l.replace(/^\s*-\s/, '')), bullet: { level: 0 }, spacing: { after: 60 } })))
+    else out.push(para(p))
+  }
+  return out
+}
+
+async function buildWord(lesson: Lesson, modernIntro: string[], deepDive: { heading: string; paragraphs: string[] }[]) {
   const children: (Paragraph | Table)[] = []
   children.push(new Paragraph({ alignment: AlignmentType.CENTER, children: [new TextRun({ text: 'ACADEMIA DE FINANZAS CORPORATIVAS + IA', bold: true, color: GOLD, size: 20 })], spacing: { after: 60 } }))
   children.push(new Paragraph({ heading: HeadingLevel.TITLE, children: runs(`Semana ${lesson.week} · ${lesson.title}`), spacing: { after: 60 } }))
@@ -154,7 +166,10 @@ async function buildWord(lesson: Lesson, modernIntro: string[]) {
     modernIntro.forEach((p) => children.push(para(p)))
   }
 
-  children.push(new Paragraph({ heading: HeadingLevel.HEADING_2, children: runs('Desarrollo conceptual'), spacing: { before: 220, after: 100 } }))
+  // Desarrollo ampliado (deep dive): secciones extensas con interrelaciones.
+  deepDive.forEach((s) => deepSection(s.heading, s.paragraphs).forEach((p) => children.push(p)))
+
+  children.push(new Paragraph({ heading: HeadingLevel.HEADING_2, children: runs('Resumen del caso y fórmulas'), spacing: { before: 220, after: 100 } }))
   lesson.blocks.forEach((b) => blockToDocx(b).forEach((p) => children.push(p)))
 
   children.push(new Paragraph({ heading: HeadingLevel.HEADING_2, children: runs('Cómo usar el material de la semana'), spacing: { before: 240 } }))
@@ -408,14 +423,23 @@ Listá los errores o riesgos que encuentres y corregilos.
 // Main
 // ---------------------------------------------------------------------------
 async function main() {
-  const index: { week: number; slug: string; title: string; word: string; excel: string; prompt: string }[] = []
+  // Workbook maestro de Estados Contables (drill-down + articulación + indicadores)
+  const wbDir = join(OUT, 'estados-contables')
+  mkdirSync(wbDir, { recursive: true })
+  const wbBuf = await buildEstadosWorkbook()
+  const wbName = 'Estados-Contables-Interactivo.xlsx'
+  writeFileSync(join(wbDir, wbName), wbBuf)
+  const workbookPath = `/materiales/estados-contables/${wbName}`
+  console.log('✓ Workbook de Estados Contables generado')
+
+  const index: { week: number; slug: string; title: string; word: string; excel: string; prompt: string; workbook?: string }[] = []
   for (const lesson of curriculum.filter((l) => l.week >= 1 && l.week <= 12)) {
     const mat = weekMaterials.find((m) => m.week === lesson.week)
     if (!mat) { console.warn(`Sin material para semana ${lesson.week}`); continue }
     const dir = join(OUT, `semana-${pad(lesson.week)}`)
     mkdirSync(dir, { recursive: true })
 
-    const wordBuf = await buildWord(lesson, mat.modernIntro)
+    const wordBuf = await buildWord(lesson, mat.modernIntro, deepDiveByWeek[lesson.week] ?? [])
     const excelBuf = await buildExcel(lesson, mat)
     const promptStr = buildPrompt(lesson, mat)
 
@@ -434,6 +458,8 @@ async function main() {
       word: `/materiales/semana-${pad(lesson.week)}/${wordName}`,
       excel: `/materiales/semana-${pad(lesson.week)}/${excelName}`,
       prompt: `/materiales/semana-${pad(lesson.week)}/${promptName}`,
+      // El workbook de estados contables acompaña a las semanas de lectura/análisis.
+      ...([1, 2, 5].includes(lesson.week) ? { workbook: workbookPath } : {}),
     })
     console.log(`✓ Semana ${pad(lesson.week)} — Word, Excel y Prompts generados`)
   }
