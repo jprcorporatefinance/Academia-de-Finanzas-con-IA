@@ -4,10 +4,12 @@ import { useStore } from '../store/store'
 import { TrendingUp, ArrowRight } from 'lucide-react'
 
 export default function LoginPage() {
-  const { login, register } = useStore()
+  const { login, register, backend } = useStore()
   const navigate = useNavigate()
   const [mode, setMode] = useState<'login' | 'register'>('login')
   const [error, setError] = useState('')
+  const [info, setInfo] = useState('')
+  const [busy, setBusy] = useState(false)
 
   // login
   const [email, setEmail] = useState('')
@@ -17,25 +19,39 @@ export default function LoginPage() {
   const [company, setCompany] = useState('')
   const [position, setPosition] = useState('')
 
-  function handleLogin(e: React.FormEvent) {
+  async function handleLogin(e: React.FormEvent) {
     e.preventDefault()
-    setError('')
-    if (login(email, password)) navigate('/app')
+    setError(''); setInfo(''); setBusy(true)
+    const ok = await login(email, password)
+    setBusy(false)
+    if (ok) navigate('/app')
     else setError('Email o contraseña incorrectos.')
   }
-  function handleRegister(e: React.FormEvent) {
+  async function handleRegister(e: React.FormEvent) {
     e.preventDefault()
-    setError('')
+    setError(''); setInfo('')
     if (!name || !email || !password) {
       setError('Completá nombre, email y contraseña.')
       return
     }
-    if (register({ name, email, password, company, position })) navigate('/app')
-    else setError('Ese email ya está registrado.')
+    setBusy(true)
+    const res = await register({ name, email, password, company, position })
+    setBusy(false)
+    if (res.ok && res.needsConfirmation) {
+      setInfo('Cuenta creada. Revisá tu email para confirmar la dirección y luego ingresá.')
+      setMode('login')
+    } else if (res.ok) {
+      navigate('/app')
+    } else {
+      setError(res.error ?? 'No se pudo crear la cuenta.')
+    }
   }
 
-  function quickLogin(em: string, pw: string) {
-    if (login(em, pw)) navigate('/app')
+  async function quickLogin(em: string, pw: string) {
+    setBusy(true)
+    const ok = await login(em, pw)
+    setBusy(false)
+    if (ok) navigate('/app')
   }
 
   return (
@@ -55,7 +71,7 @@ export default function LoginPage() {
                 key={m}
                 onClick={() => {
                   setMode(m)
-                  setError('')
+                  setError(''); setInfo('')
                 }}
                 className={`flex-1 rounded-lg py-2 text-sm font-semibold transition ${
                   mode === m ? 'bg-gold-400 text-ink-950' : 'text-slate-400'
@@ -71,6 +87,11 @@ export default function LoginPage() {
               {error}
             </div>
           )}
+          {info && (
+            <div className="mb-4 rounded-lg border border-value-500/40 bg-value-500/10 px-3 py-2 text-sm text-value-400">
+              {info}
+            </div>
+          )}
 
           {mode === 'login' ? (
             <form onSubmit={handleLogin} className="space-y-4">
@@ -82,8 +103,8 @@ export default function LoginPage() {
                 <label className="label">Contraseña</label>
                 <input className="input" type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="••••••" />
               </div>
-              <button className="btn-gold w-full py-3" type="submit">
-                Entrar <ArrowRight size={18} />
+              <button className="btn-gold w-full py-3" type="submit" disabled={busy}>
+                {busy ? 'Ingresando…' : 'Entrar'} <ArrowRight size={18} />
               </button>
             </form>
           ) : (
@@ -110,27 +131,33 @@ export default function LoginPage() {
                 <label className="label">Contraseña</label>
                 <input className="input" type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Elegí una contraseña" />
               </div>
-              <button className="btn-gold w-full py-3" type="submit">
-                Crear cuenta <ArrowRight size={18} />
+              <button className="btn-gold w-full py-3" type="submit" disabled={busy}>
+                {busy ? 'Creando…' : 'Crear cuenta'} <ArrowRight size={18} />
               </button>
             </form>
           )}
         </div>
 
-        {/* Accesos demo */}
-        <div className="mt-5 card p-4">
-          <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-slate-400">Accesos de demostración</p>
-          <div className="grid gap-2">
-            <button onClick={() => quickLogin('admin@academia.com', 'admin123')} className="btn-ghost justify-between text-sm">
-              <span>👑 Administrador</span>
-              <span className="text-xs text-slate-500">admin@academia.com</span>
-            </button>
-            <button onClick={() => quickLogin('mfacosta@empresa.com', 'demo123')} className="btn-ghost justify-between text-sm">
-              <span>🎓 Alumna (CEO)</span>
-              <span className="text-xs text-slate-500">mfacosta@empresa.com</span>
-            </button>
+        {/* Accesos demo (solo en modo local) o nota del backend real */}
+        {backend === 'local' ? (
+          <div className="mt-5 card p-4">
+            <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-slate-400">Accesos de demostración</p>
+            <div className="grid gap-2">
+              <button onClick={() => quickLogin('admin@academia.com', 'admin123')} className="btn-ghost justify-between text-sm">
+                <span>👑 Administrador</span>
+                <span className="text-xs text-slate-500">admin@academia.com</span>
+              </button>
+              <button onClick={() => quickLogin('mfacosta@empresa.com', 'demo123')} className="btn-ghost justify-between text-sm">
+                <span>🎓 Alumna (CEO)</span>
+                <span className="text-xs text-slate-500">mfacosta@empresa.com</span>
+              </button>
+            </div>
           </div>
-        </div>
+        ) : (
+          <p className="mt-5 text-center text-xs text-slate-500">
+            El primer usuario que se registra queda como <span className="text-gold-300">administrador</span> del programa.
+          </p>
+        )}
       </div>
     </div>
   )

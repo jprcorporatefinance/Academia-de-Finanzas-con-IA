@@ -85,15 +85,43 @@ El proyecto de Netlify ya está creado: **`academia-finanzas-corporativas-ia`**
 > Alternativa sin secret: conectar el repo directamente al proyecto de Netlify desde el
 > dashboard (*Connect to a Git repository*); el `netlify.toml` ya define build y redirects.
 
-## Accesos de demostración
+## Backend con Supabase (opcional, recomendado para producción)
+
+La app funciona en dos modos según haya o no variables de entorno:
+
+- **Sin configurar** → persistencia en `localStorage` (demo, monodispositivo). Incluye
+  los accesos de demostración de abajo.
+- **Con Supabase** → backend real: autenticación por email/contraseña, datos
+  multiusuario y multidispositivo, con Row-Level Security. El **primer usuario que se
+  registra queda como administrador** del programa; el resto, como alumnos.
+
+### Puesta en marcha de Supabase
+
+1. Creá un proyecto gratis en [supabase.com](https://supabase.com) (región sugerida:
+   *South America (São Paulo)*).
+2. En el **SQL Editor**, pegá y ejecutá el contenido de
+   [`supabase/migrations/0001_init.sql`](supabase/migrations/0001_init.sql). Crea las
+   tablas, las políticas RLS y el trigger que da de alta el perfil al registrarse.
+3. (Opcional) *Authentication → Providers → Email*: desactivá **Confirm email** para que
+   el alta entre directo sin paso de confirmación (más cómodo para un programa cerrado).
+4. *Project Settings → API*: copiá el **Project URL** y la **anon public key**.
+5. Definí las variables de entorno (ver `.env.example`):
+   - Local: creá un archivo `.env` con `VITE_SUPABASE_URL` y `VITE_SUPABASE_ANON_KEY`.
+   - Netlify: *Site settings → Environment variables* y agregá esas dos. Luego redeploy.
+6. Entrá al sitio y **registrate con tu email**: esa primera cuenta queda como admin.
+
+> La capa de datos está aislada en `src/store/` (`localStore.tsx` / `remoteStore.tsx`),
+> así que cambiar de backend no toca ni la UI ni los simuladores.
+
+## Accesos de demostración (solo modo `localStorage`)
 
 | Rol | Email | Contraseña |
 |---|---|---|
 | Administrador | `admin@academia.com` | `admin123` |
 | Alumna (CEO) | `mfacosta@empresa.com` | `demo123` |
 
-> Los datos de demostración (alumnos, progreso y mensajes) se inicializan automáticamente.
-> El registro de nuevos alumnos está habilitado desde la pantalla de ingreso.
+> Los datos de demostración (alumnos, progreso y mensajes) se inicializan automáticamente
+> cuando NO hay Supabase configurado. Con Supabase, la base arranca limpia.
 
 ## Estructura
 
@@ -106,6 +134,10 @@ src/
   lib/finance.ts  Motor financiero (NOPAT, ROIC, EVA, WACC, FCF, DCF, tasas…)
   pages/          Landing, login, dashboard, programa, lección, simuladores, alumnos, mensajes
   simulators/     Los 10 simuladores interactivos + registro
-  store/          Estado global, persistencia y datos semilla
+  store/          Capa de datos: context.ts (API), localStore (localStorage),
+                  remoteStore (Supabase), store.tsx (selector de backend)
+  lib/supabase.ts Cliente de Supabase (activo solo si hay env vars)
   types.ts        Tipos de dominio
+supabase/
+  migrations/     0001_init.sql — esquema, RLS y triggers
 ```

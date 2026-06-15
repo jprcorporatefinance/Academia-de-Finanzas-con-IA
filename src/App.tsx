@@ -15,7 +15,17 @@ import MensajesPage from './pages/MensajesPage'
 import AlumnosPage from './pages/AlumnosPage'
 
 function Protected({ children, admin }: { children: ReactNode; admin?: boolean }) {
-  const { currentUser } = useStore()
+  const { currentUser, initializing } = useStore()
+  if (initializing) {
+    return (
+      <div className="flex min-h-screen items-center justify-center bg-radial-spotlight">
+        <div className="flex items-center gap-3 text-slate-400">
+          <span className="h-5 w-5 animate-spin rounded-full border-2 border-gold-400 border-t-transparent" />
+          Cargando tu academia…
+        </div>
+      </div>
+    )
+  }
   if (!currentUser) return <Navigate to="/ingresar" replace />
   if (admin && currentUser.role !== 'admin') return <Navigate to="/app" replace />
   return <Layout>{children}</Layout>
