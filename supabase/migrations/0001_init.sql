@@ -204,6 +204,19 @@ create policy cl_modify on public.custom_lessons
   for all to authenticated using (public.is_admin()) with check (public.is_admin());
 
 -- ===========================================================================
--- Realtime (opcional): mensajería en vivo
+-- Realtime (opcional): mensajería en vivo. Idempotente: solo agrega la tabla
+-- a la publicación si todavía no es miembro.
 -- ===========================================================================
-alter publication supabase_realtime add table public.messages;
+do $$
+begin
+  if not exists (
+    select 1 from pg_publication_tables
+    where pubname = 'supabase_realtime'
+      and schemaname = 'public'
+      and tablename = 'messages'
+  ) then
+    alter publication supabase_realtime add table public.messages;
+  end if;
+end
+$$;
+
