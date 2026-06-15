@@ -9,3 +9,6 @@ dist-ssr
 .env.local
 npm-debug.log*
 yarn-error.log*
+
+# TS build info
+*.tsbuildinfo
