@@ -3,7 +3,7 @@ import type { ItemSpec } from './types'
 // ============================================================================
 // SEMANA 10 — Apalancamiento y Riesgo
 // Incorpora: apv-valuation-emerging-markets (Vu, escudo fiscal, escudo riesgoso
-// de Vélez-Pareja con tasa psi, dificultades financieras y Altman Z'' EMS),
+// de Velez-Pareja con tasa psi, dificultades financieras y Altman Z\'\' (EMS),
 // value-generation-emerging-markets (GAF, ROE apalancado) y Modigliani-Miller.
 // Caso Andina: EBIT 830, intereses 560, t 35%.
 // ============================================================================
@@ -191,9 +191,9 @@ export const week10: ItemSpec[] = [
     id: 's10-i4',
     week: 10,
     order: 4,
-    title: 'Dificultades financieras: probabilidad de default y Altman Z'' EMS',
+    title: 'Dificultades financieras: probabilidad de default y Altman Z\'\' EMS',
     subtitle: 'El costo esperado de la quiebra que resta valor en el APV',
-    framework: 'Altman Z'' EMS · dificultades-financieras · APV',
+    framework: 'Altman Z\'\' EMS · dificultades-financieras · APV',
     theory: [
       {
         heading: 'El contrapeso del escudo: lo que la deuda cuesta',
@@ -204,23 +204,23 @@ export const week10: ItemSpec[] = [
         ],
       },
       {
-        heading: 'Estimar la probabilidad: el Altman Z'' para emergentes',
+        heading: 'Estimar la probabilidad: el Altman Z\'\' para emergentes',
         paragraphs: [
-          'Para PyMEs **sin calificación crediticia**, la herramienta es el **Altman Z'' ajustado para mercados emergentes (EMS)**. Su clave es que **suprime el indicador de rotación (Ventas/Activos, el X5)** para neutralizar los sesgos de sector y tamaño, e incorpora una constante de estandarización de **3,25**. Todos sus componentes salen de **valores contables**, porque la empresa no cotiza.',
-          'La fórmula es **Z'' = 3,25 + 6,56·X1 + 3,26·X2 + 6,72·X3 + 1,05·X4**, donde X1 = capital de trabajo/activos (liquidez), X2 = utilidades retenidas/activos (autofinanciamiento histórico), X3 = EBIT/activos (productividad operativa) y X4 = patrimonio en libros/pasivos (solvencia). Las zonas: **Z'' > 2,6 segura**, **1,1–2,6 gris/alerta**, **Z'' < 1,1 dificultades** (alta probabilidad de quiebra).',
-          'El Z'' da una **clasificación** del riesgo; para una probabilidad puntual y dinámica que entre a la fórmula del VP suele complementarse con el **logit de panel de Pindado** (que produce una P continua a partir de EBIT/activos, intereses/activos y reservas/activos). El simulador convierte la zona del Z'' en una P(default) aproximada para estimar el costo esperado.',
+          'Para PyMEs **sin calificación crediticia**, la herramienta es el **Altman Z\'\' ajustado para mercados emergentes (EMS)**. Su clave es que **suprime el indicador de rotación (Ventas/Activos, el X5)** para neutralizar los sesgos de sector y tamaño, e incorpora una constante de estandarización de **3,25**. Todos sus componentes salen de **valores contables**, porque la empresa no cotiza.',
+          'La fórmula es **Z\'\' = 3,25 + 6,56·X1 + 3,26·X2 + 6,72·X3 + 1,05·X4**, donde X1 = capital de trabajo/activos (liquidez), X2 = utilidades retenidas/activos (autofinanciamiento histórico), X3 = EBIT/activos (productividad operativa) y X4 = patrimonio en libros/pasivos (solvencia). Las zonas: **Z\'\' > 2,6 segura**, **1,1–2,6 gris/alerta**, **Z\'\' < 1,1 dificultades** (alta probabilidad de quiebra).',
+          'El Z\'\' da una **clasificación** del riesgo; para una probabilidad puntual y dinámica que entre a la fórmula del VP suele complementarse con el **logit de panel de Pindado** (que produce una P continua a partir de EBIT/activos, intereses/activos y reservas/activos). El simulador convierte la zona del Z\'\' en una P(default) aproximada para estimar el costo esperado.',
         ],
       },
       {
         heading: 'Interrelación y el balance del APV',
         paragraphs: [
           'Este componente **resta** al APV y es el contrapeso directo del escudo (ítems 2 y 3). La pregunta del APV es: **¿VP(escudo) > VP(dificultades)?** Si el costo esperado de la quiebra supera al ahorro fiscal, **endeudarse destruye valor**, por más tentador que luzca el escudo. Ese balance se cierra en el ítem 5.',
-          '**Andina** es un caso de alerta: con un EBIT de 830 contra intereses de 560, la cobertura es apenas ~1,5x y la caja está siempre tensa. Su Z'' debería vigilarse de cerca: está justamente en la franja donde la probabilidad de dificultades empieza a pesar sobre el valor.',
+          '**Andina** es un caso de alerta: con un EBIT de 830 contra intereses de 560, la cobertura es apenas ~1,5x y la caja está siempre tensa. Su Z\'\' debería vigilarse de cerca: está justamente en la franja donde la probabilidad de dificultades empieza a pesar sobre el valor.',
         ],
       },
     ],
     model: {
-      excelTitle: 'Dificultades financieras — Altman Z'' EMS y costo esperado',
+      excelTitle: 'Dificultades financieras — Altman Z\'\' EMS y costo esperado',
       inputs: [
         { key: 'x1', label: 'X1 = Capital de trabajo / Activos', value: 0.12, min: -0.3, max: 0.6, step: 0.01, fmt: 'num2' },
         { key: 'x2', label: 'X2 = Utilidades retenidas / Activos', value: 0.18, min: -0.3, max: 0.8, step: 0.01, fmt: 'num2' },
@@ -230,21 +230,21 @@ export const week10: ItemSpec[] = [
         { key: 'costoExPost', label: 'Costos ex-post (% del valor si quiebra)', value: 0.25, min: 0.05, max: 0.6, step: 0.01, fmt: 'pct' },
       ],
       calcs: [
-        { key: 'zEms', label: 'Altman Z'' EMS', fmt: 'num2', highlight: true, calc: (v) => 3.25 + 6.56 * v.x1 + 3.26 * v.x2 + 6.72 * v.x3 + 1.05 * v.x4, xl: '3.25+6.56*[x1]+3.26*[x2]+6.72*[x3]+1.05*[x4]' },
+        { key: 'zEms', label: 'Altman Z\'\' EMS', fmt: 'num2', highlight: true, calc: (v) => 3.25 + 6.56 * v.x1 + 3.26 * v.x2 + 6.72 * v.x3 + 1.05 * v.x4, xl: '3.25+6.56*[x1]+3.26*[x2]+6.72*[x3]+1.05*[x4]' },
         { key: 'pDefault', label: 'P(default) aproximada por zona', fmt: 'pct', calc: (v) => { const z = 3.25 + 6.56 * v.x1 + 3.26 * v.x2 + 6.72 * v.x3 + 1.05 * v.x4; return z > 2.6 ? 0.02 : (z >= 1.1 ? 0.1 : 0.3) }, xl: 'IF([zEms]>2.6,0.02,IF([zEms]>=1.1,0.1,0.3))' },
         { key: 'costoEsperado', label: 'Costo esperado de dificultades', fmt: 'money', calc: (v) => { const z = 3.25 + 6.56 * v.x1 + 3.26 * v.x2 + 6.72 * v.x3 + 1.05 * v.x4; const p = z > 2.6 ? 0.02 : (z >= 1.1 ? 0.1 : 0.3); return p * v.costoExPost * v.valorActivos }, xl: '[pDefault]*[costoExPost]*[valorActivos]' },
       ],
       conclusions: [
         {
           test: (v) => (3.25 + 6.56 * v.x1 + 3.26 * v.x2 + 6.72 * v.x3 + 1.05 * v.x4) > 2.6,
-          good: 'El Z'' está en zona SEGURA (> 2,6): la probabilidad de dificultades es baja y el costo esperado pesa poco. Hay margen para que el escudo fiscal supere a las dificultades.',
-          bad: 'El Z'' está en zona GRIS o de DIFICULTADES (≤ 2,6): la probabilidad de insolvencia es relevante y el costo esperado empieza a comerse el beneficio fiscal. Cuidado con sumar más deuda.',
+          good: 'El Z\'\' está en zona SEGURA (> 2,6): la probabilidad de dificultades es baja y el costo esperado pesa poco. Hay margen para que el escudo fiscal supere a las dificultades.',
+          bad: 'El Z\'\' está en zona GRIS o de DIFICULTADES (≤ 2,6): la probabilidad de insolvencia es relevante y el costo esperado empieza a comerse el beneficio fiscal. Cuidado con sumar más deuda.',
           xl: 'IF([zEms]>2.6,"El Z\'\' ("&TEXT([zEms],"0.00")&") esta en zona SEGURA: P(default) baja y costo esperado "&TEXT([costoEsperado],"#,##0")&". Hay margen para que el escudo supere a las dificultades.","El Z\'\' ("&TEXT([zEms],"0.00")&") esta en zona gris/dificultades: costo esperado "&TEXT([costoEsperado],"#,##0")&". Cuidado con mas deuda.")',
         },
       ],
       chart: { sweepKey: 'x3', outKey: 'zEms', xLabel: 'EBIT / Activos (X3)', yLabel: 'Altman Z\'\' EMS', yFmt: 'num2' },
     },
-    promptConcepts: ['VP(dificultades) = Σ P(default)·Costos / (1+Ku)^t', 'Altman Z'' EMS = 3,25 + 6,56·X1 + 3,26·X2 + 6,72·X3 + 1,05·X4', 'Por qué se suprime X5 (rotación) en emergentes', 'Zonas: segura (>2,6) / gris / dificultades (<1,1)', 'Costos ex-post directos e indirectos; severidad por tangibilidad'],
+    promptConcepts: ['VP(dificultades) = Σ P(default)·Costos / (1+Ku)^t', 'Altman Z\'\' EMS = 3,25 + 6,56·X1 + 3,26·X2 + 6,72·X3 + 1,05·X4', 'Por qué se suprime X5 (rotación) en emergentes', 'Zonas: segura (>2,6) / gris / dificultades (<1,1)', 'Costos ex-post directos e indirectos; severidad por tangibilidad'],
   },
 
   {
@@ -267,7 +267,7 @@ export const week10: ItemSpec[] = [
         heading: 'La cobertura de intereses: el termómetro práctico',
         paragraphs: [
           'En el día a día, el ratio que resume todo esto es la **cobertura de intereses = EBIT / Intereses**. Mide cuántas veces el resultado operativo cubre la cuenta financiera. Una cobertura alta (>4-5x) indica holgura; una baja (<2x) significa que casi todo el operativo se va en intereses y cualquier traspié deja a la empresa sin con qué pagar.',
-          'En **Andina** la cobertura es **830 / 560 ≈ 1,5x**: apenas vez y media. Es una señal de alarma: el resultado operativo apenas supera a los intereses, la caja vive tensa y un mal trimestre puede romper la cadena de pagos. Conecta directo con el **escudo riesgoso** (si el EBITO no alcanza, el escudo desaparece) y con el **Z''** (baja cobertura empuja a zona gris).',
+          'En **Andina** la cobertura es **830 / 560 ≈ 1,5x**: apenas vez y media. Es una señal de alarma: el resultado operativo apenas supera a los intereses, la caja vive tensa y un mal trimestre puede romper la cadena de pagos. Conecta directo con el **escudo riesgoso** (si el EBITO no alcanza, el escudo desaparece) y con el **Z\'\'** (baja cobertura empuja a zona gris).',
           '**Interrelación clave:** la cobertura es el puente entre el apalancamiento (ítem 1, GAF del ítem… del programa) y las dificultades financieras (ítem 4). Una cobertura de ~1,5x dice que Andina **ya está cerca o pasada de su óptimo de deuda**: el escudo que gana es chico frente al riesgo que carga.',
         ],
       },
