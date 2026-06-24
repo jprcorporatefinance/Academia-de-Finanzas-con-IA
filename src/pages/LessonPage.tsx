@@ -3,8 +3,11 @@ import { Link, useParams, useNavigate } from 'react-router-dom'
 import { useStore } from '../store/store'
 import { LessonBlockView } from '../components/LessonBlock'
 import type { QuizQuestion } from '../types'
-import { ArrowLeft, ArrowRight, CheckCircle2, Clock, Target, FileText, FileSpreadsheet, Sparkles, Download } from 'lucide-react'
+import { ArrowLeft, ArrowRight, CheckCircle2, Clock, Target, FileText, FileSpreadsheet, Sparkles, Download, Boxes, ChevronDown } from 'lucide-react'
 import materialsIndex from '../data/materialsIndex.json'
+import itemsIndex from '../data/itemsIndex.json'
+import { itemsByWeek } from '../items'
+import { ItemModelView } from '../components/ItemModelView'
 
 export default function LessonPage() {
   const { lessonId } = useParams()
@@ -63,6 +66,9 @@ export default function LessonPage() {
       {/* Material descargable de la semana */}
       <MaterialDownloads week={lesson.week} />
 
+      {/* Ítems de la semana: teoría + modelo interactivo + descargas */}
+      <WeekItems week={lesson.week} />
+
       {/* Contenido */}
       <div>
         {lesson.blocks.map((b, i) => (
@@ -96,6 +102,83 @@ export default function LessonPage() {
         )}
       </div>
     </article>
+  )
+}
+
+type ItemIdxEntry = { id: string; week: number; order: number; title: string; word?: string; excel?: string; prompt?: string }
+
+function WeekItems({ week }: { week: number }) {
+  const items = itemsByWeek[week]
+  const [open, setOpen] = useState<string | null>(null)
+  if (!items || items.length === 0) return null
+  const idx = itemsIndex as ItemIdxEntry[]
+  return (
+    <div className="mb-8">
+      <div className="mb-3 flex items-center gap-2 text-gold-300">
+        <Boxes size={18} /> <h2 className="text-sm font-bold uppercase tracking-wider">Ítems de la semana</h2>
+      </div>
+      <p className="mb-4 text-sm text-slate-400">
+        Cada ítem profundiza un concepto con su teoría (Word), su modelo en Excel con matrices dinámicas, sus
+        prompts para avanzar con IA y un <strong className="text-slate-200">modelo interactivo</strong> para
+        visualizar las variables en vivo.
+      </p>
+      <div className="space-y-3">
+        {items.map((it) => {
+          const dl = idx.find((e) => e.id === it.id)
+          const isOpen = open === it.id
+          return (
+            <div key={it.id} className="card overflow-hidden">
+              <div className="flex flex-wrap items-center gap-3 p-4">
+                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-gold-400/10 text-sm font-bold text-gold-300">
+                  {it.order}
+                </div>
+                <div className="min-w-0 flex-1">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <h3 className="font-bold text-slate-100">{it.title}</h3>
+                    <span className="chip border-gold-400/30 text-gold-200">{it.framework}</span>
+                  </div>
+                  <p className="text-xs text-slate-400">{it.subtitle}</p>
+                </div>
+                <button
+                  className={isOpen ? 'btn-ghost' : 'btn-gold'}
+                  onClick={() => setOpen(isOpen ? null : it.id)}
+                >
+                  <Boxes size={15} /> {isOpen ? 'Ocultar modelo' : 'Modelo interactivo'}
+                  <ChevronDown size={14} className={`transition ${isOpen ? 'rotate-180' : ''}`} />
+                </button>
+              </div>
+
+              {/* Descargas del ítem */}
+              {dl && (dl.word || dl.excel || dl.prompt) && (
+                <div className="flex flex-wrap gap-2 border-t border-ink-700/60 px-4 py-3">
+                  {dl.word && (
+                    <a href={dl.word} download className="btn-ghost px-3 py-1.5 text-xs">
+                      <FileText size={13} className="text-blue-300" /> Word (teoría)
+                    </a>
+                  )}
+                  {dl.excel && (
+                    <a href={dl.excel} download className="btn-ghost px-3 py-1.5 text-xs">
+                      <FileSpreadsheet size={13} className="text-value-400" /> Excel dinámico
+                    </a>
+                  )}
+                  {dl.prompt && (
+                    <a href={dl.prompt} download className="btn-ghost px-3 py-1.5 text-xs">
+                      <Sparkles size={13} className="text-gold-300" /> Prompts
+                    </a>
+                  )}
+                </div>
+              )}
+
+              {isOpen && (
+                <div className="border-t border-ink-700/60 bg-ink-950/40 p-4 animate-fade-up">
+                  <ItemModelView model={it.model} />
+                </div>
+              )}
+            </div>
+          )
+        })}
+      </div>
+    </div>
   )
 }
 

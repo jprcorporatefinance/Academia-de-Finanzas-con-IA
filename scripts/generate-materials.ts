@@ -30,6 +30,8 @@ import type { ContentBlock, Lesson } from '../src/types'
 import { weekMaterials } from './materials'
 import { buildEstadosWorkbook } from './estadosWorkbook'
 import { deepDiveByWeek } from './deepdive/index'
+import { allItems } from '../src/items/index'
+import type { ItemSpec } from '../src/items/types'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const ROOT = join(__dirname, '..')
@@ -420,6 +422,147 @@ Listá los errores o riesgos que encuentres y corregilos.
 }
 
 // ---------------------------------------------------------------------------
+// ÍTEMS: Word + Excel + Prompts por ítem
+// ---------------------------------------------------------------------------
+async function buildItemWord(item: ItemSpec) {
+  const children: (Paragraph | Table)[] = []
+  children.push(new Paragraph({ alignment: AlignmentType.CENTER, children: [new TextRun({ text: `ACADEMIA FC + IA · Semana ${item.week}`, bold: true, color: GOLD, size: 18 })], spacing: { after: 60 } }))
+  children.push(new Paragraph({ heading: HeadingLevel.TITLE, children: runs(`Ítem ${item.order}. ${item.title}`), spacing: { after: 40 } }))
+  children.push(new Paragraph({ children: runs(item.subtitle, { italics: true, color: '555555', size: 22 }), spacing: { after: 40 } }))
+  children.push(new Paragraph({ children: [new TextRun({ text: `Marco: ${item.framework}`, bold: true, color: '94741F', size: 18 })], spacing: { after: 160 } }))
+
+  item.theory.forEach((s) => deepSection(s.heading, s.paragraphs).forEach((p) => children.push(p)))
+
+  children.push(new Paragraph({ heading: HeadingLevel.HEADING_2, children: runs('El modelo: variables y fórmulas'), spacing: { before: 220, after: 100 } }))
+  children.push(docxTable(
+    ['Variable de entrada', 'Valor base'],
+    item.model.inputs.map((i) => [i.label, String(i.value)]),
+  ))
+  children.push(new Paragraph({ text: '', spacing: { after: 100 } }))
+  children.push(docxTable(
+    ['Indicador calculado', 'Fórmula'],
+    item.model.calcs.map((c) => [c.label, c.xl.replace(/\[(\w+)\]/g, '$1')]),
+  ))
+  children.push(new Paragraph({ children: runs('Abrí el **modelo interactivo** de este ítem en la plataforma para mover las variables en vivo, y usá el Excel para construir tu propio caso con matrices dinámicas.'), spacing: { before: 160 } }))
+
+  const doc = new Document({
+    styles: {
+      default: { document: { run: { font: 'Calibri', size: 22 } } },
+      paragraphStyles: [
+        { id: 'Title', name: 'Title', run: { size: 36, bold: true, color: INK } },
+        { id: 'Heading2', name: 'Heading 2', run: { size: 26, bold: true, color: '94741F' }, paragraph: { spacing: { before: 200, after: 100 } } },
+      ],
+    },
+    sections: [{ properties: {}, children }],
+  })
+  return Packer.toBuffer(doc)
+}
+
+async function buildItemExcel(item: ItemSpec) {
+  const wb = new ExcelJS.Workbook()
+  const ws = wb.addWorksheet(`Item ${item.order}`, { views: [{ showGridLines: false }] })
+  ws.columns = [{ width: 44 }, { width: 16 }, { width: 50 }]
+  const map: Record<string, string> = {}
+  let r = 1
+  ws.mergeCells(r, 1, r, 3)
+  const t = ws.getCell(r, 1)
+  t.value = `MODELO · S${item.week} Ítem ${item.order} — ${item.model.excelTitle}`
+  t.font = { bold: true, size: 13, color: { argb: 'FFFFFFFF' } }
+  t.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FF0B1120' } }
+  t.alignment = { indent: 1, vertical: 'middle' }
+  ws.getRow(r).height = 24
+  r += 2
+
+  const header = (txt: string) => {
+    ws.mergeCells(r, 1, r, 3)
+    const c = ws.getCell(r, 1)
+    c.value = txt
+    c.font = { bold: true, size: 11, color: { argb: 'FFD4AF37' } }
+    c.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FF111A2E' } }
+    c.alignment = { indent: 1 }
+    r += 1
+  }
+
+  header('1) VARIABLES (celdas amarillas — editá)')
+  for (const i of item.model.inputs) {
+    ws.getCell(r, 1).value = i.label
+    const cell = ws.getCell(r, 2)
+    cell.value = i.value
+    cell.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFFF3C4' } }
+    cell.font = { bold: true }
+    cell.border = { top: { style: 'thin', color: { argb: 'FFBFA12A' } }, bottom: { style: 'thin', color: { argb: 'FFBFA12A' } }, left: { style: 'thin', color: { argb: 'FFBFA12A' } }, right: { style: 'thin', color: { argb: 'FFBFA12A' } } }
+    const fc = fmtCode(i.fmt)
+    if (fc) cell.numFmt = fc
+    if (i.note) ws.getCell(r, 3).value = i.note
+    map[i.key] = `B${r}`
+    r += 1
+  }
+  r += 1
+
+  header('2) INDICADORES')
+  const calcStart = r
+  item.model.calcs.forEach((c, k) => (map[c.key] = `B${calcStart + k}`))
+  for (const c of item.model.calcs) {
+    ws.getCell(r, 1).value = c.label
+    const cell = ws.getCell(r, 2)
+    cell.value = { formula: modernPrefix(resolve(c.xl, map)) } as any
+    cell.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFEAF1FB' } }
+    cell.font = { bold: true, color: { argb: 'FF1A2740' } }
+    const fc = fmtCode(c.fmt)
+    if (fc) cell.numFmt = fc
+    if (c.note) ws.getCell(r, 3).value = c.note
+    r += 1
+  }
+  r += 1
+
+  header('3) CONCLUSIÓN AUTOMÁTICA')
+  for (const cc of item.model.conclusions) {
+    ws.mergeCells(r, 1, r, 3)
+    const cell = ws.getCell(r, 1)
+    cell.value = { formula: modernPrefix(resolve(cc.xl, map)) } as any
+    cell.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFE5F6EC' } }
+    cell.font = { color: { argb: 'FF0B5132' } }
+    cell.alignment = { wrapText: true, indent: 1, vertical: 'middle' }
+    ws.getRow(r).height = 32
+    r += 1
+  }
+  return wb.xlsx.writeBuffer()
+}
+
+function buildItemPrompt(item: ItemSpec): string {
+  const concepts = item.promptConcepts.map((c) => `- ${c}`).join('\n')
+  return `# Prompts — Semana ${item.week} · Ítem ${item.order}: ${item.title}
+Marco: ${item.framework}
+
+Conceptos a cubrir:
+${concepts}
+
+---
+## PROMPT 1 — Caso práctico
+\`\`\`
+Actuá como CFO y profesor de finanzas corporativas. Generá un caso práctico realista sobre: ${item.promptConcepts.join('; ')}.
+Contexto de mi empresa: <sector>, <ventas anuales>, <país/moneda>, <situación>.
+Planteá los datos y 3 preguntas de decisión. No resuelvas todavía.
+\`\`\`
+
+## PROMPT 2 — Resolución con fórmulas
+\`\`\`
+Resolvé el caso paso a paso. Para cada indicador (${item.promptConcepts.slice(0, 3).join(', ')}): definición, fórmula, cálculo con los números, e interpretación para decidir.
+\`\`\`
+
+## PROMPT 3 — Simulador en Excel (matrices dinámicas)
+\`\`\`
+Construí un simulador en Excel de este ítem. Indicá celda por celda las ENTRADAS (amarillas) y los CÁLCULOS con fórmulas modernas (LET, SEQUENCE) en lugar de arrastrar. Agregá una CONCLUSIÓN con SI() que interprete el resultado, y una tabla/gráfico de sensibilidad de la variable clave.
+\`\`\`
+
+## PROMPT 4 — Verificación crítica
+\`\`\`
+Revisá tu solución como auditor escéptico: ¿las fórmulas y unidades son correctas? ¿qué supuesto, si cambia, da vuelta la conclusión? Corregí lo que encuentres.
+\`\`\`
+`
+}
+
+// ---------------------------------------------------------------------------
 // Main
 // ---------------------------------------------------------------------------
 async function main() {
@@ -465,6 +608,33 @@ async function main() {
   }
   writeFileSync(join(ROOT, 'src', 'data', 'materialsIndex.json'), JSON.stringify(index, null, 2), 'utf8')
   console.log(`\n✔ ${index.length} semanas. Índice en src/data/materialsIndex.json`)
+
+  // -------- ÍTEMS (Word + Excel + Prompts por ítem) --------
+  const itemsIdx: { id: string; week: number; order: number; title: string; word: string; excel: string; prompt: string }[] = []
+  for (const item of allItems) {
+    const dir = join(OUT, 'items', item.id)
+    mkdirSync(dir, { recursive: true })
+    const wordBuf = await buildItemWord(item)
+    const excelBuf = await buildItemExcel(item)
+    const promptStr = buildItemPrompt(item)
+    const wn = `${item.id}-Teoria.docx`
+    const en = `${item.id}-Modelo.xlsx`
+    const pn = `${item.id}-Prompts.md`
+    writeFileSync(join(dir, wn), wordBuf as Buffer)
+    writeFileSync(join(dir, en), Buffer.from(excelBuf as ArrayBuffer))
+    writeFileSync(join(dir, pn), promptStr, 'utf8')
+    itemsIdx.push({
+      id: item.id,
+      week: item.week,
+      order: item.order,
+      title: item.title,
+      word: `/materiales/items/${item.id}/${wn}`,
+      excel: `/materiales/items/${item.id}/${en}`,
+      prompt: `/materiales/items/${item.id}/${pn}`,
+    })
+  }
+  writeFileSync(join(ROOT, 'src', 'data', 'itemsIndex.json'), JSON.stringify(itemsIdx, null, 2), 'utf8')
+  console.log(`✔ ${itemsIdx.length} ítems generados. Índice en src/data/itemsIndex.json`)
 }
 
 main().catch((e) => { console.error(e); process.exit(1) })

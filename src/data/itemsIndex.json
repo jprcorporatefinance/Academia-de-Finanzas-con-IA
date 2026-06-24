@@ -1,0 +1,47 @@
+[
+  {
+    "id": "s09-i1",
+    "week": 9,
+    "order": 1,
+    "title": "El costo del equity base (CAPM)",
+    "word": "/materiales/items/s09-i1/s09-i1-Teoria.docx",
+    "excel": "/materiales/items/s09-i1/s09-i1-Modelo.xlsx",
+    "prompt": "/materiales/items/s09-i1/s09-i1-Prompts.md"
+  },
+  {
+    "id": "s09-i2",
+    "week": 9,
+    "order": 2,
+    "title": "Riesgo país sin doble conteo",
+    "word": "/materiales/items/s09-i2/s09-i2-Teoria.docx",
+    "excel": "/materiales/items/s09-i2/s09-i2-Modelo.xlsx",
+    "prompt": "/materiales/items/s09-i2/s09-i2-Prompts.md"
+  },
+  {
+    "id": "s09-i3",
+    "week": 9,
+    "order": 3,
+    "title": "El WACC ponderado",
+    "word": "/materiales/items/s09-i3/s09-i3-Teoria.docx",
+    "excel": "/materiales/items/s09-i3/s09-i3-Modelo.xlsx",
+    "prompt": "/materiales/items/s09-i3/s09-i3-Prompts.md"
+  },
+  {
+    "id": "s09-i4",
+    "week": 9,
+    "order": 4,
+    "title": "Ke de la PyME no cotizada (Beta Total)",
+    "word": "/materiales/items/s09-i4/s09-i4-Teoria.docx",
+    "excel": "/materiales/items/s09-i4/s09-i4-Modelo.xlsx",
+    "prompt": "/materiales/items/s09-i4/s09-i4-Prompts.md"
+  },
+  {
+    "id": "s09-i5",
+    "week": 9,
+    "order": 5,
+    "title": "Del WACC a la decisión: ROIC vs WACC",
+    "word": "/materiales/items/s09-i5/s09-i5-Teoria.docx",
+    "excel": "/materiales/items/s09-i5/s09-i5-Modelo.xlsx",
+    "prompt": "/materiales/items/s09-i5/s09-i5-Prompts.md"
+  }
+]
