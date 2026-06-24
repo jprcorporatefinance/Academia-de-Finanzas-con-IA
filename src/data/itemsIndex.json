@@ -1,5 +1,365 @@
 [
   {
+    "id": "s01-i1",
+    "week": 1,
+    "order": 1,
+    "title": "Leer el Balance",
+    "word": "/materiales/items/s01-i1/s01-i1-Teoria.docx",
+    "excel": "/materiales/items/s01-i1/s01-i1-Modelo.xlsx",
+    "prompt": "/materiales/items/s01-i1/s01-i1-Prompts.md"
+  },
+  {
+    "id": "s01-i2",
+    "week": 1,
+    "order": 2,
+    "title": "Leer el Estado de Resultados",
+    "word": "/materiales/items/s01-i2/s01-i2-Teoria.docx",
+    "excel": "/materiales/items/s01-i2/s01-i2-Modelo.xlsx",
+    "prompt": "/materiales/items/s01-i2/s01-i2-Prompts.md"
+  },
+  {
+    "id": "s01-i3",
+    "week": 1,
+    "order": 3,
+    "title": "GMROI: margen × rotación de inventario",
+    "word": "/materiales/items/s01-i3/s01-i3-Teoria.docx",
+    "excel": "/materiales/items/s01-i3/s01-i3-Modelo.xlsx",
+    "prompt": "/materiales/items/s01-i3/s01-i3-Prompts.md"
+  },
+  {
+    "id": "s01-i4",
+    "week": 1,
+    "order": 4,
+    "title": "Ciclo de Conversión de Efectivo",
+    "word": "/materiales/items/s01-i4/s01-i4-Teoria.docx",
+    "excel": "/materiales/items/s01-i4/s01-i4-Modelo.xlsx",
+    "prompt": "/materiales/items/s01-i4/s01-i4-Prompts.md"
+  },
+  {
+    "id": "s01-i5",
+    "week": 1,
+    "order": 5,
+    "title": "Resultado vs. caja: por qué difieren",
+    "word": "/materiales/items/s01-i5/s01-i5-Teoria.docx",
+    "excel": "/materiales/items/s01-i5/s01-i5-Modelo.xlsx",
+    "prompt": "/materiales/items/s01-i5/s01-i5-Prompts.md"
+  },
+  {
+    "id": "s02-i1",
+    "week": 2,
+    "order": 1,
+    "title": "Presentación vs. gestión",
+    "word": "/materiales/items/s02-i1/s02-i1-Teoria.docx",
+    "excel": "/materiales/items/s02-i1/s02-i1-Modelo.xlsx",
+    "prompt": "/materiales/items/s02-i1/s02-i1-Prompts.md"
+  },
+  {
+    "id": "s02-i2",
+    "week": 2,
+    "order": 2,
+    "title": "Activos ocultos",
+    "word": "/materiales/items/s02-i2/s02-i2-Teoria.docx",
+    "excel": "/materiales/items/s02-i2/s02-i2-Modelo.xlsx",
+    "prompt": "/materiales/items/s02-i2/s02-i2-Prompts.md"
+  },
+  {
+    "id": "s02-i3",
+    "week": 2,
+    "order": 3,
+    "title": "Activos sobrevaluados",
+    "word": "/materiales/items/s02-i3/s02-i3-Teoria.docx",
+    "excel": "/materiales/items/s02-i3/s02-i3-Modelo.xlsx",
+    "prompt": "/materiales/items/s02-i3/s02-i3-Prompts.md"
+  },
+  {
+    "id": "s02-i4",
+    "week": 2,
+    "order": 4,
+    "title": "Normalización de la empresa familiar",
+    "word": "/materiales/items/s02-i4/s02-i4-Teoria.docx",
+    "excel": "/materiales/items/s02-i4/s02-i4-Modelo.xlsx",
+    "prompt": "/materiales/items/s02-i4/s02-i4-Prompts.md"
+  },
+  {
+    "id": "s02-i5",
+    "week": 2,
+    "order": 5,
+    "title": "Control: estimado vs. realmente sucedido",
+    "word": "/materiales/items/s02-i5/s02-i5-Teoria.docx",
+    "excel": "/materiales/items/s02-i5/s02-i5-Modelo.xlsx",
+    "prompt": "/materiales/items/s02-i5/s02-i5-Prompts.md"
+  },
+  {
+    "id": "s03-i1",
+    "week": 3,
+    "order": 1,
+    "title": "NOPAT: la ganancia del negocio sin la deuda",
+    "word": "/materiales/items/s03-i1/s03-i1-Teoria.docx",
+    "excel": "/materiales/items/s03-i1/s03-i1-Modelo.xlsx",
+    "prompt": "/materiales/items/s03-i1/s03-i1-Prompts.md"
+  },
+  {
+    "id": "s03-i2",
+    "week": 3,
+    "order": 2,
+    "title": "El capital invertido: en qué se puso la plata",
+    "word": "/materiales/items/s03-i2/s03-i2-Teoria.docx",
+    "excel": "/materiales/items/s03-i2/s03-i2-Modelo.xlsx",
+    "prompt": "/materiales/items/s03-i2/s03-i2-Prompts.md"
+  },
+  {
+    "id": "s03-i3",
+    "week": 3,
+    "order": 3,
+    "title": "ROIC: cuánto rinde cada peso invertido",
+    "word": "/materiales/items/s03-i3/s03-i3-Teoria.docx",
+    "excel": "/materiales/items/s03-i3/s03-i3-Modelo.xlsx",
+    "prompt": "/materiales/items/s03-i3/s03-i3-Prompts.md"
+  },
+  {
+    "id": "s03-i4",
+    "week": 3,
+    "order": 4,
+    "title": "DuPont de 5 factores: anatomía del ROE",
+    "word": "/materiales/items/s03-i4/s03-i4-Teoria.docx",
+    "excel": "/materiales/items/s03-i4/s03-i4-Modelo.xlsx",
+    "prompt": "/materiales/items/s03-i4/s03-i4-Prompts.md"
+  },
+  {
+    "id": "s03-i5",
+    "week": 3,
+    "order": 5,
+    "title": "Por qué el margen solo engaña",
+    "word": "/materiales/items/s03-i5/s03-i5-Teoria.docx",
+    "excel": "/materiales/items/s03-i5/s03-i5-Modelo.xlsx",
+    "prompt": "/materiales/items/s03-i5/s03-i5-Prompts.md"
+  },
+  {
+    "id": "s04-i1",
+    "week": 4,
+    "order": 1,
+    "title": "EVA: la ganancia que sobra después de pagar el capital",
+    "word": "/materiales/items/s04-i1/s04-i1-Teoria.docx",
+    "excel": "/materiales/items/s04-i1/s04-i1-Modelo.xlsx",
+    "prompt": "/materiales/items/s04-i1/s04-i1-Prompts.md"
+  },
+  {
+    "id": "s04-i2",
+    "week": 4,
+    "order": 2,
+    "title": "El spread de valor: ROIC − WACC",
+    "word": "/materiales/items/s04-i2/s04-i2-Teoria.docx",
+    "excel": "/materiales/items/s04-i2/s04-i2-Modelo.xlsx",
+    "prompt": "/materiales/items/s04-i2/s04-i2-Prompts.md"
+  },
+  {
+    "id": "s04-i3",
+    "week": 4,
+    "order": 3,
+    "title": "RONIC: el retorno del capital NUEVO",
+    "word": "/materiales/items/s04-i3/s04-i3-Teoria.docx",
+    "excel": "/materiales/items/s04-i3/s04-i3-Modelo.xlsx",
+    "prompt": "/materiales/items/s04-i3/s04-i3-Prompts.md"
+  },
+  {
+    "id": "s04-i4",
+    "week": 4,
+    "order": 4,
+    "title": "Key Value Driver: cuánto vale crecer",
+    "word": "/materiales/items/s04-i4/s04-i4-Teoria.docx",
+    "excel": "/materiales/items/s04-i4/s04-i4-Modelo.xlsx",
+    "prompt": "/materiales/items/s04-i4/s04-i4-Prompts.md"
+  },
+  {
+    "id": "s04-i5",
+    "week": 4,
+    "order": 5,
+    "title": "Crecer o distribuir: la política de dividendos",
+    "word": "/materiales/items/s04-i5/s04-i5-Teoria.docx",
+    "excel": "/materiales/items/s04-i5/s04-i5-Modelo.xlsx",
+    "prompt": "/materiales/items/s04-i5/s04-i5-Prompts.md"
+  },
+  {
+    "id": "s05-i1",
+    "week": 5,
+    "order": 1,
+    "title": "Liquidez: ¿la empresa puede pagar mañana?",
+    "word": "/materiales/items/s05-i1/s05-i1-Teoria.docx",
+    "excel": "/materiales/items/s05-i1/s05-i1-Modelo.xlsx",
+    "prompt": "/materiales/items/s05-i1/s05-i1-Prompts.md"
+  },
+  {
+    "id": "s05-i2",
+    "week": 5,
+    "order": 2,
+    "title": "Solvencia: ¿aguanta el peso de la deuda?",
+    "word": "/materiales/items/s05-i2/s05-i2-Teoria.docx",
+    "excel": "/materiales/items/s05-i2/s05-i2-Modelo.xlsx",
+    "prompt": "/materiales/items/s05-i2/s05-i2-Prompts.md"
+  },
+  {
+    "id": "s05-i3",
+    "week": 5,
+    "order": 3,
+    "title": "GAO: cómo los costos fijos amplifican el EBIT",
+    "word": "/materiales/items/s05-i3/s05-i3-Teoria.docx",
+    "excel": "/materiales/items/s05-i3/s05-i3-Modelo.xlsx",
+    "prompt": "/materiales/items/s05-i3/s05-i3-Prompts.md"
+  },
+  {
+    "id": "s05-i4",
+    "week": 5,
+    "order": 4,
+    "title": "GAF: cómo los intereses amplifican el resultado neto",
+    "word": "/materiales/items/s05-i4/s05-i4-Teoria.docx",
+    "excel": "/materiales/items/s05-i4/s05-i4-Modelo.xlsx",
+    "prompt": "/materiales/items/s05-i4/s05-i4-Prompts.md"
+  },
+  {
+    "id": "s05-i5",
+    "week": 5,
+    "order": 5,
+    "title": "GAT: el apalancamiento total y el punto de inflexión",
+    "word": "/materiales/items/s05-i5/s05-i5-Teoria.docx",
+    "excel": "/materiales/items/s05-i5/s05-i5-Modelo.xlsx",
+    "prompt": "/materiales/items/s05-i5/s05-i5-Prompts.md"
+  },
+  {
+    "id": "s06-i1",
+    "week": 6,
+    "order": 1,
+    "title": "FCFF: el flujo libre de la firma",
+    "word": "/materiales/items/s06-i1/s06-i1-Teoria.docx",
+    "excel": "/materiales/items/s06-i1/s06-i1-Modelo.xlsx",
+    "prompt": "/materiales/items/s06-i1/s06-i1-Prompts.md"
+  },
+  {
+    "id": "s06-i2",
+    "week": 6,
+    "order": 2,
+    "title": "FCFE: el flujo del accionista",
+    "word": "/materiales/items/s06-i2/s06-i2-Teoria.docx",
+    "excel": "/materiales/items/s06-i2/s06-i2-Modelo.xlsx",
+    "prompt": "/materiales/items/s06-i2/s06-i2-Prompts.md"
+  },
+  {
+    "id": "s06-i3",
+    "week": 6,
+    "order": 3,
+    "title": "FCFD: el flujo del acreedor",
+    "word": "/materiales/items/s06-i3/s06-i3-Teoria.docx",
+    "excel": "/materiales/items/s06-i3/s06-i3-Modelo.xlsx",
+    "prompt": "/materiales/items/s06-i3/s06-i3-Prompts.md"
+  },
+  {
+    "id": "s06-i4",
+    "week": 6,
+    "order": 4,
+    "title": "CFROI: el retorno de caja sobre la inversión",
+    "word": "/materiales/items/s06-i4/s06-i4-Teoria.docx",
+    "excel": "/materiales/items/s06-i4/s06-i4-Modelo.xlsx",
+    "prompt": "/materiales/items/s06-i4/s06-i4-Prompts.md"
+  },
+  {
+    "id": "s06-i5",
+    "week": 6,
+    "order": 5,
+    "title": "Reconciliación: FCFF = FCFE + FCFD",
+    "word": "/materiales/items/s06-i5/s06-i5-Teoria.docx",
+    "excel": "/materiales/items/s06-i5/s06-i5-Modelo.xlsx",
+    "prompt": "/materiales/items/s06-i5/s06-i5-Prompts.md"
+  },
+  {
+    "id": "s07-i1",
+    "week": 7,
+    "order": 1,
+    "title": "Días de cobranza, inventario y pago (DSO / DIO / DPO)",
+    "word": "/materiales/items/s07-i1/s07-i1-Teoria.docx",
+    "excel": "/materiales/items/s07-i1/s07-i1-Modelo.xlsx",
+    "prompt": "/materiales/items/s07-i1/s07-i1-Prompts.md"
+  },
+  {
+    "id": "s07-i2",
+    "week": 7,
+    "order": 2,
+    "title": "Ciclo de conversión de caja (CCE)",
+    "word": "/materiales/items/s07-i2/s07-i2-Teoria.docx",
+    "excel": "/materiales/items/s07-i2/s07-i2-Modelo.xlsx",
+    "prompt": "/materiales/items/s07-i2/s07-i2-Prompts.md"
+  },
+  {
+    "id": "s07-i3",
+    "week": 7,
+    "order": 3,
+    "title": "Matriz ABC/XYZ de inventario",
+    "word": "/materiales/items/s07-i3/s07-i3-Teoria.docx",
+    "excel": "/materiales/items/s07-i3/s07-i3-Modelo.xlsx",
+    "prompt": "/materiales/items/s07-i3/s07-i3-Prompts.md"
+  },
+  {
+    "id": "s07-i4",
+    "week": 7,
+    "order": 4,
+    "title": "Matriz de aging-reclamo de cobranzas",
+    "word": "/materiales/items/s07-i4/s07-i4-Teoria.docx",
+    "excel": "/materiales/items/s07-i4/s07-i4-Modelo.xlsx",
+    "prompt": "/materiales/items/s07-i4/s07-i4-Prompts.md"
+  },
+  {
+    "id": "s07-i5",
+    "week": 7,
+    "order": 5,
+    "title": "Proveedores como financiamiento NO oneroso",
+    "word": "/materiales/items/s07-i5/s07-i5-Teoria.docx",
+    "excel": "/materiales/items/s07-i5/s07-i5-Modelo.xlsx",
+    "prompt": "/materiales/items/s07-i5/s07-i5-Prompts.md"
+  },
+  {
+    "id": "s08-i1",
+    "week": 8,
+    "order": 1,
+    "title": "CAPEX vs. bien de uso contable",
+    "word": "/materiales/items/s08-i1/s08-i1-Teoria.docx",
+    "excel": "/materiales/items/s08-i1/s08-i1-Modelo.xlsx",
+    "prompt": "/materiales/items/s08-i1/s08-i1-Prompts.md"
+  },
+  {
+    "id": "s08-i2",
+    "week": 8,
+    "order": 2,
+    "title": "Valor contable vs. valor de mercado de los activos fijos",
+    "word": "/materiales/items/s08-i2/s08-i2-Teoria.docx",
+    "excel": "/materiales/items/s08-i2/s08-i2-Modelo.xlsx",
+    "prompt": "/materiales/items/s08-i2/s08-i2-Prompts.md"
+  },
+  {
+    "id": "s08-i3",
+    "week": 8,
+    "order": 3,
+    "title": "RONIC: retorno sobre el capital nuevo invertido",
+    "word": "/materiales/items/s08-i3/s08-i3-Teoria.docx",
+    "excel": "/materiales/items/s08-i3/s08-i3-Modelo.xlsx",
+    "prompt": "/materiales/items/s08-i3/s08-i3-Prompts.md"
+  },
+  {
+    "id": "s08-i4",
+    "week": 8,
+    "order": 4,
+    "title": "Tasa de reinversión y crecimiento",
+    "word": "/materiales/items/s08-i4/s08-i4-Teoria.docx",
+    "excel": "/materiales/items/s08-i4/s08-i4-Modelo.xlsx",
+    "prompt": "/materiales/items/s08-i4/s08-i4-Prompts.md"
+  },
+  {
+    "id": "s08-i5",
+    "week": 8,
+    "order": 5,
+    "title": "CAPEX de mantenimiento vs. de expansión",
+    "word": "/materiales/items/s08-i5/s08-i5-Teoria.docx",
+    "excel": "/materiales/items/s08-i5/s08-i5-Modelo.xlsx",
+    "prompt": "/materiales/items/s08-i5/s08-i5-Prompts.md"
+  },
+  {
     "id": "s09-i1",
     "week": 9,
     "order": 1,
@@ -43,5 +403,140 @@
     "word": "/materiales/items/s09-i5/s09-i5-Teoria.docx",
     "excel": "/materiales/items/s09-i5/s09-i5-Modelo.xlsx",
     "prompt": "/materiales/items/s09-i5/s09-i5-Prompts.md"
+  },
+  {
+    "id": "s10-i1",
+    "week": 10,
+    "order": 1,
+    "title": "El ROE apalancado: la deuda como multiplicador",
+    "word": "/materiales/items/s10-i1/s10-i1-Teoria.docx",
+    "excel": "/materiales/items/s10-i1/s10-i1-Modelo.xlsx",
+    "prompt": "/materiales/items/s10-i1/s10-i1-Prompts.md"
+  },
+  {
+    "id": "s10-i2",
+    "week": 10,
+    "order": 2,
+    "title": "El escudo fiscal y el valor: Vu + VP del escudo",
+    "word": "/materiales/items/s10-i2/s10-i2-Teoria.docx",
+    "excel": "/materiales/items/s10-i2/s10-i2-Modelo.xlsx",
+    "prompt": "/materiales/items/s10-i2/s10-i2-Prompts.md"
+  },
+  {
+    "id": "s10-i3",
+    "week": 10,
+    "order": 3,
+    "title": "El escudo fiscal RIESGOSO (Vélez-Pareja)",
+    "word": "/materiales/items/s10-i3/s10-i3-Teoria.docx",
+    "excel": "/materiales/items/s10-i3/s10-i3-Modelo.xlsx",
+    "prompt": "/materiales/items/s10-i3/s10-i3-Prompts.md"
+  },
+  {
+    "id": "s10-i4",
+    "week": 10,
+    "order": 4,
+    "title": "Dificultades financieras: probabilidad de default y Altman Z'' EMS",
+    "word": "/materiales/items/s10-i4/s10-i4-Teoria.docx",
+    "excel": "/materiales/items/s10-i4/s10-i4-Modelo.xlsx",
+    "prompt": "/materiales/items/s10-i4/s10-i4-Prompts.md"
+  },
+  {
+    "id": "s10-i5",
+    "week": 10,
+    "order": 5,
+    "title": "Nivel óptimo de deuda y cobertura de intereses",
+    "word": "/materiales/items/s10-i5/s10-i5-Teoria.docx",
+    "excel": "/materiales/items/s10-i5/s10-i5-Modelo.xlsx",
+    "prompt": "/materiales/items/s10-i5/s10-i5-Prompts.md"
+  },
+  {
+    "id": "s11-i1",
+    "week": 11,
+    "order": 1,
+    "title": "De la TNA a la TEA: el efecto de la capitalización",
+    "word": "/materiales/items/s11-i1/s11-i1-Teoria.docx",
+    "excel": "/materiales/items/s11-i1/s11-i1-Modelo.xlsx",
+    "prompt": "/materiales/items/s11-i1/s11-i1-Prompts.md"
+  },
+  {
+    "id": "s11-i2",
+    "week": 11,
+    "order": 2,
+    "title": "La tasa real de Fisher: ganarle a la inflación",
+    "word": "/materiales/items/s11-i2/s11-i2-Teoria.docx",
+    "excel": "/materiales/items/s11-i2/s11-i2-Modelo.xlsx",
+    "prompt": "/materiales/items/s11-i2/s11-i2-Prompts.md"
+  },
+  {
+    "id": "s11-i3",
+    "week": 11,
+    "order": 3,
+    "title": "El Costo Financiero Total (CFT)",
+    "word": "/materiales/items/s11-i3/s11-i3-Teoria.docx",
+    "excel": "/materiales/items/s11-i3/s11-i3-Modelo.xlsx",
+    "prompt": "/materiales/items/s11-i3/s11-i3-Prompts.md"
+  },
+  {
+    "id": "s11-i4",
+    "week": 11,
+    "order": 4,
+    "title": "Sistemas de amortización: francés vs alemán vs americano",
+    "word": "/materiales/items/s11-i4/s11-i4-Teoria.docx",
+    "excel": "/materiales/items/s11-i4/s11-i4-Modelo.xlsx",
+    "prompt": "/materiales/items/s11-i4/s11-i4-Prompts.md"
+  },
+  {
+    "id": "s11-i5",
+    "week": 11,
+    "order": 5,
+    "title": "Valor tiempo del dinero: cuándo conviene ganar tiempo",
+    "word": "/materiales/items/s11-i5/s11-i5-Teoria.docx",
+    "excel": "/materiales/items/s11-i5/s11-i5-Modelo.xlsx",
+    "prompt": "/materiales/items/s11-i5/s11-i5-Prompts.md"
+  },
+  {
+    "id": "s12-i1",
+    "week": 12,
+    "order": 1,
+    "title": "Valuación por DCF (FCFF descontado al WACC)",
+    "word": "/materiales/items/s12-i1/s12-i1-Teoria.docx",
+    "excel": "/materiales/items/s12-i1/s12-i1-Modelo.xlsx",
+    "prompt": "/materiales/items/s12-i1/s12-i1-Prompts.md"
+  },
+  {
+    "id": "s12-i2",
+    "week": 12,
+    "order": 2,
+    "title": "APV: el Valor Presente Ajustado",
+    "word": "/materiales/items/s12-i2/s12-i2-Teoria.docx",
+    "excel": "/materiales/items/s12-i2/s12-i2-Modelo.xlsx",
+    "prompt": "/materiales/items/s12-i2/s12-i2-Prompts.md"
+  },
+  {
+    "id": "s12-i3",
+    "week": 12,
+    "order": 3,
+    "title": "TSR: descomposición del Retorno Total al Accionista",
+    "word": "/materiales/items/s12-i3/s12-i3-Teoria.docx",
+    "excel": "/materiales/items/s12-i3/s12-i3-Modelo.xlsx",
+    "prompt": "/materiales/items/s12-i3/s12-i3-Prompts.md"
+  },
+  {
+    "id": "s12-i4",
+    "week": 12,
+    "order": 4,
+    "title": "TSR Sintético y TBR para la empresa que no cotiza",
+    "word": "/materiales/items/s12-i4/s12-i4-Teoria.docx",
+    "excel": "/materiales/items/s12-i4/s12-i4-Modelo.xlsx",
+    "prompt": "/materiales/items/s12-i4/s12-i4-Prompts.md"
+  },
+  {
+    "id": "s12-i5",
+    "week": 12,
+    "order": 5,
+    "title": "Descuentos DLOC y DLOM del paquete cerrado",
+    "word": "/materiales/items/s12-i5/s12-i5-Teoria.docx",
+    "excel": "/materiales/items/s12-i5/s12-i5-Modelo.xlsx",
+    "prompt": "/materiales/items/s12-i5/s12-i5-Prompts.md"
   }
 ]

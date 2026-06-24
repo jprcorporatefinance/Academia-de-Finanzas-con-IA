@@ -194,7 +194,7 @@ async function buildWord(lesson: Lesson, modernIntro: string[], deepDive: { head
 // ---------------------------------------------------------------------------
 // Excel
 // ---------------------------------------------------------------------------
-const MODERN = ['LET', 'LAMBDA', 'SEQUENCE', 'IFS', 'SWITCH', 'TEXTJOIN', 'XLOOKUP', 'FILTER', 'SORT', 'UNIQUE', 'SCAN', 'MAP', 'BYROW', 'TOROW']
+const MODERN = ['LET', 'LAMBDA', 'SEQUENCE', 'IFS', 'SWITCH', 'TEXTJOIN', 'XLOOKUP', 'FILTER', 'SORT', 'UNIQUE', 'SCAN', 'MAP', 'BYROW', 'TOROW', 'NORM.S.DIST', 'NORM.DIST']
 function modernPrefix(formula: string): string {
   let f = formula
   for (const fn of MODERN) f = f.replace(new RegExp(`(?<!_xlfn\\.)\\b${fn}\\(`, 'g'), `_xlfn.${fn}(`)
