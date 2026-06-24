@@ -81,7 +81,7 @@ export const week01: ItemSpec[] = [
         heading: 'La cascada: de la venta al resultado neto',
         paragraphs: [
           'El **Estado de Resultados (ER)** es una **película**: muestra todo lo que pasó entre dos cierres de balance. Se lee como una **cascada** que arranca en las ventas y va restando capas de costos hasta llegar al resultado neto. Cada escalón responde una pregunta distinta sobre la salud del negocio.',
-          'En **Andina 2024**: Ventas 8.200 → menos CMV 5.740 = **Resultado bruto 2.460** → menos gastos de comercialización y administración (980 + 610) = **EBITDA 1.120** → menos amortizaciones 290 = **EBIT 830** → menos resultados financieros 560 = **resultado antes de impuestos 270** → menos impuesto 95 = **Resultado neto 175**.',
+          'En **Andina 2024**: Ventas 8.200 → menos CMV 5.740 = **Resultado bruto 2.460** → menos gastos de comercialización y administración (1.340) = **EBITDA 1.120** → menos amortizaciones 290 = **EBIT 830** → menos resultados financieros 560 = **resultado antes de impuestos 270** → menos impuesto 95 = **Resultado neto 175**.',
           'La lección clave es **dónde se desangra la utilidad**. En Andina, el negocio operativo luce bien (EBITDA de 1.120, EBIT de 830), pero los **intereses se comen 560** —dos tercios del EBIT— y dejan un resultado neto magro de 175. La empresa gana operando y lo entrega a los bancos. Eso no se ve mirando solo la última línea.',
         ],
       },
@@ -107,7 +107,7 @@ export const week01: ItemSpec[] = [
       inputs: [
         { key: 'ventas', label: 'Ventas netas', value: 8200, min: 1000, max: 20000, step: 50, unit: 'k', fmt: 'num' },
         { key: 'cmv', label: 'Costo de mercadería vendida', value: 5740, min: 0, max: 16000, step: 50, unit: 'k', fmt: 'num' },
-        { key: 'gastosOp', label: 'Gastos comerc. + admin.', value: 1590, min: 0, max: 6000, step: 10, unit: 'k', fmt: 'num' },
+        { key: 'gastosOp', label: 'Gastos comerc. + admin.', value: 1340, min: 0, max: 6000, step: 10, unit: 'k', fmt: 'num' },
         { key: 'amort', label: 'Amortizaciones', value: 290, min: 0, max: 2000, step: 10, unit: 'k', fmt: 'num' },
         { key: 'intereses', label: 'Resultados financieros (intereses)', value: 560, min: 0, max: 3000, step: 10, unit: 'k', fmt: 'num' },
         { key: 'tax', label: 'Tasa de impuesto', value: 0.35, min: 0, max: 0.5, step: 0.01, fmt: 'pct' },
