@@ -108,6 +108,12 @@ export function LocalStoreProvider({ children }: { children: ReactNode }) {
       }))
       return { ok: true }
     },
+    async requestPasswordReset() {
+      return { ok: false, error: 'La recuperación por email requiere el backend (Supabase) configurado.' }
+    },
+    async updatePassword() {
+      return { ok: false, error: 'No disponible en modo local.' }
+    },
 
     getStudentState(userId) {
       return (

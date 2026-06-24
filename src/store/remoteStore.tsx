@@ -215,6 +215,16 @@ export function RemoteStoreProvider({ children }: { children: ReactNode }) {
       // la sesión dispara onAuthStateChange -> loadAll
       return { ok: true }
     },
+    async requestPasswordReset(email) {
+      const { error } = await sb.auth.resetPasswordForEmail(email, {
+        redirectTo: `${window.location.origin}/restablecer`,
+      })
+      return error ? { ok: false, error: error.message } : { ok: true }
+    },
+    async updatePassword(newPassword) {
+      const { error } = await sb.auth.updateUser({ password: newPassword })
+      return error ? { ok: false, error: error.message } : { ok: true }
+    },
 
     getStudentState(userId) {
       return (

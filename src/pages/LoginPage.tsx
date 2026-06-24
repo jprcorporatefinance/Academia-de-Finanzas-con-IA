@@ -4,12 +4,26 @@ import { useStore } from '../store/store'
 import { TrendingUp, ArrowRight } from 'lucide-react'
 
 export default function LoginPage() {
-  const { login, register, backend } = useStore()
+  const { login, register, backend, requestPasswordReset } = useStore()
   const navigate = useNavigate()
   const [mode, setMode] = useState<'login' | 'register'>('login')
   const [error, setError] = useState('')
   const [info, setInfo] = useState('')
   const [busy, setBusy] = useState(false)
+  const [showReset, setShowReset] = useState(false)
+
+  async function handleReset(e: React.FormEvent) {
+    e.preventDefault()
+    setError(''); setInfo('')
+    if (!email) return setError('Ingresá tu email para recuperar la contraseña.')
+    setBusy(true)
+    const res = await requestPasswordReset(email)
+    setBusy(false)
+    if (res.ok) {
+      setInfo('Te enviamos un email con el enlace para restablecer tu contraseña. Revisá tu bandeja (y el spam).')
+      setShowReset(false)
+    } else setError(res.error ?? 'No se pudo enviar el email de recuperación.')
+  }
 
   // login
   const [email, setEmail] = useState('')
@@ -93,7 +107,21 @@ export default function LoginPage() {
             </div>
           )}
 
-          {mode === 'login' ? (
+          {mode === 'login' && showReset ? (
+            <form onSubmit={handleReset} className="space-y-4">
+              <p className="text-sm text-slate-400">Ingresá tu email y te mandamos un enlace para crear una nueva contraseña.</p>
+              <div>
+                <label className="label">Email</label>
+                <input className="input" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="tu@empresa.com" />
+              </div>
+              <button className="btn-gold w-full py-3" type="submit" disabled={busy}>
+                {busy ? 'Enviando…' : 'Enviar enlace de recuperación'} <ArrowRight size={18} />
+              </button>
+              <button type="button" onClick={() => { setShowReset(false); setError(''); setInfo('') }} className="block w-full text-center text-xs text-slate-400 hover:text-gold-300">
+                Volver al ingreso
+              </button>
+            </form>
+          ) : mode === 'login' ? (
             <form onSubmit={handleLogin} className="space-y-4">
               <div>
                 <label className="label">Email</label>
@@ -105,6 +133,9 @@ export default function LoginPage() {
               </div>
               <button className="btn-gold w-full py-3" type="submit" disabled={busy}>
                 {busy ? 'Ingresando…' : 'Entrar'} <ArrowRight size={18} />
+              </button>
+              <button type="button" onClick={() => { setShowReset(true); setError(''); setInfo('') }} className="block w-full text-center text-xs text-slate-400 hover:text-gold-300">
+                ¿Olvidaste tu contraseña?
               </button>
             </form>
           ) : (

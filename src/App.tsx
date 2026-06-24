@@ -5,6 +5,7 @@ import type { ReactNode } from 'react'
 
 import LandingPage from './pages/LandingPage'
 import LoginPage from './pages/LoginPage'
+import ResetPasswordPage from './pages/ResetPasswordPage'
 import DashboardPage from './pages/DashboardPage'
 import ProgramaPage from './pages/ProgramaPage'
 import LessonPage from './pages/LessonPage'
@@ -36,6 +37,7 @@ export default function App() {
     <Routes>
       <Route path="/" element={<LandingPage />} />
       <Route path="/ingresar" element={<LoginPage />} />
+      <Route path="/restablecer" element={<ResetPasswordPage />} />
 
       <Route path="/app" element={<Protected><DashboardPage /></Protected>} />
       <Route path="/app/programa" element={<Protected><ProgramaPage /></Protected>} />

@@ -15,6 +15,8 @@ export interface StoreApi {
   register: (
     data: Omit<User, 'id' | 'role' | 'avatarColor' | 'createdAt'>,
   ) => Promise<{ ok: boolean; needsConfirmation?: boolean; error?: string }>
+  requestPasswordReset: (email: string) => Promise<{ ok: boolean; error?: string }>
+  updatePassword: (newPassword: string) => Promise<{ ok: boolean; error?: string }>
 
   // datos
   users: User[]
