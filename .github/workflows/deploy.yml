@@ -1,7 +1,11 @@
-name: CI y Deploy
+name: CI
 
-# Build + type-check en cada push y PR. Deploy a Netlify al integrar en main
-# (o manualmente desde la pestaña Actions con "Run workflow").
+# Build + type-check en cada push y PR.
+#
+# El deploy ya NO se hace desde acá: Netlify está conectado directo al repo
+# (Git-based continuous deployment) y publica automáticamente en cada push a
+# main usando la configuración de netlify.toml. Por eso este workflow no
+# necesita el secret NETLIFY_AUTH_TOKEN.
 
 on:
   push:
@@ -29,35 +33,3 @@ jobs:
           name: dist
           path: dist
           retention-days: 5
-
-  deploy:
-    name: Deploy a Netlify
-    runs-on: ubuntu-latest
-    needs: build
-    # Solo despliega en la rama principal o a pedido, no en cada PR.
-    if: github.ref == 'refs/heads/main' || github.event_name == 'workflow_dispatch'
-    permissions:
-      contents: read
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: npm
-      - run: npm ci
-      - run: npm run build
-      - name: Publicar en Netlify
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: '3831feb3-951b-41f3-a9ff-7009d110b2b0'
-        run: |
-          if [ -z "$NETLIFY_AUTH_TOKEN" ]; then
-            echo "::error::Falta el secret NETLIFY_AUTH_TOKEN. Agregalo en Settings > Secrets and variables > Actions."
-            exit 1
-          fi
-          npx --yes netlify-cli@17 deploy \
-            --dir=dist \
-            --site="$NETLIFY_SITE_ID" \
-            --auth="$NETLIFY_AUTH_TOKEN" \
-            --prod \
-            --message "Deploy desde GitHub Actions (${{ github.sha }})"
