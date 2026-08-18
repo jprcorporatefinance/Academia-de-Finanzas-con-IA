@@ -33,6 +33,9 @@ export default function MaestriaPage() {
               se guarda tu mejor puntaje) y la posibilidad de <strong>subir tu solución</strong> del caso.
             </p>
           </div>
+          <Link to="/app/mapa-valor" className="btn mt-4 inline-flex">
+            Ver el mapa de generadores de valor <ArrowRight size={16} />
+          </Link>
         </div>
         <div className="mt-4">{isAdmin ? <AdminOverview /> : <StudentProgress />}</div>
       </Section>
