@@ -64,6 +64,35 @@ export const a3_2: Asignatura = {
         { t: 'idea', md: 'La conexión con el resto del programa: la red neuronal se construyó a mano en Excel (2.3) para desmitificarla; acá se usa en serio, pero con la misma disciplina de auditar y explicar. La potencia sin interpretabilidad no es un activo en finanzas: es un riesgo.' },
       ],
     },
+    {
+      title: 'El zoológico de modelos: de lo lineal a lo profundo',
+      intro: 'Elegir el modelo es elegir un lugar en el compromiso entre potencia e interpretabilidad. Conocer el menú evita usar un bazooka para matar una mosca —o al revés—.',
+      blocks: [
+        { t: 'table', title: 'Modelos y su compromiso', headers: ['Familia', 'Potencia', 'Interpretabilidad'], firstColLeft: true, rows: [
+          ['Regresión lineal / logística', 'Baja–media', 'Alta (cada coeficiente se lee)'],
+          ['Árboles de decisión', 'Media', 'Alta (reglas explícitas)'],
+          ['Random Forest', 'Alta', 'Media (importancia de variables)'],
+          ['Gradient Boosting (XGBoost)', 'Muy alta', 'Media–baja (requiere SHAP)'],
+          ['Redes neuronales (deep learning)', 'Máxima (datos no estructurados)', 'Baja (caja negra)'],
+        ], caption: 'La navaja de Occam financiera: empezá por el modelo más simple que resuelva el problema. Un modelo lineal interpretable que el directorio entiende suele ser preferible a un ensamble opaco que gana 1 % de precisión y nadie puede explicar.' },
+        { t: 'p', md: 'El **compromiso sesgo-varianza** guía la elección: modelos muy flexibles (redes profundas) reducen el sesgo pero disparan la varianza (sobreajuste); modelos simples (lineales) tienen más sesgo pero generalizan mejor con pocos datos. En finanzas corporativas —donde los datos suelen ser escasos y ruidosos— la simplicidad interpretable suele ganar.' },
+        { t: 'quote', author: 'Trevor Hastie & Robert Tibshirani', credential: 'The Elements of Statistical Learning', md: 'La flexibilidad de un modelo es un arma de doble filo: reduce el error en los datos que ya viste y lo aumenta en los nuevos. El arte de la estadística es encontrar el punto de equilibrio.' },
+      ],
+    },
+    {
+      title: 'Validar sin engañarse: el pecado capital del ML financiero',
+      intro: 'En finanzas, validar mal es peor que no validar: da falsa confianza. Los errores de validación producen modelos que brillan en el backtest y fracasan en producción.',
+      blocks: [
+        { t: 'ul', items: [
+          '**Sesgo de anticipación (look-ahead bias):** usar información que no estaría disponible al momento de decidir. Un modelo que "predice" la mora usando datos que solo se conocen después es inútil en la práctica.',
+          '**Data snooping:** probar mil modelos hasta que uno "funciona" por azar. Con suficientes intentos, siempre aparece un falso positivo.',
+          '**Fuga de datos (data leakage):** que información del conjunto de prueba se filtre al entrenamiento (por ejemplo, normalizar con la media de todo el dataset).',
+          '**Ignorar la estructura temporal:** en datos financieros, mezclar aleatoriamente pasado y futuro rompe la validez. Hay que validar respetando el orden temporal.',
+        ] },
+        { t: 'idea', md: 'La regla de oro: la **matriz de confusión y el AUC** cuentan la verdad que la exactitud esconde. Si solo el 3 % de los clientes cae en mora, un modelo que dice "nadie cae" acierta el 97 %… y es completamente inútil. Por eso se miran precisión, recall y AUC, y se elige el umbral de corte según el costo real de un falso positivo (rechazar a un buen cliente) frente al de un falso negativo (aprobar a uno que no paga).' },
+        { t: 'quote', author: 'Marcos López de Prado', credential: 'Cornell / ADIA', md: 'El backtest overfitting es la principal causa de estrategias que fallan en producción. La solución no es más datos ni modelos más complejos: es rigor en la validación y honestidad sobre lo que el modelo realmente sabe.' },
+      ],
+    },
   ],
   expertos: [
     { author: 'Aurélien Géron', credential: 'Hands-On Machine Learning', md: 'El flujo real de un proyecto de ML es 80 % preparación de datos y validación honesta, 20 % modelo. El algoritmo de moda importa mucho menos que la disciplina del proceso.' },

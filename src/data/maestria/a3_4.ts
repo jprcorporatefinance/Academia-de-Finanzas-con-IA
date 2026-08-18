@@ -71,6 +71,34 @@ export const a3_4: Asignatura = {
         { t: 'idea', md: 'La decisión de qué automatizar se prioriza por **retorno y factibilidad**: tareas frecuentes, repetitivas, de reglas claras y bajo riesgo primero. Una tarea infrecuente, ambigua y de alto riesgo es la última candidata, por más “automatizable” que parezca.' },
       ],
     },
+    {
+      title: 'Patrones de diseño: del más simple al más complejo',
+      intro: 'La ingeniería de agentes consiste en elegir el patrón más simple que resuelva el problema. Agregar autonomía sin necesidad es sumar riesgo sin beneficio.',
+      blocks: [
+        { t: 'table', title: 'Patrones de agentes, de menor a mayor complejidad', headers: ['Patrón', 'Qué hace', 'Cuándo usarlo'], firstColLeft: true, rows: [
+          ['Flujo de trabajo', 'Pasos predefinidos, el modelo completa cada uno', 'Proceso conocido y estable'],
+          ['ReAct', 'Alterna razonamiento y acción según lo observado', 'La tarea requiere decidir el próximo paso'],
+          ['Planificación', 'Descompone el objetivo en subtareas antes de ejecutar', 'Objetivos complejos y multi-paso'],
+          ['Reflexión', 'El agente critica y corrige su propia salida', 'Cuando la calidad importa más que la velocidad'],
+          ['Multi-agente', 'Agentes especializados coordinados', 'Tareas que se benefician de la división del trabajo'],
+        ], caption: 'Empezá con la solución más simple posible y agregá complejidad solo cuando demuestre su valor. Muchos problemas se resuelven con un flujo de trabajo bien definido, no con un agente autónomo.' },
+        { t: 'quote', author: 'Documentación de agentes (Anthropic)', credential: 'Building effective agents', md: 'La mayoría de las aplicaciones exitosas de agentes usan patrones simples y componibles, no autonomía máxima. La complejidad debe justificarse por el valor que aporta, no por lo impresionante que suena.' },
+      ],
+    },
+    {
+      title: 'Gobierno del agente financiero',
+      intro: 'En la función financiera, un agente sin controles es un pasivo. El gobierno se diseña junto con el agente, no después.',
+      blocks: [
+        { t: 'ul', items: [
+          '**Sólo lectura por defecto:** el agente consulta y propone; las acciones que mueven dinero o modifican registros pasan por aprobación humana.',
+          '**Humano en el bucle** en los puntos críticos: aprobar un pago, enviar un informe al directorio, rechazar un crédito.',
+          '**Registro de auditoría de cada paso:** qué herramienta llamó, con qué parámetros, qué obtuvo y qué decidió —el mismo principio del servidor MCP de la 1.2—.',
+          '**Autonomía gradual:** se concede primero sobre acciones reversibles y de bajo impacto; lo crítico e irreversible mantiene control humano hasta ganar confianza.',
+        ] },
+        { t: 'warn', md: 'El riesgo de la **alucinación** obliga a una regla estricta: toda cifra que el agente reporta debe ser **trazable a una herramienta auditada**, no generada por el modelo. Un agente financiero no "recuerda" saldos ni "estima" cifras: las consulta al servidor MCP de sólo lectura y las cita. La responsabilidad final, siempre, es humana.' },
+        { t: 'quote', author: 'Chip Huyen', credential: 'AI Engineering', md: 'La confiabilidad de un sistema de IA no viene del modelo, sino de la ingeniería alrededor: evaluación con casos conocidos, monitoreo, guardarraíles y la posibilidad de intervención humana. Sin eso, no hay ingeniería, solo demostraciones.' },
+      ],
+    },
   ],
   expertos: [
     { author: 'Documentación de agentes (Anthropic)', credential: 'Building effective agents', md: 'Distinguí flujos de trabajo (pasos predefinidos) de agentes (el modelo dirige el proceso). La mayoría de las aplicaciones exitosas usan patrones simples y componibles, no autonomía máxima.' },

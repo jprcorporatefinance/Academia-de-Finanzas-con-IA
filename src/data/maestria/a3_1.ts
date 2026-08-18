@@ -69,6 +69,44 @@ export const a3_1: Asignatura = {
         { t: 'quote', author: 'Luis Pereiro', credential: 'Valuation of Companies in Emerging Markets', md: 'En los mercados emergentes, el analista que importa mecánicamente el instrumental de los mercados desarrollados comete errores sistemáticos. El ajuste no es opcional: es la diferencia entre una valuación defendible y un número inventado.' },
       ],
     },
+    {
+      title: 'Las escuelas del riesgo país: un debate abierto',
+      intro: 'No hay un único método aceptado para incorporar el riesgo país. Conocer las tres escuelas principales permite elegir con criterio y defender la elección.',
+      blocks: [
+        { t: 'table', title: 'Tres enfoques para el riesgo país', headers: ['Enfoque', 'Cómo trata el CRP', 'Crítica'], firstColLeft: true, rows: [
+          ['Prima país agregada (Damodaran base)', 'Suma el CRP completo al Ke', 'Puede sobreestimar: no toda empresa está igual de expuesta'],
+          ['Lambda (Damodaran)', 'Pondera el CRP por la exposición (λ) de cada empresa', 'Requiere estimar λ, que no es trivial'],
+          ['Pereiro (1 − R²)', 'Escala el término de mercado para evitar doble conteo', 'Depende de la calidad de la regresión (R²)'],
+        ], caption: 'El programa enseña los tres y exige justificar el elegido. Para una exportadora con ingresos en dólares, la lambda baja tiene sentido; para una empresa 100 % volcada al mercado interno, la prima agregada se acerca más.' },
+        { t: 'warn', md: 'El error de **doble conteo** es el más común y el más caro: parte del riesgo país ya está capturado en el término β×ERP (porque el ERP maduro y la beta reflejan algo del riesgo sistémico). Sumar el CRP completo sin la corrección de Pereiro o el ajuste de lambda infla el Ke y subvalúa la empresa. Es un error que puede cambiar una valuación en decenas de puntos porcentuales.' },
+        { t: 'quote', author: 'Javier Estrada', credential: 'IESE — modelos de riesgo país', md: 'No existe el método perfecto para el costo del capital en emergentes; existen métodos defendibles y métodos arbitrarios. La diferencia está en documentar los supuestos y hacer sensibilidad, no en pretender una precisión que los datos no permiten.' },
+      ],
+    },
+    {
+      title: 'La Beta Total y el dueño concentrado',
+      intro: 'La corrección de Beta Total es, quizás, la más importante para la empresa familiar —y la más ignorada en la práctica—.',
+      blocks: [
+        { t: 'p', md: 'El CAPM clásico supone un inversor **perfectamente diversificado**: solo le importa el riesgo sistemático (la beta de mercado), porque el resto lo diversifica en su cartera. Pero el dueño de una PyME familiar tiene **todo su patrimonio en una sola empresa**: soporta el riesgo total, no solo el sistemático.' },
+        { t: 'formula', name: 'Beta Total (Damodaran)', expr: 'β_Total = β_L ÷ ρ', where: 'ρ = correlación de la empresa con el mercado (típicamente 0,4–0,7)', note: 'Como ρ < 1, la Beta Total es siempre mayor que la beta apalancada: es el precio de no estar diversificado.' },
+        { t: 'idea', md: 'La consecuencia es profunda: el mismo negocio vale distinto según quién lo tenga. Para un fondo diversificado, el Ke relevante usa la beta de mercado; para el dueño familiar concentrado, usa la Beta Total (mucho mayor). Esta diferencia explica por qué un comprador estratégico o financiero puede pagar más que el valor "para el dueño actual": tiene un costo del capital menor porque diversifica. Es una de las razones por las que vender puede crear valor.' },
+        { t: 'quote', author: 'Aswath Damodaran', credential: 'NYU Stern — Valuation', md: 'La Beta Total es la herramienta para valuar negocios privados donde el propietario no está diversificado. Ignorarla —usar la beta de mercado para un dueño concentrado— subestima sistemáticamente el costo del capital y sobrevalúa la empresa.' },
+      ],
+    },
+    {
+      title: 'Precisión terminológica: qué NO es el costo del capital',
+      intro: 'La evaluación del programa exige rigor terminológico. Confundir conceptos cercanos es motivo de desaprobación, porque en la práctica lleva a errores de valuación.',
+      blocks: [
+        { t: 'warn', md: 'El **SPAM de Pereiro** (*Stackable Premiums and Adjustments Model*) es un modelo de **ajustes multiplicativos al valor del patrimonio** por tamaño, control e iliquidez —opera sobre el VALOR, no sobre la tasa—. **NO es un modelo de costo del capital** ni la corrección contra el doble conteo del riesgo país. Confundirlos es un error conceptual grave.' },
+        { t: 'table', title: 'Conceptos que no hay que confundir', headers: ['Concepto', 'Qué es', 'Sobre qué opera'], firstColLeft: true, rows: [
+          ['CAPM emergente', 'Modelo de costo del capital propio (Ke)', 'La tasa de descuento'],
+          ['Corrección de Pereiro (1−R²)', 'Ajuste anti-doble-conteo del riesgo país', 'El Ke'],
+          ['Lambda de Damodaran', 'Ponderación de la exposición al riesgo país', 'El Ke'],
+          ['SPAM de Pereiro', 'Ajustes por tamaño/control/iliquidez', 'El VALOR del patrimonio (no la tasa)'],
+          ['DLOC × DLOM', 'Descuentos de control e iliquidez', 'El VALOR (asignatura 4.1)'],
+        ], caption: 'Los tres primeros ajustan la TASA; los dos últimos ajustan el VALOR. Mezclarlos —por ejemplo, aplicar un descuento de iliquidez subiendo el Ke y además bajando el valor— es contar dos veces el mismo efecto.' },
+        { t: 'quote', author: 'Pablo Fernández', credential: 'IESE Business School', md: 'La mayoría de los errores de valuación no están en los modelos, sino en aplicarlos sin entender qué mide cada término. El rigor conceptual no es pedantería: es la diferencia entre un número defendible y uno inventado.' },
+      ],
+    },
   ],
   expertos: [
     { author: 'Aswath Damodaran', credential: 'NYU Stern', md: 'La prima de riesgo país no se suma a ciegas: se pondera por la exposición real de la empresa (lambda). Y para el dueño no diversificado, el beta correcto es el total.' },

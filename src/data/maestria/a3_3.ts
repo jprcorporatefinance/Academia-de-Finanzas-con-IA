@@ -64,6 +64,31 @@ export const a3_3: Asignatura = {
         { t: 'quote', author: 'Douglas Hubbard', credential: 'How to Measure Anything', md: 'Medir la incertidumbre no es admitir ignorancia: es cuantificarla. Un rango con probabilidades es más honesto —y más útil para decidir— que un número único con falsa precisión.' },
       ],
     },
+    {
+      title: 'Proyectar por generadores: el esqueleto del modelo',
+      intro: 'Una proyección no es extrapolar cada renglón: es modelar los pocos generadores que mueven el valor y dejar que el resto se derive con coherencia.',
+      blocks: [
+        { t: 'p', md: 'La proyección se ancla en los **generadores de valor**: crecimiento de ventas, margen operativo, intensidad de capital (capital de trabajo y CapEx por peso de venta), tasa impositiva y costo del capital. Se proyectan esos drivers y los **estados integrados** —resultados, balance y flujo— se derivan de ellos, con verificación de cierre.' },
+        { t: 'chain', title: 'De los generadores a los estados', nodes: ['Drivers proyectados', 'Estados integrados', 'FCFF y FCFE', 'Valuación (4.1)'], caption: 'El mismo esqueleto del Key Value Driver de McKinsey: proyectar los generadores impone coherencia interna.' },
+        { t: 'warn', md: 'Proyectar cada línea por separado produce estados que no cierran y supuestos que se contradicen. Proyectar por generadores impone la lógica económica: si crecen las ventas, crecen las cuentas por cobrar y el inventario, y eso consume caja —el modelo lo obliga—. Es la diferencia entre una proyección que es una historia económica coherente y una que es una extrapolación de renglones sin sentido.' },
+      ],
+    },
+    {
+      title: 'La falacia de los promedios y por qué Monte Carlo importa',
+      intro: 'El error más extendido en la planificación financiera es reemplazar cada variable incierta por su promedio y esperar el promedio del resultado. Es sistemáticamente falso.',
+      blocks: [
+        { t: 'p', md: 'Sam Savage lo llamó **"la falacia de los promedios"**: cuando el resultado es una función no lineal de las variables, el resultado del promedio de los inputs **no** es el promedio de los resultados. Un ejemplo clásico: una empresa que planifica con la demanda promedio termina, en promedio, con exceso de stock los meses buenos y faltante los malos —y pierde en ambos—.' },
+        { t: 'steps', title: 'La anatomía de una simulación de Monte Carlo', items: [
+          { k: 'Definir distribuciones', d: 'Para cada input incierto, elegir su distribución (normal, triangular, etc.) y sus parámetros, en vez de un valor puntual.' },
+          { k: 'Modelar correlaciones', d: 'Capturar si las variables se mueven juntas (p. ej. precio y volumen en una recesión).' },
+          { k: 'Sortear (≥ 10.000 veces)', d: 'Generar miles de combinaciones de inputs y calcular el resultado en cada una.' },
+          { k: 'Analizar la distribución', d: 'Media, percentiles P5/P95, probabilidad de resultados adversos, VaR y Expected Shortfall.' },
+          { k: 'Estresar', d: 'Complementar con shocks extremos específicos (stress tests) para ver la resiliencia de la caja.' },
+        ] },
+        { t: 'formula', name: 'Simulación vectorizada en Excel 365', expr: 'x = μ + σ × NORM.S.INV(RANDARRAY(N))', note: 'Una sola fórmula genera N sorteos normales. La potencia de las matrices dinámicas (asignatura 2.3) hace Monte Carlo dentro de la planilla, sin macros.' },
+        { t: 'quote', author: 'Sam Savage', credential: 'Stanford — The Flaw of Averages', md: 'Los planes basados en promedios están, en promedio, equivocados. La incertidumbre no se promedia: se simula. Y el resultado no es un número, es una forma —la distribución— que revela el riesgo que el promedio esconde.' },
+      ],
+    },
   ],
   expertos: [
     { author: 'Tim Koller', credential: 'McKinsey — Valuation', md: 'Proyectá los generadores de valor y dejá que los estados se deriven. Una buena proyección es una historia económica coherente, no una extrapolación de renglones.' },
