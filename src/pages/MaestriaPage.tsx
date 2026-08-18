@@ -3,10 +3,12 @@ import { Link } from 'react-router-dom'
 import { useStore } from '../store/store'
 import { maestriaAsignaturas, CUATRIMESTRES } from '../data/maestria/appData'
 import { Section } from '../components/ui'
+import { StudentProgress, AdminOverview } from '../components/MaestriaOverview'
 import { GraduationCap, Award, ArrowRight } from 'lucide-react'
 
 export default function MaestriaPage() {
   const { currentUser, quizAttempts } = useStore()
+  const isAdmin = currentUser?.role === 'admin'
 
   const bestByCod = useMemo(() => {
     const m = new Map<string, number>()
@@ -32,6 +34,7 @@ export default function MaestriaPage() {
             </p>
           </div>
         </div>
+        <div className="mt-4">{isAdmin ? <AdminOverview /> : <StudentProgress />}</div>
       </Section>
 
       {CUATRIMESTRES.map((c) => (
