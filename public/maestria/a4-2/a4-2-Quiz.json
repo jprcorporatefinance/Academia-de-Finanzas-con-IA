@@ -1,0 +1,186 @@
+{
+  "cod": "4.2",
+  "nombre": "Decisiones de Inversión, RONIC y Crecimiento con Creación de Valor",
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "El teorema central del crecimiento dice que crecer crea valor si y solo si:",
+      "opciones": [
+        "Las ventas suben.",
+        "RONIC > WACC (el retorno del capital nuevo supera su costo).",
+        "El ROIC histórico es alto.",
+        "La empresa toma deuda."
+      ],
+      "correcta": 1,
+      "justificacion": "Solo cuando el capital nuevo rinde más que su costo el crecimiento agrega valor. Ventas, ROIC histórico o deuda no lo garantizan."
+    },
+    {
+      "id": "q2",
+      "pregunta": "En el Key Value Driver, si RONIC < WACC, aumentar g:",
+      "opciones": [
+        "Aumenta el valor.",
+        "Destruye valor (y cuanto más rápido, peor).",
+        "No tiene efecto.",
+        "Elimina la deuda."
+      ],
+      "correcta": 1,
+      "justificacion": "Con RONIC < WACC cada peso de crecimiento destruye valor; acelerar empeora. Es el resultado central del modelo."
+    },
+    {
+      "id": "q3",
+      "pregunta": "La diferencia entre ROIC y RONIC es:",
+      "opciones": [
+        "Ninguna.",
+        "ROIC = retorno del capital existente; RONIC = retorno del capital nuevo.",
+        "ROIC es antes de impuestos.",
+        "RONIC es el ROIC del competidor."
+      ],
+      "correcta": 1,
+      "justificacion": "El ROIC mira lo ya invertido; el RONIC, lo que se va a invertir. Para decidir crecer, importa el RONIC."
+    },
+    {
+      "id": "q4",
+      "pregunta": "¿Por qué el ROIC histórico alto NO justifica una expansión?",
+      "opciones": [
+        "Porque el ROIC no importa.",
+        "Porque el proyecto nuevo rinde su propio RONIC, no el ROIC del pasado.",
+        "Porque el ROIC siempre baja.",
+        "Porque la expansión no usa capital."
+      ],
+      "correcta": 1,
+      "justificacion": "El retorno relevante para el capital nuevo es el RONIC del proyecto; el historial no se transfiere. Si el RONIC < WACC, la expansión destruye valor."
+    },
+    {
+      "id": "q5",
+      "pregunta": "Una empresa con RONIC persistentemente menor que su WACC:",
+      "opciones": [
+        "Debe crecer lo más rápido posible.",
+        "Vale más si NO crece (y podría convenir devolver capital).",
+        "Debe endeudarse para crecer.",
+        "Tiene ROIC negativo."
+      ],
+      "correcta": 1,
+      "justificacion": "Si crecer destruye valor, la empresa vale más sin crecer; devolver capital a los dueños puede ser lo óptimo. No implica ROIC negativo."
+    },
+    {
+      "id": "q6",
+      "pregunta": "La tasa de crecimiento sostenible es:",
+      "opciones": [
+        "WACC × g.",
+        "Tasa de reinversión × ROIC.",
+        "Ventas / activos.",
+        "Siempre 10%."
+      ],
+      "correcta": 1,
+      "justificacion": "g sostenible = (1 − payout) × ROIC: el crecimiento financiable con recursos propios sin cambiar la estructura de capital."
+    },
+    {
+      "id": "q7",
+      "pregunta": "Bajo inflación, distinguir crecimiento real del nominal importa porque:",
+      "opciones": [
+        "Son lo mismo.",
+        "Vender lo mismo a precios más altos no es crecer realmente.",
+        "La inflación no afecta.",
+        "El nominal es siempre real."
+      ],
+      "correcta": 1,
+      "justificacion": "El crecimiento nominal por precios no es crecimiento genuino de volumen/valor; hay que separarlos (asignatura 1.1, IPR). No son equivalentes."
+    },
+    {
+      "id": "q8",
+      "pregunta": "El término (1 − g/RONIC) del KVD representa:",
+      "opciones": [
+        "La tasa impositiva.",
+        "La porción del NOPAT que queda como flujo tras reinvertir para crecer.",
+        "El WACC.",
+        "La deuda."
+      ],
+      "correcta": 1,
+      "justificacion": "g/RONIC es la tasa de reinversión; (1 − g/RONIC) es lo que sobra como FCFF. No es impuesto, WACC ni deuda."
+    },
+    {
+      "id": "q9",
+      "pregunta": "El valor del crecimiento (V creciendo − V sin crecer) cambia de signo cuando:",
+      "opciones": [
+        "g = 0.",
+        "RONIC = WACC.",
+        "NOPAT = 0.",
+        "WACC = 0."
+      ],
+      "correcta": 1,
+      "justificacion": "En RONIC = WACC el crecimiento es neutro; por encima crea valor, por debajo lo destruye. Es el punto de cruce."
+    },
+    {
+      "id": "q10",
+      "pregunta": "Según Mauboussin, el mercado paga por:",
+      "opciones": [
+        "El crecimiento sin más.",
+        "La creación de valor (crecer con retornos sobre el costo del capital).",
+        "Las ventas.",
+        "El tamaño."
+      ],
+      "correcta": 1,
+      "justificacion": "El mercado premia la creación de valor, no el crecimiento por sí mismo; crecer destruyendo valor vale menos que cero. Tamaño y ventas no bastan."
+    },
+    {
+      "id": "q11",
+      "pregunta": "La regla del VAN (1.3) y el teorema del RONIC son:",
+      "opciones": [
+        "Contradictorias.",
+        "La misma idea vista desde dos ángulos: aceptar lo que rinde más que su costo.",
+        "Independientes.",
+        "Solo una es válida."
+      ],
+      "correcta": 1,
+      "justificacion": "VAN > 0 equivale a RONIC > WACC: ambos aceptan proyectos que rinden por encima del costo del capital. Son coherentes, no contradictorias."
+    },
+    {
+      "id": "q12",
+      "pregunta": "Crecer por encima de la tasa sostenible exige:",
+      "opciones": [
+        "Nada especial.",
+        "Financiamiento externo (deuda o capital), con su costo y riesgo.",
+        "Bajar el ROIC.",
+        "Eliminar dividendos y nada más."
+      ],
+      "correcta": 1,
+      "justificacion": "Superar el crecimiento autofinanciable requiere capital externo, que trae costo y riesgo. No es gratis ni automático."
+    },
+    {
+      "id": "q13",
+      "pregunta": "Para Maderas del Litoral, con RONIC ≈ 15% y WACC ≈ 19,5%, la ampliación:",
+      "opciones": [
+        "Crea mucho valor.",
+        "Destruye valor: la empresa valdría más sin ella.",
+        "Es neutra.",
+        "No se puede evaluar."
+      ],
+      "correcta": 1,
+      "justificacion": "RONIC por debajo del WACC hace que crecer reste valor; el KVD lo confirma numéricamente (valor del crecimiento negativo)."
+    },
+    {
+      "id": "q14",
+      "pregunta": "El “crecimiento por el crecimiento mismo” (Rappaport) es:",
+      "opciones": [
+        "El objetivo correcto.",
+        "Una trampa que consume caja y destruye valor mientras luce como éxito.",
+        "Neutral.",
+        "Siempre rentable."
+      ],
+      "correcta": 1,
+      "justificacion": "Crecer sin retorno adecuado quema caja y destruye valor, aunque parezca éxito. El objetivo es el crecimiento rentable."
+    },
+    {
+      "id": "q15",
+      "pregunta": "A veces la mejor decisión de inversión es:",
+      "opciones": [
+        "Invertir siempre en crecer.",
+        "No invertir en crecer y devolver capital a los dueños (si RONIC < WACC).",
+        "Endeudarse al máximo.",
+        "Comprar competidores."
+      ],
+      "correcta": 1,
+      "justificacion": "Cuando el capital nuevo destruiría valor, no crecer y devolver capital es lo óptimo. Es la conclusión contraintuitiva del teorema."
+    }
+  ]
+}

@@ -166,5 +166,61 @@
     "cuestionario": "/maestria/a3-4/a3-4-Cuestionario.pdf",
     "quiz": "/maestria/a3-4/a3-4-Quiz.json",
     "preguntas": 15
+  },
+  {
+    "cod": "4.1",
+    "slug": "a4-1",
+    "cuatrimestre": 4,
+    "nombre": "Valuación de Empresas de Capital Cerrado: Flujo de Fondos Descontado, APV y Descuentos de Iliquidez",
+    "fase": "Prescriptiva · ¿Qué debemos hacer?",
+    "horas": "36 h · 16 teóricas / 20 prácticas",
+    "resumen": "Valuar una empresa que no cotiza separando el valor del horizonte del valor terminal, con DCF y APV, y aplicando los descuentos por falta de control y de liquidez que la empresa cerrada exige.",
+    "pdf": "/maestria/a4-1/a4-1-PDF.pdf",
+    "caso": "/maestria/a4-1/a4-1-Caso.xlsx",
+    "cuestionario": "/maestria/a4-1/a4-1-Cuestionario.pdf",
+    "quiz": "/maestria/a4-1/a4-1-Quiz.json",
+    "preguntas": 15
+  },
+  {
+    "cod": "4.2",
+    "slug": "a4-2",
+    "cuatrimestre": 4,
+    "nombre": "Decisiones de Inversión, RONIC y Crecimiento con Creación de Valor",
+    "fase": "Prescriptiva · ¿Qué debemos hacer?",
+    "horas": "36 h · 14 teóricas / 22 prácticas",
+    "resumen": "El teorema central de la creación de valor: crecer crea valor si y solo si el retorno del capital nuevo (RONIC) supera su costo (WACC). El resto es corolario.",
+    "pdf": "/maestria/a4-2/a4-2-PDF.pdf",
+    "caso": "/maestria/a4-2/a4-2-Caso.xlsx",
+    "cuestionario": "/maestria/a4-2/a4-2-Cuestionario.pdf",
+    "quiz": "/maestria/a4-2/a4-2-Quiz.json",
+    "preguntas": 15
+  },
+  {
+    "cod": "4.3",
+    "slug": "a4-3",
+    "cuatrimestre": 4,
+    "nombre": "Estructura de Financiamiento, Riesgo de Iliquidez y Acceso al Capital de la Empresa Mediana",
+    "fase": "Prescriptiva · ¿Qué debemos hacer?",
+    "horas": "36 h · 14 teóricas / 22 prácticas",
+    "resumen": "La paradoja donde el sistema se quiebra aun siendo rentable: una empresa con EVA positivo puede tener FCFF negativo y quedarse sin caja. Estructura de financiamiento, capacidad de repago y días de autonomía bajo estrés.",
+    "pdf": "/maestria/a4-3/a4-3-PDF.pdf",
+    "caso": "/maestria/a4-3/a4-3-Caso.xlsx",
+    "cuestionario": "/maestria/a4-3/a4-3-Cuestionario.pdf",
+    "quiz": "/maestria/a4-3/a4-3-Quiz.json",
+    "preguntas": 15
+  },
+  {
+    "cod": "4.4",
+    "slug": "a4-4",
+    "cuatrimestre": 4,
+    "nombre": "Política de Dividendos, Decisiones Operativas y Gobierno de la Empresa Familiar",
+    "fase": "Prescriptiva · ¿Qué debemos hacer?",
+    "horas": "36 h · 14 teóricas / 22 prácticas",
+    "resumen": "El cierre del sistema: la política de dividendos, las decisiones operativas y el gobierno de la empresa familiar, integrados en las cuatro decisiones y orientados al único objetivo taxativo: el valor para los dueños (TSR).",
+    "pdf": "/maestria/a4-4/a4-4-PDF.pdf",
+    "caso": "/maestria/a4-4/a4-4-Caso.xlsx",
+    "cuestionario": "/maestria/a4-4/a4-4-Cuestionario.pdf",
+    "quiz": "/maestria/a4-4/a4-4-Quiz.json",
+    "preguntas": 15
   }
 ]

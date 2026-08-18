@@ -1,0 +1,172 @@
+import type { Asignatura } from './types'
+
+// ============================================================================
+// ASIGNATURA 4.1 — Valuación de Empresas de Capital Cerrado: Flujo de Fondos
+// Descontado, APV y Descuentos de Iliquidez
+// ============================================================================
+export const a4_1: Asignatura = {
+  cod: '4.1',
+  slug: 'a4-1',
+  cuatrimestre: 4,
+  fase: 'Prescriptiva · ¿Qué debemos hacer?',
+  nombre: 'Valuación de Empresas de Capital Cerrado: Flujo de Fondos Descontado, APV y Descuentos de Iliquidez',
+  horas: '36 h · 16 teóricas / 20 prácticas',
+  correlativas: 'Correlativas: 3.1 y 3.3 · Cuarto cuatrimestre',
+  framework: 'Damodaran · Koller/McKinsey · Pratt',
+  resumen:
+    'Valuar una empresa que no cotiza separando el valor del horizonte del valor terminal, con DCF y APV, y aplicando los descuentos por falta de control y de liquidez que la empresa cerrada exige.',
+  objetivos: [
+    'Valuar por flujo de fondos descontado, separando valor del horizonte y valor terminal.',
+    'Aplicar el Valor Presente Ajustado (APV) cuando la estructura de capital cambia.',
+    'Aplicar los descuentos por falta de control (DLOC) y de liquidez (DLOM), jerárquicos y multiplicativos.',
+    'Reconciliar la valuación puntual con la distribución de la simulación (asignatura 3.3).',
+  ],
+  sections: [
+    {
+      title: 'DCF: valor del horizonte y valor terminal',
+      intro: 'El valor de una empresa es el valor presente de los flujos que generará. La dificultad está en que esos flujos son infinitos: por eso se parten en dos.',
+      blocks: [
+        { t: 'formula', name: 'Valor de la firma por DCF', expr: 'EV = Σ FCFF_t/(1+WACC)^t + VT/(1+WACC)^n', where: 'FCFF = flujo de fondos libre de la firma · VT = valor terminal · n = fin del horizonte explícito', note: 'El valor del horizonte (explícito) más el valor terminal descontado. El terminal suele ser la mayor parte del valor.' },
+        { t: 'formula', name: 'Valor terminal (Gordon)', expr: 'VT = FCFF_{n+1} ÷ (WACC − g)', where: 'g = crecimiento perpetuo (nunca mayor que el crecimiento de la economía)', note: 'Sensible a g: un punto de más en g puede cambiar el valor drásticamente. Por eso g se justifica, no se elige.' },
+        { t: 'warn', md: 'El **FCFF no es el flujo de caja contable** (asignatura 1.1): se construye desde el NOPAT sumando amortizaciones y restando la inversión en capital de trabajo y en activo fijo. Descontar un flujo contable creyendo que es el FCFF arruina la valuación.' },
+      ],
+    },
+    {
+      title: 'APV: cuando la estructura de capital cambia',
+      intro: 'El WACC supone una estructura de capital constante. Cuando no lo es —una empresa que se desapalanca, una adquisición—, el APV es el método correcto.',
+      blocks: [
+        { t: 'formula', name: 'Valor Presente Ajustado', expr: 'APV = V_u + VP(escudo fiscal) − VP(dificultades financieras)', where: 'V_u = FCFF descontado al costo del capital SIN deuda (Ku)', note: 'Separa el valor del negocio (como si no tuviera deuda) del valor que agrega el escudo fiscal y del que resta el riesgo de quiebra. Es más transparente que esconder todo en el WACC.' },
+        { t: 'quote', author: 'Aswath Damodaran', credential: 'NYU Stern — Investment Valuation', md: 'El APV es honesto: muestra por separado cuánto vale el negocio, cuánto agrega la deuda por el escudo fiscal y cuánto resta por el riesgo de dificultades. El WACC esconde esos tres efectos en una sola tasa.' },
+      ],
+    },
+    {
+      title: 'Los descuentos de la empresa cerrada',
+      intro: 'Una participación en una empresa que no cotiza vale menos que su parte proporcional del valor total. Dos descuentos lo capturan.',
+      blocks: [
+        { t: 'formula', name: 'Descuentos de capital cerrado', expr: 'Valor = V_100% × (1 − DLOC) × (1 − DLOM)', where: 'DLOC = descuento por falta de control · DLOM = descuento por falta de negociabilidad (liquidez)', note: 'Jerárquicos y MULTIPLICATIVOS: primero falta de control, después falta de liquidez. NUNCA aditivos.' },
+        { t: 'ul', items: [
+          '**DLOC (falta de control):** una participación minoritaria no decide dividendos, sueldos ni estrategia; por eso vale menos que una de control.',
+          '**DLOM (falta de liquidez):** no hay mercado donde vender la participación rápido y sin castigo; esa iliquidez se descuenta.',
+          'El **IDD** (Índice de Dependencia del Dueño, indicador propio JPR) agrava ambos: si la empresa no funciona sin su dueño, es aún menos transferible.',
+        ] },
+        { t: 'warn', md: 'Error frecuente y penalizado: **sumar** los descuentos (DLOC + DLOM) en vez de aplicarlos en cascada multiplicativa. Un 15 % y un 25 % no son un 40 %: son 1 − 0,85 × 0,75 = 36,25 %.' },
+      ],
+    },
+    {
+      title: 'Del número a la distribución',
+      intro: 'La valuación puntual es una foto; la simulación (3.3) es la película. Se presentan juntas.',
+      blocks: [
+        { t: 'p', md: 'La valuación por DCF da un número; la simulación de Monte Carlo (asignatura 3.3) lo envuelve en una distribución. El informe al directorio no dice “la empresa vale X”: dice “la empresa vale X en el escenario base, con un rango de P5 a P95, y una probabilidad Y de estar por debajo del capital invertido”.' },
+        { t: 'quote', author: 'Shannon Pratt', credential: 'Valuing a Business', md: 'La valuación de una empresa cerrada no es un cálculo, es un juicio informado por cálculos. Los descuentos por control y liquidez son donde más se juega ese juicio, y donde más hay que fundamentar.' },
+        { t: 'chain', title: 'El puente al valor', nodes: ['FCFF proyectado', 'DCF: horizonte + terminal', 'Equity = EV − deuda neta', 'Valor de la participación (× DLOC × DLOM)'], caption: 'La valuación es el penúltimo eslabón: de acá surge cuánto vale hoy la empresa, y en la 4.2–4.3 cuánto valdría ejecutando el plan.' },
+      ],
+    },
+  ],
+  expertos: [
+    { author: 'Aswath Damodaran', credential: 'NYU Stern', md: 'El valor terminal es donde se esconden los pecados de la valuación: un g demasiado alto o un margen que nunca converge inflan el valor. Disciplina en el terminal, siempre.' },
+    { author: 'Tim Koller', credential: 'McKinsey — Valuation', md: 'Valuá por flujos, no por múltiplos, cuando puedas. El múltiplo es un atajo que importa los errores del comparable; el DCF te obliga a explicitar tus supuestos.' },
+    { author: 'Shannon Pratt', credential: 'Valuing a Business', md: 'En la empresa cerrada, el rango de valor razonable es amplio; el trabajo del valuador es angostarlo con evidencia y fundamentar cada descuento, no fingir una precisión que no existe.' },
+  ],
+  caso: {
+    titulo: '¿Cuánto vale Maderas del Litoral?',
+    empresa: 'Maderas del Litoral S.A. — la valuación integral',
+    contexto:
+      'Los hermanos reciben una oferta informal por el 30 % de la empresa y necesitan saber cuánto vale realmente, tanto el 100 % como una participación minoritaria.\n\nEl consultor proyecta el FCFF a cinco años, calcula el valor terminal con Gordon, descuenta todo al WACC (19,5 %, asignatura 3.1) y obtiene el valor de la firma. Le resta la deuda neta para llegar al patrimonio, y como la oferta es por una participación minoritaria e ilíquida, aplica los descuentos por falta de control y de liquidez en cascada multiplicativa.\n\nEl número final se presenta junto con la distribución de la simulación: no un valor, sino un rango con probabilidades.',
+    datos: [
+      { t: 'table', title: 'Datos de la valuación (miles de $)', headers: ['Concepto', 'Valor'], firstColLeft: true, rows: [
+        ['FCFF año 1', '1.850'],
+        ['FCFF año 2', '1.950'],
+        ['FCFF año 3', '2.050'],
+        ['FCFF año 4', '2.150'],
+        ['FCFF año 5', '2.250'],
+        ['WACC', '19,5%'],
+        ['Crecimiento perpetuo (g)', '4,0%'],
+        ['Deuda neta', '5.900'],
+        ['DLOC (falta de control)', '15%'],
+        ['DLOM (falta de liquidez)', '25%'],
+      ] },
+    ],
+    consigna: [
+      '¿Cuál es el valor de la firma (EV) separando horizonte y valor terminal?',
+      '¿Cuál es el valor del patrimonio (equity) tras restar la deuda neta?',
+      '¿Cuánto vale una participación minoritaria del 30 % aplicando DLOC y DLOM?',
+      '¿Por qué los descuentos se aplican en cascada multiplicativa y no sumados?',
+    ],
+    metodologia: [
+      { k: 'Proyectar y descontar', d: 'FCFF explícito a valor presente al WACC.' },
+      { k: 'Valor terminal', d: 'VT = FCFF_{n+1}/(WACC−g); descontarlo al presente.' },
+      { k: 'De EV a equity', d: 'Equity = EV − deuda neta.' },
+      { k: 'Descuentos', d: 'Valor participación = equity × %part × (1−DLOC) × (1−DLOM).' },
+      { k: 'Distribución', d: 'Presentar el rango de la simulación junto al valor puntual.' },
+    ],
+  },
+  model: {
+    sheetTitle: 'Valuación DCF + valor terminal + descuentos de iliquidez',
+    intro:
+      'Editá los FCFF y los parámetros (celdas marfil). La matriz dinámica descuenta el horizonte explícito; se añade el valor terminal, se pasa a patrimonio y se aplican los descuentos en cascada.',
+    inputs: [
+      { key: 'f1', label: 'FCFF año 1', value: 1850, fmt: 'money', unit: 'miles $' },
+      { key: 'f2', label: 'FCFF año 2', value: 1950, fmt: 'money' },
+      { key: 'f3', label: 'FCFF año 3', value: 2050, fmt: 'money' },
+      { key: 'f4', label: 'FCFF año 4', value: 2150, fmt: 'money' },
+      { key: 'f5', label: 'FCFF año 5', value: 2250, fmt: 'money' },
+      { key: 'wacc', label: 'WACC', value: 0.195, fmt: 'pct1' },
+      { key: 'g', label: 'Crecimiento perpetuo (g)', value: 0.04, fmt: 'pct1' },
+      { key: 'deudaNeta', label: 'Deuda neta', value: 5900, fmt: 'money' },
+      { key: 'part', label: 'Participación a valuar', value: 0.30, fmt: 'pct' },
+      { key: 'dloc', label: 'DLOC (falta de control)', value: 0.15, fmt: 'pct' },
+      { key: 'dlom', label: 'DLOM (falta de liquidez)', value: 0.25, fmt: 'pct' },
+    ],
+    calcs: [
+      { key: 'pvHorizonte', label: 'Valor del horizonte (VP de los FCFF)', xl: '=LET(cf,VSTACK([f1],[f2],[f3],[f4],[f5]), t,SEQUENCE(5), SUM(cf/(1+[wacc])^t))', fmt: 'money' },
+      { key: 'vt', label: 'Valor terminal (Gordon)', xl: '=[f5]*(1+[g])/([wacc]-[g])', fmt: 'money' },
+      { key: 'pvVt', label: 'VP del valor terminal', xl: '=[vt]/(1+[wacc])^5', fmt: 'money' },
+      { key: 'ev', label: 'Valor de la firma (EV)', xl: '=[pvHorizonte]+[pvVt]', fmt: 'money', highlight: true },
+      { key: 'pesoTerminal', label: 'Peso del valor terminal en el EV', xl: '=[pvVt]/[ev]', fmt: 'pct1' },
+      { key: 'equity', label: 'Valor del patrimonio (100%)', xl: '=[ev]-[deudaNeta]', fmt: 'money', highlight: true },
+      { key: 'valPartControl', label: 'Valor de la participación (sin descuentos)', xl: '=[equity]*[part]', fmt: 'money' },
+      { key: 'valPartMin', label: 'Valor de la participación minoritaria e ilíquida', xl: '=[equity]*[part]*(1-[dloc])*(1-[dlom])', fmt: 'money', highlight: true },
+      { key: 'descTotal', label: 'Descuento total efectivo (cascada)', xl: '=1-(1-[dloc])*(1-[dlom])', fmt: 'pct1' },
+    ],
+    spills: [
+      {
+        key: 'flujo',
+        title: 'Descuento del horizonte explícito',
+        columns: ['Año', 'FCFF', 'Factor de descuento', 'Valor presente'],
+        xl: '=LET(t,SEQUENCE(5), cf,VSTACK([f1],[f2],[f3],[f4],[f5]), fac,1/(1+[wacc])^t, HSTACK(t,cf,fac,cf*fac))',
+        formats: ['num', 'money', 'coef', 'money'],
+        rows: 5,
+        note: 'SEQUENCE y VSTACK arman años y flujos; el factor y el VP se calculan de una vez. La suma de la última columna es el valor del horizonte.',
+      },
+    ],
+    conclusions: [
+      { label: 'Valor', xl: '="EV "&TEXT([ev],"#,##0")&" (de los cuales el "&TEXT([pesoTerminal],"0%")&" es valor terminal). Patrimonio 100%: "&TEXT([equity],"#,##0")&"."' },
+      { label: 'Participación', xl: '="El "&TEXT([part],"0%")&" vale "&TEXT([valPartMin],"#,##0")&" tras un descuento efectivo del "&TEXT([descTotal],"0.0%")&" (DLOC y DLOM en cascada multiplicativa, no sumados)."' },
+    ],
+  },
+  quiz: [
+    { id: 'q1', pregunta: 'El valor de una empresa por DCF se compone de:', opciones: ['Solo el valor terminal.', 'El valor del horizonte explícito más el valor terminal descontado.', 'Solo los flujos del primer año.', 'El patrimonio contable.'], correcta: 1, justificacion: 'EV = VP de los FCFF del horizonte + VP del valor terminal. No es solo el terminal, ni un año, ni el patrimonio contable.' },
+    { id: 'q2', pregunta: 'El valor terminal por el modelo de Gordon es:', opciones: ['FCFF_{n+1} × (WACC − g).', 'FCFF_{n+1} ÷ (WACC − g).', 'FCFF_{n+1} × g.', 'FCFF_{n+1} ÷ WACC.'], correcta: 1, justificacion: 'VT = FCFF_{n+1}/(WACC−g), el valor de una perpetuidad creciente. Multiplicar o usar solo WACC da un valor incorrecto.' },
+    { id: 'q3', pregunta: 'El crecimiento perpetuo g del valor terminal:', opciones: ['Puede ser cualquier número.', 'Nunca debe superar el crecimiento de largo plazo de la economía.', 'Debe ser igual al WACC.', 'Es siempre 10%.'], correcta: 1, justificacion: 'Una empresa no puede crecer para siempre más rápido que la economía (sería más grande que el mundo). g = WACC daría valor infinito; no hay un g universal.' },
+    { id: 'q4', pregunta: 'El FCFF que se descuenta en el DCF:', opciones: ['Es el flujo de caja contable (EFE).', 'Se construye desde el NOPAT: + amortizaciones − inversión en capital de trabajo y activo fijo.', 'Es el resultado neto.', 'Es el EBITDA.'], correcta: 1, justificacion: 'El FCFF es un flujo económico derivado del NOPAT, distinto del EFE contable, del resultado neto y del EBITDA. Confundirlos arruina la valuación.' },
+    { id: 'q5', pregunta: '¿Cuándo es preferible el APV al WACC?', opciones: ['Nunca.', 'Cuando la estructura de capital cambia (el WACC constante induce error).', 'Solo para empresas que cotizan.', 'Cuando no hay deuda.'], correcta: 1, justificacion: 'El WACC supone estructura constante; si cambia (desapalancamiento, LBO), el APV es más correcto y transparente. Sin deuda, ambos coinciden.' },
+    { id: 'q6', pregunta: 'El APV descompone el valor en:', opciones: ['Un solo número.', 'Valor sin deuda (V_u) + VP del escudo fiscal − VP de dificultades financieras.', 'Solo el escudo fiscal.', 'Deuda + patrimonio.'], correcta: 1, justificacion: 'El APV separa el valor del negocio no apalancado, el aporte del escudo fiscal y el costo del riesgo de quiebra. Es más transparente que el WACC.' },
+    { id: 'q7', pregunta: 'El DLOC (descuento por falta de control) refleja que:', opciones: ['La empresa no tiene control interno.', 'Una participación minoritaria no decide dividendos, sueldos ni estrategia.', 'No hay auditoría.', 'La empresa es pública.'], correcta: 1, justificacion: 'El DLOC castiga la ausencia de poder de decisión del minoritario. No se refiere al control interno ni a la auditoría, y aplica a empresas cerradas.' },
+    { id: 'q8', pregunta: 'El DLOM (descuento por falta de liquidez) refleja que:', opciones: ['La empresa no tiene caja.', 'No hay un mercado para vender la participación rápido y sin castigo.', 'La empresa es ilíquida contablemente.', 'No paga dividendos.'], correcta: 1, justificacion: 'El DLOM castiga la imposibilidad de vender la participación con facilidad (no cotiza). No es falta de caja ni de dividendos.' },
+    { id: 'q9', pregunta: 'Los descuentos DLOC y DLOM se aplican:', opciones: ['Sumados (DLOC + DLOM).', 'En cascada multiplicativa: (1−DLOC) × (1−DLOM).', 'Restando el mayor.', 'Promediados.'], correcta: 1, justificacion: 'Son jerárquicos y multiplicativos; sumarlos sobreestima el descuento. 15% y 25% dan 36,25%, no 40%.' },
+    { id: 'q10', pregunta: 'Un DLOC de 15% y un DLOM de 25% producen un descuento efectivo de:', opciones: ['40%.', '36,25%.', '10%.', '20%.'], correcta: 1, justificacion: '1 − (0,85 × 0,75) = 1 − 0,6375 = 36,25%. La suma (40%) es el error típico.' },
+    { id: 'q11', pregunta: 'En una valuación típica, el valor terminal suele representar:', opciones: ['Una parte menor del valor.', 'Con frecuencia la mayor parte del valor de la firma.', 'Exactamente la mitad.', 'Cero.'], correcta: 1, justificacion: 'El terminal suele ser la mayor porción del EV, por eso su g y sus supuestos son tan sensibles y hay que fundamentarlos.' },
+    { id: 'q12', pregunta: 'El IDD (Índice de Dependencia del Dueño) impacta la valuación porque:', opciones: ['No tiene efecto.', 'Agrava los descuentos: si la empresa no funciona sin su dueño, es menos transferible.', 'Aumenta el valor.', 'Solo afecta el WACC.'], correcta: 1, justificacion: 'Un IDD alto hace la empresa menos transferible, agravando DLOC y DLOM (y el Ke). No aumenta el valor ni es neutro.' },
+    { id: 'q13', pregunta: 'Del EV al valor del patrimonio (equity) se pasa:', opciones: ['Sumando la deuda.', 'Restando la deuda neta.', 'Multiplicando por el WACC.', 'Sin ajuste.'], correcta: 1, justificacion: 'Equity = EV − deuda neta: el valor que queda para los dueños tras los acreedores. Sumar deuda o no ajustar es incorrecto.' },
+    { id: 'q14', pregunta: 'Frente a los múltiplos, el DCF tiene la ventaja de:', opciones: ['Ser más rápido.', 'Obligar a explicitar los supuestos, en vez de importar los del comparable.', 'No necesitar datos.', 'Dar siempre un valor mayor.'], correcta: 1, justificacion: 'El DCF hace transparentes los supuestos propios; el múltiplo importa (y esconde) los del comparable. No es más rápido ni sesga el valor al alza.' },
+    { id: 'q15', pregunta: 'La valuación de una empresa cerrada debe presentarse como:', opciones: ['Un número exacto.', 'Un rango razonable con probabilidades, fundamentando los descuentos.', 'Solo el valor terminal.', 'El patrimonio contable.'], correcta: 1, justificacion: 'Pratt: es un juicio informado por cálculos; se presenta un rango fundamentado (con la distribución de la 3.3), no una falsa precisión.' },
+  ],
+  bibliografia: [
+    'Damodaran, A. — *Investment Valuation*',
+    'Koller, Goedhart & Wessels — *Valuation*',
+    'Pratt, S. — *Valuing a Business*',
+    'Damodaran, A. — *The Dark Side of Valuation*',
+    'Fernández, P. — *Valoración de Empresas*',
+    'Pereiro, L. — *Valuation of Companies in Emerging Markets*',
+  ],
+}
