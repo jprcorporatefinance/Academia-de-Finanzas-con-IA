@@ -181,6 +181,186 @@
       ],
       "correcta": 1,
       "justificacion": "Los ratios son medios para responder preguntas de negocio; sin esa pregunta, son aritmética. El diagnóstico exige interpretación orientada a la decisión."
+    },
+    {
+      "id": "q16",
+      "pregunta": "Los “márgenes en cascada” son, en orden:",
+      "opciones": [
+        "Neto, operativo, EBITDA, bruto.",
+        "Bruto, EBITDA, operativo y neto.",
+        "Solo el neto.",
+        "Bruto y neto únicamente."
+      ],
+      "correcta": 1,
+      "justificacion": "Se leen en cascada desde el bruto hacia el neto (bruto → EBITDA → operativo → neto), cada uno contando una parte de la historia."
+    },
+    {
+      "id": "q17",
+      "pregunta": "La descomposición precio-volumen-mezcla explica el cambio de:",
+      "opciones": [
+        "El patrimonio.",
+        "Las ventas (o el margen), separando efecto precio, cantidad y combinación de productos.",
+        "La deuda.",
+        "La tasa de interés."
+      ],
+      "correcta": 1,
+      "justificacion": "Separa cuánto del cambio vino por precio, por volumen y por mezcla de productos: cada causa exige una acción distinta."
+    },
+    {
+      "id": "q18",
+      "pregunta": "El factor “carga fiscal” del DuPont es:",
+      "opciones": [
+        "EBIT/Ventas.",
+        "NI/EBT.",
+        "Ventas/Activos.",
+        "Activos/PN."
+      ],
+      "correcta": 1,
+      "justificacion": "La carga fiscal es NI/EBT (cuánto queda tras impuestos). Los otros son margen operativo, rotación y multiplicador."
+    },
+    {
+      "id": "q19",
+      "pregunta": "El “margen operativo” del DuPont se mide como:",
+      "opciones": [
+        "NI/Ventas.",
+        "EBIT/Ventas.",
+        "EBT/EBIT.",
+        "Ventas/Activos."
+      ],
+      "correcta": 1,
+      "justificacion": "El margen operativo del DuPont de 5 factores es EBIT/Ventas (eficiencia de la operación antes de intereses e impuestos)."
+    },
+    {
+      "id": "q20",
+      "pregunta": "La “rotación de activos” del DuPont mide:",
+      "opciones": [
+        "La carga financiera.",
+        "La intensidad de uso del activo (Ventas/Activos).",
+        "El margen bruto.",
+        "La liquidez."
+      ],
+      "correcta": 1,
+      "justificacion": "Ventas/Activos indica cuántas ventas genera cada peso de activo. No es carga financiera, margen ni liquidez."
+    },
+    {
+      "id": "q21",
+      "pregunta": "El GAF (apalancamiento financiero) se calcula como:",
+      "opciones": [
+        "MC/EBIT.",
+        "EBIT/EBT.",
+        "GAO × GAF.",
+        "Ventas/Activos."
+      ],
+      "correcta": 1,
+      "justificacion": "GAF = EBIT/EBT capta el efecto de los intereses. MC/EBIT es el GAO y su producto es el GAT."
+    },
+    {
+      "id": "q22",
+      "pregunta": "El apalancamiento operativo (GAO) condiciona:",
+      "opciones": [
+        "La tasa impositiva.",
+        "Cuánto apalancamiento financiero se puede tolerar.",
+        "El tipo de cambio.",
+        "Nada."
+      ],
+      "correcta": 1,
+      "justificacion": "Con mucho costo fijo (GAO alto), la empresa tolera menos deuda (GAF): combinados amplifican dos veces las caídas de ventas."
+    },
+    {
+      "id": "q23",
+      "pregunta": "El punto de equilibrio financiero, respecto del económico, ajusta por:",
+      "opciones": [
+        "Las ventas.",
+        "Partidas no erogables (depreciaciones, RECPAM).",
+        "El patrimonio.",
+        "Los activos."
+      ],
+      "correcta": 1,
+      "justificacion": "El financiero descuenta lo no erogable, por lo que es menor: se puede estar en pérdida contable y aún generar caja."
+    },
+    {
+      "id": "q24",
+      "pregunta": "El “nivel de ventas para cubrir todo el período” suma, además de los costos:",
+      "opciones": [
+        "Solo la depreciación.",
+        "Servicio de deuda, inversiones comprometidas y distribuciones previstas.",
+        "Solo impuestos.",
+        "Nada más."
+      ],
+      "correcta": 1,
+      "justificacion": "Es el umbral de caja real: incluye servicio de deuda, CapEx comprometido y dividendos. Es más exigente que los equilibrios contables."
+    },
+    {
+      "id": "q25",
+      "pregunta": "Importar umbrales de semáforos de otro sector sin ajustar es:",
+      "opciones": [
+        "Buena práctica.",
+        "Un riesgo: los umbrales dependen del sector y del contexto.",
+        "Obligatorio.",
+        "Neutro."
+      ],
+      "correcta": 1,
+      "justificacion": "Un ratio “sano” en un sector puede ser alarmante en otro; los umbrales se ajustan al contexto, no se copian."
+    },
+    {
+      "id": "q26",
+      "pregunta": "La deuda neta sobre EBITDA es un indicador de:",
+      "opciones": [
+        "Rentabilidad.",
+        "Apalancamiento / capacidad de repago.",
+        "Liquidez inmediata.",
+        "Rotación."
+      ],
+      "correcta": 1,
+      "justificacion": "Deuda neta/EBITDA mide cuántos años de generación harían falta para cancelar la deuda: una lectura de apalancamiento y repago."
+    },
+    {
+      "id": "q27",
+      "pregunta": "La cobertura de intereses (EBIT/Intereses) mide:",
+      "opciones": [
+        "La liquidez.",
+        "Cuántas veces el resultado operativo cubre los intereses.",
+        "El margen bruto.",
+        "La rotación."
+      ],
+      "correcta": 1,
+      "justificacion": "Indica el colchón para pagar intereses; alimenta la calificación sintética (2.2) y el Kd. No es margen ni rotación."
+    },
+    {
+      "id": "q28",
+      "pregunta": "Una empresa rentable que quiebra por iliquidez ilustra que:",
+      "opciones": [
+        "Rentabilidad y liquidez son lo mismo.",
+        "Se puede ganar dinero y quedarse sin caja.",
+        "La caja no importa.",
+        "El EBITDA garantiza la caja."
+      ],
+      "correcta": 1,
+      "justificacion": "La ganancia contable no asegura la caja para pagar a tiempo; la liquidez es una dimensión distinta (ver 4.3)."
+    },
+    {
+      "id": "q29",
+      "pregunta": "El corazón del método DuPont es:",
+      "opciones": [
+        "Calcular el ROE y detenerse.",
+        "Atribuir la variación del ROE a cada uno de sus factores.",
+        "Ignorar los factores.",
+        "Sumar los cinco factores."
+      ],
+      "correcta": 1,
+      "justificacion": "No basta ver que el ROE cambió: hay que decir por cuál factor y cuánto (los factores se multiplican, no se suman)."
+    },
+    {
+      "id": "q30",
+      "pregunta": "El anexo metodológico del memorándum ejecutivo debe permitir que:",
+      "opciones": [
+        "Nadie entienda el cálculo.",
+        "Un tercero reproduzca y audite fórmulas, supuestos y fuentes.",
+        "Se oculten los supuestos.",
+        "Se pague menos impuesto."
+      ],
+      "correcta": 1,
+      "justificacion": "El anexo hace el diagnóstico reproducible y auditable (fórmulas, supuestos, fuentes). No es para ocultar ni para fines fiscales."
     }
   ]
 }

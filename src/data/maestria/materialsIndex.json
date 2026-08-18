@@ -67,7 +67,7 @@
     "caso": "/maestria/a2-1/a2-1-Caso.xlsx",
     "cuestionario": "/maestria/a2-1/a2-1-Cuestionario.pdf",
     "quiz": "/maestria/a2-1/a2-1-Quiz.json",
-    "preguntas": 15
+    "preguntas": 30
   },
   {
     "cod": "2.2",
@@ -81,7 +81,7 @@
     "caso": "/maestria/a2-2/a2-2-Caso.xlsx",
     "cuestionario": "/maestria/a2-2/a2-2-Cuestionario.pdf",
     "quiz": "/maestria/a2-2/a2-2-Quiz.json",
-    "preguntas": 15
+    "preguntas": 30
   },
   {
     "cod": "2.3",
@@ -95,7 +95,7 @@
     "caso": "/maestria/a2-3/a2-3-Caso.xlsx",
     "cuestionario": "/maestria/a2-3/a2-3-Cuestionario.pdf",
     "quiz": "/maestria/a2-3/a2-3-Quiz.json",
-    "preguntas": 15
+    "preguntas": 30
   },
   {
     "cod": "2.4",
@@ -109,7 +109,7 @@
     "caso": "/maestria/a2-4/a2-4-Caso.xlsx",
     "cuestionario": "/maestria/a2-4/a2-4-Cuestionario.pdf",
     "quiz": "/maestria/a2-4/a2-4-Quiz.json",
-    "preguntas": 15
+    "preguntas": 30
   },
   {
     "cod": "3.1",
@@ -123,7 +123,7 @@
     "caso": "/maestria/a3-1/a3-1-Caso.xlsx",
     "cuestionario": "/maestria/a3-1/a3-1-Cuestionario.pdf",
     "quiz": "/maestria/a3-1/a3-1-Quiz.json",
-    "preguntas": 15
+    "preguntas": 30
   },
   {
     "cod": "3.2",
@@ -137,7 +137,7 @@
     "caso": "/maestria/a3-2/a3-2-Caso.xlsx",
     "cuestionario": "/maestria/a3-2/a3-2-Cuestionario.pdf",
     "quiz": "/maestria/a3-2/a3-2-Quiz.json",
-    "preguntas": 15
+    "preguntas": 30
   },
   {
     "cod": "3.3",
@@ -151,7 +151,7 @@
     "caso": "/maestria/a3-3/a3-3-Caso.xlsx",
     "cuestionario": "/maestria/a3-3/a3-3-Cuestionario.pdf",
     "quiz": "/maestria/a3-3/a3-3-Quiz.json",
-    "preguntas": 15
+    "preguntas": 30
   },
   {
     "cod": "3.4",
@@ -165,7 +165,7 @@
     "caso": "/maestria/a3-4/a3-4-Caso.xlsx",
     "cuestionario": "/maestria/a3-4/a3-4-Cuestionario.pdf",
     "quiz": "/maestria/a3-4/a3-4-Quiz.json",
-    "preguntas": 15
+    "preguntas": 30
   },
   {
     "cod": "4.1",
@@ -179,7 +179,7 @@
     "caso": "/maestria/a4-1/a4-1-Caso.xlsx",
     "cuestionario": "/maestria/a4-1/a4-1-Cuestionario.pdf",
     "quiz": "/maestria/a4-1/a4-1-Quiz.json",
-    "preguntas": 15
+    "preguntas": 30
   },
   {
     "cod": "4.2",
@@ -193,7 +193,7 @@
     "caso": "/maestria/a4-2/a4-2-Caso.xlsx",
     "cuestionario": "/maestria/a4-2/a4-2-Cuestionario.pdf",
     "quiz": "/maestria/a4-2/a4-2-Quiz.json",
-    "preguntas": 15
+    "preguntas": 30
   },
   {
     "cod": "4.3",
@@ -207,7 +207,7 @@
     "caso": "/maestria/a4-3/a4-3-Caso.xlsx",
     "cuestionario": "/maestria/a4-3/a4-3-Cuestionario.pdf",
     "quiz": "/maestria/a4-3/a4-3-Quiz.json",
-    "preguntas": 15
+    "preguntas": 30
   },
   {
     "cod": "4.4",
@@ -221,6 +221,6 @@
     "caso": "/maestria/a4-4/a4-4-Caso.xlsx",
     "cuestionario": "/maestria/a4-4/a4-4-Cuestionario.pdf",
     "quiz": "/maestria/a4-4/a4-4-Quiz.json",
-    "preguntas": 15
+    "preguntas": 30
   }
 ]

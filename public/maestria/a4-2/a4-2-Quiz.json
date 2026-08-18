@@ -181,6 +181,186 @@
       ],
       "correcta": 1,
       "justificacion": "Cuando el capital nuevo destruiría valor, no crecer y devolver capital es lo óptimo. Es la conclusión contraintuitiva del teorema."
+    },
+    {
+      "id": "q16",
+      "pregunta": "El Key Value Driver de McKinsey es:",
+      "opciones": [
+        "V = NOPAT × WACC × g.",
+        "V = NOPAT × (1 − g/RONIC) ÷ (WACC − g).",
+        "V = NOPAT ÷ WACC.",
+        "V = Ventas × margen."
+      ],
+      "correcta": 1,
+      "justificacion": "El KVD relaciona valor, crecimiento, RONIC y WACC: V = NOPAT(1 − g/RONIC)/(WACC − g). De él se deriva el teorema del crecimiento."
+    },
+    {
+      "id": "q17",
+      "pregunta": "La tasa de reinversión implícita para crecer a g con retorno RONIC es:",
+      "opciones": [
+        "g × RONIC.",
+        "g / RONIC.",
+        "RONIC / g.",
+        "g − RONIC."
+      ],
+      "correcta": 1,
+      "justificacion": "Para crecer a g reinvirtiendo a RONIC hace falta reinvertir g/RONIC del NOPAT; lo que sobra (1 − g/RONIC) es el FCFF."
+    },
+    {
+      "id": "q18",
+      "pregunta": "Las dos palancas del valor, según McKinsey, son:",
+      "opciones": [
+        "Ventas y costos.",
+        "El retorno sobre el capital (ROIC/RONIC) y el crecimiento.",
+        "Deuda y patrimonio.",
+        "Precio y volumen."
+      ],
+      "correcta": 1,
+      "justificacion": "Valor = retorno del capital + crecimiento, pero no simétricos: el crecimiento solo suma si el retorno supera el costo del capital."
+    },
+    {
+      "id": "q19",
+      "pregunta": "Con RONIC < WACC, acelerar el crecimiento:",
+      "opciones": [
+        "Mejora el valor.",
+        "Lo empeora (destruye más valor, más rápido).",
+        "No cambia nada.",
+        "Sube el ROIC."
+      ],
+      "correcta": 1,
+      "justificacion": "Si cada peso reinvertido destruye valor, crecer más rápido destruye más. Cuanto más rápido, peor."
+    },
+    {
+      "id": "q20",
+      "pregunta": "La tasa de reinversión de una empresa es:",
+      "opciones": [
+        "El payout.",
+        "1 − payout (lo que no se distribuye).",
+        "El WACC.",
+        "La inflación."
+      ],
+      "correcta": 1,
+      "justificacion": "Lo que no se reparte se reinvierte: reinversión = 1 − payout. Junto con el ROIC determina el crecimiento sostenible."
+    },
+    {
+      "id": "q21",
+      "pregunta": "Un proyecto con VAN positivo tiene, necesariamente:",
+      "opciones": [
+        "RONIC < WACC.",
+        "RONIC > WACC.",
+        "RONIC = 0.",
+        "WACC = 0."
+      ],
+      "correcta": 1,
+      "justificacion": "VAN > 0 equivale a que el retorno del capital nuevo supera su costo: RONIC > WACC. Son la misma idea."
+    },
+    {
+      "id": "q22",
+      "pregunta": "Ganar market share sin retorno sobre el costo del capital:",
+      "opciones": [
+        "Siempre crea valor.",
+        "No crea valor (crecer no es un fin en sí mismo).",
+        "Es el objetivo.",
+        "Reduce el WACC."
+      ],
+      "correcta": 1,
+      "justificacion": "El objetivo es el valor, no el tamaño; crecer en participación destruyendo valor no sirve. Market share vale si viene con retorno."
+    },
+    {
+      "id": "q23",
+      "pregunta": "Para decidir una nueva inversión, el retorno relevante es:",
+      "opciones": [
+        "El ROIC histórico.",
+        "El RONIC del proyecto (capital nuevo).",
+        "El ROE.",
+        "El margen bruto."
+      ],
+      "correcta": 1,
+      "justificacion": "El capital nuevo rinde su RONIC, no el ROIC del pasado; por eso el RONIC gobierna la decisión de invertir."
+    },
+    {
+      "id": "q24",
+      "pregunta": "Una empresa madura con RONIC persistentemente menor que su WACC debería:",
+      "opciones": [
+        "Reinvertir todo.",
+        "Distribuir el excedente (devolver capital a los dueños).",
+        "Endeudarse para crecer.",
+        "Comprar competidores."
+      ],
+      "correcta": 1,
+      "justificacion": "Si reinvertir destruye valor, lo óptimo es distribuir: devolver capital preserva valor. Es la conexión con la política de dividendos (4.4)."
+    },
+    {
+      "id": "q25",
+      "pregunta": "En el KVD, el FCFF equivale a:",
+      "opciones": [
+        "NOPAT × WACC.",
+        "NOPAT × (1 − g/RONIC).",
+        "NOPAT × g.",
+        "NOPAT + amortizaciones."
+      ],
+      "correcta": 1,
+      "justificacion": "El flujo libre tras reinvertir para crecer es NOPAT × (1 − g/RONIC): lo que queda después de financiar el crecimiento."
+    },
+    {
+      "id": "q26",
+      "pregunta": "El “valor del crecimiento” (V con g menos V sin g) puede ser:",
+      "opciones": [
+        "Siempre positivo.",
+        "Negativo, cuando RONIC < WACC.",
+        "Siempre cero.",
+        "Siempre igual al NOPAT."
+      ],
+      "correcta": 1,
+      "justificacion": "Cuando el capital nuevo rinde menos que su costo, crecer resta: el valor del crecimiento es negativo."
+    },
+    {
+      "id": "q27",
+      "pregunta": "Más crecimiento, con RONIC dado, implica:",
+      "opciones": [
+        "Menos reinversión.",
+        "Más reinversión y por tanto menos FCFF en el corto plazo.",
+        "Igual FCFF.",
+        "Más dividendos hoy."
+      ],
+      "correcta": 1,
+      "justificacion": "Crecer más exige reinvertir más (g/RONIC mayor), reduciendo el flujo libre presente. Solo vale la pena si RONIC > WACC."
+    },
+    {
+      "id": "q28",
+      "pregunta": "¿Es posible tener un ROIC histórico alto y un RONIC bajo?",
+      "opciones": [
+        "No, son iguales.",
+        "Sí: las oportunidades buenas ya se tomaron y las nuevas rinden menos.",
+        "Solo si hay deuda.",
+        "Solo en empresas cotizantes."
+      ],
+      "correcta": 1,
+      "justificacion": "El ROIC mira lo ya invertido; el RONIC, lo nuevo. Una empresa exitosa puede enfrentar oportunidades nuevas de menor retorno."
+    },
+    {
+      "id": "q29",
+      "pregunta": "Crecer por encima de la tasa sostenible requiere:",
+      "opciones": [
+        "Nada.",
+        "Financiamiento externo, con su costo y su riesgo.",
+        "Bajar el ROIC.",
+        "Eliminar el WACC."
+      ],
+      "correcta": 1,
+      "justificacion": "Superar el crecimiento autofinanciable obliga a tomar deuda o capital nuevo, que traen costo y riesgo adicionales."
+    },
+    {
+      "id": "q30",
+      "pregunta": "La conclusión más contraintuitiva del teorema del crecimiento es:",
+      "opciones": [
+        "Crecer siempre conviene.",
+        "A veces la empresa vale más si NO crece (y devuelve capital).",
+        "El tamaño es el objetivo.",
+        "La TIR manda sobre el VAN."
+      ],
+      "correcta": 1,
+      "justificacion": "Cuando RONIC < WACC, no crecer y devolver capital maximiza el valor: incómodo pero central."
     }
   ]
 }

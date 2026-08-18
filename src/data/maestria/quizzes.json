@@ -1759,6 +1759,186 @@
         ],
         "correcta": 1,
         "justificacion": "Los ratios son medios para responder preguntas de negocio; sin esa pregunta, son aritmética. El diagnóstico exige interpretación orientada a la decisión."
+      },
+      {
+        "id": "q16",
+        "pregunta": "Los “márgenes en cascada” son, en orden:",
+        "opciones": [
+          "Neto, operativo, EBITDA, bruto.",
+          "Bruto, EBITDA, operativo y neto.",
+          "Solo el neto.",
+          "Bruto y neto únicamente."
+        ],
+        "correcta": 1,
+        "justificacion": "Se leen en cascada desde el bruto hacia el neto (bruto → EBITDA → operativo → neto), cada uno contando una parte de la historia."
+      },
+      {
+        "id": "q17",
+        "pregunta": "La descomposición precio-volumen-mezcla explica el cambio de:",
+        "opciones": [
+          "El patrimonio.",
+          "Las ventas (o el margen), separando efecto precio, cantidad y combinación de productos.",
+          "La deuda.",
+          "La tasa de interés."
+        ],
+        "correcta": 1,
+        "justificacion": "Separa cuánto del cambio vino por precio, por volumen y por mezcla de productos: cada causa exige una acción distinta."
+      },
+      {
+        "id": "q18",
+        "pregunta": "El factor “carga fiscal” del DuPont es:",
+        "opciones": [
+          "EBIT/Ventas.",
+          "NI/EBT.",
+          "Ventas/Activos.",
+          "Activos/PN."
+        ],
+        "correcta": 1,
+        "justificacion": "La carga fiscal es NI/EBT (cuánto queda tras impuestos). Los otros son margen operativo, rotación y multiplicador."
+      },
+      {
+        "id": "q19",
+        "pregunta": "El “margen operativo” del DuPont se mide como:",
+        "opciones": [
+          "NI/Ventas.",
+          "EBIT/Ventas.",
+          "EBT/EBIT.",
+          "Ventas/Activos."
+        ],
+        "correcta": 1,
+        "justificacion": "El margen operativo del DuPont de 5 factores es EBIT/Ventas (eficiencia de la operación antes de intereses e impuestos)."
+      },
+      {
+        "id": "q20",
+        "pregunta": "La “rotación de activos” del DuPont mide:",
+        "opciones": [
+          "La carga financiera.",
+          "La intensidad de uso del activo (Ventas/Activos).",
+          "El margen bruto.",
+          "La liquidez."
+        ],
+        "correcta": 1,
+        "justificacion": "Ventas/Activos indica cuántas ventas genera cada peso de activo. No es carga financiera, margen ni liquidez."
+      },
+      {
+        "id": "q21",
+        "pregunta": "El GAF (apalancamiento financiero) se calcula como:",
+        "opciones": [
+          "MC/EBIT.",
+          "EBIT/EBT.",
+          "GAO × GAF.",
+          "Ventas/Activos."
+        ],
+        "correcta": 1,
+        "justificacion": "GAF = EBIT/EBT capta el efecto de los intereses. MC/EBIT es el GAO y su producto es el GAT."
+      },
+      {
+        "id": "q22",
+        "pregunta": "El apalancamiento operativo (GAO) condiciona:",
+        "opciones": [
+          "La tasa impositiva.",
+          "Cuánto apalancamiento financiero se puede tolerar.",
+          "El tipo de cambio.",
+          "Nada."
+        ],
+        "correcta": 1,
+        "justificacion": "Con mucho costo fijo (GAO alto), la empresa tolera menos deuda (GAF): combinados amplifican dos veces las caídas de ventas."
+      },
+      {
+        "id": "q23",
+        "pregunta": "El punto de equilibrio financiero, respecto del económico, ajusta por:",
+        "opciones": [
+          "Las ventas.",
+          "Partidas no erogables (depreciaciones, RECPAM).",
+          "El patrimonio.",
+          "Los activos."
+        ],
+        "correcta": 1,
+        "justificacion": "El financiero descuenta lo no erogable, por lo que es menor: se puede estar en pérdida contable y aún generar caja."
+      },
+      {
+        "id": "q24",
+        "pregunta": "El “nivel de ventas para cubrir todo el período” suma, además de los costos:",
+        "opciones": [
+          "Solo la depreciación.",
+          "Servicio de deuda, inversiones comprometidas y distribuciones previstas.",
+          "Solo impuestos.",
+          "Nada más."
+        ],
+        "correcta": 1,
+        "justificacion": "Es el umbral de caja real: incluye servicio de deuda, CapEx comprometido y dividendos. Es más exigente que los equilibrios contables."
+      },
+      {
+        "id": "q25",
+        "pregunta": "Importar umbrales de semáforos de otro sector sin ajustar es:",
+        "opciones": [
+          "Buena práctica.",
+          "Un riesgo: los umbrales dependen del sector y del contexto.",
+          "Obligatorio.",
+          "Neutro."
+        ],
+        "correcta": 1,
+        "justificacion": "Un ratio “sano” en un sector puede ser alarmante en otro; los umbrales se ajustan al contexto, no se copian."
+      },
+      {
+        "id": "q26",
+        "pregunta": "La deuda neta sobre EBITDA es un indicador de:",
+        "opciones": [
+          "Rentabilidad.",
+          "Apalancamiento / capacidad de repago.",
+          "Liquidez inmediata.",
+          "Rotación."
+        ],
+        "correcta": 1,
+        "justificacion": "Deuda neta/EBITDA mide cuántos años de generación harían falta para cancelar la deuda: una lectura de apalancamiento y repago."
+      },
+      {
+        "id": "q27",
+        "pregunta": "La cobertura de intereses (EBIT/Intereses) mide:",
+        "opciones": [
+          "La liquidez.",
+          "Cuántas veces el resultado operativo cubre los intereses.",
+          "El margen bruto.",
+          "La rotación."
+        ],
+        "correcta": 1,
+        "justificacion": "Indica el colchón para pagar intereses; alimenta la calificación sintética (2.2) y el Kd. No es margen ni rotación."
+      },
+      {
+        "id": "q28",
+        "pregunta": "Una empresa rentable que quiebra por iliquidez ilustra que:",
+        "opciones": [
+          "Rentabilidad y liquidez son lo mismo.",
+          "Se puede ganar dinero y quedarse sin caja.",
+          "La caja no importa.",
+          "El EBITDA garantiza la caja."
+        ],
+        "correcta": 1,
+        "justificacion": "La ganancia contable no asegura la caja para pagar a tiempo; la liquidez es una dimensión distinta (ver 4.3)."
+      },
+      {
+        "id": "q29",
+        "pregunta": "El corazón del método DuPont es:",
+        "opciones": [
+          "Calcular el ROE y detenerse.",
+          "Atribuir la variación del ROE a cada uno de sus factores.",
+          "Ignorar los factores.",
+          "Sumar los cinco factores."
+        ],
+        "correcta": 1,
+        "justificacion": "No basta ver que el ROE cambió: hay que decir por cuál factor y cuánto (los factores se multiplican, no se suman)."
+      },
+      {
+        "id": "q30",
+        "pregunta": "El anexo metodológico del memorándum ejecutivo debe permitir que:",
+        "opciones": [
+          "Nadie entienda el cálculo.",
+          "Un tercero reproduzca y audite fórmulas, supuestos y fuentes.",
+          "Se oculten los supuestos.",
+          "Se pague menos impuesto."
+        ],
+        "correcta": 1,
+        "justificacion": "El anexo hace el diagnóstico reproducible y auditable (fórmulas, supuestos, fuentes). No es para ocultar ni para fines fiscales."
       }
     ]
   },
@@ -1967,6 +2147,186 @@
         ],
         "correcta": 1,
         "justificacion": "La caja es difícil de manipular; seguirla y vigilar el desacople CxC–ventas y los cambios de criterio es la defensa central. Confiar ciegamente o ignorar señales es lo contrario."
+      },
+      {
+        "id": "q16",
+        "pregunta": "El factor X1 del Altman Z″ es:",
+        "opciones": [
+          "EBIT/Activo.",
+          "Capital de trabajo/Activo.",
+          "Patrimonio/Pasivo.",
+          "Ventas/Activo."
+        ],
+        "correcta": 1,
+        "justificacion": "X1 = capital de trabajo/activo (liquidez estructural). EBIT/Activo es X3 y Patrimonio/Pasivo es X4; Ventas/Activo (X5) se elimina en la Z″."
+      },
+      {
+        "id": "q17",
+        "pregunta": "El factor X3 del Altman Z″ (EBIT/Activo) mide:",
+        "opciones": [
+          "Liquidez.",
+          "La rentabilidad operativa de los activos.",
+          "El apalancamiento.",
+          "La rotación."
+        ],
+        "correcta": 1,
+        "justificacion": "X3 = EBIT/Activo capta cuánto resultado operativo generan los activos. Es el componente de rentabilidad del puntaje."
+      },
+      {
+        "id": "q18",
+        "pregunta": "En la Altman Z″, la “zona gris” corresponde aproximadamente a:",
+        "opciones": [
+          "Z″ > 2,60.",
+          "Z″ entre 1,10 y 2,60.",
+          "Z″ < 1,10.",
+          "Cualquier valor."
+        ],
+        "correcta": 1,
+        "justificacion": "Entre 1,10 y 2,60 es zona gris (incertidumbre, vigilar); por encima segura y por debajo peligro."
+      },
+      {
+        "id": "q19",
+        "pregunta": "Ohlson y Zmijewski son:",
+        "opciones": [
+          "Tipos de auditoría.",
+          "Modelos alternativos de predicción de insolvencia.",
+          "Ratios de liquidez.",
+          "Normas contables."
+        ],
+        "correcta": 1,
+        "justificacion": "Son modelos alternativos al Altman con distinta especificación. No son auditorías, ratios ni normas."
+      },
+      {
+        "id": "q20",
+        "pregunta": "En Merton, hay default (conceptualmente) cuando, al vencimiento:",
+        "opciones": [
+          "Los activos superan la deuda.",
+          "El valor de los activos es menor que la deuda.",
+          "La empresa gana dinero.",
+          "Sube el patrimonio."
+        ],
+        "correcta": 1,
+        "justificacion": "Si al vencimiento los activos valen menos que la deuda, los accionistas no “ejercen” su call y hay default. Con activos > deuda, pagan y se quedan la empresa."
+      },
+      {
+        "id": "q21",
+        "pregunta": "La probabilidad de default en Merton se obtiene como:",
+        "opciones": [
+          "DD × 100.",
+          "N(−DD), la normal estándar de menos la distancia al incumplimiento.",
+          "DD ÷ 2.",
+          "1 − DD."
+        ],
+        "correcta": 1,
+        "justificacion": "PD = N(−DD): cuanto mayor la distancia al incumplimiento (DD), menor la probabilidad de default."
+      },
+      {
+        "id": "q22",
+        "pregunta": "Los devengamientos (accruals) discrecionales son:",
+        "opciones": [
+          "Movimientos de caja.",
+          "Ajustes contables sujetos al criterio de la gerencia, potencial foco de manipulación.",
+          "Impuestos.",
+          "Ventas al contado."
+        ],
+        "correcta": 1,
+        "justificacion": "Los accruals discrecionales dependen del juicio gerencial y son terreno de manipulación; por eso se vigila la brecha resultado–caja."
+      },
+      {
+        "id": "q23",
+        "pregunta": "En Beneish, el GMI (índice de margen bruto) elevado sugiere:",
+        "opciones": [
+          "Mejora genuina del negocio.",
+          "Deterioro del margen, un incentivo a manipular.",
+          "Nada.",
+          "Más liquidez."
+        ],
+        "correcta": 1,
+        "justificacion": "Un GMI > 1 indica que el margen bruto se deterioró respecto del año previo, lo que aumenta el incentivo a manipular resultados."
+      },
+      {
+        "id": "q24",
+        "pregunta": "Un cambio de auditor sin explicación clara es:",
+        "opciones": [
+          "Irrelevante.",
+          "Una señal de alerta a investigar.",
+          "Prueba de solvencia.",
+          "Obligatorio cada año."
+        ],
+        "correcta": 1,
+        "justificacion": "El cambio de auditor puede esconder desacuerdos sobre criterios; es una señal de alerta contable, no prueba de solvencia."
+      },
+      {
+        "id": "q25",
+        "pregunta": "La calificación crediticia sintética se construye a partir de:",
+        "opciones": [
+          "El patrimonio.",
+          "La cobertura de intereses.",
+          "Las ventas.",
+          "La antigüedad de la empresa."
+        ],
+        "correcta": 1,
+        "justificacion": "La cobertura de intereses (EBIT/Intereses) mapea a un rating equivalente y a un default spread. No sale del patrimonio ni de las ventas."
+      },
+      {
+        "id": "q26",
+        "pregunta": "La clasificación de deudores del BCRA usa situaciones:",
+        "opciones": [
+          "Del 1 al 5.",
+          "A, B, C.",
+          "Alto/bajo.",
+          "Verde/rojo."
+        ],
+        "correcta": 0,
+        "justificacion": "El BCRA clasifica a los deudores en situaciones 1 a 5 según el riesgo. Es el marco argentino de crédito."
+      },
+      {
+        "id": "q27",
+        "pregunta": "Las Sociedades de Garantía Recíproca (SGR) funcionan como:",
+        "opciones": [
+          "Un impuesto.",
+          "Un mitigante del riesgo de crédito PyME (avalan al deudor).",
+          "Una norma contable.",
+          "Un modelo de Altman."
+        ],
+        "correcta": 1,
+        "justificacion": "Las SGR otorgan avales que mejoran el acceso y el costo del crédito PyME. No son tributos ni modelos de insolvencia."
+      },
+      {
+        "id": "q28",
+        "pregunta": "Los modelos de insolvencia deben leerse como:",
+        "opciones": [
+          "Sentencias definitivas.",
+          "Señales de alerta que se integran con la caja y el juicio.",
+          "Datos irrelevantes.",
+          "Sustitutos del análisis."
+        ],
+        "correcta": 1,
+        "justificacion": "Son herramientas de clasificación, no oráculos; se combinan con el flujo de caja y el criterio profesional."
+      },
+      {
+        "id": "q29",
+        "pregunta": "Capitalizar agresivamente gastos (llevarlos al activo en vez de al resultado):",
+        "opciones": [
+          "Mejora la calidad de ganancias.",
+          "Infla el resultado presente y es una señal de alerta.",
+          "No tiene efecto.",
+          "Baja el activo."
+        ],
+        "correcta": 1,
+        "justificacion": "Activar gastos que deberían ir a resultado infla la utilidad del período; es una maniobra clásica que vigila el analista."
+      },
+      {
+        "id": "q30",
+        "pregunta": "El reconocimiento anticipado de ingresos:",
+        "opciones": [
+          "Es siempre correcto.",
+          "Adelanta ventas no consolidadas, inflando el resultado (señal de alerta).",
+          "Baja las cuentas por cobrar.",
+          "No afecta el resultado."
+        ],
+        "correcta": 1,
+        "justificacion": "Reconocer ingresos antes de tiempo infla el resultado y suele desacoplar las CxC de las ventas: bandera roja de manipulación."
       }
     ]
   },
@@ -2176,6 +2536,186 @@
         ],
         "correcta": 1,
         "justificacion": "Solo Excel 365 soporta plenamente el motor de matrices dinámicas; otras suites corrompen las fórmulas. Por eso el programa lo exige."
+      },
+      {
+        "id": "q16",
+        "pregunta": "El “derrame” (spill) de una fórmula de matriz dinámica es:",
+        "opciones": [
+          "Un error.",
+          "Que una sola fórmula devuelva un rango completo de resultados.",
+          "Un formato de celda.",
+          "Una macro."
+        ],
+        "correcta": 1,
+        "justificacion": "El spill es la capacidad de una fórmula de “derramar” su resultado a varias celdas. No es un error ni una macro."
+      },
+      {
+        "id": "q17",
+        "pregunta": "La función LET sirve para:",
+        "opciones": [
+          "Borrar celdas.",
+          "Nombrar subexpresiones dentro de una fórmula (legibilidad y eficiencia).",
+          "Imprimir.",
+          "Crear gráficos."
+        ],
+        "correcta": 1,
+        "justificacion": "LET asigna nombres a cálculos intermedios, haciendo la fórmula más legible y eficiente (se evalúan una vez). No borra ni grafica."
+      },
+      {
+        "id": "q18",
+        "pregunta": "La función LAMBDA permite:",
+        "opciones": [
+          "Definir funciones propias reutilizables sin macros.",
+          "Borrar hojas.",
+          "Cambiar el idioma.",
+          "Nada."
+        ],
+        "correcta": 0,
+        "justificacion": "LAMBDA define funciones personalizadas (recursivas o no) sin VBA. Es la base de SCAN/REDUCE/MAP/BYROW."
+      },
+      {
+        "id": "q19",
+        "pregunta": "SEQUENCE genera:",
+        "opciones": [
+          "Un número aleatorio.",
+          "Un arreglo de números consecutivos (p. ej. los períodos).",
+          "Un gráfico.",
+          "Una macro."
+        ],
+        "correcta": 1,
+        "justificacion": "SEQUENCE crea arreglos de números (períodos, índices) para alimentar cálculos vectorizados. No es aleatorio (eso es RANDARRAY)."
+      },
+      {
+        "id": "q20",
+        "pregunta": "MMULT realiza:",
+        "opciones": [
+          "La suma de celdas.",
+          "La multiplicación de matrices.",
+          "Un promedio.",
+          "Un ordenamiento."
+        ],
+        "correcta": 1,
+        "justificacion": "MMULT multiplica matrices; se usa para consolidar modelos y propagar capas de redes neuronales dentro de la planilla."
+      },
+      {
+        "id": "q21",
+        "pregunta": "En la convención de formato del programa, los vínculos entre hojas se marcan:",
+        "opciones": [
+          "En rojo.",
+          "En verde.",
+          "En amarillo.",
+          "Sin color."
+        ],
+        "correcta": 1,
+        "justificacion": "Entradas en gris con texto azul; vínculos entre hojas en verde. El color comunica el rol de la celda."
+      },
+      {
+        "id": "q22",
+        "pregunta": "Una “hoja de supuestos única y trazable” busca:",
+        "opciones": [
+          "Esconder los inputs.",
+          "Concentrar y documentar los supuestos en un solo lugar auditable.",
+          "Duplicar datos.",
+          "Acelerar Excel."
+        ],
+        "correcta": 1,
+        "justificacion": "Centralizar los supuestos evita inconsistencias y hace el modelo auditable. No es para esconder ni duplicar."
+      },
+      {
+        "id": "q23",
+        "pregunta": "El control de circularidad “sin iteración” implica:",
+        "opciones": [
+          "Activar el cálculo iterativo siempre.",
+          "Diseñar el modelo para evitar referencias circulares en vez de tolerarlas.",
+          "Borrar fórmulas.",
+          "Usar macros."
+        ],
+        "correcta": 1,
+        "justificacion": "El estándar evita la circularidad por diseño (p. ej. resolviendo el interés de deuda sin bucle), en vez de habilitar iteración frágil."
+      },
+      {
+        "id": "q24",
+        "pregunta": "La debilidad de fondo de la metodología FAST es:",
+        "opciones": [
+          "Ser demasiado moderna.",
+          "Depender de fórmulas replicadas celda a celda: frágil ante cambios y opaca de auditar.",
+          "No usar Excel.",
+          "Ser gratis."
+        ],
+        "correcta": 1,
+        "justificacion": "El arrastre celda a celda la vuelve frágil y difícil de auditar; las matrices dinámicas resuelven esas dos debilidades."
+      },
+      {
+        "id": "q25",
+        "pregunta": "Claude para Excel opera:",
+        "opciones": [
+          "En una web separada.",
+          "En un panel lateral dentro del libro, leyendo y editando la planilla.",
+          "Solo en la nube sin ver el libro.",
+          "Como una macro."
+        ],
+        "correcta": 1,
+        "justificacion": "El complemento vive en un panel lateral, entiende el libro completo y sus dependencias, y edita citando celdas."
+      },
+      {
+        "id": "q26",
+        "pregunta": "El régimen de uso de la IA exige que el estudiante:",
+        "opciones": [
+          "Acepte todo sin mirar.",
+          "Verifique celda por celda y acepte o rechace cada cambio.",
+          "No use la IA.",
+          "Delegue la responsabilidad."
+        ],
+        "correcta": 1,
+        "justificacion": "El control es del estudiante: verifica y decide cada cambio propuesto por el agente. La responsabilidad es humana."
+      },
+      {
+        "id": "q27",
+        "pregunta": "Auditar un modelo incluye:",
+        "opciones": [
+          "Mirar solo el número final.",
+          "Rastrear precedentes y dependientes y hacer pruebas de esquina.",
+          "Confiar en el autor.",
+          "Cambiar colores."
+        ],
+        "correcta": 1,
+        "justificacion": "La auditoría traza dependencias y prueba casos límite, con documentación para un tercero. Mirar el resultado o confiar sin más no es auditar."
+      },
+      {
+        "id": "q28",
+        "pregunta": "REDUCE, a diferencia de SCAN:",
+        "opciones": [
+          "Devuelve toda la trayectoria.",
+          "Devuelve solo el resultado final del cálculo recursivo.",
+          "No existe.",
+          "Es más lento siempre."
+        ],
+        "correcta": 1,
+        "justificacion": "REDUCE colapsa al valor final (p. ej. saldo al vencimiento); SCAN entrega cada paso intermedio."
+      },
+      {
+        "id": "q29",
+        "pregunta": "Un riesgo específico de usar IA para modelar es:",
+        "opciones": [
+          "Fórmulas demasiado correctas.",
+          "Fórmulas sintácticamente correctas pero financieramente equivocadas.",
+          "Que Excel se cierre.",
+          "No tener errores nunca."
+        ],
+        "correcta": 1,
+        "justificacion": "El peligro sutil es la fórmula que “compila” pero está mal desde lo económico; por eso se verifica el criterio, no solo la sintaxis."
+      },
+      {
+        "id": "q30",
+        "pregunta": "La regla de aprobación del programa respecto de los modelos es:",
+        "opciones": [
+          "Basta con que funcione.",
+          "El estudiante debe poder explicar cada línea, la haya escrito él o la IA.",
+          "Si lo hizo la IA, aprueba solo.",
+          "La explicación es opcional."
+        ],
+        "correcta": 1,
+        "justificacion": "La comprensión es condición de aprobación: hay que explicar cada línea. Que “funcione” no alcanza."
       }
     ]
   },
@@ -2384,6 +2924,186 @@
         ],
         "correcta": 1,
         "justificacion": "Menos capital atrapado = menor capital invertido = mayor ROIC y EVA, aun con las mismas ventas y margen. No actúa sobre ventas, margen ni impuestos."
+      },
+      {
+        "id": "q16",
+        "pregunta": "El DSO (días de cobranza) se calcula como:",
+        "opciones": [
+          "Proveedores/CMV × 365.",
+          "Cuentas por cobrar/Ventas × 365.",
+          "Inventario/CMV × 365.",
+          "Ventas/Activos."
+        ],
+        "correcta": 1,
+        "justificacion": "DSO = CxC/Ventas × 365 (días que tardan en cobrarse las ventas). Inventario y proveedores dan DIO y DPO."
+      },
+      {
+        "id": "q17",
+        "pregunta": "El DPO (días de pago) se calcula como:",
+        "opciones": [
+          "Proveedores/CMV × 365.",
+          "CxC/Ventas × 365.",
+          "Inventario/Ventas × 365.",
+          "Ventas/Proveedores."
+        ],
+        "correcta": 0,
+        "justificacion": "DPO = Proveedores/CMV × 365 (días que se tarda en pagar). Se restan en el CCE porque financian el ciclo."
+      },
+      {
+        "id": "q18",
+        "pregunta": "El eje ABC se basa en la regla de Pareto, es decir:",
+        "opciones": [
+          "Todos los ítems valen igual.",
+          "Pocos ítems concentran la mayor parte del valor de consumo.",
+          "El más barato es el más importante.",
+          "El orden alfabético."
+        ],
+        "correcta": 1,
+        "justificacion": "ABC ordena por valor de consumo: unos pocos ítems (A) explican la mayor parte del valor. No es orden alfabético ni precio unitario."
+      },
+      {
+        "id": "q19",
+        "pregunta": "El eje XYZ clasifica por:",
+        "opciones": [
+          "El valor de consumo.",
+          "La variabilidad de la demanda (coeficiente de variación).",
+          "El proveedor.",
+          "El color del producto."
+        ],
+        "correcta": 1,
+        "justificacion": "XYZ mide la previsibilidad: X estable, Z errática (por el CV). El valor es el eje ABC."
+      },
+      {
+        "id": "q20",
+        "pregunta": "Un ítem “AZ” (alto valor, demanda errática) requiere:",
+        "opciones": [
+          "Ninguna atención.",
+          "Control estricto pero con más cobertura; foco de gestión.",
+          "Lotes grandes sin seguimiento.",
+          "Compra al azar."
+        ],
+        "correcta": 1,
+        "justificacion": "Al ser valioso y difícil de prever, exige control estricto y stock de seguridad mayor: es un ítem de foco. No se desatiende."
+      },
+      {
+        "id": "q21",
+        "pregunta": "El stock de seguridad se dimensiona en función del:",
+        "opciones": [
+          "Color del producto.",
+          "Nivel de servicio deseado y la variabilidad de la demanda.",
+          "Nombre del proveedor.",
+          "Patrimonio."
+        ],
+        "correcta": 1,
+        "justificacion": "A mayor nivel de servicio y mayor variabilidad, mayor stock de seguridad. No depende del color ni del patrimonio."
+      },
+      {
+        "id": "q22",
+        "pregunta": "Un descuento por pronto pago tiene, para quien lo ofrece:",
+        "opciones": [
+          "Costo cero.",
+          "Un costo financiero implícito (a veces alto en tasa anualizada).",
+          "Beneficio seguro.",
+          "Efecto nulo sobre el DSO."
+        ],
+        "correcta": 1,
+        "justificacion": "Resignar precio por cobrar antes equivale a una tasa financiera implícita que hay que calcular; además acorta el DSO."
+      },
+      {
+        "id": "q23",
+        "pregunta": "El factoring es:",
+        "opciones": [
+          "Un impuesto.",
+          "La cesión de cuentas por cobrar para financiar el capital de trabajo.",
+          "Un método de valuación.",
+          "Un tipo de inventario."
+        ],
+        "correcta": 1,
+        "justificacion": "El factoring adelanta el cobro de facturas (con o sin recurso), financiando el ciclo. No es tributo ni valuación."
+      },
+      {
+        "id": "q24",
+        "pregunta": "Las SGR, en el financiamiento del capital de trabajo, aportan:",
+        "opciones": [
+          "Un impuesto adicional.",
+          "Avales que mejoran el acceso y el costo del crédito PyME.",
+          "Menos garantías.",
+          "Nada."
+        ],
+        "correcta": 1,
+        "justificacion": "Las Sociedades de Garantía Recíproca avalan al deudor PyME, mejorando acceso y tasa. No son un costo impositivo."
+      },
+      {
+        "id": "q25",
+        "pregunta": "El “capital por día de ciclo” se obtiene como:",
+        "opciones": [
+          "Ventas × CCE.",
+          "Capital de trabajo ÷ CCE.",
+          "CCE ÷ Ventas.",
+          "Patrimonio × CCE."
+        ],
+        "correcta": 1,
+        "justificacion": "Capital de trabajo/CCE indica cuánto capital inmoviliza cada día del ciclo; multiplicado por los días reducidos da el capital liberado."
+      },
+      {
+        "id": "q26",
+        "pregunta": "El EVA adicional por liberar capital de trabajo se estima como:",
+        "opciones": [
+          "Capital liberado ÷ Ventas.",
+          "Capital liberado × WACC.",
+          "Capital liberado × inflación.",
+          "Capital liberado − impuestos."
+        ],
+        "correcta": 1,
+        "justificacion": "El capital liberado deja de costar el WACC, por lo que el ahorro (EVA adicional) es capital liberado × WACC."
+      },
+      {
+        "id": "q27",
+        "pregunta": "Del denominador del CCE se excluyen:",
+        "opciones": [
+          "El inventario y las CxC.",
+          "La caja operativa mínima y la deuda financiera.",
+          "Los proveedores.",
+          "Las ventas."
+        ],
+        "correcta": 1,
+        "justificacion": "El CCE trabaja con capital de trabajo operativo; se excluyen la caja mínima y la deuda financiera. Inventario, CxC y proveedores participan."
+      },
+      {
+        "id": "q28",
+        "pregunta": "La obsolescencia de stock impacta porque:",
+        "opciones": [
+          "Mejora el margen.",
+          "Inmoviliza capital que puede no recuperarse a su valor de libros.",
+          "Reduce el CCE.",
+          "No tiene efecto."
+        ],
+        "correcta": 1,
+        "justificacion": "El stock obsoleto o inmovilizado ata capital y puede valer menos que su registro; la matriz ABC/XYZ ayuda a gestionarlo."
+      },
+      {
+        "id": "q29",
+        "pregunta": "El crédito comercial de proveedores (DPO) es:",
+        "opciones": [
+          "Siempre gratis.",
+          "Una fuente de financiamiento con posible costo implícito (perder descuentos).",
+          "Un activo.",
+          "Irrelevante para el ciclo."
+        ],
+        "correcta": 1,
+        "justificacion": "Estirar pagos financia el ciclo pero puede costar (descuentos perdidos). Es un pasivo operativo, central en el CCE."
+      },
+      {
+        "id": "q30",
+        "pregunta": "El cheque de pago diferido puede descontarse:",
+        "opciones": [
+          "Solo en efectivo.",
+          "En el mercado de capitales y en el sistema bancario.",
+          "Nunca.",
+          "Solo entre particulares."
+        ],
+        "correcta": 1,
+        "justificacion": "El descuento de cheques de pago diferido opera tanto en el mercado de capitales como en la banca, con su costo financiero total a calcular."
       }
     ]
   },
@@ -2592,6 +3312,186 @@
         ],
         "correcta": 1,
         "justificacion": "El WACC está lleno de supuestos discutibles; documentarlos y hacer sensibilidad es lo que lo vuelve defendible. Copiar o esconder supuestos es lo contrario del rigor."
+      },
+      {
+        "id": "q16",
+        "pregunta": "La tasa libre de riesgo (Rf) en el enfoque del programa se toma de:",
+        "opciones": [
+          "Un plazo fijo local.",
+          "Un mercado maduro (p. ej. el bono del Tesoro de EE. UU.).",
+          "La inflación.",
+          "El WACC."
+        ],
+        "correcta": 1,
+        "justificacion": "Se usa la Rf de un mercado maduro y luego se agregan el ERP y el riesgo país. La Rf no es la inflación ni el WACC."
+      },
+      {
+        "id": "q17",
+        "pregunta": "La relación de Hamada apalanca la beta según:",
+        "opciones": [
+          "βL = βU × ρ.",
+          "βL = βU × [1 + (1 − t) × D/E].",
+          "βL = βU ÷ ERP.",
+          "βL = βU + CRP."
+        ],
+        "correcta": 1,
+        "justificacion": "βL = βU[1+(1−t)D/E] incorpora apalancamiento y escudo fiscal. Las otras no son la fórmula de Hamada."
+      },
+      {
+        "id": "q18",
+        "pregunta": "En la Beta Total (βL/ρ), ρ representa:",
+        "opciones": [
+          "La inflación.",
+          "La correlación de la empresa con el mercado.",
+          "La tasa impositiva.",
+          "El apalancamiento."
+        ],
+        "correcta": 1,
+        "justificacion": "ρ es la correlación con el mercado; dividir por ρ (< 1) eleva la beta para capturar TODO el riesgo del dueño no diversificado."
+      },
+      {
+        "id": "q19",
+        "pregunta": "El Ke calculado con Beta Total (dueño no diversificado), respecto del Ke con beta de mercado, es:",
+        "opciones": [
+          "Menor.",
+          "Mayor.",
+          "Igual.",
+          "Cero."
+        ],
+        "correcta": 1,
+        "justificacion": "Como βTotal = βL/ρ > βL, el Ke del dueño concentrado es mayor: refleja el precio de no estar diversificado."
+      },
+      {
+        "id": "q20",
+        "pregunta": "Las ponderaciones del WACC (E/V y D/V) deben tomarse:",
+        "opciones": [
+          "A valor contable.",
+          "A valor de mercado.",
+          "Al azar.",
+          "Iguales siempre."
+        ],
+        "correcta": 1,
+        "justificacion": "El WACC pondera con valores de mercado del patrimonio y la deuda, no con los contables, para reflejar la estructura real."
+      },
+      {
+        "id": "q21",
+        "pregunta": "La prima de riesgo país (CRP) captura:",
+        "opciones": [
+          "El riesgo del sector.",
+          "El riesgo soberano, cambiario e institucional del país.",
+          "El escudo fiscal.",
+          "La rotación de activos."
+        ],
+        "correcta": 1,
+        "justificacion": "El CRP mide el riesgo adicional de operar en ese país (soberano, moneda, instituciones). No es riesgo sectorial ni fiscal."
+      },
+      {
+        "id": "q22",
+        "pregunta": "El Ke con el método lambda se expresa como:",
+        "opciones": [
+          "Rf + CRP solamente.",
+          "Rf + β × ERP_maduro + λ × CRP.",
+          "Rf × β.",
+          "Rf − CRP."
+        ],
+        "correcta": 1,
+        "justificacion": "La lambda pondera la exposición efectiva al riesgo país: Ke = Rf + β·ERP_maduro + λ·CRP."
+      },
+      {
+        "id": "q23",
+        "pregunta": "El default spread del rating sintético se combina con la Rf para obtener:",
+        "opciones": [
+          "El Ke.",
+          "El Kd (costo de la deuda antes de impuestos).",
+          "El WACC directamente.",
+          "La beta."
+        ],
+        "correcta": 1,
+        "justificacion": "Kd = Rf + default spread; luego se aplica el escudo fiscal. No es el Ke ni el WACC directo."
+      },
+      {
+        "id": "q24",
+        "pregunta": "Se usa la beta desapalancada de un sector porque:",
+        "opciones": [
+          "La empresa cotiza.",
+          "Permite tomar el riesgo operativo del negocio de comparables y reapalancarlo a la estructura propia.",
+          "No hay betas.",
+          "Es más alta."
+        ],
+        "correcta": 1,
+        "justificacion": "La βU sectorial captura el riesgo del negocio sin financiamiento; se reapalanca con el D/E propio (Hamada). Es la vía cuando la empresa no cotiza."
+      },
+      {
+        "id": "q25",
+        "pregunta": "El costo de la deuda (Kd) suele ser menor que el costo del capital propio (Ke) porque:",
+        "opciones": [
+          "La deuda no tiene riesgo.",
+          "El acreedor tiene prelación de cobro y garantías, menor riesgo que el accionista.",
+          "El Ke es siempre cero.",
+          "La deuda no se paga."
+        ],
+        "correcta": 1,
+        "justificacion": "El acreedor cobra antes y con garantías, por lo que exige menos retorno que el accionista residual. Además el interés es deducible (escudo)."
+      },
+      {
+        "id": "q26",
+        "pregunta": "Un WACC mal estimado impacta directamente en:",
+        "opciones": [
+          "El color del informe.",
+          "La valuación (tasa de descuento) y en la comparación con el ROIC.",
+          "La nómina.",
+          "El inventario."
+        ],
+        "correcta": 1,
+        "justificacion": "El WACC es la tasa de descuento de la valuación y el umbral del ROIC; un error se propaga a todo el valor."
+      },
+      {
+        "id": "q27",
+        "pregunta": "Aumentar el apalancamiento con deuda barata, hasta cierto punto:",
+        "opciones": [
+          "Siempre sube el WACC.",
+          "Puede bajar el WACC (más peso de la deuda tras escudo), hasta que el riesgo de dificultades lo revierte.",
+          "No afecta el WACC.",
+          "Elimina el Ke."
+        ],
+        "correcta": 1,
+        "justificacion": "Más deuda barata (después de impuestos) puede reducir el WACC, pero pasado un punto el riesgo de quiebra encarece Ke y Kd y lo revierte (estructura óptima)."
+      },
+      {
+        "id": "q28",
+        "pregunta": "El Ke representa:",
+        "opciones": [
+          "El costo de la deuda.",
+          "El retorno exigido por los accionistas dado el riesgo.",
+          "La tasa impositiva.",
+          "El EVA."
+        ],
+        "correcta": 1,
+        "justificacion": "El Ke es el costo del capital propio: lo que los accionistas exigen por su riesgo. No es el Kd ni un impuesto."
+      },
+      {
+        "id": "q29",
+        "pregunta": "Para que el spread ROIC − WACC tenga sentido, ambos deben expresarse:",
+        "opciones": [
+          "En distinta moneda.",
+          "En los mismos términos (real/nominal, misma moneda).",
+          "Sin relación.",
+          "En dólares el ROIC y en pesos el WACC."
+        ],
+        "correcta": 1,
+        "justificacion": "Comparar un ROIC real con un WACC nominal (o distinta moneda) distorsiona el spread; deben ser consistentes."
+      },
+      {
+        "id": "q30",
+        "pregunta": "La corrección de Pereiro con el factor (1 − R²) busca evitar:",
+        "opciones": [
+          "Que la beta sea alta.",
+          "El doble conteo del riesgo país ya contenido en el término de mercado.",
+          "Que exista Ke.",
+          "El escudo fiscal."
+        ],
+        "correcta": 1,
+        "justificacion": "El (1 − R²) reduce β×ERP para no sumar dos veces el riesgo país; el CRP se agrega aparte. No tiene que ver con el escudo."
       }
     ]
   },
@@ -2800,6 +3700,186 @@
         ],
         "correcta": 1,
         "justificacion": "Validar mal produce backtests brillantes y modelos inútiles: es la causa central de fracasos. No se debe a Excel, al exceso de datos ni a explicar el modelo."
+      },
+      {
+        "id": "q16",
+        "pregunta": "Segmentar clientes sin etiquetas previas es un problema de:",
+        "opciones": [
+          "Clasificación supervisada.",
+          "Aprendizaje no supervisado (clustering).",
+          "Regresión.",
+          "Refuerzo."
+        ],
+        "correcta": 1,
+        "justificacion": "El clustering agrupa sin etiquetas: es aprendizaje no supervisado. La clasificación y la regresión son supervisadas."
+      },
+      {
+        "id": "q17",
+        "pregunta": "Predecir la demanda (un número) es un problema de:",
+        "opciones": [
+          "Clasificación.",
+          "Regresión.",
+          "Clustering.",
+          "Refuerzo."
+        ],
+        "correcta": 1,
+        "justificacion": "Predecir un valor numérico continuo es regresión. La clasificación predice clases; el clustering no usa etiquetas."
+      },
+      {
+        "id": "q18",
+        "pregunta": "La regularización sirve para:",
+        "opciones": [
+          "Aumentar el sobreajuste.",
+          "Penalizar la complejidad del modelo y combatir el sobreajuste.",
+          "Borrar datos.",
+          "Acelerar la GPU."
+        ],
+        "correcta": 1,
+        "justificacion": "La regularización penaliza modelos demasiado complejos, reduciendo el sobreajuste. No borra datos ni es un tema de hardware."
+      },
+      {
+        "id": "q19",
+        "pregunta": "La partición en entrenamiento, validación y prueba busca:",
+        "opciones": [
+          "Tener más datos.",
+          "Evaluar el modelo con datos que no vio y evitar el autoengaño.",
+          "Entrenar más rápido.",
+          "Eliminar variables."
+        ],
+        "correcta": 1,
+        "justificacion": "Separar los datos permite ajustar (train), elegir hiperparámetros (validación) y medir honestamente (test) con datos no vistos."
+      },
+      {
+        "id": "q20",
+        "pregunta": "La precisión (precision) de un clasificador es:",
+        "opciones": [
+          "VP/(VP+FN).",
+          "VP/(VP+FP).",
+          "VN/(VN+FP).",
+          "VP/Total."
+        ],
+        "correcta": 1,
+        "justificacion": "Precisión = VP/(VP+FP): de lo que predijo positivo, cuánto lo era. VP/(VP+FN) es el recall."
+      },
+      {
+        "id": "q21",
+        "pregunta": "El recall (sensibilidad) es:",
+        "opciones": [
+          "VP/(VP+FP).",
+          "VP/(VP+FN).",
+          "FP/(FP+VN).",
+          "VN/Total."
+        ],
+        "correcta": 1,
+        "justificacion": "Recall = VP/(VP+FN): de los positivos reales, cuántos detectó. Es clave con clases raras como la mora."
+      },
+      {
+        "id": "q22",
+        "pregunta": "En un scoring de crédito, un falso positivo significa:",
+        "opciones": [
+          "Aprobar a un cliente que no paga.",
+          "Rechazar a un cliente que sí pagaría (buen cliente).",
+          "Acertar.",
+          "No decidir."
+        ],
+        "correcta": 1,
+        "justificacion": "Si “positivo” es riesgo/rechazo, un falso positivo es rechazar a un buen cliente: costo de oportunidad. El falso negativo es aprobar a uno malo."
+      },
+      {
+        "id": "q23",
+        "pregunta": "El “feature engineering” es:",
+        "opciones": [
+          "Entrenar el modelo.",
+          "Construir y transformar las variables (features) que alimentan el modelo.",
+          "Graficar resultados.",
+          "Elegir el color."
+        ],
+        "correcta": 1,
+        "justificacion": "El feature engineering crea las variables informativas a partir de los datos crudos; suele pesar más que el algoritmo elegido."
+      },
+      {
+        "id": "q24",
+        "pregunta": "En el scoring del caso, MMULT se usa para:",
+        "opciones": [
+          "Ordenar clientes.",
+          "Multiplicar la matriz de features por el vector de coeficientes (el score z).",
+          "Borrar filas.",
+          "Formatear celdas."
+        ],
+        "correcta": 1,
+        "justificacion": "z = X·β se calcula con MMULT (features × coeficientes); luego la sigmoide lo convierte en probabilidad."
+      },
+      {
+        "id": "q25",
+        "pregunta": "Un modelo de crédito debe poder explicar por qué rechaza a un cliente porque:",
+        "opciones": [
+          "Es opcional.",
+          "Lo exige la ética y a menudo la regulación.",
+          "Mejora la GPU.",
+          "Reduce el AUC."
+        ],
+        "correcta": 1,
+        "justificacion": "La explicabilidad de una decisión de crédito es una exigencia ética y regulatoria; la caja negra es un pasivo."
+      },
+      {
+        "id": "q26",
+        "pregunta": "El aprendizaje profundo (deep learning) es especialmente útil para:",
+        "opciones": [
+          "Problemas triviales.",
+          "Patrones complejos y datos no estructurados (imágenes, texto).",
+          "Sumar dos números.",
+          "Nada."
+        ],
+        "correcta": 1,
+        "justificacion": "Las redes profundas capturan patrones complejos y datos no estructurados, a costa de interpretabilidad y datos. No se justifican para lo trivial."
+      },
+      {
+        "id": "q27",
+        "pregunta": "El aprendizaje por refuerzo aprende de:",
+        "opciones": [
+          "Etiquetas fijas.",
+          "La interacción con un entorno mediante recompensas.",
+          "Clustering.",
+          "Regresión."
+        ],
+        "correcta": 1,
+        "justificacion": "El refuerzo optimiza acciones según recompensas del entorno. Es menos frecuente en finanzas corporativas."
+      },
+      {
+        "id": "q28",
+        "pregunta": "La curva ROC relaciona:",
+        "opciones": [
+          "Ventas y costos.",
+          "La tasa de verdaderos positivos con la de falsos positivos a distintos umbrales.",
+          "Activo y pasivo.",
+          "Precio y volumen."
+        ],
+        "correcta": 1,
+        "justificacion": "La ROC traza TPR vs FPR variando el umbral; el área bajo ella (AUC) resume la capacidad de ordenar el riesgo."
+      },
+      {
+        "id": "q29",
+        "pregunta": "Según Géron, la mayor parte del trabajo real de un proyecto de ML es:",
+        "opciones": [
+          "Elegir el algoritmo de moda.",
+          "La preparación de datos y la validación honesta.",
+          "Comprar GPUs.",
+          "Hacer gráficos."
+        ],
+        "correcta": 1,
+        "justificacion": "La disciplina del proceso (datos + validación) pesa mucho más que el algoritmo de moda. Es donde se juega el resultado."
+      },
+      {
+        "id": "q30",
+        "pregunta": "Con clases desbalanceadas (mora rara), conviene mirar:",
+        "opciones": [
+          "Solo la exactitud.",
+          "Precisión, recall y AUC, además de la exactitud.",
+          "Solo el color.",
+          "Nada."
+        ],
+        "correcta": 1,
+        "justificacion": "La exactitud engaña con clases raras; precisión, recall y AUC dan una imagen honesta del desempeño."
       }
     ]
   },
@@ -3008,6 +4088,186 @@
         ],
         "correcta": 1,
         "justificacion": "Medir reduce la incertidumbre y mejora la decisión; la pregunta es cuánto la reduce, no si es posible. No exige certeza previa."
+      },
+      {
+        "id": "q16",
+        "pregunta": "Entre los generadores de valor que se proyectan están:",
+        "opciones": [
+          "El logo y el color.",
+          "Crecimiento, margen operativo, intensidad de capital, tasa y costo del capital.",
+          "Solo las ventas.",
+          "El nombre del CEO."
+        ],
+        "correcta": 1,
+        "justificacion": "Se proyectan los drivers que mueven el valor (crecimiento, margen, capital de trabajo/CapEx, impuestos, WACC) y los estados se derivan de ellos."
+      },
+      {
+        "id": "q17",
+        "pregunta": "La verificación de cierre en estados integrados asegura que:",
+        "opciones": [
+          "El modelo sea lindo.",
+          "Los tres estados sean consistentes (el balance cierra).",
+          "No haya fórmulas.",
+          "Se pague menos impuesto."
+        ],
+        "correcta": 1,
+        "justificacion": "La verificación de cierre confirma que resultados, balance y flujo son coherentes entre sí; sin ella el modelo no es confiable."
+      },
+      {
+        "id": "q18",
+        "pregunta": "Los escenarios (base, optimista, pesimista) son:",
+        "opciones": [
+          "Una distribución completa.",
+          "Combinaciones coherentes de supuestos, menos que una distribución pero útiles para comunicar.",
+          "Sorteos aleatorios.",
+          "Lo mismo que Monte Carlo."
+        ],
+        "correcta": 1,
+        "justificacion": "Los escenarios son pocos casos coherentes; Monte Carlo genera la distribución completa. Son complementarios."
+      },
+      {
+        "id": "q19",
+        "pregunta": "RANDARRAY (Excel 365) genera:",
+        "opciones": [
+          "Un texto.",
+          "Un arreglo de números aleatorios (base de la simulación vectorizada).",
+          "Una macro.",
+          "Un gráfico."
+        ],
+        "correcta": 1,
+        "justificacion": "RANDARRAY produce muchos aleatorios de una vez; combinado con NORM.S.INV da draws normales para Monte Carlo."
+      },
+      {
+        "id": "q20",
+        "pregunta": "Los percentiles P5 y P95 de la distribución expresan:",
+        "opciones": [
+          "La media.",
+          "El rango de resultados plausibles (banda de confianza).",
+          "La deuda.",
+          "El impuesto."
+        ],
+        "correcta": 1,
+        "justificacion": "P5 y P95 acotan el rango en el que caería el resultado la mayor parte de las veces: la banda de incertidumbre."
+      },
+      {
+        "id": "q21",
+        "pregunta": "La probabilidad P(valor < capital invertido) mide:",
+        "opciones": [
+          "La rentabilidad media.",
+          "La chance de destruir valor.",
+          "La liquidez.",
+          "La rotación."
+        ],
+        "correcta": 1,
+        "justificacion": "Es la probabilidad de que el valor caiga por debajo del capital: la chance de destruir valor, oculta en el número único."
+      },
+      {
+        "id": "q22",
+        "pregunta": "La media de la distribución simulada, frente al valor puntual del escenario base:",
+        "opciones": [
+          "Es siempre idéntica.",
+          "Puede diferir por la no linealidad (falacia de los promedios).",
+          "No tiene relación.",
+          "Es siempre mayor."
+        ],
+        "correcta": 1,
+        "justificacion": "Por la no linealidad, el promedio del resultado no coincide necesariamente con el resultado del promedio de inputs (Savage)."
+      },
+      {
+        "id": "q23",
+        "pregunta": "Presentar un único número de valor, en vez de una distribución:",
+        "opciones": [
+          "Es más honesto.",
+          "Esconde el riesgo (falsa precisión).",
+          "Es imposible.",
+          "Da más información."
+        ],
+        "correcta": 1,
+        "justificacion": "El número único aparenta precisión y oculta el rango y la probabilidad de malos resultados; la distribución es más honesta."
+      },
+      {
+        "id": "q24",
+        "pregunta": "Una distribución triangular se define con:",
+        "opciones": [
+          "Solo la media.",
+          "Mínimo, valor más probable (moda) y máximo.",
+          "Solo el desvío.",
+          "Nada."
+        ],
+        "correcta": 1,
+        "justificacion": "La triangular usa mínimo, moda y máximo; es útil cuando se tiene un rango con un valor central esperado."
+      },
+      {
+        "id": "q25",
+        "pregunta": "En Excel, la simulación de Monte Carlo se vuelve a sortear:",
+        "opciones": [
+          "Nunca.",
+          "Al recalcular (F9), porque las funciones aleatorias son volátiles.",
+          "Solo al cerrar el archivo.",
+          "Cada hora."
+        ],
+        "correcta": 1,
+        "justificacion": "RANDARRAY es volátil: cada recálculo (F9) genera una nueva muestra, permitiendo repetir la simulación."
+      },
+      {
+        "id": "q26",
+        "pregunta": "El Value at Risk (VaR) al 5% es:",
+        "opciones": [
+          "La ganancia media.",
+          "Un percentil de la cola: la pérdida que no se supera con cierta probabilidad.",
+          "El promedio.",
+          "La tasa impositiva."
+        ],
+        "correcta": 1,
+        "justificacion": "El VaR es un percentil de la distribución de pérdidas; el Expected Shortfall promedia la cola más allá del VaR."
+      },
+      {
+        "id": "q27",
+        "pregunta": "Las pruebas de tensión (stress tests) aplican:",
+        "opciones": [
+          "Sorteos aleatorios.",
+          "Shocks extremos pero plausibles (devaluación, caída de demanda).",
+          "La media.",
+          "Un promedio."
+        ],
+        "correcta": 1,
+        "justificacion": "El stress test evalúa escenarios severos específicos, no aleatorios, para ver la resiliencia de la caja."
+      },
+      {
+        "id": "q28",
+        "pregunta": "Aumentar el número de iteraciones de la simulación:",
+        "opciones": [
+          "Empeora la estimación.",
+          "Hace la distribución estimada más estable (converge).",
+          "No cambia nada.",
+          "Reduce el riesgo real."
+        ],
+        "correcta": 1,
+        "justificacion": "Más iteraciones reducen el ruido de muestreo y estabilizan los estadísticos; por eso el programa pide ≥10.000. No cambia el riesgo del negocio."
+      },
+      {
+        "id": "q29",
+        "pregunta": "La ventaja de Monte Carlo sobre la sensibilidad “una variable por vez” es:",
+        "opciones": [
+          "Es más simple.",
+          "Captura el efecto conjunto de todas las variables (y sus correlaciones).",
+          "No usa datos.",
+          "Da un solo número."
+        ],
+        "correcta": 1,
+        "justificacion": "Monte Carlo mueve todas las variables juntas (con correlaciones), captando el riesgo de la combinación que la sensibilidad univariada ignora."
+      },
+      {
+        "id": "q30",
+        "pregunta": "La forma correcta de comunicar el resultado al directorio es:",
+        "opciones": [
+          "Un número exacto.",
+          "Un rango con probabilidades (media, P5, P95, P(destruir valor)).",
+          "Solo el peor caso.",
+          "Solo el mejor caso."
+        ],
+        "correcta": 1,
+        "justificacion": "El directorio decide mejor con la distribución (rango + probabilidades) que con un número único o un solo extremo."
       }
     ]
   },
@@ -3216,6 +4476,186 @@
         ],
         "correcta": 1,
         "justificacion": "La confiabilidad la da la ingeniería (evaluación, guardarraíles, monitoreo), no el modelo por sí solo. Ni la suerte ni solo el volumen de datos alcanzan."
+      },
+      {
+        "id": "q16",
+        "pregunta": "La “memoria” de un agente le permite:",
+        "opciones": [
+          "Nada.",
+          "Mantener contexto entre pasos del bucle.",
+          "Borrar el ERP.",
+          "Reemplazar al modelo."
+        ],
+        "correcta": 1,
+        "justificacion": "La memoria conserva el contexto (qué observó y decidió) a lo largo del bucle percibir-decidir-actuar-observar."
+      },
+      {
+        "id": "q17",
+        "pregunta": "El patrón de “planificación” en agentes consiste en:",
+        "opciones": [
+          "Actuar sin pensar.",
+          "Descomponer un objetivo en subtareas antes de ejecutarlas.",
+          "Reiniciar el agente.",
+          "Borrar datos."
+        ],
+        "correcta": 1,
+        "justificacion": "La planificación divide el objetivo en pasos manejables antes de la ejecución. No es acción impulsiva ni reinicio."
+      },
+      {
+        "id": "q18",
+        "pregunta": "Un sistema “multi-agente” usa:",
+        "opciones": [
+          "Un solo agente que hace todo.",
+          "Varios agentes especializados coordinados (extraer, modelar, redactar).",
+          "Ningún agente.",
+          "Solo humanos."
+        ],
+        "correcta": 1,
+        "justificacion": "El multi-agente reparte el trabajo entre agentes especializados que se coordinan. Se justifica cuando la tarea lo amerita."
+      },
+      {
+        "id": "q19",
+        "pregunta": "La diferencia entre un “flujo de trabajo” y un “agente” es:",
+        "opciones": [
+          "Ninguna.",
+          "El flujo tiene pasos predefinidos; en el agente, el modelo dirige el proceso.",
+          "El flujo usa IA y el agente no.",
+          "El agente es más barato siempre."
+        ],
+        "correcta": 1,
+        "justificacion": "El flujo sigue pasos fijos; el agente decide el curso. Muchas aplicaciones se resuelven mejor con flujos simples que con autonomía."
+      },
+      {
+        "id": "q20",
+        "pregunta": "El acceso por defecto de un agente financiero a los datos debe ser:",
+        "opciones": [
+          "Escritura total.",
+          "Sólo lectura; las acciones que mueven dinero pasan por aprobación humana.",
+          "Administrador.",
+          "Sin control."
+        ],
+        "correcta": 1,
+        "justificacion": "Sólo lectura por defecto; lo que modifica registros o mueve dinero requiere aprobación. Es la base del gobierno del agente."
+      },
+      {
+        "id": "q21",
+        "pregunta": "Definir límites y permisos explícitos del agente sirve para:",
+        "opciones": [
+          "Que haga cualquier cosa.",
+          "Acotar qué puede y qué no puede hacer.",
+          "Eliminar la auditoría.",
+          "Acelerar el modelo."
+        ],
+        "correcta": 1,
+        "justificacion": "Los límites y permisos explícitos son parte del gobierno: definen el alcance seguro de acción del agente."
+      },
+      {
+        "id": "q22",
+        "pregunta": "Los “guardarraíles” (guardrails) son:",
+        "opciones": [
+          "Adornos.",
+          "Controles que restringen y validan el comportamiento del agente.",
+          "Un tipo de modelo.",
+          "Una base de datos."
+        ],
+        "correcta": 1,
+        "justificacion": "Los guardarraíles acotan y verifican lo que el agente hace, aportando seguridad y previsibilidad."
+      },
+      {
+        "id": "q23",
+        "pregunta": "La autonomía del agente conviene concederla primero sobre acciones:",
+        "opciones": [
+          "Irreversibles y críticas.",
+          "Reversibles y de bajo impacto.",
+          "Al azar.",
+          "Solo de escritura."
+        ],
+        "correcta": 1,
+        "justificacion": "Se empieza por lo reversible y de bajo impacto; lo crítico o irreversible mantiene control humano hasta ganar confianza."
+      },
+      {
+        "id": "q24",
+        "pregunta": "La confidencialidad de los datos que maneja el agente se rige, en Argentina, por:",
+        "opciones": [
+          "La RT 6.",
+          "La Ley 25.326 de protección de datos personales.",
+          "La NIC 29.",
+          "Ninguna norma."
+        ],
+        "correcta": 1,
+        "justificacion": "La Ley 25.326 aplica a los datos personales que el agente pueda procesar. La RT 6 y la NIC 29 son contables."
+      },
+      {
+        "id": "q25",
+        "pregunta": "Un agente que “parece” funcionar pero no fue evaluado:",
+        "opciones": [
+          "Está listo para producción.",
+          "No está validado: la impresión no es evaluación.",
+          "Es siempre confiable.",
+          "No necesita auditoría."
+        ],
+        "correcta": 1,
+        "justificacion": "Sin medir el acierto contra casos conocidos, no hay evaluación: la demostración no basta para producción."
+      },
+      {
+        "id": "q26",
+        "pregunta": "Toda cifra que reporta el agente debe:",
+        "opciones": [
+          "Ser generada por el modelo.",
+          "Ser trazable a una herramienta auditada (no inventada por el modelo).",
+          "Redondearse.",
+          "Ocultarse."
+        ],
+        "correcta": 1,
+        "justificacion": "Por el riesgo de alucinación, las cifras vienen de herramientas (el servidor MCP) y son trazables, no generadas por el modelo."
+      },
+      {
+        "id": "q27",
+        "pregunta": "La priorización de qué automatizar se ordena por:",
+        "opciones": [
+          "Lo más nuevo.",
+          "Retorno y factibilidad: frecuente, repetible, bajo riesgo primero.",
+          "Lo más difícil.",
+          "Al azar."
+        ],
+        "correcta": 1,
+        "justificacion": "Se prioriza por ahorro potencial y factibilidad; lo de alto juicio y riesgo queda con el humano al frente."
+      },
+      {
+        "id": "q28",
+        "pregunta": "Las “herramientas” (manos) del agente financiero del programa son:",
+        "opciones": [
+          "Macros de Excel.",
+          "El servidor MCP de sólo lectura de la asignatura 1.2.",
+          "El navegador.",
+          "Un chat."
+        ],
+        "correcta": 1,
+        "justificacion": "El agente actúa a través de las herramientas MCP auditadas de sólo lectura, preservando la trazabilidad del dato."
+      },
+      {
+        "id": "q29",
+        "pregunta": "El registro de auditoría del agente debe guardar:",
+        "opciones": [
+          "Solo la respuesta final.",
+          "Qué herramienta llamó, con qué parámetros, qué obtuvo y qué decidió.",
+          "Nada.",
+          "El clima."
+        ],
+        "correcta": 1,
+        "justificacion": "La auditoría registra cada paso (herramienta, parámetros, dato, decisión) para reconstruir el proceso, igual que el servidor MCP."
+      },
+      {
+        "id": "q30",
+        "pregunta": "En el caso, SORTBY se usa para:",
+        "opciones": [
+          "Borrar tareas.",
+          "Ordenar las tareas por ahorro ponderado (prioridad de automatización).",
+          "Sumar horas.",
+          "Formatear."
+        ],
+        "correcta": 1,
+        "justificacion": "SORTBY ordena las tareas de mayor a menor ahorro ponderado, produciendo el ranking de automatización."
       }
     ]
   },
@@ -3424,6 +4864,186 @@
         ],
         "correcta": 1,
         "justificacion": "Pratt: es un juicio informado por cálculos; se presenta un rango fundamentado (con la distribución de la 3.3), no una falsa precisión."
+      },
+      {
+        "id": "q16",
+        "pregunta": "El FCFF se construye, a partir del NOPAT, como:",
+        "opciones": [
+          "NOPAT − amortizaciones.",
+          "NOPAT + amortizaciones − ΔCapital de trabajo − CapEx.",
+          "NOPAT + intereses.",
+          "NOPAT × WACC."
+        ],
+        "correcta": 1,
+        "justificacion": "FCFF = NOPAT + amortizaciones − inversión en capital de trabajo − CapEx: el flujo libre para todos los proveedores de capital."
+      },
+      {
+        "id": "q17",
+        "pregunta": "En el APV, el valor sin deuda (V_u) se descuenta a:",
+        "opciones": [
+          "El WACC.",
+          "Ku, el costo del capital sin apalancamiento.",
+          "El Kd.",
+          "La inflación."
+        ],
+        "correcta": 1,
+        "justificacion": "V_u descuenta el FCFF al costo del capital no apalancado (Ku); luego se suman el escudo y se restan las dificultades."
+      },
+      {
+        "id": "q18",
+        "pregunta": "El valor presente del escudo fiscal, en el APV:",
+        "opciones": [
+          "Se resta.",
+          "Se suma (la deuda deducible agrega valor).",
+          "No se considera.",
+          "Es siempre cero."
+        ],
+        "correcta": 1,
+        "justificacion": "El escudo fiscal de la deuda suma valor en el APV; el riesgo de dificultades financieras es lo que resta."
+      },
+      {
+        "id": "q19",
+        "pregunta": "El valor presente de las dificultades financieras, en el APV:",
+        "opciones": [
+          "Suma valor.",
+          "Resta valor (costo esperado de la quiebra).",
+          "No existe.",
+          "Es el escudo fiscal."
+        ],
+        "correcta": 1,
+        "justificacion": "El riesgo de quiebra tiene un costo esperado que resta en el APV, contrapesando el beneficio del escudo fiscal."
+      },
+      {
+        "id": "q20",
+        "pregunta": "El descuento efectivo de un DLOC del 20% y un DLOM del 30% es:",
+        "opciones": [
+          "50%.",
+          "44%.",
+          "10%.",
+          "25%."
+        ],
+        "correcta": 1,
+        "justificacion": "1 − (0,80 × 0,70) = 1 − 0,56 = 44%. Sumarlos (50%) es el error típico; son multiplicativos."
+      },
+      {
+        "id": "q21",
+        "pregunta": "El valor de la firma (Enterprise Value) representa el valor para:",
+        "opciones": [
+          "Solo los accionistas.",
+          "Todos los proveedores de capital (deuda y patrimonio).",
+          "Solo los acreedores.",
+          "El fisco."
+        ],
+        "correcta": 1,
+        "justificacion": "El EV es el valor del negocio para deuda + patrimonio; restándole la deuda neta se llega al valor del equity."
+      },
+      {
+        "id": "q22",
+        "pregunta": "Valuar por múltiplos tiene el riesgo de:",
+        "opciones": [
+          "Ser demasiado transparente.",
+          "Importar los errores y supuestos del comparable.",
+          "No necesitar datos.",
+          "Dar siempre menos valor."
+        ],
+        "correcta": 1,
+        "justificacion": "El múltiplo traslada (y esconde) los supuestos del comparable; el DCF obliga a explicitar los propios."
+      },
+      {
+        "id": "q23",
+        "pregunta": "El valor terminal es muy sensible a:",
+        "opciones": [
+          "El color del modelo.",
+          "La tasa de crecimiento perpetuo (g) y el WACC.",
+          "La cantidad de hojas.",
+          "El nombre de la empresa."
+        ],
+        "correcta": 1,
+        "justificacion": "Pequeños cambios en g o WACC mueven mucho el valor terminal (y por ende el EV); por eso se fundamentan con cuidado."
+      },
+      {
+        "id": "q24",
+        "pregunta": "La deuda neta que se resta al EV es:",
+        "opciones": [
+          "Deuda + caja.",
+          "Deuda financiera − caja y equivalentes.",
+          "Solo la caja.",
+          "El patrimonio."
+        ],
+        "correcta": 1,
+        "justificacion": "Deuda neta = deuda financiera − caja/equivalentes; es lo que se resta al EV para obtener el equity."
+      },
+      {
+        "id": "q25",
+        "pregunta": "El horizonte explícito de la proyección debe extenderse hasta que:",
+        "opciones": [
+          "El primer año.",
+          "La empresa alcance un estado estable (crecimiento y márgenes normalizados).",
+          "Nunca termine.",
+          "Se agote la caja."
+        ],
+        "correcta": 1,
+        "justificacion": "El horizonte explícito llega hasta el estado estable; de ahí en más se usa el valor terminal."
+      },
+      {
+        "id": "q26",
+        "pregunta": "El APV es preferible al WACC cuando:",
+        "opciones": [
+          "La estructura de capital es constante.",
+          "La estructura de capital cambia en el tiempo.",
+          "No hay deuda.",
+          "Siempre."
+        ],
+        "correcta": 1,
+        "justificacion": "El WACC supone estructura constante; si cambia (desapalancamiento, LBO), el APV es más correcto y transparente."
+      },
+      {
+        "id": "q27",
+        "pregunta": "Un IDD (dependencia del dueño) alto, en la valuación:",
+        "opciones": [
+          "Sube el valor.",
+          "Agrava los descuentos por control e iliquidez (menos transferible).",
+          "No influye.",
+          "Baja el WACC."
+        ],
+        "correcta": 1,
+        "justificacion": "Si la empresa depende del dueño, es menos transferible: aumentan DLOC y DLOM (y el Ke). No sube el valor."
+      },
+      {
+        "id": "q28",
+        "pregunta": "En una valuación típica, el peso del valor terminal en el EV suele ser:",
+        "opciones": [
+          "Cercano a cero.",
+          "La mayor parte del valor.",
+          "Exactamente 10%.",
+          "Negativo."
+        ],
+        "correcta": 1,
+        "justificacion": "El terminal suele dominar el EV, por eso sus supuestos (g, margen de largo plazo) son tan críticos."
+      },
+      {
+        "id": "q29",
+        "pregunta": "La regla de que g no supere el crecimiento de la economía evita:",
+        "opciones": [
+          "Un valor terminal chico.",
+          "Que la empresa termine siendo, en el infinito, más grande que la economía.",
+          "Que haya FCFF.",
+          "El escudo fiscal."
+        ],
+        "correcta": 1,
+        "justificacion": "Un g mayor al de la economía implicaría que la empresa la supera en tamaño en el largo plazo: imposible. Por eso g se acota."
+      },
+      {
+        "id": "q30",
+        "pregunta": "Descontar el EFE contable como si fuera el FCFF:",
+        "opciones": [
+          "Es correcto.",
+          "Es un error: hay que construir el puente entre ambos.",
+          "Da el mismo valor.",
+          "Solo aplica a empresas cotizantes."
+        ],
+        "correcta": 1,
+        "justificacion": "El EFE es histórico y contable; el FCFF es económico y proyectado. Confundirlos (sin el puente de la 1.1) arruina la valuación."
       }
     ]
   },
@@ -3632,6 +5252,186 @@
         ],
         "correcta": 1,
         "justificacion": "Cuando el capital nuevo destruiría valor, no crecer y devolver capital es lo óptimo. Es la conclusión contraintuitiva del teorema."
+      },
+      {
+        "id": "q16",
+        "pregunta": "El Key Value Driver de McKinsey es:",
+        "opciones": [
+          "V = NOPAT × WACC × g.",
+          "V = NOPAT × (1 − g/RONIC) ÷ (WACC − g).",
+          "V = NOPAT ÷ WACC.",
+          "V = Ventas × margen."
+        ],
+        "correcta": 1,
+        "justificacion": "El KVD relaciona valor, crecimiento, RONIC y WACC: V = NOPAT(1 − g/RONIC)/(WACC − g). De él se deriva el teorema del crecimiento."
+      },
+      {
+        "id": "q17",
+        "pregunta": "La tasa de reinversión implícita para crecer a g con retorno RONIC es:",
+        "opciones": [
+          "g × RONIC.",
+          "g / RONIC.",
+          "RONIC / g.",
+          "g − RONIC."
+        ],
+        "correcta": 1,
+        "justificacion": "Para crecer a g reinvirtiendo a RONIC hace falta reinvertir g/RONIC del NOPAT; lo que sobra (1 − g/RONIC) es el FCFF."
+      },
+      {
+        "id": "q18",
+        "pregunta": "Las dos palancas del valor, según McKinsey, son:",
+        "opciones": [
+          "Ventas y costos.",
+          "El retorno sobre el capital (ROIC/RONIC) y el crecimiento.",
+          "Deuda y patrimonio.",
+          "Precio y volumen."
+        ],
+        "correcta": 1,
+        "justificacion": "Valor = retorno del capital + crecimiento, pero no simétricos: el crecimiento solo suma si el retorno supera el costo del capital."
+      },
+      {
+        "id": "q19",
+        "pregunta": "Con RONIC < WACC, acelerar el crecimiento:",
+        "opciones": [
+          "Mejora el valor.",
+          "Lo empeora (destruye más valor, más rápido).",
+          "No cambia nada.",
+          "Sube el ROIC."
+        ],
+        "correcta": 1,
+        "justificacion": "Si cada peso reinvertido destruye valor, crecer más rápido destruye más. Cuanto más rápido, peor."
+      },
+      {
+        "id": "q20",
+        "pregunta": "La tasa de reinversión de una empresa es:",
+        "opciones": [
+          "El payout.",
+          "1 − payout (lo que no se distribuye).",
+          "El WACC.",
+          "La inflación."
+        ],
+        "correcta": 1,
+        "justificacion": "Lo que no se reparte se reinvierte: reinversión = 1 − payout. Junto con el ROIC determina el crecimiento sostenible."
+      },
+      {
+        "id": "q21",
+        "pregunta": "Un proyecto con VAN positivo tiene, necesariamente:",
+        "opciones": [
+          "RONIC < WACC.",
+          "RONIC > WACC.",
+          "RONIC = 0.",
+          "WACC = 0."
+        ],
+        "correcta": 1,
+        "justificacion": "VAN > 0 equivale a que el retorno del capital nuevo supera su costo: RONIC > WACC. Son la misma idea."
+      },
+      {
+        "id": "q22",
+        "pregunta": "Ganar market share sin retorno sobre el costo del capital:",
+        "opciones": [
+          "Siempre crea valor.",
+          "No crea valor (crecer no es un fin en sí mismo).",
+          "Es el objetivo.",
+          "Reduce el WACC."
+        ],
+        "correcta": 1,
+        "justificacion": "El objetivo es el valor, no el tamaño; crecer en participación destruyendo valor no sirve. Market share vale si viene con retorno."
+      },
+      {
+        "id": "q23",
+        "pregunta": "Para decidir una nueva inversión, el retorno relevante es:",
+        "opciones": [
+          "El ROIC histórico.",
+          "El RONIC del proyecto (capital nuevo).",
+          "El ROE.",
+          "El margen bruto."
+        ],
+        "correcta": 1,
+        "justificacion": "El capital nuevo rinde su RONIC, no el ROIC del pasado; por eso el RONIC gobierna la decisión de invertir."
+      },
+      {
+        "id": "q24",
+        "pregunta": "Una empresa madura con RONIC persistentemente menor que su WACC debería:",
+        "opciones": [
+          "Reinvertir todo.",
+          "Distribuir el excedente (devolver capital a los dueños).",
+          "Endeudarse para crecer.",
+          "Comprar competidores."
+        ],
+        "correcta": 1,
+        "justificacion": "Si reinvertir destruye valor, lo óptimo es distribuir: devolver capital preserva valor. Es la conexión con la política de dividendos (4.4)."
+      },
+      {
+        "id": "q25",
+        "pregunta": "En el KVD, el FCFF equivale a:",
+        "opciones": [
+          "NOPAT × WACC.",
+          "NOPAT × (1 − g/RONIC).",
+          "NOPAT × g.",
+          "NOPAT + amortizaciones."
+        ],
+        "correcta": 1,
+        "justificacion": "El flujo libre tras reinvertir para crecer es NOPAT × (1 − g/RONIC): lo que queda después de financiar el crecimiento."
+      },
+      {
+        "id": "q26",
+        "pregunta": "El “valor del crecimiento” (V con g menos V sin g) puede ser:",
+        "opciones": [
+          "Siempre positivo.",
+          "Negativo, cuando RONIC < WACC.",
+          "Siempre cero.",
+          "Siempre igual al NOPAT."
+        ],
+        "correcta": 1,
+        "justificacion": "Cuando el capital nuevo rinde menos que su costo, crecer resta: el valor del crecimiento es negativo."
+      },
+      {
+        "id": "q27",
+        "pregunta": "Más crecimiento, con RONIC dado, implica:",
+        "opciones": [
+          "Menos reinversión.",
+          "Más reinversión y por tanto menos FCFF en el corto plazo.",
+          "Igual FCFF.",
+          "Más dividendos hoy."
+        ],
+        "correcta": 1,
+        "justificacion": "Crecer más exige reinvertir más (g/RONIC mayor), reduciendo el flujo libre presente. Solo vale la pena si RONIC > WACC."
+      },
+      {
+        "id": "q28",
+        "pregunta": "¿Es posible tener un ROIC histórico alto y un RONIC bajo?",
+        "opciones": [
+          "No, son iguales.",
+          "Sí: las oportunidades buenas ya se tomaron y las nuevas rinden menos.",
+          "Solo si hay deuda.",
+          "Solo en empresas cotizantes."
+        ],
+        "correcta": 1,
+        "justificacion": "El ROIC mira lo ya invertido; el RONIC, lo nuevo. Una empresa exitosa puede enfrentar oportunidades nuevas de menor retorno."
+      },
+      {
+        "id": "q29",
+        "pregunta": "Crecer por encima de la tasa sostenible requiere:",
+        "opciones": [
+          "Nada.",
+          "Financiamiento externo, con su costo y su riesgo.",
+          "Bajar el ROIC.",
+          "Eliminar el WACC."
+        ],
+        "correcta": 1,
+        "justificacion": "Superar el crecimiento autofinanciable obliga a tomar deuda o capital nuevo, que traen costo y riesgo adicionales."
+      },
+      {
+        "id": "q30",
+        "pregunta": "La conclusión más contraintuitiva del teorema del crecimiento es:",
+        "opciones": [
+          "Crecer siempre conviene.",
+          "A veces la empresa vale más si NO crece (y devuelve capital).",
+          "El tamaño es el objetivo.",
+          "La TIR manda sobre el VAN."
+        ],
+        "correcta": 1,
+        "justificacion": "Cuando RONIC < WACC, no crecer y devolver capital maximiza el valor: incómodo pero central."
       }
     ]
   },
@@ -3840,6 +5640,186 @@
         ],
         "correcta": 1,
         "justificacion": "Una empresa rentable puede quedarse sin caja y quebrar; la liquidez, no la ganancia contable, determina la supervivencia inmediata."
+      },
+      {
+        "id": "q16",
+        "pregunta": "Al crecer, lo que puede volver negativo el FCFF es:",
+        "opciones": [
+          "La baja del NOPAT.",
+          "El aumento de la inversión en capital de trabajo (ΔCT) y en CapEx.",
+          "La baja de la amortización.",
+          "El escudo fiscal."
+        ],
+        "correcta": 1,
+        "justificacion": "Crecer dispara ΔCT y CapEx, que pueden superar al NOPAT y consumir caja pese a crear valor."
+      },
+      {
+        "id": "q17",
+        "pregunta": "Un DSCR mínimo (covenant) típico de un banco podría ser:",
+        "opciones": [
+          "0,5x.",
+          "1,25x.",
+          "0x.",
+          "Negativo."
+        ],
+        "correcta": 1,
+        "justificacion": "Los bancos suelen exigir DSCR ≥ 1,20–1,30x como covenant, para asegurar un colchón sobre el servicio de deuda."
+      },
+      {
+        "id": "q18",
+        "pregunta": "Incumplir un covenant puede gatillar:",
+        "opciones": [
+          "Un premio.",
+          "La exigibilidad anticipada de la deuda.",
+          "Una baja de tasa.",
+          "Nada."
+        ],
+        "correcta": 1,
+        "justificacion": "Violar un covenant puede acelerar el vencimiento (todo el saldo se vuelve exigible), un riesgo grave de liquidez."
+      },
+      {
+        "id": "q19",
+        "pregunta": "El DAF-E se calcula como:",
+        "opciones": [
+          "EBITDA / servicio de deuda.",
+          "Recursos líquidos ÷ egresos diarios comprometidos bajo estrés.",
+          "Deuda / patrimonio.",
+          "Ventas / activos."
+        ],
+        "correcta": 1,
+        "justificacion": "DAF-E = (caja + líneas + cobranzas ciertas) / egresos diarios bajo estrés: los días de autonomía. EBITDA/servicio es el DSCR."
+      },
+      {
+        "id": "q20",
+        "pregunta": "Los “recursos líquidos” del DAF-E incluyen:",
+        "opciones": [
+          "Solo la caja.",
+          "Caja + líneas de crédito comprometidas + cobranzas ciertas.",
+          "El patrimonio.",
+          "Los activos fijos."
+        ],
+        "correcta": 1,
+        "justificacion": "El DAF-E suma la liquidez disponible real: caja, líneas comprometidas y cobranzas ciertas próximas."
+      },
+      {
+        "id": "q21",
+        "pregunta": "La estructura de capital óptima equilibra:",
+        "opciones": [
+          "Ventas y costos.",
+          "El escudo fiscal de la deuda contra el costo esperado de las dificultades financieras.",
+          "Precio y volumen.",
+          "Activo y pasivo."
+        ],
+        "correcta": 1,
+        "justificacion": "El óptimo iguala el beneficio marginal del escudo con el costo marginal esperado de la quiebra; depende de la volatilidad del negocio."
+      },
+      {
+        "id": "q22",
+        "pregunta": "A mayor deuda, en igualdad de condiciones:",
+        "opciones": [
+          "Menor riesgo de default.",
+          "Mayor riesgo de default y de tensión de liquidez.",
+          "Igual riesgo.",
+          "Más caja."
+        ],
+        "correcta": 1,
+        "justificacion": "Más deuda aumenta el servicio y el riesgo de no poder pagar: más riesgo de default y de iliquidez. Por eso la autonomía (DAF-E) importa."
+      },
+      {
+        "id": "q23",
+        "pregunta": "Estresar el DAF-E consiste en:",
+        "opciones": [
+          "Aumentar las ventas.",
+          "Recalcularlo cortando cobranzas y líneas y/o subiendo egresos.",
+          "Bajar la deuda.",
+          "Ignorar la caja."
+        ],
+        "correcta": 1,
+        "justificacion": "El stress del DAF-E simula escenarios adversos (menos cobranzas, sin líneas, más egresos) para ver cuánto aguanta la caja."
+      },
+      {
+        "id": "q24",
+        "pregunta": "La BFR en pesos se obtiene como:",
+        "opciones": [
+          "BFR (pts) × Deuda financiera promedio.",
+          "BFR (pts) ÷ EBITDA.",
+          "BFR (pts) × Ventas.",
+          "BFR (pts) − impuestos."
+        ],
+        "correcta": 0,
+        "justificacion": "BFR($) = BFR en puntos × deuda financiera promedio: cuantifica en pesos el sobrecosto recuperable de ordenarse."
+      },
+      {
+        "id": "q25",
+        "pregunta": "Entre los instrumentos de acceso al capital de la empresa mediana están:",
+        "opciones": [
+          "Solo el descubierto bancario.",
+          "Obligaciones negociables, pagaré bursátil, SGR y mercado de capitales PyME.",
+          "Solo el factoring.",
+          "Ninguno."
+        ],
+        "correcta": 1,
+        "justificacion": "La empresa mediana puede acceder al mercado de capitales PyME (ON, pagaré bursátil), SGR y fondos, más allá del banco tradicional."
+      },
+      {
+        "id": "q26",
+        "pregunta": "La deuda neta sobre EBITDA elevada indica:",
+        "opciones": [
+          "Baja liquidez.",
+          "Alto apalancamiento (muchos años de generación para cancelar la deuda).",
+          "Alta rentabilidad.",
+          "Bajo riesgo."
+        ],
+        "correcta": 1,
+        "justificacion": "Un múltiplo alto de deuda neta/EBITDA señala fuerte apalancamiento y menor margen ante shocks. Es un covenant frecuente."
+      },
+      {
+        "id": "q27",
+        "pregunta": "Un DSCR menor que 1 significa que:",
+        "opciones": [
+          "Sobra caja.",
+          "La generación no alcanza a cubrir el servicio de deuda del período.",
+          "La empresa es muy solvente.",
+          "No hay deuda."
+        ],
+        "correcta": 1,
+        "justificacion": "DSCR < 1 implica que el EBITDA/CFADS no cubre intereses + capital: tensión de repago inmediata."
+      },
+      {
+        "id": "q28",
+        "pregunta": "La autonomía financiera (DAF-E) se expresa en:",
+        "opciones": [
+          "Porcentaje.",
+          "Días.",
+          "Pesos.",
+          "Veces (x)."
+        ],
+        "correcta": 1,
+        "justificacion": "El DAF-E mide días de operación que la caja puede sostener bajo estrés; se compara con el CCE (también en días)."
+      },
+      {
+        "id": "q29",
+        "pregunta": "El crecimiento rentable pero no financiado es:",
+        "opciones": [
+          "La estrategia ideal.",
+          "Una trampa clásica: crea valor en el papel y consume la caja necesaria para sobrevivir.",
+          "Imposible.",
+          "Sin riesgo."
+        ],
+        "correcta": 1,
+        "justificacion": "Crecer creando valor pero sin financiar el capital de trabajo/CapEx puede ahogar la caja: la paradoja en acción."
+      },
+      {
+        "id": "q30",
+        "pregunta": "La paradoja crecimiento-liquidez ocupa el centro del mapa de valor porque:",
+        "opciones": [
+          "Es la menos importante.",
+          "Es el punto donde el sistema puede quebrarse aun siendo rentable.",
+          "No se relaciona con nada.",
+          "Es solo teórica."
+        ],
+        "correcta": 1,
+        "justificacion": "Es donde una empresa rentable y solvente puede morir por iliquidez: por su gravedad ocupa el centro, no un margen."
       }
     ]
   },
@@ -4048,6 +6028,186 @@
         ],
         "correcta": 1,
         "justificacion": "El mapa de valor completo: del estado analítico al TSR, sin saltos. Es la síntesis integradora de toda la Maestría."
+      },
+      {
+        "id": "q16",
+        "pregunta": "El teorema de irrelevancia de Miller-Modigliani supone:",
+        "opciones": [
+          "Impuestos altos.",
+          "Mercados perfectos (sin impuestos, sin costos de transacción, información simétrica).",
+          "Inflación alta.",
+          "Empresas familiares."
+        ],
+        "correcta": 1,
+        "justificacion": "La irrelevancia vale en el mundo idealizado de mercados perfectos; las fricciones reales (impuestos, señales, agencia) la modifican."
+      },
+      {
+        "id": "q17",
+        "pregunta": "El “efecto clientela” en dividendos significa que:",
+        "opciones": [
+          "Todos los dueños quieren lo mismo.",
+          "Distintos accionistas prefieren distintas políticas de distribución.",
+          "No hay dividendos.",
+          "Los clientes cobran dividendos."
+        ],
+        "correcta": 1,
+        "justificacion": "Cada tipo de inversor (por impuestos, necesidad de renta) prefiere cierta política; la empresa atrae la “clientela” acorde."
+      },
+      {
+        "id": "q18",
+        "pregunta": "Distribuir dividendos puede disciplinar a la gerencia porque:",
+        "opciones": [
+          "Le da más caja para gastar.",
+          "Reduce la caja ociosa disponible para malas inversiones (efecto agencia).",
+          "Elimina el directorio.",
+          "Sube los impuestos."
+        ],
+        "correcta": 1,
+        "justificacion": "Menos caja libre limita la inversión en proyectos que destruyen valor: el dividendo actúa como disciplina de agencia."
+      },
+      {
+        "id": "q19",
+        "pregunta": "El tratamiento fiscal distinto de dividendos y ganancias de capital:",
+        "opciones": [
+          "No afecta la decisión.",
+          "Puede inclinar la política de distribución (una fricción real).",
+          "Es irrelevante siempre.",
+          "Elimina el TSR."
+        ],
+        "correcta": 1,
+        "justificacion": "Si dividendos y ganancias de capital tributan distinto, la política deja de ser irrelevante: es una de las fricciones que rompen MM."
+      },
+      {
+        "id": "q20",
+        "pregunta": "La decisión de inversión responde a la pregunta:",
+        "opciones": [
+          "¿Cuánto distribuir?",
+          "¿En qué invertir? (aceptar si RONIC > WACC).",
+          "¿Con qué deuda?",
+          "¿Qué inventario?"
+        ],
+        "correcta": 1,
+        "justificacion": "La decisión de inversión elige los proyectos que crean valor (RONIC > WACC). Las otras son financiamiento, dividendos y operativas."
+      },
+      {
+        "id": "q21",
+        "pregunta": "La decisión de financiamiento define:",
+        "opciones": [
+          "Cuánto distribuir.",
+          "Con qué capital financiar (mezcla deuda/patrimonio).",
+          "Qué proyectos tomar.",
+          "El nivel de stock."
+        ],
+        "correcta": 1,
+        "justificacion": "El financiamiento decide la estructura de capital (deuda vs. patrimonio) y su costo/riesgo. Es una de las cuatro decisiones."
+      },
+      {
+        "id": "q22",
+        "pregunta": "Las decisiones operativas se refieren a:",
+        "opciones": [
+          "La política de dividendos.",
+          "La gestión del capital de trabajo y los costos (cuánta caja libera el negocio).",
+          "La estructura de deuda.",
+          "La valuación."
+        ],
+        "correcta": 1,
+        "justificacion": "Las operativas gestionan el CCE y los costos, determinando cuánta caja libera la operación (asignatura 2.4)."
+      },
+      {
+        "id": "q23",
+        "pregunta": "El momento de mayor mortalidad de la empresa familiar suele ser:",
+        "opciones": [
+          "La fundación.",
+          "La sucesión (traspaso generacional).",
+          "El primer año rentable.",
+          "Nunca."
+        ],
+        "correcta": 1,
+        "justificacion": "La sucesión concentra el riesgo: un IDD alto convierte al dueño en punto único de falla y la transición puede destruir valor."
+      },
+      {
+        "id": "q24",
+        "pregunta": "Formar una “segunda línea” profesional busca:",
+        "opciones": [
+          "Aumentar la dependencia del dueño.",
+          "Reducir el IDD y hacer la empresa más transferible y valiosa.",
+          "Bajar las ventas.",
+          "Eliminar el directorio."
+        ],
+        "correcta": 1,
+        "justificacion": "Una segunda línea capaz reduce la dependencia del dueño (baja el IDD), mejorando transferibilidad y valor."
+      },
+      {
+        "id": "q25",
+        "pregunta": "El protocolo familiar sirve para:",
+        "opciones": [
+          "Confundir los roles.",
+          "Separar con reglas explícitas los roles de familia, propiedad y empresa.",
+          "Eliminar a la familia.",
+          "Evadir impuestos."
+        ],
+        "correcta": 1,
+        "justificacion": "El protocolo ordena la relación entre los tres círculos (Tagiuri & Davis) con reglas, previniendo conflictos."
+      },
+      {
+        "id": "q26",
+        "pregunta": "El “payout” es:",
+        "opciones": [
+          "La tasa de reinversión.",
+          "La proporción del resultado (o FCFE) que se distribuye.",
+          "El WACC.",
+          "La deuda."
+        ],
+        "correcta": 1,
+        "justificacion": "El payout es la fracción que se reparte; su complemento (1 − payout) es la reinversión."
+      },
+      {
+        "id": "q27",
+        "pregunta": "El TSR (Total Shareholder Return) combina:",
+        "opciones": [
+          "Solo el dividendo.",
+          "El rendimiento por dividendos y el crecimiento del valor.",
+          "Solo el crecimiento.",
+          "Ventas y costos."
+        ],
+        "correcta": 1,
+        "justificacion": "El TSR suma lo que el dueño recibe (dividendos) y lo que la empresa se aprecia: el objetivo taxativo del programa."
+      },
+      {
+        "id": "q28",
+        "pregunta": "El conflicto típico de la empresa familiar nace de que un mismo individuo:",
+        "opciones": [
+          "Es solo empleado.",
+          "Es a la vez dueño, familiar y gerente, con intereses no siempre alineados.",
+          "No participa.",
+          "Es un tercero."
+        ],
+        "correcta": 1,
+        "justificacion": "La superposición de roles (familia, propiedad, gestión) genera intereses en tensión; el gobierno los separa con reglas."
+      },
+      {
+        "id": "q29",
+        "pregunta": "Recortar el dividendo suele leerse por el mercado como:",
+        "opciones": [
+          "Señal de confianza.",
+          "Señal de problemas (señalización negativa).",
+          "Un dato neutro.",
+          "Un aumento de ventas."
+        ],
+        "correcta": 1,
+        "justificacion": "Por el efecto señalización, un recorte comunica dificultades; subirlo comunica confianza en los flujos futuros."
+      },
+      {
+        "id": "q30",
+        "pregunta": "El objetivo último de la empresa, según el marco del programa, es:",
+        "opciones": [
+          "Maximizar utilidades contables.",
+          "Maximizar el valor de largo plazo para los dueños (TSR).",
+          "Maximizar el tamaño.",
+          "Maximizar las ventas."
+        ],
+        "correcta": 1,
+        "justificacion": "Todo se juzga por el valor de largo plazo para los dueños; crecimiento, market share o eficiencia valen solo en cuanto sirven a ese fin (Rappaport)."
       }
     ]
   }

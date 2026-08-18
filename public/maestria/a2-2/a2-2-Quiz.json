@@ -181,6 +181,186 @@
       ],
       "correcta": 1,
       "justificacion": "La caja es difícil de manipular; seguirla y vigilar el desacople CxC–ventas y los cambios de criterio es la defensa central. Confiar ciegamente o ignorar señales es lo contrario."
+    },
+    {
+      "id": "q16",
+      "pregunta": "El factor X1 del Altman Z″ es:",
+      "opciones": [
+        "EBIT/Activo.",
+        "Capital de trabajo/Activo.",
+        "Patrimonio/Pasivo.",
+        "Ventas/Activo."
+      ],
+      "correcta": 1,
+      "justificacion": "X1 = capital de trabajo/activo (liquidez estructural). EBIT/Activo es X3 y Patrimonio/Pasivo es X4; Ventas/Activo (X5) se elimina en la Z″."
+    },
+    {
+      "id": "q17",
+      "pregunta": "El factor X3 del Altman Z″ (EBIT/Activo) mide:",
+      "opciones": [
+        "Liquidez.",
+        "La rentabilidad operativa de los activos.",
+        "El apalancamiento.",
+        "La rotación."
+      ],
+      "correcta": 1,
+      "justificacion": "X3 = EBIT/Activo capta cuánto resultado operativo generan los activos. Es el componente de rentabilidad del puntaje."
+    },
+    {
+      "id": "q18",
+      "pregunta": "En la Altman Z″, la “zona gris” corresponde aproximadamente a:",
+      "opciones": [
+        "Z″ > 2,60.",
+        "Z″ entre 1,10 y 2,60.",
+        "Z″ < 1,10.",
+        "Cualquier valor."
+      ],
+      "correcta": 1,
+      "justificacion": "Entre 1,10 y 2,60 es zona gris (incertidumbre, vigilar); por encima segura y por debajo peligro."
+    },
+    {
+      "id": "q19",
+      "pregunta": "Ohlson y Zmijewski son:",
+      "opciones": [
+        "Tipos de auditoría.",
+        "Modelos alternativos de predicción de insolvencia.",
+        "Ratios de liquidez.",
+        "Normas contables."
+      ],
+      "correcta": 1,
+      "justificacion": "Son modelos alternativos al Altman con distinta especificación. No son auditorías, ratios ni normas."
+    },
+    {
+      "id": "q20",
+      "pregunta": "En Merton, hay default (conceptualmente) cuando, al vencimiento:",
+      "opciones": [
+        "Los activos superan la deuda.",
+        "El valor de los activos es menor que la deuda.",
+        "La empresa gana dinero.",
+        "Sube el patrimonio."
+      ],
+      "correcta": 1,
+      "justificacion": "Si al vencimiento los activos valen menos que la deuda, los accionistas no “ejercen” su call y hay default. Con activos > deuda, pagan y se quedan la empresa."
+    },
+    {
+      "id": "q21",
+      "pregunta": "La probabilidad de default en Merton se obtiene como:",
+      "opciones": [
+        "DD × 100.",
+        "N(−DD), la normal estándar de menos la distancia al incumplimiento.",
+        "DD ÷ 2.",
+        "1 − DD."
+      ],
+      "correcta": 1,
+      "justificacion": "PD = N(−DD): cuanto mayor la distancia al incumplimiento (DD), menor la probabilidad de default."
+    },
+    {
+      "id": "q22",
+      "pregunta": "Los devengamientos (accruals) discrecionales son:",
+      "opciones": [
+        "Movimientos de caja.",
+        "Ajustes contables sujetos al criterio de la gerencia, potencial foco de manipulación.",
+        "Impuestos.",
+        "Ventas al contado."
+      ],
+      "correcta": 1,
+      "justificacion": "Los accruals discrecionales dependen del juicio gerencial y son terreno de manipulación; por eso se vigila la brecha resultado–caja."
+    },
+    {
+      "id": "q23",
+      "pregunta": "En Beneish, el GMI (índice de margen bruto) elevado sugiere:",
+      "opciones": [
+        "Mejora genuina del negocio.",
+        "Deterioro del margen, un incentivo a manipular.",
+        "Nada.",
+        "Más liquidez."
+      ],
+      "correcta": 1,
+      "justificacion": "Un GMI > 1 indica que el margen bruto se deterioró respecto del año previo, lo que aumenta el incentivo a manipular resultados."
+    },
+    {
+      "id": "q24",
+      "pregunta": "Un cambio de auditor sin explicación clara es:",
+      "opciones": [
+        "Irrelevante.",
+        "Una señal de alerta a investigar.",
+        "Prueba de solvencia.",
+        "Obligatorio cada año."
+      ],
+      "correcta": 1,
+      "justificacion": "El cambio de auditor puede esconder desacuerdos sobre criterios; es una señal de alerta contable, no prueba de solvencia."
+    },
+    {
+      "id": "q25",
+      "pregunta": "La calificación crediticia sintética se construye a partir de:",
+      "opciones": [
+        "El patrimonio.",
+        "La cobertura de intereses.",
+        "Las ventas.",
+        "La antigüedad de la empresa."
+      ],
+      "correcta": 1,
+      "justificacion": "La cobertura de intereses (EBIT/Intereses) mapea a un rating equivalente y a un default spread. No sale del patrimonio ni de las ventas."
+    },
+    {
+      "id": "q26",
+      "pregunta": "La clasificación de deudores del BCRA usa situaciones:",
+      "opciones": [
+        "Del 1 al 5.",
+        "A, B, C.",
+        "Alto/bajo.",
+        "Verde/rojo."
+      ],
+      "correcta": 0,
+      "justificacion": "El BCRA clasifica a los deudores en situaciones 1 a 5 según el riesgo. Es el marco argentino de crédito."
+    },
+    {
+      "id": "q27",
+      "pregunta": "Las Sociedades de Garantía Recíproca (SGR) funcionan como:",
+      "opciones": [
+        "Un impuesto.",
+        "Un mitigante del riesgo de crédito PyME (avalan al deudor).",
+        "Una norma contable.",
+        "Un modelo de Altman."
+      ],
+      "correcta": 1,
+      "justificacion": "Las SGR otorgan avales que mejoran el acceso y el costo del crédito PyME. No son tributos ni modelos de insolvencia."
+    },
+    {
+      "id": "q28",
+      "pregunta": "Los modelos de insolvencia deben leerse como:",
+      "opciones": [
+        "Sentencias definitivas.",
+        "Señales de alerta que se integran con la caja y el juicio.",
+        "Datos irrelevantes.",
+        "Sustitutos del análisis."
+      ],
+      "correcta": 1,
+      "justificacion": "Son herramientas de clasificación, no oráculos; se combinan con el flujo de caja y el criterio profesional."
+    },
+    {
+      "id": "q29",
+      "pregunta": "Capitalizar agresivamente gastos (llevarlos al activo en vez de al resultado):",
+      "opciones": [
+        "Mejora la calidad de ganancias.",
+        "Infla el resultado presente y es una señal de alerta.",
+        "No tiene efecto.",
+        "Baja el activo."
+      ],
+      "correcta": 1,
+      "justificacion": "Activar gastos que deberían ir a resultado infla la utilidad del período; es una maniobra clásica que vigila el analista."
+    },
+    {
+      "id": "q30",
+      "pregunta": "El reconocimiento anticipado de ingresos:",
+      "opciones": [
+        "Es siempre correcto.",
+        "Adelanta ventas no consolidadas, inflando el resultado (señal de alerta).",
+        "Baja las cuentas por cobrar.",
+        "No afecta el resultado."
+      ],
+      "correcta": 1,
+      "justificacion": "Reconocer ingresos antes de tiempo infla el resultado y suele desacoplar las CxC de las ventas: bandera roja de manipulación."
     }
   ]
 }

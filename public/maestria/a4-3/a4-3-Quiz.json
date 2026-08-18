@@ -181,6 +181,186 @@
       ],
       "correcta": 1,
       "justificacion": "Una empresa rentable puede quedarse sin caja y quebrar; la liquidez, no la ganancia contable, determina la supervivencia inmediata."
+    },
+    {
+      "id": "q16",
+      "pregunta": "Al crecer, lo que puede volver negativo el FCFF es:",
+      "opciones": [
+        "La baja del NOPAT.",
+        "El aumento de la inversión en capital de trabajo (ΔCT) y en CapEx.",
+        "La baja de la amortización.",
+        "El escudo fiscal."
+      ],
+      "correcta": 1,
+      "justificacion": "Crecer dispara ΔCT y CapEx, que pueden superar al NOPAT y consumir caja pese a crear valor."
+    },
+    {
+      "id": "q17",
+      "pregunta": "Un DSCR mínimo (covenant) típico de un banco podría ser:",
+      "opciones": [
+        "0,5x.",
+        "1,25x.",
+        "0x.",
+        "Negativo."
+      ],
+      "correcta": 1,
+      "justificacion": "Los bancos suelen exigir DSCR ≥ 1,20–1,30x como covenant, para asegurar un colchón sobre el servicio de deuda."
+    },
+    {
+      "id": "q18",
+      "pregunta": "Incumplir un covenant puede gatillar:",
+      "opciones": [
+        "Un premio.",
+        "La exigibilidad anticipada de la deuda.",
+        "Una baja de tasa.",
+        "Nada."
+      ],
+      "correcta": 1,
+      "justificacion": "Violar un covenant puede acelerar el vencimiento (todo el saldo se vuelve exigible), un riesgo grave de liquidez."
+    },
+    {
+      "id": "q19",
+      "pregunta": "El DAF-E se calcula como:",
+      "opciones": [
+        "EBITDA / servicio de deuda.",
+        "Recursos líquidos ÷ egresos diarios comprometidos bajo estrés.",
+        "Deuda / patrimonio.",
+        "Ventas / activos."
+      ],
+      "correcta": 1,
+      "justificacion": "DAF-E = (caja + líneas + cobranzas ciertas) / egresos diarios bajo estrés: los días de autonomía. EBITDA/servicio es el DSCR."
+    },
+    {
+      "id": "q20",
+      "pregunta": "Los “recursos líquidos” del DAF-E incluyen:",
+      "opciones": [
+        "Solo la caja.",
+        "Caja + líneas de crédito comprometidas + cobranzas ciertas.",
+        "El patrimonio.",
+        "Los activos fijos."
+      ],
+      "correcta": 1,
+      "justificacion": "El DAF-E suma la liquidez disponible real: caja, líneas comprometidas y cobranzas ciertas próximas."
+    },
+    {
+      "id": "q21",
+      "pregunta": "La estructura de capital óptima equilibra:",
+      "opciones": [
+        "Ventas y costos.",
+        "El escudo fiscal de la deuda contra el costo esperado de las dificultades financieras.",
+        "Precio y volumen.",
+        "Activo y pasivo."
+      ],
+      "correcta": 1,
+      "justificacion": "El óptimo iguala el beneficio marginal del escudo con el costo marginal esperado de la quiebra; depende de la volatilidad del negocio."
+    },
+    {
+      "id": "q22",
+      "pregunta": "A mayor deuda, en igualdad de condiciones:",
+      "opciones": [
+        "Menor riesgo de default.",
+        "Mayor riesgo de default y de tensión de liquidez.",
+        "Igual riesgo.",
+        "Más caja."
+      ],
+      "correcta": 1,
+      "justificacion": "Más deuda aumenta el servicio y el riesgo de no poder pagar: más riesgo de default y de iliquidez. Por eso la autonomía (DAF-E) importa."
+    },
+    {
+      "id": "q23",
+      "pregunta": "Estresar el DAF-E consiste en:",
+      "opciones": [
+        "Aumentar las ventas.",
+        "Recalcularlo cortando cobranzas y líneas y/o subiendo egresos.",
+        "Bajar la deuda.",
+        "Ignorar la caja."
+      ],
+      "correcta": 1,
+      "justificacion": "El stress del DAF-E simula escenarios adversos (menos cobranzas, sin líneas, más egresos) para ver cuánto aguanta la caja."
+    },
+    {
+      "id": "q24",
+      "pregunta": "La BFR en pesos se obtiene como:",
+      "opciones": [
+        "BFR (pts) × Deuda financiera promedio.",
+        "BFR (pts) ÷ EBITDA.",
+        "BFR (pts) × Ventas.",
+        "BFR (pts) − impuestos."
+      ],
+      "correcta": 0,
+      "justificacion": "BFR($) = BFR en puntos × deuda financiera promedio: cuantifica en pesos el sobrecosto recuperable de ordenarse."
+    },
+    {
+      "id": "q25",
+      "pregunta": "Entre los instrumentos de acceso al capital de la empresa mediana están:",
+      "opciones": [
+        "Solo el descubierto bancario.",
+        "Obligaciones negociables, pagaré bursátil, SGR y mercado de capitales PyME.",
+        "Solo el factoring.",
+        "Ninguno."
+      ],
+      "correcta": 1,
+      "justificacion": "La empresa mediana puede acceder al mercado de capitales PyME (ON, pagaré bursátil), SGR y fondos, más allá del banco tradicional."
+    },
+    {
+      "id": "q26",
+      "pregunta": "La deuda neta sobre EBITDA elevada indica:",
+      "opciones": [
+        "Baja liquidez.",
+        "Alto apalancamiento (muchos años de generación para cancelar la deuda).",
+        "Alta rentabilidad.",
+        "Bajo riesgo."
+      ],
+      "correcta": 1,
+      "justificacion": "Un múltiplo alto de deuda neta/EBITDA señala fuerte apalancamiento y menor margen ante shocks. Es un covenant frecuente."
+    },
+    {
+      "id": "q27",
+      "pregunta": "Un DSCR menor que 1 significa que:",
+      "opciones": [
+        "Sobra caja.",
+        "La generación no alcanza a cubrir el servicio de deuda del período.",
+        "La empresa es muy solvente.",
+        "No hay deuda."
+      ],
+      "correcta": 1,
+      "justificacion": "DSCR < 1 implica que el EBITDA/CFADS no cubre intereses + capital: tensión de repago inmediata."
+    },
+    {
+      "id": "q28",
+      "pregunta": "La autonomía financiera (DAF-E) se expresa en:",
+      "opciones": [
+        "Porcentaje.",
+        "Días.",
+        "Pesos.",
+        "Veces (x)."
+      ],
+      "correcta": 1,
+      "justificacion": "El DAF-E mide días de operación que la caja puede sostener bajo estrés; se compara con el CCE (también en días)."
+    },
+    {
+      "id": "q29",
+      "pregunta": "El crecimiento rentable pero no financiado es:",
+      "opciones": [
+        "La estrategia ideal.",
+        "Una trampa clásica: crea valor en el papel y consume la caja necesaria para sobrevivir.",
+        "Imposible.",
+        "Sin riesgo."
+      ],
+      "correcta": 1,
+      "justificacion": "Crecer creando valor pero sin financiar el capital de trabajo/CapEx puede ahogar la caja: la paradoja en acción."
+    },
+    {
+      "id": "q30",
+      "pregunta": "La paradoja crecimiento-liquidez ocupa el centro del mapa de valor porque:",
+      "opciones": [
+        "Es la menos importante.",
+        "Es el punto donde el sistema puede quebrarse aun siendo rentable.",
+        "No se relaciona con nada.",
+        "Es solo teórica."
+      ],
+      "correcta": 1,
+      "justificacion": "Es donde una empresa rentable y solvente puede morir por iliquidez: por su gravedad ocupa el centro, no un margen."
     }
   ]
 }

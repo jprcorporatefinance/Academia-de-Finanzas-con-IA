@@ -181,6 +181,186 @@
       ],
       "correcta": 1,
       "justificacion": "La confiabilidad la da la ingeniería (evaluación, guardarraíles, monitoreo), no el modelo por sí solo. Ni la suerte ni solo el volumen de datos alcanzan."
+    },
+    {
+      "id": "q16",
+      "pregunta": "La “memoria” de un agente le permite:",
+      "opciones": [
+        "Nada.",
+        "Mantener contexto entre pasos del bucle.",
+        "Borrar el ERP.",
+        "Reemplazar al modelo."
+      ],
+      "correcta": 1,
+      "justificacion": "La memoria conserva el contexto (qué observó y decidió) a lo largo del bucle percibir-decidir-actuar-observar."
+    },
+    {
+      "id": "q17",
+      "pregunta": "El patrón de “planificación” en agentes consiste en:",
+      "opciones": [
+        "Actuar sin pensar.",
+        "Descomponer un objetivo en subtareas antes de ejecutarlas.",
+        "Reiniciar el agente.",
+        "Borrar datos."
+      ],
+      "correcta": 1,
+      "justificacion": "La planificación divide el objetivo en pasos manejables antes de la ejecución. No es acción impulsiva ni reinicio."
+    },
+    {
+      "id": "q18",
+      "pregunta": "Un sistema “multi-agente” usa:",
+      "opciones": [
+        "Un solo agente que hace todo.",
+        "Varios agentes especializados coordinados (extraer, modelar, redactar).",
+        "Ningún agente.",
+        "Solo humanos."
+      ],
+      "correcta": 1,
+      "justificacion": "El multi-agente reparte el trabajo entre agentes especializados que se coordinan. Se justifica cuando la tarea lo amerita."
+    },
+    {
+      "id": "q19",
+      "pregunta": "La diferencia entre un “flujo de trabajo” y un “agente” es:",
+      "opciones": [
+        "Ninguna.",
+        "El flujo tiene pasos predefinidos; en el agente, el modelo dirige el proceso.",
+        "El flujo usa IA y el agente no.",
+        "El agente es más barato siempre."
+      ],
+      "correcta": 1,
+      "justificacion": "El flujo sigue pasos fijos; el agente decide el curso. Muchas aplicaciones se resuelven mejor con flujos simples que con autonomía."
+    },
+    {
+      "id": "q20",
+      "pregunta": "El acceso por defecto de un agente financiero a los datos debe ser:",
+      "opciones": [
+        "Escritura total.",
+        "Sólo lectura; las acciones que mueven dinero pasan por aprobación humana.",
+        "Administrador.",
+        "Sin control."
+      ],
+      "correcta": 1,
+      "justificacion": "Sólo lectura por defecto; lo que modifica registros o mueve dinero requiere aprobación. Es la base del gobierno del agente."
+    },
+    {
+      "id": "q21",
+      "pregunta": "Definir límites y permisos explícitos del agente sirve para:",
+      "opciones": [
+        "Que haga cualquier cosa.",
+        "Acotar qué puede y qué no puede hacer.",
+        "Eliminar la auditoría.",
+        "Acelerar el modelo."
+      ],
+      "correcta": 1,
+      "justificacion": "Los límites y permisos explícitos son parte del gobierno: definen el alcance seguro de acción del agente."
+    },
+    {
+      "id": "q22",
+      "pregunta": "Los “guardarraíles” (guardrails) son:",
+      "opciones": [
+        "Adornos.",
+        "Controles que restringen y validan el comportamiento del agente.",
+        "Un tipo de modelo.",
+        "Una base de datos."
+      ],
+      "correcta": 1,
+      "justificacion": "Los guardarraíles acotan y verifican lo que el agente hace, aportando seguridad y previsibilidad."
+    },
+    {
+      "id": "q23",
+      "pregunta": "La autonomía del agente conviene concederla primero sobre acciones:",
+      "opciones": [
+        "Irreversibles y críticas.",
+        "Reversibles y de bajo impacto.",
+        "Al azar.",
+        "Solo de escritura."
+      ],
+      "correcta": 1,
+      "justificacion": "Se empieza por lo reversible y de bajo impacto; lo crítico o irreversible mantiene control humano hasta ganar confianza."
+    },
+    {
+      "id": "q24",
+      "pregunta": "La confidencialidad de los datos que maneja el agente se rige, en Argentina, por:",
+      "opciones": [
+        "La RT 6.",
+        "La Ley 25.326 de protección de datos personales.",
+        "La NIC 29.",
+        "Ninguna norma."
+      ],
+      "correcta": 1,
+      "justificacion": "La Ley 25.326 aplica a los datos personales que el agente pueda procesar. La RT 6 y la NIC 29 son contables."
+    },
+    {
+      "id": "q25",
+      "pregunta": "Un agente que “parece” funcionar pero no fue evaluado:",
+      "opciones": [
+        "Está listo para producción.",
+        "No está validado: la impresión no es evaluación.",
+        "Es siempre confiable.",
+        "No necesita auditoría."
+      ],
+      "correcta": 1,
+      "justificacion": "Sin medir el acierto contra casos conocidos, no hay evaluación: la demostración no basta para producción."
+    },
+    {
+      "id": "q26",
+      "pregunta": "Toda cifra que reporta el agente debe:",
+      "opciones": [
+        "Ser generada por el modelo.",
+        "Ser trazable a una herramienta auditada (no inventada por el modelo).",
+        "Redondearse.",
+        "Ocultarse."
+      ],
+      "correcta": 1,
+      "justificacion": "Por el riesgo de alucinación, las cifras vienen de herramientas (el servidor MCP) y son trazables, no generadas por el modelo."
+    },
+    {
+      "id": "q27",
+      "pregunta": "La priorización de qué automatizar se ordena por:",
+      "opciones": [
+        "Lo más nuevo.",
+        "Retorno y factibilidad: frecuente, repetible, bajo riesgo primero.",
+        "Lo más difícil.",
+        "Al azar."
+      ],
+      "correcta": 1,
+      "justificacion": "Se prioriza por ahorro potencial y factibilidad; lo de alto juicio y riesgo queda con el humano al frente."
+    },
+    {
+      "id": "q28",
+      "pregunta": "Las “herramientas” (manos) del agente financiero del programa son:",
+      "opciones": [
+        "Macros de Excel.",
+        "El servidor MCP de sólo lectura de la asignatura 1.2.",
+        "El navegador.",
+        "Un chat."
+      ],
+      "correcta": 1,
+      "justificacion": "El agente actúa a través de las herramientas MCP auditadas de sólo lectura, preservando la trazabilidad del dato."
+    },
+    {
+      "id": "q29",
+      "pregunta": "El registro de auditoría del agente debe guardar:",
+      "opciones": [
+        "Solo la respuesta final.",
+        "Qué herramienta llamó, con qué parámetros, qué obtuvo y qué decidió.",
+        "Nada.",
+        "El clima."
+      ],
+      "correcta": 1,
+      "justificacion": "La auditoría registra cada paso (herramienta, parámetros, dato, decisión) para reconstruir el proceso, igual que el servidor MCP."
+    },
+    {
+      "id": "q30",
+      "pregunta": "En el caso, SORTBY se usa para:",
+      "opciones": [
+        "Borrar tareas.",
+        "Ordenar las tareas por ahorro ponderado (prioridad de automatización).",
+        "Sumar horas.",
+        "Formatear."
+      ],
+      "correcta": 1,
+      "justificacion": "SORTBY ordena las tareas de mayor a menor ahorro ponderado, produciendo el ranking de automatización."
     }
   ]
 }
