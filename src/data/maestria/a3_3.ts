@@ -89,6 +89,33 @@ export const a3_3: Asignatura = {
         { t: 'quote', author: 'Sam Savage', credential: 'Stanford — The Flaw of Averages', md: 'Los planes basados en promedios están, en promedio, equivocados. La incertidumbre no se promedia: se simula. Y el resultado no es un número, es una forma —la distribución— que revela el riesgo que el promedio esconde.' },
       ],
     },
+    {
+      title: 'Sensibilidad y escenarios antes de simular',
+      intro: 'Antes de la simulación completa, dos herramientas más simples ya dicen mucho: el análisis de sensibilidad y los escenarios.',
+      blocks: [
+        { t: 'ul', items: [
+          '**Sensibilidad de una variable por vez:** mover un supuesto y ver el efecto. El **diagrama de tornado** ordena los supuestos por impacto y muestra, de un vistazo, dónde está el riesgo del modelo.',
+          '**Escenarios (base, optimista, pesimista):** combinaciones coherentes de supuestos, útiles para comunicar aunque no capturen toda la distribución.',
+          '**Tablas bidimensionales:** el efecto conjunto de dos variables (por ejemplo, crecimiento × WACC) sobre el valor, la matriz que todo directorio pide.',
+        ] },
+        { t: 'warn', md: 'La limitación de la sensibilidad univariada es que ignora que las variables se mueven juntas —y a veces correlacionadas—. Una recesión no baja solo el volumen: baja el precio, sube la mora y encarece el financiamiento, todo a la vez. Para capturar el riesgo de la combinación hace falta Monte Carlo.' },
+      ],
+    },
+    {
+      title: 'Las métricas de riesgo del directorio',
+      intro: 'De la distribución simulada salen las métricas que un directorio necesita para decidir bajo incertidumbre.',
+      blocks: [
+        { t: 'table', title: 'Qué mide cada métrica de riesgo', headers: ['Métrica', 'Qué responde'], firstColLeft: true, rows: [
+          ['Percentiles P5 / P95', 'El rango de resultados plausibles'],
+          ['P(valor < capital)', 'La probabilidad de destruir valor'],
+          ['P(FCF < 0)', 'La probabilidad de tensión de caja'],
+          ['Value at Risk (VaR)', 'La pérdida en el peor 5 % de los casos'],
+          ['Expected Shortfall (ES)', 'El promedio de las pérdidas en la cola'],
+        ], caption: 'El VaR responde "¿cuánto puedo perder en un mal escenario?"; el ES, "¿y cuán malo es el peor caso?". Juntos dan una imagen honesta del riesgo de cola.' },
+        { t: 'idea', md: 'El programa exige simulaciones de **no menos de diez mil iteraciones**, porque menos produce estadísticos ruidosos e inestables. Y exige **pruebas de tensión** complementarias: shocks extremos pero plausibles (una devaluación del 50 %, una caída de demanda del 30 %) que la simulación aleatoria podría no muestrear con suficiente frecuencia pero que el directorio necesita ver.' },
+        { t: 'quote', author: 'Douglas Hubbard', credential: 'How to Measure Anything', md: 'La incertidumbre no es una excusa para no medir: es la razón para medir. Cuantificar el riesgo —con un rango y probabilidades— es infinitamente más útil para decidir que un número único con falsa precisión, o que la parálisis de "no se puede saber".' },
+      ],
+    },
   ],
   expertos: [
     { author: 'Tim Koller', credential: 'McKinsey — Valuation', md: 'Proyectá los generadores de valor y dejá que los estados se deriven. Una buena proyección es una historia económica coherente, no una extrapolación de renglones.' },

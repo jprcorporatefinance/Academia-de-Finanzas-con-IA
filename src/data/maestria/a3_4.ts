@@ -99,6 +99,30 @@ export const a3_4: Asignatura = {
         { t: 'quote', author: 'Chip Huyen', credential: 'AI Engineering', md: 'La confiabilidad de un sistema de IA no viene del modelo, sino de la ingeniería alrededor: evaluación con casos conocidos, monitoreo, guardarraíles y la posibilidad de intervención humana. Sin eso, no hay ingeniería, solo demostraciones.' },
       ],
     },
+    {
+      title: 'Evaluar un agente: medir, no impresionarse',
+      intro: 'Un agente que "parece" funcionar no es un agente evaluado. La ingeniería empieza por saber cómo se mide el acierto.',
+      blocks: [
+        { t: 'p', md: 'La **evaluación** de un agente se hace contra un conjunto de casos con respuesta conocida: se mide el acierto, no la impresión que da la demo. Antes de preguntar "¿qué modelo uso?", la pregunta correcta es "¿cómo sé si funciona?". Sin evaluación no hay ingeniería, solo demostraciones.' },
+        { t: 'ul', items: [
+          '**Conjuntos de prueba:** casos representativos con la respuesta correcta, para medir acierto de forma objetiva.',
+          '**Métricas por tarea:** exactitud en extracción de datos, calidad de un informe, corrección de un cálculo —cada tarea tiene su métrica—.',
+          '**Monitoreo en producción:** los agentes se degradan; hay que vigilar el desempeño real, no solo el del laboratorio.',
+          '**Detección de alucinación:** verificar que cada cifra reportada sea trazable a una herramienta, no generada por el modelo.',
+        ] },
+        { t: 'quote', author: 'Chip Huyen', credential: 'AI Engineering', md: 'La diferencia entre un prototipo impresionante y un sistema confiable está en la evaluación. Cualquiera puede construir una demo que funciona una vez; la ingeniería consiste en saber, con evidencia, que funciona el 99 % de las veces —y qué pasa el 1 % restante—.' },
+      ],
+    },
+    {
+      title: 'La decisión de automatizar es económica, no tecnológica',
+      intro: 'No todo se debe automatizar. La pregunta no es "¿se puede?", sino "¿conviene?".',
+      blocks: [
+        { t: 'p', md: 'La priorización de qué automatizar se ordena por **retorno y factibilidad**: tareas frecuentes, repetitivas, de reglas claras y bajo riesgo primero. Una tarea infrecuente, ambigua y de alto riesgo —como la recomendación final al directorio— es la última candidata, por más "automatizable" que parezca, porque el costo de un error supera con creces el ahorro.' },
+        { t: 'formula', name: 'El ahorro potencial ponderado', expr: 'Ahorro = Horas/año × Costo/hora × Factibilidad × (1 − Riesgo)', note: 'Ponderar por factibilidad y riesgo evita automatizar lo que no conviene aunque técnicamente se pueda.' },
+        { t: 'warn', md: 'La **sobre-automatización** es un riesgo real: automatizar un proceso mal entendido multiplica el error en vez de eliminarlo. La secuencia correcta es entender y ordenar el proceso primero, automatizarlo después. Y la regla de oro permanece: la responsabilidad final es humana, siempre. El agente construye y propone; la persona decide y responde.' },
+        { t: 'quote', author: 'Documentación de agentes (Anthropic)', credential: 'Building effective agents', md: 'La automatización más valiosa no es la más ambiciosa, sino la más apropiada: la que resuelve un problema real, frecuente y bien entendido, con la mínima complejidad necesaria y el gobierno adecuado.' },
+      ],
+    },
   ],
   expertos: [
     { author: 'Documentación de agentes (Anthropic)', credential: 'Building effective agents', md: 'Distinguí flujos de trabajo (pasos predefinidos) de agentes (el modelo dirige el proceso). La mayoría de las aplicaciones exitosas usan patrones simples y componibles, no autonomía máxima.' },

@@ -93,6 +93,30 @@ export const a3_2: Asignatura = {
         { t: 'quote', author: 'Marcos López de Prado', credential: 'Cornell / ADIA', md: 'El backtest overfitting es la principal causa de estrategias que fallan en producción. La solución no es más datos ni modelos más complejos: es rigor en la validación y honestidad sobre lo que el modelo realmente sabe.' },
       ],
     },
+    {
+      title: 'Interpretabilidad: abrir la caja negra',
+      intro: 'En finanzas, un modelo que no se puede explicar no se puede usar para decidir. La interpretabilidad no es un lujo: es un requisito.',
+      blocks: [
+        { t: 'p', md: 'Técnicas como **SHAP** (Shapley Additive Explanations) y la **importancia de variables** atribuyen la decisión a cada factor: muestran cuánto pesó la utilización del límite, los atrasos o la antigüedad en el rechazo de un cliente concreto. Un modelo de crédito debe poder responder "¿por qué me rechazaron?" —lo exige la ética y, cada vez más, la regulación—.' },
+        { t: 'idea', md: 'El compromiso central: los modelos más potentes (ensambles, redes profundas) son los menos interpretables. La navaja de Occam financiera sugiere empezar por el modelo más simple que resuelva el problema. Una regresión logística que el directorio entiende y puede defender suele ser preferible a un ensamble opaco que gana 1 % de AUC y que nadie puede explicar cuando un cliente reclama.' },
+        { t: 'quote', author: 'Aurélien Géron', credential: 'Hands-On Machine Learning', md: 'En dominios de alto riesgo —crédito, salud, justicia— la interpretabilidad puede importar más que la exactitud. Un modelo un poco menos preciso pero explicable y auditable es, muchas veces, la elección profesional correcta.' },
+      ],
+    },
+    {
+      title: 'El pipeline de un proyecto de ML financiero',
+      intro: 'El algoritmo de moda importa mucho menos que la disciplina del proceso. Un buen pipeline es 80 % datos y validación, 20 % modelo.',
+      blocks: [
+        { t: 'steps', title: 'Las etapas de un proyecto honesto', items: [
+          { k: 'Definir el problema', d: 'Qué se predice, con qué datos disponibles al momento de decidir, y cuál es el costo de cada tipo de error.' },
+          { k: 'Preparar los datos', d: 'Limpieza, feature engineering, y partición respetando la estructura temporal.' },
+          { k: 'Entrenar y validar', d: 'Con validación cruzada, cuidando el sobreajuste y el data snooping.' },
+          { k: 'Evaluar con la métrica correcta', d: 'Matriz de confusión, precisión, recall y AUC —no solo la exactitud, que engaña con clases desbalanceadas—.' },
+          { k: 'Interpretar y monitorear', d: 'Explicar las decisiones y vigilar el desempeño en producción, porque los modelos se degradan con el tiempo.' },
+        ] },
+        { t: 'warn', md: 'El error que arruina proyectos aparentemente exitosos: el **data leakage** —que información del futuro o del conjunto de prueba se filtre al entrenamiento—. Produce un desempeño brillante en el laboratorio y un fracaso en producción. La disciplina de separar rigurosamente los datos es lo que distingue la ciencia del autoengaño.' },
+        { t: 'quote', author: 'Marcos López de Prado', credential: 'Advances in Financial Machine Learning', md: 'En finanzas, la mayoría de los descubrimientos son falsos positivos. No por falta de datos ni de potencia de cómputo, sino por falta de rigor metodológico. El proceso, no el algoritmo, es donde se gana o se pierde.' },
+      ],
+    },
   ],
   expertos: [
     { author: 'Aurélien Géron', credential: 'Hands-On Machine Learning', md: 'El flujo real de un proyecto de ML es 80 % preparación de datos y validación honesta, 20 % modelo. El algoritmo de moda importa mucho menos que la disciplina del proceso.' },

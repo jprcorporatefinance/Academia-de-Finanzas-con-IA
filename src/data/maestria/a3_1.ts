@@ -107,6 +107,24 @@ export const a3_1: Asignatura = {
         { t: 'quote', author: 'Pablo Fernández', credential: 'IESE Business School', md: 'La mayoría de los errores de valuación no están en los modelos, sino en aplicarlos sin entender qué mide cada término. El rigor conceptual no es pedantería: es la diferencia entre un número defendible y uno inventado.' },
       ],
     },
+    {
+      title: 'El costo de la deuda sintético, en detalle',
+      intro: 'Sin una calificadora, el costo de la deuda se construye. El método sintético lo deriva de la propia capacidad de repago de la empresa.',
+      blocks: [
+        { t: 'p', md: 'El punto de partida es la **cobertura de intereses** (EBIT/Intereses): a cada rango le corresponde una calificación equivalente (de AAA a D) y un **diferencial de incumplimiento** (default spread). Una empresa con cobertura de 3,35x se ubica en torno a BBB/BB, con un spread que se suma a la tasa libre de riesgo.' },
+        { t: 'formula', name: 'Del rating al Kd después de impuestos', expr: 'Kd = Rf + spread(cobertura) · Kd d.imp. = Kd × (1 − t)', where: 'El escudo fiscal abarata la deuda porque el interés es deducible', note: 'Es el puente entre el diagnóstico de riesgo (asignatura 2.2) y el costo del capital.' },
+        { t: 'warn', md: 'En Argentina, la brecha entre el Kd que los fundamentos justifican y el que la empresa efectivamente paga puede ser enorme —es la Brecha de Financiamiento Real (BFR) que se cuantifica en la asignatura 4.3—. El Kd sintético mide lo que "debería" costar la deuda; compararlo con lo que cuesta revela cuánto valor se pierde por falta de información, de garantías o de acceso al mercado de capitales.' },
+      ],
+    },
+    {
+      title: 'Armar el WACC y hacerle sensibilidad',
+      intro: 'El WACC no es un número que se calcula una vez: es una estimación cargada de supuestos que hay que documentar y estresar.',
+      blocks: [
+        { t: 'formula', name: 'WACC', expr: 'WACC = Ke × E/V + Kd × (1 − t) × D/V', where: 'Ponderaciones a valor de mercado · E = patrimonio, D = deuda, V = E + D', note: 'Para la empresa cerrada con dueño no diversificado, el Ke relevante usa la Beta Total.' },
+        { t: 'p', md: 'La estructura de capital óptima existe porque, hasta cierto punto, más deuda (barata después de impuestos) **baja** el WACC; pero pasado ese punto, el riesgo de dificultades financieras encarece tanto el Ke como el Kd y lo **revierte**. El WACC mínimo no está ni en cero deuda ni en máxima deuda, sino en el equilibrio que depende de la volatilidad del negocio.' },
+        { t: 'quote', author: 'Pablo Fernández', credential: 'IESE Business School', md: 'Presentar un WACC sin análisis de sensibilidad es presentar una opinión disfrazada de cálculo. Mostrá cómo cambia el valor cuando movés cada supuesto clave —beta, prima de riesgo país, estructura— y el lector podrá calibrar tu conclusión en vez de tener que creerla.' },
+      ],
+    },
   ],
   expertos: [
     { author: 'Aswath Damodaran', credential: 'NYU Stern', md: 'La prima de riesgo país no se suma a ciegas: se pondera por la exposición real de la empresa (lambda). Y para el dueño no diversificado, el beta correcto es el total.' },
