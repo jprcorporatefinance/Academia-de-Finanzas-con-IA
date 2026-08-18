@@ -7,6 +7,9 @@ import type {
   Lesson,
   LessonProgress,
   SimulatorRun,
+  QuizAttempt,
+  CaseSubmission,
+  SubmissionFile,
 } from '../types'
 import { curriculum as baseCurriculum } from '../data/curriculum'
 import { StoreContext, type StoreApi } from './context'
@@ -61,6 +64,31 @@ const toMaterial = (r: any): Material => ({
   createdBy: r.created_by ?? '',
 })
 
+const toAttempt = (r: any): QuizAttempt => ({
+  id: String(r.id),
+  userId: r.user_id,
+  cod: r.asignatura_cod,
+  score: r.score,
+  total: r.total ?? 15,
+  answers: Array.isArray(r.answers) ? r.answers : [],
+  createdAt: r.created_at,
+})
+const kindFromName = (name: string): SubmissionFile['kind'] => {
+  const n = name.toLowerCase()
+  if (n.endsWith('.pdf')) return 'pdf'
+  if (n.endsWith('.xlsx') || n.endsWith('.xls') || n.endsWith('.csv')) return 'excel'
+  if (n.endsWith('.html') || n.endsWith('.htm')) return 'html'
+  return 'otro'
+}
+const toSubmission = (r: any): CaseSubmission => ({
+  id: String(r.id),
+  userId: r.user_id,
+  cod: r.asignatura_cod,
+  files: Array.isArray(r.files) ? r.files : [],
+  note: r.note ?? '',
+  createdAt: r.created_at,
+})
+
 interface RemoteState {
   users: User[]
   progress: { userId: string; p: LessonProgress }[]
@@ -68,6 +96,8 @@ interface RemoteState {
   messages: Message[]
   materials: Material[]
   customLessons: Lesson[]
+  quizAttempts: QuizAttempt[]
+  caseSubmissions: CaseSubmission[]
 }
 
 const emptyState: RemoteState = {
@@ -77,6 +107,8 @@ const emptyState: RemoteState = {
   messages: [],
   materials: [],
   customLessons: [],
+  quizAttempts: [],
+  caseSubmissions: [],
 }
 
 export function RemoteStoreProvider({ children }: { children: ReactNode }) {
@@ -86,14 +118,17 @@ export function RemoteStoreProvider({ children }: { children: ReactNode }) {
   const userIdRef = useRef<string | null>(null)
 
   const loadAll = useCallback(async (uid: string) => {
-    const [profiles, progress, runs, messages, materials, customLessons] = await Promise.all([
-      sb.from('profiles').select('*'),
-      sb.from('lesson_progress').select('*'),
-      sb.from('simulator_runs').select('*'),
-      sb.from('messages').select('*').order('created_at', { ascending: true }),
-      sb.from('materials').select('*').order('created_at', { ascending: false }),
-      sb.from('custom_lessons').select('*'),
-    ])
+    const [profiles, progress, runs, messages, materials, customLessons, attempts, submissions] =
+      await Promise.all([
+        sb.from('profiles').select('*'),
+        sb.from('lesson_progress').select('*'),
+        sb.from('simulator_runs').select('*'),
+        sb.from('messages').select('*').order('created_at', { ascending: true }),
+        sb.from('materials').select('*').order('created_at', { ascending: false }),
+        sb.from('custom_lessons').select('*'),
+        sb.from('quiz_attempts').select('*').order('created_at', { ascending: false }),
+        sb.from('case_submissions').select('*').order('created_at', { ascending: false }),
+      ])
 
     setData({
       users: (profiles.data ?? []).map(toUser),
@@ -102,6 +137,8 @@ export function RemoteStoreProvider({ children }: { children: ReactNode }) {
       messages: (messages.data ?? []).map(toMessage),
       materials: (materials.data ?? []).map(toMaterial),
       customLessons: (customLessons.data ?? []).map((r: any) => r.payload as Lesson),
+      quizAttempts: (attempts.data ?? []).map(toAttempt),
+      caseSubmissions: (submissions.data ?? []).map(toSubmission),
     })
     const me = (profiles.data ?? []).find((p: any) => p.id === uid)
     if (me) setCurrentUser(toUser(me))
@@ -196,6 +233,8 @@ export function RemoteStoreProvider({ children }: { children: ReactNode }) {
     materials: data.materials,
     messages: data.messages,
     studentStates,
+    quizAttempts: data.quizAttempts,
+    caseSubmissions: data.caseSubmissions,
 
     async login(email, password) {
       const { error } = await sb.auth.signInWithPassword({ email, password })
@@ -333,6 +372,45 @@ export function RemoteStoreProvider({ children }: { children: ReactNode }) {
         payload: l,
         created_by: currentUser?.id ?? null,
       })
+    },
+
+    async saveQuizAttempt(cod, score, total, answers) {
+      if (!currentUser) return
+      const { data: row } = await sb
+        .from('quiz_attempts')
+        .insert({ user_id: currentUser.id, asignatura_cod: cod, score, total, answers })
+        .select()
+        .single()
+      if (row) setData((dd) => ({ ...dd, quizAttempts: [toAttempt(row), ...dd.quizAttempts] }))
+    },
+
+    async submitCase(cod, files, note) {
+      if (!currentUser) return { ok: false, error: 'Sesión no iniciada.' }
+      try {
+        const uploaded: SubmissionFile[] = []
+        for (const file of files) {
+          const safe = file.name.replace(/[^\w.\-]+/g, '_')
+          const path = `${currentUser.id}/${cod}/${Date.now()}-${safe}`
+          const { error } = await sb.storage.from('entregas').upload(path, file, { upsert: false })
+          if (error) return { ok: false, error: error.message }
+          uploaded.push({ name: file.name, path, kind: kindFromName(file.name) })
+        }
+        const { data: row, error: insErr } = await sb
+          .from('case_submissions')
+          .insert({ user_id: currentUser.id, asignatura_cod: cod, files: uploaded, note })
+          .select()
+          .single()
+        if (insErr) return { ok: false, error: insErr.message }
+        if (row) setData((dd) => ({ ...dd, caseSubmissions: [toSubmission(row), ...dd.caseSubmissions] }))
+        return { ok: true }
+      } catch (e: any) {
+        return { ok: false, error: e?.message ?? 'Error al subir la entrega.' }
+      }
+    },
+
+    async downloadSubmissionFile(f) {
+      const { data } = await sb.storage.from('entregas').createSignedUrl(f.path, 60 * 10)
+      return data?.signedUrl ?? null
     },
 
     reset() {

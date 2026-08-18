@@ -57,7 +57,24 @@ async function main() {
   const idxDir = join(ROOT, 'src', 'data', 'maestria')
   mkdirSync(idxDir, { recursive: true })
   writeFileSync(join(idxDir, 'materialsIndex.json'), JSON.stringify(index, null, 2), 'utf8')
-  console.log(`\n✔ ${index.length} asignatura(s). Índice en src/data/maestria/materialsIndex.json`)
+
+  // Cuestionarios + metadatos para la app (sin la prosa completa, para no
+  // inflar el bundle): alimenta el motor de cuestionario y la ficha in-app.
+  const quizzes = asignaturas.map((a) => ({
+    cod: a.cod,
+    slug: a.slug,
+    cuatrimestre: a.cuatrimestre,
+    fase: a.fase,
+    nombre: a.nombre,
+    horas: a.horas,
+    framework: a.framework,
+    resumen: a.resumen,
+    objetivos: a.objetivos,
+    caso: { titulo: a.caso.titulo, empresa: a.caso.empresa, consigna: a.caso.consigna },
+    quiz: a.quiz,
+  }))
+  writeFileSync(join(idxDir, 'quizzes.json'), JSON.stringify(quizzes, null, 2), 'utf8')
+  console.log(`\n✔ ${index.length} asignatura(s). Índices en src/data/maestria/{materialsIndex,quizzes}.json`)
 }
 
 main().catch((e) => { console.error(e); process.exit(1) })

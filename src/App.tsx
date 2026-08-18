@@ -9,6 +9,8 @@ import ResetPasswordPage from './pages/ResetPasswordPage'
 import DashboardPage from './pages/DashboardPage'
 import ProgramaPage from './pages/ProgramaPage'
 import LessonPage from './pages/LessonPage'
+import MaestriaPage from './pages/MaestriaPage'
+import MaestriaAsignaturaPage from './pages/MaestriaAsignaturaPage'
 import SimuladoresPage from './pages/SimuladoresPage'
 import SimuladorPage from './pages/SimuladorPage'
 import MaterialesPage from './pages/MaterialesPage'
@@ -42,6 +44,8 @@ export default function App() {
       <Route path="/app" element={<Protected><DashboardPage /></Protected>} />
       <Route path="/app/programa" element={<Protected><ProgramaPage /></Protected>} />
       <Route path="/app/programa/:lessonId" element={<Protected><LessonPage /></Protected>} />
+      <Route path="/app/maestria" element={<Protected><MaestriaPage /></Protected>} />
+      <Route path="/app/maestria/:slug" element={<Protected><MaestriaAsignaturaPage /></Protected>} />
       <Route path="/app/simuladores" element={<Protected><SimuladoresPage /></Protected>} />
       <Route path="/app/simuladores/:simId" element={<Protected><SimuladorPage /></Protected>} />
       <Route path="/app/materiales" element={<Protected><MaterialesPage /></Protected>} />

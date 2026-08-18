@@ -1,5 +1,15 @@
 import { createContext, useContext } from 'react'
-import type { User, Material, StudentState, Message, Lesson, LessonProgress } from '../types'
+import type {
+  User,
+  Material,
+  StudentState,
+  Message,
+  Lesson,
+  LessonProgress,
+  QuizAttempt,
+  CaseSubmission,
+  SubmissionFile,
+} from '../types'
 
 // API común que exponen tanto el store local (localStorage) como el remoto
 // (Supabase). Los componentes consumen esta interfaz sin saber qué backend hay.
@@ -40,6 +50,17 @@ export interface StoreApi {
   addMaterial: (m: Omit<Material, 'id' | 'createdAt' | 'createdBy'>) => void
   deleteMaterial: (id: string) => void
   addLesson: (l: Lesson) => void
+
+  // Maestría: cuestionarios y entregas
+  quizAttempts: QuizAttempt[] // propios (alumno) o de todos (admin)
+  caseSubmissions: CaseSubmission[]
+  saveQuizAttempt: (cod: string, score: number, total: number, answers: number[]) => Promise<void>
+  submitCase: (
+    cod: string,
+    files: File[],
+    note: string,
+  ) => Promise<{ ok: boolean; error?: string }>
+  downloadSubmissionFile: (f: SubmissionFile) => Promise<string | null> // URL firmada o null
 
   reset: () => void
 }

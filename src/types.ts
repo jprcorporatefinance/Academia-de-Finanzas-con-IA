@@ -111,6 +111,34 @@ export interface StudentState {
 }
 
 // ---------------------------------------------------------------------------
+// Maestría: intentos de cuestionario y entregas de casos
+// ---------------------------------------------------------------------------
+export interface QuizAttempt {
+  id: string
+  userId: string
+  cod: string // asignatura, p.ej. '1.1'
+  score: number // respuestas correctas
+  total: number
+  answers: number[] // índice elegido por pregunta
+  createdAt: string
+}
+
+export interface SubmissionFile {
+  name: string
+  path: string // ruta en Storage (o nombre en modo local)
+  kind: 'pdf' | 'excel' | 'html' | 'otro'
+}
+
+export interface CaseSubmission {
+  id: string
+  userId: string
+  cod: string
+  files: SubmissionFile[]
+  note: string
+  createdAt: string
+}
+
+// ---------------------------------------------------------------------------
 // Mensajería privada (admin <-> alumno)
 // ---------------------------------------------------------------------------
 

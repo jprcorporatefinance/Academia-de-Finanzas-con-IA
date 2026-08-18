@@ -1,5 +1,15 @@
 import { useEffect, useMemo, useState, type ReactNode } from 'react'
-import type { User, Material, StudentState, Message, Lesson, LessonProgress } from '../types'
+import type {
+  User,
+  Material,
+  StudentState,
+  Message,
+  Lesson,
+  LessonProgress,
+  QuizAttempt,
+  CaseSubmission,
+  SubmissionFile,
+} from '../types'
 import { seedUsers, seedStudentStates, seedMessages, seedMaterials } from './seed'
 import { curriculum as baseCurriculum } from '../data/curriculum'
 import { StoreContext, type StoreApi } from './context'
@@ -18,6 +28,16 @@ interface PersistedState {
   messages: Message[]
   customLessons: Lesson[]
   currentUserId: string | null
+  quizAttempts?: QuizAttempt[]
+  caseSubmissions?: CaseSubmission[]
+}
+
+const kindFromName = (name: string): SubmissionFile['kind'] => {
+  const n = name.toLowerCase()
+  if (n.endsWith('.pdf')) return 'pdf'
+  if (n.endsWith('.xlsx') || n.endsWith('.xls') || n.endsWith('.csv')) return 'excel'
+  if (n.endsWith('.html') || n.endsWith('.htm')) return 'html'
+  return 'otro'
 }
 
 function load(): PersistedState {
@@ -75,6 +95,8 @@ export function LocalStoreProvider({ children }: { children: ReactNode }) {
     materials: state.materials,
     messages: state.messages,
     studentStates: state.studentStates,
+    quizAttempts: state.quizAttempts ?? [],
+    caseSubmissions: state.caseSubmissions ?? [],
 
     async login(email, password) {
       const u = state.users.find(
@@ -193,6 +215,40 @@ export function LocalStoreProvider({ children }: { children: ReactNode }) {
     },
     addLesson(l) {
       setState((s) => ({ ...s, customLessons: [...s.customLessons, l] }))
+    },
+
+    async saveQuizAttempt(cod, score, total, answers) {
+      if (!currentUser) return
+      const attempt: QuizAttempt = {
+        id: `qa-${Date.now()}`,
+        userId: currentUser.id,
+        cod,
+        score,
+        total,
+        answers,
+        createdAt: new Date().toISOString(),
+      }
+      setState((s) => ({ ...s, quizAttempts: [attempt, ...(s.quizAttempts ?? [])] }))
+    },
+
+    async submitCase(cod, files, note) {
+      if (!currentUser) return { ok: false, error: 'Sesión no iniciada.' }
+      // En modo local (demo) no hay Storage: se registran los metadatos.
+      const sub: CaseSubmission = {
+        id: `cs-${Date.now()}`,
+        userId: currentUser.id,
+        cod,
+        files: files.map((f) => ({ name: f.name, path: f.name, kind: kindFromName(f.name) })),
+        note,
+        createdAt: new Date().toISOString(),
+      }
+      setState((s) => ({ ...s, caseSubmissions: [sub, ...(s.caseSubmissions ?? [])] }))
+      return { ok: true }
+    },
+
+    async downloadSubmissionFile() {
+      // Sin backend no hay archivo persistido para descargar.
+      return null
     },
 
     reset() {

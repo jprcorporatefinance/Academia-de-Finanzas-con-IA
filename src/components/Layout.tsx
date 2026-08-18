@@ -4,6 +4,7 @@ import { useStore } from '../store/store'
 import {
   LayoutDashboard,
   GraduationCap,
+  Landmark,
   Calculator,
   MessageSquare,
   FolderOpen,
@@ -16,6 +17,7 @@ import {
 
 const studentNav = [
   { to: '/app', label: 'Panel', icon: LayoutDashboard, end: true },
+  { to: '/app/maestria', label: 'Maestría', icon: Landmark },
   { to: '/app/programa', label: 'Programa', icon: GraduationCap },
   { to: '/app/simuladores', label: 'Simuladores', icon: Calculator },
   { to: '/app/materiales', label: 'Materiales', icon: FolderOpen },
@@ -23,6 +25,7 @@ const studentNav = [
 ]
 const adminNav = [
   { to: '/app', label: 'Panel', icon: LayoutDashboard, end: true },
+  { to: '/app/maestria', label: 'Maestría', icon: Landmark },
   { to: '/app/programa', label: 'Programa', icon: GraduationCap },
   { to: '/app/simuladores', label: 'Simuladores', icon: Calculator },
   { to: '/app/alumnos', label: 'Alumnos', icon: Users },
