@@ -70,6 +70,43 @@ export const a2_4: Asignatura = {
         { t: 'quote', author: 'James Sagner', credential: 'Working Capital Management', md: 'El capital de trabajo es la fuente de financiamiento más barata y más ignorada de una empresa: el efectivo que hoy financia inventarios y cuentas por cobrar puede liberarse sin pedir un peso al banco.' },
       ],
     },
+    {
+      title: 'La matriz ABC/XYZ en profundidad',
+      intro: 'No todos los ítems merecen la misma política. La matriz cruza importancia económica con previsibilidad, y de cada una de sus nueve celdas se deriva una gestión distinta.',
+      blocks: [
+        { t: 'p', md: 'El eje **ABC** clasifica por **valor de consumo** (regla de Pareto: pocos ítems concentran la mayor parte del valor). El eje **XYZ** clasifica por **variabilidad de la demanda** (coeficiente de variación): X estable, Y intermedia, Z errática. El cruce da nueve celdas, cada una con su política.' },
+        { t: 'table', title: 'Política por celda (las nueve combinaciones)', headers: ['Celda', 'Perfil', 'Política'], firstColLeft: true, rows: [
+          ['AX', 'Alto valor, demanda estable', 'Reposición justo a tiempo, poco stock de seguridad, control estricto'],
+          ['AY / AZ', 'Alto valor, demanda variable/errática', 'Control estricto con más cobertura; foco de gestión'],
+          ['BX / BY / BZ', 'Valor medio', 'Reglas semiautomáticas según variabilidad'],
+          ['CX', 'Bajo valor, demanda estable', 'Lotes grandes, reglas simples, poco seguimiento'],
+          ['CZ', 'Bajo valor, demanda errática', 'Stock de seguridad barato o compra bajo pedido'],
+        ], caption: 'El stock de seguridad de cada celda se dimensiona según el nivel de servicio deseado y la variabilidad: alto para AZ (valioso e impredecible), mínimo para CX (barato y estable).' },
+        { t: 'warn', md: 'La tensión propia del contexto emergente: bajo inflación conviene **cubrirse con stock** (el bien real se aprecia), pero el stock **inmoviliza capital caro**. La matriz ABC/XYZ resuelve esa tensión ítem por ítem —no con una regla única para todo el depósito—: se cubre en los ítems donde la apreciación supera el costo de capital, y se ajusta en los demás.' },
+      ],
+    },
+    {
+      title: 'Instrumentos argentinos del capital de trabajo',
+      intro: 'La empresa mediana argentina tiene un menú amplio de financiamiento del ciclo, cada uno con su costo efectivo. Compararlos bien es liberar valor.',
+      blocks: [
+        { t: 'ul', items: [
+          '**Descuento de cheques de pago diferido:** en el sistema bancario o en el mercado de capitales (donde suele ser más barato). Adelanta el cobro de ventas a plazo.',
+          '**Factoring:** cesión de las cuentas por cobrar, con o sin recurso. Sin recurso transfiere el riesgo de incobrabilidad.',
+          '**Sociedades de Garantía Recíproca (SGR):** avalan al deudor PyME, mejorando el acceso y bajando la tasa —recuperando parte de la brecha de financiamiento real (BFR, asignatura 4.3)—.',
+          '**Adelantos en cuenta corriente y prefinanciación de exportaciones:** para descalces puntuales de caja y para el ciclo exportador.',
+        ] },
+        { t: 'idea', md: 'La clave no es qué instrumento usar en abstracto, sino calcular el **costo financiero total efectivo** de cada uno —incluyendo comisiones, sellos e IVA sobre intereses— y compararlo contra el costo de oportunidad del capital. Muchas veces el descuento de cheques en el mercado de capitales resulta sensiblemente más barato que el adelanto bancario, y nadie lo había medido.' },
+      ],
+    },
+    {
+      title: 'El puente al valor: de días a EVA',
+      intro: 'Todo lo anterior desemboca en una traducción concreta: cada día de ciclo que se libera es capital que deja de costar el WACC, y eso es EVA adicional.',
+      blocks: [
+        { t: 'chain', title: 'La cadena del capital liberado', nodes: ['Reducir el CCE', 'Liberar capital de trabajo', 'Bajar el capital invertido', 'Subir ROIC → EVA'], caption: 'La misma empresa, con las mismas ventas y el mismo margen, crea más valor solo por ordenar su ciclo.' },
+        { t: 'formula', name: 'La traducción a valor', expr: 'Capital liberado = (Capital de trabajo ÷ CCE) × días reducidos · EVA adicional = Capital liberado × WACC', note: 'Priorizar las palancas por retorno sobre esfuerzo: primero las que liberan más capital con menos fricción operativa.' },
+        { t: 'quote', author: 'Tim Koller', credential: 'McKinsey — Valuation', md: 'El capital de trabajo es capital invertido, exactamente igual que una máquina: exige el mismo retorno. Las empresas que lo entienden gestionan el ciclo con la misma seriedad con que evalúan una inversión en activo fijo.' },
+      ],
+    },
   ],
   expertos: [
     { author: 'James Sagner', credential: 'Working Capital Management', md: 'Reducir el ciclo de conversión de efectivo es, muchas veces, la inversión de mayor retorno y menor riesgo que una empresa puede hacer: no compra nada, solo deja de inmovilizar.' },

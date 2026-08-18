@@ -76,6 +76,48 @@ export const a2_3: Asignatura = {
         { t: 'quote', author: 'Juan Pablo Rossi', credential: 'Analítica Avanzada con Microsoft Excel para el CFO Actual', md: 'La IA no reemplaza el criterio financiero: lo apalanca. El agente construye y audita; la responsabilidad de que el número sea correcto sigue siendo del profesional.' },
       ],
     },
+    {
+      title: 'El catálogo de funciones de matriz dinámica',
+      intro: 'Un puñado de funciones cubre casi todo el modelado financiero moderno. Conocer qué hace cada una —y cuándo— es el vocabulario del analista de Excel 365.',
+      blocks: [
+        { t: 'table', title: 'Las funciones y su uso financiero', headers: ['Función', 'Qué hace', 'Uso típico'], firstColLeft: true, rows: [
+          ['LET', 'Nombra subexpresiones', 'Fórmulas largas legibles y eficientes'],
+          ['LAMBDA', 'Define funciones propias', 'Lógica reutilizable sin macros'],
+          ['SEQUENCE', 'Genera arreglos de números', 'Períodos, años, índices'],
+          ['SCAN / REDUCE', 'Cálculo recursivo', 'Saldos, amortización, arrastre de quebrantos'],
+          ['MMULT', 'Multiplica matrices', 'Consolidación, redes neuronales'],
+          ['MAP / BYROW / BYCOL', 'Aplica una función a cada elemento/fila', 'Sensibilidades, transformaciones'],
+          ['VSTACK / HSTACK', 'Apila arreglos', 'Armar tablas de resultados'],
+          ['FILTER / SORT / UNIQUE', 'Filtrar, ordenar, deduplicar', 'Rankings, listas depuradas'],
+        ], caption: 'La regla mental: si estás por arrastrar una fórmula hacia abajo, hay una función de matriz dinámica que lo resuelve en una sola celda.' },
+        { t: 'formula', name: 'El caso emblemático: amortización sin arrastrar', expr: 'saldos = SCAN(P, períodos, LAMBDA(saldo, i, saldo − (cuota − saldo·r)))', note: 'SCAN propaga el saldo período a período llevando un acumulador. Toda la tabla de marcha deriva de una sola fórmula: al cambiar el plazo, se reajusta sola.' },
+        { t: 'idea', md: '`REDUCE` es el primo de `SCAN` que devuelve solo el resultado final (por ejemplo, el saldo al vencimiento). `SCAN` devuelve toda la trayectoria. Juntos cubren casi todo el cálculo recursivo financiero —lo que antes obligaba a miles de celdas arrastradas—.' },
+      ],
+    },
+    {
+      title: 'Arquitectura de un modelo profesional',
+      intro: 'Un modelo no es un montón de fórmulas: es una estructura pensada para que un tercero la entienda, la audite y la modifique sin miedo a romperla.',
+      blocks: [
+        { t: 'ul', items: [
+          '**Separación en capas:** entradas, cálculos, salidas y documentación, cada una en su lugar. Nunca una entrada escondida en medio de un cálculo.',
+          '**Hoja de supuestos única:** todos los inputs en un solo lugar, trazable y documentado. Cambiar un supuesto es cambiar una celda, no buscar por todo el libro.',
+          '**Convención de formato:** entradas sobre fondo gris con texto azul, vínculos entre hojas en verde. El color comunica el rol de cada celda de un vistazo.',
+          '**Control de circularidad sin iteración:** resolver las dependencias circulares (típicamente el interés de la deuda) por diseño, no habilitando el cálculo iterativo frágil.',
+          '**Versionado:** el modelo evoluciona con historial, no sobrescribiéndose.',
+        ] },
+        { t: 'warn', md: 'Por qué el programa **no enseña la metodología FAST**: su dependencia de fórmulas replicadas celda a celda la vuelve frágil ante cambios estructurales (agregar un año rompe todo) y opaca de auditar (hay que revisar miles de celdas casi iguales). El motor de matrices dinámicas resuelve exactamente esas dos debilidades: una fórmula por lógica, que se adapta sola.' },
+        { t: 'quote', author: 'Simon Benninga', credential: 'Financial Modeling (MIT Press)', md: 'La prueba de un buen modelo es simple: entregáselo a un colega que no lo hizo y pedile que cambie un supuesto clave. Si lo logra sin romperlo y sin llamarte, el modelo está bien construido.' },
+      ],
+    },
+    {
+      title: 'IA en el modelado: potencia con criterio',
+      intro: 'Claude para Excel cambia el flujo de trabajo del modelador, pero no la responsabilidad. La regla es simple: el agente construye y audita; el criterio es humano.',
+      blocks: [
+        { t: 'p', md: '**Claude para Excel** (disponible de forma general para suscriptores Pro desde enero de 2026) opera desde un **panel lateral** dentro del libro: lee el libro entero, entiende las dependencias entre celdas y pestañas, edita **preservando la estructura de fórmulas**, rastrea errores (`#REF!`, `#VALUE!`, circulares) hasta su origen, y **cita a nivel de celda** cada explicación.' },
+        { t: 'p', md: 'El régimen de uso invierte la carga: el estudiante enuncia la intención en lenguaje financiero, el agente propone la implementación, y **el estudiante verifica celda por celda y acepta o rechaza cada cambio**. Ninguna modificación entra sin revisión.' },
+        { t: 'warn', md: 'El riesgo sutil no es la fórmula que no compila —esa se detecta sola— sino la **fórmula sintácticamente correcta pero financieramente equivocada**: un supuesto implícito no declarado, una lógica que "funciona" pero mide otra cosa. Por eso la regla de aprobación es inflexible: un modelo que el estudiante no puede explicar línea por línea no se aprueba, lo haya escrito él o el agente.' },
+      ],
+    },
   ],
   expertos: [
     { author: 'Juan Pablo Rossi', credential: 'JPR Consulting — texto nuclear del programa', md: 'El estándar moderno de modelado se apoya en matrices dinámicas y en una arquitectura auditable. La metodología FAST quedó atrás: fórmula replicada es deuda técnica.' },

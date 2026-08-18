@@ -79,6 +79,43 @@ export const a2_1: Asignatura = {
         { t: 'quote', author: 'Robert Higgins', credential: 'Analysis for Financial Management', md: 'El análisis financiero no consiste en calcular ratios, sino en usarlos para responder preguntas de negocio. Un ratio sin una pregunta detrás es aritmética, no diagnóstico.' },
       ],
     },
+    {
+      title: 'Atribución de la variación del ROE, paso a paso',
+      intro: 'El poder del DuPont no está en calcular el ROE, sino en explicar por qué cambió. La atribución convierte una descripción en un diagnóstico accionable.',
+      blocks: [
+        { t: 'p', md: 'Cuando el ROE cae de un año a otro, la pregunta correcta no es "¿cuánto cayó?" sino "¿por cuál de los cinco factores?". La atribución aísla el efecto de cada uno manteniendo los demás constantes, y así identifica dónde está el problema —y por lo tanto, dónde está la palanca de mejora—.' },
+        { t: 'steps', title: 'El procedimiento de atribución', items: [
+          { k: 'Calcular los cinco factores en ambos períodos', d: 'Carga fiscal, carga financiera, margen operativo, rotación y multiplicador, para el año base y el actual.' },
+          { k: 'Aislar cada efecto', d: 'Recalcular el ROE cambiando un solo factor por vez, dejando los otros en su valor base.' },
+          { k: 'Cuantificar la contribución', d: 'La diferencia que genera cada cambio individual es la contribución de ese factor a la variación total del ROE.' },
+          { k: 'Priorizar', d: 'El factor con mayor contribución negativa es el foco del diagnóstico y de la recomendación.' },
+        ] },
+        { t: 'idea', md: 'Un caso típico: el ROE se mantuvo estable, pero la atribución revela que el margen operativo se deterioró y fue compensado por más apalancamiento. El número global "no cambió", pero la empresa se volvió más frágil. Sin la atribución, ese deterioro pasa inadvertido hasta que es tarde.' },
+      ],
+    },
+    {
+      title: 'Apalancamientos y equilibrios: el mapa del riesgo estructural',
+      intro: 'Los grados de apalancamiento y los puntos de equilibrio miden, juntos, cuán expuesta está la empresa a una caída de ventas.',
+      blocks: [
+        { t: 'formula', name: 'La cadena del apalancamiento', expr: 'GAO = MC/EBIT · GAF = EBIT/EBT · GAT = GAO × GAF', where: 'GAO ≈ Δ%EBIT/Δ%Ventas · GAF ≈ Δ%EBT/Δ%EBIT', note: 'El GAT indica cuánto se amplifica una variación de ventas hasta llegar al resultado antes de impuestos.' },
+        { t: 'p', md: 'Un **GAT de 6x** significa que una caída del 10 % en ventas se transforma en una caída del 60 % en el resultado. Esa amplificación es el corazón del riesgo estructural: combina el riesgo operativo (costos fijos, GAO) con el financiero (deuda, GAF). Una empresa con ambos altos es rentable en el buen escenario y frágil en el malo.' },
+        { t: 'table', title: 'Los tres umbrales de ventas', headers: ['Umbral', 'Qué cubre', 'Fórmula'], firstColLeft: true, rows: [
+          ['Equilibrio económico', 'Los costos (EBIT = 0)', 'CF / MC%'],
+          ['Equilibrio financiero', 'Costos erogables (ajusta no erogables)', 'CF erogable / MC%'],
+          ['Cobertura total del período', 'Costos + servicio deuda + inversiones + dividendos', 'Todo lo comprometido / MC%'],
+        ], caption: 'El margen de seguridad —cuánto pueden caer las ventas antes de tocar el equilibrio— es el colchón real de la empresa. Un margen chico con un GAT alto es una combinación peligrosa.' },
+        { t: 'quote', author: 'Guillermo López Dumrauf', credential: 'Finanzas Corporativas: un enfoque latinoamericano', md: 'En contextos volátiles, el apalancamiento que parece prudente en el promedio puede ser letal en el peor trimestre. El análisis de equilibrios y apalancamientos es, en el fondo, un análisis de resistencia al shock.' },
+      ],
+    },
+    {
+      title: 'El memorándum al directorio: comunicar para decidir',
+      intro: 'Un diagnóstico brillante mal comunicado no cambia ninguna decisión. La forma del memorándum es tan importante como su contenido.',
+      blocks: [
+        { t: 'p', md: 'El memorándum ejecutivo sigue el **principio de la pirámide** (Minto): la conclusión va **primero**, seguida de los argumentos agrupados lógicamente y sostenidos por la evidencia. El directorio no quiere un relato cronológico de cómo se llegó a la conclusión; quiere la conclusión y, si la cuestiona, poder descender al detalle.' },
+        { t: 'chain', title: 'La estructura del memorándum', nodes: ['Diagnóstico central (1 frase)', 'Hallazgos cuantificados', 'Cursos de acción priorizados', 'Anexo metodológico auditable'], caption: 'De lo más importante a lo más detallado: cada nivel sostiene al anterior.' },
+        { t: 'idea', md: 'La regla del "y entonces qué": cada hallazgo debe conectar con una consecuencia y una acción. "El CCE aumentó 12 días" no es un hallazgo útil; "el CCE aumentó 12 días, inmovilizando 4.500 de capital que redujo el ROIC en 1,2 pp, recuperables ajustando la política de cobranzas" sí lo es. El diagnóstico termina en el valor y en la decisión, no en el ratio.' },
+      ],
+    },
   ],
   expertos: [
     { author: 'Tim Koller', credential: 'McKinsey — Valuation', md: 'La descomposición del retorno revela dónde está la palanca: margen, rotación o apalancamiento. Cada una lleva a una conversación de gestión distinta.' },

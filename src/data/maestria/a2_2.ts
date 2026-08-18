@@ -68,6 +68,47 @@ export const a2_2: Asignatura = {
         { t: 'p', md: 'El **marco argentino** aporta su propia capa: la **clasificación de deudores del BCRA** (situación 1 a 5), la ley de concursos y quiebras, y las **sociedades de garantía recíproca** como mitigante del riesgo PyME. El juicio final se comunica con prudencia: un error en insolvencia tiene consecuencias graves.' },
       ],
     },
+    {
+      title: 'Altman en profundidad: de la Z original a la Z″ emergente',
+      intro: 'El modelo de Altman tiene tres versiones, y usar la equivocada produce diagnósticos falsos. Entender la evolución es entender cuándo aplica cada una.',
+      blocks: [
+        { t: 'table', title: 'Las tres versiones del Z-Score', headers: ['Versión', 'Para qué empresa', 'Diferencia clave'], firstColLeft: true, rows: [
+          ['Z original (1968)', 'Cotizante, industrial', 'Usa valor de mercado del patrimonio y las cinco variables'],
+          ['Z′', 'Privada (no cotiza)', 'Reemplaza el valor de mercado por el valor libro'],
+          ['Z″', 'Emergente / no manufacturera', 'Elimina X5 (rotación) y reajusta los ponderadores'],
+        ], caption: 'Para la empresa que no cotiza de un mercado emergente —el objeto del programa— la versión correcta es la Z″: sin X5, porque la rotación de activos varía tanto por sector que distorsiona la comparación.' },
+        { t: 'p', md: 'Las **zonas** de la Z″ (segura > 2,60; gris 1,10–2,60; peligro < 1,10) no son fronteras mágicas: son rangos de probabilidad. Una empresa en zona gris no está condenada, pero merece vigilancia. Y ninguna Z, por buena que sea, reemplaza al análisis de la caja: es una **señal cuantitativa**, no una sentencia.' },
+        { t: 'p', md: 'Existen modelos alternativos con distinta filosofía: **Ohlson** (logit, probabilístico), **Zmijewski** (probit, centrado en apalancamiento y liquidez) y **Springate**. El analista riguroso no se casa con uno: los contrasta y explica las divergencias.' },
+      ],
+    },
+    {
+      title: 'Merton: el patrimonio como una opción',
+      intro: 'El modelo estructural de Merton mira la insolvencia desde un ángulo completamente distinto al de Altman, y su intuición es una de las más elegantes de las finanzas.',
+      blocks: [
+        { t: 'p', md: 'La idea de **Merton (1974)**: los accionistas de una empresa apalancada tienen, en el fondo, una **opción de compra** sobre los activos. Al vencimiento de la deuda, si los activos valen más que la deuda, "ejercen" (pagan la deuda y se quedan con la empresa); si valen menos, no ejercen (entregan la empresa a los acreedores: default). El patrimonio vale como una call, y de ahí se derivan la distancia al incumplimiento y la probabilidad de default.' },
+        { t: 'formula', name: 'Distancia al incumplimiento y PD', expr: 'DD = [ln(V_A/D) + (μ − σ_A²/2)·T] ÷ (σ_A·√T)   →   PD = N(−DD)', where: 'V_A = valor de los activos · D = deuda · σ_A = volatilidad de los activos · T = horizonte', note: 'Cuanto mayor la distancia al incumplimiento (DD), menor la probabilidad de default (PD).' },
+        { t: 'warn', md: 'El desafío al aplicar Merton a una empresa cerrada es real: no hay precio de mercado del patrimonio ni volatilidad observable. La σ de los activos se aproxima desde la volatilidad de los resultados operativos, y **hay que declarar ese supuesto y su fragilidad**. Un modelo estructural con parámetros inventados da una falsa precisión más peligrosa que no tener modelo.' },
+        { t: 'quote', author: 'Edward Altman', credential: 'NYU Stern', md: 'Los modelos contables (como el Z) y los estructurales (como Merton) no compiten: se complementan. El primero mira el balance; el segundo, la dinámica del valor de los activos. Juntos dan una imagen más completa que cualquiera por separado.' },
+      ],
+    },
+    {
+      title: 'Beneish y la anatomía de la manipulación',
+      intro: 'El M-Score de Beneish no acusa: señala dónde mirar. Entender qué mide cada una de sus ocho variables es entender cómo se manipula un resultado.',
+      blocks: [
+        { t: 'p', md: 'El **M-Score** combina ocho índices que comparan el año actual con el anterior. Cada uno captura una vía típica de manipulación:' },
+        { t: 'table', title: 'Las ocho variables del M-Score', headers: ['Variable', 'Qué detecta'], firstColLeft: true, rows: [
+          ['DSRI (días de venta en CxC)', 'Ingresos inflados o cobranza deteriorada'],
+          ['GMI (margen bruto)', 'Deterioro del margen → incentivo a manipular'],
+          ['AQI (calidad de activos)', 'Capitalización agresiva de gastos'],
+          ['SGI (crecimiento de ventas)', 'Presión por sostener el crecimiento'],
+          ['DEPI (depreciación)', 'Reducción de la depreciación para inflar resultado'],
+          ['SGAI (gastos SG&A)', 'Cambios anómalos en la estructura de gastos'],
+          ['TATA (devengamientos/activos)', 'La huella más fuerte (coef. 4,679)'],
+          ['LVGI (apalancamiento)', 'Cambios en la estructura de deuda'],
+        ], caption: 'Umbral: M > −1,78 sugiere probable manipulación. TATA (los devengamientos totales sobre activos) es la variable de mayor peso: la manipulación casi siempre deja rastro en la brecha entre el resultado y la caja.' },
+        { t: 'quote', author: 'Howard Schilit', credential: 'Financial Shenanigans', md: 'Las siete señales de alerta —cuentas por cobrar que crecen más que las ventas, capitalización agresiva, cambio de auditor, operaciones con partes relacionadas— rara vez aparecen solas. Cuando se juntan, el analista debe encender todas las alarmas.' },
+      ],
+    },
   ],
   expertos: [
     { author: 'Edward Altman', credential: 'NYU Stern — creador del Z-Score', md: 'El Z-Score nunca fue pensado como una bola de cristal, sino como una herramienta de clasificación que ordena a las empresas por su distancia a la dificultad financiera. Su valor está en la disciplina, no en la falsa precisión.' },
