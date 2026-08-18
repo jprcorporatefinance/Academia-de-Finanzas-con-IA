@@ -176,6 +176,60 @@ export const a1_2: Asignatura = {
         },
       ],
     },
+    {
+      title: 'SQL para finanzas en profundidad',
+      intro: 'El lenguaje de la extracción de fondo. No hace falta ser un experto en bases de datos, pero sí dominar el puñado de construcciones que resuelven el 90 % de las necesidades financieras.',
+      blocks: [
+        { t: 'ul', items: [
+          '**Agregaciones con GROUP BY:** sumar ventas por mes, por cliente o por producto es la operación más básica y más usada.',
+          '**Uniones (JOIN):** conectar el libro de ventas con el maestro de clientes, o los movimientos con el plan de cuentas. La mayoría de los datos financieros vive repartida en varias tablas.',
+          '**Funciones de ventana (window functions):** calcular un **saldo acumulado** de caja, un ranking de clientes por facturación o una media móvil sin colapsar el detalle de cada fila. Son la herramienta que separa al analista del principiante.',
+          '**Funciones analíticas:** comparar cada período con el anterior (variación interanual), calcular participaciones sobre el total, o identificar el primer y último movimiento de cada cuenta.',
+        ] },
+        { t: 'formula', name: 'Patrón de saldo acumulado', expr: 'SUM(monto) OVER (PARTITION BY cuenta ORDER BY fecha)', note: 'Una función de ventana reconstruye el saldo de una cuenta corriente sin necesidad de arrastrar fórmulas ni exportar a Excel.' },
+        { t: 'p', md: 'La **extracción incremental** cierra el círculo: en vez de traer toda la base cada vez, se trae solo lo que cambió desde la última corrida (por fecha de modificación o por un registro de cambios). Esto hace que el proceso sea rápido, repetible y apto para automatizar —condición para que motores, tableros y agentes trabajen siempre sobre el dato más reciente sin intervención manual—.' },
+      ],
+    },
+    {
+      title: 'El ciclo de una llamada MCP',
+      intro: 'Entender qué pasa exactamente cuando un cliente invoca una herramienta del servidor desmitifica el protocolo y permite diseñarlo bien.',
+      blocks: [
+        { t: 'steps', title: 'De la intención al dato, paso a paso', items: [
+          { k: 'Descubrimiento', d: 'El cliente pregunta al servidor qué capacidades ofrece (herramientas, recursos, indicaciones) y con qué esquemas. El servidor responde con su catálogo.' },
+          { k: 'Invocación', d: 'El cliente llama a una herramienta con parámetros que respetan el esquema de entrada (p. ej. consultar_ventas(desde, hasta).' },
+          { k: 'Validación', d: 'El servidor valida los parámetros contra el contrato antes de tocar el ERP. Si algo no cumple, devuelve un error estructurado, no un dato basura.' },
+          { k: 'Ejecución de sólo lectura', d: 'El servidor consulta el ERP con permiso acotado, aplica límites de volumen y arma la respuesta según el esquema de salida.' },
+          { k: 'Respuesta y auditoría', d: 'Devuelve el dato al cliente y registra la llamada completa (consulta, parámetros, resultado, momento) en el log de auditoría.' },
+        ] },
+        { t: 'p', md: 'Toda esta conversación viaja en mensajes **JSON-RPC** (solicitudes, respuestas y notificaciones) sobre el transporte elegido: `stdio` para integraciones locales, o HTTP con streaming y eventos del servidor (SSE) para lo remoto. El **manejo y la propagación de errores** son parte del contrato: un buen servidor nunca devuelve un error crudo del ERP, sino uno interpretable por el cliente.' },
+        { t: 'idea', md: 'La spec de 2025-2026 agrega ejecución **asíncrona** de tareas largas (para consultas pesadas que no responden al instante) y un núcleo **stateless** que escala sobre infraestructura HTTP común. Para la función financiera, lo importante es que el mismo servidor sirve a un tablero, a un motor de cálculo o a un agente de IA, con idéntica trazabilidad.' },
+      ],
+    },
+    {
+      title: 'Diseño del contrato de una herramienta',
+      intro: 'La calidad de un servidor MCP se decide en el diseño de sus contratos. Una herramienta bien contratada es específica, validada y auditable; una mal contratada es una puerta a errores silenciosos.',
+      blocks: [
+        { t: 'table', title: 'Anatomía del contrato de una herramienta', headers: ['Elemento', 'Qué define', 'Ejemplo'], firstColLeft: true, rows: [
+          ['Nombre', 'Qué hace, sin ambigüedad', 'consultar_cuenta_corriente_deudor'],
+          ['Parámetros', 'Entradas con tipo y validación', 'cliente_id (entero), desde/hasta (fecha)'],
+          ['Esquema de salida', 'Forma exacta del resultado', 'lista de movimientos con saldo'],
+          ['Validaciones', 'Qué se rechaza y por qué', 'rango de fechas máximo 12 meses'],
+          ['Versión', 'Contrato versionado', 'v1, v2… sin romper consumidores'],
+        ], caption: 'La granularidad es la decisión de diseño más importante: una herramienta que "devuelve todo" traslada el filtrado al cliente, no valida y es imposible de auditar bien.' },
+        { t: 'quote', author: 'Especificación MCP (Anthropic)', credential: 'Building effective agents', md: 'Diseñá herramientas específicas y componibles, no una única herramienta omnipotente. La especificidad hace el sistema predecible, auditable y seguro.' },
+        { t: 'p', md: 'Las **credenciales** viven fuera del código (en un gestor de secretos), el acceso es de **sólo lectura**, y cada herramienta declara su **versión**. Cuando el contrato evoluciona, los consumidores migran de forma ordenada en vez de romperse en silencio. Es exactamente la disciplina que permite que el mismo patrón se traslade después a Finnegans, Tango, SAP Business One o un desarrollo propio: cambia la implementación interna, no el contrato.' },
+      ],
+    },
+    {
+      title: 'Modelado dimensional aplicado a finanzas',
+      intro: 'El dato extraído se organiza para el análisis con un diseño dimensional. No es teoría de bases de datos: es lo que hace que las preguntas del directorio se respondan en segundos.',
+      blocks: [
+        { t: 'p', md: 'En el enfoque de **Kimball**, los datos se organizan en **tablas de hechos** (los eventos medibles: ventas, movimientos, cobranzas) y **tablas de dimensiones** (el contexto por el que se analizan: tiempo, cliente, producto, centro de costo). El resultado es un **esquema en estrella**: los hechos en el centro, las dimensiones alrededor.' },
+        { t: 'chain', title: 'El esquema en estrella de finanzas', nodes: ['Dimensión tiempo', 'HECHOS: movimientos y ventas', 'Dimensión cliente/producto'], caption: 'Cada hecho se puede cortar por cualquier dimensión: ventas por mes, por cliente, por producto, o cualquier combinación.' },
+        { t: 'p', md: 'Sobre este modelo se apoya la **tabla de mapeo contable-analítico** —la que traduce cada cuenta del ERP al rubro que necesita el análisis financiero— y la **capa semántica**, que define una única vez, versionada y documentada, qué significa cada métrica. Así, "margen bruto" o "capital invertido" significan exactamente lo mismo en el modelo, en el tablero y en el informe. Sin esa capa, cada área calcula distinto y nadie concilia.' },
+        { t: 'quote', author: 'Ralph Kimball', credential: 'The Data Warehouse Toolkit', md: 'La consistencia de las dimensiones conformadas es lo que permite que toda la organización hable el mismo idioma de datos. Una dimensión "cliente" compartida vale más que diez tableros aislados.' },
+      ],
+    },
   ],
   expertos: [
     { author: 'Ralph Kimball', credential: 'The Data Warehouse Toolkit', md: 'El modelo dimensional —hechos y dimensiones— existe para que las preguntas del negocio se respondan rápido y sin ambigüedad. La normalización extrema sirve a la transacción; el análisis necesita otra forma.' },

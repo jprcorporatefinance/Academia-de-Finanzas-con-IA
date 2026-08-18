@@ -82,6 +82,50 @@ export const a1_3: Asignatura = {
         { t: 'idea', md: 'Reproducibilidad = entorno declarado + control de versiones + pruebas unitarias. Un cálculo que no se puede volver a correr y verificar no es un resultado: es una opinión con decimales.' },
       ],
     },
+    {
+      title: 'Matemática financiera avanzada: las patologías de la TIR',
+      intro: 'La TIR es la tasa más intuitiva y la más traicionera. Entender exactamente dónde y por qué falla es lo que separa una decisión de inversión sólida de un error costoso.',
+      blocks: [
+        { t: 'p', md: 'La TIR es la tasa que anula el VAN. Su atractivo —resumir la rentabilidad en un solo número porcentual— esconde tres trampas.' },
+        { t: 'ol', items: [
+          '**Múltiples TIR.** Un flujo con varios cambios de signo (por ejemplo, una inversión que exige un desembolso grande de cierre al final) puede tener más de una TIR, o ninguna real. El número deja de ser interpretable.',
+          '**Supuesto de reinversión.** La TIR asume que cada flujo intermedio se reinvierte a la propia TIR. Si la TIR es del 40 %, supone reinvertir todo al 40 % —irreal—. La **TIRM** lo corrige usando una tasa de reinversión explícita.',
+          '**Comparación de proyectos de distinta escala o duración.** El proyecto con TIR más alta puede crear menos valor en pesos que uno con TIR menor pero mayor. Ante exclusión mutua, manda el **VAN**.',
+        ] },
+        { t: 'formula', name: 'TIR modificada (TIRM)', expr: 'TIRM = (VF de los flujos positivos ÷ |VP de los flujos negativos|)^(1/n) − 1', where: 'VF a la tasa de reinversión · VP a la tasa de financiamiento', note: 'Resuelve el supuesto de reinversión irreal de la TIR y elimina el problema de las TIR múltiples.' },
+        { t: 'p', md: 'Complementan el instrumental la **duración** (sensibilidad del valor de un flujo a la tasa: la primera derivada) y la **convexidad** (la segunda derivada, que corrige la aproximación lineal de la duración para movimientos grandes de tasa). Son la base para medir el riesgo de tasa de un préstamo o de una cartera de créditos.' },
+        { t: 'warn', md: 'La regla operativa: usar la TIR para comunicar, el VAN para decidir. Cuando la TIR y el VAN discrepan sobre cuál proyecto elegir, el VAN tiene razón —porque mide creación de valor en pesos, no un porcentaje que ignora la escala—.' },
+      ],
+    },
+    {
+      title: 'Estadística con conciencia de sus supuestos',
+      intro: 'El instrumental estadístico es poderoso pero frágil: aplicado sin verificar sus supuestos, produce números con apariencia de rigor y sin garantía.',
+      blocks: [
+        { t: 'p', md: 'La **regresión** es el caballo de batalla: se usa para estimar betas (regresando los retornos de la empresa contra los del mercado) y para descomponer estructuras de costos (regresando el costo total contra el volumen para separar fijo de variable). Pero cada coeficiente tiene valor solo si se cumplen sus supuestos.' },
+        { t: 'table', title: 'Los supuestos de la regresión y qué pasa si fallan', headers: ['Supuesto', 'Si falla…'], firstColLeft: true, rows: [
+          ['Linealidad', 'La relación real es curva; el modelo la deforma'],
+          ['Homocedasticidad', 'La varianza del error no es constante; los tests engañan'],
+          ['Normalidad de residuos', 'Los intervalos de confianza dejan de ser válidos'],
+          ['No multicolinealidad', 'Predictores correlacionados vuelven inestables los coeficientes'],
+          ['Independencia', 'La autocorrelación (común en series) infla la significatividad'],
+        ], caption: 'El diagnóstico de supuestos no es un trámite posterior: es parte del resultado. Un coeficiente sin ese examen es un número sin garantía.' },
+        { t: 'quote', author: 'Jeffrey Wooldridge', credential: 'Introductory Econometrics', md: 'La correlación no es causalidad, y una regresión mal especificada puede producir relaciones espurias con altísima significatividad estadística. El juicio económico debe guiar al modelo, no al revés.' },
+      ],
+    },
+    {
+      title: 'Series temporales y pronóstico honesto',
+      intro: 'Proyectar ventas, demanda o mora exige modelos que respeten la estructura temporal —y una evaluación que no se engañe a sí misma.',
+      blocks: [
+        { t: 'ul', items: [
+          '**Estacionariedad:** muchos modelos exigen que la media y la varianza sean estables. Una serie con tendencia se diferencia antes de modelar.',
+          '**Descomposición:** separar tendencia, estacionalidad y ruido para entender qué mueve la serie.',
+          '**Modelos:** autorregresivos (AR), suavizado exponencial y **Holt-Winters** para series con tendencia y estacionalidad simultáneas.',
+          '**Métricas de error (MAE, RMSE, MAPE):** el RMSE castiga más los errores grandes; el MAPE es relativo. La elección depende de la **función de pérdida** del negocio.',
+        ] },
+        { t: 'idea', md: 'La disciplina innegociable: evaluar **fuera de la muestra**. Un modelo que ajusta perfecto los datos que ya vio (dentro de la muestra) puede fallar estrepitosamente con datos nuevos —es sobreajuste—. La única prueba honesta es reservar datos que el modelo no vio y medir ahí. Esta idea reaparece, ampliada, en el aprendizaje automático de la asignatura 3.2.' },
+        { t: 'quote', author: 'Rob Hyndman', credential: 'Forecasting: Principles and Practice', md: 'No elijas el modelo por su ajuste histórico, sino por su desempeño fuera de la muestra. Y elegí la métrica de error que refleje el costo real de equivocarte: no cuesta lo mismo un faltante que un excedente.' },
+      ],
+    },
   ],
   expertos: [
     { author: 'Yves Hilpisch', credential: 'The Python Quants', md: 'La ventaja de Python en finanzas es el continuo entre exploración interactiva y sistema productivo: el mismo código que prototipás es el que después automatizás.' },

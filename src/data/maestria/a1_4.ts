@@ -85,6 +85,44 @@ export const a1_4: Asignatura = {
         { t: 'quote', author: 'Alfred Rappaport', credential: 'Creating Shareholder Value', md: 'Las utilidades contables son una opinión; el flujo de caja descontado es un hecho. Los indicadores de valor existen para acercar la gestión a lo segundo.' },
       ],
     },
+    {
+      title: 'La construcción del NOPAT, línea por línea',
+      intro: 'El NOPAT parece simple —EBIT por (1 − t)— pero su construcción rigurosa exige una serie de ajustes que la mayoría omite, y cada omisión distorsiona el ROIC.',
+      blocks: [
+        { t: 'steps', title: 'Del EBIT contable al NOPAT económico', items: [
+          { k: 'Partir del EBIT depurado', d: 'El resultado operativo del estado analítico (asignatura 1.1), ya normalizado y reexpresado.' },
+          { k: 'Ajustar por partidas no operativas', d: 'Sacar del EBIT los resultados que no vienen de la operación (resultados por tenencia no operativos, resultados de inversiones financieras).' },
+          { k: 'Capitalizar arrendamientos operativos', d: 'Sumar al EBIT el componente de interés implícito del alquiler capitalizado, para comparar empresas que compran vs. alquilan.' },
+          { k: 'Tratar los gastos con carácter de inversión', d: 'I+D, publicidad institucional y capacitación que son inversión (no gasto) se ajustan para no castigar el resultado del período.' },
+          { k: 'Aplicar la tasa efectiva', d: 'Multiplicar por (1 − t efectiva), la que la empresa realmente paga, no la nominal.' },
+        ] },
+        { t: 'formula', name: 'La equivalencia que debe cerrar', expr: 'EVA = (ROIC − WACC) × Capital = NOPAT − WACC × Capital', where: 'Ambos caminos dan el mismo número: es la prueba de coherencia del marco.', note: 'Si el EVA por diferencial y por resultado residual no coinciden, hay un error de construcción en el NOPAT o en el capital.' },
+        { t: 'warn', md: 'El error más común: calcular el NOPAT con la tasa nominal en vez de la efectiva. La empresa con quebrantos acumulados, beneficios promocionales o diferencias temporarias tiene una tasa efectiva muy distinta de la nominal, y usar la equivocada mueve el NOPAT y todo el árbol de valor.' },
+      ],
+    },
+    {
+      title: 'ROIC frente a ROE y ROA: la anatomía de por qué gana',
+      intro: 'El ROIC es el indicador maestro de eficiencia del capital, pero solo se entiende su superioridad viendo exactamente qué contamina a los otros dos.',
+      blocks: [
+        { t: 'p', md: 'El **ROE** (resultado neto sobre patrimonio) mezcla tres cosas: la eficiencia operativa, el efecto del apalancamiento y la fiscalidad. Una empresa puede subir su ROE simplemente tomando más deuda —sin crear un centavo de valor operativo—. El **ROA** (sobre activos totales) contamina con activos no operativos y con la caja excedente. El **ROIC** aísla la operación: solo capital operativo y solo NOPAT.' },
+        { t: 'p', md: 'Pero el ROIC tampoco es infalible, y el analista debe conocer **dónde miente**: se distorsiona por la **antigüedad de los activos** (una planta amortizada infla el retorno, asignatura 1.1), por la **inflación no corregida** y por los **intangibles no capitalizados** (una empresa que invirtió años en su marca tiene un capital invertido subvaluado y un ROIC artificialmente alto). Por eso el ROIC se calcula sobre el estado analítico depurado, nunca sobre el contable.' },
+        { t: 'quote', author: 'Michael Mauboussin', credential: 'Counterpoint Global — sobre ROIC', md: 'El ROIC y su persistencia en el tiempo son la mejor síntesis de la calidad de un negocio. Una empresa con ROIC alto y sostenido tiene una ventaja competitiva real; una con ROIC que revierte a la media, no.' },
+      ],
+    },
+    {
+      title: 'La familia EVA: nivel, margen y momentum',
+      intro: 'El EVA no es un solo número, sino una familia de métricas que responden preguntas distintas de la gestión.',
+      blocks: [
+        { t: 'table', title: 'Cuándo usar cada métrica de la familia EVA', headers: ['Métrica', 'Qué responde', 'Cuándo usarla'], firstColLeft: true, rows: [
+          ['EVA (nivel)', '¿Cuánto valor creé este período, en pesos?', 'Medir la magnitud absoluta'],
+          ['EVA Margin (EVA/Ventas)', '¿Qué tan eficiente soy creando valor?', 'Comparar empresas de distinto tamaño'],
+          ['EVA Momentum (ΔEVA/Ventas ant.)', '¿Mejoré respecto del período anterior?', 'Evaluar la gestión, no la herencia'],
+          ['MVA (Σ EVA descontados)', '¿Cuánto valor acumulado creé?', 'Valuación y visión de largo plazo'],
+        ], caption: 'El EVA Momentum resuelve un problema político real: un gerente que hereda un EVA alto luce bien sin hacer nada, y uno que hereda un EVA negativo puede crear muchísimo valor y aún mostrar EVA negativo. La variación es más justa que el nivel.' },
+        { t: 'p', md: 'Complementan la familia el **CFROI** (retorno sobre base caja e inversión bruta ajustada por inflación, que corrige el sesgo de antigüedad a costa de complejidad) y el **GMROI** (margen bruto sobre inversión en inventario), clave en empresas comerciales donde el inventario es el activo central.' },
+        { t: 'quote', author: 'G. Bennett Stewart III', credential: 'The EVA Momentum', md: 'El EVA Momentum es la única métrica de desempeño donde "más es siempre mejor" y "cero es realmente cero": mide la creación de valor incremental sobre las ventas, independiente del tamaño y de la herencia.' },
+      ],
+    },
   ],
   expertos: [
     { author: 'Tim Koller', credential: 'McKinsey — Valuation (texto nuclear)', md: 'ROIC y crecimiento son los dos generadores de valor. Crecer solo crea valor si el retorno del capital nuevo supera su costo; de lo contrario, crecer destruye.' },

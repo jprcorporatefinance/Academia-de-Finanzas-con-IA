@@ -248,6 +248,92 @@ export const a1_1: Asignatura = {
         },
       ],
     },
+    {
+      title: 'La mecánica de la reexpresión, paso a paso',
+      intro:
+        'La reexpresión no es un concepto abstracto: es un procedimiento con pasos precisos. Dominarlo evita los errores que después contaminan todo el análisis.',
+      blocks: [
+        { t: 'steps', title: 'El procedimiento completo', items: [
+          { k: 'Clasificar cada partida', d: 'Separar monetarias (caja, créditos y deudas en pesos) de no monetarias (bienes de cambio, de uso, aportes, resultados). Solo las no monetarias se reexpresan.' },
+          { k: 'Determinar el anclaje (fecha de origen)', d: 'Identificar el mes en que cada partida no monetaria se incorporó al patrimonio. Un bien comprado en marzo se ancla a marzo, no al cierre.' },
+          { k: 'Calcular el coeficiente', d: 'Coef = índice de cierre ÷ índice de origen. Cada partida tiene su propio coeficiente según su anclaje.' },
+          { k: 'Reexpresar', d: 'Valor reexpresado = valor de origen × coeficiente. El resultado queda en moneda de cierre.' },
+          { k: 'Segregar el RECPAM', d: 'El resultado por exposición se calcula sobre la posición monetaria y se desagrega por rubro para su análisis.' },
+          { k: 'Conciliar', d: 'Verificar que el patrimonio neto reexpresado cierre línea por línea. La conciliación es la prueba de que no se perdió ni duplicó nada.' },
+        ] },
+        { t: 'p', md: 'Un detalle que suele pasarse por alto: los **resultados** también son no monetarios y se reexpresan según el mes en que se generaron. Un costo de ventas de un producto comprado hace seis meses no vale lo mismo, en moneda de cierre, que uno comprado el mes pasado. Ignorarlo distorsiona el margen bruto real.' },
+        { t: 'table', title: 'Ejemplo de reexpresión por rubro', headers: ['Rubro no monetario', 'Origen', 'Índice orig.', 'Coef.', 'Reexpresado'], firstColLeft: true, rows: [
+          ['Bienes de cambio', 'oct.', '142,6', '1,45', '×1,45'],
+          ['Planta (valor de origen)', 'ene. año 1', '58,3', '3,55', '×3,55'],
+          ['Rodados', 'jun.', '110,4', '1,87', '×1,87'],
+          ['Aportes de capital', 'ene. año 0', '40,0', '5,17', '×5,17'],
+        ], caption: 'Cada partida se ancla a su propio momento: los más antiguos reciben coeficientes mayores. Un único coeficiente para todo el balance es un error grave.' },
+        { t: 'warn', md: 'Error de principiante: aplicar el coeficiente del cierre (o un promedio) a todas las partidas por igual. Cada una tiene su anclaje. La planta comprada hace tres años y el inventario del último mes se reexpresan con coeficientes muy distintos.' },
+      ],
+    },
+    {
+      title: 'RECPAM y resultados por tenencia en profundidad',
+      intro:
+        'El RECPAM es el resultado más contraintuitivo de la contabilidad bajo inflación. Entenderlo a fondo separa al analista del que solo repite fórmulas.',
+      blocks: [
+        { t: 'p', md: 'La **posición monetaria neta (PMN)** es la diferencia entre los activos monetarios y los pasivos monetarios. Mantenerla bajo inflación produce un resultado: si la posición es **activa** (más activos que pasivos monetarios), se pierde poder adquisitivo; si es **pasiva**, se gana por licuación de la deuda.' },
+        { t: 'formula', name: 'RECPAM sobre posición promedio', expr: 'RECPAM = − PMN_promedio × π', where: 'PMN promedio ponderada por el tiempo · π = inflación del período', note: 'Rigurosamente, el RECPAM se calcula sobre la evolución de la posición monetaria a lo largo del período, no sobre un solo saldo de cierre.' },
+        { t: 'idea', md: 'La distinción clave que casi nadie hace bien: una empresa endeudada en pesos que muestra "ganancias" bajo inflación no está necesariamente creando valor. Buena parte de ese resultado es **RECPAM** —una transferencia desde sus acreedores por licuación—, no rentabilidad operativa. Y ese RECPAM **desaparece** apenas la inflación cede. Proyectar hacia adelante un resultado inflado por RECPAM es una de las causas más frecuentes de valuaciones erróneas.' },
+        { t: 'p', md: 'Íntimamente ligado está el **resultado por tenencia**: la diferencia entre el valor corriente de un bien no monetario y su valor reexpresado. Si el inventario se aprecia por encima de la inflación general, hay un resultado por tenencia positivo (real); si se aprecia por debajo, negativo. Separarlo del resultado operativo es indispensable para saber cuánto ganó la empresa **por operar** y cuánto **por tener** stock en un contexto inflacionario.' },
+        { t: 'quote', author: 'Enrique Fowler Newton', credential: 'Contabilidad Superior', md: 'El resultado por exposición a la inflación y los resultados por tenencia no son refinamientos técnicos: son la diferencia entre entender qué pasó de verdad con el patrimonio y creer una ilusión nominal.' },
+        { t: 'warn', md: 'El descalce de monedas agrava todo: una deuda en dólares con activos en pesos, bajo devaluación, combina pérdida por diferencia de cambio y dinámica de RECPAM. Ubicar mal esas diferencias (operativas vs. financieras) tergiversa tanto el EBIT como el resultado financiero.' },
+      ],
+    },
+    {
+      title: 'El debate: ajuste integral frente a remedición de activos',
+      intro:
+        'No toda la doctrina resuelve la inflación igual. Conocer el debate permite al analista elegir con criterio y comunicar sus supuestos.',
+      blocks: [
+        { t: 'p', md: 'La **reexpresión integral** (RT 6 / NIC 29) reexpresa todo el juego de estados en moneda homogénea. Es el estándar del programa. Pero existe una alternativa parcial —la **remedición de ciertos activos** a valores corrientes (modelo de revaluación)— que algunas empresas prefieren por ser menos costosa de aplicar, aunque deja el resto de los estados en moneda heterogénea.' },
+        { t: 'table', title: 'Dos enfoques frente a la inflación', headers: ['Dimensión', 'Reexpresión integral', 'Remedición parcial'], firstColLeft: true, rows: [
+          ['Alcance', 'Todo el juego de estados', 'Solo algunos activos'],
+          ['Homogeneidad', 'Completa (moneda de cierre)', 'Parcial'],
+          ['RECPAM', 'Se reconoce explícitamente', 'No se aísla igual'],
+          ['Aptitud para análisis financiero', 'Alta', 'Limitada'],
+        ], caption: 'Para el análisis financiero riguroso, la reexpresión integral es superior: es la única que homogeneiza todo y aísla el RECPAM.' },
+        { t: 'quote', author: 'Krishna Palepu & Paul Healy', credential: 'Business Analysis and Valuation', md: 'Cuando las reglas contables dejan margen de elección, el analista no debe aceptar pasivamente la opción del preparador: debe reconstruir la versión que mejor refleje la realidad económica, y declarar el criterio.' },
+        { t: 'idea', md: 'Regla del programa: cualquiera sea el criterio contable adoptado por la empresa, el estado analítico se construye con **reexpresión integral y bienes de uso a valor de mercado**, dejando documentada la diferencia contra lo que la empresa presentó. El analista elige el criterio correcto para decidir, no el más cómodo para preparar.' },
+      ],
+    },
+    {
+      title: 'Normalización avanzada de la empresa familiar',
+      intro:
+        'La normalización básica ajusta el sueldo del dueño y los gastos personales. La avanzada entra en las zonas grises donde se esconde la verdadera capacidad de generación de valor.',
+      blocks: [
+        { t: 'ul', items: [
+          '**Operaciones con partes relacionadas a precios no de mercado.** Una empresa que le compra a otra del mismo grupo a precios inflados o vende a precios bajos traslada resultado entre sociedades. Cada operación se lleva a valor de mercado y la diferencia se aísla.',
+          '**Deuda con socios y directores.** Distinguir la deuda genuina (que devenga interés y se paga) del aporte encubierto (que nunca se cobra). La primera es pasivo; el segundo, patrimonio.',
+          '**Informalidad parcial.** Ventas o compras no registradas se reconstruyen con declaración explícita del alcance y del margen de error. Nunca se ignora ni se inventa: se documenta la incertidumbre.',
+          '**Activos de uso personal.** Vehículos, inmuebles o bienes que la empresa registra pero usa la familia se excluyen del capital invertido y se valúan por separado.',
+          '**Quebrantos acumulados y su efecto impositivo.** Un quebranto trasladable es un activo fiscal que cambia la tasa efectiva futura y debe reconocerse.',
+        ] },
+        { t: 'chain', title: 'Por qué la normalización anticipa la valuación', nodes: ['Normalizar resultado', 'NOPAT recurrente', 'ROIC y EVA reales', 'Valor transferible (4.1)'], caption: 'Un comprador paga por la capacidad recurrente del negocio, no por las decisiones personales del dueño actual. La normalización revela esa capacidad.' },
+        { t: 'quote', author: 'Gary Trugman', credential: 'Understanding Business Valuation (AICPA)', md: 'El comprador hipotético no hereda al dueño: hereda el negocio. Todo gasto que existe porque el dueño lo quiere, y no porque el negocio lo necesita, debe normalizarse para revelar el resultado que un tercero podría replicar.' },
+        { t: 'p', md: 'Esta normalización conecta directamente con el **Índice de Dependencia del Dueño (IDD)**, indicador propio de JPR que se desarrolla en las asignaturas 3.1 y 4.4: cuanto más depende la empresa de su dueño —de sus relaciones, de su firma en cada decisión, de su presencia diaria—, menos transferible es y más castigo recibe en el costo del capital y en los descuentos de iliquidez.' },
+      ],
+    },
+    {
+      title: 'Errores frecuentes en la depuración (y cómo detectarlos)',
+      intro:
+        'La experiencia de consultoría deja un catálogo de errores recurrentes. Conocerlos de antemano es la mejor defensa.',
+      blocks: [
+        { t: 'table', title: 'Catálogo de errores y su detección', headers: ['Error', 'Cómo se detecta'], firstColLeft: true, rows: [
+          ['Coeficiente único para todo el balance', 'Partidas antiguas y recientes con el mismo factor'],
+          ['Reexpresar partidas monetarias', 'Caja o créditos en pesos con coeficiente ≠ 1'],
+          ['Planta amortizada a valor de libros', 'Activo productivo con valor residual cercano a cero'],
+          ['RECPAM no segregado', 'Resultado financiero que mezcla intereses y exposición'],
+          ['Sueldo del dueño sin normalizar', 'Retribución muy por debajo o encima del mercado'],
+          ['Grupo económico no consolidado', 'Operaciones intragrupo que inflan o desinflan ventas'],
+          ['Deuda oculta ignorada', 'Cheques descontados o avales fuera del pasivo'],
+        ], caption: 'El protocolo de depuración incluye un análisis de sensibilidad: ¿cuánto cambia el diagnóstico si se mueve la adecuación más discrecional? Si el resultado se da vuelta, ese supuesto merece defensa extra.' },
+        { t: 'idea', md: 'La verificación final no es un trámite: es donde se juega la credibilidad. Un estado analítico auditable —con la fuente, la fecha y el criterio de cada ajuste documentados— es lo que separa una consultoría profesional de una opinión con decimales.' },
+      ],
+    },
   ],
   expertos: [
     {
@@ -264,6 +350,16 @@ export const a1_1: Asignatura = {
       author: 'Enrique Fowler Newton',
       credential: 'Referente de la doctrina contable argentina',
       md: 'La moneda homogénea es la precondición de toda comparación. Antes de interpretar, hay que homogeneizar.',
+    },
+    {
+      author: 'Stephen Penman',
+      credential: 'Columbia Business School',
+      md: 'La contabilidad de calidad es la que permite ver a través de los criterios de devengamiento hasta la generación de caja subyacente. El analista depura para acercarse a esa caja.',
+    },
+    {
+      author: 'Baruch Lev',
+      credential: 'NYU Stern — investigador de intangibles',
+      md: 'La contabilidad tradicional trata a la inversión en intangibles como gasto, subvaluando el capital de las empresas que crean valor con conocimiento. El estado analítico debe corregir ese sesgo.',
     },
   ],
   caso: {
