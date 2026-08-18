@@ -1,0 +1,186 @@
+{
+  "cod": "1.3",
+  "nombre": "Métodos Cuantitativos y Programación en Python para Finanzas Corporativas",
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "Regla de decisión del VAN:",
+      "opciones": [
+        "Se acepta el proyecto si VAN < 0.",
+        "Se crea valor si VAN > 0.",
+        "El VAN debe igualar a la TIR.",
+        "El VAN solo sirve si no hay inflación."
+      ],
+      "correcta": 1,
+      "justificacion": "Se crea valor cuando el VAN es positivo (los flujos descontados superan la inversión). VAN < 0 destruye valor; el VAN no “iguala” a la TIR y es aplicable con o sin inflación (usando tasas reales o nominales coherentes)."
+    },
+    {
+      "id": "q2",
+      "pregunta": "La tasa efectiva anual (TEA) desde una nominal (TNA) capitalizable m veces es:",
+      "opciones": [
+        "TNA × m",
+        "(1 + TNA/m)^m − 1",
+        "TNA / m",
+        "TNA + inflación"
+      ],
+      "correcta": 1,
+      "justificacion": "La TEA capitaliza los subperíodos: (1+TNA/m)^m − 1. Multiplicar o dividir por m no capitaliza; sumar la inflación mezcla conceptos distintos."
+    },
+    {
+      "id": "q3",
+      "pregunta": "La ecuación de Fisher para la tasa real es:",
+      "opciones": [
+        "r_real = r_nominal − π exactamente.",
+        "r_real = (1 + r_nominal)/(1 + π) − 1.",
+        "r_real = r_nominal × π.",
+        "r_real = π − r_nominal."
+      ],
+      "correcta": 1,
+      "justificacion": "La forma exacta de Fisher es (1+r_nom)/(1+π)−1. La resta simple (r_nom − π) es solo una aproximación válida a tasas bajas, no bajo inflación alta."
+    },
+    {
+      "id": "q4",
+      "pregunta": "Ante dos proyectos mutuamente excluyentes de distinta escala, ¿qué criterio manda?",
+      "opciones": [
+        "La TIR más alta siempre.",
+        "El VAN.",
+        "El menor plazo.",
+        "El que tenga más flujos."
+      ],
+      "correcta": 1,
+      "justificacion": "El VAN mide creación de valor en unidades monetarias y es el criterio soberano ante exclusión mutua. La TIR puede favorecer al proyecto más chico aunque cree menos valor total."
+    },
+    {
+      "id": "q5",
+      "pregunta": "¿Cuál es una “patología” típica de la TIR?",
+      "opciones": [
+        "Siempre da un único valor.",
+        "Con flujos no convencionales (varios cambios de signo) puede haber múltiples TIR.",
+        "No se puede calcular nunca.",
+        "Es idéntica al VAN."
+      ],
+      "correcta": 1,
+      "justificacion": "Flujos con varios cambios de signo pueden generar múltiples TIR (o ninguna real), volviéndola ambigua. Por eso se recurre a la TIRM o directamente al VAN."
+    },
+    {
+      "id": "q6",
+      "pregunta": "La TIRM (TIR modificada) corrige:",
+      "opciones": [
+        "El signo del flujo inicial.",
+        "El supuesto de reinversión de los flujos, usando una tasa de reinversión explícita.",
+        "La inflación.",
+        "El error de redondeo."
+      ],
+      "correcta": 1,
+      "justificacion": "La TIR supone reinvertir a la propia TIR; la TIRM usa una tasa de reinversión explícita más realista. No corrige signos, inflación ni redondeo."
+    },
+    {
+      "id": "q7",
+      "pregunta": "En el caso, el VAN al 20 % es negativo y la TIR ≈ 15 %. Esto significa que:",
+      "opciones": [
+        "El proyecto crea valor.",
+        "El proyecto destruye valor porque su retorno (TIR) es menor que el costo del capital.",
+        "Falta información para decidir.",
+        "La TIR es irrelevante."
+      ],
+      "correcta": 1,
+      "justificacion": "Con TIR (≈15 %) por debajo del WACC (20 %), el VAN es negativo y el proyecto destruye valor. Es exactamente la lógica RONIC < WACC de la paradoja del crecimiento."
+    },
+    {
+      "id": "q8",
+      "pregunta": "¿Por qué se escribe el motor de cálculo “dos veces” (Python y Excel)?",
+      "opciones": [
+        "Por redundancia inútil.",
+        "Para verificar: ambos deben coincidir número a número; si difieren, uno miente.",
+        "Porque Excel no calcula VAN.",
+        "Para gastar más horas."
+      ],
+      "correcta": 1,
+      "justificacion": "El doble motor es una técnica de verificación cruzada: la coincidencia da confianza y la discrepancia revela un error. Excel sí calcula VAN; no es redundancia inútil."
+    },
+    {
+      "id": "q9",
+      "pregunta": "Correlación alta entre dos variables implica:",
+      "opciones": [
+        "Causalidad segura.",
+        "No necesariamente causalidad; puede ser espuria.",
+        "Que una causa a la otra siempre.",
+        "Que son independientes."
+      ],
+      "correcta": 1,
+      "justificacion": "La correlación no prueba causalidad y puede ser espuria (una tercera variable, azar). Tampoco implica independencia (eso sería correlación nula)."
+    },
+    {
+      "id": "q10",
+      "pregunta": "El diagnóstico de supuestos de una regresión (homocedasticidad, normalidad de residuos, etc.):",
+      "opciones": [
+        "Es un trámite posterior opcional.",
+        "Es parte del resultado: sin él, el coeficiente no tiene garantía.",
+        "Solo importa en física.",
+        "Reemplaza a los datos."
+      ],
+      "correcta": 1,
+      "justificacion": "Los supuestos condicionan la validez de los coeficientes; verificarlos es parte del resultado, no un opcional. Aplica plenamente a la econometría financiera."
+    },
+    {
+      "id": "q11",
+      "pregunta": "En pronóstico de series temporales, la métrica de error debe elegirse:",
+      "opciones": [
+        "Siempre RMSE, sin excepción.",
+        "Según la función de pérdida del negocio (no cuesta lo mismo un faltante que un excedente).",
+        "Al azar.",
+        "Solo MAPE siempre."
+      ],
+      "correcta": 1,
+      "justificacion": "La métrica debe reflejar el costo real de equivocarse: un faltante de stock y un excedente tienen costos distintos. No hay una métrica universal obligatoria."
+    },
+    {
+      "id": "q12",
+      "pregunta": "El método Holt-Winters es apropiado para series con:",
+      "opciones": [
+        "Solo ruido, sin patrón.",
+        "Tendencia y estacionalidad.",
+        "Un único dato.",
+        "Valores constantes."
+      ],
+      "correcta": 1,
+      "justificacion": "Holt-Winters (suavizado exponencial triple) modela nivel, tendencia y estacionalidad. No aporta a series de puro ruido, un solo dato o valores constantes."
+    },
+    {
+      "id": "q13",
+      "pregunta": "El producto matricial C = A·B se usa en finanzas para:",
+      "opciones": [
+        "Nada relevante.",
+        "Consolidar modelos y propagar capas de redes neuronales.",
+        "Solo graficar.",
+        "Ordenar alfabéticamente."
+      ],
+      "correcta": 1,
+      "justificacion": "La multiplicación de matrices (MMULT / @) consolida modelos multi-unidad y es la operación central de una red neuronal. No es meramente gráfica ni de ordenamiento."
+    },
+    {
+      "id": "q14",
+      "pregunta": "La reproducibilidad de un modelo financiero exige:",
+      "opciones": [
+        "Que lo entienda solo su autor.",
+        "Entorno declarado, control de versiones y pruebas unitarias.",
+        "Que esté en un solo archivo secreto.",
+        "Que use la mayor cantidad de librerías."
+      ],
+      "correcta": 1,
+      "justificacion": "Reproducible = otro puede correrlo y verificarlo: entorno declarado, versionado y tests. El secreto o la dependencia de una sola persona son lo contrario de reproducible."
+    },
+    {
+      "id": "q15",
+      "pregunta": "Evaluar un pronóstico “dentro de la muestra” en lugar de fuera de ella:",
+      "opciones": [
+        "Es lo correcto siempre.",
+        "Engaña: el modelo puede ajustar bien lo que ya vio y fallar en lo nuevo (sobreajuste).",
+        "Da el mismo resultado.",
+        "Es imposible."
+      ],
+      "correcta": 1,
+      "justificacion": "El ajuste dentro de la muestra premia el sobreajuste; la prueba honesta es fuera de la muestra, con datos que el modelo no vio. Los resultados difieren y por eso importa."
+    }
+  ]
+}

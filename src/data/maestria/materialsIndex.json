@@ -12,5 +12,47 @@
     "cuestionario": "/maestria/a1-1/a1-1-Cuestionario.pdf",
     "quiz": "/maestria/a1-1/a1-1-Quiz.json",
     "preguntas": 15
+  },
+  {
+    "cod": "1.2",
+    "slug": "a1-2",
+    "cuatrimestre": 1,
+    "nombre": "Arquitectura de Datos Financieros, Integración con el ERP y Gobierno del Dato",
+    "fase": "Descriptiva · ¿Qué sucedió?",
+    "horas": "36 h · 12 teóricas / 24 prácticas",
+    "resumen": "La infraestructura que hace que un número sea trazable desde el sistema de gestión hasta el informe. Extracción reproducible del ERP, un servidor MCP propio de sólo lectura, capa semántica financiera y gobierno del dato.",
+    "pdf": "/maestria/a1-2/a1-2-PDF.pdf",
+    "caso": "/maestria/a1-2/a1-2-Caso.xlsx",
+    "cuestionario": "/maestria/a1-2/a1-2-Cuestionario.pdf",
+    "quiz": "/maestria/a1-2/a1-2-Quiz.json",
+    "preguntas": 15
+  },
+  {
+    "cod": "1.3",
+    "slug": "a1-3",
+    "cuatrimestre": 1,
+    "nombre": "Métodos Cuantitativos y Programación en Python para Finanzas Corporativas",
+    "fase": "Descriptiva · ¿Qué sucedió?",
+    "horas": "36 h · 12 teóricas / 24 prácticas",
+    "resumen": "Programar en Python con solvencia para implementar, verificar y automatizar cálculos financieros; aplicar el instrumental estadístico con conciencia de sus supuestos; y trabajar de manera reproducible y auditable.",
+    "pdf": "/maestria/a1-3/a1-3-PDF.pdf",
+    "caso": "/maestria/a1-3/a1-3-Caso.xlsx",
+    "cuestionario": "/maestria/a1-3/a1-3-Cuestionario.pdf",
+    "quiz": "/maestria/a1-3/a1-3-Quiz.json",
+    "preguntas": 15
+  },
+  {
+    "cod": "1.4",
+    "slug": "a1-4",
+    "cuatrimestre": 1,
+    "nombre": "Marco de Generación de Valor: NOPAT, Capital Invertido, ROIC y EVA",
+    "fase": "Descriptiva · ¿Qué sucedió?",
+    "horas": "36 h · 16 teóricas / 20 prácticas",
+    "resumen": "La ecuación maestra de creación de valor y el lugar que ocupa en ella cualquier indicador. NOPAT, capital invertido, ROIC y EVA construidos desde estados depurados, con la anatomía completa de cada número.",
+    "pdf": "/maestria/a1-4/a1-4-PDF.pdf",
+    "caso": "/maestria/a1-4/a1-4-Caso.xlsx",
+    "cuestionario": "/maestria/a1-4/a1-4-Cuestionario.pdf",
+    "quiz": "/maestria/a1-4/a1-4-Quiz.json",
+    "preguntas": 15
   }
 ]
