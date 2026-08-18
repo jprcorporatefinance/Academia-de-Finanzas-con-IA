@@ -160,6 +160,36 @@ export const a1_4: Asignatura = {
       { label: 'Gestión (Momentum)', xl: '=IF([evaMomentum]>0,"EVA Momentum positivo ("&TEXT([evaMomentum],"0.00%")&"): la gestión mejoró la creación de valor respecto del período anterior.","EVA Momentum negativo: la creación de valor retrocedió.")' },
     ],
   },
+  ejercicio: {
+    titulo: 'EVA de una empresa comercial',
+    enunciado:
+      'La comercializadora **Sur Insumos** presenta los siguientes datos de gestión ya depurados. El directorio quiere saber si crea o destruye valor.',
+    datos: [
+      {
+        t: 'table',
+        title: 'Datos (miles de $)',
+        headers: ['Concepto', 'Valor'],
+        firstColLeft: true,
+        rows: [
+          ['EBIT', '1.800'],
+          ['Tasa impositiva efectiva', '30%'],
+          ['Capital invertido', '9.000'],
+          ['WACC', '16%'],
+        ],
+      },
+    ],
+    preguntas: [
+      '¿Cuál es el NOPAT y el ROIC?',
+      '¿Cuál es el spread y el EVA?',
+      '¿Crea o destruye valor?',
+    ],
+    solucion: [
+      { t: 'formula', name: 'NOPAT', expr: 'NOPAT = 1.800 × (1 − 0,30) = 1.260', note: 'Resultado operativo después de impuestos.' },
+      { t: 'formula', name: 'ROIC y spread', expr: 'ROIC = 1.260 ÷ 9.000 = 14,0 %   ·   spread = 14,0 % − 16,0 % = − 2,0 %', note: 'El retorno del capital no alcanza a cubrir su costo.' },
+      { t: 'formula', name: 'EVA', expr: 'EVA = − 2,0 % × 9.000 = − 180', note: 'Equivale a NOPAT − WACC × Capital = 1.260 − 0,16 × 9.000 = 1.260 − 1.440 = − 180.' },
+      { t: 'idea', md: 'Resultado: ROIC 14 % < WACC 16 %, EVA **−180**. La empresa **destruye valor**: es rentable en libros pero su capital rinde menos de lo que cuesta. Palancas: subir el NOPAT, bajar el capital invertido o reducir el WACC.' },
+    ],
+  },
   quiz: [
     { id: 'q1', pregunta: 'En la ecuación maestra, toda palanca de gestión termina moviendo:', opciones: ['El precio de la acción directamente.', 'Uno de tres números: NOPAT, capital invertido o WACC.', 'Solo las ventas.', 'La tasa impositiva.'], correcta: 1, justificacion: 'El marco reduce la gestión a tres palancas: subir NOPAT, bajar capital o bajar WACC. Es el mapa mental del programa; las demás opciones son parciales o indirectas.' },
     { id: 'q2', pregunta: 'El EVA por diferencial y por resultado residual:', opciones: ['Dan resultados distintos.', 'Son equivalentes: (ROIC−WACC)×Capital = NOPAT − WACC×Capital.', 'Solo el primero es válido.', 'Dependen del sector.'], correcta: 1, justificacion: 'Ambas expresiones son algebraicamente idénticas y sirven de control cruzado. Si no coinciden, hay un error de cálculo.' },

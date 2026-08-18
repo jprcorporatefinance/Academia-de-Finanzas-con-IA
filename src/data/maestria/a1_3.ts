@@ -162,6 +162,35 @@ export const a1_3: Asignatura = {
       { label: 'Tasas', xl: '="TNA "&TEXT([tna],"0.0%")&" equivale a una TEA de "&TEXT([tea],"0.0%")&"; en términos reales (inflación "&TEXT([infl],"0.0%")&") la tasa es "&TEXT([tasaReal],"0.0%")&". La magnitud nominal engaña."' },
     ],
   },
+  ejercicio: {
+    titulo: 'VAN y TIR de un proyecto menor',
+    enunciado:
+      'Maderas del Litoral evalúa una inversión chica en un secadero de madera: 500 (miles) hoy, que generaría flujos durante tres años. El costo del capital relevante es 18 %.',
+    datos: [
+      {
+        t: 'table',
+        title: 'Flujo del proyecto (miles de $)',
+        headers: ['Momento', 'Flujo'],
+        firstColLeft: true,
+        rows: [
+          ['Año 0', '−500'],
+          ['Año 1', '180'],
+          ['Año 2', '200'],
+          ['Año 3', '220'],
+        ],
+      },
+    ],
+    preguntas: [
+      '¿Cuál es el VAN al 18 %? ¿Crea o destruye valor?',
+      '¿Está la TIR por encima o por debajo del costo del capital?',
+    ],
+    solucion: [
+      { t: 'p', md: 'Se descuenta cada flujo: 180/1,18 = 152,5 · 200/1,18² = 143,6 · 220/1,18³ = 133,9. Suma de valores presentes = **430,1**.' },
+      { t: 'formula', name: 'VAN', expr: 'VAN = 430,1 − 500 = − 69,9', note: 'VAN negativo: el proyecto destruye valor al 18 %.' },
+      { t: 'p', md: 'Como el VAN es negativo, la **TIR está por debajo del 18 %** (rondando el 9 %): el proyecto no cubre el costo del capital.' },
+      { t: 'idea', md: 'Resultado: VAN ≈ **−70**, TIR ≈ **9 %** < WACC 18 %. El secadero, a estos números, **no conviene**: destruye valor. Es la misma lógica RONIC < WACC de la asignatura 4.2.' },
+    ],
+  },
   quiz: [
     { id: 'q1', pregunta: 'Regla de decisión del VAN:', opciones: ['Se acepta el proyecto si VAN < 0.', 'Se crea valor si VAN > 0.', 'El VAN debe igualar a la TIR.', 'El VAN solo sirve si no hay inflación.'], correcta: 1, justificacion: 'Se crea valor cuando el VAN es positivo (los flujos descontados superan la inversión). VAN < 0 destruye valor; el VAN no “iguala” a la TIR y es aplicable con o sin inflación (usando tasas reales o nominales coherentes).' },
     { id: 'q2', pregunta: 'La tasa efectiva anual (TEA) desde una nominal (TNA) capitalizable m veces es:', opciones: ['TNA × m', '(1 + TNA/m)^m − 1', 'TNA / m', 'TNA + inflación'], correcta: 1, justificacion: 'La TEA capitaliza los subperíodos: (1+TNA/m)^m − 1. Multiplicar o dividir por m no capitaliza; sumar la inflación mezcla conceptos distintos.' },

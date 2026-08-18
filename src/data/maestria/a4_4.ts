@@ -140,6 +140,21 @@ export const a4_4: Asignatura = {
       { label: 'Transferibilidad y objetivo', xl: '="Reducir el IDD (procesos, segunda línea) es condición para transferir la empresa sin destruir valor. Toda decisión se mide contra el objetivo taxativo: el valor para los dueños (TSR)."' },
     ],
   },
+  ejercicio: {
+    titulo: '¿Distribuir o reinvertir?',
+    enunciado: 'Calculá el flujo disponible para los dueños (FCFE) y decidí la política de distribución, dado que las oportunidades rinden por debajo del costo del capital.',
+    datos: [
+      { t: 'table', title: 'Datos (miles de $)', headers: ['Concepto', 'Valor'], firstColLeft: true, rows: [
+        ['FCFF', '900'], ['Intereses', '400'], ['Tasa impositiva', '35%'], ['Nueva deuda neta', '0'], ['RONIC de las oportunidades', '12%'], ['WACC', '18%'],
+      ] },
+    ],
+    preguntas: ['¿Cuál es el FCFE?', '¿Conviene reinvertir o distribuir? ¿Cuánto valor crea cada peso reinvertido?'],
+    solucion: [
+      { t: 'formula', name: 'FCFE', expr: 'FCFE = FCFF − intereses×(1−t) + nueva deuda = 900 − 400×0,65 + 0 = 900 − 260 = 640' },
+      { t: 'formula', name: 'Valor por peso reinvertido', expr: 'RONIC/WACC − 1 = 0,12/0,18 − 1 = − 33,3 %' },
+      { t: 'idea', md: 'Cada peso reinvertido **destruye 33 centavos** (RONIC 12 % < WACC 18 %). La política óptima es **distribuir el FCFE (640)**: devolver capital preserva valor que reinvertir destruiría. Es la conexión entre dividendos e inversión.' },
+    ],
+  },
   quiz: [
     { id: 'q1', pregunta: 'El teorema de Miller-Modigliani sobre dividendos dice que, en mercados perfectos:', opciones: ['Siempre conviene distribuir.', 'La política de dividendos es irrelevante para el valor.', 'Siempre conviene retener.', 'Los dividendos destruyen valor.'], correcta: 1, justificacion: 'En mercados perfectos (sin impuestos ni fricciones), distribuir o retener da igual: el valor lo determinan los activos. Es un punto de partida que las fricciones reales modifican.' },
     { id: 'q2', pregunta: '¿Cuál de estas es una fricción real que vuelve relevante la política de dividendos?', opciones: ['La gravedad.', 'Los impuestos, la señalización, la agencia y el efecto clientela.', 'El color del logo.', 'Nada la vuelve relevante.'], correcta: 1, justificacion: 'Impuestos, señales al mercado, disciplina de agencia y preferencias de clientela hacen que la política sí importe en el mundo real.' },

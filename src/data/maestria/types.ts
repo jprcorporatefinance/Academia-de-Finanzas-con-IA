@@ -106,6 +106,17 @@ export interface Caso {
 }
 
 // ---------------------------------------------------------------------------
+// Ejercicio práctico adicional (segundo mini-caso, con solución trabajada)
+// ---------------------------------------------------------------------------
+export interface Ejercicio {
+  titulo: string
+  enunciado: string // narrativa (markdown-lite; párrafos con \n\n)
+  datos: Block[] // dataset (tablas)
+  preguntas: string[]
+  solucion: Block[] // resolución paso a paso (con fórmulas, cuentas y resultado)
+}
+
+// ---------------------------------------------------------------------------
 // Cuestionario
 // ---------------------------------------------------------------------------
 export interface QuizQ {
@@ -135,6 +146,7 @@ export interface Asignatura {
   expertos: ExpertQuote[]
   caso: Caso
   model: ExcelModel
+  ejercicio?: Ejercicio
   quiz: QuizQ[]
   bibliografia: string[]
 }

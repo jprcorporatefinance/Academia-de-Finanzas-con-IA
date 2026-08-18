@@ -141,6 +141,21 @@ export const a3_3: Asignatura = {
       { label: 'Método', xl: '="Un plan basado en el promedio está, en promedio, equivocado (Savage). Presentá al directorio la distribución —media, P5, P95 y P(destruir valor)—, no un número único."' },
     ],
   },
+  ejercicio: {
+    titulo: 'Valor puntual y riesgo de destruir valor',
+    enunciado: 'Estimá el valor de una firma como perpetuidad del NOPAT y pensá por qué el número único puede engañar cuando el margen es volátil.',
+    datos: [
+      { t: 'table', title: 'Datos (miles de $)', headers: ['Concepto', 'Valor'], firstColLeft: true, rows: [
+        ['Ventas', '30.000'], ['Margen operativo medio', '8,0%'], ['Tasa impositiva', '35%'], ['WACC', '20%'], ['Capital invertido (umbral)', '8.000'],
+      ] },
+    ],
+    preguntas: ['¿Cuál es el valor puntual (perpetuidad del NOPAT)?', '¿Está por encima o por debajo del capital? ¿Qué margen lo igualaría?'],
+    solucion: [
+      { t: 'formula', name: 'Valor puntual', expr: 'NOPAT = 30.000×8,0%×(1−0,35) = 1.560 · Valor = 1.560/0,20 = 7.800' },
+      { t: 'formula', name: 'Margen de equilibrio', expr: 'Valor = capital 8.000 → NOPAT = 1.600 → margen = 1.600/(30.000×0,65) = 8,2%' },
+      { t: 'idea', md: 'El valor puntual (**7.800**) está apenas **por debajo** del capital (8.000): el margen medio (8,0 %) está justo bajo el de equilibrio (8,2 %). Con un margen volátil, casi la mitad de los escenarios destruiría valor — algo que el número único esconde y Monte Carlo revela.' },
+    ],
+  },
   quiz: [
     { id: 'q1', pregunta: 'Proyectar “por generadores de valor” significa:', opciones: ['Extrapolar cada línea del estado por separado.', 'Modelar los pocos drivers que mueven el valor y derivar los estados de ellos.', 'Copiar el año anterior.', 'Proyectar solo las ventas.'], correcta: 1, justificacion: 'Se proyectan crecimiento, margen, intensidad de capital, etc., y los estados integrados se derivan con coherencia. Extrapolar línea por línea produce estados que no cierran.' },
     { id: 'q2', pregunta: '¿Por qué proyectar cada línea por separado es problemático?', opciones: ['Es más rápido.', 'Los estados no cierran y los supuestos se contradicen.', 'Es lo que recomienda McKinsey.', 'No usa Excel.'], correcta: 1, justificacion: 'Sin el vínculo por generadores, los estados dejan de cerrar y aparecen inconsistencias (crecen ventas pero no el capital de trabajo). No es la recomendación de McKinsey.' },

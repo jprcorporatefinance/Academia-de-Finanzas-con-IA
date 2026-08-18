@@ -157,6 +157,22 @@ export const a3_1: Asignatura = {
       { label: 'Umbral de valor', xl: '=IF([spread]>0,"ROIC (21,3%) supera al WACC por "&TEXT([spread],"0.0%")&": crea valor, pero por un margen fino. Con un RONIC menor, crecer destruiría valor (4.2).","El WACC supera al ROIC: la empresa destruye valor al costo actual del capital.")' },
     ],
   },
+  ejercicio: {
+    titulo: 'WACC de una empresa cerrada',
+    enunciado: 'Estimá el costo del capital de una empresa familiar que no cotiza, con dueño no diversificado, en un mercado emergente.',
+    datos: [
+      { t: 'table', title: 'Parámetros', headers: ['Parámetro', 'Valor'], firstColLeft: true, rows: [
+        ['Rf', '5%'], ['ERP maduro', '5,5%'], ['Beta desapalancada (β_U)', '0,90'], ['D/E', '1,00'], ['Tasa impositiva', '35%'], ['Correlación (ρ)', '0,60'], ['CRP', '9%'], ['Lambda', '1,0'], ['Default spread (Kd)', '10%'], ['E y D', '4.000 y 4.000'],
+      ] },
+    ],
+    preguntas: ['¿Cuál es la beta apalancada y la Beta Total?', '¿Cuál es el Ke del dueño y el WACC?'],
+    solucion: [
+      { t: 'formula', name: 'Betas', expr: 'β_L = 0,90×[1+(1−0,35)×1] = 0,90×1,65 = 1,485 · β_Total = 1,485/0,60 = 2,475' },
+      { t: 'formula', name: 'Ke del dueño (Beta Total)', expr: 'Ke = 5% + 2,475×5,5% + 1,0×9% = 5 + 13,6 + 9 = 27,6%' },
+      { t: 'formula', name: 'WACC', expr: 'Kd d.imp. = 15%×(1−0,35) = 9,75% · WACC = 0,5×27,6% + 0,5×9,75% = 18,7%' },
+      { t: 'idea', md: 'El WACC ≈ **18,7 %**. El Ke del dueño no diversificado es alto (27,6 %), pero el peso de la deuda barata después de impuestos modera el WACC. Ese es el umbral contra el que se mide el ROIC.' },
+    ],
+  },
   quiz: [
     { id: 'q1', pregunta: 'El WACC representa:', opciones: ['El costo de un préstamo bancario.', 'El rendimiento mínimo que la empresa debe superar para crear valor (umbral).', 'La rentabilidad histórica.', 'La tasa de inflación.'], correcta: 1, justificacion: 'El WACC es el costo promedio ponderado del capital: el umbral (hurdle rate) contra el que se mide el ROIC. No es la tasa de un banco, ni un dato histórico, ni la inflación.' },
     { id: 'q2', pregunta: 'En el WACC, el costo de la deuda entra:', opciones: ['Antes de impuestos.', 'Después de impuestos, porque el interés es deducible (escudo fiscal).', 'Multiplicado por la inflación.', 'Sin ponderar.'], correcta: 1, justificacion: 'Kd entra como Kd×(1−t): el interés deducible genera un escudo fiscal que abarata la deuda. Se pondera por D/V, no va sin ponderar.' },

@@ -138,6 +138,21 @@ export const a4_3: Asignatura = {
       { label: 'Liquidez', xl: '=IF([dafE]<[cce],"ALERTA: DAF-E ("&TEXT([dafE],"0")&" días) < CCE ("&TEXT([cce],"0")&" días). La empresa se quedaría sin caja antes de completar una vuelta de su ciclo, pese al EVA positivo. Solvente no es líquido.","DAF-E ("&TEXT([dafE],"0")&" días) supera al CCE ("&TEXT([cce],"0")&" días): autonomía suficiente para el ciclo.")' },
     ],
   },
+  ejercicio: {
+    titulo: 'DSCR y días de autonomía (DAF-E)',
+    enunciado: 'Evaluá si una empresa puede pagar su deuda (DSCR) y cuántos días de caja aguanta bajo estrés (DAF-E), y compará con su ciclo.',
+    datos: [
+      { t: 'table', title: 'Datos (miles de $)', headers: ['Concepto', 'Valor'], firstColLeft: true, rows: [
+        ['EBITDA', '2.000'], ['Servicio de deuda', '1.500'], ['Caja', '300'], ['Líneas comprometidas', '400'], ['Cobranzas ciertas', '600'], ['Egresos diarios (estrés)', '50'], ['CCE', '45 días'], ['DSCR mínimo (covenant)', '1,25x'],
+      ] },
+    ],
+    preguntas: ['¿Cuál es el DSCR y cumple el covenant?', '¿Cuántos días de autonomía (DAF-E) tiene y qué implica frente al CCE?'],
+    solucion: [
+      { t: 'formula', name: 'DSCR', expr: 'DSCR = 2.000/1.500 = 1,33x ≥ 1,25x → cumple el covenant' },
+      { t: 'formula', name: 'DAF-E', expr: 'Recursos = 300+400+600 = 1.300 · DAF-E = 1.300/50 = 26 días' },
+      { t: 'idea', md: 'La empresa **puede pagar la deuda** (DSCR 1,33x) pero su **DAF-E (26 días) < CCE (45 días)**: alerta de primer orden. Se quedaría sin caja antes de completar una vuelta de su ciclo, pese a ser solvente. Solvente no es líquido.' },
+    ],
+  },
   quiz: [
     { id: 'q1', pregunta: 'La paradoja crecimiento-liquidez es que una empresa puede tener:', opciones: ['EVA negativo y FCFF positivo.', 'EVA positivo (crea valor) y FCFF negativo (consume caja).', 'Ventas nulas.', 'Deuda cero.'], correcta: 1, justificacion: 'Al crecer, la inversión en capital de trabajo y CapEx puede superar al NOPAT: crea valor pero consume caja. Es la paradoja central de la 4.3.' },
     { id: 'q2', pregunta: 'Solvencia y liquidez son:', opciones: ['Lo mismo.', 'Cosas distintas: se puede ser solvente y morir por falta de caja.', 'Sinónimos contables.', 'Ambas medidas por el Altman.', ], correcta: 1, justificacion: 'La solvencia es patrimonio > deuda (Altman); la liquidez es tener caja para pagar a tiempo. Una empresa solvente puede quebrar por iliquidez.' },

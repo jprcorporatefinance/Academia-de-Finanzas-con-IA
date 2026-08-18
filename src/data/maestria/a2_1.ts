@@ -157,6 +157,21 @@ export const a2_1: Asignatura = {
       { label: 'Riesgo estructural', xl: '=IF([gat]>4,"GAT alto ("&TEXT([gat],"0.0")&"x): una caída de ventas se amplifica fuertemente. Empresa rentable pero frágil.","GAT moderado ("&TEXT([gat],"0.0")&"x).")&" Margen de seguridad: "&TEXT([margenSeg],"0.0%")&" sobre el punto de equilibrio."' },
     ],
   },
+  ejercicio: {
+    titulo: 'DuPont de cinco factores exprés',
+    enunciado: 'Con los datos ya depurados de una empresa, descomponé su ROE en los cinco generadores y verificá el resultado.',
+    datos: [
+      { t: 'table', title: 'Datos (miles de $)', headers: ['Concepto', 'Valor'], firstColLeft: true, rows: [
+        ['Resultado neto (NI)', '800'], ['EBT', '1.200'], ['EBIT', '1.500'], ['Ventas', '20.000'], ['Activos', '8.000'], ['Patrimonio neto', '3.000'],
+      ] },
+    ],
+    preguntas: ['¿Cuánto valen los cinco factores del DuPont?', '¿Cuál es el ROE y de dónde viene sobre todo?'],
+    solucion: [
+      { t: 'formula', name: 'Los cinco factores', expr: 'Fiscal 800/1.200=0,667 · Financiera 1.200/1.500=0,80 · Margen 1.500/20.000=7,5% · Rotación 20.000/8.000=2,5 · Multiplicador 8.000/3.000=2,667' },
+      { t: 'formula', name: 'ROE', expr: 'ROE = 0,667 × 0,80 × 0,075 × 2,5 × 2,667 = 26,7 %', note: 'Verificación directa: NI/PN = 800/3.000 = 26,7 %. ✓' },
+      { t: 'idea', md: 'El ROE del 26,7 % se apoya fuertemente en el **multiplicador financiero (2,667)**: buena parte del retorno viene del apalancamiento, no solo de la operación. Empresa rentable pero a vigilar por su dependencia de la deuda.' },
+    ],
+  },
   quiz: [
     { id: 'q1', pregunta: '¿Qué agrega el DuPont de cinco factores frente al de tres?', opciones: ['Nada, es lo mismo.', 'Aísla el efecto de los intereses (carga financiera) y la carga fiscal.', 'Elimina el margen operativo.', 'Solo cambia el orden.'], correcta: 1, justificacion: 'La versión de cinco factores separa la carga fiscal (NI/EBT) y la carga financiera (EBT/EBIT), que la de tres factores mezcla dentro del margen neto. No elimina el margen operativo ni es un mero reordenamiento.' },
     { id: 'q2', pregunta: 'La “carga financiera” del DuPont (EBT/EBIT) mide:', opciones: ['La eficiencia operativa.', 'Cuánto del resultado operativo se lleva el interés de la deuda.', 'La tasa impositiva.', 'La rotación de activos.'], correcta: 1, justificacion: 'EBT/EBIT capta el peso de los intereses: cuanto más baja, más se lleva la deuda. No es margen operativo, ni fiscalidad, ni rotación.' },

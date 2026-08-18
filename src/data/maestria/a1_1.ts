@@ -374,6 +374,38 @@ export const a1_1: Asignatura = {
       { label: 'Posición monetaria', xl: '=IF([recpam]>=0,"Posición monetaria PASIVA: ganancia por RECPAM de "&TEXT([recpam],"#,##0")&" miles (licuación de deuda). No es rentabilidad operativa: desaparece si baja la inflación.","Posición monetaria ACTIVA: pérdida por RECPAM de "&TEXT(-[recpam],"#,##0")&" miles por exposición de activos monetarios.")' },
     ],
   },
+  ejercicio: {
+    titulo: 'Reexpresión y RECPAM de una distribuidora',
+    enunciado:
+      'La distribuidora **El Norte S.R.L.** cerró su ejercicio con una inflación del 80 %. Tiene bienes de cambio registrados a valor nominal por 1.500 (miles), incorporados cuando el índice de precios era 100; al cierre el índice es 180. Además mantuvo, en promedio, una posición monetaria neta activa (más caja y créditos en pesos que deudas).',
+    datos: [
+      {
+        t: 'table',
+        title: 'Datos (miles de $)',
+        headers: ['Concepto', 'Valor'],
+        firstColLeft: true,
+        rows: [
+          ['Bienes de cambio (nominal, origen)', '1.500'],
+          ['Índice de precios de origen', '100'],
+          ['Índice de precios de cierre', '180'],
+          ['Activos monetarios promedio', '3.000'],
+          ['Pasivos monetarios promedio', '1.000'],
+          ['Inflación del período (π)', '80%'],
+        ],
+      },
+    ],
+    preguntas: [
+      '¿Cuál es el coeficiente de reexpresión y el valor reexpresado de los bienes de cambio?',
+      '¿Cuál es el RECPAM del período y qué signo tiene?',
+      '¿La empresa ganó o perdió por su posición monetaria?',
+    ],
+    solucion: [
+      { t: 'formula', name: 'Coeficiente de reexpresión', expr: 'Coef = 180 ÷ 100 = 1,80', note: 'Bienes de cambio reexpresados = 1.500 × 1,80 = 2.700 (miles).' },
+      { t: 'p', md: 'La posición monetaria neta (PMN) es **activa**: 3.000 − 1.000 = **2.000**. Bajo inflación, mantener activos monetarios netos genera pérdida.' },
+      { t: 'formula', name: 'RECPAM', expr: 'RECPAM = − PMN × π = − 2.000 × 0,80 = − 1.600', note: 'Signo negativo: es una pérdida por exposición a la inflación.' },
+      { t: 'idea', md: 'Resultado: los bienes de cambio pasan de 1.500 a **2.700** reexpresados, y la empresa **perdió 1.600** de poder adquisitivo por su posición monetaria activa. Mantener caja y créditos en pesos bajo inflación cuesta.' },
+    ],
+  },
   quiz: [
     {
       id: 'q1',

@@ -127,6 +127,22 @@ export const a4_2: Asignatura = {
       { label: 'Recomendación', xl: '=IF([ronic]<[wacc],"Con este RONIC, la mejor decisión de inversión es NO crecer y evaluar devolver capital a los dueños. El ROIC histórico alto no cambia esto: el proyecto nuevo rinde su RONIC, no el ROIC del pasado.","Crecer es la decisión correcta: cada peso reinvertido rinde por encima de su costo.")' },
     ],
   },
+  ejercicio: {
+    titulo: '¿Crecer crea valor? (Key Value Driver)',
+    enunciado: 'Con el KVD de McKinsey, decidí si crecer al 4 % conviene, dado que el capital nuevo rinde por debajo de su costo.',
+    datos: [
+      { t: 'table', title: 'Datos (miles de $)', headers: ['Concepto', 'Valor'], firstColLeft: true, rows: [
+        ['NOPAT', '1.000'], ['WACC', '18%'], ['RONIC', '14%'], ['Crecimiento (g)', '4%'],
+      ] },
+    ],
+    preguntas: ['¿Cuál es el valor creciendo y el valor sin crecer?', '¿Cuánto es el valor del crecimiento? ¿Conviene crecer?'],
+    solucion: [
+      { t: 'formula', name: 'Valor creciendo (KVD)', expr: 'V = 1.000×(1−0,04/0,14)/(0,18−0,04) = 1.000×0,7143/0,14 = 5.102' },
+      { t: 'formula', name: 'Valor sin crecer', expr: 'V(g=0) = 1.000/0,18 = 5.556' },
+      { t: 'formula', name: 'Valor del crecimiento', expr: '5.102 − 5.556 = − 454' },
+      { t: 'idea', md: 'Como RONIC (14 %) < WACC (18 %), crecer **destruye 454** de valor: la empresa **vale más si NO crece**. Cada peso reinvertido rinde menos que su costo. Conviene distribuir, no crecer.' },
+    ],
+  },
   quiz: [
     { id: 'q1', pregunta: 'El teorema central del crecimiento dice que crecer crea valor si y solo si:', opciones: ['Las ventas suben.', 'RONIC > WACC (el retorno del capital nuevo supera su costo).', 'El ROIC histórico es alto.', 'La empresa toma deuda.'], correcta: 1, justificacion: 'Solo cuando el capital nuevo rinde más que su costo el crecimiento agrega valor. Ventas, ROIC histórico o deuda no lo garantizan.' },
     { id: 'q2', pregunta: 'En el Key Value Driver, si RONIC < WACC, aumentar g:', opciones: ['Aumenta el valor.', 'Destruye valor (y cuanto más rápido, peor).', 'No tiene efecto.', 'Elimina la deuda.'], correcta: 1, justificacion: 'Con RONIC < WACC cada peso de crecimiento destruye valor; acelerar empeora. Es el resultado central del modelo.' },

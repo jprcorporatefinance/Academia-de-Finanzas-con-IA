@@ -133,6 +133,20 @@ export const a3_4: Asignatura = {
       { label: 'Gobierno', xl: '="Las herramientas del agente son el servidor MCP de sólo lectura (1.2): cada cifra es trazable a una llamada auditada, no generada por el modelo. La responsabilidad final es humana."' },
     ],
   },
+  ejercicio: {
+    titulo: '¿Conviene automatizar esta tarea?',
+    enunciado: 'Estimá el ahorro potencial ponderado de automatizar una tarea de la función financiera y decidí si es candidata.',
+    datos: [
+      { t: 'table', title: 'Tarea: conciliación bancaria', headers: ['Parámetro', 'Valor'], firstColLeft: true, rows: [
+        ['Veces por mes', '20'], ['Horas por vez', '1,5'], ['Costo por hora', '8 miles $'], ['Factibilidad', '0,90'], ['Riesgo', '0,15'], ['Umbral “humano en el bucle”', 'riesgo > 0,40'],
+      ] },
+    ],
+    preguntas: ['¿Cuántas horas/año consume y cuál es el ahorro potencial ponderado?', '¿Es automatizable o requiere humano en el bucle?'],
+    solucion: [
+      { t: 'formula', name: 'Horas/año y ahorro', expr: 'Horas/año = 20×12×1,5 = 360 · Ahorro = 360×8×0,90×(1−0,15) = 2.203' },
+      { t: 'idea', md: 'Ahorro potencial ponderado ≈ **2.203** (miles) al año sobre 360 horas. Con riesgo 0,15 < 0,40, la tarea es **automatizable**: frecuente, repetible y de bajo riesgo — candidata ideal, con las herramientas de sólo lectura del servidor MCP.' },
+    ],
+  },
   quiz: [
     { id: 'q1', pregunta: 'Un agente de IA se distingue de un simple prompt porque:', opciones: ['Es más largo.', 'Percibe, razona, elige y ejecuta herramientas, y reacciona a lo observado, en un bucle.', 'Usa más memoria RAM.', 'No usa un modelo de lenguaje.'], correcta: 1, justificacion: 'El agente actúa sobre el mundo mediante herramientas y cierra el bucle percibir-decidir-actuar-observar. Un prompt solo genera texto. Sí usa un modelo como motor.' },
     { id: 'q2', pregunta: 'En este programa, las “herramientas” del agente son:', opciones: ['Macros de Excel.', 'El servidor MCP de sólo lectura de la asignatura 1.2.', 'Acceso directo y total a la base.', 'Un buscador web.'], correcta: 1, justificacion: 'El agente llama a herramientas MCP auditadas de sólo lectura, preservando la trazabilidad. No accede directo a la base ni depende de macros o del buscador.' },

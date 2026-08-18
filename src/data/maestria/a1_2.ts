@@ -256,6 +256,34 @@ export const a1_2: Asignatura = {
       { label: 'Gobierno', xl: '="Cada saldo de este modelo debe poder reconstruirse desde una llamada auditada al servidor MCP de sólo lectura: consulta, parámetros, herramienta, dato y momento."' },
     ],
   },
+  ejercicio: {
+    titulo: 'Conciliar la extracción del ERP con el balance',
+    enunciado:
+      'Se extraen del ERP tres rubros vía el servidor MCP y se comparan con el balance publicado. El área contable quiere saber si la extracción es fiel o si hay que revisar el mapeo.',
+    datos: [
+      {
+        t: 'table',
+        title: 'Extracción vs. balance (miles de $)',
+        headers: ['Rubro analítico', 'Suma desde el ERP', 'Saldo del balance'],
+        firstColLeft: true,
+        rows: [
+          ['Disponibilidades (caja 300 + banco 200)', '500', '500'],
+          ['Créditos por ventas', '1.800', '1.860'],
+          ['Bienes de cambio', '1.200', '1.200'],
+        ],
+      },
+    ],
+    preguntas: [
+      '¿Cuál es el total extraído y el total del balance?',
+      '¿Concilia la extracción? ¿Dónde está la diferencia?',
+      '¿Qué habría que revisar antes de construir sobre estos datos?',
+    ],
+    solucion: [
+      { t: 'p', md: 'Total extraído = 500 + 1.800 + 1.200 = **3.500**. Total balance = 500 + 1.860 + 1.200 = **3.560**.' },
+      { t: 'formula', name: 'Diferencia', expr: 'Diferencia = 3.500 − 3.560 = − 60', note: 'La diferencia está íntegramente en Créditos por ventas (1.800 vs 1.860).' },
+      { t: 'idea', md: 'La extracción **no concilia** por 60 en Créditos por ventas: probablemente una cuenta mal mapeada o un saldo aún no depurado (una previsión o un documento a cobrar fuera del alcance). Hasta resolver ese desvío, no se debe construir el estado analítico sobre estos datos — la conciliación es la prueba de veracidad de la capa de datos.' },
+    ],
+  },
   quiz: [
     { id: 'q1', pregunta: '¿Qué arquitectura adopta el Model Context Protocol (MCP)?', opciones: ['Peer-to-peer entre modelos.', 'Cliente-servidor con host, cliente y servidor.', 'Monolítica: todo corre en el modelo.', 'Solo baja archivos por FTP.'], correcta: 1, justificacion: 'MCP es cliente-servidor: el host orquesta el modelo, el cliente gestiona la comunicación y el servidor expone capacidades. No es peer-to-peer, ni monolítico, ni un transporte de archivos.' },
     { id: 'q2', pregunta: 'Las tres capacidades que expone un servidor MCP son:', opciones: ['Tablas, vistas y procedimientos.', 'Herramientas, recursos e indicaciones.', 'Lectura, escritura y borrado.', 'GET, POST y DELETE.'], correcta: 1, justificacion: 'El servidor expone herramientas (acciones invocables), recursos (contenidos legibles) e indicaciones (plantillas). Las otras opciones describen bases de datos, operaciones CRUD o verbos HTTP, no las capacidades del protocolo.' },

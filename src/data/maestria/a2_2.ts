@@ -157,6 +157,21 @@ export const a2_2: Asignatura = {
       { label: 'Merton y rating', xl: '="Distancia al incumplimiento "&TEXT([dd],"0.00")&", PD "&TEXT([pd],"0.00%")&". Calificación sintética "&[rating]&" → Kd = Rf + "&TEXT([spread],"0.0%")&". Solvencia OK no implica liquidez OK (ver 4.3)."' },
     ],
   },
+  ejercicio: {
+    titulo: 'Calcular el Altman Z″',
+    enunciado: 'Aplicá el modelo Altman Z″ para mercados emergentes a una empresa que no cotiza y ubicá su zona de riesgo.',
+    datos: [
+      { t: 'table', title: 'Datos (miles de $)', headers: ['Concepto', 'Valor'], firstColLeft: true, rows: [
+        ['Capital de trabajo', '1.000'], ['Utilidades retenidas', '500'], ['EBIT', '900'], ['Activo total', '5.000'], ['Valor libro del patrimonio', '2.000'], ['Pasivo total', '3.000'],
+      ] },
+    ],
+    preguntas: ['¿Cuánto da el Z″?', '¿En qué zona cae la empresa?'],
+    solucion: [
+      { t: 'formula', name: 'Componentes', expr: 'X1=1.000/5.000=0,20 · X2=500/5.000=0,10 · X3=900/5.000=0,18 · X4=2.000/3.000=0,667' },
+      { t: 'formula', name: 'Altman Z″', expr: 'Z″ = 6,56×0,20 + 3,26×0,10 + 6,72×0,18 + 1,05×0,667 = 1,31 + 0,33 + 1,21 + 0,70 = 3,55' },
+      { t: 'idea', md: 'Z″ ≈ **3,55 > 2,60 → ZONA SEGURA**: bajo riesgo de insolvencia por solvencia patrimonial. Recordá que solvencia no es liquidez (asignatura 4.3).' },
+    ],
+  },
   quiz: [
     { id: 'q1', pregunta: '¿Por qué la versión Z′′ de Altman elimina el factor X5 (Ventas/Activos)?', opciones: ['Por error de cálculo.', 'Porque el criterio sectorial de la rotación distorsiona en la empresa que no cotiza.', 'Porque las ventas no importan.', 'Para simplificar la aritmética.'], correcta: 1, justificacion: 'X5 (rotación) varía mucho por sector y distorsiona la comparación en empresas cerradas; por eso la Z′′ lo elimina. No es un error ni una simplificación arbitraria, y las ventas sí importan en otros contextos.' },
     { id: 'q2', pregunta: 'Un Altman Z′′ de 5,0 indica:', opciones: ['Zona de peligro.', 'Zona segura (bajo riesgo de insolvencia).', 'Zona gris.', 'Manipulación contable.'], correcta: 1, justificacion: 'Z′′ > 2,60 es zona segura; 5,0 está cómodamente ahí. El Z no mide manipulación (eso es Beneish).' },

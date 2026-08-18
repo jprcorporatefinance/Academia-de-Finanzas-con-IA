@@ -144,6 +144,22 @@ export const a4_1: Asignatura = {
       { label: 'Participación', xl: '="El "&TEXT([part],"0%")&" vale "&TEXT([valPartMin],"#,##0")&" tras un descuento efectivo del "&TEXT([descTotal],"0.0%")&" (DLOC y DLOM en cascada multiplicativa, no sumados)."' },
     ],
   },
+  ejercicio: {
+    titulo: 'Valuación DCF con valor terminal',
+    enunciado: 'Valuá una empresa por flujo de fondos descontado con un horizonte explícito de tres años más valor terminal, y llegá al valor del patrimonio.',
+    datos: [
+      { t: 'table', title: 'Datos (miles de $)', headers: ['Concepto', 'Valor'], firstColLeft: true, rows: [
+        ['FCFF año 1', '300'], ['FCFF año 2', '330'], ['FCFF año 3', '360'], ['WACC', '18%'], ['Crecimiento perpetuo (g)', '3%'], ['Deuda neta', '800'],
+      ] },
+    ],
+    preguntas: ['¿Cuál es el valor del horizonte y el valor terminal?', '¿Cuál es el EV y el valor del patrimonio?'],
+    solucion: [
+      { t: 'formula', name: 'Valor del horizonte', expr: 'VP = 300/1,18 + 330/1,18² + 360/1,18³ = 254,2 + 237,0 + 219,1 = 710,3' },
+      { t: 'formula', name: 'Valor terminal', expr: 'VT = 360×1,03/(0,18−0,03) = 370,8/0,15 = 2.472 · VP(VT) = 2.472/1,18³ = 1.504,6' },
+      { t: 'formula', name: 'EV y equity', expr: 'EV = 710,3 + 1.504,6 = 2.214,9 · Equity = 2.214,9 − 800 = 1.414,9' },
+      { t: 'idea', md: 'La empresa vale **≈ 2.215** (EV) y su patrimonio **≈ 1.415**. Notá que el **valor terminal (1.505) es el 68 % del EV**: por eso g y WACC son tan sensibles y hay que fundamentarlos.' },
+    ],
+  },
   quiz: [
     { id: 'q1', pregunta: 'El valor de una empresa por DCF se compone de:', opciones: ['Solo el valor terminal.', 'El valor del horizonte explícito más el valor terminal descontado.', 'Solo los flujos del primer año.', 'El patrimonio contable.'], correcta: 1, justificacion: 'EV = VP de los FCFF del horizonte + VP del valor terminal. No es solo el terminal, ni un año, ni el patrimonio contable.' },
     { id: 'q2', pregunta: 'El valor terminal por el modelo de Gordon es:', opciones: ['FCFF_{n+1} × (WACC − g).', 'FCFF_{n+1} ÷ (WACC − g).', 'FCFF_{n+1} × g.', 'FCFF_{n+1} ÷ WACC.'], correcta: 1, justificacion: 'VT = FCFF_{n+1}/(WACC−g), el valor de una perpetuidad creciente. Multiplicar o usar solo WACC da un valor incorrecto.' },

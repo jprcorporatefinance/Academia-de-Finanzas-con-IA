@@ -148,6 +148,21 @@ export const a2_3: Asignatura = {
       { label: 'Método', xl: '="Toda la tabla deriva de una sola fórmula con SCAN: si cambiás el plazo o la tasa, se recalcula sola. Esto es lo que la metodología FAST (arrastre celda a celda) no puede hacer sin reconstruirse."' },
     ],
   },
+  ejercicio: {
+    titulo: 'Cuota e interés de un préstamo (sistema francés)',
+    enunciado: 'Calculá la cuota constante y el interés total de un préstamo por sistema francés, y pensá cómo lo resolverías con SCAN sin arrastrar fórmulas.',
+    datos: [
+      { t: 'table', title: 'Datos', headers: ['Parámetro', 'Valor'], firstColLeft: true, rows: [
+        ['Capital (P)', '1.000 miles $'], ['Tasa mensual (r)', '4,0%'], ['Plazo (n)', '12 meses'],
+      ] },
+    ],
+    preguntas: ['¿Cuál es la cuota constante?', '¿Cuánto interés total se paga?'],
+    solucion: [
+      { t: 'formula', name: 'Cuota (sistema francés)', expr: 'Cuota = P·r/(1−(1+r)^−n) = 1.000×0,04/(1−1,04^−12) = 40/0,3754 = 106,55' },
+      { t: 'formula', name: 'Interés total', expr: 'Interés total = Cuota × n − P = 106,55 × 12 − 1.000 = 1.278,6 − 1.000 = 278,6' },
+      { t: 'idea', md: 'La cuota es **106,55** y el interés total **278,6** (27,9 % del capital). En Excel, toda la tabla de marcha (interés, amortización, saldo) derivaría de **una sola fórmula con `SCAN`** que propaga el saldo: al cambiar el plazo, se reajusta sola.' },
+    ],
+  },
   quiz: [
     { id: 'q1', pregunta: '¿Qué ventaja central tienen las matrices dinámicas sobre el arrastre de fórmulas?', opciones: ['Se ven más lindas.', 'Una fórmula por lógica (no miles): el modelo se adapta a cambios estructurales sin “volver a arrastrar”.', 'Calculan más rápido siempre.', 'No necesitan Excel.'], correcta: 1, justificacion: 'La clave es estructural: una sola fórmula por lógica hace el modelo robusto y auditable, y se adapta al cambiar dimensiones. No es estética, no siempre es más rápido y requiere Excel 365.' },
     { id: 'q2', pregunta: '¿Qué función se usa para el cálculo recursivo (saldos que dependen del período anterior) sin arrastrar?', opciones: ['SUMA.', 'SCAN (y REDUCE para el resultado final).', 'BUSCARV.', 'CONCATENAR.'], correcta: 1, justificacion: 'SCAN recorre un arreglo llevando un acumulador (toda la trayectoria) y REDUCE devuelve el final. SUMA, BUSCARV o CONCATENAR no hacen recursión.' },

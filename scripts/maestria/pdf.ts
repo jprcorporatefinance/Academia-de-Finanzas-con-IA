@@ -306,6 +306,28 @@ function casoNodes(a: Asignatura): any[] {
   return out
 }
 
+function ejercicioNodes(a: Asignatura): any[] {
+  const e = a.ejercicio
+  if (!e) return []
+  const out: any[] = [
+    {
+      stack: [
+        { canvas: [{ type: 'line', x1: 0, y1: 0, x2: 483, y2: 0, lineWidth: 1, lineColor: H('lineL') }], margin: [0, 18, 0, 12] },
+        { text: 'EJERCICIO ADICIONAL', font: 'Mono', color: H('greenB'), fontSize: 9, characterSpacing: 2 },
+        { text: e.titulo, font: 'Spectral', bold: true, color: H('ink'), fontSize: 17, margin: [0, 4, 0, 6] },
+      ],
+      margin: [0, 6, 0, 6],
+    },
+  ]
+  e.enunciado.split(/\n\n+/).forEach((p) => out.push({ text: inline(p), style: 'p' }))
+  e.datos.forEach((b) => blockNode(b).forEach((x) => out.push(x)))
+  out.push({ text: 'Consigna', style: 'h2' })
+  out.push({ ol: e.preguntas.map((q) => ({ text: inline(q) })), style: 'list', markerColor: H('greenB'), margin: [0, 2, 0, 10] })
+  out.push({ text: 'Solución', style: 'h2' })
+  e.solucion.forEach((b) => blockNode(b).forEach((x) => out.push(x)))
+  return out
+}
+
 function expertosNodes(a: Asignatura): any[] {
   if (!a.expertos?.length) return []
   const out: any[] = [{ text: 'Voces de referencia', style: 'h2' }]
@@ -378,6 +400,7 @@ export async function buildAsignaturaPDF(a: Asignatura): Promise<Buffer> {
   a.sections.forEach((s, i) => sectionNodes(s, i + 1).forEach((x) => content.push(x)))
   expertosNodes(a).forEach((x) => content.push(x))
   casoNodes(a).forEach((x) => content.push(x))
+  ejercicioNodes(a).forEach((x) => content.push(x))
   bibliografiaNodes(a).forEach((x) => content.push(x))
   return render(docDef(content, a, { coverBg: true }))
 }

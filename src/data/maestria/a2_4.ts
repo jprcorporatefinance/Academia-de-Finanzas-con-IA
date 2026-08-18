@@ -145,6 +145,21 @@ export const a2_4: Asignatura = {
       { label: 'Valor liberado', xl: '="Reducir el CCE en "&[diasRed]&" días libera "&TEXT([capLib],"#,##0")&" miles de capital y suma "&TEXT([evaAd],"#,##0")&" miles de EVA — sin vender una unidad más. Ordenar el capital de trabajo rinde más que pelear margen."' },
     ],
   },
+  ejercicio: {
+    titulo: 'Ciclo de conversión de efectivo',
+    enunciado: 'Calculá el CCE de una empresa comercial y descomponelo en sus tres términos.',
+    datos: [
+      { t: 'table', title: 'Datos (miles de $)', headers: ['Concepto', 'Valor'], firstColLeft: true, rows: [
+        ['Inventario', '900'], ['Costo de mercadería vendida', '6.000'], ['Cuentas por cobrar', '800'], ['Ventas', '10.000'], ['Proveedores', '500'],
+      ] },
+    ],
+    preguntas: ['¿Cuánto valen DIO, DSO y DPO?', '¿Cuál es el CCE?'],
+    solucion: [
+      { t: 'formula', name: 'Días', expr: 'DIO = 900/6.000×365 = 54,8 · DSO = 800/10.000×365 = 29,2 · DPO = 500/6.000×365 = 30,4' },
+      { t: 'formula', name: 'CCE', expr: 'CCE = DIO + DSO − DPO = 54,8 + 29,2 − 30,4 = 53,6 días' },
+      { t: 'idea', md: 'El ciclo es de **≈ 54 días**: la empresa financia casi dos meses de operación. Cada día que se reduzca (menos inventario o mejor cobranza) libera capital y mejora el ROIC/EVA sin vender más.' },
+    ],
+  },
   quiz: [
     { id: 'q1', pregunta: 'El ciclo de conversión de efectivo (CCE) se calcula como:', opciones: ['DIO − DSO + DPO.', 'DIO + DSO − DPO.', 'DSO + DPO − DIO.', 'DIO × DSO × DPO.'], correcta: 1, justificacion: 'CCE = días de inventario + días de cobranza − días de pago. Los proveedores financian parte del ciclo, por eso se restan. Las otras combinaciones no representan el ciclo.' },
     { id: 'q2', pregunta: '¿Por qué en un mercado emergente la mayor palanca de retorno suele estar en el CCE y no en el margen?', opciones: ['Porque el margen no importa.', 'Porque el capital es caro y escaso: liberar capital del ciclo baja el capital invertido y sube el ROIC/EVA.', 'Porque el CCE no afecta el capital.', 'Porque la inflación es baja.'], correcta: 1, justificacion: 'Con capital caro, cada día de ciclo cuesta mucho; liberar capital de trabajo mejora el ROIC/EVA sin tocar el margen. El margen sí importa, pero el ciclo suele rendir más y el capital es justamente lo que el CCE mueve.' },

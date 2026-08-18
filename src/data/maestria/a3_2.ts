@@ -132,6 +132,21 @@ export const a3_2: Asignatura = {
       { label: 'Gobierno', xl: '="Cada decisión debe poder explicarse por el aporte de sus variables (utilización, atrasos, antigüedad, exposición). Un scoring que no se explica no se usa para decidir crédito."' },
     ],
   },
+  ejercicio: {
+    titulo: 'Puntuar un cliente con la regresión logística',
+    enunciado: 'Aplicá el modelo de scoring del caso a un cliente concreto y decidí si aprobar, revisar o rechazar.',
+    datos: [
+      { t: 'table', title: 'Cliente y modelo', headers: ['Elemento', 'Valor'], firstColLeft: true, rows: [
+        ['Intercepto (b₀)', '−1,50'], ['Antigüedad (coef −0,30)', '3 años'], ['Utilización del límite (coef 2,50)', '0,80'], ['Atrasos recientes (coef 1,20)', '1'], ['Exposición relativa (coef 1,00)', '0,40'], ['Umbral Revisar / Rechazar', 'PD > 30% / 55%'],
+      ] },
+    ],
+    preguntas: ['¿Cuál es el score z?', '¿Cuál es la PD y qué decisión sugiere?'],
+    solucion: [
+      { t: 'formula', name: 'Score z', expr: 'z = −1,5 + (−0,3×3) + (2,5×0,8) + (1,2×1) + (1,0×0,4) = −1,5 − 0,9 + 2,0 + 1,2 + 0,4 = 1,2' },
+      { t: 'formula', name: 'Probabilidad de default', expr: 'PD = 1/(1+e^−1,2) = 1/(1+0,301) = 0,769 → 76,9%' },
+      { t: 'idea', md: 'PD ≈ **77 % > 55 % → RECHAZAR**. Pesan la alta utilización del límite (0,80) y el atraso reciente. La decisión es explicable variable por variable, condición para usarla en crédito.' },
+    ],
+  },
   quiz: [
     { id: 'q1', pregunta: 'Predecir si un cliente pagará o no (paga/no paga) es un problema de:', opciones: ['Regresión.', 'Clasificación supervisada.', 'Clustering.', 'Aprendizaje por refuerzo.'], correcta: 1, justificacion: 'Predecir una clase con datos etiquetados es clasificación supervisada. La regresión predice números; el clustering no usa etiquetas; el refuerzo aprende de recompensas.' },
     { id: 'q2', pregunta: 'El sobreajuste (overfitting) es:', opciones: ['Cuando el modelo generaliza muy bien.', 'Cuando el modelo memoriza el ruido del entrenamiento y falla en datos nuevos.', 'Un tipo de gráfico.', 'Falta de datos.'], correcta: 1, justificacion: 'Overfitting = ajustar el ruido en vez de la señal, con mal desempeño fuera de muestra. Es lo opuesto a generalizar bien.' },
