@@ -82,16 +82,16 @@ export default function ApalancamientoSimulator() {
         <div className="h-72 w-full">
           <ResponsiveContainer>
             <LineChart data={data} margin={{ top: 10, right: 20, bottom: 10, left: 0 }}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#1a2740" />
-              <XAxis dataKey="dr" unit="%" stroke="#64748b" tick={{ fontSize: 12 }} label={{ value: 'Deuda / Capital', position: 'insideBottom', offset: -5, fill: '#64748b', fontSize: 12 }} />
-              <YAxis unit="%" stroke="#64748b" tick={{ fontSize: 12 }} />
+              <CartesianGrid strokeDasharray="3 3" stroke="#242830" />
+              <XAxis dataKey="dr" unit="%" stroke="#8b9099" tick={{ fontSize: 12 }} label={{ value: 'Deuda / Capital', position: 'insideBottom', offset: -5, fill: '#8b9099', fontSize: 12 }} />
+              <YAxis unit="%" stroke="#8b9099" tick={{ fontSize: 12 }} />
               <Tooltip
-                contentStyle={{ background: '#0b1120', border: '1px solid #243453', borderRadius: 12 }}
-                labelStyle={{ color: '#e3c156' }}
+                contentStyle={{ background: '#0a0c0f', border: '1px solid #242830', borderRadius: 12 }}
+                labelStyle={{ color: '#2ebe8c' }}
                 formatter={(v: number) => [`${v}%`, 'ROE']}
               />
-              <ReferenceLine x={Math.round(debtRatio * 100)} stroke="#d4af37" strokeDasharray="4 4" />
-              <Line type="monotone" dataKey="roe" stroke="#34d399" strokeWidth={2.5} dot={false} />
+              <ReferenceLine x={Math.round(debtRatio * 100)} stroke="#1e8f6b" strokeDasharray="4 4" />
+              <Line type="monotone" dataKey="roe" stroke="#2ebe8c" strokeWidth={2.5} dot={false} />
             </LineChart>
           </ResponsiveContainer>
         </div>

@@ -11,7 +11,7 @@ export const seedUsers: User[] = [
     password: 'admin123',
     role: 'admin',
     position: 'Director del Programa',
-    avatarColor: '#d4af37',
+    avatarColor: '#1e8f6b',
     createdAt: '2026-01-10T10:00:00Z',
   },
   {
@@ -22,7 +22,7 @@ export const seedUsers: User[] = [
     role: 'student',
     company: 'Textil del Sur S.A.',
     position: 'CEO',
-    avatarColor: '#34d399',
+    avatarColor: '#2ebe8c',
     createdAt: '2026-01-15T10:00:00Z',
   },
   {

@@ -96,16 +96,16 @@ export default function AlumnosPage() {
               <div className="h-56 w-full">
                 <ResponsiveContainer>
                   <BarChart data={data} margin={{ top: 10, right: 10, bottom: 0, left: -10 }}>
-                    <CartesianGrid strokeDasharray="3 3" stroke="#1a2740" />
-                    <XAxis dataKey="sem" stroke="#64748b" tick={{ fontSize: 11 }} />
-                    <YAxis domain={[0, 100]} unit="%" stroke="#64748b" tick={{ fontSize: 11 }} />
+                    <CartesianGrid strokeDasharray="3 3" stroke="#242830" />
+                    <XAxis dataKey="sem" stroke="#8b9099" tick={{ fontSize: 11 }} />
+                    <YAxis domain={[0, 100]} unit="%" stroke="#8b9099" tick={{ fontSize: 11 }} />
                     <Tooltip
-                      contentStyle={{ background: '#0b1120', border: '1px solid #243453', borderRadius: 12 }}
+                      contentStyle={{ background: '#0a0c0f', border: '1px solid #242830', borderRadius: 12 }}
                       formatter={(v: number) => [`${v}%`, 'Quiz']}
                     />
                     <Bar dataKey="score" radius={[5, 5, 0, 0]}>
                       {data.map((d, i) => (
-                        <Cell key={i} fill={d.done ? '#34d399' : '#243453'} />
+                        <Cell key={i} fill={d.done ? '#2ebe8c' : '#242830'} />
                       ))}
                     </Bar>
                   </BarChart>

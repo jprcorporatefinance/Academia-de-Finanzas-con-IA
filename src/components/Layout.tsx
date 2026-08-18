@@ -12,7 +12,6 @@ import {
   LogOut,
   Menu,
   X,
-  TrendingUp,
 } from 'lucide-react'
 
 const studentNav = [
@@ -51,12 +50,17 @@ export function Layout({ children }: { children: ReactNode }) {
       >
         <div className="flex h-full flex-col">
           <Link to="/app" className="flex items-center gap-2.5 border-b border-ink-700 px-5 py-4" onClick={() => setOpen(false)}>
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-gold-300 to-gold-500 text-ink-950">
-              <TrendingUp size={20} />
-            </div>
+            <svg width="30" height="26" viewBox="0 0 52 46" aria-hidden="true" className="shrink-0">
+              <rect x="0" y="26" width="9" height="20" rx="2.5" fill="#8fd3b7" />
+              <rect x="13" y="14" width="9" height="32" rx="2.5" fill="#2ebe8c" />
+              <rect x="26" y="2" width="9" height="44" rx="2.5" fill="#1e8f6b" />
+              <rect x="45" y="3" width="2" height="40" rx="1" fill="#12614a" />
+            </svg>
             <div className="leading-tight">
-              <div className="text-sm font-bold text-slate-100">Academia FC + IA</div>
-              <div className="text-[10px] uppercase tracking-wider text-gold-400">Programa CEO</div>
+              <div className="font-serif text-sm font-bold text-slate-100">
+                JPR<span className="text-danger-400">.</span> Consulting
+              </div>
+              <div className="text-[10px] uppercase tracking-wider text-gold-300">Academia FC + IA</div>
             </div>
           </Link>
 
@@ -122,7 +126,7 @@ export function Layout({ children }: { children: ReactNode }) {
           <button onClick={() => setOpen((o) => !o)} className="btn-ghost px-2.5 py-2">
             {open ? <X size={18} /> : <Menu size={18} />}
           </button>
-          <span className="font-bold text-slate-100">Academia FC + IA</span>
+          <span className="font-serif font-bold text-slate-100">JPR<span className="text-danger-400">.</span> Consulting</span>
         </header>
         <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-6 lg:px-8 lg:py-8">{children}</main>
       </div>

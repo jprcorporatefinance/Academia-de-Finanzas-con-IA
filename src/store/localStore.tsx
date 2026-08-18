@@ -57,7 +57,7 @@ function load(): PersistedState {
   }
 }
 
-const avatarPalette = ['#34d399', '#60a5fa', '#f472b6', '#fbbf24', '#a78bfa', '#f87171']
+const avatarPalette = ['#2ebe8c', '#60a5fa', '#f472b6', '#fbbf24', '#a78bfa', '#f87171']
 
 export function LocalStoreProvider({ children }: { children: ReactNode }) {
   const [state, setState] = useState<PersistedState>(load)

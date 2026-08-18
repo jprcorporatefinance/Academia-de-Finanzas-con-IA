@@ -114,20 +114,20 @@ export function ItemModelView({ model }: { model: ItemModel }) {
             <div className="h-48 w-full">
               <ResponsiveContainer>
                 <LineChart data={chartData} margin={{ top: 8, right: 12, bottom: 4, left: 0 }}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="#1a2740" />
+                  <CartesianGrid strokeDasharray="3 3" stroke="#242830" />
                   <XAxis
                     dataKey="x"
-                    stroke="#64748b"
+                    stroke="#8b9099"
                     tick={{ fontSize: 11 }}
                     tickFormatter={(x) => fmtVal(x, chartInput.fmt)}
                   />
-                  <YAxis stroke="#64748b" tick={{ fontSize: 11 }} tickFormatter={(y) => fmtVal(y, model.chart!.yFmt ?? chartOut.fmt)} width={48} />
+                  <YAxis stroke="#8b9099" tick={{ fontSize: 11 }} tickFormatter={(y) => fmtVal(y, model.chart!.yFmt ?? chartOut.fmt)} width={48} />
                   <Tooltip
-                    contentStyle={{ background: '#0b1120', border: '1px solid #243453', borderRadius: 12 }}
+                    contentStyle={{ background: '#0a0c0f', border: '1px solid #242830', borderRadius: 12 }}
                     labelFormatter={(x) => `${chartInput.label}: ${fmtVal(Number(x), chartInput.fmt)}`}
                     formatter={(y: number) => [fmtVal(y, model.chart!.yFmt ?? chartOut.fmt), chartOut.label]}
                   />
-                  <Line type="monotone" dataKey="y" stroke="#d4af37" strokeWidth={2.5} dot={false} />
+                  <Line type="monotone" dataKey="y" stroke="#1e8f6b" strokeWidth={2.5} dot={false} />
                 </LineChart>
               </ResponsiveContainer>
             </div>

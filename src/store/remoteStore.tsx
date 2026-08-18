@@ -32,7 +32,7 @@ const toUser = (r: any): User => ({
   role: r.role,
   company: r.company ?? undefined,
   position: r.position ?? undefined,
-  avatarColor: r.avatar_color ?? '#34d399',
+  avatarColor: r.avatar_color ?? '#2ebe8c',
   createdAt: r.created_at,
 })
 const toProgress = (r: any): LessonProgress => ({

@@ -62,16 +62,16 @@ export default function ValuacionSimulator() {
           <div className="h-56 w-full">
             <ResponsiveContainer>
               <BarChart data={chartData} margin={{ top: 10, right: 10, bottom: 0, left: 0 }}>
-                <CartesianGrid strokeDasharray="3 3" stroke="#1a2740" />
-                <XAxis dataKey="name" stroke="#64748b" tick={{ fontSize: 11 }} />
-                <YAxis stroke="#64748b" tick={{ fontSize: 11 }} />
+                <CartesianGrid strokeDasharray="3 3" stroke="#242830" />
+                <XAxis dataKey="name" stroke="#8b9099" tick={{ fontSize: 11 }} />
+                <YAxis stroke="#8b9099" tick={{ fontSize: 11 }} />
                 <Tooltip
-                  contentStyle={{ background: '#0b1120', border: '1px solid #243453', borderRadius: 12 }}
+                  contentStyle={{ background: '#0a0c0f', border: '1px solid #242830', borderRadius: 12 }}
                   formatter={(v: number) => [num(v), 'Valor presente']}
                 />
                 <Bar dataKey="valor" radius={[6, 6, 0, 0]}>
                   {chartData.map((d, i) => (
-                    <Cell key={i} fill={d.terminal ? '#d4af37' : '#34d399'} />
+                    <Cell key={i} fill={d.terminal ? '#1e8f6b' : '#2ebe8c'} />
                   ))}
                 </Bar>
               </BarChart>

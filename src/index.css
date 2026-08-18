@@ -13,23 +13,31 @@ body,
 }
 
 body {
-  @apply bg-ink-950 text-slate-200 font-sans antialiased;
+  @apply bg-ink-900 text-slate-200 font-sans antialiased;
 }
 
-/* Scrollbar premium */
+/* Titulares en Spectral (identidad JPR) */
+h1,
+h2,
+h3 {
+  @apply font-serif;
+  letter-spacing: -0.02em;
+}
+
+/* Scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #0b1120;
+  background: #0a0c0f;
 }
 ::-webkit-scrollbar-thumb {
-  background: #243453;
+  background: #33373d;
   border-radius: 6px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #2f4570;
+  background: #1e8f6b;
 }
 
 @layer components {
@@ -88,6 +96,6 @@ body {
 
 .bg-radial-spotlight {
   background:
-    radial-gradient(900px 500px at 50% -10%, rgba(212, 175, 55, 0.12), transparent 60%),
-    radial-gradient(700px 500px at 100% 0%, rgba(16, 185, 129, 0.08), transparent 55%);
+    radial-gradient(900px 500px at 50% -10%, rgba(30, 143, 107, 0.14), transparent 60%),
+    radial-gradient(700px 500px at 100% 0%, rgba(46, 190, 140, 0.08), transparent 55%);
 }
