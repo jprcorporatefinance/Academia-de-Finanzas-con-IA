@@ -110,5 +110,61 @@
     "cuestionario": "/maestria/a2-4/a2-4-Cuestionario.pdf",
     "quiz": "/maestria/a2-4/a2-4-Quiz.json",
     "preguntas": 15
+  },
+  {
+    "cod": "3.1",
+    "slug": "a3-1",
+    "cuatrimestre": 3,
+    "nombre": "Costo del Capital en Mercados Emergentes y Empresas sin Cotización",
+    "fase": "Predictiva · ¿Qué es probable que ocurra?",
+    "horas": "36 h · 16 teóricas / 20 prácticas",
+    "resumen": "Estimar el costo del capital de una empresa que no cotiza en un mercado emergente, con las correcciones que el CAPM clásico exige: Beta Total para el dueño no diversificado, y riesgo país sin doble conteo (Pereiro y lambda de Damodaran).",
+    "pdf": "/maestria/a3-1/a3-1-PDF.pdf",
+    "caso": "/maestria/a3-1/a3-1-Caso.xlsx",
+    "cuestionario": "/maestria/a3-1/a3-1-Cuestionario.pdf",
+    "quiz": "/maestria/a3-1/a3-1-Quiz.json",
+    "preguntas": 15
+  },
+  {
+    "cod": "3.2",
+    "slug": "a3-2",
+    "cuatrimestre": 3,
+    "nombre": "Aprendizaje Automático y Aprendizaje Profundo Aplicados a Finanzas Corporativas",
+    "fase": "Predictiva · ¿Qué es probable que ocurra?",
+    "horas": "36 h · 14 teóricas / 22 prácticas",
+    "resumen": "Aplicar aprendizaje automático a problemas de finanzas corporativas —predicción de mora, demanda y quiebra— con conciencia de sus supuestos, del sobreajuste y de la exigencia de interpretabilidad que impone la decisión financiera.",
+    "pdf": "/maestria/a3-2/a3-2-PDF.pdf",
+    "caso": "/maestria/a3-2/a3-2-Caso.xlsx",
+    "cuestionario": "/maestria/a3-2/a3-2-Cuestionario.pdf",
+    "quiz": "/maestria/a3-2/a3-2-Quiz.json",
+    "preguntas": 15
+  },
+  {
+    "cod": "3.3",
+    "slug": "a3-3",
+    "cuatrimestre": 3,
+    "nombre": "Proyección Corporativa, Simulación de Monte Carlo y Cuantificación del Riesgo",
+    "fase": "Predictiva · ¿Qué es probable que ocurra?",
+    "horas": "36 h · 14 teóricas / 22 prácticas",
+    "resumen": "Proyectar el futuro probable de la empresa por sus generadores de valor y, en vez de un número único, producir una distribución de resultados con simulación de Monte Carlo y métricas de riesgo.",
+    "pdf": "/maestria/a3-3/a3-3-PDF.pdf",
+    "caso": "/maestria/a3-3/a3-3-Caso.xlsx",
+    "cuestionario": "/maestria/a3-3/a3-3-Cuestionario.pdf",
+    "quiz": "/maestria/a3-3/a3-3-Quiz.json",
+    "preguntas": 15
+  },
+  {
+    "cod": "3.4",
+    "slug": "a3-4",
+    "cuatrimestre": 3,
+    "nombre": "Ingeniería de Agentes de Inteligencia Artificial para la Función Financiera",
+    "fase": "Predictiva · ¿Qué es probable que ocurra?",
+    "horas": "36 h · 12 teóricas / 24 prácticas",
+    "resumen": "Diseñar, construir y gobernar agentes de inteligencia artificial para la función financiera: un modelo de lenguaje que razona, usa herramientas (el servidor MCP de la 1.2) y actúa bajo guardarraíles, con el humano en el bucle y auditoría de cada paso.",
+    "pdf": "/maestria/a3-4/a3-4-PDF.pdf",
+    "caso": "/maestria/a3-4/a3-4-Caso.xlsx",
+    "cuestionario": "/maestria/a3-4/a3-4-Cuestionario.pdf",
+    "quiz": "/maestria/a3-4/a3-4-Quiz.json",
+    "preguntas": 15
   }
 ]

@@ -9,7 +9,7 @@ import type { Asignatura, ExcelModel, Fmt } from '../../src/data/maestria/types'
 
 // Funciones modernas que exigen prefijo _xlfn. para escribirse en el XML.
 const MODERN = [
-  'LET', 'LAMBDA', 'SEQUENCE', 'MAKEARRAY', 'SCAN', 'REDUCE', 'MAP', 'BYROW', 'BYCOL',
+  'LET', 'LAMBDA', 'SEQUENCE', 'MAKEARRAY', 'RANDARRAY', 'SCAN', 'REDUCE', 'MAP', 'BYROW', 'BYCOL',
   'HSTACK', 'VSTACK', 'TAKE', 'DROP', 'EXPAND', 'TOROW', 'TOCOL', 'CHOOSEROWS', 'CHOOSECOLS',
   'XLOOKUP', 'XMATCH', 'IFS', 'SWITCH', 'TEXTJOIN',
   'TEXTSPLIT', 'TEXTBEFORE', 'TEXTAFTER', 'NORM.S.DIST', 'NORM.DIST', 'NORM.S.INV',

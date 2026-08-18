@@ -1,0 +1,159 @@
+import type { Asignatura } from './types'
+
+// ============================================================================
+// ASIGNATURA 3.2 — Aprendizaje Automático y Aprendizaje Profundo Aplicados a
+// Finanzas Corporativas
+// ============================================================================
+export const a3_2: Asignatura = {
+  cod: '3.2',
+  slug: 'a3-2',
+  cuatrimestre: 3,
+  fase: 'Predictiva · ¿Qué es probable que ocurra?',
+  nombre: 'Aprendizaje Automático y Aprendizaje Profundo Aplicados a Finanzas Corporativas',
+  horas: '36 h · 14 teóricas / 22 prácticas',
+  correlativas: 'Correlativa: 1.3 · Tercer cuatrimestre',
+  framework: 'Géron · Hastie/Tibshirani · López de Prado',
+  resumen:
+    'Aplicar aprendizaje automático a problemas de finanzas corporativas —predicción de mora, demanda y quiebra— con conciencia de sus supuestos, del sobreajuste y de la exigencia de interpretabilidad que impone la decisión financiera.',
+  objetivos: [
+    'Distinguir aprendizaje supervisado, no supervisado y por refuerzo, y elegir el modelo según el problema.',
+    'Entrenar y validar modelos evitando el sobreajuste, con partición y validación cruzada.',
+    'Evaluar clasificadores con las métricas correctas (matriz de confusión, AUC, precisión/recall).',
+    'Exigir interpretabilidad: en finanzas, un modelo que no se puede explicar no se puede usar para decidir.',
+  ],
+  sections: [
+    {
+      title: 'El mapa del aprendizaje automático',
+      intro: 'Antes del algoritmo, el tipo de problema. La elección del modelo se deriva de la pregunta, no de la moda.',
+      blocks: [
+        { t: 'ul', items: [
+          '**Supervisado:** se aprende de ejemplos etiquetados. Regresión (predecir un número: demanda, ventas) y clasificación (predecir una clase: paga / no paga).',
+          '**No supervisado:** se buscan estructuras sin etiquetas. Segmentación de clientes (clustering), detección de anomalías (fraude).',
+          '**Por refuerzo:** se aprende de la interacción con un entorno mediante recompensas. Menos frecuente en finanzas corporativas.',
+        ] },
+        { t: 'p', md: 'Los modelos van de los **lineales** (regresión logística, interpretable y robusta) a los **ensambles de árboles** (random forest, *gradient boosting* como XGBoost, potentes y no lineales) y las **redes neuronales** (aprendizaje profundo, para patrones complejos y datos no estructurados).' },
+        { t: 'idea', md: 'La navaja de Occam financiera: empezá por el modelo más simple que resuelva el problema. Un modelo lineal interpretable que un directorio entiende suele ser preferible a un ensamble opaco que gana 1 % de precisión y nadie puede explicar.' },
+      ],
+    },
+    {
+      title: 'Entrenar sin engañarse: sobreajuste y validación',
+      intro: 'El pecado capital del aprendizaje automático es memorizar en lugar de aprender.',
+      blocks: [
+        { t: 'ul', items: [
+          '**Partición** en entrenamiento, validación y prueba. El modelo nunca se evalúa con datos que vio.',
+          '**Sobreajuste (overfitting):** el modelo memoriza el ruido del entrenamiento y falla en datos nuevos. Se combate con **regularización** y modelos más simples.',
+          '**Validación cruzada:** rotar el conjunto de validación para una estimación robusta del desempeño.',
+        ] },
+        { t: 'warn', md: 'En finanzas hay un sobreajuste especialmente traicionero: el **sesgo de anticipación** (usar información que no estaría disponible al momento de decidir) y el **data snooping** (probar mil modelos hasta que uno “funciona” por azar). López de Prado documenta cómo estos errores producen backtests brillantes y modelos inútiles.' },
+      ],
+    },
+    {
+      title: 'Evaluar un clasificador',
+      intro: 'La exactitud (accuracy) sola miente, sobre todo con clases desbalanceadas como la mora.',
+      blocks: [
+        { t: 'formula', name: 'Matriz de confusión', expr: 'VP · FP · FN · VN  →  Precisión = VP/(VP+FP) · Recall = VP/(VP+FN)', where: 'VP verdaderos positivos · FP falsos positivos · FN falsos negativos · VN verdaderos negativos', note: 'Si solo el 3 % de los clientes cae en mora, un modelo que dice “nadie cae” acierta el 97 %… y es inútil. Por eso se miran precisión, recall y AUC.' },
+        { t: 'p', md: 'El **AUC** (área bajo la curva ROC) mide la capacidad de ordenar el riesgo con independencia del umbral. La elección del **umbral de corte** es una decisión de negocio: depende del costo de un falso positivo (rechazar a un buen cliente) frente al de un falso negativo (aprobar a uno que no paga).' },
+      ],
+    },
+    {
+      title: 'Interpretabilidad y gobierno del modelo',
+      intro: 'En finanzas, la caja negra es un pasivo. Explicar por qué el modelo decide es parte del producto.',
+      blocks: [
+        { t: 'p', md: 'Técnicas como **SHAP** e **importancia de variables** abren la caja negra: muestran cuánto pesa cada factor en cada decisión. Un modelo de crédito debe poder explicar por qué rechazó a un cliente —lo exige la ética, y muchas veces la regulación—.' },
+        { t: 'quote', author: 'Marcos López de Prado', credential: 'Advances in Financial Machine Learning', md: 'La mayoría de los descubrimientos en finanzas cuantitativas son falsos positivos. El rigor —validación adecuada, control del data snooping, comprensión del modelo— es lo que separa la ciencia del autoengaño.' },
+        { t: 'idea', md: 'La conexión con el resto del programa: la red neuronal se construyó a mano en Excel (2.3) para desmitificarla; acá se usa en serio, pero con la misma disciplina de auditar y explicar. La potencia sin interpretabilidad no es un activo en finanzas: es un riesgo.' },
+      ],
+    },
+  ],
+  expertos: [
+    { author: 'Aurélien Géron', credential: 'Hands-On Machine Learning', md: 'El flujo real de un proyecto de ML es 80 % preparación de datos y validación honesta, 20 % modelo. El algoritmo de moda importa mucho menos que la disciplina del proceso.' },
+    { author: 'Marcos López de Prado', credential: 'Cornell / ADIA', md: 'En finanzas, validar mal es peor que no validar: da falsa confianza. El backtest overfitting es la principal causa de estrategias que fallan en producción.' },
+    { author: 'Trevor Hastie & Robert Tibshirani', credential: 'The Elements of Statistical Learning', md: 'Existe un compromiso ineludible entre sesgo y varianza: modelos muy flexibles reducen el sesgo pero disparan la varianza. El arte está en el punto medio.' },
+  ],
+  caso: {
+    titulo: 'Scoring de riesgo crediticio de la cartera',
+    empresa: 'Maderas del Litoral S.A. — ¿a quién le vendo a crédito?',
+    contexto:
+      'Maderas del Litoral vende a plazo a corralones y constructoras. La mora ata capital de trabajo (asignatura 2.4) y a veces se vuelve incobrable. El área comercial decide a ojo a quién dar crédito y con qué límite.\n\nEl consultor propone un **modelo de scoring**: una regresión logística que, a partir de unas pocas variables por cliente (antigüedad, utilización del límite, atrasos recientes, exposición relativa), estima la probabilidad de default y sugiere aprobar, revisar o rechazar. Se entrena, se evalúa con la matriz de confusión y —clave— se explica: cada rechazo tiene un porqué.\n\nEl entregable respeta la regla del programa: un modelo que el directorio no entiende no se aprueba.',
+    datos: [
+      { t: 'table', title: 'Coeficientes del modelo (logit) y umbrales', headers: ['Elemento', 'Valor'], firstColLeft: true, rows: [
+        ['Intercepto (b₀)', '−1,50'],
+        ['Antigüedad del cliente (años)', '−0,30'],
+        ['Utilización del límite', '2,50'],
+        ['Atrasos recientes (cantidad)', '1,20'],
+        ['Exposición relativa', '1,00'],
+        ['Umbral “Revisar”', 'PD > 30%'],
+        ['Umbral “Rechazar”', 'PD > 55%'],
+      ] },
+    ],
+    consigna: [
+      '¿Cuál es la probabilidad de default (PD) de cada cliente según el modelo?',
+      '¿Qué decisión (aprobar/revisar/rechazar) sugiere cada PD?',
+      '¿Cuál es la exactitud del modelo contra la mora efectiva observada (matriz de confusión)?',
+      '¿Por qué la interpretabilidad del modelo es condición para usarlo en la decisión de crédito?',
+    ],
+    metodologia: [
+      { k: 'Puntuar (logit)', d: 'z = Xβ + b₀ para cada cliente (MMULT de la matriz de features por los coeficientes).' },
+      { k: 'Convertir a PD', d: 'PD = 1/(1+e^−z) (función sigmoide).' },
+      { k: 'Decidir', d: 'Aplicar los umbrales de negocio (aprobar/revisar/rechazar).' },
+      { k: 'Evaluar', d: 'Matriz de confusión y exactitud contra la mora observada.' },
+      { k: 'Explicar', d: 'Mostrar el aporte de cada variable a la decisión.' },
+    ],
+  },
+  model: {
+    sheetTitle: 'Scoring crediticio de la cartera (regresión logística con MMULT)',
+    intro:
+      'Editá los coeficientes y umbrales (celdas marfil). El score de cada cliente se calcula con MMULT (features × coeficientes) y la sigmoide; una sola fórmula derrama toda la cartera con su PD y decisión, y se computa la exactitud contra la mora observada.',
+    inputs: [
+      { key: 'b0', label: 'Intercepto (b₀)', value: -1.5, fmt: 'num2' },
+      { key: 'cAnt', label: 'Coef. antigüedad', value: -0.30, fmt: 'num2' },
+      { key: 'cUtil', label: 'Coef. utilización del límite', value: 2.50, fmt: 'num2' },
+      { key: 'cAtr', label: 'Coef. atrasos recientes', value: 1.20, fmt: 'num2' },
+      { key: 'cExp', label: 'Coef. exposición relativa', value: 1.00, fmt: 'num2' },
+      { key: 'thrRev', label: 'Umbral “Revisar” (PD >)', value: 0.30, fmt: 'pct' },
+      { key: 'thrRech', label: 'Umbral “Rechazar” (PD >)', value: 0.55, fmt: 'pct' },
+    ],
+    calcs: [
+      { key: 'accuracy', label: 'Exactitud del modelo (vs mora observada)', xl: '=LET(X,{2,0.30,0,0.20;1,0.85,2,0.60;5,0.20,0,0.15;3,0.95,3,0.80;8,0.10,0,0.05;2,0.70,1,0.45;1,0.60,0,0.35;4,0.40,1,0.25}, real,{0;1;0;1;0;1;0;0}, z,MMULT(X,VSTACK([cAnt],[cUtil],[cAtr],[cExp]))+[b0], pd,1/(1+EXP(-z)), pred,IF(pd>0.5,1,0), AVERAGE(IF(pred=real,1,0)))', fmt: 'pct', highlight: true },
+    ],
+    spills: [
+      {
+        key: 'cartera',
+        title: 'Scoring de la cartera (una fórmula: MMULT + sigmoide + decisión)',
+        columns: ['Cliente', 'Score z', 'PD', 'Decisión', 'Mora real'],
+        xl: '=LET(nom,{"Corralón Norte";"Constructora Sur";"Maderera Este";"Obras del Río";"Aberturas Centro";"Techos SA";"Pinos SRL";"Casa y Campo"}, X,{2,0.30,0,0.20;1,0.85,2,0.60;5,0.20,0,0.15;3,0.95,3,0.80;8,0.10,0,0.05;2,0.70,1,0.45;1,0.60,0,0.35;4,0.40,1,0.25}, real,{"No";"Sí";"No";"Sí";"No";"Sí";"No";"No"}, z,MMULT(X,VSTACK([cAnt],[cUtil],[cAtr],[cExp]))+[b0], pd,1/(1+EXP(-z)), dec,IF(pd>[thrRech],"Rechazar",IF(pd>[thrRev],"Revisar","Aprobar")), HSTACK(nom,z,pd,dec,real))',
+        formats: [undefined, 'num2', 'pct', undefined, undefined],
+        rows: 8,
+        note: 'La matriz de features por los coeficientes (MMULT) da el score; la sigmoide lo convierte en PD; los umbrales deciden. Cambiá un coeficiente y toda la cartera se recalcula.',
+      },
+    ],
+    conclusions: [
+      { label: 'Desempeño', xl: '="Exactitud del modelo contra la mora observada: "&TEXT([accuracy],"0%")&". En cartera desbalanceada, mirar también precisión y recall, no solo la exactitud."' },
+      { label: 'Gobierno', xl: '="Cada decisión debe poder explicarse por el aporte de sus variables (utilización, atrasos, antigüedad, exposición). Un scoring que no se explica no se usa para decidir crédito."' },
+    ],
+  },
+  quiz: [
+    { id: 'q1', pregunta: 'Predecir si un cliente pagará o no (paga/no paga) es un problema de:', opciones: ['Regresión.', 'Clasificación supervisada.', 'Clustering.', 'Aprendizaje por refuerzo.'], correcta: 1, justificacion: 'Predecir una clase con datos etiquetados es clasificación supervisada. La regresión predice números; el clustering no usa etiquetas; el refuerzo aprende de recompensas.' },
+    { id: 'q2', pregunta: 'El sobreajuste (overfitting) es:', opciones: ['Cuando el modelo generaliza muy bien.', 'Cuando el modelo memoriza el ruido del entrenamiento y falla en datos nuevos.', 'Un tipo de gráfico.', 'Falta de datos.'], correcta: 1, justificacion: 'Overfitting = ajustar el ruido en vez de la señal, con mal desempeño fuera de muestra. Es lo opuesto a generalizar bien.' },
+    { id: 'q3', pregunta: '¿Por qué la exactitud (accuracy) sola engaña con la mora?', opciones: ['Porque es difícil de calcular.', 'Porque con clases desbalanceadas un modelo que dice “nadie cae” acierta mucho y es inútil.', 'Porque no existe.', 'Porque siempre da 100%.'], correcta: 1, justificacion: 'Si la mora es rara (3%), predecir “nadie cae” da 97% de exactitud pero no detecta a ningún moroso. Por eso se usan precisión, recall y AUC.' },
+    { id: 'q4', pregunta: 'La función que convierte el score z en una probabilidad (0–1) en la regresión logística es:', opciones: ['La raíz cuadrada.', 'La sigmoide: 1/(1+e^−z).', 'El logaritmo.', 'La media.'], correcta: 1, justificacion: 'La sigmoide mapea cualquier z real a (0,1), interpretable como probabilidad. Las otras funciones no cumplen esa propiedad.' },
+    { id: 'q5', pregunta: 'La validación cruzada sirve para:', opciones: ['Aumentar los datos.', 'Estimar el desempeño de forma robusta rotando el conjunto de validación.', 'Entrenar más rápido.', 'Eliminar variables.'], correcta: 1, justificacion: 'La validación cruzada rota qué datos se usan para validar, dando una estimación más estable del desempeño. No crea datos ni acelera el entrenamiento por sí sola.' },
+    { id: 'q6', pregunta: 'El “data snooping” en finanzas consiste en:', opciones: ['Ordenar los datos.', 'Probar muchos modelos hasta que uno funciona por azar.', 'Limpiar valores faltantes.', 'Graficar series.'], correcta: 1, justificacion: 'Probar mil configuraciones y quedarse con la que “funcionó” genera falsos positivos por azar (López de Prado). No es ordenar ni limpiar datos.' },
+    { id: 'q7', pregunta: 'El sesgo de anticipación (look-ahead bias) es:', opciones: ['Usar información que no estaría disponible al momento de decidir.', 'Predecir el pasado.', 'Un tipo de regularización.', 'Un gráfico de barras.'], correcta: 0, justificacion: 'Look-ahead bias = filtrar información futura en el entrenamiento, inflando el desempeño irrealmente. No es regularización ni un gráfico.' },
+    { id: 'q8', pregunta: 'El AUC (área bajo la curva ROC) mide:', opciones: ['El costo del modelo.', 'La capacidad de ordenar el riesgo con independencia del umbral.', 'La cantidad de variables.', 'El tiempo de entrenamiento.'], correcta: 1, justificacion: 'El AUC evalúa qué tan bien el modelo ordena positivos sobre negativos sin fijar un umbral. No mide costo, cantidad de variables ni tiempo.' },
+    { id: 'q9', pregunta: 'La elección del umbral de corte en un scoring de crédito es:', opciones: ['Puramente técnica.', 'Una decisión de negocio: depende del costo de un falso positivo vs. un falso negativo.', 'Siempre 0,5.', 'Irrelevante.'], correcta: 1, justificacion: 'El umbral balancea rechazar buenos clientes (FP) contra aprobar malos (FN); es una decisión de negocio, no un 0,5 universal.' },
+    { id: 'q10', pregunta: 'En finanzas, ¿por qué importa la interpretabilidad del modelo?', opciones: ['Por estética.', 'Porque hay que explicar por qué se decide (ética, a veces regulación) y auditar el modelo.', 'Porque los modelos simples son siempre mejores.', 'No importa.'], correcta: 1, justificacion: 'Explicar una decisión de crédito es una exigencia ética y a menudo regulatoria; la caja negra es un pasivo. No es estética ni implica que lo simple siempre gane.' },
+    { id: 'q11', pregunta: 'SHAP y la importancia de variables sirven para:', opciones: ['Entrenar más rápido.', 'Abrir la caja negra: mostrar cuánto pesa cada factor en la decisión.', 'Borrar datos.', 'Cambiar el umbral.'], correcta: 1, justificacion: 'Son técnicas de interpretabilidad que atribuyen la decisión a cada variable. No aceleran el entrenamiento ni borran datos.' },
+    { id: 'q12', pregunta: 'El compromiso sesgo-varianza dice que:', opciones: ['Más flexibilidad siempre es mejor.', 'Modelos muy flexibles bajan el sesgo pero suben la varianza; hay un punto medio.', 'El sesgo y la varianza son lo mismo.', 'No existe.'], correcta: 1, justificacion: 'Aumentar la flexibilidad reduce el sesgo pero aumenta la varianza (y el sobreajuste); el arte está en equilibrarlos. No es que más flexibilidad siempre gane.' },
+    { id: 'q13', pregunta: 'La “navaja de Occam financiera” sugiere:', opciones: ['Usar siempre el modelo más complejo.', 'Empezar por el modelo más simple que resuelva el problema.', 'No usar modelos.', 'Elegir por moda.'], correcta: 1, justificacion: 'Preferir la simplicidad interpretable frente a la complejidad opaca que gana marginalmente. No es rechazar modelos ni seguir modas.' },
+    { id: 'q14', pregunta: 'Un ensamble de árboles (random forest, gradient boosting) es:', opciones: ['Un modelo lineal simple.', 'Un modelo no lineal potente, típicamente menos interpretable que una regresión.', 'Una hoja de cálculo.', 'Un tipo de gráfico.'], correcta: 1, justificacion: 'Los ensambles de árboles capturan no linealidades con gran poder predictivo, a costa de interpretabilidad. No son lineales ni un gráfico.' },
+    { id: 'q15', pregunta: 'Según López de Prado, la principal causa de estrategias que fallan en producción es:', opciones: ['Usar Excel.', 'El backtest overfitting (validar mal, dando falsa confianza).', 'Tener demasiados datos.', 'La interpretabilidad.'], correcta: 1, justificacion: 'Validar mal produce backtests brillantes y modelos inútiles: es la causa central de fracasos. No se debe a Excel, al exceso de datos ni a explicar el modelo.' },
+  ],
+  bibliografia: [
+    'Géron, A. — *Hands-On Machine Learning with Scikit-Learn, Keras & TensorFlow*',
+    'Hastie, T., Tibshirani, R. & Friedman, J. — *The Elements of Statistical Learning*',
+    'López de Prado, M. — *Advances in Financial Machine Learning*',
+    'James, Witten, Hastie & Tibshirani — *An Introduction to Statistical Learning*',
+    'Goodfellow, Bengio & Courville — *Deep Learning*',
+  ],
+}

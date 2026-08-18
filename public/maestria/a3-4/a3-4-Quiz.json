@@ -1,0 +1,186 @@
+{
+  "cod": "3.4",
+  "nombre": "Ingeniería de Agentes de Inteligencia Artificial para la Función Financiera",
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "Un agente de IA se distingue de un simple prompt porque:",
+      "opciones": [
+        "Es más largo.",
+        "Percibe, razona, elige y ejecuta herramientas, y reacciona a lo observado, en un bucle.",
+        "Usa más memoria RAM.",
+        "No usa un modelo de lenguaje."
+      ],
+      "correcta": 1,
+      "justificacion": "El agente actúa sobre el mundo mediante herramientas y cierra el bucle percibir-decidir-actuar-observar. Un prompt solo genera texto. Sí usa un modelo como motor."
+    },
+    {
+      "id": "q2",
+      "pregunta": "En este programa, las “herramientas” del agente son:",
+      "opciones": [
+        "Macros de Excel.",
+        "El servidor MCP de sólo lectura de la asignatura 1.2.",
+        "Acceso directo y total a la base.",
+        "Un buscador web."
+      ],
+      "correcta": 1,
+      "justificacion": "El agente llama a herramientas MCP auditadas de sólo lectura, preservando la trazabilidad. No accede directo a la base ni depende de macros o del buscador."
+    },
+    {
+      "id": "q3",
+      "pregunta": "El patrón ReAct consiste en:",
+      "opciones": [
+        "Reaccionar sin pensar.",
+        "Alternar pensamiento y acción, decidiendo el próximo paso según lo observado.",
+        "Reiniciar el agente.",
+        "Recompilar el código."
+      ],
+      "correcta": 1,
+      "justificacion": "ReAct (Reason + Act) intercala razonamiento y acciones con herramientas, ajustando según resultados. No es reacción ciega ni un reinicio."
+    },
+    {
+      "id": "q4",
+      "pregunta": "La “reflexión” como patrón de agente significa:",
+      "opciones": [
+        "Meditar.",
+        "Que el agente critica su propia salida y la corrige (auditor incorporado).",
+        "Copiar la respuesta.",
+        "Apagar el agente."
+      ],
+      "correcta": 1,
+      "justificacion": "La reflexión hace que el agente evalúe y mejore su propio resultado, como un auditor escéptico. No es meditación ni copiar."
+    },
+    {
+      "id": "q5",
+      "pregunta": "Según la guía de agentes de Anthropic, conviene:",
+      "opciones": [
+        "Usar siempre el agente más autónomo posible.",
+        "Empezar por la solución más simple y agregar complejidad solo cuando demuestre valor.",
+        "Evitar los flujos de trabajo.",
+        "No evaluar nada."
+      ],
+      "correcta": 1,
+      "justificacion": "La recomendación es minimizar complejidad: muchos problemas se resuelven con flujos definidos, no con autonomía máxima. La complejidad se justifica por su valor."
+    },
+    {
+      "id": "q6",
+      "pregunta": "¿Por qué en finanzas la autonomía del agente se concede de a poco?",
+      "opciones": [
+        "Porque es más lento.",
+        "Porque más autonomía = más difícil de predecir y auditar; se empieza por acciones reversibles.",
+        "Porque la IA no sirve.",
+        "Por moda."
+      ],
+      "correcta": 1,
+      "justificacion": "A mayor autonomía, menor previsibilidad y auditabilidad; en finanzas eso es riesgoso, así que se avanza gradualmente y sobre lo reversible."
+    },
+    {
+      "id": "q7",
+      "pregunta": "El “humano en el bucle” se aplica sobre todo a:",
+      "opciones": [
+        "Todas las consultas de lectura.",
+        "Las acciones críticas o irreversibles (aprobar un pago, rechazar un crédito).",
+        "Nada, el agente decide todo.",
+        "El encendido de la PC."
+      ],
+      "correcta": 1,
+      "justificacion": "El control humano se concentra en decisiones de alto impacto o irreversibles; las lecturas auditadas pueden fluir. No es que el agente decida todo ni que se controle cada lectura trivial."
+    },
+    {
+      "id": "q8",
+      "pregunta": "La alucinación de un modelo obliga a que:",
+      "opciones": [
+        "Se confíe en toda cifra que dé.",
+        "Toda cifra sea trazable a una herramienta, no generada por el modelo.",
+        "No se use IA.",
+        "Se redondee."
+      ],
+      "correcta": 1,
+      "justificacion": "Como el modelo puede inventar con seguridad, las cifras deben venir de herramientas auditadas y ser trazables. No se confía a ciegas ni se descarta la IA por ello."
+    },
+    {
+      "id": "q9",
+      "pregunta": "La “sobre-automatización” es riesgosa porque:",
+      "opciones": [
+        "Ahorra demasiado.",
+        "Automatizar un proceso mal entendido multiplica el error.",
+        "Es imposible.",
+        "Reduce el riesgo siempre."
+      ],
+      "correcta": 1,
+      "justificacion": "Automatizar sin entender y ordenar el proceso escala los errores. Primero se comprende, después se automatiza. No siempre reduce el riesgo."
+    },
+    {
+      "id": "q10",
+      "pregunta": "La regla de oro de gobierno de un agente financiero es:",
+      "opciones": [
+        "La IA es responsable.",
+        "La responsabilidad final es humana.",
+        "Nadie es responsable.",
+        "El proveedor del modelo es responsable."
+      ],
+      "correcta": 1,
+      "justificacion": "La responsabilidad recae en las personas; la IA es una herramienta. Ni la IA, ni el vacío, ni el proveedor asumen la decisión financiera."
+    },
+    {
+      "id": "q11",
+      "pregunta": "La decisión de qué automatizar se prioriza por:",
+      "opciones": [
+        "Lo que sea más nuevo.",
+        "Retorno y factibilidad: frecuente, repetible, de reglas claras y bajo riesgo primero.",
+        "Lo más difícil primero.",
+        "Al azar."
+      ],
+      "correcta": 1,
+      "justificacion": "Se prioriza por ahorro potencial y factibilidad, empezando por tareas frecuentes y de bajo riesgo. Ni novedad, ni dificultad, ni azar."
+    },
+    {
+      "id": "q12",
+      "pregunta": "Evaluar un agente significa:",
+      "opciones": [
+        "Ver si “parece” funcionar.",
+        "Medir su acierto contra casos conocidos (conjuntos de prueba).",
+        "Confiar en la demo.",
+        "Contar sus líneas de código."
+      ],
+      "correcta": 1,
+      "justificacion": "La evaluación usa casos con respuesta conocida para medir desempeño real. La impresión o la demo no son evaluación."
+    },
+    {
+      "id": "q13",
+      "pregunta": "El registro de auditoría de un agente debe guardar:",
+      "opciones": [
+        "Nada.",
+        "Qué herramienta llamó, con qué parámetros, qué obtuvo y qué decidió.",
+        "Solo la respuesta final.",
+        "El clima."
+      ],
+      "correcta": 1,
+      "justificacion": "La auditoría registra cada paso (herramienta, parámetros, dato, decisión), igual que el servidor MCP. Guardar solo la respuesta final no permite reconstruir el proceso."
+    },
+    {
+      "id": "q14",
+      "pregunta": "Un agente racional, en la tradición de Russell y Norvig:",
+      "opciones": [
+        "Actúa al azar.",
+        "Actúa para maximizar su medida de desempeño dada la información disponible.",
+        "Nunca actúa.",
+        "Copia a otro agente."
+      ],
+      "correcta": 1,
+      "justificacion": "La definición clásica: el agente racional elige acciones que maximizan su objetivo con la información que tiene. No es aleatorio ni pasivo."
+    },
+    {
+      "id": "q15",
+      "pregunta": "La confiabilidad de un sistema de IA (Huyen) proviene principalmente de:",
+      "opciones": [
+        "El tamaño del modelo.",
+        "La ingeniería alrededor: evaluación, monitoreo, guardarraíles e intervención humana.",
+        "La suerte.",
+        "La cantidad de datos únicamente."
+      ],
+      "correcta": 1,
+      "justificacion": "La confiabilidad la da la ingeniería (evaluación, guardarraíles, monitoreo), no el modelo por sí solo. Ni la suerte ni solo el volumen de datos alcanzan."
+    }
+  ]
+}
