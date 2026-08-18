@@ -64,6 +64,28 @@ export const a4_3: Asignatura = {
         { t: 'quote', author: 'Aswath Damodaran', credential: 'NYU Stern — Applied Corporate Finance', md: 'La estructura de capital óptima no es un dogma: es el punto donde el beneficio marginal del escudo fiscal iguala al costo marginal esperado de las dificultades financieras. Y ese punto depende de la volatilidad del negocio.' },
       ],
     },
+    {
+      title: 'Por qué crecer consume caja',
+      intro: 'El mecanismo de la paradoja es preciso y merece verse en detalle: una empresa puede crear valor económico (EVA positivo) y a la vez quedarse sin caja (FCFF negativo).',
+      blocks: [
+        { t: 'formula', name: 'La descomposición del FCFF', expr: 'FCFF = NOPAT + Amortizaciones − ΔCapital de trabajo − CapEx', where: 'Al crecer, ΔCapital de trabajo y CapEx crecen y pueden superar al NOPAT', note: 'El EVA mira la creación de valor; el FCFF mira la caja. Una empresa puede crear valor y aun así ahogarse.' },
+        { t: 'p', md: 'La lógica: para vender más, la empresa necesita más inventario y financia más ventas a plazo (más cuentas por cobrar), lo que **consume caja antes de cobrar los frutos**. Si además invierte en capacidad (CapEx), el drenaje se agrava. El resultado es rentable y valioso en el papel… y sin efectivo en la cuenta. Es la causa número uno de muerte de empresas medianas rentables.' },
+        { t: 'warn', md: 'La distinción vital que la asignatura martilla: **solvencia no es liquidez**. Una empresa solvente (patrimonio > deuda, buen Altman Z″, baja PD de Merton) puede morir por iliquidez si no puede pagar a tiempo. El diagnóstico de la 2.2 decía "solvente"; este módulo pregunta "¿pero tiene caja?". Son dos preguntas distintas, y confundirlas mata empresas.' },
+      ],
+    },
+    {
+      title: 'Los instrumentos del diagnóstico de liquidez',
+      intro: 'Tres herramientas, de la más conocida a la propia de JPR, miden la capacidad de la empresa de sobrevivir en el corto plazo.',
+      blocks: [
+        { t: 'table', title: 'Del repago a la autonomía', headers: ['Indicador', 'Qué mide', 'Alerta'], firstColLeft: true, rows: [
+          ['DSCR = EBITDA / servicio', 'Si la generación cubre el servicio de deuda', 'DSCR < covenant (p. ej. 1,25x)'],
+          ['Covenants', 'Compromisos con el acreedor', 'Incumplir → exigibilidad anticipada'],
+          ['DAF-E (propio JPR)', 'Días de autonomía bajo estrés', 'DAF-E < CCE'],
+        ], caption: 'El DAF-E = (caja + líneas comprometidas + cobranzas ciertas) / egresos diarios bajo estrés. Es la respuesta a la única pregunta que mata empresas: ¿cuántos días aguanta?' },
+        { t: 'idea', md: 'La **alerta de primer orden**: un DAF-E menor que el CCE. Si la empresa aguanta menos días de los que tarda en completar una vuelta de su propio ciclo de conversión de efectivo, se queda sin caja antes de recuperar lo invertido en la operación. Es una bomba de tiempo, aunque el EVA sea positivo y el Altman diga "zona segura". El DAF-E impacta directamente en la probabilidad de default y, por esa vía, en el VP de dificultades del APV (asignatura 4.1).' },
+        { t: 'quote', author: 'Aswath Damodaran', credential: 'NYU Stern', md: 'Muchas empresas confunden estar en ganancia con estar a salvo. La quiebra la determina la caja, no el estado de resultados: se puede quebrar ganando dinero, y de hecho sucede todo el tiempo con empresas que crecen sin financiar ese crecimiento.' },
+      ],
+    },
   ],
   expertos: [
     { author: 'Aswath Damodaran', credential: 'NYU Stern', md: 'Muchas empresas confunden estar en ganancia con estar a salvo. La quiebra la determina la caja, no el estado de resultados: se puede quebrar ganando dinero.' },

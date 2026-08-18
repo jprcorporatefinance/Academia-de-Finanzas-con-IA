@@ -68,6 +68,30 @@ export const a4_4: Asignatura = {
         { t: 'quote', author: 'Alfred Rappaport', credential: 'Creating Shareholder Value', md: 'El objetivo de la empresa no es maximizar utilidades contables ni el tamaño, sino el valor de largo plazo para sus dueños. Todo lo demás —crecimiento, market share, eficiencia— vale en la medida en que sirva a ese fin.' },
       ],
     },
+    {
+      title: 'De la irrelevancia de Miller-Modigliani al mundo real',
+      intro: 'La teoría de dividendos empieza en un mundo ideal donde la política no importa, y se vuelve interesante justo donde ese mundo se rompe.',
+      blocks: [
+        { t: 'p', md: 'El teorema de **Miller y Modigliani** demuestra que, en mercados perfectos (sin impuestos, sin costos de transacción, con información simétrica), la política de dividendos es **irrelevante** para el valor: da igual distribuir o retener, porque el valor lo determinan los activos y su capacidad de generar flujos. Es un punto de partida, no una conclusión.' },
+        { t: 'table', title: 'Las fricciones que rompen la irrelevancia', headers: ['Fricción', 'Efecto sobre la política'], firstColLeft: true, rows: [
+          ['Impuestos', 'El trato fiscal distinto de dividendos vs. ganancias de capital inclina la decisión'],
+          ['Señalización', 'Subir el dividendo comunica confianza; recortarlo, problemas'],
+          ['Agencia', 'Distribuir disciplina a la gerencia (menos caja ociosa para malas inversiones)'],
+          ['Efecto clientela', 'Distintos dueños prefieren distintas políticas'],
+        ], caption: 'La conexión decisiva con la 4.2: si el RONIC es menor que el WACC, distribuir es crear valor. Retener para reinvertir en proyectos que rinden menos que su costo destruye valor; devolver ese capital lo preserva.' },
+        { t: 'quote', author: 'Merton Miller & Franco Modigliani', credential: 'teorema de irrelevancia (1961)', md: 'En mercados perfectos, el valor lo determina la capacidad de generar flujos de los activos, no cómo se reparte entre dividendos y retención. Las desviaciones de la irrelevancia miden, precisamente, el peso de las fricciones reales.' },
+      ],
+    },
+    {
+      title: 'El gobierno de la empresa familiar',
+      intro: 'La empresa que no cotiza tiene un riesgo que ningún balance muestra: depender de una persona. El buen gobierno lo mitiga con reglas explícitas.',
+      blocks: [
+        { t: 'p', md: 'El modelo de los **tres círculos** (Tagiuri & Davis) —familia, propiedad y empresa— explica los conflictos típicos: un mismo individuo es dueño, familiar y gerente, con intereses que no siempre coinciden. Un dividendo, para el hermano que trabaja en la empresa, compite con su sueldo; para el que no trabaja, es su único retorno. El buen gobierno separa esos roles con reglas: protocolo familiar, directorio profesional y una segunda línea de gestión.' },
+        { t: 'formula', name: 'IDD — Índice de Dependencia del Dueño (JPR)', expr: 'IDD = 0,30·s₁ + 0,25·s₂ + 0,25·s₃ + 0,20·s₄', where: 's₁ ventas por relaciones del dueño · s₂ decisiones que requieren su aprobación · s₃ procesos sin procedimiento · s₄ ausencia de segunda línea', note: 'Por encima de 60, la empresa no es transferible sin destruir valor. Impacta en Ke, DLOC y DLOM.' },
+        { t: 'warn', md: 'La **sucesión** es el momento de mayor mortalidad de la empresa familiar. Un IDD alto convierte al dueño en un punto único de falla: si no está, la empresa vale mucho menos. Reducir el IDD —documentar procesos, formar la segunda línea, institucionalizar las relaciones comerciales— es una de las inversiones de mayor retorno que puede hacer una empresa familiar, y la condición para cualquier venta futura sin destruir valor.' },
+        { t: 'quote', author: 'John Davis', credential: 'Harvard — modelo de los tres círculos', md: 'Los conflictos de la empresa familiar nacen de superponer familia, propiedad y gestión. El gobierno consiste en separar esos roles con reglas antes de que el conflicto los separe por la fuerza —normalmente, en el peor momento posible—.' },
+      ],
+    },
   ],
   expertos: [
     { author: 'Merton Miller & Franco Modigliani', credential: 'teorema de irrelevancia', md: 'En mercados perfectos, el valor lo determina la capacidad de generar flujos de los activos, no cómo se reparte entre dividendos y retención. Las desviaciones de la irrelevancia miden el peso de las fricciones reales.' },

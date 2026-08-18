@@ -61,6 +61,38 @@ export const a4_1: Asignatura = {
         { t: 'chain', title: 'El puente al valor', nodes: ['FCFF proyectado', 'DCF: horizonte + terminal', 'Equity = EV − deuda neta', 'Valor de la participación (× DLOC × DLOM)'], caption: 'La valuación es el penúltimo eslabón: de acá surge cuánto vale hoy la empresa, y en la 4.2–4.3 cuánto valdría ejecutando el plan.' },
       ],
     },
+    {
+      title: 'La tiranía del valor terminal',
+      intro: 'En una valuación típica, la mayor parte del valor está en el valor terminal —lo que pasa después del horizonte explícito—. Es donde se esconden los pecados de la valuación.',
+      blocks: [
+        { t: 'formula', name: 'Valor terminal (Gordon) y su peso', expr: 'VT = FCFF_{n+1} ÷ (WACC − g)', where: 'g nunca mayor que el crecimiento de largo plazo de la economía', note: 'El VT suele representar el 60–80 % del Enterprise Value: pequeños cambios en g o WACC lo mueven enormemente.' },
+        { t: 'p', md: 'Dos disciplinas innegociables sobre el valor terminal. Primera: **g se justifica, no se elige** —una empresa no puede crecer para siempre más rápido que la economía, o terminaría siendo más grande que el mundo—. Segunda: en el año terminal, el **ROIC debe converger** hacia el costo del capital (o hacia un premio sostenible defendible); suponer que una empresa mantiene un ROIC extraordinario a perpetuidad ignora la competencia.' },
+        { t: 'warn', md: 'El truco más común para inflar una valuación es un g terminal apenas más alto o un margen de largo plazo que nunca converge. Un punto de más en g puede cambiar el valor en un 20–30 %. Por eso el valor terminal siempre se acompaña de una **tabla de sensibilidad** de g × WACC: mostrar el rango es más honesto que fingir un número exacto.' },
+        { t: 'quote', author: 'Aswath Damodaran', credential: 'NYU Stern — Investment Valuation', md: 'El valor terminal es donde mueren las buenas valuaciones. Un crecimiento perpetuo demasiado alto, un margen que nunca converge, un ROIC extraordinario a perpetuidad: todos son formas de esconder optimismo dentro de un número que parece técnico.' },
+      ],
+    },
+    {
+      title: 'APV: cuando el WACC induce error',
+      intro: 'El WACC supone una estructura de capital constante. Cuando no lo es, el Valor Presente Ajustado (APV) es el método correcto —y el más transparente—.',
+      blocks: [
+        { t: 'formula', name: 'Valor Presente Ajustado', expr: 'APV = V_u + VP(escudo fiscal) − VP(dificultades financieras)', where: 'V_u = FCFF descontado a Ku (costo del capital SIN deuda)', note: 'Separa el valor del negocio, el aporte del escudo fiscal y el costo del riesgo de quiebra en tres términos visibles.' },
+        { t: 'p', md: 'La ventaja del APV es la **transparencia**: en vez de esconder tres efectos distintos (el negocio, el beneficio de la deuda y su riesgo) dentro de una sola tasa (el WACC), los muestra por separado. Es el método correcto cuando la estructura de capital **cambia en el tiempo** —una empresa que se desapalanca, una adquisición apalancada (LBO), un proyecto financiado con deuda que se repaga—.' },
+        { t: 'quote', author: 'Aswath Damodaran', credential: 'NYU Stern', md: 'El APV es honesto: muestra por separado cuánto vale el negocio, cuánto agrega la deuda por el escudo fiscal y cuánto resta por el riesgo de dificultades. El WACC esconde esos tres efectos en una sola tasa, y cuando la estructura cambia, esa tasa miente.' },
+      ],
+    },
+    {
+      title: 'Los descuentos de la empresa cerrada, en detalle',
+      intro: 'Una participación en una empresa que no cotiza vale menos que su parte proporcional del valor total. Dos descuentos jerárquicos y multiplicativos lo capturan.',
+      blocks: [
+        { t: 'formula', name: 'Descuentos de capital cerrado', expr: 'Valor = V_100% × (1 − DLOC) × (1 − DLOM)', where: 'DLOC = falta de control · DLOM = falta de negociabilidad (liquidez)', note: 'Jerárquicos y MULTIPLICATIVOS: primero falta de control, después falta de liquidez. NUNCA aditivos.' },
+        { t: 'ul', items: [
+          '**DLOC (falta de control):** una participación minoritaria no decide dividendos, sueldos ni estrategia; por eso vale menos que una de control. Los rangos típicos van del 10 % al 30 %, según cuánto poder efectivo tenga el minoritario.',
+          '**DLOM (falta de liquidez):** no hay un mercado donde vender la participación rápido y sin castigo. Los estudios empíricos (restricted stock, pre-IPO) sitúan el DLOM entre el 20 % y el 35 %, mayor cuanto más ilíquida y dependiente del dueño sea la empresa.',
+          '**El IDD como agravante:** un Índice de Dependencia del Dueño alto aumenta ambos descuentos —si la empresa no funciona sin su dueño, es aún menos transferible y menos negociable—.',
+        ] },
+        { t: 'warn', md: 'El error penalizado: **sumar** los descuentos (DLOC + DLOM) en vez de aplicarlos en cascada multiplicativa. Un 20 % y un 30 % no son un 50 %: son 1 − 0,80 × 0,70 = **44 %**. La cascada refleja que el segundo descuento se aplica sobre un valor ya reducido por el primero.' },
+      ],
+    },
   ],
   expertos: [
     { author: 'Aswath Damodaran', credential: 'NYU Stern', md: 'El valor terminal es donde se esconden los pecados de la valuación: un g demasiado alto o un margen que nunca converge inflan el valor. Disciplina en el terminal, siempre.' },

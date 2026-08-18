@@ -60,6 +60,30 @@ export const a4_2: Asignatura = {
         { t: 'idea', md: 'Corolario para Maderas del Litoral: con un RONIC estimado (≈ 15 %) por debajo del WACC (≈ 19,5 %), la ampliación de planta —por más deseada que sea— **destruye valor**. La empresa valdría más devolviendo ese capital a los dueños que invirtiéndolo en crecer. Es una conclusión incómoda y central.' },
       ],
     },
+    {
+      title: 'La anatomía del Key Value Driver',
+      intro: 'La fórmula de McKinsey no es una caja negra: cada término tiene un significado económico, y entenderlos permite ver por qué el crecimiento puede sumar o restar.',
+      blocks: [
+        { t: 'formula', name: 'Key Value Driver (McKinsey)', expr: 'V = NOPAT × (1 − g/RONIC) ÷ (WACC − g)', where: 'g = crecimiento · RONIC = retorno del capital nuevo', note: 'El término (1 − g/RONIC) es la porción del NOPAT que queda como flujo libre tras reinvertir para crecer.' },
+        { t: 'p', md: 'Descompongámoslo. Para crecer a una tasa g reinvirtiendo a un retorno RONIC, la empresa debe reinvertir una fracción **g/RONIC** de su NOPAT. Lo que sobra, **(1 − g/RONIC)**, es el FCFF disponible. Ahora la clave: si RONIC = WACC, el crecimiento es **neutro** (el numerador y el denominador se mueven en proporción); si RONIC > WACC, más g **aumenta** V; si RONIC < WACC, más g lo **reduce**.' },
+        { t: 'table', title: 'El efecto del crecimiento según el RONIC', headers: ['Escenario', 'Efecto de crecer más'], firstColLeft: true, rows: [
+          ['RONIC > WACC', 'Crear valor: acelerar el crecimiento suma'],
+          ['RONIC = WACC', 'Neutro: crecer no cambia el valor'],
+          ['RONIC < WACC', 'Destruir valor: cuanto más rápido, peor'],
+        ], caption: 'El cruce en RONIC = WACC es el punto donde el valor del crecimiento cambia de signo. Es el resultado más importante y más contraintuitivo de las finanzas corporativas.' },
+        { t: 'quote', author: 'Tim Koller', credential: 'McKinsey — Valuation', md: 'El crecimiento no es bueno ni malo en sí mismo. El crecimiento con retornos sobre el costo del capital crea valor; el crecimiento con retornos inferiores lo destruye, y cuanto más rápido, peor. Es la lección que más empresas ignoran mientras celebran su expansión.' },
+      ],
+    },
+    {
+      title: 'ROIC frente a RONIC: la distinción que decide',
+      intro: 'El error estratégico más costoso es justificar una inversión con el retorno del pasado en vez del retorno del capital nuevo.',
+      blocks: [
+        { t: 'p', md: 'El **ROIC** mide el retorno del capital **existente** —lo que ya se hizo—. El **RONIC** mide el retorno del capital **nuevo** —lo que se está por hacer—. Son cosas distintas: una empresa puede tener un ROIC histórico envidiable y un RONIC mediocre, porque las oportunidades buenas ya se tomaron y las nuevas rinden menos.' },
+        { t: 'warn', md: 'La trampa: el directorio de una empresa exitosa (ROIC alto) asume que su próxima inversión también rendirá alto. Pero el proyecto nuevo no hereda el ROIC del pasado —rinde su propio RONIC—. Si ese RONIC es menor que el WACC, la expansión destruye valor por más brillante que sea el historial. Estimar bien el RONIC del proyecto (con la disciplina del VAN de la asignatura 1.3) es lo que evita el error.' },
+        { t: 'formula', name: 'Crecimiento sostenible y genuino', expr: 'g_sostenible = tasa de reinversión × ROIC = (1 − payout) × ROIC', note: 'El crecimiento autofinanciable. Superarlo exige financiamiento externo (deuda o capital), con su costo y riesgo. Y bajo inflación, hay que distinguir el crecimiento REAL del meramente nominal.' },
+        { t: 'quote', author: 'Michael Mauboussin', credential: 'Counterpoint Global', md: 'Separá el capital que crea valor del que lo destruye. Muchas empresas crecen destruyendo valor y lo celebran como éxito; el analista riguroso mira el RONIC, no la tasa de crecimiento ni el tamaño.' },
+      ],
+    },
   ],
   expertos: [
     { author: 'Tim Koller', credential: 'McKinsey — Valuation', md: 'Las dos palancas del valor son el retorno sobre el capital y el crecimiento, pero no son simétricas: el crecimiento solo agrega valor cuando el retorno supera el costo del capital. Con retornos bajos, el crecimiento destruye.' },
