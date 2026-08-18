@@ -334,6 +334,25 @@ export const a1_1: Asignatura = {
         { t: 'idea', md: 'La verificación final no es un trámite: es donde se juega la credibilidad. Un estado analítico auditable —con la fuente, la fecha y el criterio de cada ajuste documentados— es lo que separa una consultoría profesional de una opinión con decimales.' },
       ],
     },
+    {
+      title: 'El estado de flujo de efectivo bajo inflación',
+      intro: 'El EFE es el estado que no miente, pero bajo inflación exige un cuidado especial: los flujos de distintos momentos del ejercicio no son sumables en moneda nominal.',
+      blocks: [
+        { t: 'p', md: 'Bajo inflación, un cobro de enero y uno de diciembre no valen lo mismo. Reexpresar los flujos, tratar el RECPAM dentro de la conciliación y separar el efecto de la tenencia de caja se vuelven indispensables. La **tenencia de caja bajo inflación es una pérdida real** aunque el saldo nominal crezca: tener 1.000 de caja todo el año, con inflación del 80 %, es perder poder adquisitivo aunque el número no baje.' },
+        { t: 'warn', md: 'La trampa más común: confundir un aumento de caja por **generación operativa genuina** con un aumento por **licuación de pasivos**. Una empresa que "mejora su caja" simplemente porque su deuda en pesos se licuó no está generando efectivo operativo: está transfiriendo valor desde sus acreedores. El EFE reexpresado distingue ambas cosas.' },
+        { t: 'p', md: 'El **método directo** (reconstrucción de cobranzas y pagos efectivos) y el **indirecto** (partiendo del resultado y revirtiendo lo no erogable) deben conciliar. Esa reconstrucción de cobranzas y pagos del método directo es exactamente el ejercicio que después se repite contra el ERP en la asignatura 1.2 —la trazabilidad del dato empieza acá—.' },
+        { t: 'idea', md: 'El diagnóstico a partir del flujo: la calidad de las utilidades se lee en la relación entre flujo operativo y EBITDA; la firma de cada etapa del ciclo de vida, en el signo de los tres flujos (operativo, de inversión, de financiación); y las señales de alerta más caras —resultado creciente con flujo operativo decreciente, inversiones sistemáticamente inferiores a las depreciaciones (desinversión encubierta), dependencia del refinanciamiento— aparecen todas en el EFE antes que en cualquier otro estado.' },
+      ],
+    },
+    {
+      title: 'Del estado analítico al Trabajo Final',
+      intro: 'Todo lo que se construye en esta asignatura desemboca en la primera pieza del Trabajo Final: el memorando de ajustes.',
+      blocks: [
+        { t: 'p', md: 'El régimen de evaluación culmina en un trabajo práctico integrador sobre un juego de estados contables reales anonimizados: depuración, reexpresión y normalización completas, con un **memorando de ajustes** que fundamenta cada adecuación en su norma, su fecha y su fuente. Ese memorando no es un ejercicio académico: es la Fase Descriptiva del Trabajo Final, la consultoría real que el maestrando hará sobre una empresa del Nordeste argentino.' },
+        { t: 'chain', title: 'La 1.1 como cimiento de todo', nodes: ['Estado contable', 'Depuración (6 familias)', 'Estado analítico', 'Todo el programa (1.4 → 4.4)'], caption: 'Un error en la depuración se propaga a cada indicador del árbol de valor. Por eso esta asignatura es la raíz, y por eso su estándar de rigor es innegociable.' },
+        { t: 'quote', author: 'William Miller', credential: 'Value Maps', md: 'El valor no se encuentra en el balance: se reconstruye a partir de él. El analista que acepta los números tal como se presentan renuncia a su oficio antes de empezar.' },
+      ],
+    },
   ],
   expertos: [
     {

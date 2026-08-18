@@ -126,6 +126,42 @@ export const a1_3: Asignatura = {
         { t: 'quote', author: 'Rob Hyndman', credential: 'Forecasting: Principles and Practice', md: 'No elijas el modelo por su ajuste histórico, sino por su desempeño fuera de la muestra. Y elegí la métrica de error que refleje el costo real de equivocarte: no cuesta lo mismo un faltante que un excedente.' },
       ],
     },
+    {
+      title: 'Rentas y sistemas de amortización',
+      intro: 'El instrumental de las rentas y los sistemas de amortización es la base para evaluar cualquier financiamiento —y para entender qué se paga realmente en cada cuota—.',
+      blocks: [
+        { t: 'table', title: 'Los tres sistemas de amortización', headers: ['Sistema', 'Cuota', 'Amortización', 'Perfil de interés'], firstColLeft: true, rows: [
+          ['Francés', 'Constante', 'Creciente', 'Alto al inicio, decreciente'],
+          ['Alemán', 'Decreciente', 'Constante', 'Decreciente lineal'],
+          ['Americano', 'Solo interés', 'Al final (bullet)', 'Constante hasta el vencimiento'],
+        ], caption: 'El francés (cuota constante) es el más común en el crédito PyME. El americano concentra el capital al final —cómodo en el corto plazo, riesgoso si no se prevé el pago final—.' },
+        { t: 'p', md: 'La **capitalización y actualización** son las dos caras del valor tiempo del dinero: llevar un monto al futuro (capitalizar) o traerlo al presente (actualizar). Sobre ellas se construyen las tasas —nominal, efectiva, equivalente y real— y su correcta conversión, que bajo inflación es todo menos trivial: una TNA del 85 % puede ser una tasa real modesta o negativa según la inflación del período.' },
+        { t: 'warn', md: 'El costo financiero total (CFT) de un préstamo no es su tasa nominal: incluye comisiones, sellos, seguros e IVA sobre los intereses. Comparar instrumentos por su TNA es engañarse; hay que comparar por el CFT efectivo. Un descuento de cheques con "tasa baja" pero cargado de comisiones puede ser más caro que un adelanto con tasa más alta y sin cargos.' },
+      ],
+    },
+    {
+      title: 'Álgebra lineal para el analista financiero',
+      intro: 'Las matrices no son abstracción académica: son el motor de la consolidación de modelos y del aprendizaje profundo que viene en el tercer cuatrimestre.',
+      blocks: [
+        { t: 'p', md: 'Una empresa con varias unidades de negocio, varios escenarios o varias monedas se consolida con **operaciones matriciales**: sumar, ponderar y proyectar múltiples series a la vez. La misma operación —el producto matricial— que consolida un modelo es la que propaga una capa de una red neuronal.' },
+        { t: 'formula', name: 'El producto matricial', expr: 'C = A · B  →  c_ij = Σ_k a_ik · b_kj', where: 'MMULT en Excel, @ en numpy', note: 'Entender esta operación a mano es lo que desmitifica el aprendizaje automático del tercer cuatrimestre: una red neuronal es, en el fondo, una secuencia de productos matriciales con una activación.' },
+        { t: 'idea', md: 'El fundamento pedagógico del programa: comprender la mecánica antes de delegarla en una librería. El estudiante que construyó a mano una red neuronal en una planilla (asignatura 2.3) no le teme al "deep learning" (asignatura 3.2): sabe que debajo hay álgebra que entiende.' },
+      ],
+    },
+    {
+      title: 'El doble motor: Python y Excel se verifican mutuamente',
+      intro: 'La técnica de verificación más poderosa del programa es escribir el mismo cálculo dos veces, en dos herramientas distintas, y exigir que coincidan.',
+      blocks: [
+        { t: 'p', md: 'El motor numérico se escribe **dos veces a propósito**: una en Python (verificable con pruebas unitarias) y otra en Excel con matrices dinámicas (asignatura 2.3). Ambas deben coincidir número a número. Si no coinciden, una de las dos miente, y encontrar cuál es un ejercicio de auditoría que enseña más que cualquier clase teórica.' },
+        { t: 'steps', title: 'El flujo de verificación cruzada', items: [
+          { k: 'Especificar', d: 'Definir la lógica financiera con precisión (fórmulas, supuestos, casos borde).' },
+          { k: 'Implementar en Python', d: 'Con funciones puras y pruebas unitarias que fijan el comportamiento esperado.' },
+          { k: 'Replicar en Excel', d: 'Con matrices dinámicas, sin arrastrar, alimentado por la misma fuente.' },
+          { k: 'Contrastar', d: 'Comparar salida a salida. La coincidencia da confianza; la discrepancia revela el error.' },
+        ] },
+        { t: 'quote', author: 'Yves Hilpisch', credential: 'Python for Finance', md: 'La confianza en un modelo no viene de que sea complejo, sino de que sea verificable. Dos implementaciones independientes que coinciden valen más que una sola, por elegante que sea.' },
+      ],
+    },
   ],
   expertos: [
     { author: 'Yves Hilpisch', credential: 'The Python Quants', md: 'La ventaja de Python en finanzas es el continuo entre exploración interactiva y sistema productivo: el mismo código que prototipás es el que después automatizás.' },

@@ -123,6 +123,43 @@ export const a1_4: Asignatura = {
         { t: 'quote', author: 'G. Bennett Stewart III', credential: 'The EVA Momentum', md: 'El EVA Momentum es la única métrica de desempeño donde "más es siempre mejor" y "cero es realmente cero": mide la creación de valor incremental sobre las ventas, independiente del tamaño y de la herencia.' },
       ],
     },
+    {
+      title: 'El capital invertido: dos caminos que deben cerrar',
+      intro: 'El capital invertido admite dos enfoques, y que ambos den el mismo número no es una coincidencia: es la prueba de que la clasificación es correcta.',
+      blocks: [
+        { t: 'table', title: 'Los dos enfoques del capital invertido', headers: ['Enfoque', 'Se arma sumando', 'Óptica'], firstColLeft: true, rows: [
+          ['Operativo', 'Capital de trabajo + activos fijos a mercado + otros operativos', 'Cómo se usa el capital'],
+          ['Financiero', 'Deuda financiera + patrimonio − caja excedente − no operativos', 'De dónde viene el capital'],
+        ], caption: 'Ambos deben reconciliar. Si el operativo y el financiero difieren, hay una partida mal clasificada (operativa vs. no operativa, deuda financiera vs. pasivo operativo).' },
+        { t: 'p', md: 'Decisiones finas que cambian el número: la **caja operativa mínima** integra el capital invertido (es necesaria para operar); el **excedente de caja** no (es un activo financiero). Los **activos no operativos** —el inmueble de uso personal, una inversión financiera— se excluyen del capital invertido y se valúan por separado. Y se usa el **capital promedio** del período, no el de cierre, para no distorsionar el ROIC según el momento de las inversiones.' },
+        { t: 'warn', md: 'El error que infla el ROIC: dejar la caja excedente o los activos no operativos dentro del capital invertido cuando conviene, y sacarlos cuando no. La clasificación se define con criterio y se mantiene consistente; manipularla es maquillar el retorno.' },
+      ],
+    },
+    {
+      title: 'De EVA a MVA: el valor acumulado',
+      intro: 'El EVA mide el valor creado en un período; el MVA, el valor acumulado a lo largo del tiempo. Juntos cierran la ecuación maestra.',
+      blocks: [
+        { t: 'formula', name: 'La ecuación maestra completa', expr: 'NOPAT/Capital = ROIC · ROIC − WACC = spread · spread × Capital = EVA · Σ EVA descontados = MVA', note: 'De la eficiencia (ROIC) al valor creado por período (EVA) al valor acumulado (MVA): una sola cadena.' },
+        { t: 'p', md: 'El **MVA (Market Value Added)** es el valor presente de la corriente de EVA futuros: cuánto valor, en total, ha creado (o destruido) la empresa por encima del capital aportado. Una empresa con MVA positivo vale más que el capital que se le confió; una con MVA negativo, menos. Es la síntesis última de si el negocio, a lo largo de su vida, creó valor.' },
+        { t: 'idea', md: 'La conexión con la valuación (asignatura 4.1): el valor de la firma es el capital invertido más el MVA (el valor presente de los EVA futuros). Por eso proyectar el EVA es equivalente a valuar la empresa —y por eso una empresa con spread persistentemente positivo vale mucho más que su capital contable—.' },
+        { t: 'quote', author: 'Tim Koller', credential: 'McKinsey — Valuation', md: 'El valor de una empresa es el capital que invirtió más el valor presente de los retornos que espera generar por encima de su costo del capital. Todo lo demás —múltiplos, comparables, reglas del pulgar— son atajos hacia esa verdad.' },
+      ],
+    },
+    {
+      title: 'La anatomía obligatoria de cada indicador',
+      intro: 'La regla pedagógica innegociable del programa: de cada número se exige su anatomía completa. Un ratio sin interpretación es ruido; una fórmula sin trazabilidad es un acto de fe.',
+      blocks: [
+        { t: 'steps', title: 'Los cinco componentes de la anatomía', items: [
+          { k: 'Definición', d: 'Qué mide el indicador, en una frase clara.' },
+          { k: 'Fórmula con trazabilidad', d: 'La fórmula y, sobre todo, de dónde sale cada término.' },
+          { k: 'Valor que agrega', d: 'Qué decisión permite tomar y cuáles son sus umbrales.' },
+          { k: 'Dónde miente', d: 'Sus debilidades y las condiciones en que engaña —la parte que casi nadie enseña—.' },
+          { k: 'Flujograma', d: 'La cadena causa-efecto que lo conecta con el valor.' },
+        ] },
+        { t: 'idea', md: 'El componente "dónde miente" es el sello del programa. El ROIC miente con activos amortizados; el ROE, con apalancamiento; el EBITDA, ignorando la inversión de reposición; la TIR, con flujos no convencionales. Un egresado que conoce las debilidades de cada indicador no se deja engañar por ninguno —ni engaña con ninguno—.' },
+        { t: 'quote', author: 'Bartley Madden', credential: 'CFROI Valuation', md: 'Ningún indicador es completo por sí solo. La disciplina está en conocer exactamente qué mide cada uno, qué omite, y en qué condiciones su señal se vuelve ruido. Esa conciencia de los límites es el verdadero conocimiento financiero.' },
+      ],
+    },
   ],
   expertos: [
     { author: 'Tim Koller', credential: 'McKinsey — Valuation (texto nuclear)', md: 'ROIC y crecimiento son los dos generadores de valor. Crecer solo crea valor si el retorno del capital nuevo supera su costo; de lo contrario, crecer destruye.' },

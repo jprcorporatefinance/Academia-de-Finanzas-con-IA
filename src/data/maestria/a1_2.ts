@@ -230,6 +230,56 @@ export const a1_2: Asignatura = {
         { t: 'quote', author: 'Ralph Kimball', credential: 'The Data Warehouse Toolkit', md: 'La consistencia de las dimensiones conformadas es lo que permite que toda la organización hable el mismo idioma de datos. Una dimensión "cliente" compartida vale más que diez tableros aislados.' },
       ],
     },
+    {
+      title: 'El panorama de ERPs de la PyME argentina',
+      intro: 'Cambian los nombres de las tablas, no los conceptos. Conocer el mapa de los sistemas más difundidos permite trasladar el mismo patrón de extracción a cualquiera.',
+      blocks: [
+        { t: 'table', title: 'Sistemas y su acceso a datos', headers: ['ERP', 'Perfil', 'Vías de acceso'], firstColLeft: true, rows: [
+          ['Finnegans', 'Nube, PyME-media argentina', 'API REST / OData'],
+          ['Tango / Bejerman', 'Amplia base instalada local', 'SQL directo / exportaciones'],
+          ['SAP Business One', 'Media-grande', 'SQL / Service Layer (OData)'],
+          ['Odoo', 'Open source, flexible', 'API XML-RPC / SQL'],
+          ['Acumatica', 'Nube', 'API REST'],
+          ['Desarrollo propio', 'Variable', 'SQL directo'],
+        ], caption: 'Siempre hay un maestro de artículos, uno de clientes, un libro de ventas, uno de compras y un mayor contable. El patrón de trabajo se aprende una vez sobre uno y se traslada al resto.' },
+        { t: 'p', md: 'La arquitectura funcional de cualquiera de ellos se corresponde punto por punto con las líneas del estado de resultados y del balance: el módulo de ventas alimenta los ingresos, el de compras y stock el costo de mercadería vendida, el de tesorería la caja, el de cuentas corrientes los créditos y las deudas. Leer ese mapa es el primer paso para saber de dónde sale cada peso.' },
+      ],
+    },
+    {
+      title: 'Calidad del dato: perfilar y conciliar',
+      intro: 'Un dato extraído no es un dato confiable. La capa de calidad es la que separa un tablero que informa de uno que engaña.',
+      blocks: [
+        { t: 'ul', items: [
+          '**Perfilado (profiling):** caracterizar cada campo —valores atípicos, faltantes, rangos, formatos— antes de usarlo. Un precio negativo o una fecha imposible se detectan acá, no en el informe final.',
+          '**Integridad referencial:** verificar que cada movimiento apunte a un cliente, un artículo y una cuenta existentes. Los "huérfanos" son errores que se propagan.',
+          '**Conciliación con el balance publicado:** la prueba de veracidad definitiva. Si la suma de lo extraído no cierra contra el estado publicado, todo lo que se construya encima hereda ese error.',
+          '**Pruebas automatizadas:** los controles de calidad se codifican y corren en cada actualización, no se hacen a ojo una sola vez.',
+        ] },
+        { t: 'quote', author: 'Joe Reis & Matt Housley', credential: 'Fundamentals of Data Engineering', md: 'La calidad de datos no es un proyecto que se termina: es una disciplina continua. Un pipeline sin controles de calidad automatizados es una bomba de tiempo que explotará en el peor momento —normalmente frente al directorio—.' },
+      ],
+    },
+    {
+      title: 'Gobierno, seguridad y confidencialidad del dato',
+      intro: 'El acceso al dato financiero es un privilegio que se gobierna. En la empresa familiar, además, la confidencialidad es una condición del vínculo.',
+      blocks: [
+        { t: 'ul', items: [
+          '**Menor privilegio:** cada rol recibe solo el acceso que necesita para su tarea. El servidor MCP de sólo lectura es la encarnación de este principio.',
+          '**Anonimización:** los datos sensibles se enmascaran cuando salen del perímetro (por ejemplo, para el repositorio público del laboratorio, con magnitudes convertidas a índices de base cien).',
+          '**Registro de auditoría:** cada acceso queda registrado —quién, qué, cuándo—, lo que permite reconstruir cualquier consulta y detectar usos indebidos.',
+          '**Marco legal:** la Ley 25.326 de Protección de los Datos Personales, más las cláusulas de confidencialidad, continuidad y resguardo del convenio con la empresa.',
+        ] },
+        { t: 'idea', md: 'En la Maestría esto no es teórico: el Trabajo Final se desarrolla bajo convenio de confidencialidad entre la empresa, el maestrando y la Universidad, y su versión pública se anonimiza —identidades sustituidas y magnitudes convertidas a índices de base cien preservando las proporciones reales—. El gobierno del dato es la condición que hace posible trabajar con empresas reales.' },
+      ],
+    },
+    {
+      title: 'El circuito completo, de punta a punta',
+      intro: 'Todo lo anterior se integra en un circuito reproducible que un tercero puede correr y auditar. Ese circuito es el entregable real de la asignatura.',
+      blocks: [
+        { t: 'chain', title: 'El flujo del dato trazable', nodes: ['ERP', 'Servidor MCP (auditado)', 'ETL + capa semántica', 'Modelo dimensional', 'Excel (2.3) y Python (1.3)'], caption: 'Motores de cálculo, tableros y agentes obtienen el mismo dato por la misma vía. La trazabilidad sobrevive al pasaje del sistema de gestión a la hoja de cálculo.' },
+        { t: 'p', md: 'La prueba de que el circuito funciona es la **verificación cruzada**: el mismo número —digamos, el capital de trabajo— debe dar igual calculado en el Excel de matrices dinámicas (asignatura 2.3) y en el motor de Python (asignatura 1.3), ambos alimentados por la misma capa semántica sobre el mismo servidor MCP. Si difieren, hay un error que la arquitectura permite localizar exactamente, porque cada número es trazable hasta la llamada que lo originó.' },
+        { t: 'quote', author: 'Especificación MCP (Anthropic)', credential: 'Model Context Protocol', md: 'La reproducibilidad no es un lujo: es la condición para que un resultado sea confiable. Un análisis que no se puede volver a correr, paso a paso, contra la misma fuente, es una opinión, no un hallazgo.' },
+      ],
+    },
   ],
   expertos: [
     { author: 'Ralph Kimball', credential: 'The Data Warehouse Toolkit', md: 'El modelo dimensional —hechos y dimensiones— existe para que las preguntas del negocio se respondan rápido y sin ambigüedad. La normalización extrema sirve a la transacción; el análisis necesita otra forma.' },
