@@ -92,6 +92,30 @@ export const a4_4: Asignatura = {
         { t: 'quote', author: 'John Davis', credential: 'Harvard — modelo de los tres círculos', md: 'Los conflictos de la empresa familiar nacen de superponer familia, propiedad y gestión. El gobierno consiste en separar esos roles con reglas antes de que el conflicto los separe por la fuerza —normalmente, en el peor momento posible—.' },
       ],
     },
+    {
+      title: 'Las cuatro decisiones como un sistema',
+      intro: 'Todo el programa converge aquí: las cuatro decisiones financieras no se toman por separado, sino como un sistema entrelazado.',
+      blocks: [
+        { t: 'table', title: 'Las cuatro decisiones y su pregunta', headers: ['Decisión', 'Pregunta', 'Asignatura'], firstColLeft: true, rows: [
+          ['Inversión', '¿En qué invertir? (RONIC > WACC)', '4.2'],
+          ['Financiamiento', '¿Con qué capital? (deuda vs. patrimonio)', '4.3'],
+          ['Dividendos', '¿Cuánto distribuir vs. retener?', '4.4'],
+          ['Operativas', '¿Cómo gestionar el capital de trabajo y los costos?', '2.4'],
+        ], caption: 'Cambiar una decisión mueve a las demás: invertir determina la caja necesaria, financiar de dónde sale, dividendos cuánto sobra, y las operativas cuánta caja libera el negocio.' },
+        { t: 'idea', md: 'El caso de Maderas del Litoral integra las cuatro: con RONIC < WACC, la decisión de inversión (no ampliar) y la de dividendos (distribuir) coinciden; la de financiamiento debe cuidar la liquidez frágil (DAF-E < CCE); y las operativas —ordenar el ciclo de conversión— son la palanca de mayor retorno inmediato. Una recomendación coherente al directorio articula las cuatro, no las trata como compartimentos estancos.' },
+        { t: 'quote', author: 'Aswath Damodaran', credential: 'NYU Stern — Applied Corporate Finance', md: 'Las finanzas corporativas son tres decisiones —inversión, financiamiento y dividendos— unidas por un objetivo: maximizar el valor. Todo lo demás es detalle técnico al servicio de esas tres. Quien las entiende como sistema, y no como piezas sueltas, domina la disciplina.' },
+      ],
+    },
+    {
+      title: 'El cierre: valor para los dueños',
+      intro: 'Todo el método —cuatro fases, dieciséis asignaturas— apunta a un solo número, el objetivo único y taxativo del programa.',
+      blocks: [
+        { t: 'formula', name: 'Total Shareholder Return / Total Business Return', expr: 'TSR ≈ rendimiento por dividendos + crecimiento del valor', where: 'combina lo que el dueño recibe y lo que la empresa se aprecia', note: 'Toda decisión se juzga por su efecto sobre el TSR de largo plazo.' },
+        { t: 'chain', title: 'El mapa de valor completo', nodes: ['Estado analítico (1.1)', 'ROIC − WACC (2.1–3.1)', 'EVA y valuación (1.4, 4.1)', 'Las cuatro decisiones (4.2–4.4)', 'Valor para los dueños (TSR)'], caption: 'El egresado debe poder reconstruir esta cadena de memoria: de la depuración contable al TSR, sin saltos. Es la síntesis integradora de toda la Maestría.' },
+        { t: 'idea', md: 'Un egresado no sale sabiendo dieciséis temas sueltos: sale sabiendo conducir una consultoría de finanzas corporativas de punta a punta, con el TSR como brújula. Sabe leer la verdad de una empresa (Fase Descriptiva), explicar por qué está donde está (Diagnóstica), proyectar su futuro probable (Predictiva) y recomendar qué hacer (Prescriptiva) —siempre con un solo norte: crear valor real y perdurable para los dueños—.' },
+        { t: 'quote', author: 'Alfred Rappaport', credential: 'Creating Shareholder Value', md: 'El objetivo de la empresa no es maximizar utilidades contables ni el tamaño, sino el valor de largo plazo para sus dueños. Todo lo demás —crecimiento, market share, eficiencia— vale exactamente en la medida en que sirva a ese fin, y no un centavo más.' },
+      ],
+    },
   ],
   expertos: [
     { author: 'Merton Miller & Franco Modigliani', credential: 'teorema de irrelevancia', md: 'En mercados perfectos, el valor lo determina la capacidad de generar flujos de los activos, no cómo se reparte entre dividendos y retención. Las desviaciones de la irrelevancia miden el peso de las fricciones reales.' },

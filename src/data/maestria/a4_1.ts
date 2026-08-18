@@ -93,6 +93,24 @@ export const a4_1: Asignatura = {
         { t: 'warn', md: 'El error penalizado: **sumar** los descuentos (DLOC + DLOM) en vez de aplicarlos en cascada multiplicativa. Un 20 % y un 30 % no son un 50 %: son 1 − 0,80 × 0,70 = **44 %**. La cascada refleja que el segundo descuento se aplica sobre un valor ya reducido por el primero.' },
       ],
     },
+    {
+      title: 'La valuación es un juicio, no un cálculo',
+      intro: 'La aritmética de la valuación es la parte fácil. Lo difícil —y lo que distingue al profesional— es el juicio sobre los supuestos.',
+      blocks: [
+        { t: 'p', md: 'Dos analistas con la misma planilla llegan a valores muy distintos según sus supuestos sobre crecimiento, márgenes de largo plazo, WACC y descuentos. La valuación de una empresa cerrada no produce un número, sino un **rango razonable** que el trabajo del valuador consiste en angostar con evidencia —y en fundamentar, sobre todo, en los descuentos por control e iliquidez, donde más se juega el juicio—.' },
+        { t: 'chain', title: 'El puente completo al valor de la participación', nodes: ['FCFF proyectado', 'EV (horizonte + terminal)', 'Equity = EV − deuda neta', 'Participación × (1−DLOC) × (1−DLOM)'], caption: 'Cada eslabón agrega un supuesto que hay que defender. El valor de una participación minoritaria e ilíquida puede ser una fracción del valor proporcional del 100 %.' },
+        { t: 'quote', author: 'Shannon Pratt', credential: 'Valuing a Business', md: 'La valuación de una empresa cerrada no es un cálculo, es un juicio informado por cálculos. Pretender una precisión de dos decimales sobre un negocio ilíquido y dependiente de su dueño es deshonestidad técnica: el rango honesto es amplio, y el trabajo es angostarlo con evidencia, no fingir que no existe.' },
+      ],
+    },
+    {
+      title: 'Del número a la distribución',
+      intro: 'La valuación puntual es una foto; la simulación de Monte Carlo (asignatura 3.3) es la película. Al directorio se le presentan las dos.',
+      blocks: [
+        { t: 'p', md: 'El informe no dice "la empresa vale X". Dice "la empresa vale X en el escenario base, con un rango de P5 a P95, y una probabilidad Y de estar por debajo del capital invertido". Envolver el DCF en la distribución de Monte Carlo es lo que convierte una opinión con falsa precisión en un juicio honesto sobre la incertidumbre.' },
+        { t: 'idea', md: 'La conexión con el Trabajo Final: la Fase Prescriptiva exige valuar por al menos dos métodos (DCF y APV, o DCF y múltiplos), separar el valor del horizonte del terminal, fundamentar los descuentos, y presentar el resultado como un rango con probabilidades. El "puente al valor" —cuánto vale hoy la empresa y cuánto valdría ejecutando el plan de creación de valor— es el corazón de la recomendación al directorio.' },
+        { t: 'quote', author: 'Aswath Damodaran', credential: 'NYU Stern', md: 'Una valuación es un puente entre la historia que contás sobre una empresa y los números que esa historia implica. Si los números no se sostienen en una historia creíble, o la historia no se traduce en números, la valuación es un ejercicio vacío.' },
+      ],
+    },
   ],
   expertos: [
     { author: 'Aswath Damodaran', credential: 'NYU Stern', md: 'El valor terminal es donde se esconden los pecados de la valuación: un g demasiado alto o un margen que nunca converge inflan el valor. Disciplina en el terminal, siempre.' },

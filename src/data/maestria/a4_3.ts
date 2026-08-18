@@ -86,6 +86,24 @@ export const a4_3: Asignatura = {
         { t: 'quote', author: 'Aswath Damodaran', credential: 'NYU Stern', md: 'Muchas empresas confunden estar en ganancia con estar a salvo. La quiebra la determina la caja, no el estado de resultados: se puede quebrar ganando dinero, y de hecho sucede todo el tiempo con empresas que crecen sin financiar ese crecimiento.' },
       ],
     },
+    {
+      title: 'La estructura de financiamiento óptima',
+      intro: 'Cuánta deuda tomar no es una cuestión de gusto: es un equilibrio entre el beneficio del escudo fiscal y el costo del riesgo de quiebra.',
+      blocks: [
+        { t: 'p', md: 'La deuda tiene un beneficio —el **escudo fiscal**, porque el interés es deducible— y un costo —el **riesgo de dificultades financieras**, que crece con el apalancamiento—. La estructura óptima es el punto donde el beneficio marginal del escudo iguala al costo marginal esperado de la quiebra. Ese punto no es universal: depende de la **volatilidad del negocio**. Una empresa de flujos estables tolera más deuda que una cíclica.' },
+        { t: 'formula', name: 'El equilibrio de la estructura de capital', expr: 'Óptimo: beneficio marginal(escudo fiscal) = costo marginal esperado(dificultades)', note: 'Es la lógica del APV (asignatura 4.1) llevada a la decisión de cuánto endeudarse.' },
+        { t: 'warn', md: 'En la empresa mediana argentina, el análisis de estructura debe incorporar la realidad del **descalce de monedas** y la volatilidad macro: una deuda en dólares que parece barata puede volverse impagable tras una devaluación. Lo que es prudente en un mercado estable puede ser temerario en uno inflacionario y volátil.' },
+      ],
+    },
+    {
+      title: 'El acceso al capital y la brecha de financiamiento real',
+      intro: 'La empresa mediana paga de más por su deuda. Cuánto de más, y por qué, es cuantificable —y recuperable—.',
+      blocks: [
+        { t: 'formula', name: 'BFR — Brecha de Financiamiento Real (JPR)', expr: 'BFR = CFT efectivo ponderado − Kd según calificación sintética', where: 'BFR($) = BFR(pts) × Deuda financiera promedio', note: 'Cuánto paga la empresa POR ENCIMA de lo que sus fundamentos justifican.' },
+        { t: 'p', md: 'La BFR no es un dato inevitable del contexto: es **valor recuperable** con mejor información, sociedades de garantía recíproca (SGR), acceso al mercado de capitales PyME (obligaciones negociables, pagaré bursátil) o simplemente ordenándose para presentar mejor sus números. Cuantificarla en pesos convierte "ordenarse" de una buena intención en una decisión con retorno medible.' },
+        { t: 'quote', author: 'Juan Pablo Rossi', credential: 'JPR Consulting — indicadores para la empresa que no cotiza', md: 'La BFR y el DAF-E nacen de la práctica sobre empresas medianas de mercados emergentes: miden lo que la batería clásica, pensada para la empresa cotizante de un mercado desarrollado, no mide. Se enseñan declarando esa condición, con sus supuestos y límites a la vista.' },
+      ],
+    },
   ],
   expertos: [
     { author: 'Aswath Damodaran', credential: 'NYU Stern', md: 'Muchas empresas confunden estar en ganancia con estar a salvo. La quiebra la determina la caja, no el estado de resultados: se puede quebrar ganando dinero.' },

@@ -84,6 +84,24 @@ export const a4_2: Asignatura = {
         { t: 'quote', author: 'Michael Mauboussin', credential: 'Counterpoint Global', md: 'Separá el capital que crea valor del que lo destruye. Muchas empresas crecen destruyendo valor y lo celebran como éxito; el analista riguroso mira el RONIC, no la tasa de crecimiento ni el tamaño.' },
       ],
     },
+    {
+      title: 'Crecimiento sostenible frente a crecimiento genuino',
+      intro: 'No todo crecimiento es igual: hay un techo financiable, y bajo inflación hay que distinguir el crecimiento real del meramente nominal.',
+      blocks: [
+        { t: 'formula', name: 'Tasa de crecimiento sostenible', expr: 'g_sostenible = tasa de reinversión × ROIC = (1 − payout) × ROIC', note: 'El crecimiento que la empresa puede financiar con sus propios recursos, sin cambiar su estructura de capital.' },
+        { t: 'p', md: 'Crecer por encima de la tasa sostenible exige **financiamiento externo** (deuda o capital), con su costo y su riesgo. Y bajo inflación aparece una trampa adicional: distinguir el **crecimiento genuino** —aumento real de volumen y valor— del meramente **nominal** —vender lo mismo a precios más altos—. Una empresa que "crece 60 %" con inflación del 60 % no creció: solo cambió de unidad de medida.' },
+        { t: 'idea', md: 'Esta distinción conecta con el indicador propio IPR (Índice de Preservación del Margen Real, asignatura 1.1): vender con margen contable positivo pero margen real negativo es descapitalizarse vendiendo. El crecimiento que importa es el que crea valor real, medido en moneda homogénea, con RONIC por encima del WACC.' },
+      ],
+    },
+    {
+      title: 'La decisión de inversión dentro del sistema',
+      intro: 'La decisión de invertir no se toma aislada: es una de las cuatro decisiones financieras, y todas se condicionan mutuamente.',
+      blocks: [
+        { t: 'chain', title: 'La lógica de la decisión de inversión', nodes: ['Proyecto', 'RONIC del proyecto', '¿RONIC > WACC?', 'Sí: invertir / No: distribuir'], caption: 'La regla del VAN (asignatura 1.3) y el teorema del RONIC son la misma cosa vista desde dos ángulos: aceptar lo que rinde más que su costo.' },
+        { t: 'p', md: 'La decisión de inversión determina cuánta caja se necesita; la de financiamiento, de dónde sale; la de dividendos, cuánto sobra para los dueños; y las operativas, cuánta caja libera el negocio. Por eso, cuando el RONIC es menor que el WACC, la decisión de inversión (no invertir en crecer) y la de dividendos (distribuir) son la misma decisión vista desde dos lados: devolver el capital que no se puede reinvertir creando valor.' },
+        { t: 'quote', author: 'Alfred Rappaport', credential: 'Creating Shareholder Value', md: 'El crecimiento rentable es el objetivo; el crecimiento por el crecimiento mismo es una trampa que consume caja y destruye valor mientras luce como éxito. La disciplina de invertir solo donde el retorno supera el costo del capital es lo que separa a las empresas que crean valor de las que solo crecen.' },
+      ],
+    },
   ],
   expertos: [
     { author: 'Tim Koller', credential: 'McKinsey — Valuation', md: 'Las dos palancas del valor son el retorno sobre el capital y el crecimiento, pero no son simétricas: el crecimiento solo agrega valor cuando el retorno supera el costo del capital. Con retornos bajos, el crecimiento destruye.' },
