@@ -107,6 +107,16 @@ export const a2_4: Asignatura = {
         { t: 'quote', author: 'Tim Koller', credential: 'McKinsey — Valuation', md: 'El capital de trabajo es capital invertido, exactamente igual que una máquina: exige el mismo retorno. Las empresas que lo entienden gestionan el ciclo con la misma seriedad con que evalúan una inversión en activo fijo.' },
       ],
     },
+    {
+      title: 'Política de crédito y la matriz de vencimiento-reclamo',
+      intro: 'Vender a crédito es prestar dinero. La política de crédito y la gestión de cobranzas deciden cuánto capital queda atrapado —y cuánto se pierde—.',
+      blocks: [
+        { t: 'p', md: 'La **política de crédito** define límites, plazos, garantías y descuentos por pronto pago (cuyo costo financiero implícito hay que calcular: un "2 % a 10 días o neto a 30" es una tasa anualizada altísima). La **incobrabilidad esperada** se estima y se previsiona, no se descubre cuando el cliente ya no paga.' },
+        { t: 'p', md: 'La **matriz de vencimiento contra reclamo** cruza los días de vencimiento de cada factura con los días de reclamo de esa factura. Sus cuadrantes revelan patrones costosos: facturas muy vencidas nunca reclamadas (dinero que se está regalando), o reclamos tempranos sobre facturas no vencidas (fricción innecesaria con buenos clientes). De cada cuadrante se deriva una política y se cuantifica el **costo de la inacción en cobranzas**.' },
+        { t: 'idea', md: 'El crédito comercial de los proveedores (DPO) es la cara espejo: es una fuente de financiamiento del ciclo, con su propio costo implícito si se pierden descuentos por pronto pago. Gestionar bien el capital de trabajo es gestionar simultáneamente lo que se cobra, lo que se paga y lo que se tiene en stock —los tres términos del CCE—.' },
+        { t: 'quote', author: 'James Sagner', credential: 'Working Capital Management', md: 'La cobranza no es una tarea administrativa: es una decisión financiera. Cada día que una factura permanece impaga es capital prestado sin interés, financiado al costo del capital de la empresa. Medirlo cambia la conversación.' },
+      ],
+    },
   ],
   expertos: [
     { author: 'James Sagner', credential: 'Working Capital Management', md: 'Reducir el ciclo de conversión de efectivo es, muchas veces, la inversión de mayor retorno y menor riesgo que una empresa puede hacer: no compra nada, solo deja de inmovilizar.' },

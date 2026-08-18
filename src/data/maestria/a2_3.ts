@@ -118,6 +118,29 @@ export const a2_3: Asignatura = {
         { t: 'warn', md: 'El riesgo sutil no es la fórmula que no compila —esa se detecta sola— sino la **fórmula sintácticamente correcta pero financieramente equivocada**: un supuesto implícito no declarado, una lógica que "funciona" pero mide otra cosa. Por eso la regla de aprobación es inflexible: un modelo que el estudiante no puede explicar línea por línea no se aprueba, lo haya escrito él o el agente.' },
       ],
     },
+    {
+      title: 'Una red neuronal dentro de la planilla',
+      intro: 'El ejercicio más desmitificador del programa: construir una red neuronal profunda con matrices dinámicas, sin una sola macro.',
+      blocks: [
+        { t: 'p', md: 'Una red neuronal de propagación hacia adelante es, en el fondo, una secuencia de **multiplicaciones de matrices** seguidas de una función de activación. Con `MMULT`, `LAMBDA` y `REDUCE` se construye una red profunda dentro de la planilla, capa por capa.' },
+        { t: 'formula', name: 'Propagación de una capa', expr: 'a = f( x · W + b )', where: 'x = entradas · W = pesos (MMULT) · b = sesgo · f = activación (ReLU: max(0, z))', note: 'Apilando capas con REDUCE se obtiene una red profunda. La misma álgebra de la asignatura 1.3, ahora en Excel.' },
+        { t: 'idea', md: 'El fundamento pedagógico es explícito: **comprender la mecánica antes de delegarla en una librería**. El estudiante que construyó la red a mano en una celda entiende qué hace TensorFlow por dentro cuando llegue al aprendizaje profundo de la asignatura 3.2. La desmitificación es el objetivo: la IA deja de ser magia y pasa a ser álgebra que se entiende y se audita.' },
+      ],
+    },
+    {
+      title: 'Auditoría de modelos: confiar es verificar',
+      intro: 'Un modelo financiero mueve decisiones de millones. Antes de confiar en él —propio o ajeno—, se audita.',
+      blocks: [
+        { t: 'ul', items: [
+          '**Rastreo de precedentes y dependientes:** seguir de dónde sale cada número y a dónde va. Una celda con demasiadas dependencias es un punto de fragilidad.',
+          '**Pruebas de esquina y de razonabilidad:** llevar los inputs a extremos y ver si el modelo responde con sentido económico. Un margen del 200 % o una deuda negativa delatan un error.',
+          '**Fórmulas inconsistentes:** detectar la celda que rompe el patrón de su fila o columna —la fuente más común de errores materiales—.',
+          '**Documentación para un tercero:** el modelo debe poder entenderse sin su autor. Si requiere una explicación oral, no está terminado.',
+        ] },
+        { t: 'p', md: 'El régimen de la asignatura incluye un ejercicio revelador: auditar el modelo de un compañero, primero a mano y después con Claude para Excel, y explicar cada divergencia entre ambas auditorías. Se aprende tanto de encontrar el error ajeno como de descubrir dónde el agente vio algo que el ojo humano pasó por alto —y viceversa—.' },
+        { t: 'quote', author: 'Danielle Stein Fairhurst', credential: 'Using Excel for Business Analysis', md: 'Un modelo que solo su autor entiende es un pasivo, no un activo. La auditabilidad —que un tercero pueda seguir, verificar y modificar el modelo— es lo que lo vuelve una herramienta profesional y no una caja negra personal.' },
+      ],
+    },
   ],
   expertos: [
     { author: 'Juan Pablo Rossi', credential: 'JPR Consulting — texto nuclear del programa', md: 'El estándar moderno de modelado se apoya en matrices dinámicas y en una arquitectura auditable. La metodología FAST quedó atrás: fórmula replicada es deuda técnica.' },

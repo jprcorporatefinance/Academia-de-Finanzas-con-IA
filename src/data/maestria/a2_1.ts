@@ -116,6 +116,27 @@ export const a2_1: Asignatura = {
         { t: 'idea', md: 'La regla del "y entonces qué": cada hallazgo debe conectar con una consecuencia y una acción. "El CCE aumentó 12 días" no es un hallazgo útil; "el CCE aumentó 12 días, inmovilizando 4.500 de capital que redujo el ROIC en 1,2 pp, recuperables ajustando la política de cobranzas" sí lo es. El diagnóstico termina en el valor y en la decisión, no en el ratio.' },
       ],
     },
+    {
+      title: 'Las tres dimensiones del diagnóstico',
+      intro: 'Un diagnóstico completo mira la empresa desde tres ángulos que solo tienen sentido juntos: el económico, el financiero y el patrimonial.',
+      blocks: [
+        { t: 'table', title: 'Qué pregunta cada dimensión', headers: ['Dimensión', 'Pregunta', 'Herramientas'], firstColLeft: true, rows: [
+          ['Económica', '¿Genera resultado la operación?', 'Márgenes, DuPont, apalancamientos'],
+          ['Financiera', '¿Tiene caja para operar y pagar?', 'Liquidez, flujos, cobertura de intereses'],
+          ['Patrimonial', '¿Es sólida su estructura?', 'Deuda/PN, deuda/EBITDA, descalce de monedas'],
+        ], caption: 'Una empresa puede ser fuerte en una dimensión y frágil en otra: rentable pero ilíquida, o sólida patrimonialmente pero destructora de valor. El diagnóstico integra las tres.' },
+        { t: 'p', md: 'La **conciliación del flujo operativo con el EBITDA** es la prueba de calidad de utilidades que atraviesa las tres dimensiones: si el resultado dice una cosa y la caja otra, la contradicción se investiga antes de emitir cualquier juicio. Un EBITDA creciente que no se traduce en flujo operativo es la primera señal de que el resultado no es lo que parece.' },
+      ],
+    },
+    {
+      title: 'Benchmarking sectorial y el sistema de semáforos',
+      intro: 'Los umbrales dan sentido a los ratios, pero importarlos sin ajuste al contexto es uno de los errores más frecuentes del diagnóstico.',
+      blocks: [
+        { t: 'p', md: 'Un sistema de **semáforos** (verde/amarillo/rojo) por indicador y por sector ordena la lectura y comunica al directorio de un vistazo. Pero cada sector tiene su fisiología: un nivel de endeudamiento normal en una empresa de servicios puede ser temerario en una industrial de alto costo fijo; un CCE de 90 días es alarmante en un supermercado y normal en una constructora.' },
+        { t: 'warn', md: 'El riesgo de importar umbrales de otro contexto —de un manual estadounidense, de otro sector, de otra época— es diagnosticar mal. Los umbrales se calibran contra comparables del mismo sector y del mismo mercado. En el Nordeste argentino, con inflación y capital caro, los parámetros de una empresa de un mercado desarrollado no se copian: se adaptan, y esa adaptación es parte del trabajo.' },
+        { t: 'quote', author: 'Palepu & Healy', credential: 'Business Analysis and Valuation', md: 'El benchmarking sin comprensión del negocio es peligroso: dos empresas con el mismo ratio pueden estar en situaciones opuestas si sus modelos de negocio, sus sectores o sus contextos difieren. El comparable correcto es tan importante como el ratio.' },
+      ],
+    },
   ],
   expertos: [
     { author: 'Tim Koller', credential: 'McKinsey — Valuation', md: 'La descomposición del retorno revela dónde está la palanca: margen, rotación o apalancamiento. Cada una lleva a una conversación de gestión distinta.' },

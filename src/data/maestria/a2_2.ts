@@ -109,6 +109,28 @@ export const a2_2: Asignatura = {
         { t: 'quote', author: 'Howard Schilit', credential: 'Financial Shenanigans', md: 'Las siete señales de alerta —cuentas por cobrar que crecen más que las ventas, capitalización agresiva, cambio de auditor, operaciones con partes relacionadas— rara vez aparecen solas. Cuando se juntan, el analista debe encender todas las alarmas.' },
       ],
     },
+    {
+      title: 'Calidad de las ganancias: la brecha entre resultado y caja',
+      intro: 'Antes de sospechar manipulación, el analista mide la calidad de las ganancias: cuánto del resultado es caja y cuánto es criterio contable.',
+      blocks: [
+        { t: 'p', md: 'Los **devengamientos (accruals)** son la diferencia entre el resultado contable y el flujo de caja operativo. Un resultado sostenido por devengamientos —ventas registradas pero no cobradas, gastos diferidos, ingresos reconocidos anticipadamente— es de menor calidad que uno respaldado por caja. La brecha, medida período a período, es el termómetro.' },
+        { t: 'formula', name: 'La señal de calidad', expr: 'Devengamientos = Resultado contable − Flujo operativo', note: 'Una brecha creciente y persistente es la señal de alerta madre: el resultado se aleja de la caja, y la caja no miente.' },
+        { t: 'idea', md: 'La conexión con Beneish: la variable de mayor peso del M-Score es justamente TATA (devengamientos totales sobre activos). No es casualidad —la manipulación casi siempre deja su huella en esta brecha, porque inflar el resultado sin inflar la caja es lo que las maniobras contables permiten hacer—.' },
+      ],
+    },
+    {
+      title: 'Comunicar un juicio de riesgo: el protocolo de la prudencia',
+      intro: 'Un diagnóstico de insolvencia o de manipulación tiene consecuencias graves. Cómo se comunica es tan importante como el análisis mismo.',
+      blocks: [
+        { t: 'ul', items: [
+          '**Distinguir señal de sentencia:** los modelos (Altman, Merton, Beneish) señalan riesgo, no lo prueban. La comunicación refleja esa incertidumbre —"hay indicios que ameritan investigar", no "la empresa va a quebrar"—.',
+          '**Contrastar múltiples modelos:** un juicio robusto se apoya en la convergencia de varios enfoques, no en uno solo. Las divergencias se explican, no se ocultan.',
+          '**Documentar los supuestos:** especialmente los frágiles (la σ de Merton en una empresa cerrada), para que el lector calibre la confianza.',
+          '**Cuidar el daño reputacional:** un falso positivo de manipulación puede destruir a una empresa honesta. La prudencia no es debilidad: es responsabilidad profesional.',
+        ] },
+        { t: 'quote', author: 'Edward Altman', credential: 'NYU Stern', md: 'Un modelo de predicción de quiebra es una herramienta de clasificación, no un veredicto. Quien lo usa como sentencia definitiva, sin el juicio y la prudencia que exige la gravedad del tema, traiciona el propósito para el que fue creado.' },
+      ],
+    },
   ],
   expertos: [
     { author: 'Edward Altman', credential: 'NYU Stern — creador del Z-Score', md: 'El Z-Score nunca fue pensado como una bola de cristal, sino como una herramienta de clasificación que ordena a las empresas por su distancia a la dificultad financiera. Su valor está en la disciplina, no en la falsa precisión.' },
