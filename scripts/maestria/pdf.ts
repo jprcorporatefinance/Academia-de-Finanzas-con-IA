@@ -287,9 +287,9 @@ function intro(a: Asignatura): any[] {
 function casoNodes(a: Asignatura): any[] {
   const c = a.caso
   const out: any[] = [
-    { text: '', pageBreak: 'before' },
     {
       stack: [
+        { canvas: [{ type: 'line', x1: 0, y1: 0, x2: 483, y2: 0, lineWidth: 1, lineColor: H('lineL') }], margin: [0, 18, 0, 12] },
         { text: 'CASO PRÁCTICO', font: 'Mono', color: H('greenB'), fontSize: 9, characterSpacing: 2 },
         { text: c.titulo, font: 'Spectral', bold: true, color: H('ink'), fontSize: 19, margin: [0, 4, 0, 2] },
         { text: c.empresa, font: 'PlexSemi', color: H('greenD'), fontSize: 10.5 },
