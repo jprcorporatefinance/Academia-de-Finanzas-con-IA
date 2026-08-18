@@ -55,7 +55,7 @@ function inline(md: string, base: any = {}): any[] {
     if (m.index > last) out.push({ text: md.slice(last, m.index), ...base })
     if (m[2]) out.push({ text: m[2], bold: true, ...base })
     else if (m[3]) out.push({ text: m[3], italics: true, ...base })
-    else if (m[4]) out.push({ text: m[4], font: 'Mono', color: H('greenD'), fontSize: (base.fontSize ?? 10.5) - 0.5 })
+    else if (m[4]) out.push(...splitMono(m[4], { color: H('greenD'), fontSize: (base.fontSize ?? 10.5) - 0.5 }))
     last = m.index + m[0].length
   }
   if (last < md.length) out.push({ text: md.slice(last), ...base })
@@ -63,6 +63,32 @@ function inline(md: string, base: any = {}): any[] {
 }
 
 const isNum = (s: string) => /^[\s]*[-−+]?[\d.,]+\s*%?\s*$|^[\s]*[-−]?\$?[\d.,]+/.test(s.replace(/\*/g, ''))
+
+// IBM Plex Mono no incluye griegas (μ σ β λ Σ ρ Δ…). Renderizamos esos
+// caracteres en Plex (Sans, que sí las tiene) manteniendo el resto en mono.
+function splitMono(str: string, style: any = {}): any[] {
+  const isGreek = (ch: string) => {
+    const c = ch.codePointAt(0)!
+    return c >= 0x0370 && c <= 0x03ff
+  }
+  const runs: any[] = []
+  let buf = ''
+  let bufGreek = false
+  const flush = () => {
+    if (buf) runs.push({ text: buf, font: bufGreek ? 'Plex' : 'Mono', ...style })
+    buf = ''
+  }
+  for (const ch of [...str]) {
+    const g = isGreek(ch)
+    if (g !== bufGreek) {
+      flush()
+      bufGreek = g
+    }
+    buf += ch
+  }
+  flush()
+  return runs
+}
 
 // ---------------------------------------------------------------------------
 // Layouts de tabla
@@ -112,7 +138,7 @@ function blockNode(b: Block): any[] {
             body: [[{
               stack: [
                 { text: b.name.toUpperCase(), font: 'Mono', fontSize: 8, color: H('greenD'), characterSpacing: 1, margin: [0, 0, 0, 4] },
-                { text: b.expr, font: 'Mono', fontSize: 12, color: H('ink'), alignment: 'center', margin: [0, 2, 0, b.where || b.note ? 6 : 0] },
+                { text: splitMono(b.expr, { fontSize: 12, color: H('ink') }), alignment: 'center', margin: [0, 2, 0, b.where || b.note ? 6 : 0] },
                 ...(b.where ? [{ text: inline(b.where, { fontSize: 8.5, color: H('ash') }), alignment: 'center' }] : []),
                 ...(b.note ? [{ text: inline(b.note, { fontSize: 9, italics: true, color: H('ash') }), margin: [0, 4, 0, 0] }] : []),
               ],

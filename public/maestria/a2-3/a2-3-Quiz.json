@@ -1,0 +1,186 @@
+{
+  "cod": "2.3",
+  "nombre": "Modelado Financiero Avanzado en Excel 365 con Matrices Dinámicas",
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "¿Qué ventaja central tienen las matrices dinámicas sobre el arrastre de fórmulas?",
+      "opciones": [
+        "Se ven más lindas.",
+        "Una fórmula por lógica (no miles): el modelo se adapta a cambios estructurales sin “volver a arrastrar”.",
+        "Calculan más rápido siempre.",
+        "No necesitan Excel."
+      ],
+      "correcta": 1,
+      "justificacion": "La clave es estructural: una sola fórmula por lógica hace el modelo robusto y auditable, y se adapta al cambiar dimensiones. No es estética, no siempre es más rápido y requiere Excel 365."
+    },
+    {
+      "id": "q2",
+      "pregunta": "¿Qué función se usa para el cálculo recursivo (saldos que dependen del período anterior) sin arrastrar?",
+      "opciones": [
+        "SUMA.",
+        "SCAN (y REDUCE para el resultado final).",
+        "BUSCARV.",
+        "CONCATENAR."
+      ],
+      "correcta": 1,
+      "justificacion": "SCAN recorre un arreglo llevando un acumulador (toda la trayectoria) y REDUCE devuelve el final. SUMA, BUSCARV o CONCATENAR no hacen recursión."
+    },
+    {
+      "id": "q3",
+      "pregunta": "La diferencia entre SCAN y REDUCE es:",
+      "opciones": [
+        "Ninguna.",
+        "SCAN devuelve toda la trayectoria; REDUCE solo el resultado final.",
+        "REDUCE es más lento.",
+        "SCAN no existe."
+      ],
+      "correcta": 1,
+      "justificacion": "SCAN entrega cada paso intermedio (útil para la tabla completa); REDUCE colapsa al valor final (p. ej. saldo al vencimiento). Ambas existen y son eficientes."
+    },
+    {
+      "id": "q4",
+      "pregunta": "¿Por qué el programa NO enseña la metodología FAST?",
+      "opciones": [
+        "Por moda.",
+        "Porque depende de fórmulas replicadas celda a celda: frágil ante cambios y opaca de auditar.",
+        "Porque es demasiado moderna.",
+        "Porque no usa Excel."
+      ],
+      "correcta": 1,
+      "justificacion": "FAST se apoya en el arrastre, lo que la vuelve frágil y difícil de auditar; el motor de matrices dinámicas resuelve esas debilidades. No es cuestión de moda ni de antigüedad."
+    },
+    {
+      "id": "q5",
+      "pregunta": "La cuota del sistema francés es:",
+      "opciones": [
+        "P × r × n.",
+        "P × r / (1 − (1 + r)^−n).",
+        "P / n.",
+        "P × (1 + r)^n."
+      ],
+      "correcta": 1,
+      "justificacion": "La cuota constante del sistema francés es P·r/(1−(1+r)^−n). Las otras expresiones no producen cuota constante con amortización creciente."
+    },
+    {
+      "id": "q6",
+      "pregunta": "En el sistema francés, a lo largo del préstamo:",
+      "opciones": [
+        "El interés crece y la amortización cae.",
+        "El interés cae y la amortización crece, con cuota constante.",
+        "Ambos son constantes.",
+        "La cuota crece."
+      ],
+      "correcta": 1,
+      "justificacion": "Con cuota constante, al bajar el saldo el interés decrece y la amortización aumenta. La cuota no crece; interés y amortización no son constantes."
+    },
+    {
+      "id": "q7",
+      "pregunta": "La convención de formato del programa marca las celdas de entrada:",
+      "opciones": [
+        "En rojo.",
+        "Sobre fondo gris claro con texto azul.",
+        "Sin ningún formato.",
+        "En negrita únicamente."
+      ],
+      "correcta": 1,
+      "justificacion": "Entradas en gris claro con texto azul, y vínculos entre hojas en verde: el color comunica el rol de la celda. No es rojo ni ausencia de formato."
+    },
+    {
+      "id": "q8",
+      "pregunta": "Una red neuronal de propagación hacia adelante es, esencialmente:",
+      "opciones": [
+        "Magia estadística.",
+        "Multiplicaciones de matrices (MMULT) seguidas de una activación.",
+        "Una macro obligatoria.",
+        "Una función de BUSCARV."
+      ],
+      "correcta": 1,
+      "justificacion": "Cada capa es x·W + b seguido de una activación; se construye con MMULT sin macros. No es magia ni depende de BUSCARV."
+    },
+    {
+      "id": "q9",
+      "pregunta": "La función de activación ReLU se define como:",
+      "opciones": [
+        "min(0, z).",
+        "max(0, z).",
+        "z².",
+        "1/z."
+      ],
+      "correcta": 1,
+      "justificacion": "ReLU = max(0, z): deja pasar los positivos y anula los negativos. No es el mínimo, ni el cuadrado, ni la inversa."
+    },
+    {
+      "id": "q10",
+      "pregunta": "¿Qué hace Claude para Excel según su funcionamiento actual (2026)?",
+      "opciones": [
+        "Solo escribe texto en un chat aparte.",
+        "Opera en un panel lateral, lee el libro entero, preserva dependencias y cita a nivel de celda.",
+        "Reemplaza a Excel.",
+        "Borra el libro."
+      ],
+      "correcta": 1,
+      "justificacion": "El complemento vive en un panel lateral, entiende todo el libro y sus dependencias, y explica citando celdas. No es un chat aislado, no reemplaza Excel ni borra datos (avisa antes de sobrescribir)."
+    },
+    {
+      "id": "q11",
+      "pregunta": "El régimen de uso de la IA en la asignatura establece que:",
+      "opciones": [
+        "El agente decide y el estudiante firma.",
+        "El estudiante verifica celda por celda y acepta o rechaza cada cambio.",
+        "No se revisa nada.",
+        "La IA no se usa."
+      ],
+      "correcta": 1,
+      "justificacion": "El control es del estudiante: verifica y decide cada cambio; ninguna modificación entra sin revisión. No es delegación ciega ni prohibición."
+    },
+    {
+      "id": "q12",
+      "pregunta": "La regla de aprobación respecto de los modelos dice que:",
+      "opciones": [
+        "Basta con que funcione.",
+        "Un modelo que el estudiante no puede explicar línea por línea no se aprueba, lo haya escrito él o el agente.",
+        "Si lo hizo la IA, se aprueba solo.",
+        "La explicación es opcional."
+      ],
+      "correcta": 1,
+      "justificacion": "La comprensión es condición de aprobación: hay que poder explicar cada línea, sin importar quién la escribió. Que “funcione” no alcanza."
+    },
+    {
+      "id": "q13",
+      "pregunta": "Un riesgo específico de usar IA en modelado financiero es:",
+      "opciones": [
+        "Que las fórmulas sean demasiado correctas.",
+        "Fórmulas sintácticamente correctas pero financieramente equivocadas.",
+        "Que Excel se vuelva más lento.",
+        "Que no haya errores nunca."
+      ],
+      "correcta": 1,
+      "justificacion": "El riesgo sutil es la fórmula que “compila” pero está mal desde lo económico (supuesto implícito, lógica errada). Por eso se verifica el criterio, no solo la sintaxis."
+    },
+    {
+      "id": "q14",
+      "pregunta": "La auditoría de un modelo incluye:",
+      "opciones": [
+        "Solo mirar el resultado final.",
+        "Rastrear precedentes y dependientes, pruebas de esquina y documentación para un tercero.",
+        "Confiar en el autor.",
+        "Cambiar los colores."
+      ],
+      "correcta": 1,
+      "justificacion": "Auditar es trazar dependencias, probar casos límite y dejar documentación reproducible. Mirar solo el resultado o confiar sin verificar no es auditoría."
+    },
+    {
+      "id": "q15",
+      "pregunta": "¿En qué software se construyen y abren los modelos del programa?",
+      "opciones": [
+        "En cualquier hoja de cálculo.",
+        "Exclusivamente en Microsoft Excel 365 (por el motor de matrices dinámicas).",
+        "Solo en Google Sheets.",
+        "En un editor de texto."
+      ],
+      "correcta": 1,
+      "justificacion": "Solo Excel 365 soporta plenamente el motor de matrices dinámicas; otras suites corrompen las fórmulas. Por eso el programa lo exige."
+    }
+  ]
+}

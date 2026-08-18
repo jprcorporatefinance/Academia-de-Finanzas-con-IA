@@ -54,5 +54,61 @@
     "cuestionario": "/maestria/a1-4/a1-4-Cuestionario.pdf",
     "quiz": "/maestria/a1-4/a1-4-Quiz.json",
     "preguntas": 15
+  },
+  {
+    "cod": "2.1",
+    "slug": "a2-1",
+    "cuatrimestre": 2,
+    "nombre": "Diagnóstico Económico, Financiero y Patrimonial Integral",
+    "fase": "Diagnóstica · ¿Por qué sucedió?",
+    "horas": "36 h · 14 teóricas / 22 prácticas",
+    "resumen": "Ejecutar el diagnóstico completo en sus tres dimensiones —económica, financiera y patrimonial— y producir un memorándum de nivel directorio. Descomponer la rentabilidad en sus cinco generadores y medir el riesgo estructural.",
+    "pdf": "/maestria/a2-1/a2-1-PDF.pdf",
+    "caso": "/maestria/a2-1/a2-1-Caso.xlsx",
+    "cuestionario": "/maestria/a2-1/a2-1-Cuestionario.pdf",
+    "quiz": "/maestria/a2-1/a2-1-Quiz.json",
+    "preguntas": 15
+  },
+  {
+    "cod": "2.2",
+    "slug": "a2-2",
+    "cuatrimestre": 2,
+    "nombre": "Riesgo de Insolvencia, Calidad de las Ganancias y Detección de Manipulación Contable",
+    "fase": "Diagnóstica · ¿Por qué sucedió?",
+    "horas": "36 h · 14 teóricas / 22 prácticas",
+    "resumen": "Estimar el riesgo de insolvencia de una empresa sin calificación mediante modelos contables y estructurales, evaluar la calidad de las ganancias, detectar indicios de manipulación y construir una calificación sintética.",
+    "pdf": "/maestria/a2-2/a2-2-PDF.pdf",
+    "caso": "/maestria/a2-2/a2-2-Caso.xlsx",
+    "cuestionario": "/maestria/a2-2/a2-2-Cuestionario.pdf",
+    "quiz": "/maestria/a2-2/a2-2-Quiz.json",
+    "preguntas": 15
+  },
+  {
+    "cod": "2.3",
+    "slug": "a2-3",
+    "cuatrimestre": 2,
+    "nombre": "Modelado Financiero Avanzado en Excel 365 con Matrices Dinámicas",
+    "fase": "Diagnóstica · ¿Por qué sucedió?",
+    "horas": "36 h · 10 teóricas / 26 prácticas",
+    "resumen": "Construir modelos financieros profesionales, auditables y mantenibles con el motor de matrices dinámicas de Excel 365. Se forma en los estándares modernos de las principales firmas: NO se enseña la metodología FAST.",
+    "pdf": "/maestria/a2-3/a2-3-PDF.pdf",
+    "caso": "/maestria/a2-3/a2-3-Caso.xlsx",
+    "cuestionario": "/maestria/a2-3/a2-3-Cuestionario.pdf",
+    "quiz": "/maestria/a2-3/a2-3-Quiz.json",
+    "preguntas": 15
+  },
+  {
+    "cod": "2.4",
+    "slug": "a2-4",
+    "cuatrimestre": 2,
+    "nombre": "Gestión del Capital de Trabajo, Ciclo de Conversión de Efectivo y Matrices Operativas",
+    "fase": "Diagnóstica · ¿Por qué sucedió?",
+    "horas": "36 h · 12 teóricas / 24 prácticas",
+    "resumen": "Medir, descomponer y gestionar el ciclo de conversión de efectivo; diseñar políticas de inventarios, crédito y pagos fundadas en el dato; y cuantificar el capital liberado por cada mejora y su efecto sobre el ROIC y el EVA.",
+    "pdf": "/maestria/a2-4/a2-4-PDF.pdf",
+    "caso": "/maestria/a2-4/a2-4-Caso.xlsx",
+    "cuestionario": "/maestria/a2-4/a2-4-Cuestionario.pdf",
+    "quiz": "/maestria/a2-4/a2-4-Quiz.json",
+    "preguntas": 15
   }
 ]

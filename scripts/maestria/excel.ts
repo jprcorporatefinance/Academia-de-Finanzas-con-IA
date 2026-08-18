@@ -11,14 +11,20 @@ import type { Asignatura, ExcelModel, Fmt } from '../../src/data/maestria/types'
 const MODERN = [
   'LET', 'LAMBDA', 'SEQUENCE', 'MAKEARRAY', 'SCAN', 'REDUCE', 'MAP', 'BYROW', 'BYCOL',
   'HSTACK', 'VSTACK', 'TAKE', 'DROP', 'EXPAND', 'TOROW', 'TOCOL', 'CHOOSEROWS', 'CHOOSECOLS',
-  'FILTER', 'SORT', 'SORTBY', 'UNIQUE', 'XLOOKUP', 'XMATCH', 'IFS', 'SWITCH', 'TEXTJOIN',
+  'XLOOKUP', 'XMATCH', 'IFS', 'SWITCH', 'TEXTJOIN',
   'TEXTSPLIT', 'TEXTBEFORE', 'TEXTAFTER', 'NORM.S.DIST', 'NORM.DIST', 'NORM.S.INV',
 ]
+// FILTER/SORT/SORTBY/UNIQUE viven en el sub-espacio _xlws (worksheet-only).
+const XLWS = ['FILTER', 'SORT', 'SORTBY', 'UNIQUE']
 function modernPrefix(formula: string): string {
   let f = formula
+  for (const fn of XLWS) {
+    f = f.replace(new RegExp(`(?<!_xlfn\\._xlws\\.)\\b${fn}\\(`, 'g'), `_xlfn._xlws.${fn}(`)
+  }
   for (const fn of MODERN) {
     const esc = fn.replace(/\./g, '\\.')
-    f = f.replace(new RegExp(`(?<!_xlfn\\.)\\b${esc}\\(`, 'g'), `_xlfn.${fn}(`)
+    // no volver a prefijar lo ya prefijado (_xlfn. o _xlfn._xlws.)
+    f = f.replace(new RegExp(`(?<!_xlfn\\.)(?<!_xlws\\.)\\b${esc}\\(`, 'g'), `_xlfn.${fn}(`)
   }
   return f
 }

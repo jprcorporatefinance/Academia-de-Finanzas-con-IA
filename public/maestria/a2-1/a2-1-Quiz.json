@@ -1,0 +1,186 @@
+{
+  "cod": "2.1",
+  "nombre": "Diagnóstico Económico, Financiero y Patrimonial Integral",
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "¿Qué agrega el DuPont de cinco factores frente al de tres?",
+      "opciones": [
+        "Nada, es lo mismo.",
+        "Aísla el efecto de los intereses (carga financiera) y la carga fiscal.",
+        "Elimina el margen operativo.",
+        "Solo cambia el orden."
+      ],
+      "correcta": 1,
+      "justificacion": "La versión de cinco factores separa la carga fiscal (NI/EBT) y la carga financiera (EBT/EBIT), que la de tres factores mezcla dentro del margen neto. No elimina el margen operativo ni es un mero reordenamiento."
+    },
+    {
+      "id": "q2",
+      "pregunta": "La “carga financiera” del DuPont (EBT/EBIT) mide:",
+      "opciones": [
+        "La eficiencia operativa.",
+        "Cuánto del resultado operativo se lleva el interés de la deuda.",
+        "La tasa impositiva.",
+        "La rotación de activos."
+      ],
+      "correcta": 1,
+      "justificacion": "EBT/EBIT capta el peso de los intereses: cuanto más baja, más se lleva la deuda. No es margen operativo, ni fiscalidad, ni rotación."
+    },
+    {
+      "id": "q3",
+      "pregunta": "Un ROE alto que proviene sobre todo del multiplicador financiero (Activos/PN) indica que:",
+      "opciones": [
+        "La empresa es muy eficiente operativamente.",
+        "El retorno se apoya en el apalancamiento (deuda), lo que agrega riesgo.",
+        "No hay riesgo.",
+        "El margen operativo es altísimo."
+      ],
+      "correcta": 1,
+      "justificacion": "Si el ROE se explica por el multiplicador, viene del endeudamiento, no de la operación, y eso agrega fragilidad. No implica eficiencia operativa ni ausencia de riesgo."
+    },
+    {
+      "id": "q4",
+      "pregunta": "El GAO (grado de apalancamiento operativo) alto significa:",
+      "opciones": [
+        "Mucha deuda.",
+        "Mucha estructura de costos fijos: el EBIT amplifica las variaciones de ventas.",
+        "Alta liquidez.",
+        "Baja rotación."
+      ],
+      "correcta": 1,
+      "justificacion": "El GAO mide el riesgo operativo por costos fijos: a más costos fijos, más se amplifica el EBIT ante cambios de ventas. La deuda es el GAF, no el GAO."
+    },
+    {
+      "id": "q5",
+      "pregunta": "El GAT (apalancamiento total) es:",
+      "opciones": [
+        "GAO + GAF.",
+        "GAO × GAF.",
+        "GAO / GAF.",
+        "Solo el GAF."
+      ],
+      "correcta": 1,
+      "justificacion": "El apalancamiento total es el producto: GAT = GAO × GAF, porque los efectos operativo y financiero se componen multiplicativamente."
+    },
+    {
+      "id": "q6",
+      "pregunta": "El punto de equilibrio económico se calcula como:",
+      "opciones": [
+        "Costos fijos × margen de contribución.",
+        "Costos fijos ÷ margen de contribución porcentual.",
+        "Ventas − costos.",
+        "Activos ÷ patrimonio."
+      ],
+      "correcta": 1,
+      "justificacion": "PE = CF ÷ MC% es el nivel de ventas con EBIT cero. Las otras expresiones no despejan el equilibrio."
+    },
+    {
+      "id": "q7",
+      "pregunta": "El punto de equilibrio financiero respecto del económico es:",
+      "opciones": [
+        "Siempre mayor.",
+        "Menor, porque descuenta partidas no erogables (depreciaciones, RECPAM).",
+        "Igual.",
+        "Independiente de la depreciación."
+      ],
+      "correcta": 1,
+      "justificacion": "El financiero ajusta por no erogables y por eso es menor: se puede estar en pérdida contable y aún generar caja. Depende directamente de la depreciación y similares."
+    },
+    {
+      "id": "q8",
+      "pregunta": "Combinar GAO alto y GAF alto produce:",
+      "opciones": [
+        "Máxima seguridad.",
+        "Amplificación doble: una caída de ventas golpea fuerte el resultado (empresa frágil).",
+        "Un ROE bajo garantizado.",
+        "Inmunidad a las ventas."
+      ],
+      "correcta": 1,
+      "justificacion": "Costos fijos altos + deuda alta amplifican dos veces las variaciones de ventas: es el perfil “rentable pero frágil”. No da seguridad ni inmunidad."
+    },
+    {
+      "id": "q9",
+      "pregunta": "Descomponer la variación de ventas en precio, volumen y mezcla sirve para:",
+      "opciones": [
+        "Decorar el informe.",
+        "Saber la causa de un cambio de margen y elegir la acción correcta.",
+        "Calcular impuestos.",
+        "Nada práctico."
+      ],
+      "correcta": 1,
+      "justificacion": "Cada causa (precio, volumen, mezcla) exige una acción distinta; sin la descomposición, el diagnóstico es anécdota. No tiene fin decorativo ni fiscal."
+    },
+    {
+      "id": "q10",
+      "pregunta": "La “empresa solvente que destruye valor” es aquella que:",
+      "opciones": [
+        "No puede pagar sus deudas.",
+        "Es rentable en libros pero tiene ROIC < WACC.",
+        "No tiene deuda.",
+        "Tiene mucha caja."
+      ],
+      "correcta": 1,
+      "justificacion": "Puede lucir rentable y pagar sus cuentas, pero si el ROIC no supera el WACC destruye valor. No es un problema de solvencia inmediata ni de caja."
+    },
+    {
+      "id": "q11",
+      "pregunta": "El “nivel de ventas para cubrir todo el período” incluye, además de los costos:",
+      "opciones": [
+        "Nada más.",
+        "El servicio de deuda, las inversiones comprometidas y las distribuciones previstas.",
+        "Solo la depreciación.",
+        "Solo los impuestos."
+      ],
+      "correcta": 1,
+      "justificacion": "Es el umbral de caja real: suma servicio de deuda, inversiones y dividendos comprometidos. Es más exigente que el equilibrio económico o financiero."
+    },
+    {
+      "id": "q12",
+      "pregunta": "En el mapa de interrelaciones, un aumento del ciclo de conversión de efectivo (CCE):",
+      "opciones": [
+        "Mejora el ROIC.",
+        "Aumenta el capital invertido y por esa vía reduce el ROIC y el EVA.",
+        "No afecta el valor.",
+        "Reduce las ventas."
+      ],
+      "correcta": 1,
+      "justificacion": "Un CCE mayor inmoviliza más capital de trabajo, sube el capital invertido y baja el ROIC/EVA. Es una de las conexiones centrales entre operación y valor."
+    },
+    {
+      "id": "q13",
+      "pregunta": "El principio de la pirámide aplicado al memorándum implica:",
+      "opciones": [
+        "Poner la conclusión al final.",
+        "Poner la conclusión primero y luego el sustento.",
+        "No tener conclusión.",
+        "Ordenar por fecha."
+      ],
+      "correcta": 1,
+      "justificacion": "La pirámide (Minto) exige conclusión primero, agrupamiento lógico y sustento después. Es lo opuesto a reservar la conclusión para el final."
+    },
+    {
+      "id": "q14",
+      "pregunta": "El margen de seguridad mide:",
+      "opciones": [
+        "La liquidez.",
+        "Cuánto pueden caer las ventas antes de llegar al punto de equilibrio.",
+        "La tasa de interés.",
+        "El patrimonio."
+      ],
+      "correcta": 1,
+      "justificacion": "Margen de seguridad = (Ventas − PE)/Ventas: el colchón de ventas antes de entrar en pérdida. No mide liquidez, tasa ni patrimonio."
+    },
+    {
+      "id": "q15",
+      "pregunta": "Según Higgins, calcular ratios sin una pregunta de negocio detrás es:",
+      "opciones": [
+        "Diagnóstico completo.",
+        "Aritmética, no diagnóstico.",
+        "Suficiente para decidir.",
+        "Lo ideal."
+      ],
+      "correcta": 1,
+      "justificacion": "Los ratios son medios para responder preguntas de negocio; sin esa pregunta, son aritmética. El diagnóstico exige interpretación orientada a la decisión."
+    }
+  ]
+}

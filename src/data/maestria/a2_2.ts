@@ -1,0 +1,185 @@
+import type { Asignatura } from './types'
+
+// ============================================================================
+// ASIGNATURA 2.2 — Riesgo de Insolvencia, Calidad de las Ganancias y
+// Detección de Manipulación Contable
+// ============================================================================
+export const a2_2: Asignatura = {
+  cod: '2.2',
+  slug: 'a2-2',
+  cuatrimestre: 2,
+  fase: 'Diagnóstica · ¿Por qué sucedió?',
+  nombre: 'Riesgo de Insolvencia, Calidad de las Ganancias y Detección de Manipulación Contable',
+  horas: '36 h · 14 teóricas / 22 prácticas',
+  correlativas: 'Correlativa: 1.1 · Segundo cuatrimestre',
+  framework: 'Altman · Merton · Beneish · Schilit',
+  resumen:
+    'Estimar el riesgo de insolvencia de una empresa sin calificación mediante modelos contables y estructurales, evaluar la calidad de las ganancias, detectar indicios de manipulación y construir una calificación sintética.',
+  objetivos: [
+    'Estimar el riesgo de insolvencia mediante modelos contables (Altman) y estructurales (Merton).',
+    'Evaluar la calidad de las ganancias y detectar indicios de manipulación (Beneish).',
+    'Construir una calificación crediticia sintética y traducirla a diferencial de tasa.',
+    'Comunicar un juicio sobre riesgo de crédito con la prudencia que exige su gravedad.',
+  ],
+  sections: [
+    {
+      title: 'Altman: el modelo contable de insolvencia',
+      intro: 'El puntaje Z de Altman combina cinco (o cuatro) razones en un único indicador de distancia a la quiebra. Para la empresa que no cotiza de un mercado emergente, la versión correcta es la Z′′.',
+      blocks: [
+        { t: 'formula', name: 'Altman Z′′ para mercados emergentes', expr: "Z′′ = 6,56·X1 + 3,26·X2 + 6,72·X3 + 1,05·X4", where: 'X1 = Capital de trabajo/Activo · X2 = Utilidades retenidas/Activo · X3 = EBIT/Activo · X4 = Valor libro del patrimonio/Pasivo total', note: 'SIN X5 (rotación de activos = Ventas/Activo), porque el criterio sectorial la distorsiona en la empresa que no cotiza.' },
+        { t: 'table', title: 'Zonas de la Z′′', headers: ['Zona', 'Rango', 'Lectura'], firstColLeft: true, rows: [
+          ['Segura', 'Z′′ > 2,60', 'Bajo riesgo de insolvencia'],
+          ['Gris', '1,10 – 2,60', 'Zona de incertidumbre; vigilar'],
+          ['Peligro', 'Z′′ < 1,10', 'Alta probabilidad de dificultades'],
+        ] },
+        { t: 'p', md: 'Existen modelos alternativos (Ohlson, Zmijewski, Springate) con distinta especificación. Ninguno es infalible: la Z es una **señal de alerta cuantitativa**, no una sentencia, y debe leerse junto con el flujo de caja y el modelo estructural.' },
+      ],
+    },
+    {
+      title: 'Merton: el modelo estructural',
+      intro: 'Un enfoque distinto: el patrimonio como una opción de compra sobre los activos de la empresa.',
+      blocks: [
+        { t: 'p', md: 'En el modelo de Merton (1974), los accionistas tienen una **opción de compra** sobre los activos con precio de ejercicio igual a la deuda: si al vencimiento los activos valen más que la deuda, ejercen (pagan y se quedan la empresa); si no, no ejercen (default). De ahí se derivan la **distancia al incumplimiento** y la **probabilidad de default**.' },
+        { t: 'formula', name: 'Distancia al incumplimiento y PD', expr: 'DD = [ln(V_A/D) + (μ − σ_A²/2)·T] ÷ (σ_A·√T)   →   PD = N(−DD)', where: 'V_A = valor de los activos · D = deuda · σ_A = volatilidad de los activos · T = horizonte', note: 'En la empresa sin cotización, σ_A se estima desde la volatilidad de los resultados operativos, declarando el error que introduce.' },
+        { t: 'warn', md: 'Aplicar Merton a una empresa cerrada exige un salto: no hay precio de mercado del patrimonio ni volatilidad observable. Se aproxima, pero **hay que declarar el supuesto y su fragilidad**. Un modelo estructural con parámetros inventados da una falsa precisión peligrosa.' },
+      ],
+    },
+    {
+      title: 'Calidad de las ganancias y Beneish',
+      intro: 'Un resultado puede ser técnicamente correcto y económicamente engañoso. El M-Score de Beneish busca las huellas de la manipulación.',
+      blocks: [
+        { t: 'p', md: 'La **calidad de las ganancias** se mide por la distancia entre el resultado contable y el flujo operativo: los **devengamientos** (accruals) totales y discrecionales. Una brecha persistente y creciente es la señal de alerta madre.' },
+        { t: 'formula', name: 'M-Score de Beneish (8 variables)', expr: 'M = −4,84 + 0,920·DSRI + 0,528·GMI + 0,404·AQI + 0,892·SGI + 0,115·DEPI − 0,172·SGAI + 4,679·TATA − 0,327·LVGI', where: 'DSRI días de venta en CxC · GMI margen bruto · AQI calidad de activos · SGI crecimiento de ventas · DEPI depreciación · SGAI gastos · TATA devengamientos/activos · LVGI apalancamiento', note: 'Umbral: M > −1,78 sugiere probable manipulación. TATA (devengamientos) es la variable de mayor peso.' },
+        { t: 'ul', items: [
+          'Cuentas por cobrar desacopladas de las ventas (DSRI alto).',
+          'Capitalización agresiva de gastos y reconocimiento anticipado de ingresos.',
+          'Cambios de criterio de valuación o de auditor sin explicación.',
+          'Operaciones con partes relacionadas a precios fuera de mercado.',
+        ] },
+        { t: 'quote', author: 'Howard Schilit', credential: 'Financial Shenanigans', md: 'Las manipulaciones contables casi siempre dejan un rastro en la relación entre el resultado y el efectivo. El analista que sigue la caja es difícil de engañar.' },
+      ],
+    },
+    {
+      title: 'Calificación sintética y marco argentino',
+      intro: 'Sin una calificadora que ponga nota, el analista la construye a partir de la cobertura de intereses.',
+      blocks: [
+        { t: 'p', md: 'La **calificación crediticia sintética** parte de la **cobertura de intereses** (EBIT/Intereses): a cada rango le corresponde una calificación equivalente y un **diferencial de incumplimiento** (default spread) que se suma a la tasa libre de riesgo para estimar el costo de la deuda (Kd), insumo del WACC en la asignatura 3.1.' },
+        { t: 'formula', name: 'Del rating al costo de la deuda', expr: 'Kd = Rf + default spread(rating sintético) · rating = f(cobertura de intereses)', note: 'Es el puente entre el diagnóstico de riesgo y el costo del capital.' },
+        { t: 'p', md: 'El **marco argentino** aporta su propia capa: la **clasificación de deudores del BCRA** (situación 1 a 5), la ley de concursos y quiebras, y las **sociedades de garantía recíproca** como mitigante del riesgo PyME. El juicio final se comunica con prudencia: un error en insolvencia tiene consecuencias graves.' },
+      ],
+    },
+  ],
+  expertos: [
+    { author: 'Edward Altman', credential: 'NYU Stern — creador del Z-Score', md: 'El Z-Score nunca fue pensado como una bola de cristal, sino como una herramienta de clasificación que ordena a las empresas por su distancia a la dificultad financiera. Su valor está en la disciplina, no en la falsa precisión.' },
+    { author: 'Messod Beneish', credential: 'Indiana University — M-Score', md: 'La manipulación deja huellas medibles en un puñado de razones; el modelo no acusa, señala dónde mirar con más cuidado.' },
+    { author: 'Howard Schilit', credential: 'Center for Financial Research and Analysis', md: 'Seguí el efectivo, cuestioná los cambios de criterio y desconfiá del crecimiento de cuentas por cobrar que no acompaña a las ventas.' },
+  ],
+  caso: {
+    titulo: 'Riesgo de insolvencia y calidad de las ganancias',
+    empresa: 'Maderas del Litoral S.A. — ¿es sólida o frágil?',
+    contexto:
+      'El banco que analiza el pedido de crédito de Maderas del Litoral quiere una lectura independiente del riesgo. El consultor aplica los tres modelos: el Altman Z′′ (contable), el Merton (estructural) y el Beneish (calidad de ganancias), y construye la calificación sintética.\n\nEl resultado tiene un matiz importante: por solvencia patrimonial la empresa luce sólida (Z′′ en zona segura, PD de Merton baja), pero eso convive con la fragilidad de liquidez que aparecerá en la asignatura 4.3. Solvencia y liquidez no son lo mismo: una empresa puede ser solvente y aun así morir por falta de caja.\n\nEl encargo: calcular Z′′, M-Score y distancia al incumplimiento, derivar la calificación sintética y su costo de deuda, y emitir un juicio prudente.',
+    datos: [
+      { t: 'table', title: 'Datos para Altman Z′′ y Merton (miles de $)', headers: ['Concepto', 'Valor'], firstColLeft: true, rows: [
+        ['Capital de trabajo', '3.870'],
+        ['Utilidades retenidas', '2.200'],
+        ['EBIT', '3.850'],
+        ['Activo total', '13.500'],
+        ['Valor libro del patrimonio', '5.270'],
+        ['Pasivo total', '8.230'],
+        ['Valor de los activos (Merton)', '13.500'],
+        ['Deuda (Merton)', '6.500'],
+        ['Volatilidad de los activos σ', '35%'],
+        ['Cobertura de intereses (EBIT/Int.)', '3,35x'],
+      ] },
+    ],
+    consigna: [
+      '¿En qué zona cae el Altman Z′′ de la empresa?',
+      '¿Cuál es el M-Score de Beneish y sugiere manipulación?',
+      '¿Cuál es la distancia al incumplimiento y la probabilidad de default de Merton?',
+      '¿Qué calificación sintética y costo de deuda surgen de la cobertura de intereses?',
+    ],
+    metodologia: [
+      { k: 'Altman', d: 'Calcular X1..X4, ponderar y sumar; ubicar la zona.' },
+      { k: 'Beneish', d: 'Ponderar las 8 variables y comparar con el umbral −1,78.' },
+      { k: 'Merton', d: 'Estimar la distancia al incumplimiento y la PD, declarando el supuesto de σ.' },
+      { k: 'Calificación sintética', d: 'De la cobertura de intereses al rating y al default spread.' },
+      { k: 'Juicio', d: 'Integrar solvencia y liquidez con prudencia; distinguir una de otra.' },
+    ],
+  },
+  model: {
+    sheetTitle: 'Insolvencia y calidad de ganancias: Altman Z′′, Beneish y Merton',
+    intro:
+      'Editá las celdas marfil. El Z′′ y el M-Score se descomponen con matrices dinámicas (una fórmula derrama cada tabla de aportes), y se calculan la distancia al incumplimiento de Merton y la calificación sintética por XLOOKUP.',
+    inputs: [
+      { key: 'wc', label: 'Capital de trabajo', value: 3870, fmt: 'money', unit: 'miles $' },
+      { key: 're', label: 'Utilidades retenidas', value: 2200, fmt: 'money' },
+      { key: 'ebit', label: 'EBIT', value: 3850, fmt: 'money' },
+      { key: 'ta', label: 'Activo total', value: 13500, fmt: 'money' },
+      { key: 'be', label: 'Valor libro del patrimonio', value: 5270, fmt: 'money' },
+      { key: 'tl', label: 'Pasivo total', value: 8230, fmt: 'money' },
+      { key: 'dsri', label: 'Beneish DSRI', value: 1.10, fmt: 'num2' },
+      { key: 'gmi', label: 'Beneish GMI', value: 1.05, fmt: 'num2' },
+      { key: 'aqi', label: 'Beneish AQI', value: 1.00, fmt: 'num2' },
+      { key: 'sgi', label: 'Beneish SGI', value: 1.11, fmt: 'num2' },
+      { key: 'depi', label: 'Beneish DEPI', value: 0.98, fmt: 'num2' },
+      { key: 'sgai', label: 'Beneish SGAI', value: 1.02, fmt: 'num2' },
+      { key: 'tata', label: 'Beneish TATA', value: 0.02, fmt: 'num2' },
+      { key: 'lvgi', label: 'Beneish LVGI', value: 1.03, fmt: 'num2' },
+      { key: 'vA', label: 'Valor de los activos (Merton)', value: 13500, fmt: 'money' },
+      { key: 'deuda', label: 'Deuda (Merton)', value: 6500, fmt: 'money' },
+      { key: 'sigma', label: 'Volatilidad de los activos σ', value: 0.35, fmt: 'pct' },
+      { key: 'mu', label: 'Deriva μ', value: 0.10, fmt: 'pct' },
+      { key: 'coverage', label: 'Cobertura de intereses (EBIT/Int.)', value: 3.35, fmt: 'x' },
+    ],
+    calcs: [
+      { key: 'zscore', label: 'Altman Z′′', xl: '=6.56*([wc]/[ta])+3.26*([re]/[ta])+6.72*([ebit]/[ta])+1.05*([be]/[tl])', fmt: 'num2', highlight: true },
+      { key: 'mscore', label: 'Beneish M-Score', xl: '=-4.84+0.920*[dsri]+0.528*[gmi]+0.404*[aqi]+0.892*[sgi]+0.115*[depi]-0.172*[sgai]+4.679*[tata]-0.327*[lvgi]', fmt: 'num2', highlight: true },
+      { key: 'dd', label: 'Distancia al incumplimiento (Merton)', xl: '=(LN([vA]/[deuda])+([mu]-[sigma]^2/2))/([sigma])', fmt: 'num2', highlight: true },
+      { key: 'pd', label: 'Probabilidad de default (Merton)', xl: '=NORM.S.DIST(-[dd],TRUE)', fmt: 'pct2', highlight: true },
+      { key: 'spread', label: 'Default spread (rating sintético)', xl: '=XLOOKUP([coverage],{0;0.5;0.8;1.25;1.5;2;2.5;3;4.25;5.5;6.5},{0.20;0.15;0.11;0.09;0.075;0.055;0.04;0.035;0.03;0.025;0.02},0.02,-1)', fmt: 'pct1' },
+      { key: 'rating', label: 'Rating sintético', xl: '=XLOOKUP([coverage],{0;0.5;0.8;1.25;1.5;2;2.5;3;4.25;5.5;6.5},{"D";"C";"CCC";"B";"B+";"BB";"BB+";"BBB";"A-";"A";"AA"},"D",-1)' },
+    ],
+    spills: [
+      {
+        key: 'altman',
+        title: 'Descomposición del Altman Z′′',
+        columns: ['Componente', 'Valor Xi', 'Ponderador', 'Aporte'],
+        xl: '=LET(nom,{"X1 Capital trabajo/Activo";"X2 Ut. retenidas/Activo";"X3 EBIT/Activo";"X4 Patrimonio/Pasivo"}, x,VSTACK([wc]/[ta],[re]/[ta],[ebit]/[ta],[be]/[tl]), w,{6.56;3.26;6.72;1.05}, HSTACK(nom,x,w,x*w))',
+        formats: [undefined, 'num2', 'num2', 'num2'],
+        rows: 4,
+        note: 'VSTACK arma las cuatro razones; el aporte de cada una es Xi × ponderador. La suma de la última columna es el Z′′.',
+      },
+    ],
+    conclusions: [
+      { label: 'Insolvencia (Altman)', xl: '=IF([zscore]>2.6,"Z′′ = "&TEXT([zscore],"0.00")&": ZONA SEGURA. Bajo riesgo de insolvencia por solvencia patrimonial.",IF([zscore]>=1.1,"Z′′ = "&TEXT([zscore],"0.00")&": ZONA GRIS, vigilar.","Z′′ = "&TEXT([zscore],"0.00")&": ZONA DE PELIGRO."))' },
+      { label: 'Manipulación (Beneish)', xl: '=IF([mscore]>-1.78,"M-Score = "&TEXT([mscore],"0.00")&" > −1,78: revisar con cuidado, hay señales.","M-Score = "&TEXT([mscore],"0.00")&" < −1,78: sin indicios fuertes de manipulación.")' },
+      { label: 'Merton y rating', xl: '="Distancia al incumplimiento "&TEXT([dd],"0.00")&", PD "&TEXT([pd],"0.00%")&". Calificación sintética "&[rating]&" → Kd = Rf + "&TEXT([spread],"0.0%")&". Solvencia OK no implica liquidez OK (ver 4.3)."' },
+    ],
+  },
+  quiz: [
+    { id: 'q1', pregunta: '¿Por qué la versión Z′′ de Altman elimina el factor X5 (Ventas/Activos)?', opciones: ['Por error de cálculo.', 'Porque el criterio sectorial de la rotación distorsiona en la empresa que no cotiza.', 'Porque las ventas no importan.', 'Para simplificar la aritmética.'], correcta: 1, justificacion: 'X5 (rotación) varía mucho por sector y distorsiona la comparación en empresas cerradas; por eso la Z′′ lo elimina. No es un error ni una simplificación arbitraria, y las ventas sí importan en otros contextos.' },
+    { id: 'q2', pregunta: 'Un Altman Z′′ de 5,0 indica:', opciones: ['Zona de peligro.', 'Zona segura (bajo riesgo de insolvencia).', 'Zona gris.', 'Manipulación contable.'], correcta: 1, justificacion: 'Z′′ > 2,60 es zona segura; 5,0 está cómodamente ahí. El Z no mide manipulación (eso es Beneish).' },
+    { id: 'q3', pregunta: 'En el modelo de Merton, el patrimonio de los accionistas se interpreta como:', opciones: ['Un bono.', 'Una opción de compra sobre los activos, con ejercicio igual a la deuda.', 'Un depósito a plazo.', 'Una opción de venta sobre las ventas.'], correcta: 1, justificacion: 'Merton modela el equity como call sobre los activos: si al vencimiento los activos superan la deuda, los accionistas “ejercen”. No es un bono, un depósito ni una put sobre ventas.' },
+    { id: 'q4', pregunta: 'Al aplicar Merton a una empresa sin cotización, el mayor problema es:', opciones: ['Que la fórmula no existe.', 'Estimar σ (volatilidad de los activos) sin precio de mercado, lo que exige declarar el supuesto.', 'Que la deuda es desconocida.', 'Que no hay activos.'], correcta: 1, justificacion: 'Sin cotización no hay volatilidad observable del patrimonio; σ se aproxima desde los resultados operativos y hay que declarar su fragilidad. La fórmula existe y la deuda suele conocerse.' },
+    { id: 'q5', pregunta: 'La calidad de las ganancias se evalúa principalmente por:', opciones: ['El tamaño de la empresa.', 'La distancia entre el resultado contable y el flujo operativo (devengamientos).', 'La cantidad de empleados.', 'El color del informe.'], correcta: 1, justificacion: 'Los devengamientos (brecha resultado–caja) son el corazón de la calidad de ganancias: una brecha persistente alerta. El tamaño o el personal no la determinan.' },
+    { id: 'q6', pregunta: 'En el M-Score de Beneish, un valor mayor que −1,78:', opciones: ['Descarta toda manipulación.', 'Sugiere probable manipulación y amerita revisar con más cuidado.', 'Es imposible.', 'Indica quiebra.'], correcta: 1, justificacion: 'M > −1,78 es la señal de probable manipulación en el modelo de 8 variables. No descarta nada ni indica quiebra (eso es Altman/Merton).' },
+    { id: 'q7', pregunta: 'La variable de mayor peso en el M-Score de Beneish es:', opciones: ['El apalancamiento (LVGI).', 'Los devengamientos sobre activos (TATA), con coeficiente 4,679.', 'La depreciación (DEPI).', 'Los gastos de administración (SGAI).'], correcta: 1, justificacion: 'TATA lleva el coeficiente más alto (4,679): los devengamientos son la huella más informativa de manipulación. LVGI y SGAI tienen coeficientes chicos (y negativos).' },
+    { id: 'q8', pregunta: 'Un DSRI (días de venta en cuentas por cobrar) muy elevado sugiere:', opciones: ['Excelente cobranza.', 'Cuentas por cobrar desacopladas de las ventas, posible reconocimiento anticipado de ingresos.', 'Que no hay ventas a crédito.', 'Menor riesgo.'], correcta: 1, justificacion: 'Un DSRI alto indica que las CxC crecen más que las ventas, señal clásica de ingresos inflados o cobranza deteriorada. No es signo de buena cobranza ni de menor riesgo.' },
+    { id: 'q9', pregunta: 'La calificación crediticia sintética se construye a partir de:', opciones: ['El logo de la empresa.', 'La cobertura de intereses (EBIT/Intereses), que mapea a un rating y un default spread.', 'La cantidad de sucursales.', 'El PBI del país solamente.'], correcta: 1, justificacion: 'La cobertura de intereses es la base del rating sintético y del spread que alimenta el Kd. No depende del logo, sucursales ni solo del PBI.' },
+    { id: 'q10', pregunta: 'El default spread del rating sintético se usa para:', opciones: ['Calcular el impuesto.', 'Estimar el costo de la deuda (Kd = Rf + spread), insumo del WACC.', 'Medir la rotación.', 'Nada financiero.'], correcta: 1, justificacion: 'El spread sobre la tasa libre de riesgo da el Kd, que entra al WACC (asignatura 3.1). No es un cálculo fiscal ni de rotación.' },
+    { id: 'q11', pregunta: 'Una empresa con Z′′ en zona segura y PD de Merton baja:', opciones: ['No puede tener problemas de liquidez.', 'Es solvente, pero eso no garantiza que tenga liquidez suficiente.', 'Está quebrada.', 'Manipula sus ganancias.'], correcta: 1, justificacion: 'Solvencia (patrimonio > deuda, baja PD) no es liquidez (caja para pagar a tiempo): una empresa solvente puede morir por iliquidez (ver 4.3). No implica quiebra ni manipulación.' },
+    { id: 'q12', pregunta: 'La clasificación de deudores del BCRA es:', opciones: ['Un modelo estadístico de Altman.', 'El marco argentino de situaciones de deuda (1 a 5) para riesgo de crédito.', 'Una norma de reexpresión.', 'Un impuesto.'], correcta: 1, justificacion: 'El BCRA clasifica a los deudores en situaciones 1 a 5 según su riesgo; es marco local de crédito. No es un modelo de Altman, ni norma contable, ni tributo.' },
+    { id: 'q13', pregunta: 'Frente a un resultado desfavorable de riesgo de crédito, el analista debe:', opciones: ['Publicarlo sin cuidado.', 'Comunicarlo con prudencia, dado el peso de las consecuencias.', 'Ocultarlo.', 'Ignorarlo.'], correcta: 1, justificacion: 'Un juicio de insolvencia tiene consecuencias graves (crédito negado, reputación); exige un protocolo de comunicación prudente. Ni imprudencia, ni ocultamiento, ni omisión.' },
+    { id: 'q14', pregunta: 'Los modelos de insolvencia (Altman, Merton) deben leerse:', opciones: ['Como sentencia definitiva.', 'Como señales de alerta que se integran con el flujo de caja y el juicio.', 'De forma aislada.', 'Solo si coinciden entre sí.'], correcta: 1, justificacion: 'Son herramientas de clasificación, no oráculos: se integran con la caja y el criterio. Leerlos aislados o como sentencia es un error.' },
+    { id: 'q15', pregunta: 'Según Schilit, la mejor defensa del analista contra la manipulación es:', opciones: ['Confiar en el resultado contable.', 'Seguir el efectivo y desconfiar de las CxC que crecen más que las ventas.', 'Mirar solo el patrimonio.', 'Ignorar los cambios de criterio.'], correcta: 1, justificacion: 'La caja es difícil de manipular; seguirla y vigilar el desacople CxC–ventas y los cambios de criterio es la defensa central. Confiar ciegamente o ignorar señales es lo contrario.' },
+  ],
+  bibliografia: [
+    'Altman, E. & Hotchkiss, E. — *Corporate Financial Distress and Bankruptcy*',
+    'Altman, E. — artículos originales del Z-Score y del ZETA (1968, 2000)',
+    'Beneish, M. — “The Detection of Earnings Manipulation” (1999)',
+    'Merton, R. — “On the Pricing of Corporate Debt” (1974)',
+    'Schilit, H. & Perler, J. — *Financial Shenanigans*',
+    'Damodaran, A. — *The Dark Side of Valuation*',
+  ],
+}
