@@ -9,6 +9,41 @@ import type { Asignatura, Block, Section, QuizQ } from '../../src/data/maestria/
 const printer = new PdfPrinter(fonts as any)
 
 // ---------------------------------------------------------------------------
+// Logo JPR Consulting (reconstrucción vectorial): barras ascendentes + regla
+// vertical + wordmark "JPR." (punto rojo) + "CONSULTING".
+// scheme 'light' = sobre fondo carbón · 'dark' = sobre fondo claro.
+// ---------------------------------------------------------------------------
+function logoIconSvg(scheme: 'light' | 'dark'): string {
+  const bar = scheme === 'light' ? '#C7CCD4' : '#6B7079'
+  const barTop = scheme === 'light' ? '#F4F1EA' : '#33373D'
+  const rule = scheme === 'light' ? '#8FD3B7' : '#1E8F6B'
+  return `<svg width="52" height="46" viewBox="0 0 52 46" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0"  y="26" width="9" height="20" rx="2.5" fill="${bar}"/>
+    <rect x="13" y="14" width="9" height="32" rx="2.5" fill="${bar}"/>
+    <rect x="26" y="2"  width="9" height="44" rx="2.5" fill="${barTop}"/>
+    <rect x="45" y="3"  width="2" height="40" rx="1" fill="${rule}"/>
+  </svg>`
+}
+function logoNode(scheme: 'light' | 'dark', scale = 1): any {
+  const fg = scheme === 'light' ? H('ivory') : H('ink')
+  const sub = scheme === 'light' ? H('greenS') : H('ash')
+  return {
+    columns: [
+      { svg: logoIconSvg(scheme), width: 26 * scale, margin: [0, scale > 1 ? 2 : 0, 0, 0] },
+      {
+        width: 'auto',
+        stack: [
+          { text: [{ text: 'JPR', font: 'Plex', bold: true, color: fg, fontSize: 16 * scale, characterSpacing: 0.4 }, { text: '.', bold: true, color: H('red'), fontSize: 16 * scale }] },
+          { text: 'CONSULTING', font: 'Mono', color: sub, fontSize: 6.6 * scale, characterSpacing: 3 * scale, margin: [1, scale > 1 ? 1 : 0, 0, 0] },
+        ],
+      },
+    ],
+    columnGap: 8 * scale,
+    width: 'auto',
+  }
+}
+
+// ---------------------------------------------------------------------------
 // Markdown-lite inline -> runs de pdfmake  (**negrita**, *itálica*, `código`)
 // ---------------------------------------------------------------------------
 function inline(md: string, base: any = {}): any[] {
@@ -190,8 +225,9 @@ function sectionNodes(s: Section, n: number): any[] {
 // ---------------------------------------------------------------------------
 function cover(a: Asignatura): any[] {
   return [
-    { text: BRAND.firm + '  ·  ' + a.framework, font: 'Mono', color: H('greenS'), fontSize: 9, characterSpacing: 2, margin: [0, 40, 0, 0] },
-    { canvas: [{ type: 'rect', x: 0, y: 0, w: 30, h: 2.5, color: H('greenS') }], margin: [0, 18, 0, 18] },
+    { ...logoNode('light', 1.35), margin: [0, 40, 0, 14] },
+    { text: a.framework, font: 'Mono', color: H('greenS'), fontSize: 9, characterSpacing: 1.5 },
+    { canvas: [{ type: 'rect', x: 0, y: 0, w: 30, h: 2.5, color: H('greenS') }], margin: [0, 16, 0, 18] },
     { text: 'Asignatura ' + a.cod, font: 'Mono', color: H('greenL'), fontSize: 12, margin: [0, 0, 0, 8] },
     { text: a.nombre, font: 'Spectral', bold: true, color: H('ivory'), fontSize: 30, lineHeight: 1.05, margin: [0, 0, 0, 16] },
     { text: a.resumen, font: 'Spectral', italics: true, color: H('greenS'), fontSize: 13, lineHeight: 1.3, margin: [0, 0, 0, 26] },
@@ -272,10 +308,10 @@ function docDef(content: any[], a: Asignatura, opts: { coverBg?: boolean } = {})
       page === 1 && opts.coverBg
         ? null
         : {
-            margin: [56, 30, 56, 0],
+            margin: [56, 26, 56, 0],
             columns: [
-              { text: BRAND.firm, font: 'Mono', color: H('greenD'), fontSize: 8, characterSpacing: 1.5 },
-              { text: 'Asignatura ' + a.cod, font: 'Mono', color: H('ash2'), fontSize: 8, alignment: 'right' },
+              logoNode('dark', 0.6),
+              { text: 'Asignatura ' + a.cod, font: 'Mono', color: H('ash2'), fontSize: 8, alignment: 'right', margin: [0, 8, 0, 0] },
             ],
           },
     footer: (page: number) =>
@@ -325,7 +361,8 @@ export async function buildAsignaturaPDF(a: Asignatura): Promise<Buffer> {
 // ---------------------------------------------------------------------------
 export async function buildQuizPDF(a: Asignatura): Promise<Buffer> {
   const content: any[] = [
-    { text: BRAND.firm + '  ·  CUESTIONARIO', font: 'Mono', color: H('greenD'), fontSize: 9, characterSpacing: 2, margin: [0, 0, 0, 6] },
+    { ...logoNode('dark', 1), margin: [0, 0, 0, 4] },
+    { text: 'CUESTIONARIO', font: 'Mono', color: H('greenD'), fontSize: 9, characterSpacing: 2, margin: [0, 0, 0, 6] },
     { text: 'Asignatura ' + a.cod + ' — ' + a.nombre, font: 'Spectral', bold: true, color: H('ink'), fontSize: 17, margin: [0, 0, 0, 2] },
     { text: '15 preguntas de opción múltiple · una sola correcta · con justificación', font: 'Plex', italics: true, color: H('ash'), fontSize: 10, margin: [0, 0, 0, 12] },
   ]
