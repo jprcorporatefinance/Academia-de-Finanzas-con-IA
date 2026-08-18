@@ -570,6 +570,196 @@ export const a1_1: Asignatura = {
       justificacion:
         'Todos los indicadores del programa se calculan sobre el NOPAT y el capital empleado construidos aquí; un error en la depuración se propaga a todo el árbol de valor. No se trata de mera cronología, ni es la única con práctica, ni su objeto es Excel (eso es la 2.3).',
     },
+    {
+      id: 'q16',
+      pregunta: 'Sumar pesos de enero con pesos de diciembre bajo inflación es incorrecto porque:',
+      opciones: [
+        'Los meses tienen distinta cantidad de días.',
+        'Son unidades de distinto poder adquisitivo; hay que homogeneizar antes de sumar.',
+        'La suma siempre da error de redondeo.',
+        'El fisco no lo permite.',
+      ],
+      correcta: 1,
+      justificacion:
+        'Bajo inflación, un peso de enero y uno de diciembre valen distinto; sumarlos mezcla unidades. La reexpresión a moneda de cierre es la precondición de toda suma o comparación (Fowler Newton).',
+    },
+    {
+      id: 'q17',
+      pregunta: '¿Cuál de estas partidas NO se reexpresa por inflación?',
+      opciones: [
+        'Los bienes de cambio.',
+        'Las cuentas por cobrar en pesos (partida monetaria).',
+        'Los bienes de uso.',
+        'Los aportes de capital.',
+      ],
+      correcta: 1,
+      justificacion:
+        'Las partidas monetarias (caja, créditos y deudas en pesos) ya están en moneda de cierre y no se reexpresan; en cambio generan RECPAM. Las no monetarias (bienes de cambio, de uso, aportes) sí se reexpresan.',
+    },
+    {
+      id: 'q18',
+      pregunta: 'Una empresa con más pasivos monetarios que activos monetarios, bajo inflación, tiene un RECPAM:',
+      opciones: [
+        'Negativo (pérdida).',
+        'Positivo (ganancia por licuación de deuda).',
+        'Nulo.',
+        'Imposible de calcular.',
+      ],
+      correcta: 1,
+      justificacion:
+        'Posición monetaria neta pasiva → la deuda se licúa y hay ganancia (RECPAM positivo). Es real pero no es rentabilidad operativa: desaparece si baja la inflación.',
+    },
+    {
+      id: 'q19',
+      pregunta: 'La Familia A del catálogo de adecuaciones (unidad de medida) corrige, entre otros:',
+      opciones: [
+        'La valuación de los bienes de uso.',
+        'La reexpresión en moneda homogénea y la segregación del RECPAM.',
+        'La remuneración de los socios.',
+        'La deuda fuera de balance.',
+      ],
+      correcta: 1,
+      justificacion:
+        'La Familia A homogeneiza la moneda (reexpresión, RECPAM, tipo de cambio). La valuación de activos es Familia B, los resultados Familia D y los pasivos ocultos Familia C.',
+    },
+    {
+      id: 'q20',
+      pregunta: 'Los cheques descontados con responsabilidad y el factoring con recurso son ejemplos de:',
+      opciones: [
+        'Ingresos no recurrentes.',
+        'Deuda fuera de balance (Familia C — pasivos).',
+        'Activos no operativos.',
+        'Reexpresión.',
+      ],
+      correcta: 1,
+      justificacion:
+        'Son pasivos ocultos: si el librador no paga, la empresa responde. La Familia C los reconoce como deuda equivalente. No son ingresos ni activos.',
+    },
+    {
+      id: 'q21',
+      pregunta: 'Reconocer la remuneración de mercado del socio-gerente pertenece a la familia de adecuaciones:',
+      opciones: [
+        'A — unidad de medida.',
+        'D — resultados.',
+        'F — verificación.',
+        'E — estructura y perímetro.',
+      ],
+      correcta: 1,
+      justificacion:
+        'La normalización del resultado (retribución de mercado, gastos personales, partes relacionadas, partidas no recurrentes) es la Familia D. Las otras familias corrigen moneda, verificación o perímetro.',
+    },
+    {
+      id: 'q22',
+      pregunta: 'La conciliación línea por línea entre el balance publicado y el estado analítico (Familia F) sirve para:',
+      opciones: [
+        'Pagar menos impuestos.',
+        'Que el trabajo sea auditable y reproducible por un tercero.',
+        'Aumentar el patrimonio.',
+        'Evitar la reexpresión.',
+      ],
+      correcta: 1,
+      justificacion:
+        'La Familia F documenta fuente, fecha y criterio de cada ajuste y concilia línea por línea: convierte la depuración en algo auditable. No tiene fin fiscal ni patrimonial.',
+    },
+    {
+      id: 'q23',
+      pregunta: 'El método directo del Estado de Flujo de Efectivo se caracteriza por:',
+      opciones: [
+        'Partir del resultado neto y revertir partidas no erogables.',
+        'Reconstruir cobranzas y pagos efectivos.',
+        'No requerir conciliación.',
+        'Ser el único válido bajo inflación.',
+      ],
+      correcta: 1,
+      justificacion:
+        'El directo reconstruye cobros y pagos reales (el ejercicio que después se repite contra el ERP). Partir del resultado y revertir es el indirecto; la norma exige conciliar ambos.',
+    },
+    {
+      id: 'q24',
+      pregunta: 'Entre los métodos de revalúo de bienes de uso, el “último recurso” cuando no hay mercado de referencia es:',
+      opciones: [
+        'La tasación técnica.',
+        'El valor de uso (valor presente de los flujos que genera el activo).',
+        'El mercado secundario.',
+        'El valor de reposición depreciado.',
+      ],
+      correcta: 1,
+      justificacion:
+        'El valor de uso se emplea cuando no hay mercado y exige declarar los supuestos. La tasación, el mercado secundario y el valor de reposición son preferibles por más objetivos.',
+    },
+    {
+      id: 'q25',
+      pregunta: 'En el capital empleado, la caja se trata:',
+      opciones: [
+        'Toda como capital operativo.',
+        'Separando la caja operativa mínima (operativa) del excedente de caja (no operativo).',
+        'Toda como excedente.',
+        'Se excluye por completo.',
+      ],
+      correcta: 1,
+      justificacion:
+        'Solo la caja operativa mínima integra el capital invertido operativo; el excedente se trata como activo no operativo y se valúa aparte. Mezclarlas distorsiona el ROIC.',
+    },
+    {
+      id: 'q26',
+      pregunta: 'El criterio de reexpresión obligatoria (JG 539/2018) se activa cuando la inflación acumulada en tres años supera:',
+      opciones: ['El 25%.', 'El 100%.', 'El 10%.', 'El 300%.'],
+      correcta: 1,
+      justificacion:
+        'El umbral, alineado con NIC 29, es el 100% acumulado en tres años. No es un porcentaje mensual ni otro nivel.',
+    },
+    {
+      id: 'q27',
+      pregunta: 'La reexpresión de la RT 6 es conceptualmente equivalente a:',
+      opciones: [
+        'La NIC 7 (flujo de efectivo).',
+        'La NIC 29 (información financiera en economías hiperinflacionarias).',
+        'La NIIF 9.',
+        'La RT 37 (auditoría).',
+      ],
+      correcta: 1,
+      justificacion:
+        'RT 6 ≡ NIC 29: ambas reexpresan en moneda constante bajo alta inflación. La NIC 7 es flujo de efectivo y la RT 37 es auditoría.',
+    },
+    {
+      id: 'q28',
+      pregunta: 'Que el flujo operativo se separe de forma persistente del EBITDA es señal de:',
+      opciones: [
+        'Excelente calidad de ganancias.',
+        'Posible baja calidad de ganancias (a vigilar).',
+        'Un error de tipeo.',
+        'Exceso de caja.',
+      ],
+      correcta: 1,
+      justificacion:
+        'La divergencia persistente entre flujo operativo y EBITDA cuestiona la calidad del resultado devengado. Es alerta, no señal de excelencia ni de exceso de caja.',
+    },
+    {
+      id: 'q29',
+      pregunta: 'En la PyME familiar, “consolidar el grupo económico real” (Familia E) responde a que:',
+      opciones: [
+        'La sociedad jurídica siempre coincide con la unidad económica.',
+        'La unidad de análisis rara vez coincide con una sola sociedad jurídica.',
+        'Hay que sumar empresas al azar.',
+        'La consolidación es opcional.',
+      ],
+      correcta: 1,
+      justificacion:
+        'En la empresa cerrada la operación suele repartirse en varias sociedades del mismo dueño; la unidad de análisis es el grupo económico real, no una sociedad aislada.',
+    },
+    {
+      id: 'q30',
+      pregunta: 'Los gastos de I+D o de capacitación con carácter de inversión, no reconocidos como activo, se tratan en:',
+      opciones: [
+        'Familia A — unidad de medida.',
+        'Familia B — valuación de activos (intangibles autogenerados / gastos con carácter de inversión).',
+        'Familia F — verificación.',
+        'No se ajustan.',
+      ],
+      correcta: 1,
+      justificacion:
+        'La Familia B contempla intangibles autogenerados y gastos con carácter de inversión (I+D, publicidad institucional, capacitación) que el análisis puede activar. No es unidad de medida ni verificación.',
+    },
   ],
   bibliografia: [
     'Palepu, K. & Healy, P. — *Business Analysis and Valuation*',

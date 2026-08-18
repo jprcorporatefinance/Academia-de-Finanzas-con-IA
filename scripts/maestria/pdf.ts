@@ -390,7 +390,7 @@ export async function buildQuizPDF(a: Asignatura): Promise<Buffer> {
     { ...logoNode('dark', 1), margin: [0, 0, 0, 4] },
     { text: 'CUESTIONARIO', font: 'Mono', color: H('greenD'), fontSize: 9, characterSpacing: 2, margin: [0, 0, 0, 6] },
     { text: 'Asignatura ' + a.cod + ' — ' + a.nombre, font: 'Spectral', bold: true, color: H('ink'), fontSize: 17, margin: [0, 0, 0, 2] },
-    { text: '15 preguntas de opción múltiple · una sola correcta · con justificación', font: 'Plex', italics: true, color: H('ash'), fontSize: 10, margin: [0, 0, 0, 12] },
+    { text: `Banco de ${a.quiz.length} preguntas de opción múltiple · una sola correcta · con justificación · en la app se sortean 15 por intento`, font: 'Plex', italics: true, color: H('ash'), fontSize: 10, margin: [0, 0, 0, 12] },
   ]
   a.quiz.forEach((q, i) => {
     content.push({ text: [{ text: `Pregunta ${i + 1}.  `, font: 'PlexSemi', color: H('greenD') }, ...inline(q.pregunta, { color: H('ink') })], margin: [0, 8, 0, 4], style: 'p' })

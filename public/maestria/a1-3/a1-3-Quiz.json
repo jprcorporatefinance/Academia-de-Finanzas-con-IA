@@ -181,6 +181,186 @@
       ],
       "correcta": 1,
       "justificacion": "El ajuste dentro de la muestra premia el sobreajuste; la prueba honesta es fuera de la muestra, con datos que el modelo no vio. Los resultados difieren y por eso importa."
+    },
+    {
+      "id": "q16",
+      "pregunta": "La librería pandas se usa principalmente para:",
+      "opciones": [
+        "Renderizar gráficos 3D.",
+        "Manipular y transformar datos tabulares.",
+        "Entrenar redes en GPU.",
+        "Enviar correos."
+      ],
+      "correcta": 1,
+      "justificacion": "pandas es la herramienta central de manipulación de datos tabulares en Python. El cálculo numérico intensivo va con numpy; los gráficos y correos son otras librerías."
+    },
+    {
+      "id": "q17",
+      "pregunta": "Las pruebas unitarias sobre funciones financieras sirven para:",
+      "opciones": [
+        "Hacer el código más lento.",
+        "Verificar que cada función da el resultado esperado y detectar regresiones.",
+        "Ocultar errores.",
+        "Reemplazar la documentación."
+      ],
+      "correcta": 1,
+      "justificacion": "Los tests comprueban el comportamiento esperado y avisan si un cambio rompe algo (regresión). No ocultan errores ni sustituyen la documentación."
+    },
+    {
+      "id": "q18",
+      "pregunta": "Dos tasas son “equivalentes” cuando:",
+      "opciones": [
+        "Tienen el mismo número.",
+        "Producen el mismo monto final en un mismo plazo, con distinta frecuencia de capitalización.",
+        "Se aplican al mismo cliente.",
+        "Están en la misma moneda."
+      ],
+      "correcta": 1,
+      "justificacion": "Tasas equivalentes generan idéntico resultado en el mismo período pese a distinta periodicidad. No es cuestión de igual número, cliente ni moneda."
+    },
+    {
+      "id": "q19",
+      "pregunta": "La duración de un flujo mide:",
+      "opciones": [
+        "Su rentabilidad.",
+        "Su sensibilidad ante cambios en la tasa (primera derivada del valor).",
+        "Su liquidez.",
+        "Su riesgo de crédito."
+      ],
+      "correcta": 1,
+      "justificacion": "La duración aproxima cuánto cambia el valor ante un cambio de tasa (la convexidad es la segunda derivada). No mide rentabilidad, liquidez ni crédito."
+    },
+    {
+      "id": "q20",
+      "pregunta": "La diferencia entre sistema francés y alemán de amortización es que:",
+      "opciones": [
+        "Son idénticos.",
+        "El francés tiene cuota constante; el alemán, amortización de capital constante.",
+        "El alemán no cobra interés.",
+        "El francés no amortiza."
+      ],
+      "correcta": 1,
+      "justificacion": "Francés = cuota constante (amortización creciente); alemán = amortización constante (cuota decreciente). Ambos cobran interés y amortizan."
+    },
+    {
+      "id": "q21",
+      "pregunta": "Para que un VAN sea coherente, la tasa de descuento y los flujos deben estar:",
+      "opciones": [
+        "En distinta moneda.",
+        "Ambos en términos reales o ambos en términos nominales.",
+        "Siempre en dólares.",
+        "Sin relación entre sí."
+      ],
+      "correcta": 1,
+      "justificacion": "Mezclar flujos reales con tasa nominal (o viceversa) distorsiona el VAN. Deben ser consistentes en términos y moneda."
+    },
+    {
+      "id": "q22",
+      "pregunta": "Una serie temporal es estacionaria cuando:",
+      "opciones": [
+        "Crece siempre.",
+        "Sus propiedades estadísticas (media, varianza) son estables en el tiempo.",
+        "No tiene datos.",
+        "Es perfectamente estacional."
+      ],
+      "correcta": 1,
+      "justificacion": "La estacionariedad implica media y varianza constantes; es supuesto de muchos modelos. No es que crezca ni que sea estacional."
+    },
+    {
+      "id": "q23",
+      "pregunta": "Descomponer una serie temporal implica separar:",
+      "opciones": [
+        "Filas y columnas.",
+        "Tendencia, estacionalidad y ruido.",
+        "Ingresos y egresos.",
+        "Activo y pasivo."
+      ],
+      "correcta": 1,
+      "justificacion": "La descomposición aísla tendencia, estacionalidad y componente irregular (ruido). No es una separación contable."
+    },
+    {
+      "id": "q24",
+      "pregunta": "El RMSE (raíz del error cuadrático medio) penaliza:",
+      "opciones": [
+        "Por igual todos los errores.",
+        "Más fuertemente los errores grandes (por elevar al cuadrado).",
+        "Solo los errores positivos.",
+        "Nada."
+      ],
+      "correcta": 1,
+      "justificacion": "Al elevar al cuadrado, el RMSE castiga más los desvíos grandes que el MAE. La elección entre ambos depende de la función de pérdida."
+    },
+    {
+      "id": "q25",
+      "pregunta": "El álgebra lineal (operaciones matriciales) se usa en finanzas para:",
+      "opciones": [
+        "Nada relevante.",
+        "Consolidar modelos y calcular redes neuronales.",
+        "Solo ordenar listas.",
+        "Escribir texto."
+      ],
+      "correcta": 1,
+      "justificacion": "Las matrices consolidan modelos multi-unidad y son el motor de las redes neuronales (MMULT / @). No es ordenar ni escribir."
+    },
+    {
+      "id": "q26",
+      "pregunta": "El control de versiones (p. ej. Git) aporta:",
+      "opciones": [
+        "Más errores.",
+        "Historial, reproducibilidad y trabajo colaborativo sobre el código.",
+        "Menos seguridad.",
+        "Nada."
+      ],
+      "correcta": 1,
+      "justificacion": "Versionar da trazabilidad del cambio, reproducibilidad y colaboración: pilares de un trabajo auditable. No agrega errores ni resta seguridad."
+    },
+    {
+      "id": "q27",
+      "pregunta": "La multicolinealidad en una regresión múltiple es:",
+      "opciones": [
+        "Que haya muchas filas.",
+        "Alta correlación entre variables explicativas, que vuelve inestables los coeficientes.",
+        "Falta de datos.",
+        "Un tipo de gráfico."
+      ],
+      "correcta": 1,
+      "justificacion": "La multicolinealidad (predictores muy correlacionados) infla la varianza de los coeficientes y dificulta interpretarlos. No es cantidad de filas ni un gráfico."
+    },
+    {
+      "id": "q28",
+      "pregunta": "Un intervalo de confianza del 95% expresa:",
+      "opciones": [
+        "Que el dato es 95% grande.",
+        "Un rango que, en muestreos repetidos, contendría el parámetro el 95% de las veces.",
+        "Que hay 95 datos.",
+        "La media exacta."
+      ],
+      "correcta": 1,
+      "justificacion": "El IC comunica la incertidumbre de la estimación: en repeticiones, el 95% de los intervalos contendría el parámetro. No es un conteo ni la media exacta."
+    },
+    {
+      "id": "q29",
+      "pregunta": "La TIR supone que los flujos intermedios se reinvierten a:",
+      "opciones": [
+        "El costo del capital.",
+        "La propia TIR (supuesto muchas veces poco realista).",
+        "Cero.",
+        "La inflación."
+      ],
+      "correcta": 1,
+      "justificacion": "La TIR asume reinversión a la propia TIR; por eso la TIRM usa una tasa de reinversión explícita más realista. No supone reinversión al WACC ni a cero."
+    },
+    {
+      "id": "q30",
+      "pregunta": "Vectorizar cálculos con numpy (en vez de bucles en Python) aporta:",
+      "opciones": [
+        "Más lentitud.",
+        "Mayor velocidad y código más conciso.",
+        "Menos precisión.",
+        "Nada."
+      ],
+      "correcta": 1,
+      "justificacion": "La vectorización con numpy es más rápida y compacta que los bucles puros de Python. No sacrifica precisión."
     }
   ]
 }

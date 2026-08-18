@@ -205,6 +205,186 @@
         ],
         "correcta": 1,
         "justificacion": "Todos los indicadores del programa se calculan sobre el NOPAT y el capital empleado construidos aquí; un error en la depuración se propaga a todo el árbol de valor. No se trata de mera cronología, ni es la única con práctica, ni su objeto es Excel (eso es la 2.3)."
+      },
+      {
+        "id": "q16",
+        "pregunta": "Sumar pesos de enero con pesos de diciembre bajo inflación es incorrecto porque:",
+        "opciones": [
+          "Los meses tienen distinta cantidad de días.",
+          "Son unidades de distinto poder adquisitivo; hay que homogeneizar antes de sumar.",
+          "La suma siempre da error de redondeo.",
+          "El fisco no lo permite."
+        ],
+        "correcta": 1,
+        "justificacion": "Bajo inflación, un peso de enero y uno de diciembre valen distinto; sumarlos mezcla unidades. La reexpresión a moneda de cierre es la precondición de toda suma o comparación (Fowler Newton)."
+      },
+      {
+        "id": "q17",
+        "pregunta": "¿Cuál de estas partidas NO se reexpresa por inflación?",
+        "opciones": [
+          "Los bienes de cambio.",
+          "Las cuentas por cobrar en pesos (partida monetaria).",
+          "Los bienes de uso.",
+          "Los aportes de capital."
+        ],
+        "correcta": 1,
+        "justificacion": "Las partidas monetarias (caja, créditos y deudas en pesos) ya están en moneda de cierre y no se reexpresan; en cambio generan RECPAM. Las no monetarias (bienes de cambio, de uso, aportes) sí se reexpresan."
+      },
+      {
+        "id": "q18",
+        "pregunta": "Una empresa con más pasivos monetarios que activos monetarios, bajo inflación, tiene un RECPAM:",
+        "opciones": [
+          "Negativo (pérdida).",
+          "Positivo (ganancia por licuación de deuda).",
+          "Nulo.",
+          "Imposible de calcular."
+        ],
+        "correcta": 1,
+        "justificacion": "Posición monetaria neta pasiva → la deuda se licúa y hay ganancia (RECPAM positivo). Es real pero no es rentabilidad operativa: desaparece si baja la inflación."
+      },
+      {
+        "id": "q19",
+        "pregunta": "La Familia A del catálogo de adecuaciones (unidad de medida) corrige, entre otros:",
+        "opciones": [
+          "La valuación de los bienes de uso.",
+          "La reexpresión en moneda homogénea y la segregación del RECPAM.",
+          "La remuneración de los socios.",
+          "La deuda fuera de balance."
+        ],
+        "correcta": 1,
+        "justificacion": "La Familia A homogeneiza la moneda (reexpresión, RECPAM, tipo de cambio). La valuación de activos es Familia B, los resultados Familia D y los pasivos ocultos Familia C."
+      },
+      {
+        "id": "q20",
+        "pregunta": "Los cheques descontados con responsabilidad y el factoring con recurso son ejemplos de:",
+        "opciones": [
+          "Ingresos no recurrentes.",
+          "Deuda fuera de balance (Familia C — pasivos).",
+          "Activos no operativos.",
+          "Reexpresión."
+        ],
+        "correcta": 1,
+        "justificacion": "Son pasivos ocultos: si el librador no paga, la empresa responde. La Familia C los reconoce como deuda equivalente. No son ingresos ni activos."
+      },
+      {
+        "id": "q21",
+        "pregunta": "Reconocer la remuneración de mercado del socio-gerente pertenece a la familia de adecuaciones:",
+        "opciones": [
+          "A — unidad de medida.",
+          "D — resultados.",
+          "F — verificación.",
+          "E — estructura y perímetro."
+        ],
+        "correcta": 1,
+        "justificacion": "La normalización del resultado (retribución de mercado, gastos personales, partes relacionadas, partidas no recurrentes) es la Familia D. Las otras familias corrigen moneda, verificación o perímetro."
+      },
+      {
+        "id": "q22",
+        "pregunta": "La conciliación línea por línea entre el balance publicado y el estado analítico (Familia F) sirve para:",
+        "opciones": [
+          "Pagar menos impuestos.",
+          "Que el trabajo sea auditable y reproducible por un tercero.",
+          "Aumentar el patrimonio.",
+          "Evitar la reexpresión."
+        ],
+        "correcta": 1,
+        "justificacion": "La Familia F documenta fuente, fecha y criterio de cada ajuste y concilia línea por línea: convierte la depuración en algo auditable. No tiene fin fiscal ni patrimonial."
+      },
+      {
+        "id": "q23",
+        "pregunta": "El método directo del Estado de Flujo de Efectivo se caracteriza por:",
+        "opciones": [
+          "Partir del resultado neto y revertir partidas no erogables.",
+          "Reconstruir cobranzas y pagos efectivos.",
+          "No requerir conciliación.",
+          "Ser el único válido bajo inflación."
+        ],
+        "correcta": 1,
+        "justificacion": "El directo reconstruye cobros y pagos reales (el ejercicio que después se repite contra el ERP). Partir del resultado y revertir es el indirecto; la norma exige conciliar ambos."
+      },
+      {
+        "id": "q24",
+        "pregunta": "Entre los métodos de revalúo de bienes de uso, el “último recurso” cuando no hay mercado de referencia es:",
+        "opciones": [
+          "La tasación técnica.",
+          "El valor de uso (valor presente de los flujos que genera el activo).",
+          "El mercado secundario.",
+          "El valor de reposición depreciado."
+        ],
+        "correcta": 1,
+        "justificacion": "El valor de uso se emplea cuando no hay mercado y exige declarar los supuestos. La tasación, el mercado secundario y el valor de reposición son preferibles por más objetivos."
+      },
+      {
+        "id": "q25",
+        "pregunta": "En el capital empleado, la caja se trata:",
+        "opciones": [
+          "Toda como capital operativo.",
+          "Separando la caja operativa mínima (operativa) del excedente de caja (no operativo).",
+          "Toda como excedente.",
+          "Se excluye por completo."
+        ],
+        "correcta": 1,
+        "justificacion": "Solo la caja operativa mínima integra el capital invertido operativo; el excedente se trata como activo no operativo y se valúa aparte. Mezclarlas distorsiona el ROIC."
+      },
+      {
+        "id": "q26",
+        "pregunta": "El criterio de reexpresión obligatoria (JG 539/2018) se activa cuando la inflación acumulada en tres años supera:",
+        "opciones": [
+          "El 25%.",
+          "El 100%.",
+          "El 10%.",
+          "El 300%."
+        ],
+        "correcta": 1,
+        "justificacion": "El umbral, alineado con NIC 29, es el 100% acumulado en tres años. No es un porcentaje mensual ni otro nivel."
+      },
+      {
+        "id": "q27",
+        "pregunta": "La reexpresión de la RT 6 es conceptualmente equivalente a:",
+        "opciones": [
+          "La NIC 7 (flujo de efectivo).",
+          "La NIC 29 (información financiera en economías hiperinflacionarias).",
+          "La NIIF 9.",
+          "La RT 37 (auditoría)."
+        ],
+        "correcta": 1,
+        "justificacion": "RT 6 ≡ NIC 29: ambas reexpresan en moneda constante bajo alta inflación. La NIC 7 es flujo de efectivo y la RT 37 es auditoría."
+      },
+      {
+        "id": "q28",
+        "pregunta": "Que el flujo operativo se separe de forma persistente del EBITDA es señal de:",
+        "opciones": [
+          "Excelente calidad de ganancias.",
+          "Posible baja calidad de ganancias (a vigilar).",
+          "Un error de tipeo.",
+          "Exceso de caja."
+        ],
+        "correcta": 1,
+        "justificacion": "La divergencia persistente entre flujo operativo y EBITDA cuestiona la calidad del resultado devengado. Es alerta, no señal de excelencia ni de exceso de caja."
+      },
+      {
+        "id": "q29",
+        "pregunta": "En la PyME familiar, “consolidar el grupo económico real” (Familia E) responde a que:",
+        "opciones": [
+          "La sociedad jurídica siempre coincide con la unidad económica.",
+          "La unidad de análisis rara vez coincide con una sola sociedad jurídica.",
+          "Hay que sumar empresas al azar.",
+          "La consolidación es opcional."
+        ],
+        "correcta": 1,
+        "justificacion": "En la empresa cerrada la operación suele repartirse en varias sociedades del mismo dueño; la unidad de análisis es el grupo económico real, no una sociedad aislada."
+      },
+      {
+        "id": "q30",
+        "pregunta": "Los gastos de I+D o de capacitación con carácter de inversión, no reconocidos como activo, se tratan en:",
+        "opciones": [
+          "Familia A — unidad de medida.",
+          "Familia B — valuación de activos (intangibles autogenerados / gastos con carácter de inversión).",
+          "Familia F — verificación.",
+          "No se ajustan."
+        ],
+        "correcta": 1,
+        "justificacion": "La Familia B contempla intangibles autogenerados y gastos con carácter de inversión (I+D, publicidad institucional, capacitación) que el análisis puede activar. No es unidad de medida ni verificación."
       }
     ]
   },
@@ -414,6 +594,186 @@
         ],
         "correcta": 1,
         "justificacion": "Sin trazabilidad no hay auditabilidad, y sin auditabilidad el modelo no es profesionalmente utilizable. No es una cuestión estética, no la impone el ERP y su fin no es la velocidad de cierre."
+      },
+      {
+        "id": "q16",
+        "pregunta": "La integridad referencial en el modelo relacional del ERP garantiza que:",
+        "opciones": [
+          "Todas las tablas tengan el mismo tamaño.",
+          "Las claves foráneas apunten a registros existentes (no haya “huérfanos”).",
+          "No haya índices.",
+          "Los datos se borren solos."
+        ],
+        "correcta": 1,
+        "justificacion": "La integridad referencial asegura que una clave foránea (p. ej. el cliente de una factura) exista realmente en su tabla maestra. No tiene que ver con tamaños ni con borrado."
+      },
+      {
+        "id": "q17",
+        "pregunta": "Las funciones de ventana en SQL sirven, por ejemplo, para:",
+        "opciones": [
+          "Borrar tablas.",
+          "Calcular saldos acumulados y rankings sin colapsar las filas.",
+          "Crear usuarios.",
+          "Formatear fechas únicamente."
+        ],
+        "correcta": 1,
+        "justificacion": "Las window functions calculan agregados móviles (saldos acumulados, rankings) conservando el detalle de cada fila. No borran ni crean objetos."
+      },
+      {
+        "id": "q18",
+        "pregunta": "OData es:",
+        "opciones": [
+          "Un lenguaje de programación.",
+          "Una capa de servicios que muchos ERP exponen sobre sus entidades, con filtrado y paginación estándar.",
+          "Un tipo de gráfico.",
+          "Una base de datos NoSQL."
+        ],
+        "correcta": 1,
+        "justificacion": "OData estandariza el acceso a las entidades del ERP vía servicios web (filtros, paginación). No es un lenguaje ni una base de datos."
+      },
+      {
+        "id": "q19",
+        "pregunta": "En MCP, el “host” es:",
+        "opciones": [
+          "El servidor de base de datos.",
+          "La aplicación que orquesta al modelo de IA.",
+          "El cable de red.",
+          "El archivo de configuración."
+        ],
+        "correcta": 1,
+        "justificacion": "El host es la aplicación de IA que orquesta el modelo; el cliente gestiona la comunicación y el servidor expone capacidades. No es la base ni el hardware."
+      },
+      {
+        "id": "q20",
+        "pregunta": "MCP usa como formato de mensajes:",
+        "opciones": [
+          "CSV.",
+          "JSON-RPC (solicitudes, respuestas y notificaciones).",
+          "XML-SOAP obligatorio.",
+          "Texto plano sin estructura."
+        ],
+        "correcta": 1,
+        "justificacion": "La mensajería de MCP es JSON-RPC. No usa CSV, ni SOAP obligatorio, ni texto sin estructura."
+      },
+      {
+        "id": "q21",
+        "pregunta": "La diferencia entre un “recurso” y una “herramienta” en MCP es que:",
+        "opciones": [
+          "Son sinónimos.",
+          "El recurso es contenido legible; la herramienta es una acción invocable.",
+          "El recurso ejecuta código y la herramienta no.",
+          "La herramienta es solo lectura y el recurso escribe."
+        ],
+        "correcta": 1,
+        "justificacion": "Recurso = contenido direccionable para leer; herramienta = acción con esquema de entrada/salida. No son sinónimos ni al revés."
+      },
+      {
+        "id": "q22",
+        "pregunta": "Versionar la definición de una métrica en la capa semántica evita que:",
+        "opciones": [
+          "La métrica se calcule.",
+          "Un cambio de definición rompa en silencio los tableros e informes que la usan.",
+          "Existan tableros.",
+          "Se pueda consultar el ERP."
+        ],
+        "correcta": 1,
+        "justificacion": "El versionado permite evolucionar una métrica sin romper a sus consumidores sin aviso, manteniendo la coherencia entre modelo, tablero e informe."
+      },
+      {
+        "id": "q23",
+        "pregunta": "En un modelo dimensional, “tiempo”, “cliente” y “producto” son típicamente:",
+        "opciones": [
+          "Tablas de hechos.",
+          "Tablas de dimensiones.",
+          "Índices.",
+          "Vistas del mayor."
+        ],
+        "correcta": 1,
+        "justificacion": "Las dimensiones describen el contexto (tiempo, cliente, producto) por el que se analizan los hechos (ventas, movimientos). No son hechos ni índices."
+      },
+      {
+        "id": "q24",
+        "pregunta": "La tabla de mapeo contable-analítico sirve para:",
+        "opciones": [
+          "Ordenar alfabéticamente las cuentas.",
+          "Traducir las cuentas del ERP a los rubros que necesita el análisis financiero.",
+          "Borrar cuentas.",
+          "Calcular impuestos."
+        ],
+        "correcta": 1,
+        "justificacion": "El mapeo traduce el plan de cuentas del ERP al esquema analítico (rubros del estado analítico). No ordena ni borra ni liquida impuestos."
+      },
+      {
+        "id": "q25",
+        "pregunta": "El perfilado (profiling) de datos detecta, entre otras cosas:",
+        "opciones": [
+          "El color de los gráficos.",
+          "Valores atípicos, faltantes y problemas de integridad.",
+          "La marca del ERP.",
+          "El nombre del usuario."
+        ],
+        "correcta": 1,
+        "justificacion": "El profiling caracteriza la calidad del dato: outliers, nulos, integridad. Es parte de la capa de calidad, no de la estética ni del usuario."
+      },
+      {
+        "id": "q26",
+        "pregunta": "La Ley 25.326 (Argentina) regula:",
+        "opciones": [
+          "La reexpresión contable.",
+          "La protección de los datos personales.",
+          "El impuesto a las ganancias.",
+          "Las normas de auditoría."
+        ],
+        "correcta": 1,
+        "justificacion": "La 25.326 protege datos personales, marco clave del gobierno del dato. No es norma contable ni fiscal ni de auditoría."
+      },
+      {
+        "id": "q27",
+        "pregunta": "Que el patrón MCP sea “transferible” significa que:",
+        "opciones": [
+          "Solo sirve para un ERP.",
+          "El mismo patrón se aplica después a Finnegans, Tango, SAP Business One o un desarrollo propio.",
+          "No se puede reutilizar.",
+          "Depende de un proveedor único."
+        ],
+        "correcta": 1,
+        "justificacion": "La transferibilidad es que el diseño de servidor MCP se reaplica a cualquier ERP. No queda atado a uno ni a un proveedor."
+      },
+      {
+        "id": "q28",
+        "pregunta": "El transporte HTTP con streaming y SSE en MCP se usa principalmente para:",
+        "opciones": [
+          "Integraciones locales por línea de comandos.",
+          "Comunicación remota cliente-servidor.",
+          "Imprimir en papel.",
+          "Nada."
+        ],
+        "correcta": 1,
+        "justificacion": "HTTP con streaming/SSE habilita el uso remoto; stdio es para lo local/CLI. No tiene que ver con impresión."
+      },
+      {
+        "id": "q29",
+        "pregunta": "El “núcleo stateless” de la especificación MCP de 2025-2026 permite:",
+        "opciones": [
+          "Guardar todo el estado en el modelo.",
+          "Escalar sobre infraestructura HTTP común.",
+          "Eliminar la autorización.",
+          "Prohibir las herramientas."
+        ],
+        "correcta": 1,
+        "justificacion": "Un core sin estado escala sobre HTTP estándar. La spec moderna, además, refuerza la autorización, no la elimina."
+      },
+      {
+        "id": "q30",
+        "pregunta": "La anonimización de datos sensibles en el gobierno del dato busca:",
+        "opciones": [
+          "Acelerar las consultas.",
+          "Proteger información personal/confidencial al publicar o compartir datos.",
+          "Borrar el ERP.",
+          "Aumentar el patrimonio."
+        ],
+        "correcta": 1,
+        "justificacion": "Anonimizar protege datos personales y confidenciales (Ley 25.326, convenios). No acelera consultas ni borra sistemas."
       }
     ]
   },
@@ -623,6 +983,186 @@
         ],
         "correcta": 1,
         "justificacion": "El ajuste dentro de la muestra premia el sobreajuste; la prueba honesta es fuera de la muestra, con datos que el modelo no vio. Los resultados difieren y por eso importa."
+      },
+      {
+        "id": "q16",
+        "pregunta": "La librería pandas se usa principalmente para:",
+        "opciones": [
+          "Renderizar gráficos 3D.",
+          "Manipular y transformar datos tabulares.",
+          "Entrenar redes en GPU.",
+          "Enviar correos."
+        ],
+        "correcta": 1,
+        "justificacion": "pandas es la herramienta central de manipulación de datos tabulares en Python. El cálculo numérico intensivo va con numpy; los gráficos y correos son otras librerías."
+      },
+      {
+        "id": "q17",
+        "pregunta": "Las pruebas unitarias sobre funciones financieras sirven para:",
+        "opciones": [
+          "Hacer el código más lento.",
+          "Verificar que cada función da el resultado esperado y detectar regresiones.",
+          "Ocultar errores.",
+          "Reemplazar la documentación."
+        ],
+        "correcta": 1,
+        "justificacion": "Los tests comprueban el comportamiento esperado y avisan si un cambio rompe algo (regresión). No ocultan errores ni sustituyen la documentación."
+      },
+      {
+        "id": "q18",
+        "pregunta": "Dos tasas son “equivalentes” cuando:",
+        "opciones": [
+          "Tienen el mismo número.",
+          "Producen el mismo monto final en un mismo plazo, con distinta frecuencia de capitalización.",
+          "Se aplican al mismo cliente.",
+          "Están en la misma moneda."
+        ],
+        "correcta": 1,
+        "justificacion": "Tasas equivalentes generan idéntico resultado en el mismo período pese a distinta periodicidad. No es cuestión de igual número, cliente ni moneda."
+      },
+      {
+        "id": "q19",
+        "pregunta": "La duración de un flujo mide:",
+        "opciones": [
+          "Su rentabilidad.",
+          "Su sensibilidad ante cambios en la tasa (primera derivada del valor).",
+          "Su liquidez.",
+          "Su riesgo de crédito."
+        ],
+        "correcta": 1,
+        "justificacion": "La duración aproxima cuánto cambia el valor ante un cambio de tasa (la convexidad es la segunda derivada). No mide rentabilidad, liquidez ni crédito."
+      },
+      {
+        "id": "q20",
+        "pregunta": "La diferencia entre sistema francés y alemán de amortización es que:",
+        "opciones": [
+          "Son idénticos.",
+          "El francés tiene cuota constante; el alemán, amortización de capital constante.",
+          "El alemán no cobra interés.",
+          "El francés no amortiza."
+        ],
+        "correcta": 1,
+        "justificacion": "Francés = cuota constante (amortización creciente); alemán = amortización constante (cuota decreciente). Ambos cobran interés y amortizan."
+      },
+      {
+        "id": "q21",
+        "pregunta": "Para que un VAN sea coherente, la tasa de descuento y los flujos deben estar:",
+        "opciones": [
+          "En distinta moneda.",
+          "Ambos en términos reales o ambos en términos nominales.",
+          "Siempre en dólares.",
+          "Sin relación entre sí."
+        ],
+        "correcta": 1,
+        "justificacion": "Mezclar flujos reales con tasa nominal (o viceversa) distorsiona el VAN. Deben ser consistentes en términos y moneda."
+      },
+      {
+        "id": "q22",
+        "pregunta": "Una serie temporal es estacionaria cuando:",
+        "opciones": [
+          "Crece siempre.",
+          "Sus propiedades estadísticas (media, varianza) son estables en el tiempo.",
+          "No tiene datos.",
+          "Es perfectamente estacional."
+        ],
+        "correcta": 1,
+        "justificacion": "La estacionariedad implica media y varianza constantes; es supuesto de muchos modelos. No es que crezca ni que sea estacional."
+      },
+      {
+        "id": "q23",
+        "pregunta": "Descomponer una serie temporal implica separar:",
+        "opciones": [
+          "Filas y columnas.",
+          "Tendencia, estacionalidad y ruido.",
+          "Ingresos y egresos.",
+          "Activo y pasivo."
+        ],
+        "correcta": 1,
+        "justificacion": "La descomposición aísla tendencia, estacionalidad y componente irregular (ruido). No es una separación contable."
+      },
+      {
+        "id": "q24",
+        "pregunta": "El RMSE (raíz del error cuadrático medio) penaliza:",
+        "opciones": [
+          "Por igual todos los errores.",
+          "Más fuertemente los errores grandes (por elevar al cuadrado).",
+          "Solo los errores positivos.",
+          "Nada."
+        ],
+        "correcta": 1,
+        "justificacion": "Al elevar al cuadrado, el RMSE castiga más los desvíos grandes que el MAE. La elección entre ambos depende de la función de pérdida."
+      },
+      {
+        "id": "q25",
+        "pregunta": "El álgebra lineal (operaciones matriciales) se usa en finanzas para:",
+        "opciones": [
+          "Nada relevante.",
+          "Consolidar modelos y calcular redes neuronales.",
+          "Solo ordenar listas.",
+          "Escribir texto."
+        ],
+        "correcta": 1,
+        "justificacion": "Las matrices consolidan modelos multi-unidad y son el motor de las redes neuronales (MMULT / @). No es ordenar ni escribir."
+      },
+      {
+        "id": "q26",
+        "pregunta": "El control de versiones (p. ej. Git) aporta:",
+        "opciones": [
+          "Más errores.",
+          "Historial, reproducibilidad y trabajo colaborativo sobre el código.",
+          "Menos seguridad.",
+          "Nada."
+        ],
+        "correcta": 1,
+        "justificacion": "Versionar da trazabilidad del cambio, reproducibilidad y colaboración: pilares de un trabajo auditable. No agrega errores ni resta seguridad."
+      },
+      {
+        "id": "q27",
+        "pregunta": "La multicolinealidad en una regresión múltiple es:",
+        "opciones": [
+          "Que haya muchas filas.",
+          "Alta correlación entre variables explicativas, que vuelve inestables los coeficientes.",
+          "Falta de datos.",
+          "Un tipo de gráfico."
+        ],
+        "correcta": 1,
+        "justificacion": "La multicolinealidad (predictores muy correlacionados) infla la varianza de los coeficientes y dificulta interpretarlos. No es cantidad de filas ni un gráfico."
+      },
+      {
+        "id": "q28",
+        "pregunta": "Un intervalo de confianza del 95% expresa:",
+        "opciones": [
+          "Que el dato es 95% grande.",
+          "Un rango que, en muestreos repetidos, contendría el parámetro el 95% de las veces.",
+          "Que hay 95 datos.",
+          "La media exacta."
+        ],
+        "correcta": 1,
+        "justificacion": "El IC comunica la incertidumbre de la estimación: en repeticiones, el 95% de los intervalos contendría el parámetro. No es un conteo ni la media exacta."
+      },
+      {
+        "id": "q29",
+        "pregunta": "La TIR supone que los flujos intermedios se reinvierten a:",
+        "opciones": [
+          "El costo del capital.",
+          "La propia TIR (supuesto muchas veces poco realista).",
+          "Cero.",
+          "La inflación."
+        ],
+        "correcta": 1,
+        "justificacion": "La TIR asume reinversión a la propia TIR; por eso la TIRM usa una tasa de reinversión explícita más realista. No supone reinversión al WACC ni a cero."
+      },
+      {
+        "id": "q30",
+        "pregunta": "Vectorizar cálculos con numpy (en vez de bucles en Python) aporta:",
+        "opciones": [
+          "Más lentitud.",
+          "Mayor velocidad y código más conciso.",
+          "Menos precisión.",
+          "Nada."
+        ],
+        "correcta": 1,
+        "justificacion": "La vectorización con numpy es más rápida y compacta que los bucles puros de Python. No sacrifica precisión."
       }
     ]
   },
@@ -831,6 +1371,186 @@
         ],
         "correcta": 1,
         "justificacion": "El valor nace del spread positivo entre el retorno del capital y su costo. Crecer sin ese spread destruye valor; ventas o impuestos por sí solos no lo garantizan."
+      },
+      {
+        "id": "q16",
+        "pregunta": "El “spread” en la ecuación de valor es:",
+        "opciones": [
+          "ROIC × WACC.",
+          "ROIC − WACC.",
+          "ROIC ÷ WACC.",
+          "WACC − ROIC."
+        ],
+        "correcta": 1,
+        "justificacion": "El spread es la diferencia ROIC − WACC: positivo crea valor, negativo lo destruye. No es producto, cociente ni al revés."
+      },
+      {
+        "id": "q17",
+        "pregunta": "El MVA (Market Value Added) equivale a:",
+        "opciones": [
+          "El EVA de un período.",
+          "La suma de los EVA futuros descontados.",
+          "El capital invertido.",
+          "Las ventas."
+        ],
+        "correcta": 1,
+        "justificacion": "El MVA es el valor presente de la corriente de EVA futuros: el valor creado acumulado. No es un EVA puntual ni el capital."
+      },
+      {
+        "id": "q18",
+        "pregunta": "El NOPAT se calcula con la tasa impositiva:",
+        "opciones": [
+          "Nominal.",
+          "Efectiva.",
+          "Cero.",
+          "Del competidor."
+        ],
+        "correcta": 1,
+        "justificacion": "El NOPAT usa la tasa efectiva (la que realmente paga la empresa), no la nominal, para reflejar el resultado operativo después de impuestos real."
+      },
+      {
+        "id": "q19",
+        "pregunta": "El EVA por “resultado residual” se expresa como:",
+        "opciones": [
+          "NOPAT + WACC × Capital.",
+          "NOPAT − WACC × Capital.",
+          "Ventas − costos.",
+          "ROIC × Capital."
+        ],
+        "correcta": 1,
+        "justificacion": "EVA = NOPAT − (WACC × Capital): el resultado operativo menos el cargo por el capital empleado. Equivale a (ROIC − WACC) × Capital."
+      },
+      {
+        "id": "q20",
+        "pregunta": "Frente al ROIC, el ROA tiene la desventaja de:",
+        "opciones": [
+          "Ser más limpio.",
+          "Contaminarse con activos no operativos y caja.",
+          "No usar activos.",
+          "Ignorar el resultado."
+        ],
+        "correcta": 1,
+        "justificacion": "El ROA mezcla todos los activos (operativos o no) y la caja; el ROIC aísla el capital operativo. Por eso el ROIC es más limpio para medir eficiencia."
+      },
+      {
+        "id": "q21",
+        "pregunta": "El EVA Momentum se calcula como:",
+        "opciones": [
+          "EVA ÷ Ventas.",
+          "Δ EVA ÷ Ventas del período anterior.",
+          "EVA × WACC.",
+          "NOPAT ÷ Capital."
+        ],
+        "correcta": 1,
+        "justificacion": "El Momentum mide la mejora: variación del EVA sobre las ventas previas. EVA/Ventas es el EVA Margin; NOPAT/Capital es el ROIC."
+      },
+      {
+        "id": "q22",
+        "pregunta": "Reducir el capital de trabajo, con el mismo NOPAT, produce:",
+        "opciones": [
+          "Menor ROIC.",
+          "Mayor ROIC (baja el denominador).",
+          "Ningún efecto.",
+          "Menor NOPAT."
+        ],
+        "correcta": 1,
+        "justificacion": "Menos capital invertido con igual NOPAT eleva el ROIC (y el EVA). Es una de las tres palancas de valor."
+      },
+      {
+        "id": "q23",
+        "pregunta": "Los intangibles autogenerados no capitalizados tienden a:",
+        "opciones": [
+          "No afectar el ROIC.",
+          "Distorsionar el ROIC al subvaluar el capital invertido.",
+          "Bajar el ROIC siempre.",
+          "Aumentar el WACC."
+        ],
+        "correcta": 1,
+        "justificacion": "Si una inversión real (marca, I+D) no está en el capital, el denominador queda chico y el ROIC se infla. Es una de las debilidades a corregir en el estado analítico."
+      },
+      {
+        "id": "q24",
+        "pregunta": "El CFROI se calcula sobre:",
+        "opciones": [
+          "Base devengada y valor de libros.",
+          "Base caja e inversión bruta ajustada por inflación.",
+          "Solo las ventas.",
+          "El patrimonio contable."
+        ],
+        "correcta": 1,
+        "justificacion": "El CFROI trabaja sobre flujos de caja e inversión bruta ajustada por inflación, corrigiendo el sesgo de antigüedad. No usa base devengada ni valor de libros."
+      },
+      {
+        "id": "q25",
+        "pregunta": "La ecuación maestra reduce la gestión financiera a mover:",
+        "opciones": [
+          "Diez indicadores.",
+          "Tres números: NOPAT, capital invertido y WACC.",
+          "Solo las ventas.",
+          "El patrimonio."
+        ],
+        "correcta": 1,
+        "justificacion": "Toda palanca sube el NOPAT, baja el capital o baja el WACC. Ese es el mapa mental del marco de valor."
+      },
+      {
+        "id": "q26",
+        "pregunta": "El EVA Margin permite:",
+        "opciones": [
+          "Medir liquidez.",
+          "Comparar la creación de valor entre empresas de distinto tamaño.",
+          "Calcular impuestos.",
+          "Medir la deuda."
+        ],
+        "correcta": 1,
+        "justificacion": "EVA Margin (EVA/Ventas) normaliza por tamaño y habilita comparaciones. No mide liquidez, impuestos ni deuda."
+      },
+      {
+        "id": "q27",
+        "pregunta": "Un ROIC del 25% con un WACC del 20% implica:",
+        "opciones": [
+          "Destrucción de valor.",
+          "Creación de valor (spread positivo de 5 pp).",
+          "Valor neutro.",
+          "Que falta información."
+        ],
+        "correcta": 1,
+        "justificacion": "ROIC (25%) > WACC (20%) da spread +5 pp y EVA positivo: crea valor. No es neutro ni destructivo."
+      },
+      {
+        "id": "q28",
+        "pregunta": "Los arrendamientos operativos, para el análisis, suelen:",
+        "opciones": [
+          "Ignorarse.",
+          "Capitalizarse como deuda equivalente y sumar el activo al capital invertido.",
+          "Sumarse a las ventas.",
+          "Restarse del patrimonio."
+        ],
+        "correcta": 1,
+        "justificacion": "El análisis capitaliza los arrendamientos operativos (deuda + activo equivalentes) para comparar empresas que compran vs. alquilan. No se ignoran ni afectan ventas."
+      },
+      {
+        "id": "q29",
+        "pregunta": "Según Rappaport, las utilidades contables son “una opinión” y el flujo de caja descontado “un hecho”, lo que implica que:",
+        "opciones": [
+          "El resultado contable es lo único que importa.",
+          "Los indicadores de valor buscan acercar la gestión al flujo de caja.",
+          "No hay que medir nada.",
+          "El EVA es irrelevante."
+        ],
+        "correcta": 1,
+        "justificacion": "Rappaport subraya la primacía del flujo sobre el devengado; los indicadores de valor (EVA, CFROI) acercan la gestión a esa realidad de caja."
+      },
+      {
+        "id": "q30",
+        "pregunta": "El GMROI es más relevante en empresas donde el activo central es:",
+        "opciones": [
+          "La planta industrial.",
+          "El inventario (comercio y distribución).",
+          "La marca.",
+          "La deuda."
+        ],
+        "correcta": 1,
+        "justificacion": "GMROI = margen bruto sobre inversión en inventario; brilla donde el inventario es el activo clave. En industria intensiva en planta pesan más ROIC/CFROI."
       }
     ]
   },

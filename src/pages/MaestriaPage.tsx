@@ -57,7 +57,7 @@ export default function MaestriaPage() {
                       <span className="font-mono text-sm font-semibold text-gold-300">Asignatura {a.cod}</span>
                       {best !== undefined && (
                         <span className="inline-flex items-center gap-1 rounded-full border border-value-500/40 bg-value-500/10 px-2 py-0.5 text-xs font-medium text-value-400">
-                          <Award size={12} /> {best}/{a.quiz.length}
+                          <Award size={12} /> {best}/{Math.min(15, a.quiz.length)}
                         </span>
                       )}
                     </div>

@@ -162,7 +162,7 @@ export default function MaestriaAsignaturaPage() {
       <CaseUpload cod={a.cod} />
 
       {/* Panel admin */}
-      {isAdmin && <AdminResultados cod={a.cod} total={a.quiz.length} />}
+      {isAdmin && <AdminResultados cod={a.cod} total={Math.min(15, a.quiz.length)} />}
     </div>
   )
 }

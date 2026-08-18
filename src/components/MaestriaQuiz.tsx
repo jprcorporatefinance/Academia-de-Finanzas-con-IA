@@ -3,6 +3,18 @@ import { useStore } from '../store/store'
 import { MAX_INTENTOS, type AppQuizQ } from '../data/maestria/appData'
 import { CheckCircle2, XCircle, RotateCcw, Award, AlertCircle } from 'lucide-react'
 
+const PREGUNTAS_POR_INTENTO = 15
+
+// Sortea `n` preguntas del banco (Fisher-Yates), para que cada intento sea distinto.
+function sample<T>(arr: T[], n: number): T[] {
+  const a = [...arr]
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[a[i], a[j]] = [a[j], a[i]]
+  }
+  return a.slice(0, Math.min(n, a.length))
+}
+
 // ============================================================================
 // Motor de cuestionario: 15 preguntas, hasta 3 intentos, se guarda el mejor
 // puntaje (visible para el admin). Al terminar muestra correcto/incorrecto y
@@ -20,16 +32,20 @@ export function MaestriaQuiz({ cod, quiz }: { cod: string; quiz: AppQuizQ[] }) {
   const intentosRestantes = Math.max(0, MAX_INTENTOS - attemptsUsed)
 
   const [taking, setTaking] = useState(false)
-  const [answers, setAnswers] = useState<(number | null)[]>(() => quiz.map(() => null))
+  const [activeQuiz, setActiveQuiz] = useState<AppQuizQ[]>([])
+  const [answers, setAnswers] = useState<(number | null)[]>([])
   const [submitted, setSubmitted] = useState(false)
   const [saving, setSaving] = useState(false)
   const [lastScore, setLastScore] = useState<number | null>(null)
 
-  const total = quiz.length
+  const banco = quiz.length
+  const total = Math.min(PREGUNTAS_POR_INTENTO, banco)
   const answeredCount = answers.filter((a) => a !== null).length
 
   function start() {
-    setAnswers(quiz.map(() => null))
+    const aq = sample(quiz, total)
+    setActiveQuiz(aq)
+    setAnswers(aq.map(() => null))
     setSubmitted(false)
     setLastScore(null)
     setTaking(true)
@@ -37,7 +53,7 @@ export function MaestriaQuiz({ cod, quiz }: { cod: string; quiz: AppQuizQ[] }) {
 
   async function submit() {
     if (answeredCount < total) return
-    const score = quiz.reduce((s, q, i) => s + (answers[i] === q.correcta ? 1 : 0), 0)
+    const score = activeQuiz.reduce((s, q, i) => s + (answers[i] === q.correcta ? 1 : 0), 0)
     setSaving(true)
     await saveQuizAttempt(cod, score, total, answers.map((a) => a ?? -1))
     setSaving(false)
@@ -54,11 +70,11 @@ export function MaestriaQuiz({ cod, quiz }: { cod: string; quiz: AppQuizQ[] }) {
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div>
             <div className="flex items-center gap-2 text-sm font-semibold text-slate-100">
-              <Award size={18} className="text-gold-300" /> Cuestionario de repaso — {total} preguntas
+              <Award size={18} className="text-gold-300" /> Cuestionario de repaso — {total} preguntas por intento
             </div>
             <p className="mt-1 text-sm text-slate-400">
-              Hasta {MAX_INTENTOS} intentos. Se guarda tu mejor puntaje y queda registrado para el
-              seguimiento.
+              Banco de {banco} preguntas · se sortean {total} en cada intento (hasta {MAX_INTENTOS}). Se guarda
+              tu mejor puntaje y queda registrado para el seguimiento.
             </p>
           </div>
           <div className="text-right">
@@ -144,7 +160,7 @@ export function MaestriaQuiz({ cod, quiz }: { cod: string; quiz: AppQuizQ[] }) {
         </div>
       )}
 
-      {quiz.map((q, i) => {
+      {activeQuiz.map((q, i) => {
         const chosen = answers[i]
         return (
           <div key={q.id} className="card p-5">
