@@ -50,10 +50,18 @@ export default function LandingPage() {
       {/* Nav */}
       <header className="mx-auto flex max-w-6xl items-center justify-between px-5 py-5">
         <div className="flex items-center gap-2.5">
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-gold-300 to-gold-500 text-ink-950">
-            <TrendingUp size={20} />
+          <svg width="34" height="30" viewBox="0 0 52 46" aria-hidden="true" className="shrink-0">
+            <rect x="0" y="26" width="9" height="20" rx="2.5" fill="#8fd3b7" />
+            <rect x="13" y="14" width="9" height="32" rx="2.5" fill="#2ebe8c" />
+            <rect x="26" y="2" width="9" height="44" rx="2.5" fill="#1e8f6b" />
+            <rect x="45" y="3" width="2" height="40" rx="1" fill="#12614a" />
+          </svg>
+          <div className="leading-tight">
+            <div className="font-serif text-base font-bold text-slate-100">
+              JPR<span className="text-danger-400">.</span> Consulting
+            </div>
+            <div className="text-[10px] uppercase tracking-wider text-gold-300">Academia FC + IA</div>
           </div>
-          <span className="font-bold text-slate-100">Academia FC + IA</span>
         </div>
         <div className="flex items-center gap-3">
           <Link to="/ingresar" className="btn-ghost">Ingresar</Link>
