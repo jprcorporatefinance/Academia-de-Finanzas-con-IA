@@ -1,0 +1,186 @@
+{
+  "cod": "1.1",
+  "nombre": "Contabilidad Financiera Avanzada y Normalización de Estados Contables en Economías Inflacionarias",
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "¿Cuál es la diferencia esencial entre el estado contable de presentación y el estado analítico?",
+      "opciones": [
+        "El estado contable rinde cuentas conforme a una norma; el analítico mide el capital inmovilizado y el resultado recurrente para decidir.",
+        "El estado analítico es el mismo estado contable pero firmado por un auditor externo.",
+        "El estado contable se usa para el fisco y el analítico es una versión resumida para el directorio.",
+        "No hay diferencia sustantiva: cambian el formato y los colores, no el contenido."
+      ],
+      "correcta": 0,
+      "justificacion": "El estado contable responde a una pregunta normativa (cómo se rindió cuenta) y el analítico a una económica (cuánto capital hay inmovilizado y cuánto resultado recurrente genera). Las demás opciones confunden auditoría, síntesis o formato con la transformación económica que hace el analista."
+    },
+    {
+      "id": "q2",
+      "pregunta": "El coeficiente de reexpresión de una partida no monetaria se calcula como:",
+      "opciones": [
+        "Índice de origen ÷ Índice de cierre.",
+        "Índice de cierre ÷ Índice de origen.",
+        "Inflación del período × Valor de libros.",
+        "(Índice de cierre − Índice de origen) ÷ 100."
+      ],
+      "correcta": 1,
+      "justificacion": "La reexpresión lleva la partida a moneda de cierre multiplicándola por índice de cierre ÷ índice de origen (siempre ≥ 1 bajo inflación). La opción invertida achicaría los valores; las otras dos no reconstruyen el poder adquisitivo de cierre."
+    },
+    {
+      "id": "q3",
+      "pregunta": "Una empresa mantiene una posición monetaria neta ACTIVA (activos monetarios > pasivos monetarios) durante un período inflacionario. El RECPAM será:",
+      "opciones": [
+        "Una ganancia, porque la caja rinde intereses.",
+        "Nulo, porque las partidas monetarias no se reexpresan.",
+        "Una pérdida, por la exposición de activos monetarios a la caída del poder adquisitivo.",
+        "Indeterminado sin conocer el tipo de cambio."
+      ],
+      "correcta": 2,
+      "justificacion": "Mantener activos monetarios bajo inflación erosiona su poder adquisitivo: PMN activa genera pérdida (RECPAM negativo). Que las monetarias no se reexpresen no elimina el resultado por exposición; justamente por eso existe el RECPAM."
+    },
+    {
+      "id": "q4",
+      "pregunta": "¿Por qué los bienes de uso se valúan a valor de mercado en el estado analítico y no a valor de origen menos amortizaciones?",
+      "opciones": [
+        "Porque la norma contable lo exige para todas las empresas.",
+        "Porque el valor de libros mide asignación de costo, no capital inmovilizado, y subvalúa el capital inflando el ROIC.",
+        "Porque el valor de mercado siempre es menor y conviene ser conservador.",
+        "Porque así se paga menos impuesto a las ganancias."
+      ],
+      "correcta": 1,
+      "justificacion": "El valor de libros responde a la asignación del costo en el tiempo, no a medir el capital efectivamente inmovilizado. Un activo amortizado que sigue produciendo subvalúa el denominador del ROIC y lo infla artificialmente. No es una exigencia normativa contable ni un criterio fiscal."
+    },
+    {
+      "id": "q5",
+      "pregunta": "El disparador de la reexpresión obligatoria fijado por la FACPCE (JG 539/2018) es:",
+      "opciones": [
+        "Inflación mensual mayor al 4 %.",
+        "Cualquier nivel de inflación, siempre es obligatoria.",
+        "Inflación acumulada superior al 100 % en tres años.",
+        "Una devaluación mayor al 20 % en el ejercicio."
+      ],
+      "correcta": 2,
+      "justificacion": "El criterio, alineado con NIC 29, es el 100 % acumulado en tres años. No depende de un umbral mensual, de la devaluación puntual ni es incondicionalmente obligatoria en cualquier contexto."
+    },
+    {
+      "id": "q6",
+      "pregunta": "En la normalización de una empresa familiar, si el dueño-gerente cobra un sueldo muy por debajo del de mercado, el resultado operativo reportado está:",
+      "opciones": [
+        "Subestimado; hay que sumar la diferencia al resultado.",
+        "Sobreestimado; hay que reconocer la retribución de mercado, lo que reduce el EBIT normalizado.",
+        "Correcto; el sueldo del dueño no afecta el resultado.",
+        "Sobreestimado, pero no se ajusta porque es una decisión del dueño."
+      ],
+      "correcta": 1,
+      "justificacion": "Si el costo laboral real (de mercado) es mayor que el contabilizado, el resultado está inflado. La normalización reconoce la retribución de mercado y baja el EBIT normalizado, para medir la capacidad recurrente con independencia de la decisión personal del dueño."
+    },
+    {
+      "id": "q7",
+      "pregunta": "¿Cuál de estas afirmaciones sobre el Estado de Flujo de Efectivo es correcta?",
+      "opciones": [
+        "El EFE es equivalente al FCFF y puede descontarse directamente para valuar.",
+        "El EFE es un estado histórico y prueba de veracidad de los otros estados; NO es el FCFF.",
+        "El EFE solo se construye por método indirecto.",
+        "El EFE es el estado más fácil de manipular contablemente."
+      ],
+      "correcta": 1,
+      "justificacion": "El EFE es histórico, verificable contra extractos y sirve para validar los otros estados, pero no es el flujo de fondos libre de la valuación: hay que construir un puente explícito. Puede armarse por método directo o indirecto (con conciliación), y es de los más difíciles de manipular, no de los más fáciles."
+    },
+    {
+      "id": "q8",
+      "pregunta": "La fórmula del capital empleado (enfoque operativo) usada en el programa es:",
+      "opciones": [
+        "Activo total − Pasivo total.",
+        "Cuentas por cobrar + Bienes de cambio − Proveedores + Bienes de uso.",
+        "Patrimonio neto + Deuda financiera + Caja.",
+        "Ventas ÷ Rotación de activos."
+      ],
+      "correcta": 1,
+      "justificacion": "El enfoque operativo suma el capital de trabajo operativo (CxC + bienes de cambio − proveedores) y los bienes de uso a valor de mercado, excluyendo caja excedente y activos no operativos. Las otras opciones son el patrimonio contable, una identidad de financiamiento o una relación ajena al capital invertido."
+    },
+    {
+      "id": "q9",
+      "pregunta": "Una empresa muestra utilidad creciente pero flujo operativo decreciente de forma persistente. ¿Qué señala esto?",
+      "opciones": [
+        "Excelente gestión: está reinvirtiendo todo el efectivo.",
+        "Una posible alerta de calidad de ganancias: el resultado devengado se separa del efectivo.",
+        "Nada relevante: son dos estados independientes.",
+        "Que la empresa está desendeudándose."
+      ],
+      "correcta": 1,
+      "justificacion": "La divergencia persistente entre resultado devengado y flujo operativo es una señal clásica de baja calidad de ganancias (Penman). No es prueba de buena gestión ni algo irrelevante, y no se deduce de ahí un desendeudamiento."
+    },
+    {
+      "id": "q10",
+      "pregunta": "En el caso de Maderas del Litoral, ¿por qué el ROIC contable sobreestima la eficiencia real del capital?",
+      "opciones": [
+        "Porque el EBIT contable es menor que el normalizado.",
+        "Porque la planta amortizada (valor de libros bajo) subvalúa el capital y los rubros están a valor nominal.",
+        "Porque la tasa impositiva es demasiado alta.",
+        "Porque los proveedores no se restan del capital."
+      ],
+      "correcta": 1,
+      "justificacion": "Con bienes de uso a valor de libros (900) el denominador del ROIC queda muy chico frente al valor de mercado (6.800), y los bienes de cambio sin reexpresar también lo achican: el ROIC contable sube sin que la eficiencia real cambie. El EBIT normalizado, de hecho, baja por el sueldo de mercado; la tasa y los proveedores no explican la distorsión."
+    },
+    {
+      "id": "q11",
+      "pregunta": "Las seis familias del catálogo de adecuaciones se aplican en un orden que NO es indiferente. ¿Por qué se empieza por la Familia A (unidad de medida)?",
+      "opciones": [
+        "Por costumbre; el orden en realidad da igual.",
+        "Porque homogeneizar la moneda es condición para que las correcciones de valor, pasivos y resultados sean coherentes.",
+        "Porque es la familia más fácil y conviene empezar por lo simple.",
+        "Porque la norma numera las familias alfabéticamente."
+      ],
+      "correcta": 1,
+      "justificacion": "Si no se homogeneiza primero la moneda, todas las adecuaciones posteriores (B a F) mezclan pesos de distinto poder adquisitivo y quedan contaminadas. El orden es sustantivo, no una convención ni una cuestión de dificultad."
+    },
+    {
+      "id": "q12",
+      "pregunta": "Una ganancia grande por RECPAM (posición monetaria pasiva) en un ejercicio inflacionario debe interpretarse como:",
+      "opciones": [
+        "Rentabilidad operativa genuina que puede proyectarse hacia el futuro.",
+        "Una transferencia de valor desde los acreedores por licuación de deuda, no rentabilidad operativa.",
+        "Un error contable que hay que corregir eliminándolo.",
+        "Una señal de que la empresa tiene demasiada caja."
+      ],
+      "correcta": 1,
+      "justificacion": "La ganancia por RECPAM en posición pasiva proviene de licuar deuda con pesos más baratos: es real pero no es rentabilidad operativa y desaparece si baja la inflación. No es un error a eliminar ni indica exceso de caja (eso sería posición activa)."
+    },
+    {
+      "id": "q13",
+      "pregunta": "Sobre el método directo y el indirecto del EFE, ¿qué es correcto?",
+      "opciones": [
+        "Son excluyentes: elegido uno, el otro no puede calcularse.",
+        "La norma exige conciliación entre ambos, y el método directo reconstruye cobranzas y pagos efectivos.",
+        "El método indirecto parte de las cobranzas reales.",
+        "El método directo parte del resultado neto."
+      ],
+      "correcta": 1,
+      "justificacion": "El directo reconstruye cobros y pagos efectivos; el indirecto parte del resultado y revierte partidas no erogables; la norma pide conciliar ambos. Las otras opciones invierten las definiciones o los presentan como excluyentes."
+    },
+    {
+      "id": "q14",
+      "pregunta": "Un alquiler pagado a una sociedad de los mismos dueños por encima del valor de mercado, ¿cómo se trata en la normalización?",
+      "opciones": [
+        "Se deja como está: es un gasto real que la empresa paga.",
+        "Se lleva a valor de mercado; el exceso pagado se recompone al resultado (lo aumenta).",
+        "Se elimina por completo el alquiler del resultado.",
+        "Se suma el exceso al capital invertido."
+      ],
+      "correcta": 1,
+      "justificacion": "Las operaciones con partes relacionadas se llevan a valor de mercado; si se pagaba de más, ese exceso no es un costo genuino del negocio y se recompone al resultado. No se elimina el alquiler entero (a mercado sí existe un costo) ni afecta el capital invertido."
+    },
+    {
+      "id": "q15",
+      "pregunta": "¿Cuál es la razón de fondo por la que esta asignatura es la raíz del “mapa de generadores de valor”?",
+      "opciones": [
+        "Porque es la primera en el orden cronológico del plan.",
+        "Porque el estado analítico y el capital empleado que produce son el insumo de todos los indicadores posteriores (ROIC, spread, EVA, valuación).",
+        "Porque es la única con trabajo práctico.",
+        "Porque enseña a usar Excel."
+      ],
+      "correcta": 1,
+      "justificacion": "Todos los indicadores del programa se calculan sobre el NOPAT y el capital empleado construidos aquí; un error en la depuración se propaga a todo el árbol de valor. No se trata de mera cronología, ni es la única con práctica, ni su objeto es Excel (eso es la 2.3)."
+    }
+  ]
+}

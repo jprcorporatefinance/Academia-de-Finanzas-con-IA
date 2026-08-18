@@ -1,0 +1,16 @@
+[
+  {
+    "cod": "1.1",
+    "slug": "a1-1",
+    "cuatrimestre": 1,
+    "nombre": "Contabilidad Financiera Avanzada y Normalización de Estados Contables en Economías Inflacionarias",
+    "fase": "Descriptiva · ¿Qué sucedió?",
+    "horas": "36 h · 14 teóricas / 22 prácticas",
+    "resumen": "El puente entre el estado contable —que rinde cuentas conforme a una norma— y el estado analítico —que mide el capital realmente inmovilizado y el resultado económico recurrente—. Es el cimiento sobre el que se apoya todo el instrumental posterior de la Maestría.",
+    "pdf": "/maestria/a1-1/a1-1-PDF.pdf",
+    "caso": "/maestria/a1-1/a1-1-Caso.xlsx",
+    "cuestionario": "/maestria/a1-1/a1-1-Cuestionario.pdf",
+    "quiz": "/maestria/a1-1/a1-1-Quiz.json",
+    "preguntas": 15
+  }
+]
