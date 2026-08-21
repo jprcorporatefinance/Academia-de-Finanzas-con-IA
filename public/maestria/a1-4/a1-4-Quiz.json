@@ -1,0 +1,366 @@
+{
+  "cod": "1.4",
+  "nombre": "Marco de Generación de Valor: NOPAT, Capital Invertido, ROIC y EVA",
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "En la ecuación maestra, toda palanca de gestión termina moviendo:",
+      "opciones": [
+        "El precio de la acción directamente.",
+        "Uno de tres números: NOPAT, capital invertido o WACC.",
+        "Solo las ventas.",
+        "La tasa impositiva."
+      ],
+      "correcta": 1,
+      "justificacion": "El marco reduce la gestión a tres palancas: subir NOPAT, bajar capital o bajar WACC. Es el mapa mental del programa; las demás opciones son parciales o indirectas."
+    },
+    {
+      "id": "q2",
+      "pregunta": "El EVA por diferencial y por resultado residual:",
+      "opciones": [
+        "Dan resultados distintos.",
+        "Son equivalentes: (ROIC−WACC)×Capital = NOPAT − WACC×Capital.",
+        "Solo el primero es válido.",
+        "Dependen del sector."
+      ],
+      "correcta": 1,
+      "justificacion": "Ambas expresiones son algebraicamente idénticas y sirven de control cruzado. Si no coinciden, hay un error de cálculo."
+    },
+    {
+      "id": "q3",
+      "pregunta": "¿Por qué el ROIC es superior al ROE como medida de eficiencia del capital?",
+      "opciones": [
+        "Porque siempre da más alto.",
+        "Porque aísla la operación del financiamiento; el ROE se infla con apalancamiento sin crear valor.",
+        "Porque es más fácil de calcular.",
+        "Porque no usa el NOPAT."
+      ],
+      "correcta": 1,
+      "justificacion": "El ROIC mide solo la eficiencia operativa del capital; el ROE mezcla apalancamiento y fiscalidad, y el endeudamiento puede inflarlo sin creación de valor. No es cuestión de magnitud ni de facilidad, y sí usa el NOPAT."
+    },
+    {
+      "id": "q4",
+      "pregunta": "El NOPAT se define como:",
+      "opciones": [
+        "Resultado neto + intereses.",
+        "EBIT × (1 − t efectiva).",
+        "EBITDA − impuestos.",
+        "Ventas − costos variables."
+      ],
+      "correcta": 1,
+      "justificacion": "NOPAT = EBIT × (1 − t efectiva): el resultado operativo después de impuestos, para todos los proveedores de capital. Las otras opciones son otras magnitudes (resultado, margen de contribución, etc.)."
+    },
+    {
+      "id": "q5",
+      "pregunta": "Para el ROIC se recomienda usar capital:",
+      "opciones": [
+        "De cierre siempre.",
+        "Promedio del período.",
+        "De apertura siempre.",
+        "Máximo del período."
+      ],
+      "correcta": 1,
+      "justificacion": "El capital promedio evita distorsiones por el momento de las inversiones. Usar cierre o apertura sesga el ratio según cuándo ocurrieron los movimientos."
+    },
+    {
+      "id": "q6",
+      "pregunta": "EVA Margin sirve principalmente para:",
+      "opciones": [
+        "Medir liquidez.",
+        "Comparar la eficiencia de creación de valor entre empresas de distinto tamaño.",
+        "Calcular impuestos.",
+        "Medir el plazo de cobro."
+      ],
+      "correcta": 1,
+      "justificacion": "EVA Margin (EVA/Ventas) normaliza por tamaño y permite comparar. No mide liquidez, impuestos ni plazos."
+    },
+    {
+      "id": "q7",
+      "pregunta": "¿Por qué EVA Momentum es mejor que el EVA absoluto para evaluar gestión?",
+      "opciones": [
+        "Porque es más grande.",
+        "Porque mide la mejora (variación) y no premia ni castiga la herencia recibida.",
+        "Porque ignora las ventas.",
+        "Porque no necesita el WACC."
+      ],
+      "correcta": 1,
+      "justificacion": "El Momentum mide el cambio del EVA: un gerente que hereda EVA negativo pero lo mejora mucho luce bien, y uno que vive de un EVA heredado, no. Usa ventas y depende del WACC (vía EVA)."
+    },
+    {
+      "id": "q8",
+      "pregunta": "En el caso, con ROIC 21,3 % y WACC 20 %, el EVA es:",
+      "opciones": [
+        "Muy negativo.",
+        "Positivo pero fino, y sensible al costo del capital.",
+        "Exactamente cero.",
+        "Independiente del WACC."
+      ],
+      "correcta": 1,
+      "justificacion": "Spread de 1,3 pp sobre 11.770 da un EVA positivo pero pequeño (~150), que pequeñas variaciones del WACC pueden dar vuelta. Depende directamente del WACC."
+    },
+    {
+      "id": "q9",
+      "pregunta": "El CFROI corrige principalmente:",
+      "opciones": [
+        "El sesgo de antigüedad de los activos e inflación, sobre base caja.",
+        "El tipo de cambio.",
+        "La tasa impositiva.",
+        "El plazo de pago a proveedores."
+      ],
+      "correcta": 0,
+      "justificacion": "El CFROI trabaja sobre base caja e inversión bruta ajustada por inflación, corrigiendo el sesgo que la antigüedad y la inflación introducen en los retornos contables. No es un ajuste cambiario, fiscal ni de working capital."
+    },
+    {
+      "id": "q10",
+      "pregunta": "El GMROI es especialmente relevante en:",
+      "opciones": [
+        "Bancos.",
+        "Empresas comerciales y distribuidoras (retorno del margen sobre el inventario).",
+        "Empresas sin inventario.",
+        "El sector público."
+      ],
+      "correcta": 1,
+      "justificacion": "GMROI = margen bruto sobre inversión en inventario; es clave donde el inventario es el activo central (comercio, distribución). Poco útil sin inventario."
+    },
+    {
+      "id": "q11",
+      "pregunta": "El MVA (Market Value Added) es conceptualmente:",
+      "opciones": [
+        "El EVA de un solo período.",
+        "La suma de los EVA futuros descontados.",
+        "El capital invertido.",
+        "El NOPAT acumulado."
+      ],
+      "correcta": 1,
+      "justificacion": "El MVA es el valor presente de la corriente de EVA futuros: el valor creado acumulado. No es un EVA de un período, ni el capital, ni el NOPAT."
+    },
+    {
+      "id": "q12",
+      "pregunta": "La “anatomía obligatoria” de un indicador incluye señalar:",
+      "opciones": [
+        "Solo su fórmula.",
+        "Definición, fórmula con trazabilidad, valor que agrega, dónde miente y flujograma.",
+        "Solo su valor numérico.",
+        "El nombre del autor."
+      ],
+      "correcta": 1,
+      "justificacion": "La disciplina del programa exige la anatomía completa, incluyendo explícitamente “dónde miente” el indicador. La fórmula o el número solos son insuficientes."
+    },
+    {
+      "id": "q13",
+      "pregunta": "Las dos formas de calcular el capital invertido (operativo y financiero):",
+      "opciones": [
+        "Pueden diferir libremente.",
+        "Deben reconciliar; si no cierran, hay un error de clasificación.",
+        "Solo la financiera es válida.",
+        "Dependen del auditor."
+      ],
+      "correcta": 1,
+      "justificacion": "Ambos enfoques deben dar el mismo capital invertido; una diferencia señala una partida mal clasificada (operativa vs. no operativa, deuda vs. pasivo operativo)."
+    },
+    {
+      "id": "q14",
+      "pregunta": "El ROIC calculado sobre el estado contable (no analítico) tiende a:",
+      "opciones": [
+        "Ser más confiable.",
+        "Distorsionarse por activos amortizados, inflación no corregida e intangibles no capitalizados.",
+        "Ser idéntico al analítico.",
+        "No poder calcularse."
+      ],
+      "correcta": 1,
+      "justificacion": "El ROIC contable se infla por la planta amortizada y la falta de reexpresión (ver 1.1). Por eso se calcula sobre el estado analítico depurado."
+    },
+    {
+      "id": "q15",
+      "pregunta": "Según el marco de McKinsey, el valor se crea cuando la empresa:",
+      "opciones": [
+        "Crece a cualquier costo.",
+        "Invierte capital a retornos que superan su costo (ROIC > WACC).",
+        "Minimiza impuestos únicamente.",
+        "Maximiza las ventas."
+      ],
+      "correcta": 1,
+      "justificacion": "El valor nace del spread positivo entre el retorno del capital y su costo. Crecer sin ese spread destruye valor; ventas o impuestos por sí solos no lo garantizan."
+    },
+    {
+      "id": "q16",
+      "pregunta": "El “spread” en la ecuación de valor es:",
+      "opciones": [
+        "ROIC × WACC.",
+        "ROIC − WACC.",
+        "ROIC ÷ WACC.",
+        "WACC − ROIC."
+      ],
+      "correcta": 1,
+      "justificacion": "El spread es la diferencia ROIC − WACC: positivo crea valor, negativo lo destruye. No es producto, cociente ni al revés."
+    },
+    {
+      "id": "q17",
+      "pregunta": "El MVA (Market Value Added) equivale a:",
+      "opciones": [
+        "El EVA de un período.",
+        "La suma de los EVA futuros descontados.",
+        "El capital invertido.",
+        "Las ventas."
+      ],
+      "correcta": 1,
+      "justificacion": "El MVA es el valor presente de la corriente de EVA futuros: el valor creado acumulado. No es un EVA puntual ni el capital."
+    },
+    {
+      "id": "q18",
+      "pregunta": "El NOPAT se calcula con la tasa impositiva:",
+      "opciones": [
+        "Nominal.",
+        "Efectiva.",
+        "Cero.",
+        "Del competidor."
+      ],
+      "correcta": 1,
+      "justificacion": "El NOPAT usa la tasa efectiva (la que realmente paga la empresa), no la nominal, para reflejar el resultado operativo después de impuestos real."
+    },
+    {
+      "id": "q19",
+      "pregunta": "El EVA por “resultado residual” se expresa como:",
+      "opciones": [
+        "NOPAT + WACC × Capital.",
+        "NOPAT − WACC × Capital.",
+        "Ventas − costos.",
+        "ROIC × Capital."
+      ],
+      "correcta": 1,
+      "justificacion": "EVA = NOPAT − (WACC × Capital): el resultado operativo menos el cargo por el capital empleado. Equivale a (ROIC − WACC) × Capital."
+    },
+    {
+      "id": "q20",
+      "pregunta": "Frente al ROIC, el ROA tiene la desventaja de:",
+      "opciones": [
+        "Ser más limpio.",
+        "Contaminarse con activos no operativos y caja.",
+        "No usar activos.",
+        "Ignorar el resultado."
+      ],
+      "correcta": 1,
+      "justificacion": "El ROA mezcla todos los activos (operativos o no) y la caja; el ROIC aísla el capital operativo. Por eso el ROIC es más limpio para medir eficiencia."
+    },
+    {
+      "id": "q21",
+      "pregunta": "El EVA Momentum se calcula como:",
+      "opciones": [
+        "EVA ÷ Ventas.",
+        "Δ EVA ÷ Ventas del período anterior.",
+        "EVA × WACC.",
+        "NOPAT ÷ Capital."
+      ],
+      "correcta": 1,
+      "justificacion": "El Momentum mide la mejora: variación del EVA sobre las ventas previas. EVA/Ventas es el EVA Margin; NOPAT/Capital es el ROIC."
+    },
+    {
+      "id": "q22",
+      "pregunta": "Reducir el capital de trabajo, con el mismo NOPAT, produce:",
+      "opciones": [
+        "Menor ROIC.",
+        "Mayor ROIC (baja el denominador).",
+        "Ningún efecto.",
+        "Menor NOPAT."
+      ],
+      "correcta": 1,
+      "justificacion": "Menos capital invertido con igual NOPAT eleva el ROIC (y el EVA). Es una de las tres palancas de valor."
+    },
+    {
+      "id": "q23",
+      "pregunta": "Los intangibles autogenerados no capitalizados tienden a:",
+      "opciones": [
+        "No afectar el ROIC.",
+        "Distorsionar el ROIC al subvaluar el capital invertido.",
+        "Bajar el ROIC siempre.",
+        "Aumentar el WACC."
+      ],
+      "correcta": 1,
+      "justificacion": "Si una inversión real (marca, I+D) no está en el capital, el denominador queda chico y el ROIC se infla. Es una de las debilidades a corregir en el estado analítico."
+    },
+    {
+      "id": "q24",
+      "pregunta": "El CFROI se calcula sobre:",
+      "opciones": [
+        "Base devengada y valor de libros.",
+        "Base caja e inversión bruta ajustada por inflación.",
+        "Solo las ventas.",
+        "El patrimonio contable."
+      ],
+      "correcta": 1,
+      "justificacion": "El CFROI trabaja sobre flujos de caja e inversión bruta ajustada por inflación, corrigiendo el sesgo de antigüedad. No usa base devengada ni valor de libros."
+    },
+    {
+      "id": "q25",
+      "pregunta": "La ecuación maestra reduce la gestión financiera a mover:",
+      "opciones": [
+        "Diez indicadores.",
+        "Tres números: NOPAT, capital invertido y WACC.",
+        "Solo las ventas.",
+        "El patrimonio."
+      ],
+      "correcta": 1,
+      "justificacion": "Toda palanca sube el NOPAT, baja el capital o baja el WACC. Ese es el mapa mental del marco de valor."
+    },
+    {
+      "id": "q26",
+      "pregunta": "El EVA Margin permite:",
+      "opciones": [
+        "Medir liquidez.",
+        "Comparar la creación de valor entre empresas de distinto tamaño.",
+        "Calcular impuestos.",
+        "Medir la deuda."
+      ],
+      "correcta": 1,
+      "justificacion": "EVA Margin (EVA/Ventas) normaliza por tamaño y habilita comparaciones. No mide liquidez, impuestos ni deuda."
+    },
+    {
+      "id": "q27",
+      "pregunta": "Un ROIC del 25% con un WACC del 20% implica:",
+      "opciones": [
+        "Destrucción de valor.",
+        "Creación de valor (spread positivo de 5 pp).",
+        "Valor neutro.",
+        "Que falta información."
+      ],
+      "correcta": 1,
+      "justificacion": "ROIC (25%) > WACC (20%) da spread +5 pp y EVA positivo: crea valor. No es neutro ni destructivo."
+    },
+    {
+      "id": "q28",
+      "pregunta": "Los arrendamientos operativos, para el análisis, suelen:",
+      "opciones": [
+        "Ignorarse.",
+        "Capitalizarse como deuda equivalente y sumar el activo al capital invertido.",
+        "Sumarse a las ventas.",
+        "Restarse del patrimonio."
+      ],
+      "correcta": 1,
+      "justificacion": "El análisis capitaliza los arrendamientos operativos (deuda + activo equivalentes) para comparar empresas que compran vs. alquilan. No se ignoran ni afectan ventas."
+    },
+    {
+      "id": "q29",
+      "pregunta": "Según Rappaport, las utilidades contables son “una opinión” y el flujo de caja descontado “un hecho”, lo que implica que:",
+      "opciones": [
+        "El resultado contable es lo único que importa.",
+        "Los indicadores de valor buscan acercar la gestión al flujo de caja.",
+        "No hay que medir nada.",
+        "El EVA es irrelevante."
+      ],
+      "correcta": 1,
+      "justificacion": "Rappaport subraya la primacía del flujo sobre el devengado; los indicadores de valor (EVA, CFROI) acercan la gestión a esa realidad de caja."
+    },
+    {
+      "id": "q30",
+      "pregunta": "El GMROI es más relevante en empresas donde el activo central es:",
+      "opciones": [
+        "La planta industrial.",
+        "El inventario (comercio y distribución).",
+        "La marca.",
+        "La deuda."
+      ],
+      "correcta": 1,
+      "justificacion": "GMROI = margen bruto sobre inversión en inventario; brilla donde el inventario es el activo clave. En industria intensiva en planta pesan más ROIC/CFROI."
+    }
+  ]
+}

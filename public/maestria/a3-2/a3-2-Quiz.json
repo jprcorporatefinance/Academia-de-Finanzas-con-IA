@@ -1,0 +1,366 @@
+{
+  "cod": "3.2",
+  "nombre": "Aprendizaje Automático y Aprendizaje Profundo Aplicados a Finanzas Corporativas",
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "Predecir si un cliente pagará o no (paga/no paga) es un problema de:",
+      "opciones": [
+        "Regresión.",
+        "Clasificación supervisada.",
+        "Clustering.",
+        "Aprendizaje por refuerzo."
+      ],
+      "correcta": 1,
+      "justificacion": "Predecir una clase con datos etiquetados es clasificación supervisada. La regresión predice números; el clustering no usa etiquetas; el refuerzo aprende de recompensas."
+    },
+    {
+      "id": "q2",
+      "pregunta": "El sobreajuste (overfitting) es:",
+      "opciones": [
+        "Cuando el modelo generaliza muy bien.",
+        "Cuando el modelo memoriza el ruido del entrenamiento y falla en datos nuevos.",
+        "Un tipo de gráfico.",
+        "Falta de datos."
+      ],
+      "correcta": 1,
+      "justificacion": "Overfitting = ajustar el ruido en vez de la señal, con mal desempeño fuera de muestra. Es lo opuesto a generalizar bien."
+    },
+    {
+      "id": "q3",
+      "pregunta": "¿Por qué la exactitud (accuracy) sola engaña con la mora?",
+      "opciones": [
+        "Porque es difícil de calcular.",
+        "Porque con clases desbalanceadas un modelo que dice “nadie cae” acierta mucho y es inútil.",
+        "Porque no existe.",
+        "Porque siempre da 100%."
+      ],
+      "correcta": 1,
+      "justificacion": "Si la mora es rara (3%), predecir “nadie cae” da 97% de exactitud pero no detecta a ningún moroso. Por eso se usan precisión, recall y AUC."
+    },
+    {
+      "id": "q4",
+      "pregunta": "La función que convierte el score z en una probabilidad (0–1) en la regresión logística es:",
+      "opciones": [
+        "La raíz cuadrada.",
+        "La sigmoide: 1/(1+e^−z).",
+        "El logaritmo.",
+        "La media."
+      ],
+      "correcta": 1,
+      "justificacion": "La sigmoide mapea cualquier z real a (0,1), interpretable como probabilidad. Las otras funciones no cumplen esa propiedad."
+    },
+    {
+      "id": "q5",
+      "pregunta": "La validación cruzada sirve para:",
+      "opciones": [
+        "Aumentar los datos.",
+        "Estimar el desempeño de forma robusta rotando el conjunto de validación.",
+        "Entrenar más rápido.",
+        "Eliminar variables."
+      ],
+      "correcta": 1,
+      "justificacion": "La validación cruzada rota qué datos se usan para validar, dando una estimación más estable del desempeño. No crea datos ni acelera el entrenamiento por sí sola."
+    },
+    {
+      "id": "q6",
+      "pregunta": "El “data snooping” en finanzas consiste en:",
+      "opciones": [
+        "Ordenar los datos.",
+        "Probar muchos modelos hasta que uno funciona por azar.",
+        "Limpiar valores faltantes.",
+        "Graficar series."
+      ],
+      "correcta": 1,
+      "justificacion": "Probar mil configuraciones y quedarse con la que “funcionó” genera falsos positivos por azar (López de Prado). No es ordenar ni limpiar datos."
+    },
+    {
+      "id": "q7",
+      "pregunta": "El sesgo de anticipación (look-ahead bias) es:",
+      "opciones": [
+        "Usar información que no estaría disponible al momento de decidir.",
+        "Predecir el pasado.",
+        "Un tipo de regularización.",
+        "Un gráfico de barras."
+      ],
+      "correcta": 0,
+      "justificacion": "Look-ahead bias = filtrar información futura en el entrenamiento, inflando el desempeño irrealmente. No es regularización ni un gráfico."
+    },
+    {
+      "id": "q8",
+      "pregunta": "El AUC (área bajo la curva ROC) mide:",
+      "opciones": [
+        "El costo del modelo.",
+        "La capacidad de ordenar el riesgo con independencia del umbral.",
+        "La cantidad de variables.",
+        "El tiempo de entrenamiento."
+      ],
+      "correcta": 1,
+      "justificacion": "El AUC evalúa qué tan bien el modelo ordena positivos sobre negativos sin fijar un umbral. No mide costo, cantidad de variables ni tiempo."
+    },
+    {
+      "id": "q9",
+      "pregunta": "La elección del umbral de corte en un scoring de crédito es:",
+      "opciones": [
+        "Puramente técnica.",
+        "Una decisión de negocio: depende del costo de un falso positivo vs. un falso negativo.",
+        "Siempre 0,5.",
+        "Irrelevante."
+      ],
+      "correcta": 1,
+      "justificacion": "El umbral balancea rechazar buenos clientes (FP) contra aprobar malos (FN); es una decisión de negocio, no un 0,5 universal."
+    },
+    {
+      "id": "q10",
+      "pregunta": "En finanzas, ¿por qué importa la interpretabilidad del modelo?",
+      "opciones": [
+        "Por estética.",
+        "Porque hay que explicar por qué se decide (ética, a veces regulación) y auditar el modelo.",
+        "Porque los modelos simples son siempre mejores.",
+        "No importa."
+      ],
+      "correcta": 1,
+      "justificacion": "Explicar una decisión de crédito es una exigencia ética y a menudo regulatoria; la caja negra es un pasivo. No es estética ni implica que lo simple siempre gane."
+    },
+    {
+      "id": "q11",
+      "pregunta": "SHAP y la importancia de variables sirven para:",
+      "opciones": [
+        "Entrenar más rápido.",
+        "Abrir la caja negra: mostrar cuánto pesa cada factor en la decisión.",
+        "Borrar datos.",
+        "Cambiar el umbral."
+      ],
+      "correcta": 1,
+      "justificacion": "Son técnicas de interpretabilidad que atribuyen la decisión a cada variable. No aceleran el entrenamiento ni borran datos."
+    },
+    {
+      "id": "q12",
+      "pregunta": "El compromiso sesgo-varianza dice que:",
+      "opciones": [
+        "Más flexibilidad siempre es mejor.",
+        "Modelos muy flexibles bajan el sesgo pero suben la varianza; hay un punto medio.",
+        "El sesgo y la varianza son lo mismo.",
+        "No existe."
+      ],
+      "correcta": 1,
+      "justificacion": "Aumentar la flexibilidad reduce el sesgo pero aumenta la varianza (y el sobreajuste); el arte está en equilibrarlos. No es que más flexibilidad siempre gane."
+    },
+    {
+      "id": "q13",
+      "pregunta": "La “navaja de Occam financiera” sugiere:",
+      "opciones": [
+        "Usar siempre el modelo más complejo.",
+        "Empezar por el modelo más simple que resuelva el problema.",
+        "No usar modelos.",
+        "Elegir por moda."
+      ],
+      "correcta": 1,
+      "justificacion": "Preferir la simplicidad interpretable frente a la complejidad opaca que gana marginalmente. No es rechazar modelos ni seguir modas."
+    },
+    {
+      "id": "q14",
+      "pregunta": "Un ensamble de árboles (random forest, gradient boosting) es:",
+      "opciones": [
+        "Un modelo lineal simple.",
+        "Un modelo no lineal potente, típicamente menos interpretable que una regresión.",
+        "Una hoja de cálculo.",
+        "Un tipo de gráfico."
+      ],
+      "correcta": 1,
+      "justificacion": "Los ensambles de árboles capturan no linealidades con gran poder predictivo, a costa de interpretabilidad. No son lineales ni un gráfico."
+    },
+    {
+      "id": "q15",
+      "pregunta": "Según López de Prado, la principal causa de estrategias que fallan en producción es:",
+      "opciones": [
+        "Usar Excel.",
+        "El backtest overfitting (validar mal, dando falsa confianza).",
+        "Tener demasiados datos.",
+        "La interpretabilidad."
+      ],
+      "correcta": 1,
+      "justificacion": "Validar mal produce backtests brillantes y modelos inútiles: es la causa central de fracasos. No se debe a Excel, al exceso de datos ni a explicar el modelo."
+    },
+    {
+      "id": "q16",
+      "pregunta": "Segmentar clientes sin etiquetas previas es un problema de:",
+      "opciones": [
+        "Clasificación supervisada.",
+        "Aprendizaje no supervisado (clustering).",
+        "Regresión.",
+        "Refuerzo."
+      ],
+      "correcta": 1,
+      "justificacion": "El clustering agrupa sin etiquetas: es aprendizaje no supervisado. La clasificación y la regresión son supervisadas."
+    },
+    {
+      "id": "q17",
+      "pregunta": "Predecir la demanda (un número) es un problema de:",
+      "opciones": [
+        "Clasificación.",
+        "Regresión.",
+        "Clustering.",
+        "Refuerzo."
+      ],
+      "correcta": 1,
+      "justificacion": "Predecir un valor numérico continuo es regresión. La clasificación predice clases; el clustering no usa etiquetas."
+    },
+    {
+      "id": "q18",
+      "pregunta": "La regularización sirve para:",
+      "opciones": [
+        "Aumentar el sobreajuste.",
+        "Penalizar la complejidad del modelo y combatir el sobreajuste.",
+        "Borrar datos.",
+        "Acelerar la GPU."
+      ],
+      "correcta": 1,
+      "justificacion": "La regularización penaliza modelos demasiado complejos, reduciendo el sobreajuste. No borra datos ni es un tema de hardware."
+    },
+    {
+      "id": "q19",
+      "pregunta": "La partición en entrenamiento, validación y prueba busca:",
+      "opciones": [
+        "Tener más datos.",
+        "Evaluar el modelo con datos que no vio y evitar el autoengaño.",
+        "Entrenar más rápido.",
+        "Eliminar variables."
+      ],
+      "correcta": 1,
+      "justificacion": "Separar los datos permite ajustar (train), elegir hiperparámetros (validación) y medir honestamente (test) con datos no vistos."
+    },
+    {
+      "id": "q20",
+      "pregunta": "La precisión (precision) de un clasificador es:",
+      "opciones": [
+        "VP/(VP+FN).",
+        "VP/(VP+FP).",
+        "VN/(VN+FP).",
+        "VP/Total."
+      ],
+      "correcta": 1,
+      "justificacion": "Precisión = VP/(VP+FP): de lo que predijo positivo, cuánto lo era. VP/(VP+FN) es el recall."
+    },
+    {
+      "id": "q21",
+      "pregunta": "El recall (sensibilidad) es:",
+      "opciones": [
+        "VP/(VP+FP).",
+        "VP/(VP+FN).",
+        "FP/(FP+VN).",
+        "VN/Total."
+      ],
+      "correcta": 1,
+      "justificacion": "Recall = VP/(VP+FN): de los positivos reales, cuántos detectó. Es clave con clases raras como la mora."
+    },
+    {
+      "id": "q22",
+      "pregunta": "En un scoring de crédito, un falso positivo significa:",
+      "opciones": [
+        "Aprobar a un cliente que no paga.",
+        "Rechazar a un cliente que sí pagaría (buen cliente).",
+        "Acertar.",
+        "No decidir."
+      ],
+      "correcta": 1,
+      "justificacion": "Si “positivo” es riesgo/rechazo, un falso positivo es rechazar a un buen cliente: costo de oportunidad. El falso negativo es aprobar a uno malo."
+    },
+    {
+      "id": "q23",
+      "pregunta": "El “feature engineering” es:",
+      "opciones": [
+        "Entrenar el modelo.",
+        "Construir y transformar las variables (features) que alimentan el modelo.",
+        "Graficar resultados.",
+        "Elegir el color."
+      ],
+      "correcta": 1,
+      "justificacion": "El feature engineering crea las variables informativas a partir de los datos crudos; suele pesar más que el algoritmo elegido."
+    },
+    {
+      "id": "q24",
+      "pregunta": "En el scoring del caso, MMULT se usa para:",
+      "opciones": [
+        "Ordenar clientes.",
+        "Multiplicar la matriz de features por el vector de coeficientes (el score z).",
+        "Borrar filas.",
+        "Formatear celdas."
+      ],
+      "correcta": 1,
+      "justificacion": "z = X·β se calcula con MMULT (features × coeficientes); luego la sigmoide lo convierte en probabilidad."
+    },
+    {
+      "id": "q25",
+      "pregunta": "Un modelo de crédito debe poder explicar por qué rechaza a un cliente porque:",
+      "opciones": [
+        "Es opcional.",
+        "Lo exige la ética y a menudo la regulación.",
+        "Mejora la GPU.",
+        "Reduce el AUC."
+      ],
+      "correcta": 1,
+      "justificacion": "La explicabilidad de una decisión de crédito es una exigencia ética y regulatoria; la caja negra es un pasivo."
+    },
+    {
+      "id": "q26",
+      "pregunta": "El aprendizaje profundo (deep learning) es especialmente útil para:",
+      "opciones": [
+        "Problemas triviales.",
+        "Patrones complejos y datos no estructurados (imágenes, texto).",
+        "Sumar dos números.",
+        "Nada."
+      ],
+      "correcta": 1,
+      "justificacion": "Las redes profundas capturan patrones complejos y datos no estructurados, a costa de interpretabilidad y datos. No se justifican para lo trivial."
+    },
+    {
+      "id": "q27",
+      "pregunta": "El aprendizaje por refuerzo aprende de:",
+      "opciones": [
+        "Etiquetas fijas.",
+        "La interacción con un entorno mediante recompensas.",
+        "Clustering.",
+        "Regresión."
+      ],
+      "correcta": 1,
+      "justificacion": "El refuerzo optimiza acciones según recompensas del entorno. Es menos frecuente en finanzas corporativas."
+    },
+    {
+      "id": "q28",
+      "pregunta": "La curva ROC relaciona:",
+      "opciones": [
+        "Ventas y costos.",
+        "La tasa de verdaderos positivos con la de falsos positivos a distintos umbrales.",
+        "Activo y pasivo.",
+        "Precio y volumen."
+      ],
+      "correcta": 1,
+      "justificacion": "La ROC traza TPR vs FPR variando el umbral; el área bajo ella (AUC) resume la capacidad de ordenar el riesgo."
+    },
+    {
+      "id": "q29",
+      "pregunta": "Según Géron, la mayor parte del trabajo real de un proyecto de ML es:",
+      "opciones": [
+        "Elegir el algoritmo de moda.",
+        "La preparación de datos y la validación honesta.",
+        "Comprar GPUs.",
+        "Hacer gráficos."
+      ],
+      "correcta": 1,
+      "justificacion": "La disciplina del proceso (datos + validación) pesa mucho más que el algoritmo de moda. Es donde se juega el resultado."
+    },
+    {
+      "id": "q30",
+      "pregunta": "Con clases desbalanceadas (mora rara), conviene mirar:",
+      "opciones": [
+        "Solo la exactitud.",
+        "Precisión, recall y AUC, además de la exactitud.",
+        "Solo el color.",
+        "Nada."
+      ],
+      "correcta": 1,
+      "justificacion": "La exactitud engaña con clases raras; precisión, recall y AUC dan una imagen honesta del desempeño."
+    }
+  ]
+}

@@ -1,0 +1,366 @@
+{
+  "cod": "4.4",
+  "nombre": "Política de Dividendos, Decisiones Operativas y Gobierno de la Empresa Familiar",
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "El teorema de Miller-Modigliani sobre dividendos dice que, en mercados perfectos:",
+      "opciones": [
+        "Siempre conviene distribuir.",
+        "La política de dividendos es irrelevante para el valor.",
+        "Siempre conviene retener.",
+        "Los dividendos destruyen valor."
+      ],
+      "correcta": 1,
+      "justificacion": "En mercados perfectos (sin impuestos ni fricciones), distribuir o retener da igual: el valor lo determinan los activos. Es un punto de partida que las fricciones reales modifican."
+    },
+    {
+      "id": "q2",
+      "pregunta": "¿Cuál de estas es una fricción real que vuelve relevante la política de dividendos?",
+      "opciones": [
+        "La gravedad.",
+        "Los impuestos, la señalización, la agencia y el efecto clientela.",
+        "El color del logo.",
+        "Nada la vuelve relevante."
+      ],
+      "correcta": 1,
+      "justificacion": "Impuestos, señales al mercado, disciplina de agencia y preferencias de clientela hacen que la política sí importe en el mundo real."
+    },
+    {
+      "id": "q3",
+      "pregunta": "Si el RONIC es menor que el WACC, la política de dividendos óptima tiende a:",
+      "opciones": [
+        "Retener todo para crecer.",
+        "Distribuir, porque reinvertir en proyectos que rinden menos que su costo destruye valor.",
+        "No pagar nunca.",
+        "Endeudarse para pagar."
+      ],
+      "correcta": 1,
+      "justificacion": "Con RONIC < WACC, retener para reinvertir destruye valor; devolver el capital a los dueños lo preserva. La política de dividendos depende de la de inversión."
+    },
+    {
+      "id": "q4",
+      "pregunta": "La política de dividendos y la de inversión son:",
+      "opciones": [
+        "Totalmente independientes.",
+        "Interdependientes: cuánto distribuir depende de si hay proyectos que crean valor.",
+        "La misma decisión.",
+        "Irrelevantes ambas."
+      ],
+      "correcta": 1,
+      "justificacion": "Se distribuye lo que no conviene reinvertir; si hay proyectos con RONIC > WACC, retener; si no, distribuir. Están enlazadas."
+    },
+    {
+      "id": "q5",
+      "pregunta": "Subir el dividendo suele interpretarse como:",
+      "opciones": [
+        "Una señal de problemas.",
+        "Una señal de confianza de la gerencia (señalización).",
+        "Un error contable.",
+        "Un impuesto."
+      ],
+      "correcta": 1,
+      "justificacion": "El aumento de dividendos señala confianza en flujos futuros; recortarlo señala problemas. Es el efecto señalización."
+    },
+    {
+      "id": "q6",
+      "pregunta": "Las cuatro decisiones financieras son:",
+      "opciones": [
+        "Inversión, financiamiento, dividendos y operativas.",
+        "Compra, venta, alquiler y préstamo.",
+        "Marketing, ventas, RRHH y producción.",
+        "Activo, pasivo, patrimonio y resultado."
+      ],
+      "correcta": 0,
+      "justificacion": "El sistema son inversión, financiamiento, dividendos y decisiones operativas, todas unidas por el objetivo de maximizar el valor."
+    },
+    {
+      "id": "q7",
+      "pregunta": "Las cuatro decisiones se caracterizan por estar:",
+      "opciones": [
+        "Aisladas unas de otras.",
+        "Entrelazadas: cambiar una mueve a las demás.",
+        "En conflicto permanente.",
+        "Ordenadas por tamaño."
+      ],
+      "correcta": 1,
+      "justificacion": "Invertir determina la caja necesaria, financiar de dónde sale, dividendos cuánto sobra y operativas cuánto libera el negocio: forman un sistema."
+    },
+    {
+      "id": "q8",
+      "pregunta": "El modelo de los tres círculos (Tagiuri & Davis) describe la superposición de:",
+      "opciones": [
+        "Activo, pasivo y patrimonio.",
+        "Familia, propiedad y empresa.",
+        "Ventas, costos y margen.",
+        "Deuda, capital y caja."
+      ],
+      "correcta": 1,
+      "justificacion": "Los tres círculos son familia, propiedad y empresa; su superposición genera los conflictos típicos de la empresa familiar."
+    },
+    {
+      "id": "q9",
+      "pregunta": "Un IDD (Índice de Dependencia del Dueño) por encima de 60 indica que la empresa:",
+      "opciones": [
+        "Es muy transferible.",
+        "No es transferible sin destruir valor (depende demasiado del dueño).",
+        "No tiene dueño.",
+        "Cotiza en bolsa."
+      ],
+      "correcta": 1,
+      "justificacion": "Un IDD alto hace al dueño un punto único de falla: sin él la empresa vale mucho menos, dificultando la venta. Impacta Ke, DLOC y DLOM."
+    },
+    {
+      "id": "q10",
+      "pregunta": "Reducir el IDD (documentar procesos, formar segunda línea) es:",
+      "opciones": [
+        "Una pérdida de tiempo.",
+        "Una de las inversiones de mayor retorno: hace la empresa transferible y más valiosa.",
+        "Irrelevante para el valor.",
+        "Solo un tema de RRHH."
+      ],
+      "correcta": 1,
+      "justificacion": "Bajar la dependencia del dueño aumenta la transferibilidad y el valor (menos descuentos, menor Ke). No es un tema menor ni ajeno a las finanzas."
+    },
+    {
+      "id": "q11",
+      "pregunta": "El FCFE (flujo de fondos del accionista) se calcula como:",
+      "opciones": [
+        "FCFF + intereses.",
+        "FCFF − intereses×(1−t) + nueva deuda neta.",
+        "EBITDA − impuestos.",
+        "NOPAT / WACC."
+      ],
+      "correcta": 1,
+      "justificacion": "El FCFE parte del FCFF, resta el costo de la deuda después de impuestos y suma el nuevo endeudamiento neto: lo que queda para los dueños."
+    },
+    {
+      "id": "q12",
+      "pregunta": "El TSR (Total Shareholder Return) combina:",
+      "opciones": [
+        "Solo los dividendos.",
+        "El rendimiento por dividendos y el crecimiento del valor.",
+        "Solo las ventas.",
+        "El EBITDA y la deuda."
+      ],
+      "correcta": 1,
+      "justificacion": "El TSR suma lo que el dueño recibe (dividendos) y lo que la empresa se aprecia (valor). Es el objetivo final del programa."
+    },
+    {
+      "id": "q13",
+      "pregunta": "Según Damodaran, retener caja sin proyectos que superen el costo del capital es:",
+      "opciones": [
+        "La mejor estrategia.",
+        "El peor de los pecados corporativos (destruye valor).",
+        "Neutral.",
+        "Obligatorio."
+      ],
+      "correcta": 1,
+      "justificacion": "Guardar caja para reinvertir en proyectos que destruyen valor es peor que distribuirla; hay que devolverla a los dueños. No es neutral ni obligatorio retener."
+    },
+    {
+      "id": "q14",
+      "pregunta": "El objetivo único y taxativo del programa es:",
+      "opciones": [
+        "Maximizar utilidades contables.",
+        "Maximizar el valor para los dueños (TSR) de largo plazo.",
+        "Maximizar el tamaño.",
+        "Maximizar las ventas."
+      ],
+      "correcta": 1,
+      "justificacion": "Todo el método apunta al valor de largo plazo para los dueños; utilidades, tamaño o ventas valen solo en cuanto sirven a ese fin (Rappaport)."
+    },
+    {
+      "id": "q15",
+      "pregunta": "La cadena que el egresado debe reconstruir de memoria va de:",
+      "opciones": [
+        "Las ventas al EBITDA.",
+        "La depuración contable (1.1) al valor para los dueños (TSR), pasando por ROIC−WACC, EVA, valuación y las cuatro decisiones.",
+        "El activo al pasivo.",
+        "La caja a la deuda."
+      ],
+      "correcta": 1,
+      "justificacion": "El mapa de valor completo: del estado analítico al TSR, sin saltos. Es la síntesis integradora de toda la Maestría."
+    },
+    {
+      "id": "q16",
+      "pregunta": "El teorema de irrelevancia de Miller-Modigliani supone:",
+      "opciones": [
+        "Impuestos altos.",
+        "Mercados perfectos (sin impuestos, sin costos de transacción, información simétrica).",
+        "Inflación alta.",
+        "Empresas familiares."
+      ],
+      "correcta": 1,
+      "justificacion": "La irrelevancia vale en el mundo idealizado de mercados perfectos; las fricciones reales (impuestos, señales, agencia) la modifican."
+    },
+    {
+      "id": "q17",
+      "pregunta": "El “efecto clientela” en dividendos significa que:",
+      "opciones": [
+        "Todos los dueños quieren lo mismo.",
+        "Distintos accionistas prefieren distintas políticas de distribución.",
+        "No hay dividendos.",
+        "Los clientes cobran dividendos."
+      ],
+      "correcta": 1,
+      "justificacion": "Cada tipo de inversor (por impuestos, necesidad de renta) prefiere cierta política; la empresa atrae la “clientela” acorde."
+    },
+    {
+      "id": "q18",
+      "pregunta": "Distribuir dividendos puede disciplinar a la gerencia porque:",
+      "opciones": [
+        "Le da más caja para gastar.",
+        "Reduce la caja ociosa disponible para malas inversiones (efecto agencia).",
+        "Elimina el directorio.",
+        "Sube los impuestos."
+      ],
+      "correcta": 1,
+      "justificacion": "Menos caja libre limita la inversión en proyectos que destruyen valor: el dividendo actúa como disciplina de agencia."
+    },
+    {
+      "id": "q19",
+      "pregunta": "El tratamiento fiscal distinto de dividendos y ganancias de capital:",
+      "opciones": [
+        "No afecta la decisión.",
+        "Puede inclinar la política de distribución (una fricción real).",
+        "Es irrelevante siempre.",
+        "Elimina el TSR."
+      ],
+      "correcta": 1,
+      "justificacion": "Si dividendos y ganancias de capital tributan distinto, la política deja de ser irrelevante: es una de las fricciones que rompen MM."
+    },
+    {
+      "id": "q20",
+      "pregunta": "La decisión de inversión responde a la pregunta:",
+      "opciones": [
+        "¿Cuánto distribuir?",
+        "¿En qué invertir? (aceptar si RONIC > WACC).",
+        "¿Con qué deuda?",
+        "¿Qué inventario?"
+      ],
+      "correcta": 1,
+      "justificacion": "La decisión de inversión elige los proyectos que crean valor (RONIC > WACC). Las otras son financiamiento, dividendos y operativas."
+    },
+    {
+      "id": "q21",
+      "pregunta": "La decisión de financiamiento define:",
+      "opciones": [
+        "Cuánto distribuir.",
+        "Con qué capital financiar (mezcla deuda/patrimonio).",
+        "Qué proyectos tomar.",
+        "El nivel de stock."
+      ],
+      "correcta": 1,
+      "justificacion": "El financiamiento decide la estructura de capital (deuda vs. patrimonio) y su costo/riesgo. Es una de las cuatro decisiones."
+    },
+    {
+      "id": "q22",
+      "pregunta": "Las decisiones operativas se refieren a:",
+      "opciones": [
+        "La política de dividendos.",
+        "La gestión del capital de trabajo y los costos (cuánta caja libera el negocio).",
+        "La estructura de deuda.",
+        "La valuación."
+      ],
+      "correcta": 1,
+      "justificacion": "Las operativas gestionan el CCE y los costos, determinando cuánta caja libera la operación (asignatura 2.4)."
+    },
+    {
+      "id": "q23",
+      "pregunta": "El momento de mayor mortalidad de la empresa familiar suele ser:",
+      "opciones": [
+        "La fundación.",
+        "La sucesión (traspaso generacional).",
+        "El primer año rentable.",
+        "Nunca."
+      ],
+      "correcta": 1,
+      "justificacion": "La sucesión concentra el riesgo: un IDD alto convierte al dueño en punto único de falla y la transición puede destruir valor."
+    },
+    {
+      "id": "q24",
+      "pregunta": "Formar una “segunda línea” profesional busca:",
+      "opciones": [
+        "Aumentar la dependencia del dueño.",
+        "Reducir el IDD y hacer la empresa más transferible y valiosa.",
+        "Bajar las ventas.",
+        "Eliminar el directorio."
+      ],
+      "correcta": 1,
+      "justificacion": "Una segunda línea capaz reduce la dependencia del dueño (baja el IDD), mejorando transferibilidad y valor."
+    },
+    {
+      "id": "q25",
+      "pregunta": "El protocolo familiar sirve para:",
+      "opciones": [
+        "Confundir los roles.",
+        "Separar con reglas explícitas los roles de familia, propiedad y empresa.",
+        "Eliminar a la familia.",
+        "Evadir impuestos."
+      ],
+      "correcta": 1,
+      "justificacion": "El protocolo ordena la relación entre los tres círculos (Tagiuri & Davis) con reglas, previniendo conflictos."
+    },
+    {
+      "id": "q26",
+      "pregunta": "El “payout” es:",
+      "opciones": [
+        "La tasa de reinversión.",
+        "La proporción del resultado (o FCFE) que se distribuye.",
+        "El WACC.",
+        "La deuda."
+      ],
+      "correcta": 1,
+      "justificacion": "El payout es la fracción que se reparte; su complemento (1 − payout) es la reinversión."
+    },
+    {
+      "id": "q27",
+      "pregunta": "El TSR (Total Shareholder Return) combina:",
+      "opciones": [
+        "Solo el dividendo.",
+        "El rendimiento por dividendos y el crecimiento del valor.",
+        "Solo el crecimiento.",
+        "Ventas y costos."
+      ],
+      "correcta": 1,
+      "justificacion": "El TSR suma lo que el dueño recibe (dividendos) y lo que la empresa se aprecia: el objetivo taxativo del programa."
+    },
+    {
+      "id": "q28",
+      "pregunta": "El conflicto típico de la empresa familiar nace de que un mismo individuo:",
+      "opciones": [
+        "Es solo empleado.",
+        "Es a la vez dueño, familiar y gerente, con intereses no siempre alineados.",
+        "No participa.",
+        "Es un tercero."
+      ],
+      "correcta": 1,
+      "justificacion": "La superposición de roles (familia, propiedad, gestión) genera intereses en tensión; el gobierno los separa con reglas."
+    },
+    {
+      "id": "q29",
+      "pregunta": "Recortar el dividendo suele leerse por el mercado como:",
+      "opciones": [
+        "Señal de confianza.",
+        "Señal de problemas (señalización negativa).",
+        "Un dato neutro.",
+        "Un aumento de ventas."
+      ],
+      "correcta": 1,
+      "justificacion": "Por el efecto señalización, un recorte comunica dificultades; subirlo comunica confianza en los flujos futuros."
+    },
+    {
+      "id": "q30",
+      "pregunta": "El objetivo último de la empresa, según el marco del programa, es:",
+      "opciones": [
+        "Maximizar utilidades contables.",
+        "Maximizar el valor de largo plazo para los dueños (TSR).",
+        "Maximizar el tamaño.",
+        "Maximizar las ventas."
+      ],
+      "correcta": 1,
+      "justificacion": "Todo se juzga por el valor de largo plazo para los dueños; crecimiento, market share o eficiencia valen solo en cuanto sirven a ese fin (Rappaport)."
+    }
+  ]
+}

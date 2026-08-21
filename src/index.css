@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  @apply bg-ink-900 text-slate-200 font-sans antialiased;
+}
+
+/* Titulares en Spectral (identidad JPR) */
+h1,
+h2,
+h3 {
+  @apply font-serif;
+  letter-spacing: -0.02em;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0c0f;
+}
+::-webkit-scrollbar-thumb {
+  background: #33373d;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #1e8f6b;
+}
+
+@layer components {
+  .card {
+    @apply rounded-2xl border border-ink-700/70 bg-ink-900/70 shadow-card backdrop-blur;
+  }
+  .card-hover {
+    @apply transition-all duration-300 hover:border-gold-400/40 hover:shadow-glow;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition-all duration-200 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-gold {
+    @apply btn bg-gradient-to-b from-gold-300 to-gold-500 text-ink-950 hover:shadow-glow;
+  }
+  .btn-ghost {
+    @apply btn border border-ink-600 bg-ink-800/60 text-slate-200 hover:border-gold-400/40 hover:text-gold-200;
+  }
+  .btn-danger {
+    @apply btn border border-danger-500/40 bg-danger-500/10 text-danger-400 hover:bg-danger-500/20;
+  }
+  .input {
+    @apply w-full rounded-xl border border-ink-600 bg-ink-950/60 px-3.5 py-2.5 text-sm text-slate-100 outline-none transition focus:border-gold-400/60 focus:ring-2 focus:ring-gold-400/20 placeholder:text-slate-500;
+  }
+  .label {
+    @apply mb-1.5 block text-xs font-semibold uppercase tracking-wider text-slate-400;
+  }
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-ink-600 bg-ink-800/60 px-3 py-1 text-xs font-medium text-slate-300;
+  }
+  .gradient-text {
+    @apply bg-gradient-to-r from-gold-200 via-gold-400 to-gold-300 bg-clip-text text-transparent;
+  }
+  .prose-fin {
+    @apply leading-relaxed text-slate-300;
+  }
+  .prose-fin h3 {
+    @apply mt-7 mb-2 text-lg font-bold text-gold-200;
+  }
+  .prose-fin h4 {
+    @apply mt-5 mb-1.5 text-base font-bold text-slate-100;
+  }
+  .prose-fin p {
+    @apply mb-3;
+  }
+  .prose-fin ul {
+    @apply mb-4 ml-5 list-disc space-y-1.5 marker:text-gold-400;
+  }
+  .prose-fin strong {
+    @apply font-semibold text-slate-100;
+  }
+  .prose-fin blockquote {
+    @apply my-4 border-l-2 border-gold-400/60 bg-ink-800/40 px-4 py-3 text-slate-300 italic;
+  }
+}
+
+.bg-radial-spotlight {
+  background:
+    radial-gradient(900px 500px at 50% -10%, rgba(30, 143, 107, 0.14), transparent 60%),
+    radial-gradient(700px 500px at 100% 0%, rgba(46, 190, 140, 0.08), transparent 55%);
+}

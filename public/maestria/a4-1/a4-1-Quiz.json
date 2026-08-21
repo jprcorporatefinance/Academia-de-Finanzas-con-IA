@@ -1,0 +1,366 @@
+{
+  "cod": "4.1",
+  "nombre": "Valuación de Empresas de Capital Cerrado: Flujo de Fondos Descontado, APV y Descuentos de Iliquidez",
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "El valor de una empresa por DCF se compone de:",
+      "opciones": [
+        "Solo el valor terminal.",
+        "El valor del horizonte explícito más el valor terminal descontado.",
+        "Solo los flujos del primer año.",
+        "El patrimonio contable."
+      ],
+      "correcta": 1,
+      "justificacion": "EV = VP de los FCFF del horizonte + VP del valor terminal. No es solo el terminal, ni un año, ni el patrimonio contable."
+    },
+    {
+      "id": "q2",
+      "pregunta": "El valor terminal por el modelo de Gordon es:",
+      "opciones": [
+        "FCFF_{n+1} × (WACC − g).",
+        "FCFF_{n+1} ÷ (WACC − g).",
+        "FCFF_{n+1} × g.",
+        "FCFF_{n+1} ÷ WACC."
+      ],
+      "correcta": 1,
+      "justificacion": "VT = FCFF_{n+1}/(WACC−g), el valor de una perpetuidad creciente. Multiplicar o usar solo WACC da un valor incorrecto."
+    },
+    {
+      "id": "q3",
+      "pregunta": "El crecimiento perpetuo g del valor terminal:",
+      "opciones": [
+        "Puede ser cualquier número.",
+        "Nunca debe superar el crecimiento de largo plazo de la economía.",
+        "Debe ser igual al WACC.",
+        "Es siempre 10%."
+      ],
+      "correcta": 1,
+      "justificacion": "Una empresa no puede crecer para siempre más rápido que la economía (sería más grande que el mundo). g = WACC daría valor infinito; no hay un g universal."
+    },
+    {
+      "id": "q4",
+      "pregunta": "El FCFF que se descuenta en el DCF:",
+      "opciones": [
+        "Es el flujo de caja contable (EFE).",
+        "Se construye desde el NOPAT: + amortizaciones − inversión en capital de trabajo y activo fijo.",
+        "Es el resultado neto.",
+        "Es el EBITDA."
+      ],
+      "correcta": 1,
+      "justificacion": "El FCFF es un flujo económico derivado del NOPAT, distinto del EFE contable, del resultado neto y del EBITDA. Confundirlos arruina la valuación."
+    },
+    {
+      "id": "q5",
+      "pregunta": "¿Cuándo es preferible el APV al WACC?",
+      "opciones": [
+        "Nunca.",
+        "Cuando la estructura de capital cambia (el WACC constante induce error).",
+        "Solo para empresas que cotizan.",
+        "Cuando no hay deuda."
+      ],
+      "correcta": 1,
+      "justificacion": "El WACC supone estructura constante; si cambia (desapalancamiento, LBO), el APV es más correcto y transparente. Sin deuda, ambos coinciden."
+    },
+    {
+      "id": "q6",
+      "pregunta": "El APV descompone el valor en:",
+      "opciones": [
+        "Un solo número.",
+        "Valor sin deuda (V_u) + VP del escudo fiscal − VP de dificultades financieras.",
+        "Solo el escudo fiscal.",
+        "Deuda + patrimonio."
+      ],
+      "correcta": 1,
+      "justificacion": "El APV separa el valor del negocio no apalancado, el aporte del escudo fiscal y el costo del riesgo de quiebra. Es más transparente que el WACC."
+    },
+    {
+      "id": "q7",
+      "pregunta": "El DLOC (descuento por falta de control) refleja que:",
+      "opciones": [
+        "La empresa no tiene control interno.",
+        "Una participación minoritaria no decide dividendos, sueldos ni estrategia.",
+        "No hay auditoría.",
+        "La empresa es pública."
+      ],
+      "correcta": 1,
+      "justificacion": "El DLOC castiga la ausencia de poder de decisión del minoritario. No se refiere al control interno ni a la auditoría, y aplica a empresas cerradas."
+    },
+    {
+      "id": "q8",
+      "pregunta": "El DLOM (descuento por falta de liquidez) refleja que:",
+      "opciones": [
+        "La empresa no tiene caja.",
+        "No hay un mercado para vender la participación rápido y sin castigo.",
+        "La empresa es ilíquida contablemente.",
+        "No paga dividendos."
+      ],
+      "correcta": 1,
+      "justificacion": "El DLOM castiga la imposibilidad de vender la participación con facilidad (no cotiza). No es falta de caja ni de dividendos."
+    },
+    {
+      "id": "q9",
+      "pregunta": "Los descuentos DLOC y DLOM se aplican:",
+      "opciones": [
+        "Sumados (DLOC + DLOM).",
+        "En cascada multiplicativa: (1−DLOC) × (1−DLOM).",
+        "Restando el mayor.",
+        "Promediados."
+      ],
+      "correcta": 1,
+      "justificacion": "Son jerárquicos y multiplicativos; sumarlos sobreestima el descuento. 15% y 25% dan 36,25%, no 40%."
+    },
+    {
+      "id": "q10",
+      "pregunta": "Un DLOC de 15% y un DLOM de 25% producen un descuento efectivo de:",
+      "opciones": [
+        "40%.",
+        "36,25%.",
+        "10%.",
+        "20%."
+      ],
+      "correcta": 1,
+      "justificacion": "1 − (0,85 × 0,75) = 1 − 0,6375 = 36,25%. La suma (40%) es el error típico."
+    },
+    {
+      "id": "q11",
+      "pregunta": "En una valuación típica, el valor terminal suele representar:",
+      "opciones": [
+        "Una parte menor del valor.",
+        "Con frecuencia la mayor parte del valor de la firma.",
+        "Exactamente la mitad.",
+        "Cero."
+      ],
+      "correcta": 1,
+      "justificacion": "El terminal suele ser la mayor porción del EV, por eso su g y sus supuestos son tan sensibles y hay que fundamentarlos."
+    },
+    {
+      "id": "q12",
+      "pregunta": "El IDD (Índice de Dependencia del Dueño) impacta la valuación porque:",
+      "opciones": [
+        "No tiene efecto.",
+        "Agrava los descuentos: si la empresa no funciona sin su dueño, es menos transferible.",
+        "Aumenta el valor.",
+        "Solo afecta el WACC."
+      ],
+      "correcta": 1,
+      "justificacion": "Un IDD alto hace la empresa menos transferible, agravando DLOC y DLOM (y el Ke). No aumenta el valor ni es neutro."
+    },
+    {
+      "id": "q13",
+      "pregunta": "Del EV al valor del patrimonio (equity) se pasa:",
+      "opciones": [
+        "Sumando la deuda.",
+        "Restando la deuda neta.",
+        "Multiplicando por el WACC.",
+        "Sin ajuste."
+      ],
+      "correcta": 1,
+      "justificacion": "Equity = EV − deuda neta: el valor que queda para los dueños tras los acreedores. Sumar deuda o no ajustar es incorrecto."
+    },
+    {
+      "id": "q14",
+      "pregunta": "Frente a los múltiplos, el DCF tiene la ventaja de:",
+      "opciones": [
+        "Ser más rápido.",
+        "Obligar a explicitar los supuestos, en vez de importar los del comparable.",
+        "No necesitar datos.",
+        "Dar siempre un valor mayor."
+      ],
+      "correcta": 1,
+      "justificacion": "El DCF hace transparentes los supuestos propios; el múltiplo importa (y esconde) los del comparable. No es más rápido ni sesga el valor al alza."
+    },
+    {
+      "id": "q15",
+      "pregunta": "La valuación de una empresa cerrada debe presentarse como:",
+      "opciones": [
+        "Un número exacto.",
+        "Un rango razonable con probabilidades, fundamentando los descuentos.",
+        "Solo el valor terminal.",
+        "El patrimonio contable."
+      ],
+      "correcta": 1,
+      "justificacion": "Pratt: es un juicio informado por cálculos; se presenta un rango fundamentado (con la distribución de la 3.3), no una falsa precisión."
+    },
+    {
+      "id": "q16",
+      "pregunta": "El FCFF se construye, a partir del NOPAT, como:",
+      "opciones": [
+        "NOPAT − amortizaciones.",
+        "NOPAT + amortizaciones − ΔCapital de trabajo − CapEx.",
+        "NOPAT + intereses.",
+        "NOPAT × WACC."
+      ],
+      "correcta": 1,
+      "justificacion": "FCFF = NOPAT + amortizaciones − inversión en capital de trabajo − CapEx: el flujo libre para todos los proveedores de capital."
+    },
+    {
+      "id": "q17",
+      "pregunta": "En el APV, el valor sin deuda (V_u) se descuenta a:",
+      "opciones": [
+        "El WACC.",
+        "Ku, el costo del capital sin apalancamiento.",
+        "El Kd.",
+        "La inflación."
+      ],
+      "correcta": 1,
+      "justificacion": "V_u descuenta el FCFF al costo del capital no apalancado (Ku); luego se suman el escudo y se restan las dificultades."
+    },
+    {
+      "id": "q18",
+      "pregunta": "El valor presente del escudo fiscal, en el APV:",
+      "opciones": [
+        "Se resta.",
+        "Se suma (la deuda deducible agrega valor).",
+        "No se considera.",
+        "Es siempre cero."
+      ],
+      "correcta": 1,
+      "justificacion": "El escudo fiscal de la deuda suma valor en el APV; el riesgo de dificultades financieras es lo que resta."
+    },
+    {
+      "id": "q19",
+      "pregunta": "El valor presente de las dificultades financieras, en el APV:",
+      "opciones": [
+        "Suma valor.",
+        "Resta valor (costo esperado de la quiebra).",
+        "No existe.",
+        "Es el escudo fiscal."
+      ],
+      "correcta": 1,
+      "justificacion": "El riesgo de quiebra tiene un costo esperado que resta en el APV, contrapesando el beneficio del escudo fiscal."
+    },
+    {
+      "id": "q20",
+      "pregunta": "El descuento efectivo de un DLOC del 20% y un DLOM del 30% es:",
+      "opciones": [
+        "50%.",
+        "44%.",
+        "10%.",
+        "25%."
+      ],
+      "correcta": 1,
+      "justificacion": "1 − (0,80 × 0,70) = 1 − 0,56 = 44%. Sumarlos (50%) es el error típico; son multiplicativos."
+    },
+    {
+      "id": "q21",
+      "pregunta": "El valor de la firma (Enterprise Value) representa el valor para:",
+      "opciones": [
+        "Solo los accionistas.",
+        "Todos los proveedores de capital (deuda y patrimonio).",
+        "Solo los acreedores.",
+        "El fisco."
+      ],
+      "correcta": 1,
+      "justificacion": "El EV es el valor del negocio para deuda + patrimonio; restándole la deuda neta se llega al valor del equity."
+    },
+    {
+      "id": "q22",
+      "pregunta": "Valuar por múltiplos tiene el riesgo de:",
+      "opciones": [
+        "Ser demasiado transparente.",
+        "Importar los errores y supuestos del comparable.",
+        "No necesitar datos.",
+        "Dar siempre menos valor."
+      ],
+      "correcta": 1,
+      "justificacion": "El múltiplo traslada (y esconde) los supuestos del comparable; el DCF obliga a explicitar los propios."
+    },
+    {
+      "id": "q23",
+      "pregunta": "El valor terminal es muy sensible a:",
+      "opciones": [
+        "El color del modelo.",
+        "La tasa de crecimiento perpetuo (g) y el WACC.",
+        "La cantidad de hojas.",
+        "El nombre de la empresa."
+      ],
+      "correcta": 1,
+      "justificacion": "Pequeños cambios en g o WACC mueven mucho el valor terminal (y por ende el EV); por eso se fundamentan con cuidado."
+    },
+    {
+      "id": "q24",
+      "pregunta": "La deuda neta que se resta al EV es:",
+      "opciones": [
+        "Deuda + caja.",
+        "Deuda financiera − caja y equivalentes.",
+        "Solo la caja.",
+        "El patrimonio."
+      ],
+      "correcta": 1,
+      "justificacion": "Deuda neta = deuda financiera − caja/equivalentes; es lo que se resta al EV para obtener el equity."
+    },
+    {
+      "id": "q25",
+      "pregunta": "El horizonte explícito de la proyección debe extenderse hasta que:",
+      "opciones": [
+        "El primer año.",
+        "La empresa alcance un estado estable (crecimiento y márgenes normalizados).",
+        "Nunca termine.",
+        "Se agote la caja."
+      ],
+      "correcta": 1,
+      "justificacion": "El horizonte explícito llega hasta el estado estable; de ahí en más se usa el valor terminal."
+    },
+    {
+      "id": "q26",
+      "pregunta": "El APV es preferible al WACC cuando:",
+      "opciones": [
+        "La estructura de capital es constante.",
+        "La estructura de capital cambia en el tiempo.",
+        "No hay deuda.",
+        "Siempre."
+      ],
+      "correcta": 1,
+      "justificacion": "El WACC supone estructura constante; si cambia (desapalancamiento, LBO), el APV es más correcto y transparente."
+    },
+    {
+      "id": "q27",
+      "pregunta": "Un IDD (dependencia del dueño) alto, en la valuación:",
+      "opciones": [
+        "Sube el valor.",
+        "Agrava los descuentos por control e iliquidez (menos transferible).",
+        "No influye.",
+        "Baja el WACC."
+      ],
+      "correcta": 1,
+      "justificacion": "Si la empresa depende del dueño, es menos transferible: aumentan DLOC y DLOM (y el Ke). No sube el valor."
+    },
+    {
+      "id": "q28",
+      "pregunta": "En una valuación típica, el peso del valor terminal en el EV suele ser:",
+      "opciones": [
+        "Cercano a cero.",
+        "La mayor parte del valor.",
+        "Exactamente 10%.",
+        "Negativo."
+      ],
+      "correcta": 1,
+      "justificacion": "El terminal suele dominar el EV, por eso sus supuestos (g, margen de largo plazo) son tan críticos."
+    },
+    {
+      "id": "q29",
+      "pregunta": "La regla de que g no supere el crecimiento de la economía evita:",
+      "opciones": [
+        "Un valor terminal chico.",
+        "Que la empresa termine siendo, en el infinito, más grande que la economía.",
+        "Que haya FCFF.",
+        "El escudo fiscal."
+      ],
+      "correcta": 1,
+      "justificacion": "Un g mayor al de la economía implicaría que la empresa la supera en tamaño en el largo plazo: imposible. Por eso g se acota."
+    },
+    {
+      "id": "q30",
+      "pregunta": "Descontar el EFE contable como si fuera el FCFF:",
+      "opciones": [
+        "Es correcto.",
+        "Es un error: hay que construir el puente entre ambos.",
+        "Da el mismo valor.",
+        "Solo aplica a empresas cotizantes."
+      ],
+      "correcta": 1,
+      "justificacion": "El EFE es histórico y contable; el FCFF es económico y proyectado. Confundirlos (sin el puente de la 1.1) arruina la valuación."
+    }
+  ]
+}
