@@ -1,0 +1,551 @@
+{
+  "cod": "1.4",
+  "nombre": "Marco de Generación de Valor: NOPAT, Capital Invertido, ROIC y EVA",
+  "sections": [
+    {
+      "title": "La ecuación maestra",
+      "intro": "Todo el programa cuelga de una sola cadena. Cualquier palanca de gestión mueve uno de tres números: eleva el NOPAT, reduce el capital invertido o reduce el costo del capital.",
+      "blocks": [
+        {
+          "t": "chain",
+          "title": "La cadena de valor",
+          "nodes": [
+            "NOPAT ÷ Capital = ROIC",
+            "ROIC − WACC = spread",
+            "spread × Capital = EVA",
+            "Σ EVA descontados = MVA"
+          ],
+          "caption": "El ROIC mide la eficiencia; el spread, si crea o destruye valor; el EVA, cuánto valor en pesos; el MVA, el valor acumulado."
+        },
+        {
+          "t": "formula",
+          "name": "El EVA por dos caminos equivalentes",
+          "expr": "EVA = (ROIC − WACC) × Capital = NOPAT − WACC × Capital",
+          "note": "Por diferencial o por resultado residual: dan lo mismo. Es la prueba de coherencia del marco."
+        },
+        {
+          "t": "idea",
+          "md": "Un CEO no necesita memorizar cien ratios: necesita entender que **toda decisión termina moviendo el NOPAT, el capital o el WACC**. Ese es el mapa mental que ordena la gestión financiera."
+        }
+      ]
+    },
+    {
+      "title": "NOPAT y capital invertido",
+      "intro": "Los dos insumos del ROIC, construidos desde el estado analítico de la asignatura 1.1.",
+      "blocks": [
+        {
+          "t": "formula",
+          "name": "NOPAT",
+          "expr": "NOPAT = EBIT × (1 − t efectiva)",
+          "where": "t efectiva ≠ t nominal · ajustes por partidas no operativas, arrendamientos y gastos con carácter de inversión",
+          "note": "El resultado que la operación genera para todos los proveedores de capital, con independencia de cómo se financió."
+        },
+        {
+          "t": "p",
+          "md": "El **capital invertido** admite dos enfoques que deben reconciliar: el **operativo** (capital de trabajo operativo + activos fijos a valor de mercado + otros activos operativos) y el **financiero** (deuda financiera + patrimonio − caja excedente − activos no operativos). Que ambos den lo mismo es obligatorio; si no cierran, hay un error de clasificación."
+        },
+        {
+          "t": "warn",
+          "md": "Usar **capital de cierre** en vez de **capital promedio** infla o desinfla el ROIC según el momento de las inversiones. El estándar es el capital promedio del período."
+        }
+      ]
+    },
+    {
+      "title": "ROIC: el indicador maestro",
+      "intro": "Por qué el ROIC supera al ROE y al ROA como medida de eficiencia del capital.",
+      "blocks": [
+        {
+          "t": "formula",
+          "name": "ROIC",
+          "expr": "ROIC = NOPAT ÷ Capital invertido promedio",
+          "note": "Aísla la operación del financiamiento: mide qué tan bien la empresa convierte capital en resultado operativo."
+        },
+        {
+          "t": "table",
+          "title": "ROIC frente a ROE y ROA",
+          "headers": [
+            "Indicador",
+            "Qué mezcla",
+            "Problema"
+          ],
+          "firstColLeft": true,
+          "rows": [
+            [
+              "ROE",
+              "Operación + financiamiento + fiscalidad",
+              "El apalancamiento lo infla sin crear valor"
+            ],
+            [
+              "ROA",
+              "Todos los activos, operativos o no",
+              "Contamina con activos no operativos y caja"
+            ],
+            [
+              "ROIC",
+              "Solo capital operativo y NOPAT",
+              "El más limpio: aísla la eficiencia real"
+            ]
+          ]
+        },
+        {
+          "t": "warn",
+          "md": "Debilidades del ROIC: se distorsiona por **antigüedad de activos** (planta amortizada, ver 1.1), **inflación no corregida** e **intangibles no capitalizados**. Por eso el ROIC se calcula sobre el estado analítico, no sobre el contable."
+        },
+        {
+          "t": "quote",
+          "author": "Tim Koller",
+          "credential": "McKinsey & Company — Valuation",
+          "md": "El valor se crea cuando las empresas invierten capital a retornos que superan su costo. El ROIC y el crecimiento son los dos motores; de ellos se deriva todo lo demás."
+        }
+      ]
+    },
+    {
+      "title": "EVA, EVA Margin y EVA Momentum",
+      "intro": "Del retorno porcentual al valor en pesos, y de éste a la métrica de mejora que premia la gestión.",
+      "blocks": [
+        {
+          "t": "ul",
+          "items": [
+            "**EVA** = (ROIC − WACC) × Capital. El valor creado en el período, en unidades monetarias. Convierte un diferencial porcentual en pesos.",
+            "**EVA Margin** = EVA ÷ Ventas. Eficiencia de creación de valor **comparable entre empresas** de distinto tamaño.",
+            "**EVA Momentum** = Δ EVA ÷ Ventas del período anterior. Métrica de **mejora**: premia el avance, no la herencia. Superior al nivel absoluto para evaluar gestión."
+          ]
+        },
+        {
+          "t": "quote",
+          "author": "G. Bennett Stewart III",
+          "credential": "Stern Stewart & Co. — The Quest for Value",
+          "md": "El EVA es el único indicador que, al maximizarse período a período, maximiza el valor para el accionista. Todo lo demás son aproximaciones o distracciones."
+        },
+        {
+          "t": "idea",
+          "md": "EVA Momentum resuelve un problema político real: un gerente que hereda un EVA alto puede lucir bien sin hacer nada, y uno que hereda un EVA negativo puede crear muchísimo valor y aun así mostrar EVA negativo. La **variación** es más justa que el **nivel**."
+        }
+      ]
+    },
+    {
+      "title": "CFROI, GMROI y la anatomía obligatoria",
+      "intro": "Indicadores complementarios y la disciplina de exigir la anatomía completa de cada número.",
+      "blocks": [
+        {
+          "t": "ul",
+          "items": [
+            "**CFROI** (Cash Flow Return on Investment): retorno sobre base caja e inversión bruta ajustada por inflación. Corrige el sesgo de antigüedad de los activos, a costo de mayor complejidad.",
+            "**GMROI** (Gross Margin Return on Investment): margen bruto sobre inversión en inventario. Clave en empresas comerciales y distribuidoras."
+          ]
+        },
+        {
+          "t": "steps",
+          "title": "Anatomía obligatoria de cada indicador",
+          "items": [
+            {
+              "k": "Definición",
+              "d": "Qué mide, en una frase."
+            },
+            {
+              "k": "Fórmula con trazabilidad",
+              "d": "De dónde sale cada término."
+            },
+            {
+              "k": "Valor que agrega",
+              "d": "Qué decisión permite tomar y cuáles son sus umbrales."
+            },
+            {
+              "k": "Dónde miente",
+              "d": "Sus debilidades y las condiciones en que engaña."
+            },
+            {
+              "k": "Flujograma",
+              "d": "La cadena causa-efecto que lo conecta con el valor."
+            }
+          ]
+        },
+        {
+          "t": "quote",
+          "author": "Alfred Rappaport",
+          "credential": "Creating Shareholder Value",
+          "md": "Las utilidades contables son una opinión; el flujo de caja descontado es un hecho. Los indicadores de valor existen para acercar la gestión a lo segundo."
+        }
+      ]
+    },
+    {
+      "title": "La construcción del NOPAT, línea por línea",
+      "intro": "El NOPAT parece simple —EBIT por (1 − t)— pero su construcción rigurosa exige una serie de ajustes que la mayoría omite, y cada omisión distorsiona el ROIC.",
+      "blocks": [
+        {
+          "t": "steps",
+          "title": "Del EBIT contable al NOPAT económico",
+          "items": [
+            {
+              "k": "Partir del EBIT depurado",
+              "d": "El resultado operativo del estado analítico (asignatura 1.1), ya normalizado y reexpresado."
+            },
+            {
+              "k": "Ajustar por partidas no operativas",
+              "d": "Sacar del EBIT los resultados que no vienen de la operación (resultados por tenencia no operativos, resultados de inversiones financieras)."
+            },
+            {
+              "k": "Capitalizar arrendamientos operativos",
+              "d": "Sumar al EBIT el componente de interés implícito del alquiler capitalizado, para comparar empresas que compran vs. alquilan."
+            },
+            {
+              "k": "Tratar los gastos con carácter de inversión",
+              "d": "I+D, publicidad institucional y capacitación que son inversión (no gasto) se ajustan para no castigar el resultado del período."
+            },
+            {
+              "k": "Aplicar la tasa efectiva",
+              "d": "Multiplicar por (1 − t efectiva), la que la empresa realmente paga, no la nominal."
+            }
+          ]
+        },
+        {
+          "t": "formula",
+          "name": "La equivalencia que debe cerrar",
+          "expr": "EVA = (ROIC − WACC) × Capital = NOPAT − WACC × Capital",
+          "where": "Ambos caminos dan el mismo número: es la prueba de coherencia del marco.",
+          "note": "Si el EVA por diferencial y por resultado residual no coinciden, hay un error de construcción en el NOPAT o en el capital."
+        },
+        {
+          "t": "warn",
+          "md": "El error más común: calcular el NOPAT con la tasa nominal en vez de la efectiva. La empresa con quebrantos acumulados, beneficios promocionales o diferencias temporarias tiene una tasa efectiva muy distinta de la nominal, y usar la equivocada mueve el NOPAT y todo el árbol de valor."
+        }
+      ]
+    },
+    {
+      "title": "ROIC frente a ROE y ROA: la anatomía de por qué gana",
+      "intro": "El ROIC es el indicador maestro de eficiencia del capital, pero solo se entiende su superioridad viendo exactamente qué contamina a los otros dos.",
+      "blocks": [
+        {
+          "t": "p",
+          "md": "El **ROE** (resultado neto sobre patrimonio) mezcla tres cosas: la eficiencia operativa, el efecto del apalancamiento y la fiscalidad. Una empresa puede subir su ROE simplemente tomando más deuda —sin crear un centavo de valor operativo—. El **ROA** (sobre activos totales) contamina con activos no operativos y con la caja excedente. El **ROIC** aísla la operación: solo capital operativo y solo NOPAT."
+        },
+        {
+          "t": "p",
+          "md": "Pero el ROIC tampoco es infalible, y el analista debe conocer **dónde miente**: se distorsiona por la **antigüedad de los activos** (una planta amortizada infla el retorno, asignatura 1.1), por la **inflación no corregida** y por los **intangibles no capitalizados** (una empresa que invirtió años en su marca tiene un capital invertido subvaluado y un ROIC artificialmente alto). Por eso el ROIC se calcula sobre el estado analítico depurado, nunca sobre el contable."
+        },
+        {
+          "t": "quote",
+          "author": "Michael Mauboussin",
+          "credential": "Counterpoint Global — sobre ROIC",
+          "md": "El ROIC y su persistencia en el tiempo son la mejor síntesis de la calidad de un negocio. Una empresa con ROIC alto y sostenido tiene una ventaja competitiva real; una con ROIC que revierte a la media, no."
+        }
+      ]
+    },
+    {
+      "title": "La familia EVA: nivel, margen y momentum",
+      "intro": "El EVA no es un solo número, sino una familia de métricas que responden preguntas distintas de la gestión.",
+      "blocks": [
+        {
+          "t": "table",
+          "title": "Cuándo usar cada métrica de la familia EVA",
+          "headers": [
+            "Métrica",
+            "Qué responde",
+            "Cuándo usarla"
+          ],
+          "firstColLeft": true,
+          "rows": [
+            [
+              "EVA (nivel)",
+              "¿Cuánto valor creé este período, en pesos?",
+              "Medir la magnitud absoluta"
+            ],
+            [
+              "EVA Margin (EVA/Ventas)",
+              "¿Qué tan eficiente soy creando valor?",
+              "Comparar empresas de distinto tamaño"
+            ],
+            [
+              "EVA Momentum (ΔEVA/Ventas ant.)",
+              "¿Mejoré respecto del período anterior?",
+              "Evaluar la gestión, no la herencia"
+            ],
+            [
+              "MVA (Σ EVA descontados)",
+              "¿Cuánto valor acumulado creé?",
+              "Valuación y visión de largo plazo"
+            ]
+          ],
+          "caption": "El EVA Momentum resuelve un problema político real: un gerente que hereda un EVA alto luce bien sin hacer nada, y uno que hereda un EVA negativo puede crear muchísimo valor y aún mostrar EVA negativo. La variación es más justa que el nivel."
+        },
+        {
+          "t": "p",
+          "md": "Complementan la familia el **CFROI** (retorno sobre base caja e inversión bruta ajustada por inflación, que corrige el sesgo de antigüedad a costa de complejidad) y el **GMROI** (margen bruto sobre inversión en inventario), clave en empresas comerciales donde el inventario es el activo central."
+        },
+        {
+          "t": "quote",
+          "author": "G. Bennett Stewart III",
+          "credential": "The EVA Momentum",
+          "md": "El EVA Momentum es la única métrica de desempeño donde \"más es siempre mejor\" y \"cero es realmente cero\": mide la creación de valor incremental sobre las ventas, independiente del tamaño y de la herencia."
+        }
+      ]
+    },
+    {
+      "title": "El capital invertido: dos caminos que deben cerrar",
+      "intro": "El capital invertido admite dos enfoques, y que ambos den el mismo número no es una coincidencia: es la prueba de que la clasificación es correcta.",
+      "blocks": [
+        {
+          "t": "table",
+          "title": "Los dos enfoques del capital invertido",
+          "headers": [
+            "Enfoque",
+            "Se arma sumando",
+            "Óptica"
+          ],
+          "firstColLeft": true,
+          "rows": [
+            [
+              "Operativo",
+              "Capital de trabajo + activos fijos a mercado + otros operativos",
+              "Cómo se usa el capital"
+            ],
+            [
+              "Financiero",
+              "Deuda financiera + patrimonio − caja excedente − no operativos",
+              "De dónde viene el capital"
+            ]
+          ],
+          "caption": "Ambos deben reconciliar. Si el operativo y el financiero difieren, hay una partida mal clasificada (operativa vs. no operativa, deuda financiera vs. pasivo operativo)."
+        },
+        {
+          "t": "p",
+          "md": "Decisiones finas que cambian el número: la **caja operativa mínima** integra el capital invertido (es necesaria para operar); el **excedente de caja** no (es un activo financiero). Los **activos no operativos** —el inmueble de uso personal, una inversión financiera— se excluyen del capital invertido y se valúan por separado. Y se usa el **capital promedio** del período, no el de cierre, para no distorsionar el ROIC según el momento de las inversiones."
+        },
+        {
+          "t": "warn",
+          "md": "El error que infla el ROIC: dejar la caja excedente o los activos no operativos dentro del capital invertido cuando conviene, y sacarlos cuando no. La clasificación se define con criterio y se mantiene consistente; manipularla es maquillar el retorno."
+        }
+      ]
+    },
+    {
+      "title": "De EVA a MVA: el valor acumulado",
+      "intro": "El EVA mide el valor creado en un período; el MVA, el valor acumulado a lo largo del tiempo. Juntos cierran la ecuación maestra.",
+      "blocks": [
+        {
+          "t": "formula",
+          "name": "La ecuación maestra completa",
+          "expr": "NOPAT/Capital = ROIC · ROIC − WACC = spread · spread × Capital = EVA · Σ EVA descontados = MVA",
+          "note": "De la eficiencia (ROIC) al valor creado por período (EVA) al valor acumulado (MVA): una sola cadena."
+        },
+        {
+          "t": "p",
+          "md": "El **MVA (Market Value Added)** es el valor presente de la corriente de EVA futuros: cuánto valor, en total, ha creado (o destruido) la empresa por encima del capital aportado. Una empresa con MVA positivo vale más que el capital que se le confió; una con MVA negativo, menos. Es la síntesis última de si el negocio, a lo largo de su vida, creó valor."
+        },
+        {
+          "t": "idea",
+          "md": "La conexión con la valuación (asignatura 4.1): el valor de la firma es el capital invertido más el MVA (el valor presente de los EVA futuros). Por eso proyectar el EVA es equivalente a valuar la empresa —y por eso una empresa con spread persistentemente positivo vale mucho más que su capital contable—."
+        },
+        {
+          "t": "quote",
+          "author": "Tim Koller",
+          "credential": "McKinsey — Valuation",
+          "md": "El valor de una empresa es el capital que invirtió más el valor presente de los retornos que espera generar por encima de su costo del capital. Todo lo demás —múltiplos, comparables, reglas del pulgar— son atajos hacia esa verdad."
+        }
+      ]
+    },
+    {
+      "title": "La anatomía obligatoria de cada indicador",
+      "intro": "La regla pedagógica innegociable del programa: de cada número se exige su anatomía completa. Un ratio sin interpretación es ruido; una fórmula sin trazabilidad es un acto de fe.",
+      "blocks": [
+        {
+          "t": "steps",
+          "title": "Los cinco componentes de la anatomía",
+          "items": [
+            {
+              "k": "Definición",
+              "d": "Qué mide el indicador, en una frase clara."
+            },
+            {
+              "k": "Fórmula con trazabilidad",
+              "d": "La fórmula y, sobre todo, de dónde sale cada término."
+            },
+            {
+              "k": "Valor que agrega",
+              "d": "Qué decisión permite tomar y cuáles son sus umbrales."
+            },
+            {
+              "k": "Dónde miente",
+              "d": "Sus debilidades y las condiciones en que engaña —la parte que casi nadie enseña—."
+            },
+            {
+              "k": "Flujograma",
+              "d": "La cadena causa-efecto que lo conecta con el valor."
+            }
+          ]
+        },
+        {
+          "t": "idea",
+          "md": "El componente \"dónde miente\" es el sello del programa. El ROIC miente con activos amortizados; el ROE, con apalancamiento; el EBITDA, ignorando la inversión de reposición; la TIR, con flujos no convencionales. Un egresado que conoce las debilidades de cada indicador no se deja engañar por ninguno —ni engaña con ninguno—."
+        },
+        {
+          "t": "quote",
+          "author": "Bartley Madden",
+          "credential": "CFROI Valuation",
+          "md": "Ningún indicador es completo por sí solo. La disciplina está en conocer exactamente qué mide cada uno, qué omite, y en qué condiciones su señal se vuelve ruido. Esa conciencia de los límites es el verdadero conocimiento financiero."
+        }
+      ]
+    }
+  ],
+  "expertos": [
+    {
+      "author": "Tim Koller",
+      "credential": "McKinsey — Valuation (texto nuclear)",
+      "md": "ROIC y crecimiento son los dos generadores de valor. Crecer solo crea valor si el retorno del capital nuevo supera su costo; de lo contrario, crecer destruye."
+    },
+    {
+      "author": "G. Bennett Stewart III",
+      "credential": "Stern Stewart & Co.",
+      "md": "El costo del capital no es opcional: es el rendimiento mínimo que los inversores podrían obtener en otra parte con el mismo riesgo. El EVA lo cobra explícitamente."
+    },
+    {
+      "author": "Bartley Madden",
+      "credential": "CFROI Valuation",
+      "md": "Los activos viejos, medidos a costo histórico, inflan artificialmente el retorno. El CFROI ajusta por inflación e inversión bruta para revelar el retorno económico real."
+    }
+  ],
+  "caso": {
+    "titulo": "El tablero de generación de valor",
+    "empresa": "Maderas del Litoral S.A. — ¿crea o destruye valor?",
+    "contexto": "Con el estado analítico ya depurado (asignatura 1.1), el directorio quiere una respuesta directa: ¿la empresa crea o destruye valor, y cuánto?\n\nEl consultor construye el tablero completo —NOPAT, capital invertido, ROIC, spread, EVA, EVA Margin y EVA Momentum— y lo enfrenta al costo del capital (WACC ≈ 20 %, documentado en 3.1). El resultado es incómodo: la empresa apenas crea valor. El ROIC normalizado (21,3 %) supera al WACC por un margen fino, y el EVA es positivo pero pequeño.\n\nLa pregunta se vuelve estratégica: ¿qué palanca —más NOPAT, menos capital o menor WACC— mueve más el valor?",
+    "datos": [
+      {
+        "t": "table",
+        "title": "Datos del tablero (miles de $)",
+        "headers": [
+          "Concepto",
+          "Valor"
+        ],
+        "firstColLeft": true,
+        "rows": [
+          [
+            "EBIT normalizado",
+            "3.850"
+          ],
+          [
+            "Tasa impositiva efectiva",
+            "35%"
+          ],
+          [
+            "Capital invertido operativo",
+            "11.770"
+          ],
+          [
+            "WACC",
+            "20,0%"
+          ],
+          [
+            "Ventas",
+            "42.000"
+          ],
+          [
+            "EVA del período anterior",
+            "90"
+          ],
+          [
+            "Ventas del período anterior",
+            "38.000"
+          ]
+        ]
+      }
+    ],
+    "consigna": [
+      "¿Cuál es el ROIC, el spread y el EVA de Maderas del Litoral?",
+      "¿Cuánto valen el EVA Margin y el EVA Momentum, y qué dicen sobre la gestión?",
+      "¿Qué palanca mueve más el EVA: +5 % de NOPAT, −10 % de capital o −1 pp de WACC?",
+      "¿La empresa crea o destruye valor, y qué tan robusta es esa conclusión al costo del capital?"
+    ],
+    "metodologia": [
+      {
+        "k": "Construir NOPAT y capital",
+        "d": "Desde el estado analítico depurado; verificar que capital operativo y financiero reconcilien."
+      },
+      {
+        "k": "Calcular ROIC y spread",
+        "d": "ROIC = NOPAT/capital; spread = ROIC − WACC."
+      },
+      {
+        "k": "Medir el valor",
+        "d": "EVA en nivel, EVA Margin (comparabilidad) y EVA Momentum (mejora)."
+      },
+      {
+        "k": "Simular las tres palancas",
+        "d": "Recalcular el EVA moviendo NOPAT, capital y WACC para priorizar por impacto."
+      },
+      {
+        "k": "Concluir",
+        "d": "Pronunciarse sobre creación de valor y sensibilidad al WACC."
+      }
+    ]
+  },
+  "ejercicio": {
+    "titulo": "EVA de una empresa comercial",
+    "enunciado": "La comercializadora **Sur Insumos** presenta los siguientes datos de gestión ya depurados. El directorio quiere saber si crea o destruye valor.",
+    "datos": [
+      {
+        "t": "table",
+        "title": "Datos (miles de $)",
+        "headers": [
+          "Concepto",
+          "Valor"
+        ],
+        "firstColLeft": true,
+        "rows": [
+          [
+            "EBIT",
+            "1.800"
+          ],
+          [
+            "Tasa impositiva efectiva",
+            "30%"
+          ],
+          [
+            "Capital invertido",
+            "9.000"
+          ],
+          [
+            "WACC",
+            "16%"
+          ]
+        ]
+      }
+    ],
+    "preguntas": [
+      "¿Cuál es el NOPAT y el ROIC?",
+      "¿Cuál es el spread y el EVA?",
+      "¿Crea o destruye valor?"
+    ],
+    "solucion": [
+      {
+        "t": "formula",
+        "name": "NOPAT",
+        "expr": "NOPAT = 1.800 × (1 − 0,30) = 1.260",
+        "note": "Resultado operativo después de impuestos."
+      },
+      {
+        "t": "formula",
+        "name": "ROIC y spread",
+        "expr": "ROIC = 1.260 ÷ 9.000 = 14,0 %   ·   spread = 14,0 % − 16,0 % = − 2,0 %",
+        "note": "El retorno del capital no alcanza a cubrir su costo."
+      },
+      {
+        "t": "formula",
+        "name": "EVA",
+        "expr": "EVA = − 2,0 % × 9.000 = − 180",
+        "note": "Equivale a NOPAT − WACC × Capital = 1.260 − 0,16 × 9.000 = 1.260 − 1.440 = − 180."
+      },
+      {
+        "t": "idea",
+        "md": "Resultado: ROIC 14 % < WACC 16 %, EVA **−180**. La empresa **destruye valor**: es rentable en libros pero su capital rinde menos de lo que cuesta. Palancas: subir el NOPAT, bajar el capital invertido o reducir el WACC."
+      }
+    ]
+  },
+  "bibliografia": [
+    "Koller, T., Goedhart, M. & Wessels, D. — *Valuation* (McKinsey) — texto nuclear",
+    "Stewart, G. B. — *The Quest for Value*",
+    "Stern, Shiely & Ross — *The EVA Challenge*",
+    "Madden, B. — *CFROI Valuation*",
+    "Rappaport, A. — *Creating Shareholder Value*",
+    "Damodaran, A. — *Corporate Finance: Theory and Practice*",
+    "López Dumrauf, G. — *Finanzas Corporativas: un enfoque latinoamericano*"
+  ]
+}

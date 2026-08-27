@@ -33,6 +33,7 @@ export interface AppMaterial {
   fase: string
   horas: string
   resumen: string
+  teoria: string
   pdf: string
   caso: string
   cuestionario: string

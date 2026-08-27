@@ -1,0 +1,397 @@
+{
+  "cod": "2.4",
+  "nombre": "Gestión del Capital de Trabajo, Ciclo de Conversión de Efectivo y Matrices Operativas",
+  "sections": [
+    {
+      "title": "El ciclo de conversión de efectivo",
+      "intro": "Cuántos días de caja tiene atrapados la operación. En un mercado emergente con capital caro, es la palanca de mayor retorno.",
+      "blocks": [
+        {
+          "t": "formula",
+          "name": "Ciclo de Conversión de Efectivo",
+          "expr": "CCE = DIO + DSO − DPO",
+          "where": "DIO = días de inventario · DSO = días de cobranza · DPO = días de pago a proveedores",
+          "note": "DIO = Inventario/CMV × 365 · DSO = CxC/Ventas × 365 · DPO = Proveedores/CMV × 365."
+        },
+        {
+          "t": "idea",
+          "md": "En un mercado emergente con capital caro y escaso, **la palanca de mayor retorno está en el denominador, no en el margen**. Bajar el CCE libera capital que estaba financiando la operación, y ese capital reduce el capital invertido → sube el ROIC → sube el EVA. Muchas veces rinde más ordenar el capital de trabajo que pelear un punto de margen."
+        },
+        {
+          "t": "p",
+          "md": "Criterio del programa: del denominador se excluyen la **caja operativa mínima** y la **deuda financiera** —solo cuenta el capital de trabajo operativo—."
+        }
+      ]
+    },
+    {
+      "title": "La matriz ABC/XYZ",
+      "intro": "No todos los ítems merecen la misma política. La matriz cruza importancia económica con previsibilidad de la demanda.",
+      "blocks": [
+        {
+          "t": "p",
+          "md": "El eje **ABC** clasifica por valor de consumo (regla de Pareto: pocos ítems concentran la mayor parte del valor). El eje **XYZ** clasifica por **variabilidad de la demanda** (coeficiente de variación). Las nueve celdas resultantes definen políticas diferenciadas de reposición, cobertura y control."
+        },
+        {
+          "t": "table",
+          "title": "Política por celda (selección)",
+          "headers": [
+            "Celda",
+            "Perfil",
+            "Política"
+          ],
+          "firstColLeft": true,
+          "rows": [
+            [
+              "AX",
+              "Alto valor, demanda estable",
+              "Reposición ajustada, poco stock de seguridad, control estricto"
+            ],
+            [
+              "AZ",
+              "Alto valor, demanda errática",
+              "Control estricto pero más cobertura; foco de gestión"
+            ],
+            [
+              "CX",
+              "Bajo valor, demanda estable",
+              "Reglas simples, lotes grandes, poco seguimiento"
+            ],
+            [
+              "CZ",
+              "Bajo valor, demanda errática",
+              "Stock de seguridad barato o compra bajo pedido"
+            ]
+          ]
+        },
+        {
+          "t": "warn",
+          "md": "La tensión propia del contexto: bajo inflación conviene **cubrirse con stock** (el bien se aprecia), pero el stock **inmoviliza capital caro**. La matriz ABC/XYZ es la herramienta para resolver esa tensión ítem por ítem, no con una regla única."
+        }
+      ]
+    },
+    {
+      "title": "La matriz de vencimiento contra reclamo",
+      "intro": "Una radiografía de la cobranza que revela el costo de la inacción.",
+      "blocks": [
+        {
+          "t": "p",
+          "md": "La matriz cruza los **días de vencimiento** de cada factura contra los **días de reclamo** de esa factura. Sus cuadrantes revelan patrones: facturas muy vencidas nunca reclamadas (dinero que se está regalando), o reclamos tempranos sobre facturas no vencidas (fricción innecesaria con buenos clientes). De cada cuadrante se deriva una política y se cuantifica el **costo de la inacción en cobranzas**."
+        },
+        {
+          "t": "ul",
+          "items": [
+            "**Política de crédito:** límites, plazos, garantías y descuentos por pronto pago (con su costo financiero implícito).",
+            "**Incobrabilidad esperada** y su previsión.",
+            "**Gestión de pagos:** el crédito comercial como fuente de financiamiento y su costo implícito."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Instrumentos argentinos y el puente al valor",
+      "intro": "Las herramientas locales para financiar el capital de trabajo, y cómo cada día ganado se traduce en valor.",
+      "blocks": [
+        {
+          "t": "ul",
+          "items": [
+            "**Descuento de cheques de pago diferido** (mercado de capitales y sistema bancario).",
+            "**Factoring**, **sociedades de garantía recíproca** (SGR), adelantos en cuenta corriente y **prefinanciación de exportaciones**.",
+            "De cada instrumento se calcula el **costo financiero total efectivo**, para comparar peras con peras."
+          ]
+        },
+        {
+          "t": "formula",
+          "name": "El puente al valor",
+          "expr": "Capital liberado ≈ (Capital de trabajo ÷ CCE) × días reducidos",
+          "where": "EVA adicional ≈ Capital liberado × WACC",
+          "note": "Cada día de CCE que se reduce libera capital; ese capital deja de costar el WACC, y esa es la mejora directa del EVA."
+        },
+        {
+          "t": "quote",
+          "author": "James Sagner",
+          "credential": "Working Capital Management",
+          "md": "El capital de trabajo es la fuente de financiamiento más barata y más ignorada de una empresa: el efectivo que hoy financia inventarios y cuentas por cobrar puede liberarse sin pedir un peso al banco."
+        }
+      ]
+    },
+    {
+      "title": "La matriz ABC/XYZ en profundidad",
+      "intro": "No todos los ítems merecen la misma política. La matriz cruza importancia económica con previsibilidad, y de cada una de sus nueve celdas se deriva una gestión distinta.",
+      "blocks": [
+        {
+          "t": "p",
+          "md": "El eje **ABC** clasifica por **valor de consumo** (regla de Pareto: pocos ítems concentran la mayor parte del valor). El eje **XYZ** clasifica por **variabilidad de la demanda** (coeficiente de variación): X estable, Y intermedia, Z errática. El cruce da nueve celdas, cada una con su política."
+        },
+        {
+          "t": "table",
+          "title": "Política por celda (las nueve combinaciones)",
+          "headers": [
+            "Celda",
+            "Perfil",
+            "Política"
+          ],
+          "firstColLeft": true,
+          "rows": [
+            [
+              "AX",
+              "Alto valor, demanda estable",
+              "Reposición justo a tiempo, poco stock de seguridad, control estricto"
+            ],
+            [
+              "AY / AZ",
+              "Alto valor, demanda variable/errática",
+              "Control estricto con más cobertura; foco de gestión"
+            ],
+            [
+              "BX / BY / BZ",
+              "Valor medio",
+              "Reglas semiautomáticas según variabilidad"
+            ],
+            [
+              "CX",
+              "Bajo valor, demanda estable",
+              "Lotes grandes, reglas simples, poco seguimiento"
+            ],
+            [
+              "CZ",
+              "Bajo valor, demanda errática",
+              "Stock de seguridad barato o compra bajo pedido"
+            ]
+          ],
+          "caption": "El stock de seguridad de cada celda se dimensiona según el nivel de servicio deseado y la variabilidad: alto para AZ (valioso e impredecible), mínimo para CX (barato y estable)."
+        },
+        {
+          "t": "warn",
+          "md": "La tensión propia del contexto emergente: bajo inflación conviene **cubrirse con stock** (el bien real se aprecia), pero el stock **inmoviliza capital caro**. La matriz ABC/XYZ resuelve esa tensión ítem por ítem —no con una regla única para todo el depósito—: se cubre en los ítems donde la apreciación supera el costo de capital, y se ajusta en los demás."
+        }
+      ]
+    },
+    {
+      "title": "Instrumentos argentinos del capital de trabajo",
+      "intro": "La empresa mediana argentina tiene un menú amplio de financiamiento del ciclo, cada uno con su costo efectivo. Compararlos bien es liberar valor.",
+      "blocks": [
+        {
+          "t": "ul",
+          "items": [
+            "**Descuento de cheques de pago diferido:** en el sistema bancario o en el mercado de capitales (donde suele ser más barato). Adelanta el cobro de ventas a plazo.",
+            "**Factoring:** cesión de las cuentas por cobrar, con o sin recurso. Sin recurso transfiere el riesgo de incobrabilidad.",
+            "**Sociedades de Garantía Recíproca (SGR):** avalan al deudor PyME, mejorando el acceso y bajando la tasa —recuperando parte de la brecha de financiamiento real (BFR, asignatura 4.3)—.",
+            "**Adelantos en cuenta corriente y prefinanciación de exportaciones:** para descalces puntuales de caja y para el ciclo exportador."
+          ]
+        },
+        {
+          "t": "idea",
+          "md": "La clave no es qué instrumento usar en abstracto, sino calcular el **costo financiero total efectivo** de cada uno —incluyendo comisiones, sellos e IVA sobre intereses— y compararlo contra el costo de oportunidad del capital. Muchas veces el descuento de cheques en el mercado de capitales resulta sensiblemente más barato que el adelanto bancario, y nadie lo había medido."
+        }
+      ]
+    },
+    {
+      "title": "El puente al valor: de días a EVA",
+      "intro": "Todo lo anterior desemboca en una traducción concreta: cada día de ciclo que se libera es capital que deja de costar el WACC, y eso es EVA adicional.",
+      "blocks": [
+        {
+          "t": "chain",
+          "title": "La cadena del capital liberado",
+          "nodes": [
+            "Reducir el CCE",
+            "Liberar capital de trabajo",
+            "Bajar el capital invertido",
+            "Subir ROIC → EVA"
+          ],
+          "caption": "La misma empresa, con las mismas ventas y el mismo margen, crea más valor solo por ordenar su ciclo."
+        },
+        {
+          "t": "formula",
+          "name": "La traducción a valor",
+          "expr": "Capital liberado = (Capital de trabajo ÷ CCE) × días reducidos · EVA adicional = Capital liberado × WACC",
+          "note": "Priorizar las palancas por retorno sobre esfuerzo: primero las que liberan más capital con menos fricción operativa."
+        },
+        {
+          "t": "quote",
+          "author": "Tim Koller",
+          "credential": "McKinsey — Valuation",
+          "md": "El capital de trabajo es capital invertido, exactamente igual que una máquina: exige el mismo retorno. Las empresas que lo entienden gestionan el ciclo con la misma seriedad con que evalúan una inversión en activo fijo."
+        }
+      ]
+    },
+    {
+      "title": "Política de crédito y la matriz de vencimiento-reclamo",
+      "intro": "Vender a crédito es prestar dinero. La política de crédito y la gestión de cobranzas deciden cuánto capital queda atrapado —y cuánto se pierde—.",
+      "blocks": [
+        {
+          "t": "p",
+          "md": "La **política de crédito** define límites, plazos, garantías y descuentos por pronto pago (cuyo costo financiero implícito hay que calcular: un \"2 % a 10 días o neto a 30\" es una tasa anualizada altísima). La **incobrabilidad esperada** se estima y se previsiona, no se descubre cuando el cliente ya no paga."
+        },
+        {
+          "t": "p",
+          "md": "La **matriz de vencimiento contra reclamo** cruza los días de vencimiento de cada factura con los días de reclamo de esa factura. Sus cuadrantes revelan patrones costosos: facturas muy vencidas nunca reclamadas (dinero que se está regalando), o reclamos tempranos sobre facturas no vencidas (fricción innecesaria con buenos clientes). De cada cuadrante se deriva una política y se cuantifica el **costo de la inacción en cobranzas**."
+        },
+        {
+          "t": "idea",
+          "md": "El crédito comercial de los proveedores (DPO) es la cara espejo: es una fuente de financiamiento del ciclo, con su propio costo implícito si se pierden descuentos por pronto pago. Gestionar bien el capital de trabajo es gestionar simultáneamente lo que se cobra, lo que se paga y lo que se tiene en stock —los tres términos del CCE—."
+        },
+        {
+          "t": "quote",
+          "author": "James Sagner",
+          "credential": "Working Capital Management",
+          "md": "La cobranza no es una tarea administrativa: es una decisión financiera. Cada día que una factura permanece impaga es capital prestado sin interés, financiado al costo del capital de la empresa. Medirlo cambia la conversación."
+        }
+      ]
+    }
+  ],
+  "expertos": [
+    {
+      "author": "James Sagner",
+      "credential": "Working Capital Management",
+      "md": "Reducir el ciclo de conversión de efectivo es, muchas veces, la inversión de mayor retorno y menor riesgo que una empresa puede hacer: no compra nada, solo deja de inmovilizar."
+    },
+    {
+      "author": "Tim Koller",
+      "credential": "McKinsey — Valuation",
+      "md": "El capital de trabajo es parte del capital invertido: cada peso atrapado en inventarios o cuentas por cobrar exige el mismo retorno que una máquina. Ignorarlo es subestimar el capital."
+    },
+    {
+      "author": "Sunil Chopra",
+      "credential": "Supply Chain Management",
+      "md": "La política de inventario no es una sola: debe segmentarse por valor y por variabilidad de la demanda. Tratar todos los ítems igual es garantía de exceso en unos y faltante en otros."
+    }
+  ],
+  "caso": {
+    "titulo": "El capital atrapado en la operación",
+    "empresa": "Maderas del Litoral S.A. — liberar caja del ciclo",
+    "contexto": "Maderas del Litoral tiene la caja siempre ajustada, aunque es rentable. El consultor sospecha que el problema no está en el margen sino en el ciclo: demasiados días de madera en el depósito y de facturas sin cobrar.\n\nMide el CCE, clasifica el stock de madera con la matriz ABC/XYZ (el pino y el eucalipto de alto valor merecen otra política que los insumos menores) y cuantifica cuánto capital se libera —y cuánto EVA se gana— si el ciclo se reduce en diez días.\n\nEl hallazgo conecta con todo el programa: el capital liberado baja el capital invertido, sube el ROIC y mejora el EVA, sin vender una tabla más.",
+    "datos": [
+      {
+        "t": "table",
+        "title": "Datos del capital de trabajo (miles de $)",
+        "headers": [
+          "Concepto",
+          "Valor"
+        ],
+        "firstColLeft": true,
+        "rows": [
+          [
+            "Ventas",
+            "42.000"
+          ],
+          [
+            "Costo de mercadería vendida",
+            "27.000"
+          ],
+          [
+            "Inventario (bienes de cambio)",
+            "3.770"
+          ],
+          [
+            "Cuentas por cobrar",
+            "3.100"
+          ],
+          [
+            "Proveedores",
+            "1.900"
+          ],
+          [
+            "WACC",
+            "20,0%"
+          ],
+          [
+            "Reducción objetivo del CCE",
+            "10 días"
+          ]
+        ]
+      }
+    ],
+    "consigna": [
+      "¿Cuál es el CCE de la empresa y cómo se descompone en DIO, DSO y DPO?",
+      "¿Cuánto capital se libera reduciendo el CCE en 10 días, y cuánto EVA adicional genera?",
+      "¿Qué política de reposición sugiere la matriz ABC/XYZ para el stock de madera?",
+      "¿Por qué en este contexto ordenar el capital de trabajo rinde más que pelear un punto de margen?"
+    ],
+    "metodologia": [
+      {
+        "k": "Medir el CCE",
+        "d": "DIO + DSO − DPO, con las bases correctas (CMV para inventario y pagos, ventas para cobranzas)."
+      },
+      {
+        "k": "Clasificar (ABC/XYZ)",
+        "d": "Ordenar por valor (Pareto) y por variabilidad (CV); asignar la celda y su política."
+      },
+      {
+        "k": "Cuantificar el capital liberado",
+        "d": "(Capital de trabajo/CCE) × días reducidos."
+      },
+      {
+        "k": "Traducir a valor",
+        "d": "EVA adicional = capital liberado × WACC."
+      },
+      {
+        "k": "Priorizar",
+        "d": "Ordenar las palancas por retorno sobre esfuerzo."
+      }
+    ]
+  },
+  "ejercicio": {
+    "titulo": "Ciclo de conversión de efectivo",
+    "enunciado": "Calculá el CCE de una empresa comercial y descomponelo en sus tres términos.",
+    "datos": [
+      {
+        "t": "table",
+        "title": "Datos (miles de $)",
+        "headers": [
+          "Concepto",
+          "Valor"
+        ],
+        "firstColLeft": true,
+        "rows": [
+          [
+            "Inventario",
+            "900"
+          ],
+          [
+            "Costo de mercadería vendida",
+            "6.000"
+          ],
+          [
+            "Cuentas por cobrar",
+            "800"
+          ],
+          [
+            "Ventas",
+            "10.000"
+          ],
+          [
+            "Proveedores",
+            "500"
+          ]
+        ]
+      }
+    ],
+    "preguntas": [
+      "¿Cuánto valen DIO, DSO y DPO?",
+      "¿Cuál es el CCE?"
+    ],
+    "solucion": [
+      {
+        "t": "formula",
+        "name": "Días",
+        "expr": "DIO = 900/6.000×365 = 54,8 · DSO = 800/10.000×365 = 29,2 · DPO = 500/6.000×365 = 30,4"
+      },
+      {
+        "t": "formula",
+        "name": "CCE",
+        "expr": "CCE = DIO + DSO − DPO = 54,8 + 29,2 − 30,4 = 53,6 días"
+      },
+      {
+        "t": "idea",
+        "md": "El ciclo es de **≈ 54 días**: la empresa financia casi dos meses de operación. Cada día que se reduzca (menos inventario o mejor cobranza) libera capital y mejora el ROIC/EVA sin vender más."
+      }
+    ]
+  },
+  "bibliografia": [
+    "Koller, Goedhart & Wessels — *Valuation*",
+    "Sagner, J. — *Working Capital Management*",
+    "Silver, Pyke & Thomas — *Inventory and Production Management in Supply Chains*",
+    "Chopra, S. & Meindl, P. — *Supply Chain Management*",
+    "Documentación del Mercado Argentino de Valores (cheque de pago diferido, pagaré bursátil, FCE)"
+  ]
+}

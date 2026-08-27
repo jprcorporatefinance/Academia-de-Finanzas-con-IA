@@ -1,0 +1,381 @@
+{
+  "cod": "3.4",
+  "nombre": "Ingeniería de Agentes de Inteligencia Artificial para la Función Financiera",
+  "sections": [
+    {
+      "title": "Qué es un agente",
+      "intro": "Un agente no es un chatbot: es un sistema que percibe, razona, decide qué herramienta usar, actúa y observa el resultado, en un bucle, hasta cumplir un objetivo.",
+      "blocks": [
+        {
+          "t": "formula",
+          "name": "Anatomía de un agente",
+          "expr": "Agente = Modelo (razonamiento) + Herramientas (acción) + Memoria (contexto) + Bucle (percibir → decidir → actuar → observar)",
+          "note": "La diferencia con un simple prompt: el agente elige acciones, las ejecuta contra el mundo real y reacciona a lo que observa."
+        },
+        {
+          "t": "p",
+          "md": "En la tradición de Russell y Norvig, un **agente racional** percibe su entorno y actúa para maximizar su objetivo. Un agente de IA moderno usa un modelo de lenguaje como motor de razonamiento y **herramientas** como manos: consultar el ERP, calcular en la planilla, enviar un correo, generar un informe."
+        },
+        {
+          "t": "idea",
+          "md": "La conexión con el programa: las **herramientas del agente son el servidor MCP** de la asignatura 1.2. El agente no accede a la base directamente; llama a herramientas auditadas de sólo lectura. La trazabilidad del dato sobrevive incluso cuando quien consulta es una IA."
+        }
+      ]
+    },
+    {
+      "title": "Patrones de diseño de agentes",
+      "intro": "No todo problema necesita un agente autónomo. La ingeniería consiste en elegir el patrón más simple que funcione.",
+      "blocks": [
+        {
+          "t": "ul",
+          "items": [
+            "**Razonar y actuar (ReAct):** el agente alterna pensamiento y acción, decidiendo el próximo paso según lo observado.",
+            "**Planificación:** descompone un objetivo en subtareas antes de ejecutarlas.",
+            "**Reflexión:** el agente critica su propia salida y la corrige (el auditor escéptico incorporado).",
+            "**Multi-agente:** varios agentes especializados (uno extrae, otro modela, otro redacta) coordinados."
+          ]
+        },
+        {
+          "t": "quote",
+          "author": "Documentación de agentes (Anthropic)",
+          "credential": "Building effective agents",
+          "md": "Empezá con la solución más simple posible y agregá complejidad solo cuando demuestre su valor. Muchos problemas se resuelven con un flujo de trabajo bien definido, no con un agente autónomo."
+        },
+        {
+          "t": "warn",
+          "md": "La autonomía tiene un costo: cuanto más decide el agente por su cuenta, más difícil es predecir y auditar su comportamiento. En finanzas, la autonomía se concede de a poco y sobre acciones reversibles."
+        }
+      ]
+    },
+    {
+      "title": "Guardarraíles, humano en el bucle y auditoría",
+      "intro": "En la función financiera, un agente sin controles es un pasivo. El gobierno se diseña junto con el agente, no después.",
+      "blocks": [
+        {
+          "t": "ul",
+          "items": [
+            "**Sólo lectura por defecto:** el agente consulta y propone; las acciones que mueven dinero o modifican registros pasan por aprobación humana.",
+            "**Humano en el bucle** en los puntos críticos: aprobar un pago, enviar un informe al directorio, rechazar un crédito.",
+            "**Registro de auditoría de cada paso:** qué herramienta llamó, con qué parámetros, qué obtuvo y qué decidió — el mismo principio del servidor MCP.",
+            "**Límites y permisos** explícitos: qué puede y qué no puede hacer el agente."
+          ]
+        },
+        {
+          "t": "quote",
+          "author": "Chip Huyen",
+          "credential": "AI Engineering",
+          "md": "La confiabilidad de un sistema de IA no viene del modelo, sino de la ingeniería alrededor: evaluación, monitoreo, guardarraíles y la posibilidad de intervención humana."
+        }
+      ]
+    },
+    {
+      "title": "Evaluación, riesgos y la decisión de automatizar",
+      "intro": "No todo se debe automatizar. La decisión es económica y de riesgo, no tecnológica.",
+      "blocks": [
+        {
+          "t": "ul",
+          "items": [
+            "**Evaluación:** conjuntos de prueba con casos conocidos; medir acierto, no impresión. Un agente que “parece” funcionar no es un agente evaluado.",
+            "**Alucinación:** el modelo puede inventar con seguridad; por eso toda cifra debe ser trazable a una herramienta, no generada por el modelo.",
+            "**Sobre-automatización:** automatizar una tarea mal entendida multiplica el error. Primero se entiende y ordena el proceso, después se automatiza.",
+            "**Gobernanza:** responsabilidad, confidencialidad (Ley 25.326) y la regla de oro: la responsabilidad final es humana."
+          ]
+        },
+        {
+          "t": "idea",
+          "md": "La decisión de qué automatizar se prioriza por **retorno y factibilidad**: tareas frecuentes, repetitivas, de reglas claras y bajo riesgo primero. Una tarea infrecuente, ambigua y de alto riesgo es la última candidata, por más “automatizable” que parezca."
+        }
+      ]
+    },
+    {
+      "title": "Patrones de diseño: del más simple al más complejo",
+      "intro": "La ingeniería de agentes consiste en elegir el patrón más simple que resuelva el problema. Agregar autonomía sin necesidad es sumar riesgo sin beneficio.",
+      "blocks": [
+        {
+          "t": "table",
+          "title": "Patrones de agentes, de menor a mayor complejidad",
+          "headers": [
+            "Patrón",
+            "Qué hace",
+            "Cuándo usarlo"
+          ],
+          "firstColLeft": true,
+          "rows": [
+            [
+              "Flujo de trabajo",
+              "Pasos predefinidos, el modelo completa cada uno",
+              "Proceso conocido y estable"
+            ],
+            [
+              "ReAct",
+              "Alterna razonamiento y acción según lo observado",
+              "La tarea requiere decidir el próximo paso"
+            ],
+            [
+              "Planificación",
+              "Descompone el objetivo en subtareas antes de ejecutar",
+              "Objetivos complejos y multi-paso"
+            ],
+            [
+              "Reflexión",
+              "El agente critica y corrige su propia salida",
+              "Cuando la calidad importa más que la velocidad"
+            ],
+            [
+              "Multi-agente",
+              "Agentes especializados coordinados",
+              "Tareas que se benefician de la división del trabajo"
+            ]
+          ],
+          "caption": "Empezá con la solución más simple posible y agregá complejidad solo cuando demuestre su valor. Muchos problemas se resuelven con un flujo de trabajo bien definido, no con un agente autónomo."
+        },
+        {
+          "t": "quote",
+          "author": "Documentación de agentes (Anthropic)",
+          "credential": "Building effective agents",
+          "md": "La mayoría de las aplicaciones exitosas de agentes usan patrones simples y componibles, no autonomía máxima. La complejidad debe justificarse por el valor que aporta, no por lo impresionante que suena."
+        }
+      ]
+    },
+    {
+      "title": "Gobierno del agente financiero",
+      "intro": "En la función financiera, un agente sin controles es un pasivo. El gobierno se diseña junto con el agente, no después.",
+      "blocks": [
+        {
+          "t": "ul",
+          "items": [
+            "**Sólo lectura por defecto:** el agente consulta y propone; las acciones que mueven dinero o modifican registros pasan por aprobación humana.",
+            "**Humano en el bucle** en los puntos críticos: aprobar un pago, enviar un informe al directorio, rechazar un crédito.",
+            "**Registro de auditoría de cada paso:** qué herramienta llamó, con qué parámetros, qué obtuvo y qué decidió —el mismo principio del servidor MCP de la 1.2—.",
+            "**Autonomía gradual:** se concede primero sobre acciones reversibles y de bajo impacto; lo crítico e irreversible mantiene control humano hasta ganar confianza."
+          ]
+        },
+        {
+          "t": "warn",
+          "md": "El riesgo de la **alucinación** obliga a una regla estricta: toda cifra que el agente reporta debe ser **trazable a una herramienta auditada**, no generada por el modelo. Un agente financiero no \"recuerda\" saldos ni \"estima\" cifras: las consulta al servidor MCP de sólo lectura y las cita. La responsabilidad final, siempre, es humana."
+        },
+        {
+          "t": "quote",
+          "author": "Chip Huyen",
+          "credential": "AI Engineering",
+          "md": "La confiabilidad de un sistema de IA no viene del modelo, sino de la ingeniería alrededor: evaluación con casos conocidos, monitoreo, guardarraíles y la posibilidad de intervención humana. Sin eso, no hay ingeniería, solo demostraciones."
+        }
+      ]
+    },
+    {
+      "title": "Evaluar un agente: medir, no impresionarse",
+      "intro": "Un agente que \"parece\" funcionar no es un agente evaluado. La ingeniería empieza por saber cómo se mide el acierto.",
+      "blocks": [
+        {
+          "t": "p",
+          "md": "La **evaluación** de un agente se hace contra un conjunto de casos con respuesta conocida: se mide el acierto, no la impresión que da la demo. Antes de preguntar \"¿qué modelo uso?\", la pregunta correcta es \"¿cómo sé si funciona?\". Sin evaluación no hay ingeniería, solo demostraciones."
+        },
+        {
+          "t": "ul",
+          "items": [
+            "**Conjuntos de prueba:** casos representativos con la respuesta correcta, para medir acierto de forma objetiva.",
+            "**Métricas por tarea:** exactitud en extracción de datos, calidad de un informe, corrección de un cálculo —cada tarea tiene su métrica—.",
+            "**Monitoreo en producción:** los agentes se degradan; hay que vigilar el desempeño real, no solo el del laboratorio.",
+            "**Detección de alucinación:** verificar que cada cifra reportada sea trazable a una herramienta, no generada por el modelo."
+          ]
+        },
+        {
+          "t": "quote",
+          "author": "Chip Huyen",
+          "credential": "AI Engineering",
+          "md": "La diferencia entre un prototipo impresionante y un sistema confiable está en la evaluación. Cualquiera puede construir una demo que funciona una vez; la ingeniería consiste en saber, con evidencia, que funciona el 99 % de las veces —y qué pasa el 1 % restante—."
+        }
+      ]
+    },
+    {
+      "title": "La decisión de automatizar es económica, no tecnológica",
+      "intro": "No todo se debe automatizar. La pregunta no es \"¿se puede?\", sino \"¿conviene?\".",
+      "blocks": [
+        {
+          "t": "p",
+          "md": "La priorización de qué automatizar se ordena por **retorno y factibilidad**: tareas frecuentes, repetitivas, de reglas claras y bajo riesgo primero. Una tarea infrecuente, ambigua y de alto riesgo —como la recomendación final al directorio— es la última candidata, por más \"automatizable\" que parezca, porque el costo de un error supera con creces el ahorro."
+        },
+        {
+          "t": "formula",
+          "name": "El ahorro potencial ponderado",
+          "expr": "Ahorro = Horas/año × Costo/hora × Factibilidad × (1 − Riesgo)",
+          "note": "Ponderar por factibilidad y riesgo evita automatizar lo que no conviene aunque técnicamente se pueda."
+        },
+        {
+          "t": "warn",
+          "md": "La **sobre-automatización** es un riesgo real: automatizar un proceso mal entendido multiplica el error en vez de eliminarlo. La secuencia correcta es entender y ordenar el proceso primero, automatizarlo después. Y la regla de oro permanece: la responsabilidad final es humana, siempre. El agente construye y propone; la persona decide y responde."
+        },
+        {
+          "t": "quote",
+          "author": "Documentación de agentes (Anthropic)",
+          "credential": "Building effective agents",
+          "md": "La automatización más valiosa no es la más ambiciosa, sino la más apropiada: la que resuelve un problema real, frecuente y bien entendido, con la mínima complejidad necesaria y el gobierno adecuado."
+        }
+      ]
+    }
+  ],
+  "expertos": [
+    {
+      "author": "Documentación de agentes (Anthropic)",
+      "credential": "Building effective agents",
+      "md": "Distinguí flujos de trabajo (pasos predefinidos) de agentes (el modelo dirige el proceso). La mayoría de las aplicaciones exitosas usan patrones simples y componibles, no autonomía máxima."
+    },
+    {
+      "author": "Stuart Russell & Peter Norvig",
+      "credential": "Artificial Intelligence: A Modern Approach",
+      "md": "Un agente racional actúa para maximizar su medida de desempeño dada la información disponible. El diseño empieza por definir con precisión ese objetivo y ese entorno."
+    },
+    {
+      "author": "Chip Huyen",
+      "credential": "AI Engineering",
+      "md": "Antes de preguntar “¿qué modelo uso?”, preguntá “¿cómo sé si funciona?”. Sin evaluación, no hay ingeniería, solo demostraciones."
+    }
+  ],
+  "caso": {
+    "titulo": "¿Qué le conviene automatizar a la función financiera?",
+    "empresa": "Maderas del Litoral S.A. — el agente financiero",
+    "contexto": "Con el servidor MCP ya construido (asignatura 1.2), Maderas del Litoral podría poner un agente de IA a trabajar sobre su función financiera. Pero, ¿en qué? La contadora hace muchas tareas: concilia bancos, arma el reporte de cobranzas, calcula el CCE, prepara el tablero de valor, responde consultas del directorio.\n\nEl consultor no automatiza por moda: prioriza. Para cada tarea estima la frecuencia, las horas que consume, su factibilidad de automatización y su riesgo, y calcula el ahorro potencial ponderado. Las tareas frecuentes, repetitivas y de bajo riesgo (conciliación, reporte de cobranzas) encabezan la lista; las de alto juicio y riesgo (recomendación al directorio) quedan con el humano al frente y la IA como apoyo.\n\nEl entregable es un plan de automatización priorizado, no un agente que hace todo.",
+    "datos": [
+      {
+        "t": "table",
+        "title": "Tareas de la función financiera",
+        "headers": [
+          "Tarea",
+          "Veces/mes",
+          "Horas c/u",
+          "Factib.",
+          "Riesgo"
+        ],
+        "firstColLeft": true,
+        "rows": [
+          [
+            "Conciliación bancaria",
+            "20",
+            "1,5",
+            "0,90",
+            "0,15"
+          ],
+          [
+            "Reporte de cobranzas",
+            "4",
+            "3,0",
+            "0,85",
+            "0,20"
+          ],
+          [
+            "Cálculo del CCE y tablero",
+            "1",
+            "6,0",
+            "0,80",
+            "0,25"
+          ],
+          [
+            "Respuesta a consultas del directorio",
+            "8",
+            "1,0",
+            "0,40",
+            "0,60"
+          ],
+          [
+            "Recomendación de crédito",
+            "15",
+            "0,8",
+            "0,55",
+            "0,50"
+          ]
+        ]
+      }
+    ],
+    "consigna": [
+      "¿Cuál es el ahorro potencial ponderado (por factibilidad y riesgo) de automatizar cada tarea?",
+      "¿Cómo queda el ranking de prioridad de automatización?",
+      "¿Qué tareas deben mantener al humano en el bucle y por qué?",
+      "¿Por qué las herramientas del agente deben ser el servidor MCP de sólo lectura y no acceso directo a la base?"
+    ],
+    "metodologia": [
+      {
+        "k": "Estimar el volumen",
+        "d": "Horas/año = veces/mes × 12 × horas por vez."
+      },
+      {
+        "k": "Ponderar",
+        "d": "Ahorro ponderado = horas/año × costo/hora × factibilidad × (1 − riesgo)."
+      },
+      {
+        "k": "Priorizar",
+        "d": "Ordenar por ahorro ponderado (SORTBY): primero lo frecuente, repetible y de bajo riesgo."
+      },
+      {
+        "k": "Gobernar",
+        "d": "Definir puntos de control humano y auditoría para las tareas de mayor riesgo."
+      },
+      {
+        "k": "Conectar",
+        "d": "Las herramientas del agente = servidor MCP de sólo lectura, con trazabilidad."
+      }
+    ]
+  },
+  "ejercicio": {
+    "titulo": "¿Conviene automatizar esta tarea?",
+    "enunciado": "Estimá el ahorro potencial ponderado de automatizar una tarea de la función financiera y decidí si es candidata.",
+    "datos": [
+      {
+        "t": "table",
+        "title": "Tarea: conciliación bancaria",
+        "headers": [
+          "Parámetro",
+          "Valor"
+        ],
+        "firstColLeft": true,
+        "rows": [
+          [
+            "Veces por mes",
+            "20"
+          ],
+          [
+            "Horas por vez",
+            "1,5"
+          ],
+          [
+            "Costo por hora",
+            "8 miles $"
+          ],
+          [
+            "Factibilidad",
+            "0,90"
+          ],
+          [
+            "Riesgo",
+            "0,15"
+          ],
+          [
+            "Umbral “humano en el bucle”",
+            "riesgo > 0,40"
+          ]
+        ]
+      }
+    ],
+    "preguntas": [
+      "¿Cuántas horas/año consume y cuál es el ahorro potencial ponderado?",
+      "¿Es automatizable o requiere humano en el bucle?"
+    ],
+    "solucion": [
+      {
+        "t": "formula",
+        "name": "Horas/año y ahorro",
+        "expr": "Horas/año = 20×12×1,5 = 360 · Ahorro = 360×8×0,90×(1−0,15) = 2.203"
+      },
+      {
+        "t": "idea",
+        "md": "Ahorro potencial ponderado ≈ **2.203** (miles) al año sobre 360 horas. Con riesgo 0,15 < 0,40, la tarea es **automatizable**: frecuente, repetible y de bajo riesgo — candidata ideal, con las herramientas de sólo lectura del servidor MCP."
+      }
+    ]
+  },
+  "bibliografia": [
+    "Anthropic — *Building effective agents* y *Model Context Protocol* (2024–2026)",
+    "Russell, S. & Norvig, P. — *Artificial Intelligence: A Modern Approach*",
+    "Huyen, C. — *AI Engineering*",
+    "Weng, L. — *LLM-powered Autonomous Agents* (nota técnica)",
+    "Ley 25.326 de Protección de los Datos Personales (Argentina)"
+  ]
+}

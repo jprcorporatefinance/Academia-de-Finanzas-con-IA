@@ -1,10 +1,12 @@
-import { useMemo } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { useStore } from '../store/store'
 import { maestriaAsignaturas, materialByCod } from '../data/maestria/appData'
 import { MaestriaQuiz } from '../components/MaestriaQuiz'
 import { CaseUpload } from '../components/CaseUpload'
-import { FileText, FileSpreadsheet, HelpCircle, ArrowLeft, Target, ClipboardList } from 'lucide-react'
+import { SectionView, BlockView, md } from '../components/TeoriaBlocks'
+import type { Block, Section, ExpertQuote, Ejercicio } from '../data/maestria/types'
+import { FileText, FileSpreadsheet, HelpCircle, ArrowLeft, Target, ClipboardList, BookOpen } from 'lucide-react'
 
 function DownloadCard({ href, icon: Icon, title, sub }: { href: string; icon: any; title: string; sub: string }) {
   return (
@@ -22,6 +24,109 @@ function DownloadCard({ href, icon: Icon, title, sub }: { href: string; icon: an
         <div className="truncate text-xs text-slate-500">{sub}</div>
       </div>
     </a>
+  )
+}
+
+interface TeoriaDoc {
+  sections: Section[]
+  expertos: ExpertQuote[]
+  ejercicio: Ejercicio | null
+  bibliografia: string[]
+  caso: { titulo: string; empresa: string; contexto: string; datos: Block[]; metodologia: { k: string; d: string }[] }
+}
+
+// Teoría completa, leída dentro de la app. Se descarga bajo demanda para no
+// cargar todo el corpus en el bundle.
+function Teoria({ src }: { src: string }) {
+  const [doc, setDoc] = useState<TeoriaDoc | null>(null)
+  const [error, setError] = useState(false)
+
+  useEffect(() => {
+    let active = true
+    setDoc(null)
+    setError(false)
+    fetch(src)
+      .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
+      .then((d) => active && setDoc(d))
+      .catch(() => active && setError(true))
+    return () => {
+      active = false
+    }
+  }, [src])
+
+  if (error)
+    return (
+      <div className="card p-5 text-sm text-slate-400">
+        No se pudo cargar la teoría. Podés descargar el PDF didáctico desde los enlaces de arriba.
+      </div>
+    )
+  if (!doc)
+    return (
+      <div className="card flex items-center gap-3 p-5 text-sm text-slate-400">
+        <span className="h-4 w-4 animate-spin rounded-full border-2 border-value-400 border-t-transparent" />
+        Cargando el material teórico…
+      </div>
+    )
+
+  return (
+    <div className="card p-6 sm:p-8">
+      <div className="mb-6 flex items-center gap-2 text-xs font-mono uppercase tracking-[0.2em] text-value-400">
+        <BookOpen size={14} /> Material teórico
+      </div>
+
+      {doc.sections.map((s, i) => (
+        <SectionView key={i} s={s} n={i + 1} />
+      ))}
+
+      {doc.expertos?.length > 0 && (
+        <section className="mb-8">
+          <div className="mb-1 h-[2px] w-7 bg-value-500" />
+          <h3 className="mb-3 font-serif text-xl font-bold text-slate-100">Voces de referencia</h3>
+          {doc.expertos.map((e, i) => (
+            <BlockView key={i} b={{ t: 'quote', author: e.author, credential: e.credential, md: e.md, source: e.source }} />
+          ))}
+        </section>
+      )}
+
+      <section className="mb-8 border-t border-ink-700 pt-6">
+        <div className="font-mono text-xs uppercase tracking-[0.2em] text-value-400">Caso práctico</div>
+        <h3 className="mb-1 mt-1 font-serif text-xl font-bold text-slate-100">{doc.caso.titulo}</h3>
+        <p className="mb-4 text-sm font-semibold text-value-400">{doc.caso.empresa}</p>
+        {doc.caso.contexto.split(/\n\n+/).map((p, i) => (
+          <p key={i} className="mb-3 leading-relaxed text-slate-300">{md(p)}</p>
+        ))}
+        {doc.caso.datos.map((b, i) => (
+          <BlockView key={i} b={b} />
+        ))}
+        <BlockView b={{ t: 'steps', title: 'Metodología de resolución', items: doc.caso.metodologia }} />
+      </section>
+
+      {doc.ejercicio && (
+        <section className="mb-8 border-t border-ink-700 pt-6">
+          <div className="font-mono text-xs uppercase tracking-[0.2em] text-value-400">Ejercicio adicional</div>
+          <h3 className="mb-3 mt-1 font-serif text-xl font-bold text-slate-100">{doc.ejercicio.titulo}</h3>
+          {doc.ejercicio.enunciado.split(/\n\n+/).map((p, i) => (
+            <p key={i} className="mb-3 leading-relaxed text-slate-300">{md(p)}</p>
+          ))}
+          {doc.ejercicio.datos.map((b, i) => (
+            <BlockView key={i} b={b} />
+          ))}
+          <h4 className="mb-2 mt-5 font-semibold text-slate-100">Consigna</h4>
+          <BlockView b={{ t: 'ol', items: doc.ejercicio.preguntas }} />
+          <h4 className="mb-2 mt-5 font-semibold text-slate-100">Solución</h4>
+          {doc.ejercicio.solucion.map((b, i) => (
+            <BlockView key={i} b={b} />
+          ))}
+        </section>
+      )}
+
+      {doc.bibliografia?.length > 0 && (
+        <section className="border-t border-ink-700 pt-6">
+          <h3 className="mb-3 font-serif text-xl font-bold text-slate-100">Bibliografía nuclear</h3>
+          <BlockView b={{ t: 'ul', items: doc.bibliografia }} />
+        </section>
+      )}
+    </div>
   )
 }
 
@@ -154,6 +259,9 @@ export default function MaestriaAsignaturaPage() {
           </ol>
         </div>
       </div>
+
+      {/* Teoría completa (se lee acá, no hace falta descargar el PDF) */}
+      {mat?.teoria && <Teoria src={mat.teoria} />}
 
       {/* Cuestionario */}
       <MaestriaQuiz cod={a.cod} quiz={a.quiz} />

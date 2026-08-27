@@ -1,0 +1,517 @@
+{
+  "cod": "1.3",
+  "nombre": "Métodos Cuantitativos y Programación en Python para Finanzas Corporativas",
+  "sections": [
+    {
+      "title": "Python como herramienta financiera reproducible",
+      "intro": "No se trata de aprender a programar en abstracto, sino de construir cálculo financiero verificable y automatizable.",
+      "blocks": [
+        {
+          "t": "p",
+          "md": "El instrumental base es **pandas** para manipular datos y **numpy** para el cálculo numérico. Sobre ellos se construyen funciones financieras propias, en **entornos reproducibles**, con **control de versiones** y —la pieza que separa al profesional del aficionado— **pruebas unitarias** aplicadas a cada función."
+        },
+        {
+          "t": "idea",
+          "md": "El motor de cálculo se escribe dos veces a propósito: una en Python (verificable con tests) y otra en Excel con matrices dinámicas (asignatura 2.3). Ambas deben coincidir número a número. Si no coinciden, una de las dos miente y hay que descubrir cuál."
+        },
+        {
+          "t": "quote",
+          "author": "Yves Hilpisch",
+          "credential": "Python for Finance (O’Reilly)",
+          "md": "Python se volvió la lengua franca de las finanzas cuantitativas no por elegancia sintáctica, sino porque permite ir del prototipo a la producción sin cambiar de herramienta, con un ecosistema de librerías numéricas maduro."
+        }
+      ]
+    },
+    {
+      "title": "Matemática financiera",
+      "intro": "El núcleo del valor tiempo del dinero, sin el cual ningún flujo se puede comparar.",
+      "blocks": [
+        {
+          "t": "formula",
+          "name": "Tasa efectiva anual desde una nominal",
+          "expr": "TEA = (1 + TNA ÷ m)^m − 1",
+          "where": "m = cantidad de capitalizaciones por año",
+          "note": "La nominal (TNA) no es comparable entre sí; la efectiva sí. Confundirlas es un error de principiante caro."
+        },
+        {
+          "t": "formula",
+          "name": "Tasa real (ecuación de Fisher)",
+          "expr": "r_real = (1 + r_nominal) ÷ (1 + π) − 1",
+          "where": "π = inflación del período",
+          "note": "Bajo alta inflación, una tasa nominal enorme puede esconder una tasa real modesta o negativa."
+        },
+        {
+          "t": "formula",
+          "name": "Valor Actual Neto",
+          "expr": "VAN = Σ Flujo_t ÷ (1 + r)^t",
+          "where": "t = 0 … n · r = costo del capital",
+          "note": "Regla: se crea valor si VAN > 0. Es el criterio soberano de la decisión de inversión."
+        },
+        {
+          "t": "ul",
+          "items": [
+            "**TIR y sus patologías:** la tasa que anula el VAN. Falla con flujos no convencionales (múltiples cambios de signo → múltiples TIR) y al comparar proyectos de distinta escala o duración.",
+            "**TIRM (TIR modificada):** corrige el supuesto de reinversión de la TIR usando una tasa de reinversión explícita.",
+            "**Duración y convexidad:** sensibilidad del valor de un flujo a la tasa; la duración es la primera derivada, la convexidad la segunda.",
+            "**Rentas y sistemas de amortización:** francés, alemán y americano, y su distinto perfil de intereses y capital."
+          ]
+        },
+        {
+          "t": "warn",
+          "md": "La TIR es intuitiva pero traicionera: ante proyectos mutuamente excluyentes de distinta escala, la regla correcta es el **VAN**, no la TIR. La TIR más alta no siempre crea más valor."
+        }
+      ]
+    },
+    {
+      "title": "Estadística aplicada y regresión",
+      "intro": "Los números financieros vienen con incertidumbre; ignorarla es tan peligroso como no medirla.",
+      "blocks": [
+        {
+          "t": "ul",
+          "items": [
+            "Distribuciones relevantes en finanzas e **inferencia** (intervalos, contrastes) con conciencia de sus supuestos.",
+            "**Correlación y sus límites:** correlación no es causalidad, y una correlación alta puede ser espuria.",
+            "**Regresión simple y múltiple** con **diagnóstico de supuestos** (linealidad, homocedasticidad, normalidad de residuos, no multicolinealidad).",
+            "Aplicaciones directas: **estimación de betas** (regresión de retornos) y **descomposición de estructuras de costos** (fijo vs. variable por regresión sobre volumen)."
+          ]
+        },
+        {
+          "t": "quote",
+          "author": "Jeffrey Wooldridge",
+          "credential": "Introductory Econometrics",
+          "md": "Un coeficiente de regresión sin el examen de sus supuestos es un número sin garantía. El diagnóstico no es un trámite posterior: es parte del resultado."
+        }
+      ]
+    },
+    {
+      "title": "Series temporales y pronóstico",
+      "intro": "Proyectar ventas, demanda o mora exige modelos que respeten la estructura temporal del dato.",
+      "blocks": [
+        {
+          "t": "ul",
+          "items": [
+            "**Estacionariedad** y descomposición (tendencia, estacionalidad, ruido).",
+            "Modelos **autorregresivos**, **suavizado exponencial** y **Holt-Winters** para series con tendencia y estacionalidad.",
+            "**Métricas de error** (MAE, RMSE, MAPE) y su elección **según la función de pérdida** del negocio: no es lo mismo penalizar un faltante que un excedente de stock."
+          ]
+        },
+        {
+          "t": "quote",
+          "author": "Rob Hyndman",
+          "credential": "Forecasting: Principles and Practice",
+          "md": "El mejor modelo no es el más complejo, sino el que pronostica mejor fuera de la muestra. La elección de la métrica de error debe reflejar el costo real de equivocarse."
+        }
+      ]
+    },
+    {
+      "title": "Álgebra lineal y reproducibilidad",
+      "intro": "La base matemática de la consolidación de modelos y del aprendizaje automático que viene en el tercer cuatrimestre.",
+      "blocks": [
+        {
+          "t": "p",
+          "md": "Las **operaciones matriciales** consolidan modelos (varias unidades, varios escenarios) y son el motor del cálculo de **redes neuronales** —que en la asignatura 2.3 se construyen incluso dentro de la planilla—. Entender la mecánica matricial antes de delegarla en una librería es el fundamento pedagógico del programa."
+        },
+        {
+          "t": "formula",
+          "name": "Producto matricial",
+          "expr": "C = A · B  →  c_ij = Σ_k a_ik · b_kj",
+          "note": "La misma operación (MMULT en Excel, @ en numpy) que consolida un modelo o propaga una capa de una red neuronal."
+        },
+        {
+          "t": "idea",
+          "md": "Reproducibilidad = entorno declarado + control de versiones + pruebas unitarias. Un cálculo que no se puede volver a correr y verificar no es un resultado: es una opinión con decimales."
+        }
+      ]
+    },
+    {
+      "title": "Matemática financiera avanzada: las patologías de la TIR",
+      "intro": "La TIR es la tasa más intuitiva y la más traicionera. Entender exactamente dónde y por qué falla es lo que separa una decisión de inversión sólida de un error costoso.",
+      "blocks": [
+        {
+          "t": "p",
+          "md": "La TIR es la tasa que anula el VAN. Su atractivo —resumir la rentabilidad en un solo número porcentual— esconde tres trampas."
+        },
+        {
+          "t": "ol",
+          "items": [
+            "**Múltiples TIR.** Un flujo con varios cambios de signo (por ejemplo, una inversión que exige un desembolso grande de cierre al final) puede tener más de una TIR, o ninguna real. El número deja de ser interpretable.",
+            "**Supuesto de reinversión.** La TIR asume que cada flujo intermedio se reinvierte a la propia TIR. Si la TIR es del 40 %, supone reinvertir todo al 40 % —irreal—. La **TIRM** lo corrige usando una tasa de reinversión explícita.",
+            "**Comparación de proyectos de distinta escala o duración.** El proyecto con TIR más alta puede crear menos valor en pesos que uno con TIR menor pero mayor. Ante exclusión mutua, manda el **VAN**."
+          ]
+        },
+        {
+          "t": "formula",
+          "name": "TIR modificada (TIRM)",
+          "expr": "TIRM = (VF de los flujos positivos ÷ |VP de los flujos negativos|)^(1/n) − 1",
+          "where": "VF a la tasa de reinversión · VP a la tasa de financiamiento",
+          "note": "Resuelve el supuesto de reinversión irreal de la TIR y elimina el problema de las TIR múltiples."
+        },
+        {
+          "t": "p",
+          "md": "Complementan el instrumental la **duración** (sensibilidad del valor de un flujo a la tasa: la primera derivada) y la **convexidad** (la segunda derivada, que corrige la aproximación lineal de la duración para movimientos grandes de tasa). Son la base para medir el riesgo de tasa de un préstamo o de una cartera de créditos."
+        },
+        {
+          "t": "warn",
+          "md": "La regla operativa: usar la TIR para comunicar, el VAN para decidir. Cuando la TIR y el VAN discrepan sobre cuál proyecto elegir, el VAN tiene razón —porque mide creación de valor en pesos, no un porcentaje que ignora la escala—."
+        }
+      ]
+    },
+    {
+      "title": "Estadística con conciencia de sus supuestos",
+      "intro": "El instrumental estadístico es poderoso pero frágil: aplicado sin verificar sus supuestos, produce números con apariencia de rigor y sin garantía.",
+      "blocks": [
+        {
+          "t": "p",
+          "md": "La **regresión** es el caballo de batalla: se usa para estimar betas (regresando los retornos de la empresa contra los del mercado) y para descomponer estructuras de costos (regresando el costo total contra el volumen para separar fijo de variable). Pero cada coeficiente tiene valor solo si se cumplen sus supuestos."
+        },
+        {
+          "t": "table",
+          "title": "Los supuestos de la regresión y qué pasa si fallan",
+          "headers": [
+            "Supuesto",
+            "Si falla…"
+          ],
+          "firstColLeft": true,
+          "rows": [
+            [
+              "Linealidad",
+              "La relación real es curva; el modelo la deforma"
+            ],
+            [
+              "Homocedasticidad",
+              "La varianza del error no es constante; los tests engañan"
+            ],
+            [
+              "Normalidad de residuos",
+              "Los intervalos de confianza dejan de ser válidos"
+            ],
+            [
+              "No multicolinealidad",
+              "Predictores correlacionados vuelven inestables los coeficientes"
+            ],
+            [
+              "Independencia",
+              "La autocorrelación (común en series) infla la significatividad"
+            ]
+          ],
+          "caption": "El diagnóstico de supuestos no es un trámite posterior: es parte del resultado. Un coeficiente sin ese examen es un número sin garantía."
+        },
+        {
+          "t": "quote",
+          "author": "Jeffrey Wooldridge",
+          "credential": "Introductory Econometrics",
+          "md": "La correlación no es causalidad, y una regresión mal especificada puede producir relaciones espurias con altísima significatividad estadística. El juicio económico debe guiar al modelo, no al revés."
+        }
+      ]
+    },
+    {
+      "title": "Series temporales y pronóstico honesto",
+      "intro": "Proyectar ventas, demanda o mora exige modelos que respeten la estructura temporal —y una evaluación que no se engañe a sí misma.",
+      "blocks": [
+        {
+          "t": "ul",
+          "items": [
+            "**Estacionariedad:** muchos modelos exigen que la media y la varianza sean estables. Una serie con tendencia se diferencia antes de modelar.",
+            "**Descomposición:** separar tendencia, estacionalidad y ruido para entender qué mueve la serie.",
+            "**Modelos:** autorregresivos (AR), suavizado exponencial y **Holt-Winters** para series con tendencia y estacionalidad simultáneas.",
+            "**Métricas de error (MAE, RMSE, MAPE):** el RMSE castiga más los errores grandes; el MAPE es relativo. La elección depende de la **función de pérdida** del negocio."
+          ]
+        },
+        {
+          "t": "idea",
+          "md": "La disciplina innegociable: evaluar **fuera de la muestra**. Un modelo que ajusta perfecto los datos que ya vio (dentro de la muestra) puede fallar estrepitosamente con datos nuevos —es sobreajuste—. La única prueba honesta es reservar datos que el modelo no vio y medir ahí. Esta idea reaparece, ampliada, en el aprendizaje automático de la asignatura 3.2."
+        },
+        {
+          "t": "quote",
+          "author": "Rob Hyndman",
+          "credential": "Forecasting: Principles and Practice",
+          "md": "No elijas el modelo por su ajuste histórico, sino por su desempeño fuera de la muestra. Y elegí la métrica de error que refleje el costo real de equivocarte: no cuesta lo mismo un faltante que un excedente."
+        }
+      ]
+    },
+    {
+      "title": "Rentas y sistemas de amortización",
+      "intro": "El instrumental de las rentas y los sistemas de amortización es la base para evaluar cualquier financiamiento —y para entender qué se paga realmente en cada cuota—.",
+      "blocks": [
+        {
+          "t": "table",
+          "title": "Los tres sistemas de amortización",
+          "headers": [
+            "Sistema",
+            "Cuota",
+            "Amortización",
+            "Perfil de interés"
+          ],
+          "firstColLeft": true,
+          "rows": [
+            [
+              "Francés",
+              "Constante",
+              "Creciente",
+              "Alto al inicio, decreciente"
+            ],
+            [
+              "Alemán",
+              "Decreciente",
+              "Constante",
+              "Decreciente lineal"
+            ],
+            [
+              "Americano",
+              "Solo interés",
+              "Al final (bullet)",
+              "Constante hasta el vencimiento"
+            ]
+          ],
+          "caption": "El francés (cuota constante) es el más común en el crédito PyME. El americano concentra el capital al final —cómodo en el corto plazo, riesgoso si no se prevé el pago final—."
+        },
+        {
+          "t": "p",
+          "md": "La **capitalización y actualización** son las dos caras del valor tiempo del dinero: llevar un monto al futuro (capitalizar) o traerlo al presente (actualizar). Sobre ellas se construyen las tasas —nominal, efectiva, equivalente y real— y su correcta conversión, que bajo inflación es todo menos trivial: una TNA del 85 % puede ser una tasa real modesta o negativa según la inflación del período."
+        },
+        {
+          "t": "warn",
+          "md": "El costo financiero total (CFT) de un préstamo no es su tasa nominal: incluye comisiones, sellos, seguros e IVA sobre los intereses. Comparar instrumentos por su TNA es engañarse; hay que comparar por el CFT efectivo. Un descuento de cheques con \"tasa baja\" pero cargado de comisiones puede ser más caro que un adelanto con tasa más alta y sin cargos."
+        }
+      ]
+    },
+    {
+      "title": "Álgebra lineal para el analista financiero",
+      "intro": "Las matrices no son abstracción académica: son el motor de la consolidación de modelos y del aprendizaje profundo que viene en el tercer cuatrimestre.",
+      "blocks": [
+        {
+          "t": "p",
+          "md": "Una empresa con varias unidades de negocio, varios escenarios o varias monedas se consolida con **operaciones matriciales**: sumar, ponderar y proyectar múltiples series a la vez. La misma operación —el producto matricial— que consolida un modelo es la que propaga una capa de una red neuronal."
+        },
+        {
+          "t": "formula",
+          "name": "El producto matricial",
+          "expr": "C = A · B  →  c_ij = Σ_k a_ik · b_kj",
+          "where": "MMULT en Excel, @ en numpy",
+          "note": "Entender esta operación a mano es lo que desmitifica el aprendizaje automático del tercer cuatrimestre: una red neuronal es, en el fondo, una secuencia de productos matriciales con una activación."
+        },
+        {
+          "t": "idea",
+          "md": "El fundamento pedagógico del programa: comprender la mecánica antes de delegarla en una librería. El estudiante que construyó a mano una red neuronal en una planilla (asignatura 2.3) no le teme al \"deep learning\" (asignatura 3.2): sabe que debajo hay álgebra que entiende."
+        }
+      ]
+    },
+    {
+      "title": "El doble motor: Python y Excel se verifican mutuamente",
+      "intro": "La técnica de verificación más poderosa del programa es escribir el mismo cálculo dos veces, en dos herramientas distintas, y exigir que coincidan.",
+      "blocks": [
+        {
+          "t": "p",
+          "md": "El motor numérico se escribe **dos veces a propósito**: una en Python (verificable con pruebas unitarias) y otra en Excel con matrices dinámicas (asignatura 2.3). Ambas deben coincidir número a número. Si no coinciden, una de las dos miente, y encontrar cuál es un ejercicio de auditoría que enseña más que cualquier clase teórica."
+        },
+        {
+          "t": "steps",
+          "title": "El flujo de verificación cruzada",
+          "items": [
+            {
+              "k": "Especificar",
+              "d": "Definir la lógica financiera con precisión (fórmulas, supuestos, casos borde)."
+            },
+            {
+              "k": "Implementar en Python",
+              "d": "Con funciones puras y pruebas unitarias que fijan el comportamiento esperado."
+            },
+            {
+              "k": "Replicar en Excel",
+              "d": "Con matrices dinámicas, sin arrastrar, alimentado por la misma fuente."
+            },
+            {
+              "k": "Contrastar",
+              "d": "Comparar salida a salida. La coincidencia da confianza; la discrepancia revela el error."
+            }
+          ]
+        },
+        {
+          "t": "quote",
+          "author": "Yves Hilpisch",
+          "credential": "Python for Finance",
+          "md": "La confianza en un modelo no viene de que sea complejo, sino de que sea verificable. Dos implementaciones independientes que coinciden valen más que una sola, por elegante que sea."
+        }
+      ]
+    }
+  ],
+  "expertos": [
+    {
+      "author": "Yves Hilpisch",
+      "credential": "The Python Quants",
+      "md": "La ventaja de Python en finanzas es el continuo entre exploración interactiva y sistema productivo: el mismo código que prototipás es el que después automatizás."
+    },
+    {
+      "author": "Wes McKinney",
+      "credential": "creador de pandas",
+      "md": "La mayor parte del trabajo analítico real es preparación y limpieza de datos. Una herramienta que hace fácil lo tedioso libera tiempo para el pensamiento."
+    },
+    {
+      "author": "Rob Hyndman",
+      "credential": "Monash University",
+      "md": "Evaluá siempre el pronóstico contra un conjunto de prueba que el modelo no vio. La bondad de ajuste dentro de la muestra engaña."
+    }
+  ],
+  "caso": {
+    "titulo": "¿Conviene ampliar la planta? El VAN de la inversión",
+    "empresa": "Maderas del Litoral S.A. — evaluación del proyecto de ampliación",
+    "contexto": "Los tres hermanos evalúan invertir 8.000 (miles) en una nueva línea de aberturas. El proyecto promete flujos incrementales durante cinco años, con recupero parcial de capital de trabajo al final.\n\nLa pregunta del directorio es simple y letal: ¿este proyecto crea o destruye valor? El consultor debe construir la función en Python (con tests) y su espejo en Excel con matrices dinámicas, descontar los flujos al costo del capital de la empresa (WACC ≈ 20 %, que se documenta en la asignatura 3.1) y pronunciarse con VAN, TIR y período de recupero.\n\nEl resultado anticipa el gran tema del cuarto cuatrimestre: crecer no siempre crea valor.",
+    "datos": [
+      {
+        "t": "table",
+        "title": "Flujo de fondos del proyecto (miles de $)",
+        "headers": [
+          "Momento",
+          "Flujo de fondos"
+        ],
+        "firstColLeft": true,
+        "rows": [
+          [
+            "Año 0 — inversión",
+            "−8.000"
+          ],
+          [
+            "Año 1",
+            "1.900"
+          ],
+          [
+            "Año 2",
+            "2.100"
+          ],
+          [
+            "Año 3",
+            "2.300"
+          ],
+          [
+            "Año 4",
+            "2.400"
+          ],
+          [
+            "Año 5 (incl. recupero)",
+            "3.800"
+          ]
+        ]
+      },
+      {
+        "t": "table",
+        "title": "Parámetros",
+        "headers": [
+          "Parámetro",
+          "Valor"
+        ],
+        "firstColLeft": true,
+        "rows": [
+          [
+            "Costo del capital (WACC)",
+            "20%"
+          ],
+          [
+            "TNA de referencia (pesos)",
+            "85%"
+          ],
+          [
+            "Capitalizaciones por año",
+            "12"
+          ],
+          [
+            "Inflación anual",
+            "60%"
+          ]
+        ]
+      }
+    ],
+    "consigna": [
+      "¿Cuál es el VAN del proyecto al 20 %? ¿Crea o destruye valor?",
+      "¿Cuál es la TIR y cómo se compara con el costo del capital?",
+      "¿Cuál es la tasa efectiva anual de la TNA y cuál la tasa real bajo inflación del 60 %?",
+      "¿Por qué la TIR (≈ 15 %) menor que el WACC anticipa la paradoja del crecimiento (asignatura 4.2)?"
+    ],
+    "metodologia": [
+      {
+        "k": "Descontar (VAN)",
+        "d": "Traer cada flujo a valor presente con el factor 1/(1+r)^t y sumarlos. VAN > 0 crea valor."
+      },
+      {
+        "k": "Resolver la TIR",
+        "d": "Encontrar la tasa que anula el VAN; barrer un rango de tasas y ubicar el cruce por cero (dynamic array), sin depender de una función caja-negra."
+      },
+      {
+        "k": "Homogeneizar tasas",
+        "d": "Convertir la nominal a efectiva y a real (Fisher) para comparar peras con peras bajo inflación."
+      },
+      {
+        "k": "Verificar (dos motores)",
+        "d": "Contrastar el resultado de Python (con tests) contra el Excel de matrices dinámicas; deben coincidir."
+      },
+      {
+        "k": "Concluir",
+        "d": "Pronunciarse con VAN, TIR y el índice de rentabilidad, y conectar con el costo del capital y el crecimiento."
+      }
+    ]
+  },
+  "ejercicio": {
+    "titulo": "VAN y TIR de un proyecto menor",
+    "enunciado": "Maderas del Litoral evalúa una inversión chica en un secadero de madera: 500 (miles) hoy, que generaría flujos durante tres años. El costo del capital relevante es 18 %.",
+    "datos": [
+      {
+        "t": "table",
+        "title": "Flujo del proyecto (miles de $)",
+        "headers": [
+          "Momento",
+          "Flujo"
+        ],
+        "firstColLeft": true,
+        "rows": [
+          [
+            "Año 0",
+            "−500"
+          ],
+          [
+            "Año 1",
+            "180"
+          ],
+          [
+            "Año 2",
+            "200"
+          ],
+          [
+            "Año 3",
+            "220"
+          ]
+        ]
+      }
+    ],
+    "preguntas": [
+      "¿Cuál es el VAN al 18 %? ¿Crea o destruye valor?",
+      "¿Está la TIR por encima o por debajo del costo del capital?"
+    ],
+    "solucion": [
+      {
+        "t": "p",
+        "md": "Se descuenta cada flujo: 180/1,18 = 152,5 · 200/1,18² = 143,6 · 220/1,18³ = 133,9. Suma de valores presentes = **430,1**."
+      },
+      {
+        "t": "formula",
+        "name": "VAN",
+        "expr": "VAN = 430,1 − 500 = − 69,9",
+        "note": "VAN negativo: el proyecto destruye valor al 18 %."
+      },
+      {
+        "t": "p",
+        "md": "Como el VAN es negativo, la **TIR está por debajo del 18 %** (rondando el 9 %): el proyecto no cubre el costo del capital."
+      },
+      {
+        "t": "idea",
+        "md": "Resultado: VAN ≈ **−70**, TIR ≈ **9 %** < WACC 18 %. El secadero, a estos números, **no conviene**: destruye valor. Es la misma lógica RONIC < WACC de la asignatura 4.2."
+      }
+    ]
+  },
+  "bibliografia": [
+    "Hilpisch, Y. — *Python for Finance*",
+    "McKinney, W. — *Python for Data Analysis*",
+    "Wooldridge, J. — *Introductory Econometrics*",
+    "Hyndman, R. & Athanasopoulos, G. — *Forecasting: Principles and Practice*",
+    "Beaumont, P. — *Financial Engineering Principles*",
+    "Schlosser, A. — *Corporate Finance: A Model Building Approach*"
+  ]
+}

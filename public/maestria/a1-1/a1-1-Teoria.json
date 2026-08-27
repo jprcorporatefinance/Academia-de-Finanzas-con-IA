@@ -1,0 +1,801 @@
+{
+  "cod": "1.1",
+  "nombre": "Contabilidad Financiera Avanzada y Normalización de Estados Contables en Economías Inflacionarias",
+  "sections": [
+    {
+      "title": "El estado contable no es la base de la decisión financiera",
+      "intro": "El estado contable es un sistema de información construido para rendir cuentas conforme a una normativa. El análisis financiero necesita medir otra cosa: el capital efectivamente inmovilizado y el resultado económico recurrente. Entre ambos hay una brecha, y esa brecha es el objeto de esta asignatura.",
+      "blocks": [
+        {
+          "t": "p",
+          "md": "La contabilidad responde a una pregunta legal y fiscal: *¿cómo se rindió cuenta del patrimonio conforme a las normas profesionales vigentes?* Las finanzas corporativas responden a otra, económica: *¿cuánto capital tiene la empresa efectivamente inmovilizado y cuánto resultado recurrente genera ese capital?* Confundir ambas preguntas es la primera fuente de error del analista principiante. Un balance impecable desde lo normativo puede ser una base engañosa para decidir una inversión, un préstamo o una compraventa."
+        },
+        {
+          "t": "quote",
+          "author": "Krishna Palepu & Paul Healy",
+          "credential": "Harvard Business School — Business Analysis and Valuation",
+          "md": "El análisis contable existe para **deshacer las distorsiones** que introducen las reglas de reconocimiento y la discrecionalidad de la gerencia. Antes del análisis financiero hay un paso previo e ineludible: evaluar la calidad de los números y ajustarlos para que reflejen la realidad económica del negocio.",
+          "source": "Marco de cuatro pasos: estrategia, contabilidad, finanzas, prospectiva"
+        },
+        {
+          "t": "p",
+          "md": "En la empresa que **no cotiza** —el objeto central de esta Maestría— el problema se agrava por tres razones simultáneas: la información no pasa por el filtro de un mercado de capitales; la unidad jurídica rara vez coincide con la unidad económica real; y la frontera entre el patrimonio de la empresa y el del dueño es porosa. Por eso el trabajo no empieza analizando: empieza **depurando**."
+        },
+        {
+          "t": "chain",
+          "title": "La cadena de transformación de la información",
+          "nodes": [
+            "Estado contable de presentación",
+            "Reexpresión en moneda homogénea",
+            "Catálogo de adecuaciones",
+            "Estado analítico",
+            "Capital empleado y NOPAT"
+          ],
+          "caption": "Ningún indicador del programa se calcula sobre el estado contable crudo: todos se apoyan en el estado analítico que se construye en esta asignatura."
+        },
+        {
+          "t": "idea",
+          "md": "Un ratio calculado sobre información no depurada no es un dato: es ruido con apariencia de precisión. La depuración no es un preliminar prescindible; es la condición de validez de todo lo que viene después."
+        }
+      ]
+    },
+    {
+      "title": "Reexpresión en moneda homogénea",
+      "intro": "Sumar pesos de enero con pesos de diciembre bajo inflación es sumar unidades distintas. La reexpresión convierte todas las partidas a moneda de cierre para que la comparación tenga sentido económico.",
+      "blocks": [
+        {
+          "t": "p",
+          "md": "La reexpresión se rige en Argentina por la **RT 6** de la FACPCE, hoy leída dentro del cuerpo unificado de la **RT 54**, y es conceptualmente equivalente a la **NIC 29** (información financiera en economías hiperinflacionarias). La Resolución JG 539/2018 de la FACPCE dejó fijado el disparador: cuando la inflación acumulada en tres años supera el 100 %, la reexpresión es obligatoria y no optativa."
+        },
+        {
+          "t": "p",
+          "md": "El mecanismo es un **coeficiente de reexpresión**: cada partida no monetaria se lleva a moneda de cierre multiplicándola por el cociente entre el índice de precios del mes de cierre y el índice del mes en que la partida se originó (su *anclaje*)."
+        },
+        {
+          "t": "formula",
+          "name": "Coeficiente de reexpresión",
+          "expr": "Coef = Índice de cierre ÷ Índice de origen",
+          "where": "Valor reexpresado = Valor de origen × Coef",
+          "note": "El índice es el nacional de precios que la norma indique (IPC / índice mayorista según el período). El “origen” es el mes de incorporación de la partida al patrimonio, no el de cierre."
+        },
+        {
+          "t": "p",
+          "md": "La distinción decisiva es entre partidas **monetarias** y **no monetarias**. Las no monetarias (bienes de cambio, bienes de uso, aportes) se reexpresan porque su valor está anclado a un momento del pasado. Las monetarias (caja, créditos y deudas en pesos) **no se reexpresan**: ya están expresadas en moneda de cierre por definición. Pero mantenerlas bajo inflación genera un resultado propio —el RECPAM— que es el tema de la sección siguiente."
+        },
+        {
+          "t": "warn",
+          "md": "El error más frecuente es reexpresar un rubro monetario o anclar una partida al mes de cierre en vez de al mes de origen. Ambos destruyen la homogeneidad y contaminan todo indicador que use esas cifras."
+        }
+      ]
+    },
+    {
+      "title": "RECPAM: la pérdida (o ganancia) invisible",
+      "intro": "El Resultado por Exposición al Cambio en el Poder Adquisitivo de la Moneda mide lo que la empresa gana o pierde por su posición monetaria bajo inflación. No aparece en el flujo de caja ni en el EBITDA, pero es real y frecuentemente grande.",
+      "blocks": [
+        {
+          "t": "p",
+          "md": "Mantener **activos monetarios** (caja, cuentas por cobrar en pesos) bajo inflación implica una **pérdida** de poder adquisitivo: los mismos pesos compran menos. Mantener **pasivos monetarios** (deuda en pesos, proveedores) implica una **ganancia**: se cancela con pesos más baratos. El RECPAM es el neto de ambos efectos sobre la **posición monetaria neta**."
+        },
+        {
+          "t": "formula",
+          "name": "RECPAM (aproximación)",
+          "expr": "RECPAM ≈ − (Activos monetarios − Pasivos monetarios) × π",
+          "where": "π = tasa de inflación del período · PMN = Activos monetarios − Pasivos monetarios",
+          "note": "Si la Posición Monetaria Neta es ACTIVA (PMN > 0) el RECPAM es una pérdida (negativo). Si es PASIVA (PMN < 0), es una ganancia por licuación de deuda."
+        },
+        {
+          "t": "idea",
+          "md": "La empresa que “gana” porque su deuda se licúa no está creando valor operativo: está transfiriendo valor desde sus acreedores. Confundir la ganancia por RECPAM con rentabilidad genuina es una de las ilusiones más caras de la gestión bajo inflación."
+        },
+        {
+          "t": "quote",
+          "author": "Enrique Fowler Newton",
+          "credential": "Análisis de Estados Contables · Contabilidad Superior",
+          "md": "Sin reexpresión, la comparación entre cifras de distintos momentos carece de sentido: se comparan magnitudes medidas con **reglas distintas**. La moneda homogénea no es un refinamiento académico, es la precondición de cualquier lectura seria."
+        }
+      ]
+    },
+    {
+      "title": "El catálogo de adecuaciones en seis familias",
+      "intro": "El puente entre el estado contable y el analítico es un catálogo sistemático de ajustes, agrupado en seis familias. No es una lista de “correcciones sueltas”: es un protocolo que garantiza que nada quede sin revisar.",
+      "blocks": [
+        {
+          "t": "table",
+          "title": "Las seis familias de adecuaciones",
+          "headers": [
+            "Familia",
+            "Qué corrige",
+            "Ejemplos nucleares"
+          ],
+          "firstColLeft": true,
+          "rows": [
+            [
+              "A · Unidad de medida",
+              "Homogeneidad de la moneda",
+              "Reexpresión, segregación del RECPAM por rubro, homogeneización cambiaria"
+            ],
+            [
+              "B · Valuación de activos",
+              "Valor económico vs. valor de libros",
+              "Bienes de uso a valor de mercado, bienes de cambio a VNR, previsión de incobrables, intangibles autogenerados"
+            ],
+            [
+              "C · Pasivos",
+              "Deuda real, incluida la oculta",
+              "Arrendamientos no capitalizados, cheques descontados con recurso, avales al grupo, cuentas con socios"
+            ],
+            [
+              "D · Resultados",
+              "Resultado recurrente y a precio de mercado",
+              "Retribución de mercado del dueño, gastos personales, partes relacionadas, partidas no recurrentes"
+            ],
+            [
+              "E · Estructura y perímetro",
+              "Unidad de análisis correcta",
+              "Consolidación del grupo económico real, caja operativa vs. excedente, informalidad parcial"
+            ],
+            [
+              "F · Verificación",
+              "Auditabilidad del trabajo",
+              "Conciliación línea por línea, documentación de fuente/fecha/criterio, análisis de sensibilidad"
+            ]
+          ],
+          "caption": "Cada adecuación se documenta con su fuente, su fecha y su criterio. La familia F es la que convierte el trabajo en algo reproducible por un tercero."
+        },
+        {
+          "t": "p",
+          "md": "El orden importa: primero se homogeneiza la moneda (A), luego se corrige el valor de activos (B) y pasivos (C), después el resultado (D), se define el perímetro correcto (E) y finalmente se verifica y documenta todo (F). Saltear la familia A contamina las cinco restantes."
+        }
+      ]
+    },
+    {
+      "title": "Bienes de uso a valor de mercado: la trampa del activo amortizado",
+      "intro": "La contabilidad mide los bienes de uso a valor de origen menos amortizaciones acumuladas —un criterio de asignación de costo, no de medición de capital—. Para el análisis financiero, los bienes de uso se valúan a valor de mercado.",
+      "blocks": [
+        {
+          "t": "p",
+          "md": "A medida que un activo envejece, su valor residual contable tiende a cero mientras la máquina sigue produciendo. El capital invertido queda **subvaluado** y el ROIC, artificialmente **inflado**: una planta totalmente amortizada y en plena producción aparenta crear valor sin crearlo. Es la distorsión más silenciosa y más frecuente en la industria de capital cerrado."
+        },
+        {
+          "t": "formula",
+          "name": "La distorsión del ROIC",
+          "expr": "ROIC = NOPAT ÷ Capital invertido",
+          "where": "Si el denominador se subvalúa (activo a VO − amort en vez de a mercado), el ROIC sube sin que la eficiencia real cambie."
+        },
+        {
+          "t": "steps",
+          "title": "Métodos de revalúo para el estado analítico",
+          "items": [
+            {
+              "k": "Tasación técnica",
+              "d": "Un profesional matriculado valúa el bien a su valor corriente. Es el estándar cuando el activo es específico o de alto valor."
+            },
+            {
+              "k": "Valor de reposición depreciado",
+              "d": "Costo de reponer un bien equivalente nuevo, ajustado por el grado de uso. Útil cuando existe un mercado del bien nuevo."
+            },
+            {
+              "k": "Mercado secundario",
+              "d": "Precio observable de bienes usados equivalentes. El más objetivo cuando ese mercado existe (rodados, maquinaria estándar)."
+            },
+            {
+              "k": "Valor de uso",
+              "d": "Valor presente de los flujos que el activo genera, cuando no hay mercado de referencia. Es el último recurso y exige declarar los supuestos."
+            }
+          ]
+        },
+        {
+          "t": "quote",
+          "author": "Aswath Damodaran",
+          "credential": "NYU Stern — The Dark Side of Valuation",
+          "md": "El **valor contable del capital** es un número contable, no económico. En empresas con activos viejos o con inflación no corregida, apoyar el retorno del capital sobre el valor de libros produce retornos que parecen extraordinarios y no lo son."
+        }
+      ]
+    },
+    {
+      "title": "El estado de flujo de efectivo: el estado que no miente",
+      "intro": "Es el estado más difícil de manipular y el más subutilizado en la empresa cerrada. Mientras el resultado depende de criterios de devengamiento y valuación, el flujo registra movimientos verificables contra extractos y arqueos.",
+      "blocks": [
+        {
+          "t": "p",
+          "md": "El EFE cumple una función doble: es herramienta de diagnóstico y, sobre todo, **prueba de veracidad** de los otros dos estados. Una utilidad creciente que no se traduce en flujo operativo es la primera señal de que algo en el devengamiento no cierra."
+        },
+        {
+          "t": "p",
+          "md": "Se construye por **método directo** (reconstrucción de cobranzas y pagos efectivos) o **indirecto** (partiendo del resultado y revirtiendo las partidas no erogables). La norma exige conciliación entre ambos. La reconstrucción del método directo es exactamente el ejercicio que después se repite contra el ERP en la asignatura 1.2."
+        },
+        {
+          "t": "warn",
+          "md": "Distinción innegociable: el EFE es un estado contable histórico y **NO es el FCFF**. Descontar un flujo contable creyendo que se descuenta un flujo económico es un error que arrastra toda la valuación. El puente entre ambos —caja excedente, activos no operativos, intereses y su escudo, inversión de reposición vs. de crecimiento— se construye explícitamente y alimenta las asignaturas 3.3 y 4.1."
+        },
+        {
+          "t": "quote",
+          "author": "Stephen Penman",
+          "credential": "Columbia Business School — Financial Statement Analysis and Security Valuation",
+          "md": "La calidad de las ganancias se mide, en última instancia, por su distancia respecto del efectivo. Cuanto más se separan de forma persistente el resultado devengado y el flujo operativo, más deben encenderse las alarmas del analista."
+        }
+      ]
+    },
+    {
+      "title": "Normalización de la empresa familiar",
+      "intro": "Normalizar es separar dos cosas que en la PyME familiar están fundidas: lo operativo de lo no operativo, y lo de la empresa de lo del dueño. Sin esa separación, el resultado no es comparable ni transferible.",
+      "blocks": [
+        {
+          "t": "ul",
+          "items": [
+            "**Retribución del dueño a valor de mercado.** Si el socio-gerente cobra menos que un gerente profesional, el resultado está sobreestimado; si cobra de más, subestimado. Se ajusta a la remuneración de mercado del cargo.",
+            "**Gastos personales imputados a la empresa.** Vehículos, viajes o consumos personales cargados como gasto operativo se retiran del resultado del negocio.",
+            "**Operaciones con partes relacionadas.** Alquileres, compras o ventas a precios distintos del de mercado se llevan a valor de mercado; la diferencia se aísla.",
+            "**Activos de uso personal.** Se excluyen del capital invertido y se valúan por separado.",
+            "**Informalidad parcial.** Se reconstruye con declaración explícita del alcance y de la incertidumbre que introduce."
+          ]
+        },
+        {
+          "t": "quote",
+          "author": "Gary Trugman",
+          "credential": "Understanding Business Valuation (AICPA)",
+          "md": "En la empresa de capital cerrado, los ajustes de normalización —discrecionales y de control— son el corazón del análisis. Separar los gastos que existen porque el dueño quiere de los que existen porque el negocio los necesita es lo que revela la verdadera capacidad de generación de resultados."
+        },
+        {
+          "t": "idea",
+          "md": "La normalización no “maquilla” los números: los vuelve comparables. Un comprador, un banco o un jurado valúan la capacidad recurrente del negocio, no las decisiones personales de su dueño actual."
+        }
+      ]
+    },
+    {
+      "title": "Del estado analítico al capital empleado",
+      "intro": "El producto final de la asignatura es el estado analítico y, a partir de él, el capital empleado: el insumo directo del ROIC, del EVA y de la valuación.",
+      "blocks": [
+        {
+          "t": "formula",
+          "name": "Capital empleado (enfoque operativo)",
+          "expr": "Capital = Cuentas por cobrar + Bienes de cambio − Proveedores + Bienes de uso",
+          "where": "Bienes de cambio reexpresados · Bienes de uso a valor de mercado · Cuentas por cobrar depuradas",
+          "note": "Excluye la caja operativa mínima del excedente de caja y separa la deuda financiera del pasivo operativo."
+        },
+        {
+          "t": "chain",
+          "title": "Dónde desemboca esta asignatura",
+          "nodes": [
+            "Estado analítico",
+            "Capital empleado + NOPAT",
+            "ROIC (2.1)",
+            "Spread ROIC − WACC",
+            "EVA y valuación (4.1)"
+          ],
+          "caption": "La 1.1 es la raíz del mapa de generadores de valor: un error acá se propaga a todo el árbol."
+        },
+        {
+          "t": "p",
+          "md": "Por eso el régimen de evaluación de la asignatura culmina en un trabajo práctico integrador: depuración, reexpresión y normalización completa de un juego de estados contables reales anonimizados, con un **memorando de ajustes** que fundamenta cada adecuación en su norma. Ese memorando es la primera pieza del Trabajo Final."
+        }
+      ]
+    },
+    {
+      "title": "La mecánica de la reexpresión, paso a paso",
+      "intro": "La reexpresión no es un concepto abstracto: es un procedimiento con pasos precisos. Dominarlo evita los errores que después contaminan todo el análisis.",
+      "blocks": [
+        {
+          "t": "steps",
+          "title": "El procedimiento completo",
+          "items": [
+            {
+              "k": "Clasificar cada partida",
+              "d": "Separar monetarias (caja, créditos y deudas en pesos) de no monetarias (bienes de cambio, de uso, aportes, resultados). Solo las no monetarias se reexpresan."
+            },
+            {
+              "k": "Determinar el anclaje (fecha de origen)",
+              "d": "Identificar el mes en que cada partida no monetaria se incorporó al patrimonio. Un bien comprado en marzo se ancla a marzo, no al cierre."
+            },
+            {
+              "k": "Calcular el coeficiente",
+              "d": "Coef = índice de cierre ÷ índice de origen. Cada partida tiene su propio coeficiente según su anclaje."
+            },
+            {
+              "k": "Reexpresar",
+              "d": "Valor reexpresado = valor de origen × coeficiente. El resultado queda en moneda de cierre."
+            },
+            {
+              "k": "Segregar el RECPAM",
+              "d": "El resultado por exposición se calcula sobre la posición monetaria y se desagrega por rubro para su análisis."
+            },
+            {
+              "k": "Conciliar",
+              "d": "Verificar que el patrimonio neto reexpresado cierre línea por línea. La conciliación es la prueba de que no se perdió ni duplicó nada."
+            }
+          ]
+        },
+        {
+          "t": "p",
+          "md": "Un detalle que suele pasarse por alto: los **resultados** también son no monetarios y se reexpresan según el mes en que se generaron. Un costo de ventas de un producto comprado hace seis meses no vale lo mismo, en moneda de cierre, que uno comprado el mes pasado. Ignorarlo distorsiona el margen bruto real."
+        },
+        {
+          "t": "table",
+          "title": "Ejemplo de reexpresión por rubro",
+          "headers": [
+            "Rubro no monetario",
+            "Origen",
+            "Índice orig.",
+            "Coef.",
+            "Reexpresado"
+          ],
+          "firstColLeft": true,
+          "rows": [
+            [
+              "Bienes de cambio",
+              "oct.",
+              "142,6",
+              "1,45",
+              "×1,45"
+            ],
+            [
+              "Planta (valor de origen)",
+              "ene. año 1",
+              "58,3",
+              "3,55",
+              "×3,55"
+            ],
+            [
+              "Rodados",
+              "jun.",
+              "110,4",
+              "1,87",
+              "×1,87"
+            ],
+            [
+              "Aportes de capital",
+              "ene. año 0",
+              "40,0",
+              "5,17",
+              "×5,17"
+            ]
+          ],
+          "caption": "Cada partida se ancla a su propio momento: los más antiguos reciben coeficientes mayores. Un único coeficiente para todo el balance es un error grave."
+        },
+        {
+          "t": "warn",
+          "md": "Error de principiante: aplicar el coeficiente del cierre (o un promedio) a todas las partidas por igual. Cada una tiene su anclaje. La planta comprada hace tres años y el inventario del último mes se reexpresan con coeficientes muy distintos."
+        }
+      ]
+    },
+    {
+      "title": "RECPAM y resultados por tenencia en profundidad",
+      "intro": "El RECPAM es el resultado más contraintuitivo de la contabilidad bajo inflación. Entenderlo a fondo separa al analista del que solo repite fórmulas.",
+      "blocks": [
+        {
+          "t": "p",
+          "md": "La **posición monetaria neta (PMN)** es la diferencia entre los activos monetarios y los pasivos monetarios. Mantenerla bajo inflación produce un resultado: si la posición es **activa** (más activos que pasivos monetarios), se pierde poder adquisitivo; si es **pasiva**, se gana por licuación de la deuda."
+        },
+        {
+          "t": "formula",
+          "name": "RECPAM sobre posición promedio",
+          "expr": "RECPAM = − PMN_promedio × π",
+          "where": "PMN promedio ponderada por el tiempo · π = inflación del período",
+          "note": "Rigurosamente, el RECPAM se calcula sobre la evolución de la posición monetaria a lo largo del período, no sobre un solo saldo de cierre."
+        },
+        {
+          "t": "idea",
+          "md": "La distinción clave que casi nadie hace bien: una empresa endeudada en pesos que muestra \"ganancias\" bajo inflación no está necesariamente creando valor. Buena parte de ese resultado es **RECPAM** —una transferencia desde sus acreedores por licuación—, no rentabilidad operativa. Y ese RECPAM **desaparece** apenas la inflación cede. Proyectar hacia adelante un resultado inflado por RECPAM es una de las causas más frecuentes de valuaciones erróneas."
+        },
+        {
+          "t": "p",
+          "md": "Íntimamente ligado está el **resultado por tenencia**: la diferencia entre el valor corriente de un bien no monetario y su valor reexpresado. Si el inventario se aprecia por encima de la inflación general, hay un resultado por tenencia positivo (real); si se aprecia por debajo, negativo. Separarlo del resultado operativo es indispensable para saber cuánto ganó la empresa **por operar** y cuánto **por tener** stock en un contexto inflacionario."
+        },
+        {
+          "t": "quote",
+          "author": "Enrique Fowler Newton",
+          "credential": "Contabilidad Superior",
+          "md": "El resultado por exposición a la inflación y los resultados por tenencia no son refinamientos técnicos: son la diferencia entre entender qué pasó de verdad con el patrimonio y creer una ilusión nominal."
+        },
+        {
+          "t": "warn",
+          "md": "El descalce de monedas agrava todo: una deuda en dólares con activos en pesos, bajo devaluación, combina pérdida por diferencia de cambio y dinámica de RECPAM. Ubicar mal esas diferencias (operativas vs. financieras) tergiversa tanto el EBIT como el resultado financiero."
+        }
+      ]
+    },
+    {
+      "title": "El debate: ajuste integral frente a remedición de activos",
+      "intro": "No toda la doctrina resuelve la inflación igual. Conocer el debate permite al analista elegir con criterio y comunicar sus supuestos.",
+      "blocks": [
+        {
+          "t": "p",
+          "md": "La **reexpresión integral** (RT 6 / NIC 29) reexpresa todo el juego de estados en moneda homogénea. Es el estándar del programa. Pero existe una alternativa parcial —la **remedición de ciertos activos** a valores corrientes (modelo de revaluación)— que algunas empresas prefieren por ser menos costosa de aplicar, aunque deja el resto de los estados en moneda heterogénea."
+        },
+        {
+          "t": "table",
+          "title": "Dos enfoques frente a la inflación",
+          "headers": [
+            "Dimensión",
+            "Reexpresión integral",
+            "Remedición parcial"
+          ],
+          "firstColLeft": true,
+          "rows": [
+            [
+              "Alcance",
+              "Todo el juego de estados",
+              "Solo algunos activos"
+            ],
+            [
+              "Homogeneidad",
+              "Completa (moneda de cierre)",
+              "Parcial"
+            ],
+            [
+              "RECPAM",
+              "Se reconoce explícitamente",
+              "No se aísla igual"
+            ],
+            [
+              "Aptitud para análisis financiero",
+              "Alta",
+              "Limitada"
+            ]
+          ],
+          "caption": "Para el análisis financiero riguroso, la reexpresión integral es superior: es la única que homogeneiza todo y aísla el RECPAM."
+        },
+        {
+          "t": "quote",
+          "author": "Krishna Palepu & Paul Healy",
+          "credential": "Business Analysis and Valuation",
+          "md": "Cuando las reglas contables dejan margen de elección, el analista no debe aceptar pasivamente la opción del preparador: debe reconstruir la versión que mejor refleje la realidad económica, y declarar el criterio."
+        },
+        {
+          "t": "idea",
+          "md": "Regla del programa: cualquiera sea el criterio contable adoptado por la empresa, el estado analítico se construye con **reexpresión integral y bienes de uso a valor de mercado**, dejando documentada la diferencia contra lo que la empresa presentó. El analista elige el criterio correcto para decidir, no el más cómodo para preparar."
+        }
+      ]
+    },
+    {
+      "title": "Normalización avanzada de la empresa familiar",
+      "intro": "La normalización básica ajusta el sueldo del dueño y los gastos personales. La avanzada entra en las zonas grises donde se esconde la verdadera capacidad de generación de valor.",
+      "blocks": [
+        {
+          "t": "ul",
+          "items": [
+            "**Operaciones con partes relacionadas a precios no de mercado.** Una empresa que le compra a otra del mismo grupo a precios inflados o vende a precios bajos traslada resultado entre sociedades. Cada operación se lleva a valor de mercado y la diferencia se aísla.",
+            "**Deuda con socios y directores.** Distinguir la deuda genuina (que devenga interés y se paga) del aporte encubierto (que nunca se cobra). La primera es pasivo; el segundo, patrimonio.",
+            "**Informalidad parcial.** Ventas o compras no registradas se reconstruyen con declaración explícita del alcance y del margen de error. Nunca se ignora ni se inventa: se documenta la incertidumbre.",
+            "**Activos de uso personal.** Vehículos, inmuebles o bienes que la empresa registra pero usa la familia se excluyen del capital invertido y se valúan por separado.",
+            "**Quebrantos acumulados y su efecto impositivo.** Un quebranto trasladable es un activo fiscal que cambia la tasa efectiva futura y debe reconocerse."
+          ]
+        },
+        {
+          "t": "chain",
+          "title": "Por qué la normalización anticipa la valuación",
+          "nodes": [
+            "Normalizar resultado",
+            "NOPAT recurrente",
+            "ROIC y EVA reales",
+            "Valor transferible (4.1)"
+          ],
+          "caption": "Un comprador paga por la capacidad recurrente del negocio, no por las decisiones personales del dueño actual. La normalización revela esa capacidad."
+        },
+        {
+          "t": "quote",
+          "author": "Gary Trugman",
+          "credential": "Understanding Business Valuation (AICPA)",
+          "md": "El comprador hipotético no hereda al dueño: hereda el negocio. Todo gasto que existe porque el dueño lo quiere, y no porque el negocio lo necesita, debe normalizarse para revelar el resultado que un tercero podría replicar."
+        },
+        {
+          "t": "p",
+          "md": "Esta normalización conecta directamente con el **Índice de Dependencia del Dueño (IDD)**, indicador propio de JPR que se desarrolla en las asignaturas 3.1 y 4.4: cuanto más depende la empresa de su dueño —de sus relaciones, de su firma en cada decisión, de su presencia diaria—, menos transferible es y más castigo recibe en el costo del capital y en los descuentos de iliquidez."
+        }
+      ]
+    },
+    {
+      "title": "Errores frecuentes en la depuración (y cómo detectarlos)",
+      "intro": "La experiencia de consultoría deja un catálogo de errores recurrentes. Conocerlos de antemano es la mejor defensa.",
+      "blocks": [
+        {
+          "t": "table",
+          "title": "Catálogo de errores y su detección",
+          "headers": [
+            "Error",
+            "Cómo se detecta"
+          ],
+          "firstColLeft": true,
+          "rows": [
+            [
+              "Coeficiente único para todo el balance",
+              "Partidas antiguas y recientes con el mismo factor"
+            ],
+            [
+              "Reexpresar partidas monetarias",
+              "Caja o créditos en pesos con coeficiente ≠ 1"
+            ],
+            [
+              "Planta amortizada a valor de libros",
+              "Activo productivo con valor residual cercano a cero"
+            ],
+            [
+              "RECPAM no segregado",
+              "Resultado financiero que mezcla intereses y exposición"
+            ],
+            [
+              "Sueldo del dueño sin normalizar",
+              "Retribución muy por debajo o encima del mercado"
+            ],
+            [
+              "Grupo económico no consolidado",
+              "Operaciones intragrupo que inflan o desinflan ventas"
+            ],
+            [
+              "Deuda oculta ignorada",
+              "Cheques descontados o avales fuera del pasivo"
+            ]
+          ],
+          "caption": "El protocolo de depuración incluye un análisis de sensibilidad: ¿cuánto cambia el diagnóstico si se mueve la adecuación más discrecional? Si el resultado se da vuelta, ese supuesto merece defensa extra."
+        },
+        {
+          "t": "idea",
+          "md": "La verificación final no es un trámite: es donde se juega la credibilidad. Un estado analítico auditable —con la fuente, la fecha y el criterio de cada ajuste documentados— es lo que separa una consultoría profesional de una opinión con decimales."
+        }
+      ]
+    },
+    {
+      "title": "El estado de flujo de efectivo bajo inflación",
+      "intro": "El EFE es el estado que no miente, pero bajo inflación exige un cuidado especial: los flujos de distintos momentos del ejercicio no son sumables en moneda nominal.",
+      "blocks": [
+        {
+          "t": "p",
+          "md": "Bajo inflación, un cobro de enero y uno de diciembre no valen lo mismo. Reexpresar los flujos, tratar el RECPAM dentro de la conciliación y separar el efecto de la tenencia de caja se vuelven indispensables. La **tenencia de caja bajo inflación es una pérdida real** aunque el saldo nominal crezca: tener 1.000 de caja todo el año, con inflación del 80 %, es perder poder adquisitivo aunque el número no baje."
+        },
+        {
+          "t": "warn",
+          "md": "La trampa más común: confundir un aumento de caja por **generación operativa genuina** con un aumento por **licuación de pasivos**. Una empresa que \"mejora su caja\" simplemente porque su deuda en pesos se licuó no está generando efectivo operativo: está transfiriendo valor desde sus acreedores. El EFE reexpresado distingue ambas cosas."
+        },
+        {
+          "t": "p",
+          "md": "El **método directo** (reconstrucción de cobranzas y pagos efectivos) y el **indirecto** (partiendo del resultado y revirtiendo lo no erogable) deben conciliar. Esa reconstrucción de cobranzas y pagos del método directo es exactamente el ejercicio que después se repite contra el ERP en la asignatura 1.2 —la trazabilidad del dato empieza acá—."
+        },
+        {
+          "t": "idea",
+          "md": "El diagnóstico a partir del flujo: la calidad de las utilidades se lee en la relación entre flujo operativo y EBITDA; la firma de cada etapa del ciclo de vida, en el signo de los tres flujos (operativo, de inversión, de financiación); y las señales de alerta más caras —resultado creciente con flujo operativo decreciente, inversiones sistemáticamente inferiores a las depreciaciones (desinversión encubierta), dependencia del refinanciamiento— aparecen todas en el EFE antes que en cualquier otro estado."
+        }
+      ]
+    },
+    {
+      "title": "Del estado analítico al Trabajo Final",
+      "intro": "Todo lo que se construye en esta asignatura desemboca en la primera pieza del Trabajo Final: el memorando de ajustes.",
+      "blocks": [
+        {
+          "t": "p",
+          "md": "El régimen de evaluación culmina en un trabajo práctico integrador sobre un juego de estados contables reales anonimizados: depuración, reexpresión y normalización completas, con un **memorando de ajustes** que fundamenta cada adecuación en su norma, su fecha y su fuente. Ese memorando no es un ejercicio académico: es la Fase Descriptiva del Trabajo Final, la consultoría real que el maestrando hará sobre una empresa del Nordeste argentino."
+        },
+        {
+          "t": "chain",
+          "title": "La 1.1 como cimiento de todo",
+          "nodes": [
+            "Estado contable",
+            "Depuración (6 familias)",
+            "Estado analítico",
+            "Todo el programa (1.4 → 4.4)"
+          ],
+          "caption": "Un error en la depuración se propaga a cada indicador del árbol de valor. Por eso esta asignatura es la raíz, y por eso su estándar de rigor es innegociable."
+        },
+        {
+          "t": "quote",
+          "author": "William Miller",
+          "credential": "Value Maps",
+          "md": "El valor no se encuentra en el balance: se reconstruye a partir de él. El analista que acepta los números tal como se presentan renuncia a su oficio antes de empezar."
+        }
+      ]
+    }
+  ],
+  "expertos": [
+    {
+      "author": "Krishna Palepu & Paul Healy",
+      "credential": "Harvard Business School",
+      "md": "El análisis financiero sin análisis contable previo es construir sobre arena: primero se evalúa la calidad de los números y se corrigen sus distorsiones, recién después se calculan ratios."
+    },
+    {
+      "author": "Aswath Damodaran",
+      "credential": "NYU Stern School of Business",
+      "md": "En finanzas de empresas privadas, la normalización de la retribución del dueño y la separación de lo operativo de lo no operativo suelen mover el valor más que cualquier refinamiento en la tasa de descuento."
+    },
+    {
+      "author": "Enrique Fowler Newton",
+      "credential": "Referente de la doctrina contable argentina",
+      "md": "La moneda homogénea es la precondición de toda comparación. Antes de interpretar, hay que homogeneizar."
+    },
+    {
+      "author": "Stephen Penman",
+      "credential": "Columbia Business School",
+      "md": "La contabilidad de calidad es la que permite ver a través de los criterios de devengamiento hasta la generación de caja subyacente. El analista depura para acercarse a esa caja."
+    },
+    {
+      "author": "Baruch Lev",
+      "credential": "NYU Stern — investigador de intangibles",
+      "md": "La contabilidad tradicional trata a la inversión en intangibles como gasto, subvaluando el capital de las empresas que crean valor con conocimiento. El estado analítico debe corregir ese sesgo."
+    }
+  ],
+  "caso": {
+    "titulo": "Del balance de presentación al estado analítico",
+    "empresa": "Maderas del Litoral S.A. — aserradero y fábrica de aberturas, Corrientes",
+    "contexto": "Maderas del Litoral es una empresa familiar de segunda generación. Su contadora presenta un balance impecable desde lo normativo: cierra, concilia y cumple. El directorio —los tres hermanos dueños— quiere saber dos cosas antes de decidir si toman deuda para ampliar la planta: cuánto capital tiene realmente inmovilizado el negocio y cuánto retorno genera ese capital.\n\nEl balance muestra un ROIC contable que parece excelente. Pero la planta principal está totalmente amortizada y sigue produciendo a full; el mayor de los hermanos, que dirige la operación, cobra un sueldo simbólico; la empresa alquila el galpón a una sociedad de los mismos dueños a un valor por encima del de mercado; y varios gastos de la familia pasan por la empresa. Además, la inflación del ejercicio fue del 60 % y el balance no está reexpresado en su totalidad.\n\nEl encargo: reconstruir el estado analítico, normalizar la empresa familiar y mostrar el ROIC verdadero.",
+    "datos": [
+      {
+        "t": "table",
+        "title": "Datos del ejercicio (en miles de pesos, salvo indicación)",
+        "headers": [
+          "Concepto",
+          "Valor"
+        ],
+        "firstColLeft": true,
+        "rows": [
+          [
+            "EBIT contable",
+            "4.200"
+          ],
+          [
+            "Tasa impositiva efectiva",
+            "35%"
+          ],
+          [
+            "Cuentas por cobrar (depuradas)",
+            "3.100"
+          ],
+          [
+            "Bienes de cambio (valor nominal, origen)",
+            "2.600"
+          ],
+          [
+            "Proveedores",
+            "1.900"
+          ],
+          [
+            "Bienes de uso — valor de libros (VO − amort)",
+            "900"
+          ],
+          [
+            "Bienes de uso — valor de mercado (tasación)",
+            "6.800"
+          ],
+          [
+            "Sueldo del dueño-gerente contabilizado",
+            "600"
+          ],
+          [
+            "Sueldo de mercado del cargo",
+            "2.400"
+          ],
+          [
+            "Gastos personales imputados a la empresa",
+            "850"
+          ],
+          [
+            "Alquiler pagado a sociedad relacionada",
+            "1.500"
+          ],
+          [
+            "Alquiler de mercado del inmueble",
+            "900"
+          ],
+          [
+            "Activos monetarios promedio",
+            "3.400"
+          ],
+          [
+            "Pasivos monetarios promedio",
+            "5.200"
+          ],
+          [
+            "Inflación del período (π)",
+            "60%"
+          ],
+          [
+            "Índice de cierre / Índice de origen bienes de cambio",
+            "1,45"
+          ]
+        ]
+      }
+    ],
+    "consigna": [
+      "¿Cuál es el EBIT normalizado una vez ajustadas la retribución del dueño, los gastos personales y el alquiler con parte relacionada?",
+      "¿Cuánto capital tiene realmente inmovilizado el negocio, valuando los bienes de uso a mercado y reexpresando los bienes de cambio?",
+      "¿Cuánto sobreestima el ROIC contable a la verdadera eficiencia del capital?",
+      "¿La empresa ganó o perdió por su posición monetaria (RECPAM)? ¿Qué implica para la decisión de tomar deuda?"
+    ],
+    "metodologia": [
+      {
+        "k": "Homogeneizar (Familia A)",
+        "d": "Reexpresar bienes de cambio y toda partida no monetaria a moneda de cierre con su coeficiente. Calcular el RECPAM sobre la posición monetaria neta."
+      },
+      {
+        "k": "Revaluar activos (Familia B)",
+        "d": "Llevar los bienes de uso de valor de libros a valor de mercado por tasación. Recalcular el capital invertido."
+      },
+      {
+        "k": "Normalizar resultados (Familia D)",
+        "d": "Ajustar la retribución del dueño al valor de mercado, retirar los gastos personales y llevar el alquiler a valor de mercado."
+      },
+      {
+        "k": "Reconstruir el capital empleado (Familia E)",
+        "d": "CxC + bienes de cambio reexpresados − proveedores + bienes de uso a mercado."
+      },
+      {
+        "k": "Comparar y concluir (Familia F)",
+        "d": "Calcular ROIC contable vs. normalizado, documentar cada ajuste y explicar el impacto sobre la decisión de endeudamiento."
+      }
+    ]
+  },
+  "ejercicio": {
+    "titulo": "Reexpresión y RECPAM de una distribuidora",
+    "enunciado": "La distribuidora **El Norte S.R.L.** cerró su ejercicio con una inflación del 80 %. Tiene bienes de cambio registrados a valor nominal por 1.500 (miles), incorporados cuando el índice de precios era 100; al cierre el índice es 180. Además mantuvo, en promedio, una posición monetaria neta activa (más caja y créditos en pesos que deudas).",
+    "datos": [
+      {
+        "t": "table",
+        "title": "Datos (miles de $)",
+        "headers": [
+          "Concepto",
+          "Valor"
+        ],
+        "firstColLeft": true,
+        "rows": [
+          [
+            "Bienes de cambio (nominal, origen)",
+            "1.500"
+          ],
+          [
+            "Índice de precios de origen",
+            "100"
+          ],
+          [
+            "Índice de precios de cierre",
+            "180"
+          ],
+          [
+            "Activos monetarios promedio",
+            "3.000"
+          ],
+          [
+            "Pasivos monetarios promedio",
+            "1.000"
+          ],
+          [
+            "Inflación del período (π)",
+            "80%"
+          ]
+        ]
+      }
+    ],
+    "preguntas": [
+      "¿Cuál es el coeficiente de reexpresión y el valor reexpresado de los bienes de cambio?",
+      "¿Cuál es el RECPAM del período y qué signo tiene?",
+      "¿La empresa ganó o perdió por su posición monetaria?"
+    ],
+    "solucion": [
+      {
+        "t": "formula",
+        "name": "Coeficiente de reexpresión",
+        "expr": "Coef = 180 ÷ 100 = 1,80",
+        "note": "Bienes de cambio reexpresados = 1.500 × 1,80 = 2.700 (miles)."
+      },
+      {
+        "t": "p",
+        "md": "La posición monetaria neta (PMN) es **activa**: 3.000 − 1.000 = **2.000**. Bajo inflación, mantener activos monetarios netos genera pérdida."
+      },
+      {
+        "t": "formula",
+        "name": "RECPAM",
+        "expr": "RECPAM = − PMN × π = − 2.000 × 0,80 = − 1.600",
+        "note": "Signo negativo: es una pérdida por exposición a la inflación."
+      },
+      {
+        "t": "idea",
+        "md": "Resultado: los bienes de cambio pasan de 1.500 a **2.700** reexpresados, y la empresa **perdió 1.600** de poder adquisitivo por su posición monetaria activa. Mantener caja y créditos en pesos bajo inflación cuesta."
+      }
+    ]
+  },
+  "bibliografia": [
+    "Palepu, K. & Healy, P. — *Business Analysis and Valuation*",
+    "Fowler Newton, E. — *Análisis de Estados Contables* y *Contabilidad Superior*",
+    "FACPCE — RT 6, RT 54 e Informes del CENCyA; Resolución JG 539/2018",
+    "Trugman, G. — *Understanding Business Valuation* (AICPA)",
+    "Damodaran, A. — *The Dark Side of Valuation*",
+    "Penman, S. — *Financial Statement Analysis and Security Valuation*",
+    "IASB — *NIIF para las PYMES* · NIC 29",
+    "Miller, W. — *Value Maps*"
+  ]
+}

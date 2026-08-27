@@ -1,0 +1,400 @@
+{
+  "cod": "4.1",
+  "nombre": "Valuación de Empresas de Capital Cerrado: Flujo de Fondos Descontado, APV y Descuentos de Iliquidez",
+  "sections": [
+    {
+      "title": "DCF: valor del horizonte y valor terminal",
+      "intro": "El valor de una empresa es el valor presente de los flujos que generará. La dificultad está en que esos flujos son infinitos: por eso se parten en dos.",
+      "blocks": [
+        {
+          "t": "formula",
+          "name": "Valor de la firma por DCF",
+          "expr": "EV = Σ FCFF_t/(1+WACC)^t + VT/(1+WACC)^n",
+          "where": "FCFF = flujo de fondos libre de la firma · VT = valor terminal · n = fin del horizonte explícito",
+          "note": "El valor del horizonte (explícito) más el valor terminal descontado. El terminal suele ser la mayor parte del valor."
+        },
+        {
+          "t": "formula",
+          "name": "Valor terminal (Gordon)",
+          "expr": "VT = FCFF_{n+1} ÷ (WACC − g)",
+          "where": "g = crecimiento perpetuo (nunca mayor que el crecimiento de la economía)",
+          "note": "Sensible a g: un punto de más en g puede cambiar el valor drásticamente. Por eso g se justifica, no se elige."
+        },
+        {
+          "t": "warn",
+          "md": "El **FCFF no es el flujo de caja contable** (asignatura 1.1): se construye desde el NOPAT sumando amortizaciones y restando la inversión en capital de trabajo y en activo fijo. Descontar un flujo contable creyendo que es el FCFF arruina la valuación."
+        }
+      ]
+    },
+    {
+      "title": "APV: cuando la estructura de capital cambia",
+      "intro": "El WACC supone una estructura de capital constante. Cuando no lo es —una empresa que se desapalanca, una adquisición—, el APV es el método correcto.",
+      "blocks": [
+        {
+          "t": "formula",
+          "name": "Valor Presente Ajustado",
+          "expr": "APV = V_u + VP(escudo fiscal) − VP(dificultades financieras)",
+          "where": "V_u = FCFF descontado al costo del capital SIN deuda (Ku)",
+          "note": "Separa el valor del negocio (como si no tuviera deuda) del valor que agrega el escudo fiscal y del que resta el riesgo de quiebra. Es más transparente que esconder todo en el WACC."
+        },
+        {
+          "t": "quote",
+          "author": "Aswath Damodaran",
+          "credential": "NYU Stern — Investment Valuation",
+          "md": "El APV es honesto: muestra por separado cuánto vale el negocio, cuánto agrega la deuda por el escudo fiscal y cuánto resta por el riesgo de dificultades. El WACC esconde esos tres efectos en una sola tasa."
+        }
+      ]
+    },
+    {
+      "title": "Los descuentos de la empresa cerrada",
+      "intro": "Una participación en una empresa que no cotiza vale menos que su parte proporcional del valor total. Dos descuentos lo capturan.",
+      "blocks": [
+        {
+          "t": "formula",
+          "name": "Descuentos de capital cerrado",
+          "expr": "Valor = V_100% × (1 − DLOC) × (1 − DLOM)",
+          "where": "DLOC = descuento por falta de control · DLOM = descuento por falta de negociabilidad (liquidez)",
+          "note": "Jerárquicos y MULTIPLICATIVOS: primero falta de control, después falta de liquidez. NUNCA aditivos."
+        },
+        {
+          "t": "ul",
+          "items": [
+            "**DLOC (falta de control):** una participación minoritaria no decide dividendos, sueldos ni estrategia; por eso vale menos que una de control.",
+            "**DLOM (falta de liquidez):** no hay mercado donde vender la participación rápido y sin castigo; esa iliquidez se descuenta.",
+            "El **IDD** (Índice de Dependencia del Dueño, indicador propio JPR) agrava ambos: si la empresa no funciona sin su dueño, es aún menos transferible."
+          ]
+        },
+        {
+          "t": "warn",
+          "md": "Error frecuente y penalizado: **sumar** los descuentos (DLOC + DLOM) en vez de aplicarlos en cascada multiplicativa. Un 15 % y un 25 % no son un 40 %: son 1 − 0,85 × 0,75 = 36,25 %."
+        }
+      ]
+    },
+    {
+      "title": "Del número a la distribución",
+      "intro": "La valuación puntual es una foto; la simulación (3.3) es la película. Se presentan juntas.",
+      "blocks": [
+        {
+          "t": "p",
+          "md": "La valuación por DCF da un número; la simulación de Monte Carlo (asignatura 3.3) lo envuelve en una distribución. El informe al directorio no dice “la empresa vale X”: dice “la empresa vale X en el escenario base, con un rango de P5 a P95, y una probabilidad Y de estar por debajo del capital invertido”."
+        },
+        {
+          "t": "quote",
+          "author": "Shannon Pratt",
+          "credential": "Valuing a Business",
+          "md": "La valuación de una empresa cerrada no es un cálculo, es un juicio informado por cálculos. Los descuentos por control y liquidez son donde más se juega ese juicio, y donde más hay que fundamentar."
+        },
+        {
+          "t": "chain",
+          "title": "El puente al valor",
+          "nodes": [
+            "FCFF proyectado",
+            "DCF: horizonte + terminal",
+            "Equity = EV − deuda neta",
+            "Valor de la participación (× DLOC × DLOM)"
+          ],
+          "caption": "La valuación es el penúltimo eslabón: de acá surge cuánto vale hoy la empresa, y en la 4.2–4.3 cuánto valdría ejecutando el plan."
+        }
+      ]
+    },
+    {
+      "title": "La tiranía del valor terminal",
+      "intro": "En una valuación típica, la mayor parte del valor está en el valor terminal —lo que pasa después del horizonte explícito—. Es donde se esconden los pecados de la valuación.",
+      "blocks": [
+        {
+          "t": "formula",
+          "name": "Valor terminal (Gordon) y su peso",
+          "expr": "VT = FCFF_{n+1} ÷ (WACC − g)",
+          "where": "g nunca mayor que el crecimiento de largo plazo de la economía",
+          "note": "El VT suele representar el 60–80 % del Enterprise Value: pequeños cambios en g o WACC lo mueven enormemente."
+        },
+        {
+          "t": "p",
+          "md": "Dos disciplinas innegociables sobre el valor terminal. Primera: **g se justifica, no se elige** —una empresa no puede crecer para siempre más rápido que la economía, o terminaría siendo más grande que el mundo—. Segunda: en el año terminal, el **ROIC debe converger** hacia el costo del capital (o hacia un premio sostenible defendible); suponer que una empresa mantiene un ROIC extraordinario a perpetuidad ignora la competencia."
+        },
+        {
+          "t": "warn",
+          "md": "El truco más común para inflar una valuación es un g terminal apenas más alto o un margen de largo plazo que nunca converge. Un punto de más en g puede cambiar el valor en un 20–30 %. Por eso el valor terminal siempre se acompaña de una **tabla de sensibilidad** de g × WACC: mostrar el rango es más honesto que fingir un número exacto."
+        },
+        {
+          "t": "quote",
+          "author": "Aswath Damodaran",
+          "credential": "NYU Stern — Investment Valuation",
+          "md": "El valor terminal es donde mueren las buenas valuaciones. Un crecimiento perpetuo demasiado alto, un margen que nunca converge, un ROIC extraordinario a perpetuidad: todos son formas de esconder optimismo dentro de un número que parece técnico."
+        }
+      ]
+    },
+    {
+      "title": "APV: cuando el WACC induce error",
+      "intro": "El WACC supone una estructura de capital constante. Cuando no lo es, el Valor Presente Ajustado (APV) es el método correcto —y el más transparente—.",
+      "blocks": [
+        {
+          "t": "formula",
+          "name": "Valor Presente Ajustado",
+          "expr": "APV = V_u + VP(escudo fiscal) − VP(dificultades financieras)",
+          "where": "V_u = FCFF descontado a Ku (costo del capital SIN deuda)",
+          "note": "Separa el valor del negocio, el aporte del escudo fiscal y el costo del riesgo de quiebra en tres términos visibles."
+        },
+        {
+          "t": "p",
+          "md": "La ventaja del APV es la **transparencia**: en vez de esconder tres efectos distintos (el negocio, el beneficio de la deuda y su riesgo) dentro de una sola tasa (el WACC), los muestra por separado. Es el método correcto cuando la estructura de capital **cambia en el tiempo** —una empresa que se desapalanca, una adquisición apalancada (LBO), un proyecto financiado con deuda que se repaga—."
+        },
+        {
+          "t": "quote",
+          "author": "Aswath Damodaran",
+          "credential": "NYU Stern",
+          "md": "El APV es honesto: muestra por separado cuánto vale el negocio, cuánto agrega la deuda por el escudo fiscal y cuánto resta por el riesgo de dificultades. El WACC esconde esos tres efectos en una sola tasa, y cuando la estructura cambia, esa tasa miente."
+        }
+      ]
+    },
+    {
+      "title": "Los descuentos de la empresa cerrada, en detalle",
+      "intro": "Una participación en una empresa que no cotiza vale menos que su parte proporcional del valor total. Dos descuentos jerárquicos y multiplicativos lo capturan.",
+      "blocks": [
+        {
+          "t": "formula",
+          "name": "Descuentos de capital cerrado",
+          "expr": "Valor = V_100% × (1 − DLOC) × (1 − DLOM)",
+          "where": "DLOC = falta de control · DLOM = falta de negociabilidad (liquidez)",
+          "note": "Jerárquicos y MULTIPLICATIVOS: primero falta de control, después falta de liquidez. NUNCA aditivos."
+        },
+        {
+          "t": "ul",
+          "items": [
+            "**DLOC (falta de control):** una participación minoritaria no decide dividendos, sueldos ni estrategia; por eso vale menos que una de control. Los rangos típicos van del 10 % al 30 %, según cuánto poder efectivo tenga el minoritario.",
+            "**DLOM (falta de liquidez):** no hay un mercado donde vender la participación rápido y sin castigo. Los estudios empíricos (restricted stock, pre-IPO) sitúan el DLOM entre el 20 % y el 35 %, mayor cuanto más ilíquida y dependiente del dueño sea la empresa.",
+            "**El IDD como agravante:** un Índice de Dependencia del Dueño alto aumenta ambos descuentos —si la empresa no funciona sin su dueño, es aún menos transferible y menos negociable—."
+          ]
+        },
+        {
+          "t": "warn",
+          "md": "El error penalizado: **sumar** los descuentos (DLOC + DLOM) en vez de aplicarlos en cascada multiplicativa. Un 20 % y un 30 % no son un 50 %: son 1 − 0,80 × 0,70 = **44 %**. La cascada refleja que el segundo descuento se aplica sobre un valor ya reducido por el primero."
+        }
+      ]
+    },
+    {
+      "title": "La valuación es un juicio, no un cálculo",
+      "intro": "La aritmética de la valuación es la parte fácil. Lo difícil —y lo que distingue al profesional— es el juicio sobre los supuestos.",
+      "blocks": [
+        {
+          "t": "p",
+          "md": "Dos analistas con la misma planilla llegan a valores muy distintos según sus supuestos sobre crecimiento, márgenes de largo plazo, WACC y descuentos. La valuación de una empresa cerrada no produce un número, sino un **rango razonable** que el trabajo del valuador consiste en angostar con evidencia —y en fundamentar, sobre todo, en los descuentos por control e iliquidez, donde más se juega el juicio—."
+        },
+        {
+          "t": "chain",
+          "title": "El puente completo al valor de la participación",
+          "nodes": [
+            "FCFF proyectado",
+            "EV (horizonte + terminal)",
+            "Equity = EV − deuda neta",
+            "Participación × (1−DLOC) × (1−DLOM)"
+          ],
+          "caption": "Cada eslabón agrega un supuesto que hay que defender. El valor de una participación minoritaria e ilíquida puede ser una fracción del valor proporcional del 100 %."
+        },
+        {
+          "t": "quote",
+          "author": "Shannon Pratt",
+          "credential": "Valuing a Business",
+          "md": "La valuación de una empresa cerrada no es un cálculo, es un juicio informado por cálculos. Pretender una precisión de dos decimales sobre un negocio ilíquido y dependiente de su dueño es deshonestidad técnica: el rango honesto es amplio, y el trabajo es angostarlo con evidencia, no fingir que no existe."
+        }
+      ]
+    },
+    {
+      "title": "Del número a la distribución",
+      "intro": "La valuación puntual es una foto; la simulación de Monte Carlo (asignatura 3.3) es la película. Al directorio se le presentan las dos.",
+      "blocks": [
+        {
+          "t": "p",
+          "md": "El informe no dice \"la empresa vale X\". Dice \"la empresa vale X en el escenario base, con un rango de P5 a P95, y una probabilidad Y de estar por debajo del capital invertido\". Envolver el DCF en la distribución de Monte Carlo es lo que convierte una opinión con falsa precisión en un juicio honesto sobre la incertidumbre."
+        },
+        {
+          "t": "idea",
+          "md": "La conexión con el Trabajo Final: la Fase Prescriptiva exige valuar por al menos dos métodos (DCF y APV, o DCF y múltiplos), separar el valor del horizonte del terminal, fundamentar los descuentos, y presentar el resultado como un rango con probabilidades. El \"puente al valor\" —cuánto vale hoy la empresa y cuánto valdría ejecutando el plan de creación de valor— es el corazón de la recomendación al directorio."
+        },
+        {
+          "t": "quote",
+          "author": "Aswath Damodaran",
+          "credential": "NYU Stern",
+          "md": "Una valuación es un puente entre la historia que contás sobre una empresa y los números que esa historia implica. Si los números no se sostienen en una historia creíble, o la historia no se traduce en números, la valuación es un ejercicio vacío."
+        }
+      ]
+    }
+  ],
+  "expertos": [
+    {
+      "author": "Aswath Damodaran",
+      "credential": "NYU Stern",
+      "md": "El valor terminal es donde se esconden los pecados de la valuación: un g demasiado alto o un margen que nunca converge inflan el valor. Disciplina en el terminal, siempre."
+    },
+    {
+      "author": "Tim Koller",
+      "credential": "McKinsey — Valuation",
+      "md": "Valuá por flujos, no por múltiplos, cuando puedas. El múltiplo es un atajo que importa los errores del comparable; el DCF te obliga a explicitar tus supuestos."
+    },
+    {
+      "author": "Shannon Pratt",
+      "credential": "Valuing a Business",
+      "md": "En la empresa cerrada, el rango de valor razonable es amplio; el trabajo del valuador es angostarlo con evidencia y fundamentar cada descuento, no fingir una precisión que no existe."
+    }
+  ],
+  "caso": {
+    "titulo": "¿Cuánto vale Maderas del Litoral?",
+    "empresa": "Maderas del Litoral S.A. — la valuación integral",
+    "contexto": "Los hermanos reciben una oferta informal por el 30 % de la empresa y necesitan saber cuánto vale realmente, tanto el 100 % como una participación minoritaria.\n\nEl consultor proyecta el FCFF a cinco años, calcula el valor terminal con Gordon, descuenta todo al WACC (19,5 %, asignatura 3.1) y obtiene el valor de la firma. Le resta la deuda neta para llegar al patrimonio, y como la oferta es por una participación minoritaria e ilíquida, aplica los descuentos por falta de control y de liquidez en cascada multiplicativa.\n\nEl número final se presenta junto con la distribución de la simulación: no un valor, sino un rango con probabilidades.",
+    "datos": [
+      {
+        "t": "table",
+        "title": "Datos de la valuación (miles de $)",
+        "headers": [
+          "Concepto",
+          "Valor"
+        ],
+        "firstColLeft": true,
+        "rows": [
+          [
+            "FCFF año 1",
+            "1.850"
+          ],
+          [
+            "FCFF año 2",
+            "1.950"
+          ],
+          [
+            "FCFF año 3",
+            "2.050"
+          ],
+          [
+            "FCFF año 4",
+            "2.150"
+          ],
+          [
+            "FCFF año 5",
+            "2.250"
+          ],
+          [
+            "WACC",
+            "19,5%"
+          ],
+          [
+            "Crecimiento perpetuo (g)",
+            "4,0%"
+          ],
+          [
+            "Deuda neta",
+            "5.900"
+          ],
+          [
+            "DLOC (falta de control)",
+            "15%"
+          ],
+          [
+            "DLOM (falta de liquidez)",
+            "25%"
+          ]
+        ]
+      }
+    ],
+    "consigna": [
+      "¿Cuál es el valor de la firma (EV) separando horizonte y valor terminal?",
+      "¿Cuál es el valor del patrimonio (equity) tras restar la deuda neta?",
+      "¿Cuánto vale una participación minoritaria del 30 % aplicando DLOC y DLOM?",
+      "¿Por qué los descuentos se aplican en cascada multiplicativa y no sumados?"
+    ],
+    "metodologia": [
+      {
+        "k": "Proyectar y descontar",
+        "d": "FCFF explícito a valor presente al WACC."
+      },
+      {
+        "k": "Valor terminal",
+        "d": "VT = FCFF_{n+1}/(WACC−g); descontarlo al presente."
+      },
+      {
+        "k": "De EV a equity",
+        "d": "Equity = EV − deuda neta."
+      },
+      {
+        "k": "Descuentos",
+        "d": "Valor participación = equity × %part × (1−DLOC) × (1−DLOM)."
+      },
+      {
+        "k": "Distribución",
+        "d": "Presentar el rango de la simulación junto al valor puntual."
+      }
+    ]
+  },
+  "ejercicio": {
+    "titulo": "Valuación DCF con valor terminal",
+    "enunciado": "Valuá una empresa por flujo de fondos descontado con un horizonte explícito de tres años más valor terminal, y llegá al valor del patrimonio.",
+    "datos": [
+      {
+        "t": "table",
+        "title": "Datos (miles de $)",
+        "headers": [
+          "Concepto",
+          "Valor"
+        ],
+        "firstColLeft": true,
+        "rows": [
+          [
+            "FCFF año 1",
+            "300"
+          ],
+          [
+            "FCFF año 2",
+            "330"
+          ],
+          [
+            "FCFF año 3",
+            "360"
+          ],
+          [
+            "WACC",
+            "18%"
+          ],
+          [
+            "Crecimiento perpetuo (g)",
+            "3%"
+          ],
+          [
+            "Deuda neta",
+            "800"
+          ]
+        ]
+      }
+    ],
+    "preguntas": [
+      "¿Cuál es el valor del horizonte y el valor terminal?",
+      "¿Cuál es el EV y el valor del patrimonio?"
+    ],
+    "solucion": [
+      {
+        "t": "formula",
+        "name": "Valor del horizonte",
+        "expr": "VP = 300/1,18 + 330/1,18² + 360/1,18³ = 254,2 + 237,0 + 219,1 = 710,3"
+      },
+      {
+        "t": "formula",
+        "name": "Valor terminal",
+        "expr": "VT = 360×1,03/(0,18−0,03) = 370,8/0,15 = 2.472 · VP(VT) = 2.472/1,18³ = 1.504,6"
+      },
+      {
+        "t": "formula",
+        "name": "EV y equity",
+        "expr": "EV = 710,3 + 1.504,6 = 2.214,9 · Equity = 2.214,9 − 800 = 1.414,9"
+      },
+      {
+        "t": "idea",
+        "md": "La empresa vale **≈ 2.215** (EV) y su patrimonio **≈ 1.415**. Notá que el **valor terminal (1.505) es el 68 % del EV**: por eso g y WACC son tan sensibles y hay que fundamentarlos."
+      }
+    ]
+  },
+  "bibliografia": [
+    "Damodaran, A. — *Investment Valuation*",
+    "Koller, Goedhart & Wessels — *Valuation*",
+    "Pratt, S. — *Valuing a Business*",
+    "Damodaran, A. — *The Dark Side of Valuation*",
+    "Fernández, P. — *Valoración de Empresas*",
+    "Pereiro, L. — *Valuation of Companies in Emerging Markets*"
+  ]
+}

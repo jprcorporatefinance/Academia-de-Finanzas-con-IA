@@ -32,11 +32,32 @@ async function main() {
     const casoName = `${a.slug}-Caso.xlsx`
     const cuestName = `${a.slug}-Cuestionario.pdf`
     const quizJson = `${a.slug}-Quiz.json`
+    const teoriaJson = `${a.slug}-Teoria.json`
 
     writeFileSync(join(dir, pdfName), pdfBuf)
     writeFileSync(join(dir, cuestName), quizPdfBuf)
     writeFileSync(join(dir, casoName), xlBuf)
     writeFileSync(join(dir, quizJson), JSON.stringify({ cod: a.cod, nombre: a.nombre, preguntas: a.quiz }, null, 2), 'utf8')
+
+    // Teoría completa para leer DENTRO de la app (se carga bajo demanda, no
+    // entra al bundle). Es el mismo contenido del PDF didáctico.
+    writeFileSync(
+      join(dir, teoriaJson),
+      JSON.stringify(
+        {
+          cod: a.cod,
+          nombre: a.nombre,
+          sections: a.sections,
+          expertos: a.expertos,
+          caso: a.caso,
+          ejercicio: a.ejercicio ?? null,
+          bibliografia: a.bibliografia,
+        },
+        null,
+        2,
+      ),
+      'utf8',
+    )
 
     index.push({
       cod: a.cod,
@@ -46,6 +67,7 @@ async function main() {
       fase: a.fase,
       horas: a.horas,
       resumen: a.resumen,
+      teoria: `/maestria/${a.slug}/${teoriaJson}`,
       pdf: `/maestria/${a.slug}/${pdfName}`,
       caso: `/maestria/${a.slug}/${casoName}`,
       cuestionario: `/maestria/${a.slug}/${cuestName}`,
