@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useStore } from '../store/store'
+import { supabaseHost } from '../lib/supabase'
 import { ArrowRight } from 'lucide-react'
 
 export default function LoginPage() {
@@ -107,6 +108,12 @@ export default function LoginPage() {
           {error && (
             <div className="mb-4 rounded-lg border border-danger-500/40 bg-danger-500/10 px-3 py-2 text-sm text-danger-400">
               {error}
+              {/* Diagnóstico: ante un fallo de red, mostrar a qué backend se intentó conectar. */}
+              {error.toLowerCase().includes('fetch') && (
+                <div className="mt-1.5 font-mono text-[11px] text-danger-400/70">
+                  No se pudo conectar con: {supabaseHost}
+                </div>
+              )}
             </div>
           )}
           {info && (
