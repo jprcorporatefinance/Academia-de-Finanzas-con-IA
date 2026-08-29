@@ -1,0 +1,366 @@
+{
+  "cod": "A.5",
+  "nombre": "Financiamiento Alternativo: cómo accede al capital la empresa mediana más allá del banco",
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "Las tres causas del sobrecosto de financiamiento de la empresa mediana son:",
+      "opciones": [
+        "Solo el riesgo país.",
+        "Riesgo país/macro, asimetría informativa y falta de garantías e historial.",
+        "Solo la inflación.",
+        "La mala gestión únicamente."
+      ],
+      "correcta": 1,
+      "justificacion": "La primera es externa e incontrolable; las otras dos son corregibles por la propia empresa, y ahí está el valor recuperable."
+    },
+    {
+      "id": "q2",
+      "pregunta": "La asimetría informativa encarece el crédito porque:",
+      "opciones": [
+        "Los bancos son ineficientes.",
+        "El prestamista no puede distinguir la empresa buena de la mala y cobra la tasa promedio del grupo.",
+        "La inflación es alta.",
+        "No hay garantías."
+      ],
+      "correcta": 1,
+      "justificacion": "Al no poder discriminar, el prestamista promedia: la empresa ordenada termina subsidiando a la desordenada. Informar mejor rompe ese promedio."
+    },
+    {
+      "id": "q3",
+      "pregunta": "La BFR (Brecha de Financiamiento Real) se define como:",
+      "opciones": [
+        "La deuda total menos el patrimonio.",
+        "El CFT efectivo ponderado menos el Kd según calificación sintética.",
+        "La tasa nominal menos la inflación.",
+        "El WACC menos el ROIC."
+      ],
+      "correcta": 1,
+      "justificacion": "Mide el sobrecosto que la empresa paga por encima de lo que sus fundamentos justifican; es valor recuperable, no riesgo real."
+    },
+    {
+      "id": "q4",
+      "pregunta": "La BFR en pesos se calcula como:",
+      "opciones": [
+        "BFR(pts) × Deuda financiera promedio.",
+        "BFR(pts) ÷ EBITDA.",
+        "BFR(pts) × Ventas.",
+        "BFR(pts) + impuestos."
+      ],
+      "correcta": 0,
+      "justificacion": "Multiplicar la brecha en puntos por la deuda promedio convierte el sobrecosto en un número en pesos por año, comparable con cualquier otra mejora."
+    },
+    {
+      "id": "q5",
+      "pregunta": "El instrumento sistemáticamente más caro del menú suele ser:",
+      "opciones": [
+        "El leasing.",
+        "El adelanto en cuenta corriente.",
+        "La obligación negociable.",
+        "La prefinanciación de exportaciones."
+      ],
+      "correcta": 1,
+      "justificacion": "El adelanto en cuenta corriente es el más usado por comodidad y el más caro; sustituirlo suele ser la mejora de costo más rápida y grande."
+    },
+    {
+      "id": "q6",
+      "pregunta": "Las Sociedades de Garantía Recíproca (SGR):",
+      "opciones": [
+        "Prestan dinero directamente.",
+        "Avalan al deudor, transformando su perfil de riesgo ante el prestamista.",
+        "Son bancos.",
+        "Cobran impuestos."
+      ],
+      "correcta": 1,
+      "justificacion": "No prestan: garantizan. Al aportar la garantía que la empresa no tiene, le abren tasas a las que no accedería sola."
+    },
+    {
+      "id": "q7",
+      "pregunta": "El CFT efectivo se diferencia de la tasa nominal porque incluye:",
+      "opciones": [
+        "Solo el interés.",
+        "Comisiones, sellos, IVA, reciprocidad y el efecto de capitalización.",
+        "Solo la inflación.",
+        "El tipo de cambio."
+      ],
+      "correcta": 1,
+      "justificacion": "Todos esos componentes reducen el monto efectivamente recibido o aumentan el devuelto; sin sumarlos, la comparación entre instrumentos es inválida."
+    },
+    {
+      "id": "q8",
+      "pregunta": "Una tasa nominal más alta con menos costos asociados:",
+      "opciones": [
+        "Siempre es más cara.",
+        "Puede resultar más barata en CFT que una tasa nominal baja cargada de comisiones.",
+        "Es imposible.",
+        "Da lo mismo."
+      ],
+      "correcta": 1,
+      "justificacion": "Es exactamente el motivo por el que la comparación debe hacerse por CFT: la tasa nominal puede ser la menor parte del costo total."
+    },
+    {
+      "id": "q9",
+      "pregunta": "En el ejercicio del cheque descontado, la tasa \"3,5 % mensual\" resultó en un CFT anual de:",
+      "opciones": [
+        "42 %.",
+        "Cerca del 74,5 %.",
+        "3,5 %.",
+        "12 %."
+      ],
+      "correcta": 1,
+      "justificacion": "El interés adelantado sobre el nominal, más comisiones y sellos, más la capitalización al anualizar, casi duplican la tasa que sugiere la multiplicación simple."
+    },
+    {
+      "id": "q10",
+      "pregunta": "Que el interés se cobre por adelantado sobre el valor nominal:",
+      "opciones": [
+        "No afecta el costo.",
+        "Encarece el CFT, porque se paga sobre un monto mayor al efectivamente recibido.",
+        "Abarata la operación.",
+        "Es ilegal."
+      ],
+      "correcta": 1,
+      "justificacion": "Se paga interés sobre 100 pero se reciben 87,30: el costo real sobre el dinero disponible es mucho mayor que la tasa enunciada."
+    },
+    {
+      "id": "q11",
+      "pregunta": "El cheque de pago diferido avalado por SGR, en el mercado de capitales:",
+      "opciones": [
+        "Es el segmento más caro.",
+        "Suele conseguir las mejores tasas del instrumento.",
+        "No existe.",
+        "Solo lo usan las grandes empresas."
+      ],
+      "correcta": 1,
+      "justificacion": "El aval de la SGR mejora sustancialmente el perfil de riesgo y es el segmento que habitualmente obtiene las tasas más bajas."
+    },
+    {
+      "id": "q12",
+      "pregunta": "La barrera de entrada al mercado de capitales PyME es principalmente:",
+      "opciones": [
+        "El costo financiero.",
+        "Informativa y de gobierno: estados auditados, información consistente, orden societario.",
+        "El tamaño mínimo de facturación.",
+        "La nacionalidad."
+      ],
+      "correcta": 1,
+      "justificacion": "El requisito no es tanto financiero como de ordenamiento — y ese mismo ordenamiento es el que reduce la asimetría informativa y la BFR."
+    },
+    {
+      "id": "q13",
+      "pregunta": "El \"círculo virtuoso del ordenamiento\" consiste en que:",
+      "opciones": [
+        "Ordenarse es un costo administrativo sin retorno.",
+        "La empresa se ordena para acceder al mercado, y al ordenarse ya paga menos por su deuda.",
+        "El mercado ordena a la empresa.",
+        "Solo aplica a empresas cotizantes."
+      ],
+      "correcta": 1,
+      "justificacion": "El orden requerido para acceder reduce la asimetría informativa, que es una de las causas del sobrecosto: el beneficio empieza antes de emitir."
+    },
+    {
+      "id": "q14",
+      "pregunta": "El private equity, a diferencia de la deuda:",
+      "opciones": [
+        "Tiene servicio fijo obligatorio.",
+        "No compromete la caja con servicio fijo, pero diluye y comparte el control.",
+        "Es más barato que la deuda.",
+        "No exige nada."
+      ],
+      "correcta": 1,
+      "justificacion": "No hay cuota que pagar (alivio para la liquidez) pero hay dilución, gobierno compartido y horizonte de salida del inversor."
+    },
+    {
+      "id": "q15",
+      "pregunta": "El capital privado es, en términos de costo:",
+      "opciones": [
+        "Más barato que la deuda.",
+        "Más caro: el accionista exige más retorno que el acreedor.",
+        "Gratuito.",
+        "Igual que la deuda."
+      ],
+      "correcta": 1,
+      "justificacion": "El accionista es residual y asume más riesgo, por lo que exige un retorno superior; además no genera escudo fiscal."
+    },
+    {
+      "id": "q16",
+      "pregunta": "Para el dueño de una empresa familiar, la barrera del capital privado suele ser:",
+      "opciones": [
+        "Financiera.",
+        "De control: compartir decisiones, abrir información y aceptar un horizonte de salida.",
+        "Legal.",
+        "Impositiva."
+      ],
+      "correcta": 1,
+      "justificacion": "Es un cambio cultural profundo. Negarse es legítimo, pero debe hacerse conociendo el costo: financiar el crecimiento solo con deuda tiene techo y riesgo de liquidez."
+    },
+    {
+      "id": "q17",
+      "pregunta": "El error de arquitectura más frecuente en el pasivo de una PyME es:",
+      "opciones": [
+        "Tener demasiado capital propio.",
+        "Financiar activos de largo plazo con instrumentos de corto plazo renovados.",
+        "Usar leasing.",
+        "Tomar prefinanciación de exportaciones."
+      ],
+      "correcta": 1,
+      "justificacion": "Funciona mientras el crédito se renueve; el día que no se renueva, sobreviene una crisis de liquidez sin haber tenido problema de rentabilidad."
+    },
+    {
+      "id": "q18",
+      "pregunta": "La regla de alineación de plazos indica que:",
+      "opciones": [
+        "Todo debe ser a corto plazo.",
+        "El plazo del financiamiento debe seguir al plazo del activo que financia.",
+        "Todo debe ser a largo plazo.",
+        "El plazo es indiferente."
+      ],
+      "correcta": 1,
+      "justificacion": "Activos de largo plazo con financiamiento de largo plazo; capital de trabajo con instrumentos de corto plazo. El descalce es fuente de riesgo de refinanciación."
+    },
+    {
+      "id": "q19",
+      "pregunta": "La secuencia JPR de intervención sobre el pasivo empieza por:",
+      "opciones": [
+        "Tomar más deuda barata.",
+        "Medir el CFT efectivo real de cada línea vigente.",
+        "Emitir obligaciones negociables.",
+        "Vender activos."
+      ],
+      "correcta": 1,
+      "justificacion": "Casi siempre aparecen instrumentos mucho más caros de lo que el dueño creía; medir es el primer paso, antes de sustituir."
+    },
+    {
+      "id": "q20",
+      "pregunta": "Abaratar el costo del capital, según la advertencia del módulo:",
+      "opciones": [
+        "Justifica tomar más deuda.",
+        "No es excusa para ampliar el pasivo: primero se ordena y abarata el existente.",
+        "Obliga a crecer.",
+        "Elimina el riesgo."
+      ],
+      "correcta": 1,
+      "justificacion": "Con RONIC por debajo del WACC, más deuda barata sigue financiando destrucción de valor, solo que más lentamente."
+    },
+    {
+      "id": "q21",
+      "pregunta": "Evaluar si conviene el aval de una SGR consiste en:",
+      "opciones": [
+        "Tomarlo siempre.",
+        "Comparar su comisión contra la mejora de tasa que habilita.",
+        "Rechazarlo por su costo.",
+        "Consultar al banco."
+      ],
+      "correcta": 1,
+      "justificacion": "El aval tiene un costo; se justifica si la reducción del CFT que produce supera esa comisión."
+    },
+    {
+      "id": "q22",
+      "pregunta": "La teoría del orden jerárquico (pecking order) de Myers sostiene que las empresas prefieren:",
+      "opciones": [
+        "Capital externo primero.",
+        "Fondos internos, luego deuda y en último lugar capital externo.",
+        "Solo deuda.",
+        "Un orden aleatorio."
+      ],
+      "correcta": 1,
+      "justificacion": "La jerarquía refleja el costo creciente de la asimetría informativa en cada escalón de financiamiento."
+    },
+    {
+      "id": "q23",
+      "pregunta": "La factura de crédito electrónica está pensada para:",
+      "opciones": [
+        "Grandes empresas exportadoras.",
+        "Acelerar el cobro de la PyME proveedora de grandes empresas.",
+        "Financiar inversión de largo plazo.",
+        "Sustituir el leasing."
+      ],
+      "correcta": 1,
+      "justificacion": "Es un instrumento diseñado específicamente para el descalce de cobro entre PyMEs proveedoras y grandes compradores."
+    },
+    {
+      "id": "q24",
+      "pregunta": "El leasing como instrumento de financiamiento:",
+      "opciones": [
+        "Es el más caro.",
+        "Permite adquirir bienes de uso sin inmovilizar capital, con ventaja fiscal.",
+        "No existe en Argentina.",
+        "Solo sirve para inmuebles."
+      ],
+      "correcta": 1,
+      "justificacion": "Financia el activo con el propio activo como garantía y tiene tratamiento fiscal favorable; conviene compararlo por CFT como cualquier otro."
+    },
+    {
+      "id": "q25",
+      "pregunta": "Las obligaciones negociables PyME sirven principalmente para:",
+      "opciones": [
+        "Capital de trabajo diario.",
+        "Financiar inversión o reestructurar pasivos caros a mediano plazo.",
+        "Pagar sueldos.",
+        "Descontar cheques."
+      ],
+      "correcta": 1,
+      "justificacion": "Su plazo las hace aptas para inversión o para sustituir deuda cara de corto plazo, mejorando a la vez costo y arquitectura de plazos."
+    },
+    {
+      "id": "q26",
+      "pregunta": "La \"reciprocidad exigida\" por un banco (saldos inmovilizados, seguros atados):",
+      "opciones": [
+        "No afecta el costo.",
+        "Reduce el monto efectivamente disponible y por tanto encarece el CFT.",
+        "Abarata la operación.",
+        "Es un beneficio."
+      ],
+      "correcta": 1,
+      "justificacion": "Todo lo que reduce el dinero disponible sin reducir lo que se devuelve eleva el costo efectivo del financiamiento."
+    },
+    {
+      "id": "q27",
+      "pregunta": "El IVA sobre intereses, para una empresa responsable inscripta:",
+      "opciones": [
+        "Es un costo definitivo.",
+        "Es recuperable, pero afecta el flujo de caja mientras tanto.",
+        "No se aplica.",
+        "Duplica el costo."
+      ],
+      "correcta": 1,
+      "justificacion": "Se recupera como crédito fiscal, pero inmoviliza caja en el ínterin — hay que contemplarlo en el flujo aunque no sea costo definitivo."
+    },
+    {
+      "id": "q28",
+      "pregunta": "La BFR conecta directamente con la valuación porque:",
+      "opciones": [
+        "No tiene relación.",
+        "Un menor Kd reduce el WACC y, con ello, aumenta el valor de la empresa.",
+        "Solo afecta el resultado contable.",
+        "Cambia el EBITDA."
+      ],
+      "correcta": 1,
+      "justificacion": "Reducir el costo de la deuda baja el WACC (asignatura 3.1), que es la tasa de descuento de toda la valuación: el efecto sobre el valor es directo."
+    },
+    {
+      "id": "q29",
+      "pregunta": "Reordenar el pasivo genera resultado que:",
+      "opciones": [
+        "Exige vender más.",
+        "No requiere vender una unidad más ni mejorar el margen.",
+        "Solo aparece a diez años.",
+        "Es contable, no de caja."
+      ],
+      "correcta": 1,
+      "justificacion": "Es valor que ya está en la empresa, atrapado en una estructura de financiamiento subóptima; liberarlo no depende del mercado ni de la operación."
+    },
+    {
+      "id": "q30",
+      "pregunta": "La decisión entre deuda y capital privado depende centralmente de:",
+      "opciones": [
+        "La moda del mercado.",
+        "El DAF-E, el CCE y la disposición del dueño a compartir control.",
+        "La tasa nominal únicamente.",
+        "El tamaño de la empresa."
+      ],
+      "correcta": 1,
+      "justificacion": "Si la liquidez está tensionada (DAF-E < CCE), el servicio fijo de la deuda es peligroso; y compartir control es una decisión que excede lo financiero."
+    }
+  ]
+}

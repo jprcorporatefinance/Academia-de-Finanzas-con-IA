@@ -1,0 +1,438 @@
+{
+  "cod": "A.5",
+  "nombre": "Financiamiento Alternativo: cómo accede al capital la empresa mediana más allá del banco",
+  "sections": [
+    {
+      "title": "El problema: por qué la empresa mediana paga de más",
+      "intro": "No es solo el contexto macro. Hay razones estructurales, y varias son corregibles por la propia empresa.",
+      "blocks": [
+        {
+          "t": "p",
+          "md": "La empresa mediana enfrenta un costo de financiamiento sistemáticamente superior al que su riesgo real justificaría. Tres causas se acumulan, y solo la primera es verdaderamente externa."
+        },
+        {
+          "t": "ol",
+          "items": [
+            "**Riesgo país y contexto macro.** Tasas altas, volatilidad e incertidumbre regulatoria afectan a todos por igual. Es el componente que la empresa no controla.",
+            "**Asimetría informativa.** El prestamista no puede distinguir a la empresa buena de la mala, entonces le cobra a todas la tasa promedio del grupo. La empresa ordenada subsidia a la desordenada. **Esto sí es corregible: se corrige informando mejor.**",
+            "**Falta de garantías y de historial.** Sin activos líquidos que ofrecer ni antecedentes de cumplimiento verificables, el prestamista exige más retorno o más garantías. **También corregible**, vía SGR, historial y ordenamiento."
+          ]
+        },
+        {
+          "t": "idea",
+          "md": "De ahí nace el indicador propio **BFR (Brecha de Financiamiento Real)**: la distancia entre lo que la empresa efectivamente paga y lo que sus fundamentos justifican según su calificación sintética. **La BFR no es un dato inevitable del contexto: es valor recuperable.** Cuantificarla en pesos convierte \"ordenarse\" de buena intención en una decisión de inversión con retorno medible."
+        },
+        {
+          "t": "formula",
+          "name": "BFR — Brecha de Financiamiento Real (JPR)",
+          "expr": "BFR = CFT efectivo ponderado − Kd según calificación sintética",
+          "where": "BFR($) = BFR(pts) × Deuda financiera promedio",
+          "note": "El Kd sintético surge de la cobertura de intereses (asignaturas 2.2 y 3.1). La brecha es el sobrecosto atribuible a información, garantías y acceso — no al riesgo real del negocio."
+        }
+      ]
+    },
+    {
+      "title": "El menú completo de instrumentos",
+      "intro": "La mayoría de las empresas medianas usa dos o tres instrumentos, cuando el menú disponible es bastante más amplio —y más barato en varios de sus escalones—.",
+      "blocks": [
+        {
+          "t": "table",
+          "title": "Instrumentos por horizonte y propósito",
+          "headers": [
+            "Instrumento",
+            "Para qué sirve",
+            "Costo relativo"
+          ],
+          "firstColLeft": true,
+          "rows": [
+            [
+              "Adelanto en cuenta corriente",
+              "Descalce puntual de caja",
+              "Muy alto — el más caro del menú"
+            ],
+            [
+              "Descuento de cheques (bancario)",
+              "Adelantar cobranzas",
+              "Alto"
+            ],
+            [
+              "Descuento de cheques (mercado de capitales)",
+              "Adelantar cobranzas",
+              "Medio — habitualmente menor que el bancario"
+            ],
+            [
+              "Factoring",
+              "Ceder cuentas por cobrar (con o sin recurso)",
+              "Medio"
+            ],
+            [
+              "Pagaré bursátil",
+              "Capital de trabajo a corto plazo",
+              "Medio"
+            ],
+            [
+              "Obligación negociable PyME",
+              "Inversión y reestructuración de pasivos",
+              "Medio-bajo si hay escala"
+            ],
+            [
+              "Leasing",
+              "Adquirir bienes de uso sin inmovilizar capital",
+              "Medio — con ventaja fiscal"
+            ],
+            [
+              "Préstamo bancario con SGR",
+              "Capital de trabajo e inversión",
+              "Bajo — el aval mejora la tasa"
+            ],
+            [
+              "Prefinanciación de exportaciones",
+              "Ciclo exportador",
+              "Bajo — en moneda dura"
+            ],
+            [
+              "Private equity / capital privado",
+              "Crecimiento, cambio de escala",
+              "No es deuda: cede participación"
+            ]
+          ],
+          "caption": "El adelanto en cuenta corriente —el instrumento más usado por comodidad— es sistemáticamente el más caro. Sustituirlo por instrumentos del mercado de capitales es, muchas veces, la mejora de costo más grande y más rápida."
+        },
+        {
+          "t": "p",
+          "md": "Las **Sociedades de Garantía Recíproca (SGR)** merecen mención aparte: no prestan dinero, **avalan**. Al aportar la garantía que la empresa no tiene, transforman su perfil de riesgo ante el prestamista y le abren tasas a las que no accedería sola. Para la PyME argentina es, en términos de reducción de costo, el instrumento de mayor impacto."
+        }
+      ]
+    },
+    {
+      "title": "El costo financiero total efectivo: comparar peras con peras",
+      "intro": "Ningún instrumento se compara por su tasa nominal. La comparación válida es por el costo financiero total efectivo, y las diferencias son sorprendentes.",
+      "blocks": [
+        {
+          "t": "formula",
+          "name": "Costo Financiero Total efectivo",
+          "expr": "CFT = [(Monto a devolver ÷ Monto recibido)^(365/días) − 1]",
+          "where": "Monto recibido = neto de comisiones, gastos, sellos e IVA sobre intereses retenidos al inicio",
+          "note": "Un descuento \"al 4 % mensual\" con 1,5 % de comisión, sellos e IVA puede tener un CFT anual muy superior al que sugiere su tasa nominal."
+        },
+        {
+          "t": "steps",
+          "title": "Los componentes que casi nunca se suman",
+          "items": [
+            {
+              "k": "Interés nominal",
+              "d": "Lo único que suele mirarse, y muchas veces la menor parte del costo total."
+            },
+            {
+              "k": "Comisiones y gastos",
+              "d": "De otorgamiento, de administración, de evaluación. Se cobran sobre el monto nominal pero reducen el neto recibido."
+            },
+            {
+              "k": "Impuesto de sellos",
+              "d": "Según jurisdicción, sobre el monto del instrumento."
+            },
+            {
+              "k": "IVA sobre intereses",
+              "d": "Recuperable si la empresa es responsable inscripta, pero afecta el flujo de caja mientras tanto."
+            },
+            {
+              "k": "Reciprocidad exigida",
+              "d": "Saldos inmovilizados, seguros o productos atados que reducen el monto efectivamente disponible."
+            },
+            {
+              "k": "Costo del aval (si aplica)",
+              "d": "La comisión de la SGR, que debe compararse contra la mejora de tasa que produce."
+            }
+          ]
+        },
+        {
+          "t": "idea",
+          "md": "La aritmética que cambia decisiones: **una tasa nominal más alta con menos costos asociados puede resultar más barata que una tasa nominal baja cargada de comisiones**. Sin el cálculo del CFT, la comparación entre instrumentos es literalmente imposible —y la mayoría de las empresas medianas la hace mirando la tasa nominal—."
+        }
+      ]
+    },
+    {
+      "title": "El mercado de capitales PyME",
+      "intro": "La alternativa menos usada y, en varios tramos, la más barata. Su barrera no es el costo sino el desconocimiento y el requisito de ordenamiento.",
+      "blocks": [
+        {
+          "t": "ul",
+          "items": [
+            "**Cheque de pago diferido.** El instrumento de entrada: se negocian en el mercado, con distintos segmentos (avalado por SGR, patrocinado por la empresa libradora, directo). El avalado suele conseguir las mejores tasas.",
+            "**Pagaré bursátil.** Similar en lógica, con plazos más largos y también avalable por SGR.",
+            "**Factura de crédito electrónica.** Instrumento pensado específicamente para acelerar el cobro de la PyME proveedora de grandes empresas.",
+            "**Obligaciones negociables PyME.** Deuda de mediano plazo emitida bajo un régimen simplificado, apta para financiar inversión o reestructurar pasivos caros."
+          ]
+        },
+        {
+          "t": "p",
+          "md": "El requisito de entrada no es tanto financiero como **informativo y de gobierno**: estados contables auditados y presentados en tiempo, información consistente, orden societario. Y ahí aparece el círculo virtuoso: **el ordenamiento que exige el mercado de capitales es exactamente el que reduce la asimetría informativa y, con ella, la BFR**. La empresa se ordena para acceder, y al ordenarse ya paga menos."
+        },
+        {
+          "t": "chain",
+          "title": "El círculo virtuoso del ordenamiento",
+          "nodes": [
+            "Ordenar información y gobierno",
+            "Acceder al mercado de capitales",
+            "Bajar la BFR",
+            "Menor Kd → menor WACC",
+            "Mayor valor de la empresa"
+          ],
+          "caption": "Ordenarse no es un costo administrativo: es una inversión con retorno cuantificable en el costo del capital y en el valor de la empresa."
+        }
+      ]
+    },
+    {
+      "title": "Capital privado: cuando la respuesta no es deuda",
+      "intro": "Hay situaciones en las que el problema no se resuelve con más deuda, sino con capital. Y eso implica ceder participación.",
+      "blocks": [
+        {
+          "t": "p",
+          "md": "El **private equity** y el capital de crecimiento aportan fondos a cambio de participación accionaria. No hay servicio de deuda que ahogue la caja —lo cual importa mucho dada la paradoja crecimiento-liquidez (asignatura 4.3)— pero sí hay dilución, gobierno compartido y, casi siempre, un horizonte de salida del inversor en cinco a siete años."
+        },
+        {
+          "t": "table",
+          "title": "Deuda frente a capital, para la empresa familiar",
+          "headers": [
+            "Dimensión",
+            "Deuda",
+            "Capital privado"
+          ],
+          "firstColLeft": true,
+          "rows": [
+            [
+              "Efecto en la caja",
+              "Servicio fijo obligatorio",
+              "Sin servicio; presión por crecimiento"
+            ],
+            [
+              "Control",
+              "Se conserva",
+              "Se comparte (directorio, veto)"
+            ],
+            [
+              "Costo",
+              "Kd explícito y deducible",
+              "Ke implícito, más alto"
+            ],
+            [
+              "Horizonte",
+              "Definido por el contrato",
+              "Salida del inversor en 5–7 años"
+            ],
+            [
+              "Exigencia previa",
+              "Garantías e historial",
+              "Gobierno, información y escala"
+            ]
+          ],
+          "caption": "El capital privado es más caro que la deuda (el accionista exige más que el acreedor) pero no compromete la caja. La decisión depende del DAF-E, del CCE y de la disposición del dueño a compartir el control."
+        },
+        {
+          "t": "warn",
+          "md": "Para el dueño de una empresa familiar, la barrera del capital privado rara vez es financiera: es de **control**. Compartir decisiones, abrir la información y aceptar un horizonte de salida son cambios culturales profundos. Es una decisión legítima negarse — pero debe tomarse sabiendo su costo: financiar el crecimiento solo con deuda, en un contexto de tasas altas, tiene un techo y un riesgo de liquidez concretos."
+        }
+      ]
+    },
+    {
+      "title": "La mirada JPR",
+      "intro": "Cómo ordenamos la arquitectura de financiamiento de una empresa mediana del Nordeste.",
+      "blocks": [
+        {
+          "t": "p",
+          "md": "El error de arquitectura que más veces encontramos: **financiar activos de largo plazo con instrumentos de corto plazo**. Una máquina que se paga en siete años financiada con descuento de cheques a 90 días renovados indefinidamente. Funciona mientras el crédito se renueve; el día que no se renueva, la empresa entra en crisis de liquidez sin haber tenido nunca un problema de rentabilidad. **El plazo del financiamiento debe seguir al plazo del activo que financia.**"
+        },
+        {
+          "t": "idea",
+          "md": "Nuestra secuencia de trabajo sobre el pasivo de una empresa mediana: **(1)** medir el CFT efectivo de cada línea vigente —casi siempre aparecen instrumentos mucho más caros de lo que el dueño creía—; **(2)** calcular la **BFR** para dimensionar el sobrecosto recuperable; **(3)** sustituir el adelanto en cuenta corriente por instrumentos del mercado de capitales; **(4)** incorporar el aval de una SGR donde mejore la tasa más de lo que cuesta; **(5)** alinear plazos de activo y pasivo. Los primeros tres pasos suelen liberar más valor que muchas mejoras operativas, y en menos tiempo."
+        },
+        {
+          "t": "warn",
+          "md": "La advertencia que damos siempre: **abaratar el costo del capital no es una excusa para tomar más deuda**. La secuencia correcta es primero abaratar y ordenar el pasivo existente, no ampliarlo. Con RONIC por debajo del WACC (asignatura 4.2), más deuda barata sigue financiando destrucción de valor —solo que más lentamente—."
+        },
+        {
+          "t": "chain",
+          "title": "El orden de intervención sobre el pasivo",
+          "nodes": [
+            "Medir CFT real de cada línea",
+            "Calcular la BFR",
+            "Sustituir lo más caro",
+            "Sumar aval SGR",
+            "Alinear plazos"
+          ],
+          "caption": "Ninguno de estos pasos requiere vender más ni mejorar el margen: es valor que ya está en la empresa, atrapado en una estructura de financiamiento subóptima."
+        }
+      ]
+    }
+  ],
+  "expertos": [
+    {
+      "author": "Juan Pablo Rossi",
+      "credential": "JPR Consulting — indicador BFR",
+      "md": "La brecha entre lo que una PyME paga por su deuda y lo que sus fundamentos justifican no es una fatalidad del contexto: es la suma de asimetría informativa y falta de garantías. Ambas se corrigen. Cuantificar esa brecha en pesos es lo que convierte \"ordenarse\" en una decisión de inversión con retorno medible."
+    },
+    {
+      "author": "Aswath Damodaran",
+      "credential": "NYU Stern — Applied Corporate Finance",
+      "md": "El costo de la deuda de una empresa debería reflejar su riesgo de incumplimiento, no la incapacidad del prestamista de evaluarlo. Cuando ambas cosas divergen, hay valor disponible para quien reduzca esa distancia informativa."
+    },
+    {
+      "author": "Stewart Myers",
+      "credential": "MIT — teoría del orden jerárquico (pecking order)",
+      "md": "Las empresas prefieren financiarse primero con fondos internos, después con deuda y solo en último lugar con capital externo. Esa jerarquía no es irracional: refleja el costo creciente de la asimetría informativa en cada escalón."
+    }
+  ],
+  "caso": {
+    "titulo": "Reordenar el pasivo de Maderas del Litoral",
+    "empresa": "Maderas del Litoral S.A. — arquitectura de financiamiento",
+    "contexto": "Maderas del Litoral tiene 6.500 (miles) de deuda financiera repartida en cuatro instrumentos que se fueron acumulando sin plan: lo que hacía falta, cuando hacía falta, con quien estuviera disponible.\n\nEl dueño cree que paga \"alrededor del 20 %\". Cuando el consultor calcula el CFT efectivo de cada línea y lo pondera, el número real es bastante peor. Y al compararlo contra el Kd que corresponde a su calificación sintética (cobertura de intereses de 3,35x, equivalente a BBB/BB), aparece la Brecha de Financiamiento Real.\n\nEl encargo: medir la brecha, cuantificar el valor recuperable, y proponer una arquitectura de financiamiento alineada con el ciclo del negocio.",
+    "datos": [
+      {
+        "t": "table",
+        "title": "Estructura de deuda actual (miles de $)",
+        "headers": [
+          "Instrumento",
+          "Monto",
+          "CFT efectivo"
+        ],
+        "firstColLeft": true,
+        "rows": [
+          [
+            "Adelanto en cuenta corriente",
+            "1.200",
+            "38,0%"
+          ],
+          [
+            "Descuento de cheques (bancario)",
+            "2.300",
+            "29,0%"
+          ],
+          [
+            "Préstamo bancario a 3 años",
+            "2.000",
+            "24,0%"
+          ],
+          [
+            "Leasing de maquinaria",
+            "1.000",
+            "21,0%"
+          ],
+          [
+            "Deuda financiera total",
+            "6.500",
+            "—"
+          ],
+          [
+            "Kd según calificación sintética (BBB/BB)",
+            "—",
+            "15,5%"
+          ],
+          [
+            "Costo del aval SGR",
+            "—",
+            "2,5%"
+          ]
+        ]
+      }
+    ],
+    "consigna": [
+      "¿Cuál es el CFT ponderado real de la deuda de la empresa?",
+      "¿Cuánto vale la BFR, en puntos y en pesos por año?",
+      "¿Cuánto se ahorraría sustituyendo el adelanto y el descuento bancario por instrumentos del mercado de capitales con aval SGR?",
+      "¿Qué problema de arquitectura de plazos tiene la estructura actual?"
+    ],
+    "metodologia": [
+      {
+        "k": "Medir el CFT real",
+        "d": "Ponderar el costo financiero total efectivo de cada línea por su participación en la deuda total."
+      },
+      {
+        "k": "Calcular la BFR",
+        "d": "CFT ponderado − Kd sintético, en puntos; multiplicado por la deuda promedio, en pesos."
+      },
+      {
+        "k": "Identificar lo sustituible",
+        "d": "Las líneas más caras y de corto plazo son las primeras candidatas."
+      },
+      {
+        "k": "Evaluar el aval",
+        "d": "Comparar el costo de la SGR contra la mejora de tasa que habilita."
+      },
+      {
+        "k": "Alinear plazos",
+        "d": "Activo de largo plazo con financiamiento de largo plazo."
+      }
+    ]
+  },
+  "ejercicio": {
+    "titulo": "El costo real de un descuento de cheques",
+    "enunciado": "Una empresa descuenta un cheque de 100 (miles) a 90 días. Le aplican una tasa nominal del 3,5 % mensual, más una comisión del 1,2 % sobre el valor nominal y sellos por 1,0 %. Recibe el neto por adelantado.",
+    "datos": [
+      {
+        "t": "table",
+        "title": "Datos",
+        "headers": [
+          "Concepto",
+          "Valor"
+        ],
+        "firstColLeft": true,
+        "rows": [
+          [
+            "Valor nominal del cheque",
+            "100"
+          ],
+          [
+            "Plazo",
+            "90 días"
+          ],
+          [
+            "Tasa nominal mensual",
+            "3,5%"
+          ],
+          [
+            "Comisión",
+            "1,2%"
+          ],
+          [
+            "Sellos",
+            "1,0%"
+          ]
+        ]
+      }
+    ],
+    "preguntas": [
+      "¿Cuánto recibe efectivamente?",
+      "¿Cuál es el CFT efectivo anual?",
+      "¿Cómo se compara con la tasa nominal anunciada?"
+    ],
+    "solucion": [
+      {
+        "t": "formula",
+        "name": "Descuentos aplicados",
+        "expr": "Interés = 100 × 3,5% × 3 = 10,50 · Comisión = 1,20 · Sellos = 1,00 · Total = 12,70"
+      },
+      {
+        "t": "formula",
+        "name": "Monto efectivamente recibido",
+        "expr": "Neto recibido = 100 − 12,70 = 87,30"
+      },
+      {
+        "t": "formula",
+        "name": "CFT efectivo anual",
+        "expr": "CFT = (100 ÷ 87,30)^(365/90) − 1 = (1,1455)^4,056 − 1 ≈ 74,5%"
+      },
+      {
+        "t": "idea",
+        "md": "La tasa \"3,5 % mensual\" sugiere un 42 % anual (3,5 × 12). El **CFT efectivo real es ≈ 74,5 %**: casi el doble. La diferencia viene de tres fuentes que casi nunca se suman: el interés se cobra **por adelantado** sobre el nominal (no sobre el neto recibido), las **comisiones y sellos** reducen aún más lo recibido, y el **efecto de capitalización** al anualizar. Sin este cálculo, comparar instrumentos es imposible — y es exactamente el tipo de error que alimenta la BFR."
+      }
+    ]
+  },
+  "bibliografia": [
+    "Damodaran, A. — *Applied Corporate Finance*, capítulos de estructura de financiamiento",
+    "Myers, S. — “The Capital Structure Puzzle” y teoría del pecking order",
+    "Documentación del Mercado Argentino de Valores: cheque de pago diferido, pagaré bursátil, FCE y ON PyME",
+    "Normativa y práctica de Sociedades de Garantía Recíproca (SGR) en Argentina",
+    "Rossi, J. P. — indicador BFR (Brecha de Financiamiento Real), JPR Consulting",
+    "López Dumrauf, G. — *Finanzas Corporativas: un enfoque latinoamericano*"
+  ]
+}
