@@ -131,6 +131,66 @@ export const a2_2: Asignatura = {
         { t: 'quote', author: 'Edward Altman', credential: 'NYU Stern', md: 'Un modelo de predicción de quiebra es una herramienta de clasificación, no un veredicto. Quien lo usa como sentencia definitiva, sin el juicio y la prudencia que exige la gravedad del tema, traiciona el propósito para el que fue creado.' },
       ],
     },
+    {
+      title: 'Merton en profundidad: la derivación completa',
+      intro:
+        'El modelo estructural merece un tratamiento detenido: es la idea más elegante del análisis de crédito y la más malinterpretada cuando se aplica sin entender sus supuestos.',
+      blocks: [
+        { t: 'p', md: 'Robert Merton (1974) hizo una observación que reorganizó el campo: **el patrimonio de una empresa apalancada es idéntico, en su estructura de pagos, a una opción de compra sobre sus activos**. Los accionistas tienen el derecho —no la obligación— de "recomprar" la empresa a los acreedores pagando la deuda al vencimiento. Si los activos valen más que la deuda, ejercen; si valen menos, no ejercen y entregan la empresa.' },
+        { t: 'formula', name: 'El pago del accionista al vencimiento', expr: 'Patrimonio_T = máx(V_A − D, 0)', where: 'V_A = valor de los activos al vencimiento · D = deuda a pagar', note: 'Es exactamente la función de pago de una opción de compra (call) con precio de ejercicio D sobre el subyacente V_A. De ahí que el patrimonio pueda valuarse con Black-Scholes.' },
+        { t: 'p', md: 'La consecuencia práctica es notable: si el patrimonio es una call sobre los activos, entonces **la deuda es el activo menos esa call**, y el riesgo de crédito puede derivarse de la volatilidad de los activos. En lugar de mirar ratios contables del pasado (como hace Altman), el modelo mira la **dinámica del valor de mercado de los activos**.' },
+        { t: 'steps', title: 'De la intuición al número, paso a paso', items: [
+          { k: '1. Estimar el valor de los activos (V_A)', d: 'En una empresa cotizante se deduce del valor de mercado del patrimonio más la deuda. En una cerrada, se toma el valor económico de los activos del estado analítico (asignatura 1.1) o el valor de la firma del DCF (4.1).' },
+          { k: '2. Estimar la volatilidad de los activos (σ_A)', d: 'El paso más delicado. Cotizante: se deriva de la volatilidad del patrimonio. Cerrada: se estima desde la volatilidad histórica de los resultados operativos o del EBITDA — y se declara el error que introduce.' },
+          { k: '3. Definir el punto de incumplimiento (D)', d: 'No siempre es la deuda total. La práctica de mercado (enfoque KMV/Moody\'s) usa deuda de corto plazo más la mitad de la de largo plazo: es el umbral donde la empresa realmente deja de poder pagar.' },
+          { k: '4. Calcular la distancia al incumplimiento (DD)', d: 'Cuántos desvíos estándar separan al valor esperado de los activos del punto de incumplimiento. Es la medida de "colchón" expresada en unidades de riesgo.' },
+          { k: '5. Convertir a probabilidad (PD)', d: 'PD = N(−DD), aplicando la normal estándar acumulada.' },
+        ] },
+        { t: 'formula', name: 'Distancia al incumplimiento y probabilidad de default', expr: 'DD = [ln(V_A/D) + (μ − σ_A²/2)·T] ÷ (σ_A·√T)   →   PD = N(−DD)', where: 'μ = deriva esperada del valor de los activos · T = horizonte (típicamente 1 año)', note: 'El numerador mide la distancia al umbral; el denominador la escala por el riesgo. Un DD de 3 significa que harían falta tres desvíos estándar adversos para caer en default.' },
+        { t: 'idea', md: 'La lectura económica del DD es intuitiva: **cuánto colchón hay, medido en unidades de volatilidad**. Dos empresas con el mismo apalancamiento pueden tener DD muy distintos si una opera en un negocio estable y la otra en uno volátil. Eso es precisamente lo que los ratios contables no capturan y el modelo estructural sí.' },
+        { t: 'warn', md: 'Las tres limitaciones que hay que declarar siempre: **(1)** supone que el default solo puede ocurrir al vencimiento (los modelos de primer paso lo corrigen); **(2)** supone volatilidad constante y distribución lognormal de los activos, lo que subestima el riesgo de cola; **(3)** en la empresa cerrada, **σ_A no es observable** y toda la precisión aparente del modelo descansa sobre esa estimación. Un modelo estructural con σ inventada produce una falsa precisión más peligrosa que no tener modelo.' },
+      ],
+    },
+    {
+      title: 'Beneish: las ocho variables, una por una',
+      intro:
+        'El M-Score no es una caja negra: cada variable captura una vía concreta de manipulación. Entenderlas es entender cómo se infla un resultado.',
+      blocks: [
+        { t: 'p', md: 'Messod Beneish (1999) construyó su modelo comparando empresas que fueron sancionadas por manipulación contra empresas comparables que no. El resultado son ocho índices, cada uno **una razón entre el año actual y el anterior**: si el índice es mayor a 1, la variable empeoró respecto del año previo.' },
+        { t: 'table', title: 'Las ocho variables y qué detecta cada una', headers: ['Variable', 'Qué compara', 'Señal de alerta'], firstColLeft: true, rows: [
+          ['DSRI', 'Días de venta en cuentas por cobrar', '>1: las CxC crecen más que las ventas → ingresos inflados o cobranza deteriorada'],
+          ['GMI', 'Margen bruto del año anterior sobre el actual', '>1: el margen se deterioró → aumenta el incentivo a manipular'],
+          ['AQI', 'Proporción de activos no corrientes "blandos"', '>1: más activos de calidad dudosa → posible capitalización agresiva de gastos'],
+          ['SGI', 'Crecimiento de las ventas', '>1: crecimiento fuerte → presión por sostenerlo (no es manipulación en sí)'],
+          ['DEPI', 'Tasa de depreciación del año anterior sobre la actual', '>1: se está depreciando más lento → resultado inflado'],
+          ['SGAI', 'Gastos de administración y ventas sobre ventas', '>1: la estructura crece más que las ventas → deterioro'],
+          ['TATA', 'Devengamientos totales sobre activos', 'Alto: el resultado se aleja de la caja → la señal más fuerte'],
+          ['LVGI', 'Apalancamiento del año actual sobre el anterior', '>1: más deuda → mayor presión sobre covenants'],
+        ], caption: 'TATA lleva el coeficiente más alto (4,679) del modelo, y no es casualidad: la manipulación contable casi siempre deja su huella en la brecha entre el resultado devengado y el flujo de caja.' },
+        { t: 'formula', name: 'M-Score de Beneish (8 variables)', expr: 'M = −4,84 + 0,920·DSRI + 0,528·GMI + 0,404·AQI + 0,892·SGI + 0,115·DEPI − 0,172·SGAI + 4,679·TATA − 0,327·LVGI', where: 'Umbral: M > −1,78 sugiere probabilidad elevada de manipulación', note: 'Nótese que SGAI y LVGI entran con signo NEGATIVO: en la muestra original, las manipuladoras mostraban menor crecimiento relativo de gastos y de apalancamiento.' },
+        { t: 'warn', md: 'Dos advertencias sobre el uso del M-Score. **Primera: no es una acusación.** Un M-Score alto indica que la empresa comparte características estadísticas con manipuladoras conocidas, no que haya manipulado. Es una señal para investigar más, no una conclusión. **Segunda: tiene falsos positivos.** Una empresa en crecimiento acelerado y legítimo puede activar varias variables a la vez (SGI alto, DSRI alto por vender más a crédito) sin ninguna irregularidad.' },
+        { t: 'idea', md: 'El protocolo de comunicación que exige el programa: si el M-Score supera el umbral, **nunca se comunica como "la empresa manipula"**. Se comunica como *"el modelo detecta un patrón que amerita profundizar en estos tres puntos específicos"*, y se detallan las variables que dispararon la señal. La diferencia entre ambas formulaciones es la diferencia entre un análisis profesional y una imputación temeraria.' },
+      ],
+    },
+    {
+      title: 'Calidad de las ganancias: el análisis completo',
+      intro:
+        'Antes de sospechar manipulación deliberada, el analista mide algo más básico y más útil: qué parte del resultado es caja y qué parte es criterio contable.',
+      blocks: [
+        { t: 'p', md: 'La **calidad de las ganancias** no es una cuestión moral sino informativa: mide **qué tan buen predictor es el resultado actual del resultado futuro**. Un resultado de alta calidad es recurrente, respaldado por caja y sostenible; uno de baja calidad depende de estimaciones discrecionales, partidas no recurrentes o devengamientos agresivos.' },
+        { t: 'formula', name: 'Las tres medidas centrales', expr: 'Accruals = Resultado − Flujo operativo · Ratio de conversión = FO ÷ Resultado · Calidad = FO ÷ EBITDA', where: 'FO = flujo de caja operativo', note: 'Un ratio de conversión persistentemente menor a 1 indica que el resultado no se está convirtiendo en efectivo. La palabra clave es PERSISTENTEMENTE: un año puntual puede explicarse; una tendencia, no.' },
+        { t: 'p', md: 'Sloan (1996) documentó lo que se conoce como la **anomalía de los devengamientos**: las empresas con altos accruals (mucho resultado devengado y poca caja) tienden a mostrar **peor desempeño futuro** que las de bajos accruals. La razón es que los devengamientos revierten: lo que se adelantó contablemente hay que devolverlo después.' },
+        { t: 'steps', title: 'El protocolo de análisis de calidad de utilidades', items: [
+          { k: 'Comparar resultado con flujo operativo', d: 'Varios ejercicios seguidos. La brecha y, sobre todo, su tendencia.' },
+          { k: 'Descomponer los devengamientos', d: 'Separar los normales del crecimiento (más ventas exigen más CxC) de los discrecionales.' },
+          { k: 'Revisar las partidas no recurrentes', d: 'Ventas de activos, resultados por tenencia, reversiones de previsiones: ¿cuánto del resultado es del negocio?' },
+          { k: 'Auditar los cambios de criterio', d: 'Vida útil, método de costeo, política de previsiones. Cada cambio favorable al resultado merece explicación.' },
+          { k: 'Buscar las señales rojas', d: 'CxC desacopladas de ventas, capitalización agresiva, reconocimiento anticipado, partes relacionadas, cambio de auditor.' },
+        ] },
+        { t: 'quote', author: 'Stephen Penman', credential: 'Columbia — Financial Statement Analysis', md: 'La contabilidad de calidad es aquella que permite ver a través de los criterios de devengamiento hasta la generación de caja subyacente. El analista no busca el resultado más alto ni el más bajo: busca el que mejor predice el futuro.' },
+        { t: 'idea', md: 'La conexión con el resto del programa: la calidad de las ganancias es lo que valida (o invalida) el **NOPAT** que alimenta el ROIC y el EVA (asignatura 1.4), y el **EBITDA** que se negocia en una venta (módulo A.1). Un EBITDA de baja calidad hace que todo el árbol de valor descanse sobre arena — y en una operación de M&A, es exactamente lo que un due diligence competente va a encontrar.' },
+      ],
+    },
   ],
   expertos: [
     { author: 'Edward Altman', credential: 'NYU Stern — creador del Z-Score', md: 'El Z-Score nunca fue pensado como una bola de cristal, sino como una herramienta de clasificación que ordena a las empresas por su distancia a la dificultad financiera. Su valor está en la disciplina, no en la falsa precisión.' },

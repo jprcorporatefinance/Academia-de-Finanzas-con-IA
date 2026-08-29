@@ -137,6 +137,49 @@ export const a2_1: Asignatura = {
         { t: 'quote', author: 'Palepu & Healy', credential: 'Business Analysis and Valuation', md: 'El benchmarking sin comprensión del negocio es peligroso: dos empresas con el mismo ratio pueden estar en situaciones opuestas si sus modelos de negocio, sus sectores o sus contextos difieren. El comparable correcto es tan importante como el ratio.' },
       ],
     },
+    {
+      title: 'El triángulo: rentabilidad, solvencia y liquidez',
+      intro:
+        'Las tres dimensiones del diagnóstico no son independientes: están en tensión permanente. Mejorar una suele costar en otra, y ese equilibrio es la esencia de la gestión financiera.',
+      blocks: [
+        { t: 'p', md: 'Son tres preguntas distintas sobre la misma empresa, y responder bien una no dice nada sobre las otras dos. **Rentabilidad**: ¿el capital invertido rinde más de lo que cuesta? **Solvencia**: ¿el patrimonio alcanza para responder por las obligaciones? **Liquidez**: ¿hay caja para pagar lo que vence mañana?' },
+        { t: 'table', title: 'Las tres dimensiones, sus preguntas y sus indicadores', headers: ['Dimensión', 'Pregunta', 'Indicadores', 'Horizonte'], firstColLeft: true, rows: [
+          ['Rentabilidad', '¿Crea valor el capital?', 'ROIC, EVA, márgenes, DuPont', 'Largo plazo'],
+          ['Solvencia', '¿Alcanza el patrimonio?', 'Deuda/PN, deuda/EBITDA, Altman Z″', 'Mediano plazo'],
+          ['Liquidez', '¿Hay caja para pagar?', 'Corriente, ácida, CCE, DSCR, DAF-E', 'Inmediato'],
+        ], caption: 'Los horizontes explican por qué una empresa puede fallar en una dimensión sin señales en las otras: la liquidez mata en semanas, la solvencia en años, y la falta de rentabilidad puede tardar una década en manifestarse.' },
+        { t: 'p', md: 'Las **tensiones** entre ellas son estructurales, no accidentales:' },
+        { t: 'ul', items: [
+          '**Rentabilidad contra liquidez.** Vender a más plazo aumenta las ventas y el margen, pero estira el DSO y consume caja. Acumular stock asegura el servicio al cliente, pero inmoviliza capital. Cada mejora de rentabilidad suele pedir caja prestada.',
+          '**Rentabilidad contra solvencia.** El apalancamiento eleva el ROE (asignatura 2.1, multiplicador financiero) y simultáneamente deteriora la solvencia. El ROE alto financiado con deuda es rentabilidad comprada con fragilidad.',
+          '**Solvencia contra rentabilidad.** Una empresa sin deuda es muy solvente y, casi siempre, menos rentable para el accionista: renuncia al escudo fiscal y al apalancamiento. La máxima solvencia no es el óptimo.',
+          '**Liquidez contra rentabilidad.** La caja ociosa da tranquilidad y rinde poco o nada. Un colchón excesivo es solvencia comprada con rentabilidad.',
+        ] },
+        { t: 'chain', title: 'Las cuatro combinaciones posibles', nodes: ['Rentable y líquida: sana', 'Rentable e ilíquida: la paradoja (4.3)', 'No rentable y líquida: destruye valor lento', 'Ni rentable ni líquida: terminal'] },
+        { t: 'idea', md: 'La combinación más peligrosa **no es la peor de las cuatro, es la segunda**: la empresa **rentable e ilíquida**. La primera y la cuarta son evidentes para cualquiera. La tercera se detecta con el ROIC. Pero la rentable e ilíquida **engaña a todos**: muestra buenos resultados, buen patrimonio, buen Altman, y se muere de un día para otro por no poder pagar. Es la que estudia en profundidad la asignatura 4.3 —la paradoja crecimiento-liquidez— y la que más empresas medianas rentables mata.' },
+        { t: 'warn', md: 'El corolario operativo: **el diagnóstico nunca se emite sobre una sola dimensión**. Decir "la empresa es rentable" sin decir si es líquida y solvente no es un diagnóstico: es un fragmento. Y en la práctica, el fragmento más peligroso, porque tranquiliza sin fundamento.' },
+      ],
+    },
+    {
+      title: 'El mapa de valor: cómo cada hallazgo llega al EVA',
+      intro:
+        'El diagnóstico no termina en el ratio: termina en el valor. El mapa de interrelaciones es lo que conecta cada hallazgo con la creación o destrucción de valor.',
+      blocks: [
+        { t: 'p', md: 'Toda palanca de gestión termina moviendo uno de tres números: **el NOPAT, el capital invertido o el costo del capital**. El mapa de valor es la traducción sistemática de cada hallazgo diagnóstico a esos tres destinos. Sin esa traducción, el diagnóstico se queda en descripción.' },
+        { t: 'table', title: 'De la palanca operativa al valor', headers: ['Palanca', 'Efecto inmediato', 'Camino al valor'], firstColLeft: true, rows: [
+          ['Subir precio o mejorar mezcla', 'Mayor margen', '↑ NOPAT → ↑ ROIC → ↑ EVA'],
+          ['Reducir costos fijos', 'Mayor margen y menor GAO', '↑ NOPAT y ↓ riesgo'],
+          ['Acortar el DSO (cobranzas)', 'Menos CxC', '↓ Capital → ↑ ROIC → ↑ EVA'],
+          ['Reducir el DIO (inventario)', 'Menos stock', '↓ Capital → ↑ ROIC → ↑ EVA'],
+          ['Estirar el DPO (proveedores)', 'Más financiación gratuita', '↓ Capital → ↑ ROIC'],
+          ['Vender activos no operativos', 'Menos capital inmovilizado', '↓ Capital → ↑ ROIC'],
+          ['Sustituir deuda cara (BFR)', 'Menor Kd', '↓ WACC → ↑ spread → ↑ EVA'],
+          ['Bajar el IDD', 'Empresa transferible', '↓ Ke → ↓ WACC → ↑ valor'],
+        ], caption: 'Cada fila es una recomendación potencial del memorándum, y cada una tiene su cuantificación: cuánto capital libera, cuántos puntos mueve el ROIC, cuánto EVA agrega.' },
+        { t: 'formula', name: 'La cuantificación de una palanca', expr: 'Δ EVA = Δ NOPAT − WACC × Δ Capital − Δ WACC × Capital', where: 'Los tres términos corresponden a las tres palancas', note: 'Permite priorizar: no todas las mejoras valen lo mismo, y algunas que parecen menores (un día de CCE) liberan más valor que otras que parecen grandes.' },
+        { t: 'idea', md: 'La regla del "y entonces qué" aplicada al valor: **"el CCE aumentó 12 días" no es un hallazgo; "el CCE aumentó 12 días, inmovilizando 4.500 de capital que redujo el ROIC en 1,2 pp y el EVA en 880, recuperables ajustando la política de cobranzas" sí lo es**. La diferencia entre ambas frases es la diferencia entre un informe que se lee y uno que cambia decisiones.' },
+      ],
+    },
   ],
   expertos: [
     { author: 'Tim Koller', credential: 'McKinsey — Valuation', md: 'La descomposición del retorno revela dónde está la palanca: margen, rotación o apalancamiento. Cada una lleva a una conversación de gestión distinta.' },

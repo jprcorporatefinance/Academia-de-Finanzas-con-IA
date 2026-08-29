@@ -111,6 +111,26 @@ export const a4_1: Asignatura = {
         { t: 'quote', author: 'Aswath Damodaran', credential: 'NYU Stern', md: 'Una valuación es un puente entre la historia que contás sobre una empresa y los números que esa historia implica. Si los números no se sostienen en una historia creíble, o la historia no se traduce en números, la valuación es un ejercicio vacío.' },
       ],
     },
+    {
+      title: 'Los tres flujos de la firma: FCFF, FCFE y FCFD',
+      intro:
+        'Una empresa genera un solo flujo económico, pero ese flujo se reparte entre quienes financiaron el negocio. Entender los tres flujos y su reconciliación es la base de toda valuación.',
+      blocks: [
+        { t: 'p', md: 'El negocio genera caja. Esa caja se reparte entre **acreedores** (que cobran intereses y capital) y **accionistas** (que cobran lo que queda). De ahí surgen tres flujos distintos, cada uno con su tasa de descuento y su destinatario. Confundirlos —descontar un flujo con la tasa de otro— es el error de valuación más frecuente y más caro.' },
+        { t: 'table', title: 'Los tres flujos, sus destinatarios y sus tasas', headers: ['Flujo', 'Para quién', 'Se descuenta a', 'Da como resultado'], firstColLeft: true, rows: [
+          ['FCFF (Free Cash Flow to the Firm)', 'Todos los proveedores de capital', 'WACC', 'Valor de la firma (EV)'],
+          ['FCFE (Free Cash Flow to Equity)', 'Solo los accionistas', 'Ke', 'Valor del patrimonio'],
+          ['FCFD (Free Cash Flow to Debt)', 'Solo los acreedores', 'Kd', 'Valor de la deuda'],
+        ], caption: 'La regla innegociable: FCFF con WACC, FCFE con Ke. Descontar el FCFE al WACC (error frecuentísimo) sobrevalúa el patrimonio, porque el WACC ya incorpora el efecto de la deuda que el FCFE también descontó.' },
+        { t: 'formula', name: 'FCFF — el flujo de la firma', expr: 'FCFF = NOPAT + Amortizaciones − Δ Capital de trabajo − CapEx', where: 'NOPAT = EBIT × (1 − t) · Es el flujo ANTES de atender a los acreedores', note: 'Se llama "libre" porque es lo que queda libre para repartir entre todos los proveedores de capital, después de invertir lo necesario para sostener y hacer crecer el negocio.' },
+        { t: 'formula', name: 'FCFE — el flujo del accionista', expr: 'FCFE = FCFF − Intereses × (1 − t) + Nueva deuda neta', where: 'Nueva deuda neta = deuda tomada − deuda cancelada', note: 'Del flujo total se resta lo que se lleva el acreedor (después del escudo fiscal) y se suma lo que el acreedor aporta de nuevo. Lo que queda es del accionista.' },
+        { t: 'formula', name: 'FCFD — el flujo del acreedor', expr: 'FCFD = Intereses × (1 − t) − Nueva deuda neta', where: 'Es el espejo exacto del término que se resta en el FCFE', note: 'Positivo cuando la empresa le está devolviendo caja neta al acreedor; negativo cuando el acreedor está aportando (la empresa se está endeudando más).' },
+        { t: 'idea', md: '**La reconciliación algebraica obligatoria** del programa: **FCFF = FCFE + FCFD**. No es una coincidencia contable sino una identidad: todo lo que el negocio genera va a alguien. Si en un modelo esa igualdad no cierra, hay un error de construcción —típicamente un movimiento de deuda mal clasificado o un intereses mal tratado—. Es la mejor prueba de consistencia de un modelo de valuación.' },
+        { t: 'chain', title: 'El reparto del flujo generado', nodes: ['El negocio genera FCFF', 'Acreedores cobran FCFD', 'Accionistas cobran FCFE', 'FCFF = FCFE + FCFD'], caption: 'Una sola torta, dos comensales. La identidad debe cerrar siempre.' },
+        { t: 'warn', md: '**Dos caminos, un mismo destino.** Se puede llegar al valor del patrimonio de dos maneras: descontar el FCFF al WACC y restar la deuda neta, o descontar el FCFE al Ke directamente. **Bien hechos, ambos dan lo mismo.** Si no coinciden, hay una inconsistencia entre la estructura de capital supuesta en el WACC y la implícita en los movimientos de deuda del FCFE. En la práctica se prefiere la vía del FCFF porque es menos sensible a errores de modelado de la deuda.' },
+        { t: 'p', md: 'Y la advertencia que atraviesa todo el programa: **ninguno de los tres es el flujo de caja contable del EFE** (asignatura 1.1). El Estado de Flujo de Efectivo es un estado histórico construido bajo normas contables; el FCFF es una magnitud económica y proyectada. El puente entre ambos —efectivo excedente, activos no operativos, intereses y su escudo, inversión de reposición frente a la de crecimiento— debe construirse explícitamente. Descontar un flujo contable creyendo que se descuenta uno económico arruina la valuación desde la raíz.' },
+      ],
+    },
   ],
   expertos: [
     { author: 'Aswath Damodaran', credential: 'NYU Stern', md: 'El valor terminal es donde se esconden los pecados de la valuación: un g demasiado alto o un margen que nunca converge inflan el valor. Disciplina en el terminal, siempre.' },

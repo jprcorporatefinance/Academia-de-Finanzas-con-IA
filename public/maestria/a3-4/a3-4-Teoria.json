@@ -212,6 +212,202 @@
           "md": "La automatización más valiosa no es la más ambiciosa, sino la más apropiada: la que resuelve un problema real, frecuente y bien entendido, con la mínima complejidad necesaria y el gobierno adecuado."
         }
       ]
+    },
+    {
+      "title": "La arquitectura multi-agente de la función financiera",
+      "intro": "El diseño que propone el programa: un agente especialista por dominio, un agente de contexto que provee la verdad de los datos, y un agente integrador que sintetiza y eleva la recomendación al humano que decide.",
+      "blocks": [
+        {
+          "t": "p",
+          "md": "Un solo agente que \"haga todo el análisis financiero\" es una mala arquitectura por la misma razón por la que una herramienta MCP que \"devuelve todo\" es una mala herramienta: **pierde especificidad, no se puede auditar por partes y falla de manera opaca**. La alternativa es un sistema de agentes especializados, cada uno con su dominio acotado, sus herramientas y su criterio de calidad."
+        },
+        {
+          "t": "table",
+          "title": "Los agentes especialistas, uno por dominio",
+          "headers": [
+            "Agente",
+            "Dominio",
+            "Asignaturas que encarna",
+            "Entrega"
+          ],
+          "firstColLeft": true,
+          "rows": [
+            [
+              "Contable",
+              "Depuración y normalización",
+              "1.1",
+              "Estado analítico, memorando de ajustes"
+            ],
+            [
+              "Valor",
+              "NOPAT, capital, ROIC, EVA",
+              "1.4, 2.1",
+              "Tablero de generación de valor"
+            ],
+            [
+              "Capital de trabajo",
+              "CCE, ABC/XYZ, cobranzas",
+              "2.4",
+              "Capital liberable y su efecto en EVA"
+            ],
+            [
+              "Riesgo",
+              "Insolvencia, calidad de ganancias",
+              "2.2",
+              "Z″, Merton, Beneish, calificación sintética"
+            ],
+            [
+              "Costo del capital",
+              "Ke, Kd, WACC",
+              "3.1",
+              "WACC documentado con sensibilidad"
+            ],
+            [
+              "Proyección",
+              "Escenarios y Monte Carlo",
+              "3.3",
+              "Distribución de resultados y métricas de riesgo"
+            ],
+            [
+              "Valuación",
+              "DCF, APV, descuentos",
+              "4.1",
+              "Rango de valor con supuestos declarados"
+            ],
+            [
+              "Liquidez",
+              "DSCR, covenants, DAF-E",
+              "4.3",
+              "Días de autonomía y alertas"
+            ]
+          ],
+          "caption": "Cada agente es un especialista con una asignatura del programa como cuerpo de conocimiento, herramientas propias y un entregable definido y verificable."
+        },
+        {
+          "t": "p",
+          "md": "Sobre ellos operan dos agentes de naturaleza distinta:"
+        },
+        {
+          "t": "ul",
+          "items": [
+            "**El agente de contexto.** No analiza: **provee la verdad**. Es el único que habla con el servidor MCP de sólo lectura (asignatura 1.2) y con la capa semántica. Su función es que todos los especialistas trabajen sobre **el mismo dato, con la misma definición**. Sin él, cada agente calcularía su propio \"capital invertido\" y las conclusiones no serían comparables.",
+            "**El agente integrador (CEO).** No calcula: **sintetiza, detecta contradicciones y prioriza**. Recibe los entregables de los especialistas, verifica su coherencia, resuelve las tensiones entre ellos y produce una recomendación única y jerarquizada para el humano que decide."
+          ]
+        },
+        {
+          "t": "chain",
+          "title": "El flujo de la arquitectura",
+          "nodes": [
+            "ERP → Agente de contexto (MCP)",
+            "Agentes especialistas en paralelo",
+            "Agente integrador (CEO)",
+            "Humano decide"
+          ],
+          "caption": "El contexto alimenta a todos; los especialistas trabajan en paralelo sobre la misma verdad; el integrador sintetiza; el humano decide y firma."
+        }
+      ]
+    },
+    {
+      "title": "El agente integrador: sintetizar y detectar contradicciones",
+      "intro": "Es el componente más delicado del sistema y el que más valor agrega, porque hace algo que ningún especialista puede hacer: mirar el conjunto.",
+      "blocks": [
+        {
+          "t": "p",
+          "md": "La función del agente integrador no es promediar opiniones sino **detectar las tensiones que solo aparecen al cruzar dominios**. Son exactamente las tensiones que atraviesan todo el programa:"
+        },
+        {
+          "t": "table",
+          "title": "Contradicciones que solo el integrador puede detectar",
+          "headers": [
+            "Agente A dice",
+            "Agente B dice",
+            "Tensión que el integrador debe resolver"
+          ],
+          "firstColLeft": true,
+          "rows": [
+            [
+              "Valor: \"crea valor, EVA positivo\"",
+              "Liquidez: \"DAF-E < CCE\"",
+              "Rentable pero al borde de la iliquidez (4.3)"
+            ],
+            [
+              "Riesgo: \"Altman en zona segura\"",
+              "Liquidez: \"DSCR ajustado\"",
+              "Solvente pero sin caja: distinguir ambas cosas"
+            ],
+            [
+              "Proyección: \"crecimiento del 12 %\"",
+              "Costo capital: \"RONIC < WACC\"",
+              "Crecer destruiría valor (4.2)"
+            ],
+            [
+              "Contable: \"EBITDA 5.250\"",
+              "Riesgo: \"M-Score elevado\"",
+              "La calidad del EBITDA está en duda"
+            ],
+            [
+              "Capital de trabajo: \"liberar 4.500\"",
+              "Valuación: \"vale 12.800\"",
+              "Cuantificar el efecto de la mejora sobre el valor"
+            ]
+          ],
+          "caption": "Cada fila es una situación real del caso Maderas del Litoral. Ningún especialista aislado la ve; el integrador sí, porque su función es precisamente cruzar dominios."
+        },
+        {
+          "t": "steps",
+          "title": "El protocolo del agente integrador",
+          "items": [
+            {
+              "k": "Recibir y validar",
+              "d": "Verificar que cada especialista entregó lo suyo con los supuestos declarados y trazables a herramientas."
+            },
+            {
+              "k": "Verificar coherencia numérica",
+              "d": "Que el capital invertido del agente de valor sea el mismo que usó el de costo del capital; que el EBITDA sea el mismo en todos. La reconciliación es obligatoria."
+            },
+            {
+              "k": "Detectar contradicciones",
+              "d": "Cruzar conclusiones por pares y marcar las tensiones (la tabla de arriba)."
+            },
+            {
+              "k": "Priorizar por impacto en el valor",
+              "d": "Ordenar los hallazgos por su efecto cuantificado sobre el EVA, no por el orden en que llegaron."
+            },
+            {
+              "k": "Elevar al humano",
+              "d": "Recomendación única, jerarquizada, con las contradicciones explicitadas y las decisiones que requieren juicio humano señaladas como tales."
+            }
+          ]
+        },
+        {
+          "t": "warn",
+          "md": "El nombre \"agente CEO\" es una metáfora de arquitectura, no una descripción de autoridad. **El agente integrador no decide: prepara la decisión.** Sintetiza, ordena, señala tensiones y recomienda. La decisión —y la responsabilidad— es del humano. Confundir la metáfora con la función es el camino más corto a delegar en un sistema aquello que ningún sistema debe asumir."
+        }
+      ]
+    },
+    {
+      "title": "Gobierno de la arquitectura multi-agente",
+      "intro": "Un sistema de ocho agentes autónomos sin gobierno es ocho veces más riesgoso que uno. El diseño de control crece con la cantidad de agentes, no al revés.",
+      "blocks": [
+        {
+          "t": "ul",
+          "items": [
+            "**Una sola fuente de verdad.** Solo el agente de contexto habla con el ERP, y lo hace por el servidor MCP de sólo lectura. Ningún especialista consulta datos por su cuenta. Esto elimina de raíz la posibilidad de que dos agentes trabajen sobre cifras distintas.",
+            "**Trazabilidad extremo a extremo.** Cada número del informe final debe poder rastrearse: qué agente lo produjo, con qué herramienta, sobre qué dato y con qué supuestos. Si un número no es trazable, no entra al informe.",
+            "**Supuestos explícitos y versionados.** Cada agente declara los suyos; el integrador los consolida en un anexo. Sin eso, es imposible auditar el trabajo o repetirlo.",
+            "**Puntos de control humano.** Antes de la recomendación final, siempre. Y ante cualquier acción que mueva dinero, modifique registros o salga hacia terceros.",
+            "**Registro de auditoría completo.** De cada llamada de cada agente: herramienta, parámetros, resultado, momento y decisión tomada."
+          ]
+        },
+        {
+          "t": "idea",
+          "md": "La ventaja decisiva de esta arquitectura frente al agente monolítico es la **auditabilidad por partes**. Si el resultado final está mal, se puede identificar exactamente qué especialista falló y por qué —igual que en un equipo humano de consultoría—. Un agente único que hace todo falla de manera opaca: se sabe que el resultado está mal, pero no dónde se rompió el razonamiento."
+        },
+        {
+          "t": "warn",
+          "md": "El riesgo específico de los sistemas multi-agente: **la propagación de errores**. Si el agente contable entrega un capital invertido mal calculado, los agentes de valor, costo del capital y valuación construyen todos sobre ese error, y el informe final es coherente internamente y equivocado por completo. Por eso la verificación de coherencia del integrador y la conciliación contra el balance publicado (asignatura 1.2) no son opcionales: son el cortafuegos del sistema."
+        }
+      ]
     }
   ],
   "expertos": [

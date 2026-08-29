@@ -160,6 +160,40 @@ export const a1_4: Asignatura = {
         { t: 'quote', author: 'Bartley Madden', credential: 'CFROI Valuation', md: 'Ningún indicador es completo por sí solo. La disciplina está en conocer exactamente qué mide cada uno, qué omite, y en qué condiciones su señal se vuelve ruido. Esa conciencia de los límites es el verdadero conocimiento financiero.' },
       ],
     },
+    {
+      title: 'El mapa de valor: las palancas, una por una',
+      intro:
+        'La ecuación maestra dice que todo mueve NOPAT, capital o WACC. El mapa de valor abre esos tres destinos en las palancas concretas que un directorio puede accionar.',
+      blocks: [
+        { t: 'p', md: 'El valor de una empresa no se mejora "en general": se mejora accionando palancas específicas, cada una con su magnitud, su plazo y su dificultad de ejecución. El mapa de valor es el inventario completo de esas palancas, ordenado por el número de la ecuación maestra al que pega.' },
+        { t: 'table', title: 'PALANCA 1 — Elevar el NOPAT', headers: ['Palanca', 'Cómo se acciona', 'Dificultad'], firstColLeft: true, rows: [
+          ['Precio', 'Mejor política de precios, segmentación, valor percibido', 'Media — depende del poder de mercado'],
+          ['Mezcla de productos', 'Vender más de lo que más margen deja', 'Baja — no requiere inversión'],
+          ['Volumen', 'Más unidades con la misma estructura', 'Media — depende del mercado'],
+          ['Costos variables', 'Compras, eficiencia productiva, mermas', 'Media'],
+          ['Costos fijos', 'Estructura, gastos generales', 'Alta — implica decisiones dolorosas'],
+          ['Tasa impositiva efectiva', 'Planificación fiscal legítima, quebrantos', 'Media'],
+        ] },
+        { t: 'table', title: 'PALANCA 2 — Reducir el capital invertido', headers: ['Palanca', 'Cómo se acciona', 'Dificultad'], firstColLeft: true, rows: [
+          ['Días de inventario (DIO)', 'Matriz ABC/XYZ, reposición, obsolescencia', 'Baja-media — alto impacto'],
+          ['Días de cobranza (DSO)', 'Política de crédito, gestión de cobranzas', 'Baja — la de mayor retorno inmediato'],
+          ['Días de pago (DPO)', 'Negociación con proveedores', 'Media'],
+          ['Activos no operativos', 'Vender lo que no produce', 'Media — libera capital de golpe'],
+          ['Caja excedente', 'Distinguir la operativa mínima del excedente', 'Baja — es un ajuste de criterio'],
+          ['Activo fijo ocioso', 'Vender o alquilar capacidad no usada', 'Media'],
+        ] },
+        { t: 'table', title: 'PALANCA 3 — Reducir el costo del capital', headers: ['Palanca', 'Cómo se acciona', 'Dificultad'], firstColLeft: true, rows: [
+          ['Costo de la deuda (Kd)', 'Sustituir instrumentos caros, aval SGR, mercado de capitales', 'Baja-media — la BFR es recuperable'],
+          ['Estructura de capital', 'Mezcla deuda/patrimonio hacia el óptimo', 'Media'],
+          ['Dependencia del dueño (IDD)', 'Procesos, segunda línea, institucionalizar', 'Alta — pero baja Ke, DLOC y DLOM'],
+          ['Concentración de clientes (CEM)', 'Diversificar la cartera', 'Alta — reduce la volatilidad del NOPAT'],
+          ['Calidad de la información', 'Auditoría, orden societario, reporting', 'Baja — reduce asimetría informativa'],
+        ] },
+        { t: 'formula', name: 'Cuantificar cualquier palanca', expr: 'Δ EVA = Δ NOPAT − WACC × Δ Capital − Δ WACC × Capital', where: 'Cada término aísla el efecto de una de las tres palancas', note: 'Permite comparar iniciativas heterogéneas en una sola unidad: pesos de EVA. Es lo que convierte una lista de buenas ideas en un plan priorizado.' },
+        { t: 'idea', md: 'El hallazgo que sorprende a casi todos los directorios: **las palancas de capital suelen rendir más y más rápido que las de margen**. Bajar diez días el ciclo de conversión de efectivo libera capital de inmediato, no requiere vender una unidad más ni negociar con nadie el precio, y su efecto sobre el ROIC es directo. Pelear un punto de margen, en cambio, es lento, exige poder de mercado y suele ser lo primero que intenta todo el mundo.' },
+        { t: 'chain', title: 'El puente completo: de la palanca al valor del dueño', nodes: ['Palanca operativa', 'NOPAT / Capital / WACC', 'ROIC − WACC = spread', 'EVA', 'Valor para los dueños (TSR)'], caption: 'Ninguna recomendación del programa termina en un ratio: todas terminan acá, en el valor para los dueños.' },
+      ],
+    },
   ],
   expertos: [
     { author: 'Tim Koller', credential: 'McKinsey — Valuation (texto nuclear)', md: 'ROIC y crecimiento son los dos generadores de valor. Crecer solo crea valor si el retorno del capital nuevo supera su costo; de lo contrario, crecer destruye.' },
