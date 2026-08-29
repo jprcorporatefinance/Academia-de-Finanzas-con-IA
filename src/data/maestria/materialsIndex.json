@@ -253,5 +253,20 @@
     "cuestionario": "/maestria/av-1/av-1-Cuestionario.pdf",
     "quiz": "/maestria/av-1/av-1-Quiz.json",
     "preguntas": 30
+  },
+  {
+    "cod": "A.2",
+    "slug": "av-2",
+    "cuatrimestre": 5,
+    "nombre": "Asignación de Capital: la decisión que define al CEO",
+    "fase": "Módulo Avanzado · Temas de frontera",
+    "horas": "24 h · 10 teóricas / 14 prácticas",
+    "resumen": "De todas las tareas de un CEO, la asignación de capital es la que más explica la diferencia de resultados en el largo plazo —y para la que casi ningún CEO fue formado—. Las cinco fuentes de capital, los cinco usos, y la disciplina de elegir entre ellos.",
+    "teoria": "/maestria/av-2/av-2-Teoria.json",
+    "pdf": "/maestria/av-2/av-2-PDF.pdf",
+    "caso": "/maestria/av-2/av-2-Caso.xlsx",
+    "cuestionario": "/maestria/av-2/av-2-Cuestionario.pdf",
+    "quiz": "/maestria/av-2/av-2-Quiz.json",
+    "preguntas": 30
   }
 ]

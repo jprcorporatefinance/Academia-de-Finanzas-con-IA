@@ -6599,5 +6599,394 @@
         "justificacion": "Cada paso previo sube el precio y amplía el universo de compradores; salir al mercado sin preparación destruye poder de negociación."
       }
     ]
+  },
+  {
+    "cod": "A.2",
+    "slug": "av-2",
+    "cuatrimestre": 5,
+    "fase": "Módulo Avanzado · Temas de frontera",
+    "nombre": "Asignación de Capital: la decisión que define al CEO",
+    "horas": "24 h · 10 teóricas / 14 prácticas",
+    "framework": "Thorndike · Buffett · Mauboussin · Koller",
+    "resumen": "De todas las tareas de un CEO, la asignación de capital es la que más explica la diferencia de resultados en el largo plazo —y para la que casi ningún CEO fue formado—. Las cinco fuentes de capital, los cinco usos, y la disciplina de elegir entre ellos.",
+    "objetivos": [
+      "Comprender la asignación de capital como la decisión central del CEO y por qué explica la dispersión de resultados.",
+      "Dominar el marco de las cinco fuentes y los cinco usos del capital.",
+      "Evaluar cada uso con el mismo criterio: retorno sobre el capital empleado frente a su costo.",
+      "Reconocer los sesgos institucionales que llevan a decisiones de asignación deficientes.",
+      "Aplicar el marco a la empresa familiar, donde el capital compite además con el consumo del dueño."
+    ],
+    "caso": {
+      "titulo": "Dónde va el excedente de Maderas del Litoral",
+      "empresa": "Maderas del Litoral S.A. — decisión de asignación de capital",
+      "consigna": [
+        "¿Qué alternativa crea más valor por peso asignado?",
+        "¿Cuánto valor se crea o destruye en cada opción?",
+        "¿Por qué la ampliación de planta, aun siendo la más deseada, es la peor alternativa?",
+        "¿Qué rol juega el DAF-E (26 días) en la decisión, y qué debería hacerse primero?"
+      ]
+    },
+    "quiz": [
+      {
+        "id": "q1",
+        "pregunta": "Según Buffett, un CEO que dirige diez años reteniendo el 10 % del patrimonio por año:",
+        "opciones": [
+          "Asigna una parte menor del capital.",
+          "Habrá asignado más del 60 % del capital que opera su empresa.",
+          "No asigna capital.",
+          "Solo administra."
+        ],
+        "correcta": 1,
+        "justificacion": "La acumulación de decisiones de retención convierte al CEO en el principal asignador del capital de la empresa, aunque casi nunca fue formado para eso."
+      },
+      {
+        "id": "q2",
+        "pregunta": "Los CEOs estudiados por Thorndike en The Outsiders tenían en común:",
+        "opciones": [
+          "El sector y el carisma.",
+          "Ser asignadores de capital excepcionales y contraintuitivos.",
+          "Estrategias de producto idénticas.",
+          "Alto endeudamiento."
+        ],
+        "correcta": 1,
+        "justificacion": "No compartían sector, carisma ni estrategia de producto: compartían la disciplina de asignación de capital, incluso yendo contra la corriente del mercado."
+      },
+      {
+        "id": "q3",
+        "pregunta": "Las cinco fuentes de capital incluyen:",
+        "opciones": [
+          "Solo el flujo operativo.",
+          "Flujo operativo, deuda, acciones, venta de activos y caja acumulada.",
+          "Solo deuda y acciones.",
+          "Únicamente dividendos."
+        ],
+        "correcta": 1,
+        "justificacion": "El capital disponible proviene de esas cinco fuentes; la asignación consiste en dirigirlo hacia los cinco usos posibles."
+      },
+      {
+        "id": "q4",
+        "pregunta": "Los cinco usos del capital son:",
+        "opciones": [
+          "Reinvertir, adquirir, dividendos, recomprar y cancelar deuda.",
+          "Solo reinvertir y distribuir.",
+          "Comprar, vender, prestar, pedir y guardar.",
+          "Producir, vender, cobrar, pagar y ahorrar."
+        ],
+        "correcta": 0,
+        "justificacion": "Reinvertir en el negocio, adquirir empresas, pagar dividendos, recomprar acciones y cancelar deuda: cada uno compite contra los demás bajo el mismo criterio."
+      },
+      {
+        "id": "q5",
+        "pregunta": "El criterio único para comparar usos del capital es:",
+        "opciones": [
+          "La preferencia del CEO.",
+          "El valor creado por peso asignado, con umbral en el costo del capital.",
+          "El tamaño de la inversión.",
+          "La urgencia."
+        ],
+        "correcta": 1,
+        "justificacion": "Todas las alternativas se miden con la misma vara: cuánto valor presente crea cada peso, exigiendo como mínimo superar el costo del capital."
+      },
+      {
+        "id": "q6",
+        "pregunta": "Distribuir dividendos, en el marco de asignación de capital, es:",
+        "opciones": [
+          "Un residuo o una concesión.",
+          "La decisión correcta cuando ningún uso interno supera el costo del capital.",
+          "Siempre un error.",
+          "Obligatorio por ley."
+        ],
+        "correcta": 1,
+        "justificacion": "La distribución es una decisión de asignación con pleno derecho: si adentro el capital rinde menos que su costo, devolverlo preserva valor."
+      },
+      {
+        "id": "q7",
+        "pregunta": "El \"imperativo institucional\" de Buffett describe:",
+        "opciones": [
+          "La obligación legal de invertir.",
+          "La tendencia de las organizaciones a imitar a sus pares aunque no tenga sentido.",
+          "El presupuesto anual.",
+          "La norma contable."
+        ],
+        "correcta": 1,
+        "justificacion": "La presión de hacer lo que hace la competencia supera con frecuencia al análisis, llevando a expansiones y adquisiciones injustificadas."
+      },
+      {
+        "id": "q8",
+        "pregunta": "El presupuesto por inercia consiste en:",
+        "opciones": [
+          "Justificar cada peso desde cero.",
+          "Armar el presupuesto sobre el del año anterior con ajustes marginales, sin revisar si cada línea justifica su capital.",
+          "No tener presupuesto.",
+          "Recortar todo por igual."
+        ],
+        "correcta": 1,
+        "justificacion": "La inercia presupuestaria perpetúa asignaciones que quizá ya no se justifican; es una forma silenciosa de destrucción de valor."
+      },
+      {
+        "id": "q9",
+        "pregunta": "La aversión a desinvertir lleva a que:",
+        "opciones": [
+          "Se venda demasiado rápido.",
+          "El capital quede atrapado en negocios que no lo remuneran, porque cerrar se percibe como fracaso.",
+          "Aumente el ROIC.",
+          "Se distribuya más."
+        ],
+        "correcta": 1,
+        "justificacion": "Cerrar o vender una unidad se vive como fracaso personal, aunque liberar ese capital para usos mejores sea la decisión correcta."
+      },
+      {
+        "id": "q10",
+        "pregunta": "El sesgo de tamaño en la asignación de capital surge porque:",
+        "opciones": [
+          "Las empresas grandes son más rentables.",
+          "Remuneración, prestigio y poder crecen con el tamaño, no con el retorno sobre el capital.",
+          "La ley lo exige.",
+          "Los accionistas lo piden."
+        ],
+        "correcta": 1,
+        "justificacion": "Los incentivos del directivo están atados al tamaño más que al retorno, empujando a crecer aunque el crecimiento destruya valor."
+      },
+      {
+        "id": "q11",
+        "pregunta": "Una recompra de acciones crea valor si:",
+        "opciones": [
+          "Sube el precio de la acción.",
+          "El precio pagado está por debajo del valor intrínseco.",
+          "Mejora el beneficio por acción.",
+          "Siempre crea valor."
+        ],
+        "correcta": 1,
+        "justificacion": "La recompra es una inversión: crea valor solo si se compra por debajo del valor intrínseco. La suba del precio o la mejora del BPA son consecuencias contables, no creación de valor."
+      },
+      {
+        "id": "q12",
+        "pregunta": "El patrón empírico de las recompras muestra que las empresas:",
+        "opciones": [
+          "Recompran cuando están baratas.",
+          "Recompran más cuando sus acciones están caras y menos cuando están baratas.",
+          "Nunca recompran.",
+          "Recompran de forma óptima."
+        ],
+        "correcta": 1,
+        "justificacion": "La caja sobra en la parte alta del ciclo (acciones caras) y escasea en la baja (acciones baratas), produciendo exactamente el comportamiento contrario al que crearía valor."
+      },
+      {
+        "id": "q13",
+        "pregunta": "En una empresa que no cotiza, el equivalente de la recompra es:",
+        "opciones": [
+          "El dividendo.",
+          "El rescate de la participación de un socio saliente.",
+          "La emisión de deuda.",
+          "La venta de activos."
+        ],
+        "correcta": 1,
+        "justificacion": "Rescatar la parte de un socio sigue la misma lógica: crea valor si se paga por debajo del valor intrínseco, y lo destruye si se paga de más."
+      },
+      {
+        "id": "q14",
+        "pregunta": "Pagar de más a un socio que sale:",
+        "opciones": [
+          "Beneficia a los que se quedan.",
+          "Transfiere riqueza de los que se quedan al que sale.",
+          "Es neutro.",
+          "Aumenta el valor de la empresa."
+        ],
+        "correcta": 1,
+        "justificacion": "Es idéntico a una recompra cara: los socios remanentes financian con su valor el sobreprecio pagado al saliente."
+      },
+      {
+        "id": "q15",
+        "pregunta": "La reasignación dinámica de capital entre unidades de negocio:",
+        "opciones": [
+          "Empeora los resultados.",
+          "Supera sistemáticamente a las asignaciones estables por inercia.",
+          "Es imposible de medir.",
+          "Solo aplica a multinacionales."
+        ],
+        "correcta": 1,
+        "justificacion": "La investigación muestra que mover capital de las unidades de bajo retorno a las de alto retorno mejora el desempeño frente a mantener asignaciones fijas."
+      },
+      {
+        "id": "q16",
+        "pregunta": "El presupuesto base cero se propone como antídoto contra:",
+        "opciones": [
+          "La inflación.",
+          "La inercia presupuestaria.",
+          "La deuda.",
+          "El crecimiento."
+        ],
+        "correcta": 1,
+        "justificacion": "Justificar cada peso desde cero obliga a revisar si cada línea sigue mereciendo su capital, rompiendo la inercia del \"lo de siempre más un ajuste\"."
+      },
+      {
+        "id": "q17",
+        "pregunta": "La tendencia actual en asignación de capital se orienta hacia:",
+        "opciones": [
+          "Crecimiento a cualquier costo.",
+          "Rentabilidad, durabilidad del flujo, calidad del gobierno y transparencia.",
+          "Máximo endeudamiento.",
+          "Ignorar el retorno."
+        ],
+        "correcta": 1,
+        "justificacion": "La recalibración post-tasas altas privilegia la calidad y durabilidad del flujo por sobre el crecimiento incondicional."
+      },
+      {
+        "id": "q18",
+        "pregunta": "En la empresa familiar aparece un sexto uso del capital:",
+        "opciones": [
+          "La publicidad.",
+          "El consumo del dueño.",
+          "La capacitación.",
+          "El seguro."
+        ],
+        "correcta": 1,
+        "justificacion": "El capital compite además con la casa, el auto y el nivel de vida de la familia — una competencia que rara vez se hace explícita."
+      },
+      {
+        "id": "q19",
+        "pregunta": "La normalización de la retribución del dueño sirve, en este marco, para:",
+        "opciones": [
+          "Pagar menos impuestos.",
+          "Hacer visible cuánto capital sale por decisión de consumo y no de asignación.",
+          "Aumentar el EBITDA.",
+          "Cumplir una norma contable."
+        ],
+        "correcta": 1,
+        "justificacion": "Separar la retribución de mercado por el trabajo del retiro por ser dueño permite discutir racionalmente la competencia entre consumo y reinversión."
+      },
+      {
+        "id": "q20",
+        "pregunta": "Reinvertir por inercia en el negocio de siempre sin calcular el RONIC es:",
+        "opciones": [
+          "Prudente.",
+          "Asignación de capital sin marco: se invierte donde se sabe, no donde conviene.",
+          "Lo que recomienda Thorndike.",
+          "Neutro para el valor."
+        ],
+        "correcta": 1,
+        "justificacion": "Invertir por familiaridad en vez de por retorno es uno de los patrones que más destruye valor en empresas medianas rentables."
+      },
+      {
+        "id": "q21",
+        "pregunta": "Cancelar una deuda con CFT del 26 % cuando el WACC es 19,5 %:",
+        "opciones": [
+          "Destruye valor.",
+          "Crea valor: equivale a una inversión libre de riesgo que rinde 26 %.",
+          "Es indiferente.",
+          "Solo conviene si hay excedente."
+        ],
+        "correcta": 1,
+        "justificacion": "Cancelar deuda cara rinde, con certeza, el costo que se deja de pagar. Si ese costo supera al WACC, es una de las mejores asignaciones posibles."
+      },
+      {
+        "id": "q22",
+        "pregunta": "En el caso de Maderas del Litoral, la ampliación de planta (RONIC 15 %) frente a un WACC de 19,5 %:",
+        "opciones": [
+          "Es la mejor alternativa.",
+          "Es la peor: destruye valor aunque sea la más deseada.",
+          "Es neutra.",
+          "No se puede evaluar."
+        ],
+        "correcta": 1,
+        "justificacion": "RONIC por debajo del WACC destruye valor; el deseo de crecer no cambia la aritmética. Es la conclusión incómoda del marco."
+      },
+      {
+        "id": "q23",
+        "pregunta": "Antes de asignar un excedente, si el DAF-E es menor que el CCE:",
+        "opciones": [
+          "Se ignora y se invierte igual.",
+          "Hay que asegurar la liquidez primero: la caja mínima no se compromete.",
+          "Se distribuye todo.",
+          "Se toma más deuda."
+        ],
+        "correcta": 1,
+        "justificacion": "DAF-E < CCE es alerta de primer orden (asignatura 4.3): comprometer la caja mínima en cualquier alternativa pone en riesgo la supervivencia."
+      },
+      {
+        "id": "q24",
+        "pregunta": "El orden de prioridad propuesto por JPR para asignar capital es:",
+        "opciones": [
+          "Crecer, distribuir, pagar deuda, sobrevivir.",
+          "Asegurar liquidez, reducir deuda cara (BFR), reinvertir si RONIC > WACC, distribuir el excedente.",
+          "Distribuir siempre primero.",
+          "Reinvertir siempre primero."
+        ],
+        "correcta": 1,
+        "justificacion": "Primero sobrevivir, después abaratar el capital, después crecer si conviene, y recién entonces distribuir. Invertir la secuencia genera la paradoja crecimiento-liquidez."
+      },
+      {
+        "id": "q25",
+        "pregunta": "La frase \"el dinero está mejor adentro\" sin un RONIC que la respalde es:",
+        "opciones": [
+          "Un principio sólido.",
+          "Una coartada costosa para evitar distribuir.",
+          "Una norma contable.",
+          "Lo que dice Mauboussin."
+        ],
+        "correcta": 1,
+        "justificacion": "Sin un retorno del capital nuevo que supere al costo del capital, retener destruye valor: la frase encubre una mala asignación."
+      },
+      {
+        "id": "q26",
+        "pregunta": "La asignación de capital explica, respecto de la operación:",
+        "opciones": [
+          "El resultado del trimestre.",
+          "El resultado de la década.",
+          "Nada relevante.",
+          "Solo los impuestos."
+        ],
+        "correcta": 1,
+        "justificacion": "La operación define el trimestre; la acumulación de decisiones de asignación define la divergencia de valor en el largo plazo."
+      },
+      {
+        "id": "q27",
+        "pregunta": "El horizonte corto perjudica la asignación porque:",
+        "opciones": [
+          "Mejora las decisiones.",
+          "Decisiones que crean valor a cinco años castigan el resultado de este trimestre, que es lo que se evalúa.",
+          "No existe.",
+          "Solo afecta a empresas cotizantes."
+        ],
+        "correcta": 1,
+        "justificacion": "El desalineamiento entre el horizonte de creación de valor y el de evaluación del directivo sesga las decisiones hacia lo inmediato."
+      },
+      {
+        "id": "q28",
+        "pregunta": "La pregunta central de Mauboussin ante cada peso es:",
+        "opciones": [
+          "¿Cuánto crece la empresa?",
+          "¿Este peso vale más adentro de la empresa o en el bolsillo del accionista?",
+          "¿Cuánto paga de impuestos?",
+          "¿Qué hace la competencia?"
+        ],
+        "correcta": 1,
+        "justificacion": "Esa comparación —valor adentro vs. valor afuera— es la síntesis de toda la disciplina de asignación de capital."
+      },
+      {
+        "id": "q29",
+        "pregunta": "Comparar el CapEx con un estándar de retorno y las recompras con otro es:",
+        "opciones": [
+          "La práctica correcta.",
+          "El error más común: todos los usos deben medirse con el mismo criterio.",
+          "Recomendado por Koller.",
+          "Irrelevante."
+        ],
+        "correcta": 1,
+        "justificacion": "La disciplina exige un criterio único: valor creado por peso asignado. Usar varas distintas según el uso invalida la comparación."
+      },
+      {
+        "id": "q30",
+        "pregunta": "La opcionalidad, en la asignación moderna de capital, implica:",
+        "opciones": [
+          "Comprometer todo el capital de una vez.",
+          "Valorar mantener opciones abiertas bajo incertidumbre en vez de comprometerlo todo.",
+          "No invertir nunca.",
+          "Diversificar sin criterio."
+        ],
+        "correcta": 1,
+        "justificacion": "Bajo incertidumbre, conservar flexibilidad tiene valor económico; la asignación moderna lo incorpora en vez de tratar toda inversión como irreversible."
+      }
+    ]
   }
 ]

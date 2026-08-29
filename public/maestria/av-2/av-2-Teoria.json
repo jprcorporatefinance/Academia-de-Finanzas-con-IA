@@ -1,0 +1,344 @@
+{
+  "cod": "A.2",
+  "nombre": "Asignación de Capital: la decisión que define al CEO",
+  "sections": [
+    {
+      "title": "El problema: CEOs formados para operar, evaluados por asignar",
+      "intro": "La mayoría de los CEOs llega al cargo por ser excelente en algo —vender, producir, liderar equipos— y descubre que su trabajo principal es otro: decidir dónde va cada peso.",
+      "blocks": [
+        {
+          "t": "p",
+          "md": "Warren Buffett lo planteó con crudeza: un CEO que dirige la empresa durante diez años, reteniendo cada año una utilidad equivalente al 10 % del patrimonio, habrá **asignado más del 60 % del capital que opera su empresa**. Y sin embargo, casi ningún CEO fue entrenado para esa tarea: llegó al puesto por su excelencia operativa, comercial o técnica."
+        },
+        {
+          "t": "p",
+          "md": "**William Thorndike**, en *The Outsiders* (2012), estudió ocho CEOs cuyas empresas superaron dramáticamente al mercado durante décadas. No tenían en común el sector, el carisma ni la estrategia de producto. Tenían en común una cosa: eran **asignadores de capital excepcionales y contraintuitivos**. Compraban cuando el mercado vendía, recompraban acciones solo cuando estaban baratas, evitaban las adquisiciones de moda, y trataban cada peso retenido como un peso que debía justificar su permanencia."
+        },
+        {
+          "t": "quote",
+          "author": "Warren Buffett",
+          "credential": "Berkshire Hathaway — Carta a los accionistas",
+          "md": "Los CEOs que carecen de habilidad para asignar capital no son raros. Muchos llegan a la cima por destacar en áreas como marketing, producción, ingeniería o administración. Una vez CEO, enfrentan nuevas responsabilidades. Ahora deben tomar decisiones de asignación de capital, una tarea crítica que quizás nunca abordaron y que no es fácil de dominar."
+        },
+        {
+          "t": "idea",
+          "md": "La consecuencia práctica: **dos empresas idénticas en operación pueden divergir enormemente en valor** por la sola calidad de su asignación de capital a lo largo de una década. La operación explica el resultado del trimestre; la asignación explica el resultado de la década."
+        }
+      ]
+    },
+    {
+      "title": "El marco: cinco fuentes, cinco usos",
+      "intro": "Toda la asignación de capital cabe en una matriz simple. La disciplina no está en conocerla, sino en aplicarla con el mismo criterio a todas las alternativas.",
+      "blocks": [
+        {
+          "t": "table",
+          "title": "De dónde viene el capital y a dónde puede ir",
+          "headers": [
+            "Cinco fuentes",
+            "Cinco usos"
+          ],
+          "firstColLeft": true,
+          "rows": [
+            [
+              "Flujo de caja operativo",
+              "Reinvertir en el negocio actual (CapEx, capital de trabajo)"
+            ],
+            [
+              "Emisión de deuda",
+              "Adquirir otras empresas"
+            ],
+            [
+              "Emisión de acciones",
+              "Pagar dividendos"
+            ],
+            [
+              "Venta de activos",
+              "Recomprar acciones"
+            ],
+            [
+              "Caja acumulada",
+              "Cancelar deuda"
+            ]
+          ],
+          "caption": "La regla de oro: cada uso compite contra los demás bajo el mismo criterio —¿cuál genera el mayor valor presente por peso asignado?—. Tratar el CapEx con un estándar y las recompras con otro es el error más común."
+        },
+        {
+          "t": "formula",
+          "name": "El criterio único de asignación",
+          "expr": "Asignar al uso con mayor valor creado por peso · Umbral mínimo: retorno > costo del capital",
+          "where": "Reinvertir: RONIC > WACC · Adquirir: sinergia neta > prima · Recomprar: precio < valor intrínseco · Distribuir: cuando ningún uso supera el umbral",
+          "note": "Es el mismo teorema de la asignatura 4.2 aplicado a TODAS las alternativas, no solo a la inversión productiva."
+        },
+        {
+          "t": "chain",
+          "title": "El árbol de decisión de la asignación",
+          "nodes": [
+            "¿Hay proyectos con RONIC > WACC?",
+            "Sí: reinvertir",
+            "No: ¿la acción está barata?",
+            "Sí: recomprar / No: distribuir"
+          ],
+          "caption": "La distribución no es un residuo ni una concesión: es la decisión correcta cuando ningún uso interno supera el costo del capital."
+        }
+      ]
+    },
+    {
+      "title": "Los sesgos institucionales que arruinan la asignación",
+      "intro": "Las malas decisiones de asignación rara vez son irracionales a nivel individual: son racionales para quien las toma y destructivas para la empresa.",
+      "blocks": [
+        {
+          "t": "ul",
+          "items": [
+            "**El imperativo institucional (Buffett).** Las organizaciones imitan lo que hacen sus pares, aunque no tenga sentido. Si la competencia se expande, expandirse parece prudente; no hacerlo, temerario. La presión social supera al análisis.",
+            "**Presupuesto por inercia.** El presupuesto del año que viene se arma sobre el del año pasado, con ajustes marginales. Nadie vuelve a preguntar si esa línea de negocio todavía justifica su capital.",
+            "**Aversión a desinvertir.** Cerrar o vender una unidad se percibe como fracaso personal, aunque libere capital para usos mejores. El capital queda atrapado en negocios que no lo remuneran.",
+            "**Sesgo de tamaño.** Remuneración, prestigio y poder crecen con el tamaño de la empresa, no con su retorno sobre el capital. Los incentivos empujan a crecer aunque el crecimiento destruya valor.",
+            "**Horizonte corto.** Decisiones que crean valor en cinco años castigan el resultado de este trimestre. Quien evalúa al CEO mira el trimestre."
+          ]
+        },
+        {
+          "t": "warn",
+          "md": "El síntoma más claro de mala asignación: una empresa que **reinvierte sistemáticamente en su negocio principal con RONIC por debajo del WACC**, mientras se niega a distribuir \"porque el dinero está mejor adentro\". Esa frase, sin un RONIC que la respalde, es la coartada más cara de las finanzas corporativas."
+        }
+      ]
+    },
+    {
+      "title": "Recompra de acciones: la decisión peor entendida",
+      "intro": "La recompra es simultáneamente una de las mejores y una de las peores decisiones de asignación, según una sola variable: el precio.",
+      "blocks": [
+        {
+          "t": "p",
+          "md": "Recomprar acciones **crea valor para los accionistas que se quedan solo si el precio pagado está por debajo del valor intrínseco**. Es una inversión como cualquier otra: comprás un activo (tu propia empresa) a un precio. Si pagás menos de lo que vale, creás valor; si pagás más, lo destruís —transferís riqueza de los que se quedan a los que venden—."
+        },
+        {
+          "t": "formula",
+          "name": "La condición de la recompra",
+          "expr": "Crea valor si: Precio de recompra < Valor intrínseco por acción",
+          "note": "La recompra NO crea valor \"porque sube el precio de la acción\" ni \"porque mejora el beneficio por acción\". Ambas son consecuencias contables, no creación de valor."
+        },
+        {
+          "t": "warn",
+          "md": "El patrón empírico es demoledor: las empresas **recompran más cuando sus acciones están caras** (porque sobra caja en la parte alta del ciclo) **y menos cuando están baratas** (porque escasea la caja en la parte baja). Es exactamente lo contrario de lo que crearía valor. Los CEOs de Thorndike hacían lo opuesto, y esa fue una de sus principales fuentes de retorno superior."
+        },
+        {
+          "t": "p",
+          "md": "En la empresa que no cotiza, el equivalente es el **rescate de participaciones a un socio saliente**: la misma lógica se aplica, con el agravante de que no hay precio de mercado y el precio se negocia. Pagar de más a un socio que sale destruye valor para los que se quedan, exactamente igual que una recompra cara."
+        }
+      ]
+    },
+    {
+      "title": "Estado del arte",
+      "intro": "Qué está cambiando hoy en la disciplina de asignación de capital.",
+      "blocks": [
+        {
+          "t": "ul",
+          "items": [
+            "**Del crecimiento a cualquier costo a la durabilidad del flujo.** Las decisiones de asignación de capital se orientan cada vez más por rentabilidad, durabilidad del flujo de caja, calidad del gobierno y transparencia informativa, en lugar de crecimiento sin condiciones.",
+            "**Reasignación dinámica.** La investigación de McKinsey muestra que las empresas que **reasignan capital activamente entre unidades** —moviendo recursos de las que rinden poco a las que rinden más— superan sistemáticamente a las que mantienen asignaciones estables por inercia.",
+            "**Presupuesto base cero, revisado.** La idea de justificar cada peso desde cero, en vez de partir del presupuesto anterior, resurge como antídoto contra la inercia.",
+            "**Opcionalidad y flexibilidad.** Cada vez más, la asignación incorpora el valor de mantener opciones abiertas bajo incertidumbre, en vez de comprometer todo el capital de una vez."
+          ]
+        },
+        {
+          "t": "quote",
+          "author": "Michael Mauboussin",
+          "credential": "Counterpoint Global — Capital Allocation",
+          "md": "La asignación de capital es la responsabilidad más importante de la dirección y, sin embargo, la que menos atención analítica recibe. La pregunta correcta ante cada peso es simple y brutal: ¿este peso vale más adentro de la empresa o en el bolsillo del accionista?"
+        }
+      ]
+    },
+    {
+      "title": "La mirada JPR",
+      "intro": "La asignación de capital en la empresa mediana familiar del Nordeste argentino.",
+      "blocks": [
+        {
+          "t": "p",
+          "md": "En la empresa familiar aparece un **sexto uso del capital** que la literatura anglosajona no contempla: **el consumo del dueño**. El capital no compite solo entre reinvertir, adquirir, distribuir, recomprar y desendeudarse: compite con la casa, el auto, el viaje y el nivel de vida de la familia. Y esa competencia rara vez se hace explícita."
+        },
+        {
+          "t": "idea",
+          "md": "De ahí que la **normalización de la retribución del dueño** (asignatura 1.1) no sea un tecnicismo contable: es lo que hace **visible** esa competencia. Cuando el retiro del dueño se separa de la retribución de mercado por su trabajo, aparece con claridad cuánto capital está saliendo de la empresa por decisión de consumo y no de asignación. Recién ahí puede discutirse racionalmente."
+        },
+        {
+          "t": "warn",
+          "md": "El patrón que más veces destruye empresas medianas rentables: **reinvertir por inercia en el negocio de siempre** —una máquina más, un galpón más— sin haber calculado nunca el RONIC de esa inversión, mientras se financia con deuda cara y se descapitaliza el capital de trabajo. Es asignación de capital sin marco: se invierte donde se sabe invertir, no donde conviene."
+        },
+        {
+          "t": "chain",
+          "title": "El orden de prioridad que proponemos",
+          "nodes": [
+            "Asegurar la liquidez (DAF-E > CCE)",
+            "Reducir la BFR (deuda cara)",
+            "Reinvertir solo si RONIC > WACC",
+            "Distribuir el excedente"
+          ],
+          "caption": "Primero sobrevivir, después abaratar el capital, después crecer si conviene, y recién entonces distribuir. Invertir esta secuencia es la causa más frecuente de la paradoja crecimiento-liquidez (asignatura 4.3)."
+        }
+      ]
+    }
+  ],
+  "expertos": [
+    {
+      "author": "William Thorndike",
+      "credential": "The Outsiders",
+      "md": "Los CEOs excepcionales que estudié no compartían sector, carisma ni estrategia de producto. Compartían una obsesión: tratar cada peso de capital como si fuera propio, y comparar sistemáticamente todas las alternativas de uso antes de comprometerlo."
+    },
+    {
+      "author": "Warren Buffett",
+      "credential": "Berkshire Hathaway",
+      "md": "El imperativo institucional lleva a las organizaciones a imitar el comportamiento de sus pares, por irracional que sea. Resistirlo es una de las tareas más difíciles —y más valiosas— de un CEO."
+    },
+    {
+      "author": "Michael Mauboussin",
+      "credential": "Counterpoint Global",
+      "md": "Una recompra de acciones no crea valor porque suba el precio o mejore el beneficio por acción. Crea valor si, y solo si, el precio pagado está por debajo del valor intrínseco. Todo lo demás es contabilidad, no economía."
+    },
+    {
+      "author": "Tim Koller",
+      "credential": "McKinsey — Valuation",
+      "md": "Las empresas que reasignan capital activamente entre sus unidades de negocio superan a las que mantienen asignaciones estables. La inercia presupuestaria es una de las formas más silenciosas de destrucción de valor."
+    }
+  ],
+  "caso": {
+    "titulo": "Dónde va el excedente de Maderas del Litoral",
+    "empresa": "Maderas del Litoral S.A. — decisión de asignación de capital",
+    "contexto": "Después de un buen año, Maderas del Litoral tiene 1.200 (miles) de excedente disponible. Los tres hermanos discuten qué hacer, y cada uno defiende una alternativa distinta.\n\nEl mayor quiere ampliar la planta (el proyecto de la asignatura 4.2, con RONIC estimado del 15 %). El del medio quiere cancelar la deuda más cara, que tiene un costo financiero total efectivo del 26 % anual. El menor —que no trabaja en la empresa— quiere que se distribuya.\n\nEl consultor no toma partido por ninguno: aplica el marco. Cada alternativa se mide con el mismo criterio, y el resultado ordena la discusión familiar sobre una base objetiva en vez de sobre quién tiene más peso en la mesa.",
+    "datos": [
+      {
+        "t": "table",
+        "title": "Alternativas de asignación (miles de $)",
+        "headers": [
+          "Alternativa",
+          "Monto",
+          "Retorno / costo"
+        ],
+        "firstColLeft": true,
+        "rows": [
+          [
+            "Excedente disponible",
+            "1.200",
+            "—"
+          ],
+          [
+            "Ampliar la planta",
+            "hasta 1.200",
+            "RONIC 15,0%"
+          ],
+          [
+            "Cancelar deuda cara",
+            "hasta 900",
+            "CFT 26,0%"
+          ],
+          [
+            "Distribuir a los socios",
+            "hasta 1.200",
+            "costo de oportunidad"
+          ],
+          [
+            "WACC de la empresa",
+            "—",
+            "19,5%"
+          ],
+          [
+            "DAF-E actual",
+            "26 días",
+            "CCE 45 días"
+          ]
+        ]
+      }
+    ],
+    "consigna": [
+      "¿Qué alternativa crea más valor por peso asignado?",
+      "¿Cuánto valor se crea o destruye en cada opción?",
+      "¿Por qué la ampliación de planta, aun siendo la más deseada, es la peor alternativa?",
+      "¿Qué rol juega el DAF-E (26 días) en la decisión, y qué debería hacerse primero?"
+    ],
+    "metodologia": [
+      {
+        "k": "Medir todas con el mismo criterio",
+        "d": "Cada uso compite por su retorno frente al costo del capital."
+      },
+      {
+        "k": "Cancelar deuda cara",
+        "d": "Retorno seguro y libre de riesgo igual al CFT que se deja de pagar (26 %)."
+      },
+      {
+        "k": "Reinvertir",
+        "d": "Crea valor solo si RONIC > WACC. Con 15 % vs 19,5 %, destruye."
+      },
+      {
+        "k": "Distribuir",
+        "d": "Es la decisión correcta cuando ningún uso interno supera el umbral."
+      },
+      {
+        "k": "Chequear la liquidez primero",
+        "d": "DAF-E < CCE es alerta de primer orden: la caja mínima no se compromete."
+      }
+    ]
+  },
+  "ejercicio": {
+    "titulo": "Recomprar o distribuir",
+    "enunciado": "Una empresa tiene 500 (miles) de excedente. Sus acciones (o participaciones) valen, según la valuación interna, 100 por unidad, y un socio ofrece vender su paquete a 80 por unidad. La empresa no tiene proyectos con RONIC superior a su WACC del 18 %.",
+    "datos": [
+      {
+        "t": "table",
+        "title": "Datos",
+        "headers": [
+          "Concepto",
+          "Valor"
+        ],
+        "firstColLeft": true,
+        "rows": [
+          [
+            "Excedente",
+            "500 miles $"
+          ],
+          [
+            "Valor intrínseco por unidad",
+            "100"
+          ],
+          [
+            "Precio ofrecido por el socio saliente",
+            "80"
+          ],
+          [
+            "Unidades que se podrían rescatar",
+            "6,25"
+          ],
+          [
+            "WACC",
+            "18%"
+          ]
+        ]
+      }
+    ],
+    "preguntas": [
+      "¿Conviene rescatar la participación del socio saliente?",
+      "¿Cuánto valor se crea?",
+      "¿Qué pasaría si el socio pidiera 120 por unidad?"
+    ],
+    "solucion": [
+      {
+        "t": "formula",
+        "name": "Valor creado al rescatar por debajo del valor intrínseco",
+        "expr": "Valor creado = (Valor intrínseco − Precio) × Unidades = (100 − 80) × 6,25 = 125"
+      },
+      {
+        "t": "p",
+        "md": "Rescatar a 80 lo que vale 100 **crea 125** de valor para los socios que se quedan: se compra un activo (la propia empresa) con un 20 % de descuento. Es una asignación excelente, superior a distribuir."
+      },
+      {
+        "t": "idea",
+        "md": "Si el socio pidiera **120**, la lógica se invierte: pagar 120 por algo que vale 100 **destruye** (120 − 100) × 4,17 = **83** de valor, transfiriendo riqueza de los que se quedan al que sale. La misma operación crea o destruye valor según una sola variable: **el precio frente al valor intrínseco**. Es exactamente la lógica de la recompra de acciones en la empresa cotizante."
+      }
+    ]
+  },
+  "bibliografia": [
+    "Thorndike, W. — *The Outsiders: Eight Unconventional CEOs*",
+    "Buffett, W. — Cartas a los accionistas de Berkshire Hathaway",
+    "Mauboussin, M. — *Capital Allocation: Results, Analysis, and Assessment*",
+    "Koller, Goedhart & Wessels — *Valuation*, capítulos de asignación y reasignación",
+    "Rappaport, A. — *Creating Shareholder Value*",
+    "Jensen, M. — “Agency Costs of Free Cash Flow” (1986)"
+  ]
+}
