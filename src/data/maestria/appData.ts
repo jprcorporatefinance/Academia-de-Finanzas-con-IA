@@ -52,6 +52,7 @@ export const CUATRIMESTRES: { n: number; titulo: string; fase: string }[] = [
   { n: 2, titulo: 'Segundo cuatrimestre', fase: 'Diagnóstica · ¿Por qué sucedió?' },
   { n: 3, titulo: 'Tercer cuatrimestre', fase: 'Predictiva · ¿Qué es probable que ocurra?' },
   { n: 4, titulo: 'Cuarto cuatrimestre', fase: 'Prescriptiva · ¿Qué debemos hacer?' },
+  { n: 5, titulo: 'Módulos Avanzados', fase: 'Temas de frontera y tendencias en finanzas corporativas' },
 ]
 
 export const MAX_INTENTOS = 3

@@ -6210,5 +6210,394 @@
         "justificacion": "Todo se juzga por el valor de largo plazo para los dueños; crecimiento, market share o eficiencia valen solo en cuanto sirven a ese fin (Rappaport)."
       }
     ]
+  },
+  {
+    "cod": "A.1",
+    "slug": "av-1",
+    "cuatrimestre": 5,
+    "fase": "Módulo Avanzado · Temas de frontera",
+    "nombre": "Fusiones y Adquisiciones: sinergias, due diligence y por qué la mayoría destruye valor",
+    "horas": "24 h · 10 teóricas / 14 prácticas",
+    "framework": "Damodaran · Bruner · Jensen · Roll",
+    "resumen": "La operación financiera de mayor impacto y peor resultado promedio. Por qué entre la mitad y dos tercios de las adquisiciones destruyen valor para el comprador, cómo se valúan las sinergias sin engañarse, y qué mira un due diligence financiero serio.",
+    "objetivos": [
+      "Comprender la evidencia empírica sobre creación y destrucción de valor en M&A, y sus causas estructurales.",
+      "Valuar sinergias por tipo, separando las creíbles de las declarativas, y descontarlas por probabilidad y demora.",
+      "Ejecutar un due diligence financiero: calidad de ganancias, capital de trabajo normalizado, deuda oculta y contingencias.",
+      "Diseñar la estructura del acuerdo (precio, forma de pago, earn-out, garantías) alineando incentivos y repartiendo riesgo.",
+      "Reconocer los sesgos —hubris, winner’s curse, presión del deal— que explican los malos resultados."
+    ],
+    "caso": {
+      "titulo": "La oferta por Maderas del Litoral",
+      "empresa": "Maderas del Litoral S.A. — evaluación de una oferta de compra",
+      "consigna": [
+        "¿Cuál es el valor presente de las sinergias, castigadas por probabilidad y neto de costos de integración?",
+        "¿Qué porcentaje de esa sinergia se está entregando el comprador en la prima de 1.600?",
+        "¿Es una buena oferta para los vendedores? ¿Y para el comprador?",
+        "¿Cómo impacta un IDD de 72 en la negociación, y qué estructura de acuerdo lo contempla?"
+      ]
+    },
+    "quiz": [
+      {
+        "id": "q1",
+        "pregunta": "La evidencia empírica sobre M&A muestra que, en promedio:",
+        "opciones": [
+          "El comprador captura la mayor parte del valor.",
+          "El vendedor captura la mayor parte del valor vía la prima, y el comprador con frecuencia destruye valor.",
+          "Ambos ganan por igual.",
+          "Nadie gana ni pierde."
+        ],
+        "correcta": 1,
+        "justificacion": "Décadas de investigación muestran que la prima transfiere el valor al vendedor y que entre la mitad y dos tercios de las adquisiciones destruyen valor para el comprador. No es un resultado simétrico."
+      },
+      {
+        "id": "q2",
+        "pregunta": "La teoría del free cash flow de Jensen explica las adquisiciones como:",
+        "opciones": [
+          "Un error de cálculo.",
+          "Un problema de agencia: directivos con exceso de caja prefieren comprar antes que distribuir.",
+          "Un fenómeno aleatorio.",
+          "Una consecuencia de la inflación."
+        ],
+        "correcta": 1,
+        "justificacion": "Jensen (1986) plantea que el exceso de caja en manos de directivos sin oportunidades rentables alimenta adquisiciones destructivas; es un conflicto de intereses, no un error aritmético."
+      },
+      {
+        "id": "q3",
+        "pregunta": "La hipótesis de la arrogancia (hubris) de Roll sostiene que:",
+        "opciones": [
+          "Los directivos actúan de mala fe.",
+          "Los directivos pagan de más por exceso de confianza sincero en su propia valuación.",
+          "El mercado siempre tiene razón.",
+          "Las sinergias no existen."
+        ],
+        "correcta": 1,
+        "justificacion": "Roll (1986) no supone mala fe sino mala calibración: la creencia sincera de que uno ve valor donde el mercado no lo ve lleva a pagar primas injustificadas."
+      },
+      {
+        "id": "q4",
+        "pregunta": "La “maldición del ganador” (winner’s curse) en una subasta implica que:",
+        "opciones": [
+          "Gana el mejor postor informado.",
+          "El que gana es sistemáticamente el que más sobreestimó el valor.",
+          "Nadie gana.",
+          "El precio siempre es justo."
+        ],
+        "correcta": 1,
+        "justificacion": "Con valor incierto y múltiples oferentes, ganar la subasta es evidencia de haber sido el más optimista —es decir, el que más probablemente sobreestimó—."
+      },
+      {
+        "id": "q5",
+        "pregunta": "¿Cuál tipo de sinergia es históricamente la MENOS cumplida?",
+        "opciones": [
+          "De costos.",
+          "De ingresos.",
+          "Fiscales.",
+          "Financieras."
+        ],
+        "correcta": 1,
+        "justificacion": "Las sinergias de ingresos (venta cruzada, nuevos mercados) son las más prometidas y las menos cumplidas; las de costos son más verificables y suelen materializarse, aunque con demora."
+      },
+      {
+        "id": "q6",
+        "pregunta": "Al valuar una sinergia, los dos castigos que casi nadie aplica son:",
+        "opciones": [
+          "Impuestos e inflación.",
+          "La probabilidad de materialización y la demora en aparecer.",
+          "El tipo de cambio y la tasa.",
+          "Ninguno."
+        ],
+        "correcta": 1,
+        "justificacion": "No toda sinergia se logra (probabilidad) y ninguna es inmediata (demora). Ambos reducen fuertemente el valor presente y suelen omitirse en las justificaciones optimistas."
+      },
+      {
+        "id": "q7",
+        "pregunta": "Valuar la empresa objetivo incluyendo las sinergias y usar ese número como precio:",
+        "opciones": [
+          "Es la práctica correcta.",
+          "Entrega de antemano todo el valor al vendedor y deja al comprador con todo el riesgo.",
+          "Reduce la prima.",
+          "Es lo que recomienda Damodaran."
+        ],
+        "correcta": 1,
+        "justificacion": "Ese cálculo convierte el techo teórico en precio, transfiriendo la totalidad del beneficio al vendedor. Damodaran recomienda exactamente lo contrario: valuar stand-alone primero."
+      },
+      {
+        "id": "q8",
+        "pregunta": "La valuación stand-alone de la empresa objetivo representa:",
+        "opciones": [
+          "El techo del precio.",
+          "El piso de realidad sobre el que se discute la prima.",
+          "El precio final.",
+          "Un dato irrelevante."
+        ],
+        "correcta": 1,
+        "justificacion": "El valor sin sinergias es el punto de partida: todo lo que se pague por encima debe justificarse con flujos, fechas y probabilidades concretas."
+      },
+      {
+        "id": "q9",
+        "pregunta": "El due diligence financiero se diferencia de la auditoría en que:",
+        "opciones": [
+          "Son lo mismo.",
+          "La auditoría verifica cumplimiento normativo; el due diligence busca lo que cambia el precio o mata el acuerdo.",
+          "El due diligence es más barato.",
+          "La auditoría es opcional."
+        ],
+        "correcta": 1,
+        "justificacion": "Son ejercicios con objetivos distintos: la auditoría certifica conformidad con la norma; el due diligence busca riesgos y ajustes con impacto económico en la transacción."
+      },
+      {
+        "id": "q10",
+        "pregunta": "El “EBITDA ajustado” que se negocia en una operación es:",
+        "opciones": [
+          "El EBITDA contable sin cambios.",
+          "El EBITDA depurado de partidas no recurrentes y devengamientos agresivos, para reflejar lo recurrente y de caja.",
+          "El EBITDA más las sinergias.",
+          "El resultado neto."
+        ],
+        "correcta": 1,
+        "justificacion": "Se normaliza el EBITDA para reflejar la capacidad recurrente del negocio; es donde se juega buena parte del precio y por eso es el foco del due diligence."
+      },
+      {
+        "id": "q11",
+        "pregunta": "La cláusula de ajuste por capital de trabajo normalizado existe para:",
+        "opciones": [
+          "Complicar el contrato.",
+          "Evitar que el vendedor \"vacíe\" el capital de trabajo entre la firma y el cierre.",
+          "Bajar el precio siempre.",
+          "Reemplazar la deuda neta."
+        ],
+        "correcta": 1,
+        "justificacion": "Sin esa cláusula el vendedor tiene incentivos para estirar pagos y acelerar cobranzas, entregando un negocio descapitalizado en su ciclo operativo."
+      },
+      {
+        "id": "q12",
+        "pregunta": "Un vendedor que desinvirtió durante años (CapEx menor a la depreciación) entrega:",
+        "opciones": [
+          "Un negocio en excelente estado.",
+          "Un EBITDA inflado y una máquina que hay que reponer.",
+          "Menos deuda.",
+          "Más capital de trabajo."
+        ],
+        "correcta": 1,
+        "justificacion": "La desinversión encubierta infla el resultado presente a costa de una inversión de reposición diferida que el comprador va a tener que afrontar."
+      },
+      {
+        "id": "q13",
+        "pregunta": "En el esquema de precio “cash-free, debt-free” se acuerda:",
+        "opciones": [
+          "Solo el precio de las acciones.",
+          "Un valor de empresa (EV) que luego se ajusta por deuda neta y desvío de capital de trabajo.",
+          "Pagar sin dinero.",
+          "No pagar deuda."
+        ],
+        "correcta": 1,
+        "justificacion": "Se negocia el valor del negocio (EV) y el precio de las acciones surge de ajustar por deuda neta y por el desvío del capital de trabajo respecto del nivel normalizado."
+      },
+      {
+        "id": "q14",
+        "pregunta": "Pagar una adquisición con acciones en vez de caja:",
+        "opciones": [
+          "Transfiere todo el riesgo al comprador.",
+          "Comparte el riesgo y puede señalar que el comprador considera caras sus acciones.",
+          "Siempre es mejor.",
+          "No tiene efecto informativo."
+        ],
+        "correcta": 1,
+        "justificacion": "El pago en acciones comparte el riesgo de la operación y el mercado suele leerlo como señal de sobrevaluación del comprador; empíricamente rinde peor que el pago en caja."
+      },
+      {
+        "id": "q15",
+        "pregunta": "El earn-out es especialmente útil cuando:",
+        "opciones": [
+          "Hay acuerdo total sobre el valor.",
+          "El desacuerdo es sobre el desempeño futuro y conviene alinear incentivos.",
+          "No hay vendedor.",
+          "El comprador no tiene fondos."
+        ],
+        "correcta": 1,
+        "justificacion": "Condicionar parte del precio a resultados futuros cierra la brecha de valuación cuando el desacuerdo es sobre el futuro, y mantiene comprometido al vendedor."
+      },
+      {
+        "id": "q16",
+        "pregunta": "Un earn-out mal diseñado falla típicamente porque:",
+        "opciones": [
+          "Es demasiado generoso.",
+          "Sus métricas no son objetivas, auditables ni están bajo control del vendedor.",
+          "Es ilegal.",
+          "No se usa nunca."
+        ],
+        "correcta": 1,
+        "justificacion": "Si el vendedor no controla la métrica o esta es manipulable por el comprador, el earn-out se vuelve fuente garantizada de conflicto y litigio."
+      },
+      {
+        "id": "q17",
+        "pregunta": "Las declaraciones y garantías (reps & warranties) sirven para:",
+        "opciones": [
+          "Fijar el precio.",
+          "Trasladar al vendedor el riesgo de que lo declarado sobre la empresa sea falso.",
+          "Definir sinergias.",
+          "Calcular el WACC."
+        ],
+        "correcta": 1,
+        "justificacion": "El vendedor afirma hechos sobre la empresa y responde si resultan falsos; es el mecanismo contractual que asigna el riesgo de lo desconocido."
+      },
+      {
+        "id": "q18",
+        "pregunta": "El escrow (retención de parte del precio) tiene como fin:",
+        "opciones": [
+          "Bajar el precio.",
+          "Responder por contingencias que aparezcan después del cierre.",
+          "Pagar impuestos.",
+          "Financiar la integración."
+        ],
+        "correcta": 1,
+        "justificacion": "Una porción del precio queda retenida un tiempo para cubrir reclamos por contingencias no detectadas en el due diligence."
+      },
+      {
+        "id": "q19",
+        "pregunta": "La evidencia sobre “programmatic M&A” indica que:",
+        "opciones": [
+          "Las grandes apuestas transformacionales rinden mejor.",
+          "Las adquisiciones pequeñas y frecuentes superan sistemáticamente a las grandes apuestas.",
+          "M&A nunca funciona.",
+          "El tamaño es irrelevante."
+        ],
+        "correcta": 1,
+        "justificacion": "Los programas sostenidos de adquisiciones chicas muestran mejor desempeño que las pocas operaciones grandes y transformacionales, según la investigación de McKinsey y otros."
+      },
+      {
+        "id": "q20",
+        "pregunta": "¿Dónde se pierde con más frecuencia el valor de una adquisición?",
+        "opciones": [
+          "En la negociación del precio.",
+          "En la integración post-cierre.",
+          "En el due diligence.",
+          "En la firma."
+        ],
+        "correcta": 1,
+        "justificacion": "El valor se define en el precio pero se realiza (o se pierde) en la integración: retención de talento, sistemas, cultura y clientes."
+      },
+      {
+        "id": "q21",
+        "pregunta": "En la empresa mediana familiar, la operación de M&A típicamente es:",
+        "opciones": [
+          "Una fusión entre corporaciones.",
+          "La venta total o parcial de la empresa de una familia, cruzada con sucesión y retiro.",
+          "Una oferta pública.",
+          "Una escisión."
+        ],
+        "correcta": 1,
+        "justificacion": "El vendedor no es un fondo que optimiza: es un dueño resolviendo simultáneamente su sucesión, su retiro y a veces un conflicto familiar. Eso cambia la lógica de la negociación."
+      },
+      {
+        "id": "q22",
+        "pregunta": "Un IDD (dependencia del dueño) alto, en una venta:",
+        "opciones": [
+          "Sube el precio.",
+          "Reduce el valor, achica el universo de compradores y aumenta el riesgo de la integración.",
+          "No influye.",
+          "Solo afecta al vendedor."
+        ],
+        "correcta": 1,
+        "justificacion": "Un negocio que se va con el dueño vale menos, atrae menos compradores y es más frágil en la transición: los tres efectos juegan en contra del precio."
+      },
+      {
+        "id": "q23",
+        "pregunta": "Preparar una empresa para la venta “solo contablemente” (maquillar el último ejercicio):",
+        "opciones": [
+          "Es la mejor estrategia.",
+          "Lo detecta cualquier due diligence competente y destruye confianza.",
+          "Sube el precio de forma segura.",
+          "Es lo que recomienda la doctrina."
+        ],
+        "correcta": 1,
+        "justificacion": "El maquillaje contable se detecta en el due diligence y erosiona la confianza; la preparación estructural (procesos, segunda línea, deuda ordenada) es la que sube el precio de verdad."
+      },
+      {
+        "id": "q24",
+        "pregunta": "El precio máximo racional que debería pagar un comprador es:",
+        "opciones": [
+          "El valor stand-alone.",
+          "El valor stand-alone más la sinergia neta ajustada.",
+          "El doble del stand-alone.",
+          "Lo que pida el vendedor."
+        ],
+        "correcta": 1,
+        "justificacion": "Stand-alone + sinergia neta (ajustada por probabilidad, demora y costos de integración) es el techo teórico; pagar eso transfiere todo el beneficio al vendedor."
+      },
+      {
+        "id": "q25",
+        "pregunta": "Si la prima pagada iguala al valor presente de la sinergia:",
+        "opciones": [
+          "El comprador gana mucho.",
+          "El comprador asume todo el riesgo de ejecución sin quedarse ningún beneficio.",
+          "Ambos ganan.",
+          "La operación es imposible."
+        ],
+        "correcta": 1,
+        "justificacion": "Con prima = sinergia, todo el beneficio va al vendedor y el comprador queda con el riesgo de ejecución sin compensación: destruye valor para sus accionistas."
+      },
+      {
+        "id": "q26",
+        "pregunta": "Los costos de integración, al valuar una operación:",
+        "opciones": [
+          "Se ignoran.",
+          "Se restan del valor presente de las sinergias.",
+          "Se suman a la sinergia.",
+          "Se pagan aparte sin afectar el valor."
+        ],
+        "correcta": 1,
+        "justificacion": "La sinergia relevante es la NETA de los costos de lograrla (sistemas, indemnizaciones, consultores, disrupción operativa)."
+      },
+      {
+        "id": "q27",
+        "pregunta": "La sinergia fiscal por uso de quebrantos acumulados es:",
+        "opciones": [
+          "Siempre inventada.",
+          "Real si es legítima, y debe verificarse con asesoramiento tributario.",
+          "La menos creíble.",
+          "Ilegal."
+        ],
+        "correcta": 1,
+        "justificacion": "El aprovechamiento de quebrantos puede generar valor real, pero su viabilidad depende de la normativa aplicable y debe verificarse, no suponerse."
+      },
+      {
+        "id": "q28",
+        "pregunta": "Según Bruner, los fracasos en M&A típicamente:",
+        "opciones": [
+          "Tienen una única causa.",
+          "Son una cadena: tesis débil, due diligence apurado, valuación optimista, mala estructura e integración subestimada.",
+          "Son puro azar.",
+          "Se deben solo al precio."
+        ],
+        "correcta": 1,
+        "justificacion": "Bruner documenta que los desastres son multicausales: cada eslabón parece manejable por separado, pero encadenados resultan letales."
+      },
+      {
+        "id": "q29",
+        "pregunta": "La concentración de clientes detectada en el due diligence importa porque:",
+        "opciones": [
+          "No afecta el valor.",
+          "Aumenta el riesgo del flujo futuro y puede justificar un menor precio o un earn-out.",
+          "Sube el EBITDA.",
+          "Solo importa a los bancos."
+        ],
+        "correcta": 1,
+        "justificacion": "Un negocio dependiente de pocos clientes tiene flujos más volátiles y frágiles; se refleja en el precio, en la estructura del acuerdo o en ambos. Es lo que mide el indicador CEM."
+      },
+      {
+        "id": "q30",
+        "pregunta": "La secuencia correcta para preparar una empresa familiar para la venta es:",
+        "opciones": [
+          "Salir al mercado primero y ordenarse después.",
+          "Bajar el IDD, normalizar, ordenar capital de trabajo y deuda, y recién después salir al mercado.",
+          "Solo mejorar el último balance.",
+          "Contratar un banco de inversión y esperar."
+        ],
+        "correcta": 1,
+        "justificacion": "Cada paso previo sube el precio y amplía el universo de compradores; salir al mercado sin preparación destruye poder de negociación."
+      }
+    ]
   }
 ]

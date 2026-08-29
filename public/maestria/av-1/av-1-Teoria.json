@@ -1,0 +1,383 @@
+{
+  "cod": "A.1",
+  "nombre": "Fusiones y Adquisiciones: sinergias, due diligence y por qué la mayoría destruye valor",
+  "sections": [
+    {
+      "title": "El origen del problema: por qué existen las adquisiciones",
+      "intro": "Antes de valuar una operación hay que entender qué la motiva. La historia intelectual del campo explica por qué el resultado promedio es malo y, sobre todo, por qué se siguen haciendo.",
+      "blocks": [
+        {
+          "t": "p",
+          "md": "La teoría clásica dice que una adquisición crea valor cuando el comprador puede hacer con los activos algo que el vendedor no puede: **sinergia**. Pero la investigación empírica de las últimas cuatro décadas muestra un patrón incómodo: en promedio, el **vendedor captura la mayor parte del valor** (vía la prima) y el comprador, con frecuencia, **destruye** valor para sus propios accionistas."
+        },
+        {
+          "t": "p",
+          "md": "Tres explicaciones compiten, y no son excluyentes. **Michael Jensen (1986)** propuso la teoría del *free cash flow*: los directivos con exceso de caja y pocas oportunidades de inversión prefieren comprar empresas antes que distribuir dividendos, porque el tamaño trae poder, prestigio y remuneración. La adquisición no es un error de cálculo: es un **problema de agencia**."
+        },
+        {
+          "t": "p",
+          "md": "**Richard Roll (1986)** propuso la *hipótesis de la arrogancia (hubris)*: los directivos creen sinceramente que su valuación es superior a la del mercado, y pagan de más por exceso de confianza. No hay mala fe, hay mala calibración. Y la **maldición del ganador** (*winner’s curse*) completa el cuadro: en una subasta con valor incierto, el que gana es sistemáticamente el que más sobreestimó."
+        },
+        {
+          "t": "chain",
+          "title": "Las tres explicaciones del mal resultado promedio",
+          "nodes": [
+            "Agencia (Jensen): comprar en vez de distribuir",
+            "Hubris (Roll): exceso de confianza",
+            "Winner’s curse: gana el que más sobreestima",
+            "Prima excesiva → destrucción de valor"
+          ],
+          "caption": "Las tres actúan a la vez. Por eso el problema es estructural y no se corrige solo con “mejor análisis”."
+        },
+        {
+          "t": "quote",
+          "author": "Michael Jensen",
+          "credential": "Harvard — Agency Costs of Free Cash Flow (1986)",
+          "md": "El conflicto de intereses entre accionistas y directivos por las políticas de distribución es especialmente severo cuando la organización genera un flujo de caja libre sustancial. El problema es cómo motivar a los directivos a devolver el efectivo en vez de invertirlo por debajo del costo del capital, o desperdiciarlo en ineficiencias organizacionales."
+        }
+      ]
+    },
+    {
+      "title": "La anatomía de las sinergias",
+      "intro": "Toda adquisición se justifica con sinergias. La disciplina consiste en clasificarlas, valuarlas por separado y castigarlas por probabilidad y demora —porque no todas son igual de creíbles—.",
+      "blocks": [
+        {
+          "t": "table",
+          "title": "Los cuatro tipos de sinergia y su credibilidad",
+          "headers": [
+            "Tipo",
+            "De dónde sale",
+            "Credibilidad"
+          ],
+          "firstColLeft": true,
+          "rows": [
+            [
+              "De costos",
+              "Eliminar duplicaciones: estructura, plantas, compras",
+              "Alta — es la más verificable"
+            ],
+            [
+              "De ingresos",
+              "Venta cruzada, acceso a nuevos canales o mercados",
+              "Baja — la más prometida y la menos cumplida"
+            ],
+            [
+              "Financieras",
+              "Menor costo del capital, mayor capacidad de deuda",
+              "Media — real pero acotada"
+            ],
+            [
+              "Fiscales",
+              "Uso de quebrantos, escudo fiscal adicional",
+              "Alta si es legítima — verificar con asesor tributario"
+            ]
+          ],
+          "caption": "La asimetría es notable: las sinergias de costos suelen cumplirse (a veces con demora), las de ingresos rara vez. Sin embargo, son las de ingresos las que más se usan para justificar primas altas."
+        },
+        {
+          "t": "formula",
+          "name": "Valor de la sinergia",
+          "expr": "VP(sinergia) = Σ [ Flujo_sinérgico_t × p ] ÷ (1 + WACC)^t − Costos de integración",
+          "where": "p = probabilidad de materialización · el flujo empieza en t+n, no en t=0",
+          "note": "Dos castigos que casi nadie aplica: la PROBABILIDAD (no toda sinergia se logra) y la DEMORA (ninguna sinergia es inmediata). Ambos reducen fuertemente su valor presente."
+        },
+        {
+          "t": "idea",
+          "md": "La regla de oro: **el valor de la sinergia le pertenece al comprador solo si no lo paga en la prima.** Si la sinergia vale 100 y la prima es 100, el comprador hizo todo el trabajo y el riesgo, y el vendedor se llevó todo el beneficio. La pregunta correcta no es \"¿hay sinergia?\" sino \"¿cuánta me queda después de la prima?\"."
+        },
+        {
+          "t": "warn",
+          "md": "El error más caro del campo: valuar la empresa objetivo **incluyendo** las sinergias y usar ese número como precio máximo. Ese cálculo entrega de antemano todo el valor al vendedor. La valuación *stand-alone* (sin sinergias) es el piso; la valuación con sinergias es el techo teórico; y el precio debe quedar **claramente por debajo del techo**."
+        }
+      ]
+    },
+    {
+      "title": "Due diligence financiero: qué se mira de verdad",
+      "intro": "El due diligence no es una auditoría. La auditoría verifica que los estados cumplan la norma; el due diligence busca lo que cambia el precio o mata el acuerdo.",
+      "blocks": [
+        {
+          "t": "steps",
+          "title": "Las cinco preguntas del due diligence financiero",
+          "items": [
+            {
+              "k": "Calidad de las ganancias",
+              "d": "¿El EBITDA es recurrente y de caja? Se depura de partidas no recurrentes, ajustes de criterio y devengamientos agresivos. El resultado es el \"EBITDA ajustado\" que se negocia — y donde se juega buena parte del precio."
+            },
+            {
+              "k": "Capital de trabajo normalizado",
+              "d": "¿Cuánto capital de trabajo necesita el negocio para operar? Se fija un nivel normal y se ajusta el precio por el desvío al cierre. Sin esta cláusula, el vendedor tiene todos los incentivos para estirar pagos y acelerar cobranzas antes de entregar."
+            },
+            {
+              "k": "Deuda y deuda equivalente",
+              "d": "La deuda financiera declarada, más la oculta: arrendamientos, cheques descontados con recurso, avales, pasivos laborales y previsionales, contingencias impositivas y juicios."
+            },
+            {
+              "k": "Inversión de reposición real",
+              "d": "¿Cuánto CapEx hace falta para sostener el negocio? Un vendedor que desinvirtió durante años entrega un EBITDA inflado y una máquina que hay que reponer."
+            },
+            {
+              "k": "Dependencia y concentración",
+              "d": "Concentración de clientes, proveedores y —crítico en la empresa familiar— dependencia del dueño. Un negocio que se va con el dueño no vale lo que muestran sus números."
+            }
+          ]
+        },
+        {
+          "t": "p",
+          "md": "Los tres primeros puntos alimentan el mecanismo de precio más usado: el **precio libre de caja y deuda** (*cash-free, debt-free*), donde se acuerda un valor de empresa (EV) y luego se ajusta por la deuda neta y el desvío de capital de trabajo al cierre. Entender esa mecánica es lo que separa a quien negocia de quien firma lo que le ponen adelante."
+        },
+        {
+          "t": "quote",
+          "author": "Robert Bruner",
+          "credential": "Darden School — Deals from Hell",
+          "md": "Los fracasos en M&A rara vez tienen una única causa. Son el resultado de una cadena: una tesis estratégica débil, un due diligence apurado, una valuación optimista, una estructura mal diseñada y una integración subestimada. Cada eslabón parece manejable; juntos, son letales."
+        }
+      ]
+    },
+    {
+      "title": "La estructura del acuerdo: repartir el riesgo, no solo el precio",
+      "intro": "Cuando comprador y vendedor no coinciden en el valor, la solución rara vez es un precio intermedio: es una estructura que reparta el riesgo según quién puede controlarlo.",
+      "blocks": [
+        {
+          "t": "ul",
+          "items": [
+            "**Forma de pago (caja vs. acciones).** Pagar en caja transfiere todo el riesgo al comprador. Pagar en acciones lo comparte —y además envía una señal: si el comprador prefiere pagar con sus acciones, quizás las considere caras—.",
+            "**Earn-out.** Parte del precio queda condicionada a resultados futuros. Alinea incentivos y cierra brechas de valuación, pero exige métricas objetivas, auditables y bajo control del vendedor —si no, es una fuente garantizada de conflicto—.",
+            "**Escrow / garantías.** Una porción del precio queda retenida para responder por contingencias que aparezcan después del cierre.",
+            "**Declaraciones y garantías (reps & warranties).** El vendedor afirma hechos sobre la empresa; si resultan falsos, indemniza. Es el mecanismo que traslada el riesgo de lo desconocido.",
+            "**Cláusulas de ajuste de precio.** Por deuda neta y por capital de trabajo al cierre, para que el vendedor no pueda \"vaciar\" el negocio entre la firma y la entrega."
+          ]
+        },
+        {
+          "t": "idea",
+          "md": "El **earn-out** es la herramienta natural cuando el desacuerdo es sobre el futuro y no sobre el pasado. En la empresa familiar cumple una segunda función, tanto o más valiosa: **mantiene al dueño comprometido durante la transición**, que es exactamente el período donde un IDD alto puede destruir el valor que se acaba de pagar."
+        }
+      ]
+    },
+    {
+      "title": "Estado del arte y evidencia",
+      "intro": "Qué dice hoy la investigación sobre cuándo las adquisiciones sí crean valor.",
+      "blocks": [
+        {
+          "t": "ul",
+          "items": [
+            "**El tamaño relativo importa.** Las adquisiciones pequeñas y frecuentes (*programmatic M&A*) superan sistemáticamente a las grandes apuestas transformacionales. McKinsey documenta que las empresas con programas sostenidos de adquisiciones chicas rinden mejor que las que hacen pocas operaciones grandes.",
+            "**La forma de pago predice el resultado.** Las operaciones pagadas en acciones tienden a rendir peor que las pagadas en caja: el mercado lee la emisión de acciones como señal de sobrevaluación.",
+            "**El comprador serial disciplinado gana.** No por sinergias mágicas, sino por un proceso repetible: tesis clara, disciplina de precio, integración estandarizada.",
+            "**La integración es donde se pierde.** El valor se define en el precio, pero se realiza (o se pierde) en la integración: retención de talento clave, sistemas, cultura y clientes."
+          ]
+        },
+        {
+          "t": "quote",
+          "author": "Aswath Damodaran",
+          "credential": "NYU Stern — The Value of Synergy",
+          "md": "La sinergia es la justificación más invocada y menos verificada de las finanzas corporativas. Si vas a pagar por sinergia, tenés que poder responder tres preguntas: dónde aparecerá en los flujos, cuándo, y con qué probabilidad. Si no podés, no estás valuando sinergia: estás pagando una esperanza."
+        }
+      ]
+    },
+    {
+      "title": "La mirada JPR",
+      "intro": "Cómo se lee todo esto desde la práctica sobre empresas medianas de capital cerrado en el Nordeste argentino.",
+      "blocks": [
+        {
+          "t": "p",
+          "md": "En la empresa mediana familiar, la operación de M&A rara vez es una adquisición estratégica entre corporaciones: **es la venta total o parcial de la empresa de una familia**. Eso cambia el problema por completo. El vendedor no es un fondo que optimiza: es un dueño que además está resolviendo su sucesión, su retiro y —muchas veces— un conflicto familiar. El precio es una variable; la transferibilidad, otra."
+        },
+        {
+          "t": "idea",
+          "md": "Por eso el **IDD (Índice de Dependencia del Dueño)** es, en una operación de venta, tan determinante como el EBITDA. Una empresa con IDD alto tiene tres problemas simultáneos: es menos valiosa (porque el comprador descuenta el riesgo de transición), es menos vendible (menos compradores la miran) y es más frágil en la integración. **Bajar el IDD antes de vender es la inversión de mayor retorno que puede hacer un dueño que piensa salir en tres años.**"
+        },
+        {
+          "t": "warn",
+          "md": "El error que más veces se repite del lado vendedor: preparar la empresa para la venta **solo contablemente** —maquillar el último ejercicio— en vez de prepararla **estructuralmente**: documentar procesos, formar la segunda línea, institucionalizar las relaciones comerciales, normalizar la retribución del dueño y ordenar la deuda oculta. Lo primero lo detecta cualquier due diligence competente y destruye confianza; lo segundo sube el precio de verdad."
+        },
+        {
+          "t": "chain",
+          "title": "La preparación para vender, en orden",
+          "nodes": [
+            "Bajar el IDD",
+            "Normalizar y depurar (1.1)",
+            "Ordenar capital de trabajo (2.4)",
+            "Reducir la BFR (4.3)",
+            "Salir al mercado"
+          ],
+          "caption": "Cada paso sube el precio y amplía el universo de compradores. Hacerlo al revés —salir al mercado primero— destruye poder de negociación."
+        }
+      ]
+    }
+  ],
+  "expertos": [
+    {
+      "author": "Michael Jensen",
+      "credential": "Harvard Business School",
+      "md": "El flujo de caja libre en manos de directivos sin oportunidades de inversión rentables es la materia prima de las malas adquisiciones. La disciplina de la deuda y del dividendo existe, en parte, para impedirlo."
+    },
+    {
+      "author": "Richard Roll",
+      "credential": "UCLA — Hubris Hypothesis (1986)",
+      "md": "Si los directivos sobreestiman su capacidad de identificar valor donde el mercado no lo ve, pagarán primas que no se justifican. No hace falta mala fe: alcanza con exceso de confianza sincero."
+    },
+    {
+      "author": "Robert Bruner",
+      "credential": "Darden School of Business",
+      "md": "La pregunta correcta no es si M&A crea valor en promedio, sino bajo qué condiciones lo crea. La respuesta empírica es consistente: tesis estratégica clara, disciplina de precio, integración planificada desde antes del cierre."
+    },
+    {
+      "author": "Aswath Damodaran",
+      "credential": "NYU Stern",
+      "md": "Valuá la empresa objetivo sin sinergias primero. Ese número es tu piso de realidad. Todo lo que pagues por encima tenés que poder defenderlo con flujos, fechas y probabilidades concretas."
+    }
+  ],
+  "caso": {
+    "titulo": "La oferta por Maderas del Litoral",
+    "empresa": "Maderas del Litoral S.A. — evaluación de una oferta de compra",
+    "contexto": "Un grupo maderero brasileño ofrece comprar el 100 % de Maderas del Litoral. Los tres hermanos, después de todo el trabajo de diagnóstico del programa, tienen por fin números confiables: la empresa vale, stand-alone, unos 6.400 (miles) de patrimonio.\n\nEl comprador dice que hay sinergias: puede integrar la producción con su planta de Paso de los Libres (ahorro de costos), y vender aberturas de Maderas del Litoral por su red comercial en Brasil (ingresos). Ofrece 8.000, es decir, una prima de 1.600 sobre el valor stand-alone.\n\nLa pregunta del directorio: ¿es una buena oferta? Y del otro lado, la pregunta que el consultor debe poder responder: ¿cuánto de la sinergia se está quedando el comprador y cuánto está entregando en la prima?",
+    "datos": [
+      {
+        "t": "table",
+        "title": "Datos de la operación (miles de $)",
+        "headers": [
+          "Concepto",
+          "Valor"
+        ],
+        "firstColLeft": true,
+        "rows": [
+          [
+            "Valor stand-alone del patrimonio",
+            "6.400"
+          ],
+          [
+            "Oferta del comprador",
+            "8.000"
+          ],
+          [
+            "Sinergia de costos estimada (anual, perpetua)",
+            "420"
+          ],
+          [
+            "Probabilidad de materialización (costos)",
+            "80%"
+          ],
+          [
+            "Sinergia de ingresos estimada (anual, perpetua)",
+            "350"
+          ],
+          [
+            "Probabilidad de materialización (ingresos)",
+            "35%"
+          ],
+          [
+            "Costos de integración (una vez)",
+            "600"
+          ],
+          [
+            "WACC del comprador",
+            "18%"
+          ],
+          [
+            "IDD de Maderas del Litoral",
+            "72 (alto)"
+          ]
+        ]
+      }
+    ],
+    "consigna": [
+      "¿Cuál es el valor presente de las sinergias, castigadas por probabilidad y neto de costos de integración?",
+      "¿Qué porcentaje de esa sinergia se está entregando el comprador en la prima de 1.600?",
+      "¿Es una buena oferta para los vendedores? ¿Y para el comprador?",
+      "¿Cómo impacta un IDD de 72 en la negociación, y qué estructura de acuerdo lo contempla?"
+    ],
+    "metodologia": [
+      {
+        "k": "Valuar stand-alone",
+        "d": "El valor sin sinergias es el piso de la negociación (asignatura 4.1)."
+      },
+      {
+        "k": "Valuar cada sinergia por separado",
+        "d": "Castigar por probabilidad de materialización y por demora; restar costos de integración."
+      },
+      {
+        "k": "Repartir el valor",
+        "d": "Prima ÷ VP(sinergia) = porción del beneficio que se lleva el vendedor."
+      },
+      {
+        "k": "Evaluar desde ambos lados",
+        "d": "El vendedor mira la prima sobre stand-alone; el comprador, la sinergia neta de prima."
+      },
+      {
+        "k": "Diseñar la estructura",
+        "d": "Earn-out y retención del dueño para mitigar el riesgo de un IDD alto en la transición."
+      }
+    ]
+  },
+  "ejercicio": {
+    "titulo": "El precio máximo que un comprador debería pagar",
+    "enunciado": "Un comprador evalúa adquirir una distribuidora que, stand-alone, vale 3.000 (miles). Estima sinergias de costos por 250 anuales perpetuas, con 70 % de probabilidad, y costos de integración por 300. Su WACC es 20 %.",
+    "datos": [
+      {
+        "t": "table",
+        "title": "Datos (miles de $)",
+        "headers": [
+          "Concepto",
+          "Valor"
+        ],
+        "firstColLeft": true,
+        "rows": [
+          [
+            "Valor stand-alone",
+            "3.000"
+          ],
+          [
+            "Sinergia anual de costos",
+            "250"
+          ],
+          [
+            "Probabilidad",
+            "70%"
+          ],
+          [
+            "Costos de integración",
+            "300"
+          ],
+          [
+            "WACC",
+            "20%"
+          ]
+        ]
+      }
+    ],
+    "preguntas": [
+      "¿Cuánto vale la sinergia neta?",
+      "¿Cuál es el precio máximo racional?",
+      "¿Qué pasa si paga 3.500?"
+    ],
+    "solucion": [
+      {
+        "t": "formula",
+        "name": "Sinergia ajustada por probabilidad",
+        "expr": "VP = 250 × 0,70 ÷ 0,20 = 175 ÷ 0,20 = 875"
+      },
+      {
+        "t": "formula",
+        "name": "Sinergia neta de integración",
+        "expr": "Sinergia neta = 875 − 300 = 575"
+      },
+      {
+        "t": "formula",
+        "name": "Precio máximo racional",
+        "expr": "Precio máx = 3.000 + 575 = 3.575"
+      },
+      {
+        "t": "idea",
+        "md": "Si paga **3.500**, la prima es 500 y le quedan **75** de valor (575 − 500): la operación apenas crea valor y cualquier desvío en la sinergia la vuelve negativa. Si pagara 3.575 o más, **transfiere todo el beneficio al vendedor** y asume todo el riesgo de ejecución: destruye valor para sus accionistas. El margen entre el precio y el máximo racional es la única protección real ante errores de estimación."
+      }
+    ]
+  },
+  "bibliografia": [
+    "Damodaran, A. — *The Value of Synergy* y *Investment Valuation*",
+    "Bruner, R. — *Deals from Hell: M&A Lessons that Rise Above the Ashes*",
+    "Jensen, M. — “Agency Costs of Free Cash Flow, Corporate Finance and Takeovers” (1986)",
+    "Roll, R. — “The Hubris Hypothesis of Corporate Takeovers” (1986)",
+    "Koller, Goedhart & Wessels — *Valuation*, capítulos de M&A",
+    "Rosenbaum, J. & Pearl, J. — *Investment Banking: Valuation, LBOs, M&A*"
+  ]
+}

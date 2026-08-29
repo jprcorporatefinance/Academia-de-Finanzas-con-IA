@@ -15,13 +15,16 @@ import { a4_1 } from './a4_1'
 import { a4_2 } from './a4_2'
 import { a4_3 } from './a4_3'
 import { a4_4 } from './a4_4'
+import { av1_ma } from './av1_ma'
 
-// Registro completo de las 16 asignaturas de la Maestría (cuatrimestres 1–4).
+// Registro de la Maestría: 16 asignaturas del núcleo (cuatrimestres 1–4) más
+// los Módulos Avanzados (temas de frontera y tendencias).
 export const asignaturas: Asignatura[] = [
   a1_1, a1_2, a1_3, a1_4,
   a2_1, a2_2, a2_3, a2_4,
   a3_1, a3_2, a3_3, a3_4,
   a4_1, a4_2, a4_3, a4_4,
+  av1_ma,
 ]
 
 export type { Asignatura }
