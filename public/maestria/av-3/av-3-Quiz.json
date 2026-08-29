@@ -1,0 +1,366 @@
+{
+  "cod": "A.3",
+  "nombre": "Finanzas Conductuales: por qué gente inteligente toma malas decisiones financieras",
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "La teoría de las perspectivas (Kahneman y Tversky) sostiene que las personas evalúan:",
+      "opciones": [
+        "La riqueza final absoluta.",
+        "Ganancias y pérdidas respecto de un punto de referencia.",
+        "Solo probabilidades.",
+        "Nada sistemático."
+      ],
+      "correcta": 1,
+      "justificacion": "El hallazgo central es que importa el cambio respecto de un punto de referencia, no el nivel final de riqueza. De ahí se derivan muchas decisiones aparentemente irracionales."
+    },
+    {
+      "id": "q2",
+      "pregunta": "La aversión a la pérdida implica que:",
+      "opciones": [
+        "Ganar y perder pesan igual.",
+        "Perder duele aproximadamente el doble de lo que gratifica ganar la misma cantidad.",
+        "Nadie quiere ganar.",
+        "Las pérdidas se ignoran."
+      ],
+      "correcta": 1,
+      "justificacion": "La asimetría documentada es de aproximadamente 2 a 1, y explica la resistencia a cerrar posiciones o unidades perdedoras."
+    },
+    {
+      "id": "q3",
+      "pregunta": "El Sistema 1 y el Sistema 2 de Kahneman se refieren a:",
+      "opciones": [
+        "Dos software contables.",
+        "Pensamiento rápido/automático y pensamiento lento/deliberado.",
+        "Dos métodos de valuación.",
+        "Dos tipos de empresa."
+      ],
+      "correcta": 1,
+      "justificacion": "El Sistema 1 es intuitivo y automático; el Sistema 2, analítico y costoso. Muchas veces el Sistema 2 justifica lo que el Sistema 1 ya decidió."
+    },
+    {
+      "id": "q4",
+      "pregunta": "Conocer los propios sesgos:",
+      "opciones": [
+        "Los elimina.",
+        "No los elimina: hay que diseñar procesos que los detecten y compensen.",
+        "Es irrelevante.",
+        "Garantiza decisiones correctas."
+      ],
+      "correcta": 1,
+      "justificacion": "Kahneman es explícito: la ilusión de validez sobrevive al saber que existe. El remedio es institucional (proceso), no individual (voluntad)."
+    },
+    {
+      "id": "q5",
+      "pregunta": "El sesgo de costos hundidos consiste en:",
+      "opciones": [
+        "Ignorar lo ya invertido.",
+        "Dejar que lo ya invertido e irrecuperable influya en la decisión de continuar.",
+        "Calcular mal el VAN.",
+        "Invertir poco."
+      ],
+      "correcta": 1,
+      "justificacion": "Lo hundido es irrecuperable y por tanto económicamente irrelevante; la decisión debe basarse solo en flujos futuros e inversión pendiente."
+    },
+    {
+      "id": "q6",
+      "pregunta": "Ante un proyecto con 400 ya gastados, 200 pendientes y 300 de flujos futuros, lo correcto es:",
+      "opciones": [
+        "No lanzar, porque 600 > 300.",
+        "Lanzar: 300 − 200 = +100 de valor.",
+        "Esperar.",
+        "Depende de los 400."
+      ],
+      "correcta": 1,
+      "justificacion": "Solo cuentan los 200 pendientes contra los 300 futuros: crea 100 de valor. Incluir los 400 hundidos lleva a destruir valor por no lanzar."
+    },
+    {
+      "id": "q7",
+      "pregunta": "La falacia de planificación (Lovallo y Kahneman) describe:",
+      "opciones": [
+        "Errores aleatorios que se compensan.",
+        "La subestimación sistemática y direccional de costos y plazos.",
+        "La ausencia de plan.",
+        "Un método de proyección."
+      ],
+      "correcta": 1,
+      "justificacion": "No es ruido aleatorio: el sesgo apunta siempre en la misma dirección (más barato y más rápido de lo real), por lo que no se compensa en promedio."
+    },
+    {
+      "id": "q8",
+      "pregunta": "La visión externa consiste en:",
+      "opciones": [
+        "Analizar el proyecto por sus particularidades.",
+        "Preguntar cómo terminaron proyectos similares (clase de referencia).",
+        "Consultar a un externo cualquiera.",
+        "Ignorar los datos."
+      ],
+      "correcta": 1,
+      "justificacion": "La visión externa ancla el pronóstico en la distribución estadística de casos comparables, corrigiendo el optimismo de la visión interna."
+    },
+    {
+      "id": "q9",
+      "pregunta": "Al aplicar la visión externa, el punto de partida debe ser:",
+      "opciones": [
+        "La estimación propia.",
+        "El promedio de la clase de referencia, ajustado solo con evidencia específica.",
+        "El mejor caso posible.",
+        "Cero."
+      ],
+      "correcta": 1,
+      "justificacion": "Se parte del promedio de casos comparables y se corrige únicamente si hay razones documentadas para creer que este caso difiere."
+    },
+    {
+      "id": "q10",
+      "pregunta": "El pre-mortem (Gary Klein) consiste en:",
+      "opciones": [
+        "Analizar después del fracaso.",
+        "Antes de decidir, asumir que el proyecto fracasó y escribir por qué.",
+        "Celebrar el éxito anticipado.",
+        "Hacer una auditoría."
+      ],
+      "correcta": 1,
+      "justificacion": "Al legitimar el pesimismo antes de decidir, el pre-mortem libera información que la presión de grupo suprimiría."
+    },
+    {
+      "id": "q11",
+      "pregunta": "El diario de decisiones protege principalmente contra:",
+      "opciones": [
+        "El anclaje.",
+        "El sesgo retrospectivo (\"yo siempre supe que iba a pasar\").",
+        "Los costos hundidos.",
+        "La aversión a la pérdida."
+      ],
+      "correcta": 1,
+      "justificacion": "Registrar qué se decidió y qué se esperaba, en el momento, impide reescribir el pasado y permite aprender de verdad."
+    },
+    {
+      "id": "q12",
+      "pregunta": "El efecto dotación (endowment) implica que:",
+      "opciones": [
+        "Se subvalúa lo propio.",
+        "Se sobrevalúa lo propio por el solo hecho de ser propio.",
+        "Todo se valúa igual.",
+        "Solo aplica a bienes físicos."
+      ],
+      "correcta": 1,
+      "justificacion": "La propiedad misma eleva el valor percibido, algo especialmente fuerte en el dueño de una empresa que construyó durante décadas."
+    },
+    {
+      "id": "q13",
+      "pregunta": "El anclaje en la valuación se manifiesta cuando:",
+      "opciones": [
+        "Se usa el VAN.",
+        "La primera cifra conocida (precio pedido o resultado esperado) condiciona los supuestos.",
+        "Se hace sensibilidad.",
+        "Se aplica Monte Carlo."
+      ],
+      "correcta": 1,
+      "justificacion": "Conocer el número \"que debería dar\" hace que los supuestos discutibles se elijan sistemáticamente hacia ese lado, sin necesidad de mala fe."
+    },
+    {
+      "id": "q14",
+      "pregunta": "Diez supuestos razonables inclinados todos hacia el mismo lado producen:",
+      "opciones": [
+        "Una valuación equilibrada.",
+        "Una valuación sesgada que no puede objetarse línea por línea.",
+        "Un error aleatorio.",
+        "Mayor precisión."
+      ],
+      "correcta": 1,
+      "justificacion": "Cada supuesto es defendible en aislamiento, pero su acumulación direccional sesga el resultado — la forma más difícil de detectar de sesgo técnico."
+    },
+    {
+      "id": "q15",
+      "pregunta": "El sesgo de confirmación en un due diligence se manifiesta cuando:",
+      "opciones": [
+        "Se buscan problemas activamente.",
+        "La decisión ya está tomada y el proceso busca tranquilidad en vez de riesgos.",
+        "Se contrata un asesor externo.",
+        "Se revisan los estados contables."
+      ],
+      "correcta": 1,
+      "justificacion": "Con la decisión tomada de antemano, el due diligence deja de ser una búsqueda de problemas y se vuelve una búsqueda de confirmación."
+    },
+    {
+      "id": "q16",
+      "pregunta": "La falsa precisión en una valuación:",
+      "opciones": [
+        "Aumenta el rigor.",
+        "Transmite una certeza que los datos no soportan e inhibe el cuestionamiento.",
+        "Es obligatoria.",
+        "Reduce el sesgo."
+      ],
+      "correcta": 1,
+      "justificacion": "Dos decimales sobre una empresa ilíquida sugieren una exactitud inexistente y desalientan la discusión sobre los supuestos."
+    },
+    {
+      "id": "q17",
+      "pregunta": "La simulación de Monte Carlo funciona como dispositivo anti-sesgo porque:",
+      "opciones": [
+        "Es más compleja.",
+        "Obliga a declarar un rango y hace visible la probabilidad de malos resultados.",
+        "Elimina la incertidumbre.",
+        "Da un número exacto."
+      ],
+      "correcta": 1,
+      "justificacion": "Sustituye el número único (que invita al exceso de confianza) por una distribución que muestra explícitamente el riesgo de escenarios adversos."
+    },
+    {
+      "id": "q18",
+      "pregunta": "Separar quien analiza de quien decide reduce principalmente:",
+      "opciones": [
+        "El costo del proceso.",
+        "El sesgo de confirmación.",
+        "La aversión a la pérdida.",
+        "El anclaje del precio."
+      ],
+      "correcta": 1,
+      "justificacion": "El analista que no debe defender una posición previa puede buscar evidencia en contra sin costo político."
+    },
+    {
+      "id": "q19",
+      "pregunta": "El abogado del diablo formal se institucionaliza para que:",
+      "opciones": [
+        "Alguien moleste.",
+        "Discrepar no sea percibido como acto de deslealtad.",
+        "Se demore la decisión.",
+        "Haya más reuniones."
+      ],
+      "correcta": 1,
+      "justificacion": "Asignar formalmente el rol de oponerse legitima la crítica y evita el silencio por conformidad de grupo."
+    },
+    {
+      "id": "q20",
+      "pregunta": "Las listas de verificación (checklists) en decisiones financieras:",
+      "opciones": [
+        "Son burocracia inútil.",
+        "Aseguran que las preguntas críticas se hagan sin depender de la memoria de alguien.",
+        "Reemplazan el análisis.",
+        "Solo sirven en aviación."
+      ],
+      "correcta": 1,
+      "justificacion": "Como en aviación y cirugía, el checklist convierte lo importante en obligatorio, independizándolo de que alguien se acuerde."
+    },
+    {
+      "id": "q21",
+      "pregunta": "En la empresa que no cotiza, los sesgos se amplifican porque:",
+      "opciones": [
+        "Los dueños son menos capaces.",
+        "No hay un precio de mercado que corrija las creencias sobre el valor.",
+        "Hay más regulación.",
+        "Los estados contables son mejores."
+      ],
+      "correcta": 1,
+      "justificacion": "Sin el espejo incómodo del precio de mercado, una creencia errónea sobre el valor puede sostenerse indefinidamente."
+    },
+    {
+      "id": "q22",
+      "pregunta": "El antídoto propuesto contra el efecto dotación en la empresa familiar es:",
+      "opciones": [
+        "Esperar una oferta.",
+        "Hacer una valuación rigurosa en frío, antes de que aparezca un comprador.",
+        "Aumentar el precio pedido.",
+        "No vender nunca."
+      ],
+      "correcta": 1,
+      "justificacion": "Fijar el valor sin la carga emocional de una negociación en curso reduce la brecha entre el valor percibido y el valor económico."
+    },
+    {
+      "id": "q23",
+      "pregunta": "\"Esa unidad la abrió mi papá\" como argumento para sostenerla es:",
+      "opciones": [
+        "Un criterio financiero válido.",
+        "Una decisión de identidad disfrazada de decisión financiera.",
+        "Un análisis de sensibilidad.",
+        "Una aplicación del VAN."
+      ],
+      "correcta": 1,
+      "justificacion": "Es el sesgo de costos hundidos con carga emocional familiar; reconocerlo no lo vuelve fácil, pero lo vuelve discutible."
+    },
+    {
+      "id": "q24",
+      "pregunta": "El método de cuatro fases del programa funciona como dispositivo anti-sesgo porque:",
+      "opciones": [
+        "Es más largo.",
+        "Obliga a establecer hechos antes de explicarlos, y a explicarlos antes de recomendar.",
+        "Usa más software.",
+        "Lo exige la norma."
+      ],
+      "correcta": 1,
+      "justificacion": "La secuencia impide saltar a la conclusión que ya se traía: cada fase frena la tentación de decidir antes de haber comprendido."
+    },
+    {
+      "id": "q25",
+      "pregunta": "Distinguir calidad de la decisión de calidad del resultado (Mauboussin) implica que:",
+      "opciones": [
+        "Solo importa el resultado.",
+        "Una buena decisión puede tener mal resultado, y una mala decisión puede tener suerte.",
+        "Son lo mismo.",
+        "El proceso es irrelevante."
+      ],
+      "correcta": 1,
+      "justificacion": "Bajo incertidumbre, evaluar solo por resultado premia la suerte y castiga el buen proceso; hay que evaluar ambas dimensiones."
+    },
+    {
+      "id": "q26",
+      "pregunta": "La contabilidad mental lleva a:",
+      "opciones": [
+        "Llevar mejor la contabilidad.",
+        "Tratar de forma distinta pesos que son económicamente idénticos según su \"cajón\".",
+        "Usar dos sistemas contables.",
+        "Auditar más."
+      ],
+      "correcta": 1,
+      "justificacion": "Separar mentalmente el dinero por origen o destino lleva a decisiones inconsistentes, cuando el dinero es fungible."
+    },
+    {
+      "id": "q27",
+      "pregunta": "El exceso de confianza pega con más fuerza en:",
+      "opciones": [
+        "Decisiones frecuentes y rutinarias.",
+        "Decisiones poco frecuentes y complejas, como M&A y grandes CapEx.",
+        "La contabilidad diaria.",
+        "El pago de sueldos."
+      ],
+      "correcta": 1,
+      "justificacion": "Las decisiones raras no permiten calibrar el juicio con retroalimentación frecuente, terreno fértil para el exceso de confianza."
+    },
+    {
+      "id": "q28",
+      "pregunta": "Según Thaler, la economía conductual sostiene que la gente es:",
+      "opciones": [
+        "Tonta.",
+        "Humana, y los modelos deberían describir a los humanos reales.",
+        "Perfectamente racional.",
+        "Impredecible."
+      ],
+      "correcta": 1,
+      "justificacion": "No es una teoría de la estupidez sino del realismo psicológico: modelar al decisor que existe, no al que sería conveniente."
+    },
+    {
+      "id": "q29",
+      "pregunta": "El sesgo de costos hundidos puede llevar tanto a:",
+      "opciones": [
+        "Solo continuar proyectos malos.",
+        "Continuar proyectos malos y también abandonar proyectos buenos, si el total gastado abruma.",
+        "Solo abandonar proyectos.",
+        "Ningún error."
+      ],
+      "correcta": 1,
+      "justificacion": "El error es mirar hacia atrás para decidir hacia adelante; eso puede sostener lo insostenible o hundir lo que todavía crea valor."
+    },
+    {
+      "id": "q30",
+      "pregunta": "La conclusión metodológica central del módulo es que el sesgo se combate:",
+      "opciones": [
+        "Con voluntad e inteligencia.",
+        "Con proceso: pre-mortem, visión externa, checklist, diario y separación de roles.",
+        "Ignorándolo.",
+        "Con más datos únicamente."
+      ],
+      "correcta": 1,
+      "justificacion": "Un decisor brillante y consciente sigue sesgado; lo que corrige es el diseño institucional del proceso de decisión."
+    }
+  ]
+}

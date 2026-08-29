@@ -268,5 +268,20 @@
     "cuestionario": "/maestria/av-2/av-2-Cuestionario.pdf",
     "quiz": "/maestria/av-2/av-2-Quiz.json",
     "preguntas": 30
+  },
+  {
+    "cod": "A.3",
+    "slug": "av-3",
+    "cuatrimestre": 5,
+    "nombre": "Finanzas Conductuales: por qué gente inteligente toma malas decisiones financieras",
+    "fase": "Módulo Avanzado · Temas de frontera",
+    "horas": "24 h · 12 teóricas / 12 prácticas",
+    "resumen": "Todo el instrumental del programa supone un decisor racional. Este módulo estudia al decisor real: sus sesgos sistemáticos, por qué el análisis correcto no alcanza, y qué mecanismos concretos protegen una decisión financiera de su propio autor.",
+    "teoria": "/maestria/av-3/av-3-Teoria.json",
+    "pdf": "/maestria/av-3/av-3-PDF.pdf",
+    "caso": "/maestria/av-3/av-3-Caso.xlsx",
+    "cuestionario": "/maestria/av-3/av-3-Cuestionario.pdf",
+    "quiz": "/maestria/av-3/av-3-Quiz.json",
+    "preguntas": 30
   }
 ]
