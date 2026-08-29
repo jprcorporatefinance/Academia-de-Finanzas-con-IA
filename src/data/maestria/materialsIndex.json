@@ -283,5 +283,20 @@
     "cuestionario": "/maestria/av-3/av-3-Cuestionario.pdf",
     "quiz": "/maestria/av-3/av-3-Quiz.json",
     "preguntas": 30
+  },
+  {
+    "cod": "A.4",
+    "slug": "av-4",
+    "cuatrimestre": 5,
+    "nombre": "ESG y Riesgo Climático en la Valuación: del discurso a la aritmética",
+    "fase": "Módulo Avanzado · Temas de frontera",
+    "horas": "24 h · 12 teóricas / 12 prácticas",
+    "resumen": "El tema más contaminado de marketing de las finanzas corporativas contemporáneas. Este módulo separa lo verificable —el riesgo climático se paga en el costo del capital— de lo declarativo, y muestra cómo se incorpora correctamente a una valuación.",
+    "teoria": "/maestria/av-4/av-4-Teoria.json",
+    "pdf": "/maestria/av-4/av-4-PDF.pdf",
+    "caso": "/maestria/av-4/av-4-Caso.xlsx",
+    "cuestionario": "/maestria/av-4/av-4-Cuestionario.pdf",
+    "quiz": "/maestria/av-4/av-4-Quiz.json",
+    "preguntas": 30
   }
 ]

@@ -1,0 +1,366 @@
+{
+  "cod": "A.4",
+  "nombre": "ESG y Riesgo Climático en la Valuación: del discurso a la aritmética",
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "El giro conceptual del ESG en finanzas corporativas fue pasar de:",
+      "opciones": [
+        "La ética a la filantropía.",
+        "La responsabilidad social a la materialidad financiera.",
+        "La regulación a lo voluntario.",
+        "Lo financiero a lo reputacional."
+      ],
+      "correcta": 1,
+      "justificacion": "La pregunta dejó de ser \"¿esto es correcto?\" para ser \"¿esto afecta los flujos o el riesgo del negocio?\". Ese desplazamiento es lo que lo vuelve materia de finanzas corporativas."
+    },
+    {
+      "id": "q2",
+      "pregunta": "El marco TCFD organiza la divulgación climática en cuatro pilares:",
+      "opciones": [
+        "Ingresos, costos, activos y pasivos.",
+        "Gobernanza, estrategia, gestión de riesgos y métricas.",
+        "Aire, agua, suelo y energía.",
+        "Corto, medio, largo plazo y perpetuidad."
+      ],
+      "correcta": 1,
+      "justificacion": "Los cuatro pilares del TCFD son gobernanza, estrategia, gestión de riesgos, y métricas y objetivos; el ISSB los absorbió como estándar."
+    },
+    {
+      "id": "q3",
+      "pregunta": "El riesgo físico climático se refiere a:",
+      "opciones": [
+        "Costos de adaptarse a la regulación.",
+        "Daño material por eventos o cambios del clima.",
+        "Riesgo reputacional.",
+        "Cambio de preferencias del consumidor."
+      ],
+      "correcta": 1,
+      "justificacion": "El riesgo físico es el daño material (sequía, inundación, incendio); los costos de adaptación regulatoria son riesgo de transición."
+    },
+    {
+      "id": "q4",
+      "pregunta": "El riesgo de transición incluye:",
+      "opciones": [
+        "Inundaciones y sequías.",
+        "Impuestos al carbono, regulación y cambios de demanda.",
+        "Terremotos.",
+        "Solo riesgo reputacional."
+      ],
+      "correcta": 1,
+      "justificacion": "La transición hacia una economía baja en carbono trae riesgos regulatorios, tecnológicos, de mercado y reputacionales."
+    },
+    {
+      "id": "q5",
+      "pregunta": "La diferencia entre riesgo físico agudo y crónico es:",
+      "opciones": [
+        "No existe.",
+        "Agudo es un evento puntual; crónico es un cambio permanente de patrón.",
+        "Agudo dura más.",
+        "Crónico es menos grave."
+      ],
+      "correcta": 1,
+      "justificacion": "El agudo (una inundación) se modela como shock; el crónico (cambio del régimen de lluvias) altera la tendencia de largo plazo y afecta el valor terminal."
+    },
+    {
+      "id": "q6",
+      "pregunta": "Según la evidencia de mercado, un aumento de 10 pp en el riesgo de daño físico se asocia con:",
+      "opciones": [
+        "Ningún efecto medible.",
+        "Un aumento promedio de 22 puntos básicos en el WACC.",
+        "Una caída del WACC.",
+        "Un aumento de 10 pp en el WACC."
+      ],
+      "correcta": 1,
+      "justificacion": "El dato empírico (2026), controlando por sector, tamaño y geografía, muestra que el riesgo físico ya se está incorporando al costo del capital de forma medible."
+    },
+    {
+      "id": "q7",
+      "pregunta": "La relación entre mejor divulgación y menor costo del capital:",
+      "opciones": [
+        "Prueba que informar abarata el capital.",
+        "Puede reflejar reducción de asimetría informativa y que las empresas mejor gestionadas informan mejor.",
+        "Es aleatoria.",
+        "No existe."
+      ],
+      "correcta": 1,
+      "justificacion": "Hay que cuidar la causalidad: parte del efecto es menor asimetría informativa, y parte puede ser que las empresas mejor gestionadas tengan a la vez mejor información y menor riesgo."
+    },
+    {
+      "id": "q8",
+      "pregunta": "El \"financiamiento de transición\" se refiere a:",
+      "opciones": [
+        "Préstamos puente.",
+        "Fondeo para empresas que aún no son verdes pero descarbonizan de forma verificable.",
+        "Financiar mudanzas.",
+        "Deuda de corto plazo."
+      ],
+      "correcta": 1,
+      "justificacion": "Es la categoría que financia el proceso de descarbonización de sectores intensivos, y la más relevante para industria pesada y agro."
+    },
+    {
+      "id": "q9",
+      "pregunta": "La regla técnica sobre dónde incorporar el riesgo es:",
+      "opciones": [
+        "Todo en la tasa.",
+        "El riesgo específico en los flujos; el sistemático puede justificar ajuste en la tasa.",
+        "Todo en los flujos.",
+        "Es indistinto."
+      ],
+      "correcta": 1,
+      "justificacion": "El riesgo diversificable/específico se modela en el flujo esperado; solo el riesgo sistemático no diversificable justifica tocar el costo del capital."
+    },
+    {
+      "id": "q10",
+      "pregunta": "Modelar un riesgo como shock en el flujo Y además agregar una prima a la tasa es:",
+      "opciones": [
+        "Prudente.",
+        "Doble conteo del mismo riesgo.",
+        "Obligatorio.",
+        "El método recomendado."
+      ],
+      "correcta": 1,
+      "justificacion": "Es el mismo error conceptual que el doble conteo del riesgo país: castigar dos veces el mismo riesgo subvalúa la empresa sin fundamento."
+    },
+    {
+      "id": "q11",
+      "pregunta": "Un evento de incendio con probabilidad y severidad conocidas entra naturalmente en:",
+      "opciones": [
+        "La tasa de descuento.",
+        "La simulación de Monte Carlo como shock probabilístico.",
+        "El valor terminal únicamente.",
+        "El patrimonio contable."
+      ],
+      "correcta": 1,
+      "justificacion": "Los eventos probabilísticos se modelan en la simulación (asignatura 3.3), donde su probabilidad y severidad son explícitas y auditables."
+    },
+    {
+      "id": "q12",
+      "pregunta": "Las calificaciones ESG de distintos proveedores:",
+      "opciones": [
+        "Coinciden casi perfectamente.",
+        "Discrepan sustancialmente, mucho más que las calificaciones de crédito.",
+        "Son idénticas por norma.",
+        "No existen."
+      ],
+      "correcta": 1,
+      "justificacion": "La correlación entre calificadoras ESG es baja porque difieren en qué miden, cómo lo ponderan y de dónde toman los datos."
+    },
+    {
+      "id": "q13",
+      "pregunta": "Un puntaje ESG de un tercero debe entenderse como:",
+      "opciones": [
+        "Un dato duro.",
+        "Una opinión con metodología propia.",
+        "Una obligación legal.",
+        "Un estado contable."
+      ],
+      "correcta": 1,
+      "justificacion": "Dada la divergencia entre proveedores, el puntaje refleja la metodología de quien lo emite más que una medida objetiva del riesgo."
+    },
+    {
+      "id": "q14",
+      "pregunta": "El greenwashing consiste en:",
+      "opciones": [
+        "Certificarse correctamente.",
+        "Presentar como sostenible lo que no lo es.",
+        "Callar lo que se hace bien.",
+        "Medir emisiones."
+      ],
+      "correcta": 1,
+      "justificacion": "Es la presentación engañosa de credenciales ambientales, favorecida por la debilidad de la medición."
+    },
+    {
+      "id": "q15",
+      "pregunta": "El \"greenhushing\" es:",
+      "opciones": [
+        "Lo mismo que greenwashing.",
+        "Callar lo que sí se hace, por temor a ser acusado de greenwashing.",
+        "Un estándar contable.",
+        "Una certificación."
+      ],
+      "correcta": 1,
+      "justificacion": "Es el reverso del greenwashing y también distorsiona la información disponible para el analista."
+    },
+    {
+      "id": "q16",
+      "pregunta": "El enfoque del programa respecto de los puntajes ESG de terceros es:",
+      "opciones": [
+        "Usarlos como insumo principal de valuación.",
+        "No usarlos: identificar riesgos materiales específicos y cuantificarlos en el flujo con supuestos declarados.",
+        "Ignorar todo lo ESG.",
+        "Usar el promedio de varios."
+      ],
+      "correcta": 1,
+      "justificacion": "Ante la divergencia metodológica, es más defendible identificar y cuantificar los riesgos materiales propios del negocio que importar una calificación ajena."
+    },
+    {
+      "id": "q17",
+      "pregunta": "La materialidad, en el análisis ESG, significa que:",
+      "opciones": [
+        "Todo factor ESG aplica a toda empresa.",
+        "Solo importan los factores que afectan de verdad los flujos o el riesgo de ESE negocio.",
+        "Solo importa lo ambiental.",
+        "Importa el tamaño de la empresa."
+      ],
+      "correcta": 1,
+      "justificacion": "La materialidad financiera filtra: para un aserradero importa el riesgo de incendio y la certificación forestal, no cualquier indicador ESG genérico."
+    },
+    {
+      "id": "q18",
+      "pregunta": "El riesgo físico crónico afecta especialmente:",
+      "opciones": [
+        "El capital de trabajo del mes.",
+        "La tendencia de largo plazo y por tanto el valor terminal.",
+        "Solo el año en curso.",
+        "La tasa impositiva."
+      ],
+      "correcta": 1,
+      "justificacion": "Un cambio permanente de patrón climático altera la trayectoria de largo plazo, que es donde vive la mayor parte del valor (valor terminal)."
+    },
+    {
+      "id": "q19",
+      "pregunta": "En el Nordeste argentino, el riesgo físico climático es:",
+      "opciones": [
+        "Una hipótesis lejana.",
+        "Un evento recurrente con impacto directo y medible sobre el flujo.",
+        "Irrelevante.",
+        "Solo reputacional."
+      ],
+      "correcta": 1,
+      "justificacion": "Sequías, inundaciones e incendios forestales son recurrentes en la región y afectan producción, abastecimiento y seguros de forma concreta."
+    },
+    {
+      "id": "q20",
+      "pregunta": "La decisión de certificarse (p. ej. certificación forestal) debe tomarse:",
+      "opciones": [
+        "Por convicción ambiental únicamente.",
+        "Comparando el costo de certificar contra la pérdida de margen y mercado por no hacerlo.",
+        "Porque lo hace la competencia.",
+        "Nunca."
+      ],
+      "correcta": 1,
+      "justificacion": "Convertida en comparación de valores presentes, la discusión deja de ser ideológica y se vuelve una decisión de inversión evaluable."
+    },
+    {
+      "id": "q21",
+      "pregunta": "Según Damodaran, si un riesgo ESG es real:",
+      "opciones": [
+        "Aparecerá en el discurso corporativo.",
+        "Se manifestará en los flujos esperados o en el costo del capital.",
+        "No se puede medir.",
+        "Solo afecta la reputación."
+      ],
+      "correcta": 1,
+      "justificacion": "Su crítica es metodológica: exige especificar por cuál canal y con qué magnitud opera el riesgo, en vez de invocar la sigla."
+    },
+    {
+      "id": "q22",
+      "pregunta": "Una \"prima ESG\" genérica agregada al WACC sin fundamento es:",
+      "opciones": [
+        "Buena práctica conservadora.",
+        "Un ajuste arbitrario que castiga la valuación sin explicitar qué mide.",
+        "Requerida por el ISSB.",
+        "Equivalente a modelarlo en el flujo."
+      ],
+      "correcta": 1,
+      "justificacion": "Si no puede explicarse qué riesgo representa, de dónde sale su magnitud y por qué no está ya en los flujos, es una opinión disfrazada de técnica."
+    },
+    {
+      "id": "q23",
+      "pregunta": "Comparado con la prima en la tasa, modelar el riesgo en el flujo tiene la ventaja de:",
+      "opciones": [
+        "Ser más rápido.",
+        "Ser explícito, auditable, sensibilizable y mitigable.",
+        "Dar siempre un valor menor.",
+        "Evitar la simulación."
+      ],
+      "correcta": 1,
+      "justificacion": "El supuesto queda a la vista (probabilidad y severidad), se puede discutir y permite evaluar inversiones de mitigación."
+    },
+    {
+      "id": "q24",
+      "pregunta": "Evaluar una inversión en mitigación (cortafuegos, seguro) se hace:",
+      "opciones": [
+        "Por obligación normativa.",
+        "Comparando su costo contra el aumento de valor por reducir la probabilidad del evento.",
+        "Sin análisis.",
+        "Solo si sobra caja."
+      ],
+      "correcta": 1,
+      "justificacion": "Es una decisión de inversión más: crea valor si el aumento del valor de la empresa supera el CapEx de mitigación."
+    },
+    {
+      "id": "q25",
+      "pregunta": "La reducción de asimetría informativa como causa del menor costo del capital conecta con:",
+      "opciones": [
+        "El teorema de Modigliani-Miller.",
+        "La BFR: la empresa ordenada e informada consigue mejor tasa.",
+        "El modelo de Merton.",
+        "El EVA Momentum."
+      ],
+      "correcta": 1,
+      "justificacion": "Es el mismo mecanismo de la Brecha de Financiamiento Real (4.3): mejor información reduce el sobrecosto que paga la empresa."
+    },
+    {
+      "id": "q26",
+      "pregunta": "El ISSB, respecto del TCFD:",
+      "opciones": [
+        "Lo contradice.",
+        "Lo absorbió para convertirlo en estándar contable internacional.",
+        "Es una ONG ambiental.",
+        "No tiene relación."
+      ],
+      "correcta": 1,
+      "justificacion": "El movimiento va del reporte voluntario de sostenibilidad hacia la divulgación financiera estandarizada de riesgos climáticos."
+    },
+    {
+      "id": "q27",
+      "pregunta": "La distinción central que ordena el módulo es entre:",
+      "opciones": [
+        "Ambiental y social.",
+        "ESG como valor (discurso) y ESG como riesgo (factor que afecta flujos y tasa).",
+        "Corto y largo plazo.",
+        "Público y privado."
+      ],
+      "correcta": 1,
+      "justificacion": "El primero es legítimo pero no es finanzas corporativas; el segundo es el que se incorpora a la valuación con rigor."
+    },
+    {
+      "id": "q28",
+      "pregunta": "Los inversores institucionales, respecto del factor climático:",
+      "opciones": [
+        "Lo abandonaron por completo.",
+        "Lo siguen ponderando en la asignación, aunque la etiqueta ESG haya perdido popularidad como producto.",
+        "Nunca lo consideraron.",
+        "Solo lo usan en Europa."
+      ],
+      "correcta": 1,
+      "justificacion": "El producto financiero \"ESG\" perdió tracción comercial, pero el riesgo climático sigue influyendo materialmente en decisiones de asignación."
+    },
+    {
+      "id": "q29",
+      "pregunta": "Para un exportador del NEA, la certificación de origen sostenible es:",
+      "opciones": [
+        "Puro marketing.",
+        "Una condición de acceso a mercados, es decir, un tema de flujos.",
+        "Un impuesto.",
+        "Irrelevante."
+      ],
+      "correcta": 1,
+      "justificacion": "Si el comprador europeo la exige, no certificarse significa perder el mercado: es una variable de ingresos, no de reputación."
+    },
+    {
+      "id": "q30",
+      "pregunta": "El tratamiento que propone el programa para el riesgo ESG en el modelo es:",
+      "opciones": [
+        "Ignorarlo por escepticismo.",
+        "Identificar riesgos materiales, cuantificarlos en el flujo, simularlos, y ajustar la tasa solo si son sistemáticos.",
+        "Agregar siempre una prima a la tasa.",
+        "Usar el puntaje de una calificadora."
+      ],
+      "correcta": 1,
+      "justificacion": "El mismo rigor que se exige a cualquier otro supuesto: ni menos por moda, ni más por escepticismo, con los supuestos declarados y sometidos a sensibilidad."
+    }
+  ]
+}
