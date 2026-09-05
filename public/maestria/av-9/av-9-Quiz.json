@@ -1,0 +1,366 @@
+{
+  "cod": "A.9",
+  "nombre": "La Paradoja del Crecimiento: crear valor y quedarse sin caja",
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "La afirmación \"mientras el ROIC supere al WACC, la salud financiera está garantizada\" es:",
+      "opciones": [
+        "Correcta.",
+        "Falsa: la rentabilidad es necesaria pero no suficiente para la solvencia líquida.",
+        "Correcta solo en mercados desarrollados.",
+        "Correcta si no hay deuda."
+      ],
+      "correcta": 1,
+      "justificacion": "La utilidad se devenga hoy pero el efectivo que sostiene la expansión sale hoy también, y a menudo antes de cobrar. Una empresa puede ser rentable en el papel e insolvente en la caja."
+    },
+    {
+      "id": "q2",
+      "pregunta": "La fórmula madre de la paradoja del crecimiento es:",
+      "opciones": [
+        "FCFF = EBITDA − CapEx.",
+        "FCFF = NOPAT × (1 − g/ROIC).",
+        "FCFF = NOPAT × ROIC.",
+        "FCFF = Ventas × margen."
+      ],
+      "correcta": 1,
+      "justificacion": "El término (1 − g/ROIC) es la fracción del NOPAT que sobra después de financiar el crecimiento. Si g se acerca al ROIC, tiende a cero; si lo supera, se vuelve negativo."
+    },
+    {
+      "id": "q3",
+      "pregunta": "La identidad del crecimiento sostenible establece que:",
+      "opciones": [
+        "g = ROIC + IR.",
+        "g = ROIC × IR, y por lo tanto IR = g/ROIC.",
+        "g = WACC × IR.",
+        "g es independiente del ROIC."
+      ],
+      "correcta": 1,
+      "justificacion": "Cuanto más alto el g o más bajo el ROIC, mayor la fracción del NOPAT que hay que retener, y menos caja queda libre."
+    },
+    {
+      "id": "q4",
+      "pregunta": "En el escenario acelerado (g > ROIC), la tasa de reinversión requerida es:",
+      "opciones": [
+        "Menor al 100 %.",
+        "Mayor al 100 %: hay que reinvertir más que toda la utilidad operativa.",
+        "Exactamente 100 %.",
+        "Cero."
+      ],
+      "correcta": 1,
+      "justificacion": "Ése es el mecanismo del déficit crónico: la expansión exige más caja que la que genera toda la operación."
+    },
+    {
+      "id": "q5",
+      "pregunta": "La trampa del escenario acelerado consiste en que:",
+      "opciones": [
+        "Los proyectos destruyen valor.",
+        "Aunque cada proyecto individual cree valor (ROIC > WACC), el conjunto consume caja porque g > ROIC.",
+        "El WACC sube.",
+        "Las ventas caen."
+      ],
+      "correcta": 1,
+      "justificacion": "La empresa crece, vale más en teoría y se queda sin efectivo. Es la definición exacta de la paradoja."
+    },
+    {
+      "id": "q6",
+      "pregunta": "El \"asesino silencioso\" del efectivo en una expansión es:",
+      "opciones": [
+        "El CapEx de expansión.",
+        "El ΔKTNO: cuentas por cobrar e inventarios que crecen con las ventas.",
+        "Los impuestos.",
+        "Los sueldos."
+      ],
+      "correcta": 1,
+      "justificacion": "El CapEx se aprueba en el directorio y todos saben que sale plata. El ΔKTNO simplemente ocurre, sin que nadie lo apruebe en ninguna reunión."
+    },
+    {
+      "id": "q7",
+      "pregunta": "Un ciclo de conversión de efectivo más largo hace que, al crecer:",
+      "opciones": [
+        "Se necesite menos capital de trabajo.",
+        "El ΔKTNO sea más brutal, porque se financian más días de cada peso de venta.",
+        "Suba el margen.",
+        "Baje el WACC."
+      ],
+      "correcta": 1,
+      "justificacion": "Cuantos más días queda atrapado el dinero en el ciclo operativo, más caja exige cada punto adicional de crecimiento."
+    },
+    {
+      "id": "q8",
+      "pregunta": "La palanca número uno para aliviar el déficit sin pedir deuda es:",
+      "opciones": [
+        "Subir los precios.",
+        "Acortar el ciclo de conversión de efectivo.",
+        "Reducir el personal.",
+        "Diferir impuestos."
+      ],
+      "correcta": 1,
+      "justificacion": "Baja el ΔKTNO requerido por cada punto de crecimiento y libera caja de una sola vez. Es la más rápida y la que menos veces se intenta."
+    },
+    {
+      "id": "q9",
+      "pregunta": "Si el plan comercial exige g > g*, las salidas legítimas son:",
+      "opciones": [
+        "Esperar a ver qué pasa.",
+        "Subir el ROIC, acortar el ciclo, conseguir financiamiento externo — o crecer más despacio a propósito.",
+        "Solo tomar deuda.",
+        "Cambiar de mercado."
+      ],
+      "correcta": 1,
+      "justificacion": "Crecer por encima del g* obliga con certeza aritmética a una de esas alternativas; no existe una quinta opción que no sea deteriorar la empresa."
+    },
+    {
+      "id": "q10",
+      "pregunta": "La Teoría del Trade-Off expresa que:",
+      "opciones": [
+        "V_L = V_U + T_C·D.",
+        "V_L = V_U + T_C·D − VP(Costos de Dificultad Financiera).",
+        "V_L = V_U siempre.",
+        "V_L = D + E."
+      ],
+      "correcta": 1,
+      "justificacion": "El escudo fiscal suma valor y los costos esperados de insolvencia lo restan de forma acelerada. El óptimo está donde los efectos marginales se igualan."
+    },
+    {
+      "id": "q11",
+      "pregunta": "Los costos de dificultad financiera INDIRECTOS:",
+      "opciones": [
+        "Son menores que los directos.",
+        "Suelen ser MAYORES que los directos y aparecen antes de cualquier evento legal.",
+        "No existen en PyMEs.",
+        "Solo aplican en concurso preventivo."
+      ],
+      "correcta": 1,
+      "justificacion": "En una PyME, un proveedor clave que pasa de 90 a 0 días de plazo por percepción de riesgo puede gatillar la crisis de caja por sí solo, sin ningún proceso judicial."
+    },
+    {
+      "id": "q12",
+      "pregunta": "La beta apalancada de Damodaran es:",
+      "opciones": [
+        "β_L = β_U × (1 + D/E).",
+        "β_L = β_U × [1 + (1 − T_C) × (D/E)].",
+        "β_L = β_U / ρ.",
+        "β_L = β_U + spread."
+      ],
+      "correcta": 1,
+      "justificacion": "El factor (1 − T_C) atenúa el efecto del apalancamiento por el escudo fiscal. El accionista, como reclamante residual, absorbe el riesgo de insolvencia."
+    },
+    {
+      "id": "q13",
+      "pregunta": "El costo de la deuda Kd sube con el apalancamiento porque:",
+      "opciones": [
+        "Sube la inflación.",
+        "Cae el ICR, se degrada la calificación sintética y el default spread salta de forma escalonada.",
+        "Los bancos cobran comisiones.",
+        "Aumenta el plazo."
+      ],
+      "correcta": 1,
+      "justificacion": "El salto es escalonado y no continuo: cruzar un escalón de calificación puede subir el Kd varios puntos de golpe."
+    },
+    {
+      "id": "q14",
+      "pregunta": "La curva en U del WACC es asimétrica: eso significa que:",
+      "opciones": [
+        "Es indiferente equivocarse por exceso o por defecto.",
+        "Es plana a la izquierda del óptimo y empinada a la derecha: equivocarse por exceso cuesta mucho más.",
+        "El óptimo no existe.",
+        "Siempre conviene más deuda."
+      ],
+      "correcta": 1,
+      "justificacion": "Esa asimetría, sola, justifica trabajar por debajo del apalancamiento teórico óptimo — sobre todo en entornos donde el shock es la norma."
+    },
+    {
+      "id": "q15",
+      "pregunta": "La capacidad de endeudamiento de reserva:",
+      "opciones": [
+        "Es capital ocioso.",
+        "Tiene valor de opción: es lo que permite absorber un shock sin entrar en distress.",
+        "Reduce el valor de la empresa.",
+        "Solo importa a empresas cotizantes."
+      ],
+      "correcta": 1,
+      "justificacion": "El apalancamiento \"óptimo\" teórico consume toda la capacidad de reserva, y eso es exactamente lo que le falta a la empresa que llega a la crisis apalancada al máximo."
+    },
+    {
+      "id": "q16",
+      "pregunta": "El CFADS se calcula como:",
+      "opciones": [
+        "EBITDA a secas.",
+        "EBITDA − impuestos en efectivo ± ΔKTNO − CapEx de mantenimiento.",
+        "NOPAT + amortizaciones.",
+        "Utilidad neta + depreciación."
+      ],
+      "correcta": 1,
+      "justificacion": "Es lo que de verdad queda para pagar deuda una vez que el negocio se sostuvo a sí mismo. Mucho más estricto y más honesto que el EBITDA."
+    },
+    {
+      "id": "q17",
+      "pregunta": "La diferencia clave entre DSCR e ICR es que:",
+      "opciones": [
+        "Son sinónimos.",
+        "El DSCR usa caja real (CFADS) e incluye la amortización del principal; el ICR usa EBIT y solo mira intereses.",
+        "El ICR es más estricto.",
+        "El DSCR solo se usa en proyectos."
+      ],
+      "correcta": 1,
+      "justificacion": "Una empresa puede tener un ICR cómodo y un DSCR por debajo de 1: paga los intereses sin problema y no puede devolver el capital."
+    },
+    {
+      "id": "q18",
+      "pregunta": "En crecimiento acelerado, el DSCR sufre un \"doble estrangulamiento\" porque:",
+      "opciones": [
+        "Baja el EBITDA.",
+        "El ΔKTNO drena el numerador mientras la deuda tomada eleva el denominador.",
+        "Suben los impuestos.",
+        "Cae el margen bruto."
+      ],
+      "correcta": 1,
+      "justificacion": "La empresa puede mostrar ventas récord y EBITDA creciente y aun así estar perforando covenants: los dos lados de la fracción se mueven en contra a la vez."
+    },
+    {
+      "id": "q19",
+      "pregunta": "Los covenants de DSCR de mercado se pactan típicamente en torno a:",
+      "opciones": [
+        "0,80x.",
+        "1,20x – 1,25x.",
+        "3,00x.",
+        "No se pactan."
+      ],
+      "correcta": 1,
+      "justificacion": "Por debajo de ese umbral se activan automáticamente las cláusulas restrictivas, empezando por el bloqueo de dividendos."
+    },
+    {
+      "id": "q20",
+      "pregunta": "El cash lock-up consiste en:",
+      "opciones": [
+        "Un préstamo puente.",
+        "El bloqueo de la distribución de dividendos cuando se perfora el covenant.",
+        "Un descuento de cheques.",
+        "Una garantía real."
+      ],
+      "correcta": 1,
+      "justificacion": "Es el primer escalón de la escalera de covenants; el siguiente es el cash sweep, que barre la caja excedente hacia la deuda."
+    },
+    {
+      "id": "q21",
+      "pregunta": "El DSCR relevante para tomar una decisión de endeudamiento es:",
+      "opciones": [
+        "El histórico.",
+        "El proyectado, período a período.",
+        "El promedio del sector.",
+        "El del año anterior."
+      ],
+      "correcta": 1,
+      "justificacion": "El covenant se mide por período, no en promedio: un año con DSCR promedio de 1,4x puede tener dos trimestres por debajo de 1,25x."
+    },
+    {
+      "id": "q22",
+      "pregunta": "Los plazos cortos típicos de la deuda PyME regional:",
+      "opciones": [
+        "No afectan el DSCR.",
+        "Elevan el servicio de deuda medido en el calendario real, aunque el nivel de deuda sea el mismo.",
+        "Bajan el Kd.",
+        "Mejoran la calificación."
+      ],
+      "correcta": 1,
+      "justificacion": "La amortización de principal concentrada en 90 o 180 días hace que el DSCR de una estructura corta sea mucho peor que el de una equivalente a largo plazo."
+    },
+    {
+      "id": "q23",
+      "pregunta": "El descalce de moneda (deuda en dólares, ingresos en pesos) produce:",
+      "opciones": [
+        "Un beneficio fiscal.",
+        "Un salto instantáneo del servicio de la deuda ante una devaluación, sin que cambie nada en la operación.",
+        "Una mejora del ICR.",
+        "Menor riesgo."
+      ],
+      "correcta": 1,
+      "justificacion": "El riesgo cambiario entra directo al denominador del DSCR y puede perforar un covenant sin ninguna señal operativa previa."
+    },
+    {
+      "id": "q24",
+      "pregunta": "En inflación, el capital de trabajo nominal crece aunque el negocio no crezca en términos reales. La consecuencia es que:",
+      "opciones": [
+        "El ROIC mejora.",
+        "La empresa puede confundir inflación con crecimiento y tomar deuda para financiar un crecimiento que no existe.",
+        "El ciclo se acorta.",
+        "Sube el FCFF."
+      ],
+      "correcta": 1,
+      "justificacion": "Sin reexpresión a moneda homogénea, el diagnóstico de la paradoja se hace sobre números que no describen la operación real."
+    },
+    {
+      "id": "q25",
+      "pregunta": "La salida relevante de una simulación de Monte Carlo sobre el DSCR es:",
+      "opciones": [
+        "El DSCR promedio.",
+        "La probabilidad de perforar el covenant en los próximos trimestres.",
+        "La mediana del EBITDA.",
+        "El valor terminal."
+      ],
+      "correcta": 1,
+      "justificacion": "Un DSCR esperado de 1,45x con un 22 % de probabilidad de caer por debajo de 1,20x es un problema, no una tranquilidad. El promedio esconde exactamente lo que hay que ver."
+    },
+    {
+      "id": "q26",
+      "pregunta": "El indicador DAF-E (días de autonomía financiera bajo estrés) mide:",
+      "opciones": [
+        "Los días de inventario.",
+        "Cuántos días opera la empresa con la caja disponible si se corta el crédito comercial.",
+        "El plazo promedio de la deuda.",
+        "La rotación de activos."
+      ],
+      "correcta": 1,
+      "justificacion": "Cuando el DAF-E es menor que el ciclo de conversión de efectivo, la empresa está estructuralmente expuesta y ninguna decisión de crecimiento debería tomarse antes de corregir esa relación."
+    },
+    {
+      "id": "q27",
+      "pregunta": "La frase \"nos falta financiamiento\", en una empresa que crece rápido, suele ser:",
+      "opciones": [
+        "Un diagnóstico correcto.",
+        "Un síntoma leído como diagnóstico: el problema es que el ritmo excede lo que el retorno puede financiar.",
+        "Una señal de buena gestión.",
+        "Irrelevante."
+      ],
+      "correcta": 1,
+      "justificacion": "Tomar deuda ahí no resuelve nada: le agrega un calendario de vencimientos al mismo problema, sobre un CFADS que el crecimiento sigue drenando."
+    },
+    {
+      "id": "q28",
+      "pregunta": "El orden de intervención correcto ante la paradoja es:",
+      "opciones": [
+        "Deuda primero, ordenar después.",
+        "Medir g vs g*, atacar el ciclo, subir el ROIC, y recién entonces deuda con DSCR proyectado.",
+        "Distribuir dividendos.",
+        "Aumentar el capex."
+      ],
+      "correcta": 1,
+      "justificacion": "Invertir el orden —tomar deuda primero— es la secuencia que lleva al cash lock-up: la deuda financia el problema en lugar de resolverlo."
+    },
+    {
+      "id": "q29",
+      "pregunta": "El EBITDA creciente no evita la crisis de caja porque:",
+      "opciones": [
+        "El EBITDA está mal calculado.",
+        "El EBITDA no es caja: mide generación operativa ANTES de la inversión que esa misma generación exige.",
+        "Los impuestos suben.",
+        "La depreciación aumenta."
+      ],
+      "correcta": 1,
+      "justificacion": "De ahí que el CFADS —que resta impuestos en efectivo, ΔKTNO y CapEx de mantenimiento— sea la medida honesta de capacidad de pago."
+    },
+    {
+      "id": "q30",
+      "pregunta": "Cuando se perfora un covenant, el banco:",
+      "opciones": [
+        "Renegocia sobre la base del EVA proyectado.",
+        "Ejecuta lo pactado: el covenant no negocia con el argumento de valor.",
+        "Espera al cierre del ejercicio.",
+        "Baja la tasa."
+      ],
+      "correcta": 1,
+      "justificacion": "Por eso el DSCR proyectado tiene que estar en el tablero ANTES de tomar la deuda, y no después de haberla tomado."
+    }
+  ]
+}

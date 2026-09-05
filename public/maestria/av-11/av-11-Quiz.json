@@ -1,0 +1,366 @@
+{
+  "cod": "A.11",
+  "nombre": "Diagnóstico Integral: recomponer los números desde el movimiento primario",
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "El principio general de toda prueba de recomposición es:",
+      "opciones": [
+        "Revisar dos veces el mismo cálculo.",
+        "Comparar dos mediciones independientes de la misma cosa.",
+        "Confiar en el balance auditado.",
+        "Usar promedios del sector."
+      ],
+      "correcta": 1,
+      "justificacion": "Cuando coinciden, la cifra está verificada. Cuando no, hay dos posibilidades y ninguna es \"error de carga\"."
+    },
+    {
+      "id": "q2",
+      "pregunta": "Cuando la recomposición no coincide con la contabilidad, las dos posibilidades son:",
+      "opciones": [
+        "Error de carga o error de sistema.",
+        "O la contabilidad no refleja el movimiento, o el movimiento no está bien registrado.",
+        "Fraude o negligencia.",
+        "Inflación o tipo de cambio."
+      ],
+      "correcta": 1,
+      "justificacion": "El informe declara las dos y nombra el dato que las separaría. Elegir la lectura conveniente convierte una medición en una opinión."
+    },
+    {
+      "id": "q3",
+      "pregunta": "La prueba central de la recomposición es:",
+      "opciones": [
+        "Facturado contra ingreso.",
+        "Costo de ventas contra kardex valorizado.",
+        "Calidad de la serie contable.",
+        "Cuentas anómalas."
+      ],
+      "correcta": 1,
+      "justificacion": "Si el costo de ventas contable no coincide con el kardex valorizado, hay dos lecturas del negocio y la diferencia puede ser la mitad del EBITDA."
+    },
+    {
+      "id": "q4",
+      "pregunta": "Al comparar costo recompuesto con costo contable, el error más frecuente es:",
+      "opciones": [
+        "Usar el tipo de cambio equivocado.",
+        "No escalar las dos cifras a la misma base de productos y período.",
+        "Olvidar los impuestos.",
+        "Usar valores nominales."
+      ],
+      "correcta": 1,
+      "justificacion": "Si las dos cifras no miden la misma base, la comparación no significa nada por más que el cálculo esté bien hecho."
+    },
+    {
+      "id": "q5",
+      "pregunta": "Si el sistema no expone la capa de valuación, la prueba del costo:",
+      "opciones": [
+        "No se puede hacer.",
+        "Pasa de ser una medición a ser una aproximación, y hay que declararlo porque cambia la naturaleza del hallazgo.",
+        "Es igualmente concluyente.",
+        "Debe omitirse del informe."
+      ],
+      "correcta": 1,
+      "justificacion": "Un costo estándar viejo o con absorción completa explica por sí solo una brecha grande, sin que la contabilidad tenga nada malo."
+    },
+    {
+      "id": "q6",
+      "pregunta": "La prueba discriminante de la brecha de costo, en primer lugar, es:",
+      "opciones": [
+        "El recuento físico.",
+        "La capa de valuación del sistema: si es legible, la ambigüedad desaparece.",
+        "El estado de resultados.",
+        "El informe del auditor."
+      ],
+      "correcta": 1,
+      "justificacion": "Después vienen la composición del costo unitario (para detectar doble conteo) y el recuento físico valorizado del último cierre."
+    },
+    {
+      "id": "q7",
+      "pregunta": "En la prueba de facturado contra despachado, lo que decide la lectura es:",
+      "opciones": [
+        "El mes con mayor diferencia.",
+        "El acumulado y la persistencia del signo.",
+        "El promedio simple.",
+        "El último trimestre."
+      ],
+      "correcta": 1,
+      "justificacion": "Si oscila alrededor de cero es corte de período; si deriva en una dirección y no vuelve, hay una diferencia real."
+    },
+    {
+      "id": "q8",
+      "pregunta": "La persistencia del signo por encima del 80 % de los meses indica:",
+      "opciones": [
+        "Ruido estadístico normal.",
+        "Un patrón que ya no es ruido de fecha y exige explicación.",
+        "Un error de sistema.",
+        "Estacionalidad."
+      ],
+      "correcta": 1,
+      "justificacion": "Ese umbral convierte una intuición en un hallazgo defendible: es el estadístico que separa el corte de período de la diferencia real."
+    },
+    {
+      "id": "q9",
+      "pregunta": "Mercadería despachada sin facturar implica:",
+      "opciones": [
+        "Reconocimiento anticipado.",
+        "Ingreso no reconocido y stock sobrevaluado.",
+        "Un error de cobranza.",
+        "Nada relevante."
+      ],
+      "correcta": 1,
+      "justificacion": "La contraria —facturación sin entrega— es reconocimiento anticipado. Las dos hipótesis se distinguen revisando los remitos sin comprobante asociado."
+    },
+    {
+      "id": "q10",
+      "pregunta": "Una cuenta puente dentro del resultado por encima del 10 % de las ventas:",
+      "opciones": [
+        "Es normal en PyMEs.",
+        "Hace que ninguna línea del estado signifique lo que dice.",
+        "Solo afecta el balance.",
+        "Se puede ignorar si está documentada."
+      ],
+      "correcta": 1,
+      "justificacion": "Nombres como \"ajustes\", \"varios\", \"por aplicar\" o \"transitoria\" concentran importes que deberían estar clasificados; hasta abrirlos, el estado no es interpretable."
+    },
+    {
+      "id": "q11",
+      "pregunta": "La depreciación en cero en una empresa con planta en producción es:",
+      "opciones": [
+        "Un dato faltante.",
+        "Una ausencia estructural: una afirmación implícita —\"esta empresa no consume sus activos\"— que es falsa.",
+        "Correcto si están amortizados.",
+        "Un problema solo fiscal."
+      ],
+      "correcta": 1,
+      "justificacion": "Contablemente puede ser correcto y económicamente es falso: el resultado declarado no descuenta el consumo de activos que habrá que reponer."
+    },
+    {
+      "id": "q12",
+      "pregunta": "Con la planta totalmente amortizada, el ROIC contable:",
+      "opciones": [
+        "Se subestima.",
+        "Se infla con numerador alto y denominador cerca de cero: tiende al infinito.",
+        "Es correcto.",
+        "No se puede calcular."
+      ],
+      "correcta": 1,
+      "justificacion": "Es literalmente el indicador más engañoso que puede producir un balance, y explica el ROIC del 58 % del caso integrador."
+    },
+    {
+      "id": "q13",
+      "pregunta": "Los indicadores de calidad de la serie contable mensual son:",
+      "opciones": [
+        "Ventas y margen.",
+        "Meses con egresos negativos y coeficiente de variación del egreso sobre el ingreso.",
+        "Liquidez y solvencia.",
+        "ROIC y EVA."
+      ],
+      "correcta": 1,
+      "justificacion": "Deciden si el análisis predictivo puede apoyarse en la contabilidad; en la PyME familiar casi nunca puede."
+    },
+    {
+      "id": "q14",
+      "pregunta": "Cuando la serie contable mensual es ruido, la proyección:",
+      "opciones": [
+        "Se hace igual con intervalos de confianza amplios.",
+        "Se construye sobre los movimientos operativos y el informe declara por qué.",
+        "Se omite.",
+        "Se toma del sector."
+      ],
+      "correcta": 1,
+      "justificacion": "Proyectar sobre ruido y después ponerle intervalos de confianza es la forma elegante de mentir con un modelo."
+    },
+    {
+      "id": "q15",
+      "pregunta": "La razón por la que la extracción se materializa en un archivo antes de correr el motor es:",
+      "opciones": [
+        "Ahorrar tiempo.",
+        "La conexión al sistema es una herramienta del agente, no una biblioteca que el motor pueda invocar — y así el análisis queda reproducible.",
+        "Reducir el costo.",
+        "Requisito legal."
+      ],
+      "correcta": 1,
+      "justificacion": "Con los datos exactos volcados, cualquiera puede reproducir el análisis y auditar de dónde salió cada número."
+    },
+    {
+      "id": "q16",
+      "pregunta": "Lo dinámico del informe interactivo es:",
+      "opciones": [
+        "La conexión en vivo al ERP.",
+        "Que el país, la ruta de riesgo y la lectura del costo se cambian en la página y recalculan Ke, WACC y valuación.",
+        "La actualización automática de precios.",
+        "El envío por correo."
+      ],
+      "correcta": 1,
+      "justificacion": "La interactividad vive en el entregable, no en la extracción: se cambia un supuesto y todo se recalcula sin volver a correr el motor."
+    },
+    {
+      "id": "q17",
+      "pregunta": "El dato más importante a conseguir de un sistema nuevo es:",
+      "opciones": [
+        "El estado de resultados.",
+        "Los movimientos de stock con destino cliente, con cantidad y fecha.",
+        "El balance auditado.",
+        "El plan de cuentas."
+      ],
+      "correcta": 1,
+      "justificacion": "Sin eso no hay recomposición del costo, que es la prueba central de todo el trabajo."
+    },
+    {
+      "id": "q18",
+      "pregunta": "Cuando la fuente es una carpeta de archivos, hay que confirmar el mapeo:",
+      "opciones": [
+        "Después de correr el motor.",
+        "ANTES de correr: un archivo mal asignado produce un diagnóstico entero equivocado y el motor no puede detectarlo.",
+        "Solo si hay dudas.",
+        "No hace falta."
+      ],
+      "correcta": 1,
+      "justificacion": "Es el único punto del proceso donde un error humano se propaga silenciosamente hasta el informe final."
+    },
+    {
+      "id": "q19",
+      "pregunta": "Si el sistema informa precio unitario con impuesto y subtotal neto, el precio neto es:",
+      "opciones": [
+        "El precio unitario.",
+        "Subtotal / cantidad.",
+        "El promedio de ambos.",
+        "El precio de lista."
+      ],
+      "correcta": 1,
+      "justificacion": "Usar el precio unitario sobrestima el margen exactamente en el porcentaje del impuesto, en todos los productos a la vez."
+    },
+    {
+      "id": "q20",
+      "pregunta": "El país, en este marco, es:",
+      "opciones": [
+        "Un dato de contexto.",
+        "Un parámetro del modelo del que cuelgan tasa impositiva, riesgo país, beta sectorial y múltiplos.",
+        "Irrelevante si se trabaja en dólares.",
+        "Una nota metodológica."
+      ],
+      "correcta": 1,
+      "justificacion": "Cambiar el país cambia el Ke, el WACC y la valuación completa; por eso es un input y no una aclaración."
+    },
+    {
+      "id": "q21",
+      "pregunta": "Las tres rutas de riesgo país son:",
+      "opciones": [
+        "Complementarias.",
+        "Mutuamente excluyentes: aplicar dos es contar el mismo riesgo dos veces.",
+        "Equivalentes.",
+        "Opcionales."
+      ],
+      "correcta": 1,
+      "justificacion": "El sesgo del doble conteo va siempre en la misma dirección: subvaluar. Por eso pasa desapercibido."
+    },
+    {
+      "id": "q22",
+      "pregunta": "En la variante Pereiro, el factor (1 − R²) multiplica:",
+      "opciones": [
+        "El beta solo.",
+        "El término completo de la prima de mercado.",
+        "El riesgo país.",
+        "La tasa libre de riesgo."
+      ],
+      "correcta": 1,
+      "justificacion": "Es el error más frecuente y el más caro de la valuación regional: aplicarlo al riesgo país produce el sesgo opuesto al que se busca corregir."
+    },
+    {
+      "id": "q23",
+      "pregunta": "Donde no hay serie de mercado para estimar el R², corresponde:",
+      "opciones": [
+        "Usar 0,5 por convención.",
+        "Marcar el origen como mediana regional o no estimable, y declararlo en el informe.",
+        "Omitir el ajuste.",
+        "Usar el R² de Estados Unidos."
+      ],
+      "correcta": 1,
+      "justificacion": "La mediana regional sale de los mercados más integrados, así que tiende a subestimar el costo del capital: el sesgo va en contra del usuario y por eso se declara."
+    },
+    {
+      "id": "q24",
+      "pregunta": "La fase 0 del trabajo es:",
+      "opciones": [
+        "La proyección.",
+        "Beneish: fija el techo de confianza de todo lo demás y requiere dos ejercicios completos.",
+        "La valuación.",
+        "La entrevista con el dueño."
+      ],
+      "correcta": 1,
+      "justificacion": "Si la información no es admisible, el trabajo puede terminar ahí — y ése es un resultado legítimo del trabajo, no una falla."
+    },
+    {
+      "id": "q25",
+      "pregunta": "Un análisis que ignora sus propios bloqueos metodológicos:",
+      "opciones": [
+        "Es más práctico.",
+        "Produce un número, no un diagnóstico.",
+        "Es aceptable si se aclara.",
+        "Gana en velocidad."
+      ],
+      "correcta": 1,
+      "justificacion": "Los bloqueos son reales: sin información admisible no se valúa, sin serie válida no se proyecta, sin base probabilística la ruta A queda vetada."
+    },
+    {
+      "id": "q26",
+      "pregunta": "El protocolo de la fase predictiva exige, en orden:",
+      "opciones": [
+        "Red neuronal directamente.",
+        "Lineal de referencia, luego métodos de conjunto sobre panel, y recién entonces aprendizaje profundo si el panel lo justifica.",
+        "Promedio móvil.",
+        "Juicio experto."
+      ],
+      "correcta": 1,
+      "justificacion": "Decir \"no hay datos suficientes para esto\" vale más que producir una red neuronal sobre treinta y seis observaciones."
+    },
+    {
+      "id": "q27",
+      "pregunta": "El Monte Carlo de la fase predictiva debe correr:",
+      "opciones": [
+        "Alrededor del modelo, sobre el resultado final.",
+        "A TRAVÉS del modelo ajustado.",
+        "Solo sobre las ventas.",
+        "Con exactamente 1.000 iteraciones."
+      ],
+      "correcta": 1,
+      "justificacion": "Simular alrededor del modelo describe la incertidumbre de un supuesto, no la del proceso; y el criterio de parada es por tolerancia, no por un número fijo de iteraciones."
+    },
+    {
+      "id": "q28",
+      "pregunta": "La verificación que cierra el modelo de valuación es:",
+      "opciones": [
+        "Que el valor terminal no supere el 70 %.",
+        "Que el DCF de FCFF coincida con Capital invertido + Σ EVA descontados.",
+        "Que el WACC sea menor al ROIC.",
+        "Que el crecimiento sea positivo."
+      ],
+      "correcta": 1,
+      "justificacion": "Si no coinciden, hay una inconsistencia entre las definiciones de capital, NOPAT y flujo. Es el mejor test de armado de todo el modelo."
+    },
+    {
+      "id": "q29",
+      "pregunta": "La primera pregunta de todo trabajo nuevo es:",
+      "opciones": [
+        "¿Cuánto vale la empresa?",
+        "¿Dónde vive la información de este cliente?",
+        "¿Cuál es el sector?",
+        "¿Quiénes son los socios?"
+      ],
+      "correcta": 1,
+      "justificacion": "De esa respuesta depende qué pruebas se pueden correr, y por lo tanto qué tan lejos puede llegar el diagnóstico. Ninguna sofisticación posterior compensa una extracción pobre."
+    },
+    {
+      "id": "q30",
+      "pregunta": "El campo obligatorio de toda prueba de recomposición es:",
+      "opciones": [
+        "El importe de la brecha.",
+        "La prueba discriminante: el dato concreto que resolvería la ambigüedad.",
+        "El nombre del responsable.",
+        "La fecha de corte."
+      ],
+      "correcta": 1,
+      "justificacion": "Es lo que convierte un hallazgo incómodo en una tarea concreta, y lo que separa este informe de una opinión."
+    }
+  ]
+}

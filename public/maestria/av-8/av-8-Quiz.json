@@ -1,0 +1,366 @@
+{
+  "cod": "A.8",
+  "nombre": "TSR Sintético y Total Business Return: medir el retorno del accionista sin precio de pizarra",
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "El TSR tradicional no se puede calcular en una PyME de capital cerrado porque:",
+      "opciones": [
+        "No paga dividendos.",
+        "No existe un precio de mercado del que extraer la apreciación.",
+        "No tiene utilidad contable.",
+        "No lleva contabilidad."
+      ],
+      "correcta": 1,
+      "justificacion": "El TSR combina apreciación del precio y dividendos; sin cotización, la primera parte del numerador no existe y hay que construir un sustituto."
+    },
+    {
+      "id": "q2",
+      "pregunta": "La forma multiplicativa del TSR de BCG contiene cinco generadores:",
+      "opciones": [
+        "Activo, pasivo, patrimonio, ventas y costos.",
+        "Crecimiento de ventas, cambio de margen, cambio de múltiplo, efecto del número de acciones y rendimiento de caja.",
+        "ROIC, WACC, EVA, CFROI y RONIC.",
+        "Precio, cantidad, costo, gasto e impuesto."
+      ],
+      "correcta": 1,
+      "justificacion": "Cada factor de la descomposición es una palanca distinta, con un responsable y un plan de acción diferentes."
+    },
+    {
+      "id": "q3",
+      "pregunta": "La conversión de la forma multiplicativa a la aditiva se hace:",
+      "opciones": [
+        "Redondeando.",
+        "Aplicando logaritmo natural a la tasa de acumulación de capital.",
+        "Sumando directamente los factores.",
+        "Con una regresión."
+      ],
+      "correcta": 1,
+      "justificacion": "El logaritmo convierte productos en sumas, que es lo que permite el waterfall aditivo que BCG presenta ante directorios."
+    },
+    {
+      "id": "q4",
+      "pregunta": "La descomposición logarítmica del TSR se quiebra cuando:",
+      "opciones": [
+        "El crecimiento supera el 50 %.",
+        "La utilidad es negativa o cero: no existe el logaritmo de un número no positivo.",
+        "Hay más de tres generadores.",
+        "La empresa no cotiza."
+      ],
+      "correcta": 1,
+      "justificacion": "Pasa en empresas en etapa temprana o en reestructuración profunda; ahí hay que quedarse en escala multiplicativa o migrar al EVA."
+    },
+    {
+      "id": "q5",
+      "pregunta": "El TSR Sintético sustituye el precio de mercado por:",
+      "opciones": [
+        "El valor contable del patrimonio.",
+        "El valor intrínseco del patrimonio estimado periódicamente por DCF.",
+        "El EBITDA.",
+        "El precio de la última transacción."
+      ],
+      "correcta": 1,
+      "justificacion": "Se pregunta cuánto vale el patrimonio según un DCF consistente, período a período, en lugar de cuánto cotizó la acción."
+    },
+    {
+      "id": "q6",
+      "pregunta": "La fórmula del Total Business Return es:",
+      "opciones": [
+        "TBR = EBITDA / Ventas.",
+        "TBR = FCF_t/V_{t−1} + (V_t − V_{t−1})/V_{t−1}.",
+        "TBR = ROIC − WACC.",
+        "TBR = Utilidad / Patrimonio."
+      ],
+      "correcta": 1,
+      "justificacion": "Combina el yield —donde el FCF hace de dividendo interno— con la ganancia de capital intrínseco del período."
+    },
+    {
+      "id": "q7",
+      "pregunta": "La vara que impone el TBR a toda inversión de capital es:",
+      "opciones": [
+        "Que recupere la inversión en tres años.",
+        "Que la ganancia de valor intrínseco supere el dividendo que el accionista habría cobrado con esa caja.",
+        "Que aumente las ventas.",
+        "Que baje los costos."
+      ],
+      "correcta": 1,
+      "justificacion": "Es la disciplina de asignación de capital expresada como métrica de retorno: si no supera esa vara, conviene distribuir."
+    },
+    {
+      "id": "q8",
+      "pregunta": "La condición sin la cual el TBR no significa nada es:",
+      "opciones": [
+        "Que la empresa cotice.",
+        "La consistencia temporal: V_t y V_{t−1} calculados con la misma metodología, tasa y supuestos.",
+        "Que haya más de cinco años de historia.",
+        "Que el FCF sea positivo."
+      ],
+      "correcta": 1,
+      "justificacion": "Sin consistencia, el ΔV mide cambios de supuesto y no creación de valor real. El TBR es tan bueno como el DCF que lo alimenta."
+    },
+    {
+      "id": "q9",
+      "pregunta": "La primera normalización obligatoria de la PyME familiar es:",
+      "opciones": [
+        "Ajustar por inflación.",
+        "Llevar la retribución de socios y directores a valores de mercado por el trabajo efectivamente realizado.",
+        "Eliminar la deuda.",
+        "Cambiar el plan de cuentas."
+      ],
+      "correcta": 1,
+      "justificacion": "Si el dueño cobra de menos, el EBITDA está inflado; si cobra de más, está deprimido. En los dos casos el retorno medido no es el del negocio."
+    },
+    {
+      "id": "q10",
+      "pregunta": "Los gastos personales cargados a la sociedad deben:",
+      "opciones": [
+        "Dejarse como están.",
+        "Eliminarse del gasto y reclasificarse como distribuciones de capital implícitas.",
+        "Sumarse al capex.",
+        "Considerarse gasto financiero."
+      ],
+      "correcta": 1,
+      "justificacion": "Eso hace aparecer el EBITDA real y, de paso, visibiliza cuánta caja sale por decisión de consumo y no de asignación."
+    },
+    {
+      "id": "q11",
+      "pregunta": "La modelización en dólares en economías de alta inflación sirve para:",
+      "opciones": [
+        "Pagar menos impuestos.",
+        "Aislar el crecimiento operativo real de la ilusión nominal de la devaluación.",
+        "Cumplir una norma contable.",
+        "Simplificar el cálculo."
+      ],
+      "correcta": 1,
+      "justificacion": "El crecimiento nominal en pesos puede ser enorme sin que la empresa haya crecido un metro cúbico; el dólar neutraliza esa distorsión."
+    },
+    {
+      "id": "q12",
+      "pregunta": "El DLOC se calcula como:",
+      "opciones": [
+        "1 − 1/(1 + Prima de control).",
+        "Prima de control × valor.",
+        "1 + Prima de control.",
+        "Prima de control / 2."
+      ],
+      "correcta": 0,
+      "justificacion": "Con una prima de control del 30 %, el descuento implícito de la minoritaria es 1 − 1/1,30 = 23,1 %."
+    },
+    {
+      "id": "q13",
+      "pregunta": "La intuición central del DLOM es que la iliquidez equivale:",
+      "opciones": [
+        "A un impuesto.",
+        "Al costo de no contar con una opción de venta (put) líquida durante el horizonte de tenencia.",
+        "A la prima de riesgo país.",
+        "A la amortización."
+      ],
+      "correcta": 1,
+      "justificacion": "Por eso el DLOM se modela con teoría de opciones y no con promedios fijos, que serían arbitrarios y no auditables."
+    },
+    {
+      "id": "q14",
+      "pregunta": "El modelo de Chaffe se basa en:",
+      "opciones": [
+        "Una put asiática.",
+        "Una put europea convencional (Black-Scholes-Merton) con K = S.",
+        "Una call americana.",
+        "Un forward."
+      ],
+      "correcta": 1,
+      "justificacion": "Con tasa libre de riesgo nula y sin dividendos se reduce a DLOM ≈ 2·N(σ√T/2) − 1."
+    },
+    {
+      "id": "q15",
+      "pregunta": "El modelo de Longstaff se caracteriza por:",
+      "opciones": [
+        "Dar el descuento más conservador.",
+        "Ser una put retrospectiva que da la COTA SUPERIOR teórica del descuento.",
+        "No depender de la volatilidad.",
+        "Aplicarse solo a empresas cotizantes."
+      ],
+      "correcta": 1,
+      "justificacion": "Usarlo como estimación central sobrecastiga sistemáticamente: es un máximo teórico, no un valor esperado."
+    },
+    {
+      "id": "q16",
+      "pregunta": "El modelo de Finnerty se distingue por:",
+      "opciones": [
+        "Ser el más agresivo.",
+        "Ser estable y dar rangos conservadores del 12 % al 38 %, con una put asiática de promedio de strike.",
+        "No usar volatilidad.",
+        "Ser idéntico a Chaffe."
+      ],
+      "correcta": 1,
+      "justificacion": "Modera el crecimiento del descuento ante volatilidades altas, lo que lo hace el más robusto de los tres para PyMEs privadas."
+    },
+    {
+      "id": "q17",
+      "pregunta": "DLOC y DLOM se aplican:",
+      "opciones": [
+        "Sumándolos.",
+        "En secuencia multiplicativa: 1 − [(1−DLOC)×(1−DLOM)].",
+        "Tomando el mayor de los dos.",
+        "Promediándolos."
+      ],
+      "correcta": 1,
+      "justificacion": "Con DLOC 20 % y DLOM 30 %, el combinado es 44 % y no 50 %. Sumar sobrecastiga y destruye la trazabilidad del cálculo."
+    },
+    {
+      "id": "q18",
+      "pregunta": "El orden correcto de aplicación es:",
+      "opciones": [
+        "DLOM y después DLOC.",
+        "Valor controlante marketable → DLOC → minoritario marketable → DLOM → minoritario no marketable.",
+        "Los dos a la vez sobre el valor base.",
+        "Es indistinto."
+      ],
+      "correcta": 1,
+      "justificacion": "Primero se pierden los derechos de decisión, y recién sobre ese valor se pregunta cuánto cuesta no poder vender el paquete."
+    },
+    {
+      "id": "q19",
+      "pregunta": "El DLOM escala con:",
+      "opciones": [
+        "El tamaño de la empresa.",
+        "El horizonte hasta el evento de liquidez (T) y la volatilidad (σ).",
+        "La cantidad de socios.",
+        "El nivel de deuda."
+      ],
+      "correcta": 1,
+      "justificacion": "Cuanto más lejos la liquidez y más volátil el activo, mayor el valor de la put que el tenedor no tiene, y por lo tanto mayor el descuento."
+    },
+    {
+      "id": "q20",
+      "pregunta": "Comprimir T de tres años a uno de forma demostrable produce:",
+      "opciones": [
+        "Ningún efecto.",
+        "Una caída drástica del DLOM y un salto inmediato del valor minoritario no marketable.",
+        "Un aumento del WACC.",
+        "Una baja del ROIC."
+      ],
+      "correcta": 1,
+      "justificacion": "Gestionar la liquidez es literalmente crear valor: sube el valor del paquete sin vender un peso más ni bajar un peso de costo."
+    },
+    {
+      "id": "q21",
+      "pregunta": "Las herramientas para comprimir T de forma creíble incluyen:",
+      "opciones": [
+        "Anunciar la intención de vender.",
+        "Recompras periódicas con reglas escritas, planes de pre-salida y política estable de dividendos.",
+        "Aumentar la deuda.",
+        "Cambiar de auditor."
+      ],
+      "correcta": 1,
+      "justificacion": "La palabra clave es demostrable: una intención no comprime el descuento, un mecanismo ejecutado sí."
+    },
+    {
+      "id": "q22",
+      "pregunta": "Con ROIC muy por encima del WACC, la política óptima es:",
+      "opciones": [
+        "Distribuir el 100 % del FCF.",
+        "Retener y crecer: cada peso reinvertido expande V_t más de lo que valía el dividendo.",
+        "Recomprar deuda.",
+        "Vender la empresa."
+      ],
+      "correcta": 1,
+      "justificacion": "La retención optimiza el TSR Sintético porque expande la base de capital propio en mayor medida que el dividendo distribuido."
+    },
+    {
+      "id": "q23",
+      "pregunta": "Con ROIC igual o menor al WACC, la política óptima es:",
+      "opciones": [
+        "Crecer más rápido para mejorar el ROIC.",
+        "Distribuir el 100 % del FCF y frenar el capex de expansión.",
+        "Tomar deuda para invertir.",
+        "Mantener la política actual."
+      ],
+      "correcta": 1,
+      "justificacion": "Si la empresa rinde menos que su costo de capital, devolverle la caja al accionista detiene la dilapidación y eleva el TSR Sintético vía yield."
+    },
+    {
+      "id": "q24",
+      "pregunta": "\"Ganarse el derecho a crecer\" significa:",
+      "opciones": [
+        "Conseguir financiamiento antes de invertir.",
+        "Priorizar eficiencia de los activos existentes y mejora de márgenes ANTES de destinar capital nuevo a expansión.",
+        "Esperar a que baje la tasa.",
+        "Contratar más vendedores."
+      ],
+      "correcta": 1,
+      "justificacion": "Crecer con ROIC deprimido es destruir valor a escala. Primero subir el ROIC por encima del WACC; recién entonces crecer."
+    },
+    {
+      "id": "q25",
+      "pregunta": "En una distribuidora, ganarse el derecho a crecer suele pasar por:",
+      "opciones": [
+        "El numerador: subir precios.",
+        "El denominador: liberar capital de trabajo y acortar el ciclo de conversión de efectivo.",
+        "Reducir el personal.",
+        "Cambiar de rubro."
+      ],
+      "correcta": 1,
+      "justificacion": "Sube el ROIC sin tocar una sola línea del estado de resultados, y libera caja de una sola vez en el proceso."
+    },
+    {
+      "id": "q26",
+      "pregunta": "Según el análisis comparativo de BCG, América Latina atrae predominantemente:",
+      "opciones": [
+        "Capital enfocado en crecimiento de múltiplos.",
+        "Arquetipos rentistas, orientados a dividendos inmediatos y disciplina de caja.",
+        "Inversores de riesgo tecnológico.",
+        "Fondos soberanos."
+      ],
+      "correcta": 1,
+      "justificacion": "Por eso una PyME regional que planea una transición debe priorizar flujos líquidos por sobre la promesa de múltiplos futuros en su comunicación y su política financiera."
+    },
+    {
+      "id": "q27",
+      "pregunta": "El uso más peligroso del TSR Sintético es:",
+      "opciones": [
+        "Calcularlo todos los años.",
+        "Recalcular V_t cambiando supuestos hasta que el ΔV dé agradable.",
+        "Compararlo con el TSR de cotizantes.",
+        "Descomponerlo en generadores."
+      ],
+      "correcta": 1,
+      "justificacion": "Sin consistencia temporal declarada y auditable, el TSR Sintético no mide creación de valor: mide optimismo."
+    },
+    {
+      "id": "q28",
+      "pregunta": "El TBR con proxy de valor para empresas de capital intensivo se aproxima como:",
+      "opciones": [
+        "(Δ EBITDA + FCF) / (EBITDA × múltiplo transaccional).",
+        "EBITDA / Ventas.",
+        "FCF / Patrimonio contable.",
+        "Utilidad / Activos."
+      ],
+      "correcta": 0,
+      "justificacion": "En servicios o activos ligeros conviene reemplazar el EBITDA por EBIT o NOPAT, donde representan mejor el valor del negocio."
+    },
+    {
+      "id": "q29",
+      "pregunta": "Para auditar un DLOM del 35 % hay que exigir que se declaren:",
+      "opciones": [
+        "El nombre del perito.",
+        "El modelo usado, la volatilidad σ con su fuente y el horizonte T con su justificación.",
+        "El valor contable del patrimonio.",
+        "La cantidad de socios."
+      ],
+      "correcta": 1,
+      "justificacion": "Un DLOM sin esos tres parámetros no es una estimación: es un número elegido, y como tal es indefendible."
+    },
+    {
+      "id": "q30",
+      "pregunta": "Si V_{t−1} se calculó con escenarios en el flujo y V_t con prima en la tasa, el ΔV:",
+      "opciones": [
+        "Mide creación de valor.",
+        "Mide el cambio de método y nada más.",
+        "Es más preciso.",
+        "Es equivalente."
+      ],
+      "correcta": 1,
+      "justificacion": "Es la conexión directa con el módulo del canal del riesgo: sin una ruta de riesgo declarada y sostenida, la comparación entre períodos no significa nada."
+    }
+  ]
+}

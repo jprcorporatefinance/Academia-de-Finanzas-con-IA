@@ -22,7 +22,7 @@ export default function MaestriaPage() {
     <div>
       <Section
         title="Maestría en Finanzas Corporativas Aplicadas con IA"
-        subtitle="16 asignaturas · caso integrador Maderas del Litoral S.A. · material, cuestionario y entrega por cada una"
+        subtitle="27 módulos: 16 asignaturas del núcleo + 11 Módulos Avanzados · caso integrador Maderas del Litoral S.A. · material, cuestionario y entrega por cada uno"
       >
         <div className="card border-l-4 border-l-gold-400 p-5">
           <div className="flex items-start gap-3">

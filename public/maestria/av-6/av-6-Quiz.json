@@ -1,0 +1,366 @@
+{
+  "cod": "A.6",
+  "nombre": "El Canal del Riesgo: por dónde entra cada riesgo en una valuación",
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "La regla de oro del canal del riesgo establece que:",
+      "opciones": [
+        "Todo riesgo va a la tasa.",
+        "Un riesgo, un canal, una sola vez.",
+        "Todo riesgo va al flujo.",
+        "Conviene repartir cada riesgo entre los dos canales."
+      ],
+      "correcta": 1,
+      "justificacion": "Cada riesgo pertenece a un solo destino —numerador, denominador o patrimonio final—. Si aparece en dos, se cobra dos veces y el valor resultante es indefendible."
+    },
+    {
+      "id": "q2",
+      "pregunta": "Un riesgo que afecta la probabilidad o la magnitud de la caja futura debe ir:",
+      "opciones": [
+        "Al denominador como prima.",
+        "Al numerador, con probabilidad y severidad declaradas.",
+        "Al DLOM.",
+        "A ningún lado."
+      ],
+      "correcta": 1,
+      "justificacion": "Los riesgos con forma de evento se modelan como escenarios explícitos, donde un tercero puede rechazar un supuesto sin rechazar el modelo entero."
+    },
+    {
+      "id": "q3",
+      "pregunta": "La pregunta que decide entre las tres rutas de valuación es:",
+      "opciones": [
+        "Cuál es el crecimiento perpetuo.",
+        "Quién es el inversor marginal.",
+        "Cuánto vale el EBITDA.",
+        "Qué software se usa."
+      ],
+      "correcta": 1,
+      "justificacion": "Un fondo global diversificado solo cobra covarianza; un dueño concentrado cobra riesgo total. No es preferencia metodológica: es un hecho sobre quién va a comprar."
+    },
+    {
+      "id": "q4",
+      "pregunta": "La diferencia de valor entre elegir un canal u otro, con los mismos supuestos económicos, puede llegar a:",
+      "opciones": [
+        "Menos del 5 %.",
+        "Entre 40 % y 75 %.",
+        "Exactamente 10 %.",
+        "Cero: son equivalentes."
+      ],
+      "correcta": 1,
+      "justificacion": "Ningún otro supuesto del modelo —ni el crecimiento ni el margen— tiene esa capacidad de mover el resultado. Por eso la elección del canal es de primer orden."
+    },
+    {
+      "id": "q5",
+      "pregunta": "El factor (1 − R²) de Pereiro se aplica sobre:",
+      "opciones": [
+        "El riesgo país (CRP).",
+        "El término del ERP.",
+        "La tasa libre de riesgo.",
+        "El DLOM."
+      ],
+      "correcta": 1,
+      "justificacion": "La prima de mercado local ya contiene riesgo país porque está estimada con datos de ese mercado. Pereiro descuenta esa porción antes de sumar el CRP; aplicarlo sobre el CRP produce el sesgo opuesto al que se quiere corregir."
+    },
+    {
+      "id": "q6",
+      "pregunta": "El SPAM (Stackable Premiums and Adjustments Model) es:",
+      "opciones": [
+        "La corrección anti-doble-conteo de Pereiro.",
+        "Un modelo de ajustes apilables al valor del equity, distinto de la corrección (1−R²).",
+        "Un método de proyección de ventas.",
+        "El nombre del EMBI."
+      ],
+      "correcta": 1,
+      "justificacion": "Confundir el SPAM con la corrección anti-doble-conteo es un error frecuente: son cosas distintas y solo (1−R²) resuelve el solapamiento ERP/CRP."
+    },
+    {
+      "id": "q7",
+      "pregunta": "La prima de iliquidez de la participación debe ir:",
+      "opciones": [
+        "En el WACC.",
+        "Como DLOM sobre el patrimonio, al final de la cascada.",
+        "En el flujo.",
+        "En la tasa libre de riesgo."
+      ],
+      "correcta": 1,
+      "justificacion": "Meterla en la tasa afirma que la empresa se vuelve exponencialmente más ilíquida cada año a perpetuidad, cosa que no describe a ningún activo real. Damodaran, Pereiro y Koller coinciden sin matices."
+    },
+    {
+      "id": "q8",
+      "pregunta": "La equivalencia de nivel Δ = (k − g)·h/(1 − h) exige que k sea:",
+      "opciones": [
+        "La tasa ya con la prima incluida.",
+        "La tasa base, sin la prima.",
+        "La tasa libre de riesgo.",
+        "El WACC después de impuestos."
+      ],
+      "correcta": 1,
+      "justificacion": "Pasar k ya sumada duplica Δ en el denominador y la identidad deja de cerrar. Es un error fácil de cometer y difícil de detectar."
+    },
+    {
+      "id": "q9",
+      "pregunta": "Con k = 8,98 %, g = 2,50 % y una prima de 7,36 pp, el recorte constante equivalente es:",
+      "opciones": [
+        "7,36 %.",
+        "53,2 %.",
+        "2,50 %.",
+        "100 %."
+      ],
+      "correcta": 1,
+      "justificacion": "h = 0,0736/(0,0898 − 0,0250 + 0,0736) = 53,2 %. La tasa afirma, sin decirlo, que el plan sobreestima la caja en un 53 % todos los años, para siempre."
+    },
+    {
+      "id": "q10",
+      "pregunta": "La equivalencia absorbente responde a la pregunta de:",
+      "opciones": [
+        "Qué recorte constante da el mismo valor.",
+        "Qué probabilidad por severidad de un golpe PERMANENTE anual da el mismo valor.",
+        "Cuál es el WACC óptimo.",
+        "Cuál es el DLOM adecuado."
+      ],
+      "correcta": 1,
+      "justificacion": "Es la lectura correcta cuando el riesgo es de salto —expropiación, control de cambios, pérdida irreversible de un contrato— porque el daño se compone año a año."
+    },
+    {
+      "id": "q11",
+      "pregunta": "La cuña temporal muestra que una prima plana en la tasa:",
+      "opciones": [
+        "Castiga uniformemente todos los años.",
+        "Castiga de más el corto plazo y de menos la cola larga.",
+        "Castiga de menos el corto plazo.",
+        "No tiene efecto temporal."
+      ],
+      "correcta": 1,
+      "justificacion": "El riesgo acumulado real crece con el tiempo; el recorte plano es constante. Antes del cruce se cobra de más, después de menos."
+    },
+    {
+      "id": "q12",
+      "pregunta": "La consecuencia más cara de la cuña temporal es que:",
+      "opciones": [
+        "El primer año queda mal medido.",
+        "El valor terminal, que concentra el 60-70 % del valor, queda SUBcastigado.",
+        "El modelo no converge.",
+        "El flujo se vuelve negativo."
+      ],
+      "correcta": 1,
+      "justificacion": "La prima plana sobrecastiga los cinco años planificados y subcastiga la cola larga, que es exactamente donde vive la mayor parte del valor. Es el peor reparto posible del castigo."
+    },
+    {
+      "id": "q13",
+      "pregunta": "La destrucción de valor por una prima Δ se acelera cuando:",
+      "opciones": [
+        "El diferencial (k − g) es amplio.",
+        "El diferencial (k − g) es estrecho.",
+        "El flujo del año 1 es grande.",
+        "La empresa es joven."
+      ],
+      "correcta": 1,
+      "justificacion": "El efecto no es lineal: con (k − g) = 4 pp, una prima de 5 pp borra el 55,6 % del valor. Y el diferencial estrecho es la situación típica de toda empresa madura."
+    },
+    {
+      "id": "q14",
+      "pregunta": "Una empresa madura con (k − g) = 4 pp que recibe una prima de 5 pp pierde:",
+      "opciones": [
+        "5 % del valor.",
+        "Más de la mitad del valor (55,6 %).",
+        "10 % del valor.",
+        "Nada."
+      ],
+      "correcta": 1,
+      "justificacion": "Es el resultado que convierte \"subamos unos puntos por las dudas\" en una decisión de valuación de primer orden y no en una precaución menor."
+    },
+    {
+      "id": "q15",
+      "pregunta": "La prima justificada Δ* se obtiene:",
+      "opciones": [
+        "Por consenso del equipo.",
+        "Buscando por bisección la prima que iguala el valor de la ruta A con el del caso base descontado a k+Δ*.",
+        "Sumando todas las primas del mercado.",
+        "Del EMBI directamente."
+      ],
+      "correcta": 1,
+      "justificacion": "Δ* es la traducción exacta del numerador al denominador para esa empresa, ese horizonte y ese g. No es una regla general: depende de la forma del flujo."
+    },
+    {
+      "id": "q16",
+      "pregunta": "La prima justificada Δ* NO debe compararse contra la prima total porque:",
+      "opciones": [
+        "La prima total es siempre menor.",
+        "Beta Total y prima de tamaño son costo de oportunidad, no pérdida esperada de flujo: no compiten con los escenarios.",
+        "Δ* no es comparable con nada.",
+        "La prima total incluye impuestos."
+      ],
+      "correcta": 1,
+      "justificacion": "Compararla contra la prima total sería el error simétrico al que se denuncia. Solo λ·CRP·We cubre el mismo riesgo que los escenarios."
+    },
+    {
+      "id": "q17",
+      "pregunta": "Un solapamiento de +0,8 pp significa que:",
+      "opciones": [
+        "El denominador subestima el riesgo.",
+        "Hay doble conteo: la tasa cobra riesgo país por encima de lo que los escenarios ya descontaron.",
+        "Los canales están perfectamente alineados.",
+        "Falta información."
+      ],
+      "correcta": 1,
+      "justificacion": "Por encima de +0,25 pp el diagnóstico es doble conteo. La corrección es retirar los escenarios macro del numerador o escalar el CRP: una de las dos, no ambas."
+    },
+    {
+      "id": "q18",
+      "pregunta": "El sesgo del doble conteo va siempre en la dirección de:",
+      "opciones": [
+        "Sobrevaluar.",
+        "Subvaluar.",
+        "No tiene dirección definida.",
+        "Depende del sector."
+      ],
+      "correcta": 1,
+      "justificacion": "Por eso es tan frecuente y tan poco detectado: nadie discute un número conservador. En una compraventa, el vendedor paga ese sesgo íntegro."
+    },
+    {
+      "id": "q19",
+      "pregunta": "La Beta Total de Damodaran se calcula como:",
+      "opciones": [
+        "β_L × ρ.",
+        "β_L / ρ, siendo ρ la correlación con el mercado.",
+        "β_u × (1+D/E).",
+        "β_L + prima de tamaño."
+      ],
+      "correcta": 1,
+      "justificacion": "Dividir por la correlación amplía la beta para compensar al inversor que no puede diversificar. La Beta Total YA ES esa compensación por riesgo total."
+    },
+    {
+      "id": "q20",
+      "pregunta": "Sumar una prima de riesgo específico habiendo usado Beta Total es:",
+      "opciones": [
+        "Metodológicamente correcto.",
+        "Cobrar dos veces el mismo riesgo.",
+        "Obligatorio en mercados emergentes.",
+        "Indiferente para el valor."
+      ],
+      "correcta": 1,
+      "justificacion": "La Beta Total ya compensa el riesgo total del inversor no diversificado; agregar otra prima específica duplica esa compensación."
+    },
+    {
+      "id": "q21",
+      "pregunta": "Para una empresa que exporta el 15 % de sus ventas, usar λ = 1 en el término λ·CRP:",
+      "opciones": [
+        "Es la práctica correcta.",
+        "Sobreestima la exposición real al riesgo país.",
+        "Subestima la exposición.",
+        "No afecta el resultado."
+      ],
+      "correcta": 1,
+      "justificacion": "λ mide exposición real: origen de los ingresos, ubicación de los activos y moneda de facturación. Una exportadora tiene exposición estructuralmente menor que 1."
+    },
+    {
+      "id": "q22",
+      "pregunta": "Una simulación de Monte Carlo puede:",
+      "opciones": [
+        "Demostrar cuál es la tasa de descuento correcta.",
+        "Describir la distribución del flujo y validar que el atajo determinístico reproduce la esperanza, pero NO elegir la tasa.",
+        "Reemplazar el CAPM.",
+        "Eliminar la necesidad del DLOM."
+      ],
+      "correcta": 1,
+      "justificacion": "La tasa es un costo de oportunidad del inversor marginal, no una propiedad del proceso de flujos. Toda simulación que \"demuestra\" una tasa lo hace porque ya la asumió al descontar."
+    },
+    {
+      "id": "q23",
+      "pregunta": "Reportar la mediana llamándola valor esperado es un error porque:",
+      "opciones": [
+        "La mediana siempre es menor.",
+        "Con eventos de salto, la media queda POR DEBAJO de la mediana: el caso típico es mejor que el caso que hay que pagar.",
+        "La mediana no existe en distribuciones asimétricas.",
+        "Son idénticas."
+      ],
+      "correcta": 1,
+      "justificacion": "La asimetría negativa que introducen los eventos de salto separa media y mediana; confundirlas comunica un valor que no es el que corresponde pagar."
+    },
+    {
+      "id": "q24",
+      "pregunta": "Si la estructura de capital de la empresa es variable, la valuación debe migrar a:",
+      "opciones": [
+        "Múltiplos comparables.",
+        "APV, aplicando la ruta elegida sobre Ku.",
+        "WACC constante igual.",
+        "Valor contable."
+      ],
+      "correcta": 1,
+      "justificacion": "No es un problema de canal sino de método: el WACC supone estructura constante. Si D/V se mueve, corresponde APV (asignatura 4.1)."
+    },
+    {
+      "id": "q25",
+      "pregunta": "El DLOC (descuento por participación minoritaria) y el DLOM:",
+      "opciones": [
+        "Se suman.",
+        "Se acumulan multiplicativamente y son cosas distintas.",
+        "Son sinónimos.",
+        "Se anulan entre sí."
+      ],
+      "correcta": 1,
+      "justificacion": "Uno mide falta de control y el otro falta de negociabilidad; confundirlos o sumarlos linealmente produce un descuento mal calculado."
+    },
+    {
+      "id": "q26",
+      "pregunta": "La cuarta respuesta legítima ante un riesgo real sin base para cuantificarlo es:",
+      "opciones": [
+        "Inventar una probabilidad razonable.",
+        "Declararlo en el anexo como riesgo no cuantificado, sin castigo numérico.",
+        "Agregar una prima conservadora.",
+        "Ignorarlo por completo."
+      ],
+      "correcta": 1,
+      "justificacion": "Inventar una probabilidad o inventar una prima son el mismo error con distinta gramática. Declararlo sin cuantificar es honesto y auditable."
+    },
+    {
+      "id": "q27",
+      "pregunta": "El solapamiento menos visible y uno de los más caros es:",
+      "opciones": [
+        "Escenario pesimista junto con g conservador en el valor terminal.",
+        "Prima de tamaño junto con beta.",
+        "Rf junto con ERP.",
+        "CAPEX junto con amortización."
+      ],
+      "correcta": 0,
+      "justificacion": "Castigar el flujo y además bajar g castiga la cola dos veces, justo donde el terminal concentra el valor. Casi nunca se detecta porque los dos ajustes parecen independientes."
+    },
+    {
+      "id": "q28",
+      "pregunta": "Un litigio material en curso debe descontarse:",
+      "opciones": [
+        "Al WACC del negocio.",
+        "A la tasa que refleje el riesgo del propio litigio, no la del negocio.",
+        "A la tasa libre de riesgo siempre.",
+        "No debe valuarse."
+      ],
+      "correcta": 1,
+      "justificacion": "El WACC del negocio no describe el riesgo de un fallo judicial; usar esa tasa mezcla dos procesos de riesgo completamente distintos."
+    },
+    {
+      "id": "q29",
+      "pregunta": "Antes de aplicar cualquiera de las tres rutas, es requisito que:",
+      "opciones": [
+        "La empresa cotice en bolsa.",
+        "La información contable supere el test de admisibilidad (Beneish, reexpresión).",
+        "Haya al menos diez comparables.",
+        "El WACC sea menor al 15 %."
+      ],
+      "correcta": 1,
+      "justificacion": "Información manipulada invalida el numerador de cualquier ruta. Si la contabilidad no es admisible, no se emite valor: ése es un resultado legítimo del trabajo."
+    },
+    {
+      "id": "q30",
+      "pregunta": "El criterio final para aceptar una prima es que:",
+      "opciones": [
+        "Sea similar a la del mercado.",
+        "Se pueda nombrar exactamente qué compensa.",
+        "Sea menor a 5 puntos.",
+        "La proponga el socio de mayor jerarquía."
+      ],
+      "correcta": 1,
+      "justificacion": "Si no se puede decir qué compensa —riesgo total del dueño, tamaño, riesgo país—, es doble conteo. La apertura de la prima en componentes nombrables es la herramienta que lo fuerza."
+    }
+  ]
+}

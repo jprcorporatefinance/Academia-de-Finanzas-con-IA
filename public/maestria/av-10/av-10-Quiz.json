@@ -1,0 +1,366 @@
+{
+  "cod": "A.10",
+  "nombre": "Comunicación de Resultados: el informe didáctico y el tablero que el directorio sí usa",
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "El objetivo del informe didáctico es que el lector no técnico entienda:",
+      "opciones": [
+        "El resultado final.",
+        "Cómo se determina cada número, de dónde sale y qué decisión habilita.",
+        "La metodología académica.",
+        "El software utilizado."
+      ],
+      "correcta": 1,
+      "justificacion": "No es simplificar: es la exigencia más alta que se le puede poner a un análisis, porque obliga a que cada cifra tenga trazabilidad hasta el registro primario."
+    },
+    {
+      "id": "q2",
+      "pregunta": "El criterio de calidad de un informe es:",
+      "opciones": [
+        "Que quede visualmente atractivo.",
+        "Que el cliente pueda reconstruir cualquier número mañana, sin nosotros, y llegar al mismo resultado.",
+        "Que tenga más de veinte páginas.",
+        "Que use el mayor número de indicadores."
+      ],
+      "correcta": 1,
+      "justificacion": "Si necesita llamarnos para rehacer un número, lo entregado no fue un análisis sino una dependencia."
+    },
+    {
+      "id": "q3",
+      "pregunta": "La doble comprobación exige que:",
+      "opciones": [
+        "Dos personas revisen el informe.",
+        "Cada total clave cierre por dos caminos independientes; si no cierra, se explica la diferencia EN el informe.",
+        "Se use dos softwares.",
+        "Se revise dos veces."
+      ],
+      "correcta": 1,
+      "justificacion": "Por ejemplo: suma por producto = suma por mes, o entradas − salidas = existencia. Esconder la diferencia invalida todo lo demás."
+    },
+    {
+      "id": "q4",
+      "pregunta": "Cuando una cifra no cierra por los dos caminos, las posibilidades son:",
+      "opciones": [
+        "Siempre un error de carga.",
+        "O el sistema no refleja el movimiento, o el movimiento no está bien registrado — y el informe declara las dos.",
+        "Que falte información.",
+        "Que el modelo esté mal."
+      ],
+      "correcta": 1,
+      "justificacion": "Elegir la lectura conveniente convierte una medición en una opinión. Nombrar el dato que separaría las dos hipótesis es parte del trabajo."
+    },
+    {
+      "id": "q5",
+      "pregunta": "El título del informe debe ser:",
+      "opciones": [
+        "Una descripción técnica completa.",
+        "Un nombre propio de dos a cinco palabras.",
+        "El nombre del cliente y la fecha.",
+        "La metodología usada."
+      ],
+      "correcta": 1,
+      "justificacion": "Un título como \"El kilo que no llega\" identifica el trabajo y transmite la tesis; un título descriptivo largo no se recuerda ni se cita."
+    },
+    {
+      "id": "q6",
+      "pregunta": "La sección \"en una página\" contiene:",
+      "opciones": [
+        "Todo el análisis resumido.",
+        "Cuatro indicadores en tarjetas con su lectura y un párrafo con la tesis, y tiene que bastarse sola.",
+        "El índice.",
+        "Las conclusiones metodológicas."
+      ],
+      "correcta": 1,
+      "justificacion": "Es lo único que un director ocupado va a leer con seguridad; si no se basta sola, el resto del informe se pierde."
+    },
+    {
+      "id": "q7",
+      "pregunta": "La \"regla de las tres apariciones\" establece que cada cifra clave:",
+      "opciones": [
+        "Se repite tres veces en el texto.",
+        "Aparece coherente en el indicador, en el gráfico y en la tabla de respaldo.",
+        "Se calcula de tres formas.",
+        "Se muestra en tres unidades."
+      ],
+      "correcta": 1,
+      "justificacion": "Si las tres no coinciden, hay un error de armado que el lector va a encontrar antes que nosotros — y con él pierde la confianza en el resto."
+    },
+    {
+      "id": "q8",
+      "pregunta": "Para responder \"¿cómo se compone un resultado, qué se sumó y qué se restó?\" el gráfico correcto es:",
+      "opciones": [
+        "Líneas.",
+        "Cascada (waterfall).",
+        "Torta.",
+        "Dispersión."
+      ],
+      "correcta": 1,
+      "justificacion": "La cascada muestra el camino de A a B con cada suma y cada resta identificada, que es exactamente la pregunta planteada."
+    },
+    {
+      "id": "q9",
+      "pregunta": "Para responder \"¿por dónde fluye y cómo se reparte entre conceptos relacionados?\" corresponde:",
+      "opciones": [
+        "Barras apiladas.",
+        "Cintas (sankey).",
+        "Líneas.",
+        "Radar."
+      ],
+      "correcta": 1,
+      "justificacion": "El ancho de la cinta representa la cantidad y las columnas las etapas, lo que hace visible la proporción de cada derivación."
+    },
+    {
+      "id": "q10",
+      "pregunta": "Un gráfico sin tooltip:",
+      "opciones": [
+        "Es aceptable si es simple.",
+        "No se publica: obliga al lector a confiar en vez de permitirle verificar.",
+        "Es preferible para imprimir.",
+        "Mejora la legibilidad."
+      ],
+      "correcta": 1,
+      "justificacion": "La diferencia entre confiar y verificar es todo el valor del informe: el tooltip lleva el valor exacto, la fórmula o la composición."
+    },
+    {
+      "id": "q11",
+      "pregunta": "Los efectos 3D y los degradés en gráficos financieros:",
+      "opciones": [
+        "Mejoran la comprensión.",
+        "Distorsionan la percepción de magnitud sin agregar información.",
+        "Son obligatorios en presentaciones.",
+        "Ayudan a diferenciar series."
+      ],
+      "correcta": 1,
+      "justificacion": "Todo elemento que no aporta información se la quita a los que sí la aportan; en gráficos de magnitud, además, la distorsiona activamente."
+    },
+    {
+      "id": "q12",
+      "pregunta": "Los colores de los gráficos deben:",
+      "opciones": [
+        "Escribirse literalmente en cada gráfico.",
+        "Leerse de variables definidas una sola vez.",
+        "Elegirse gráfico por gráfico.",
+        "Ser siempre los del software."
+      ],
+      "correcta": 1,
+      "justificacion": "Así la pieza entera cambia de identidad visual sin tocar el contenido, y se garantiza que el mismo concepto tenga el mismo color en todo el informe."
+    },
+    {
+      "id": "q13",
+      "pregunta": "El módulo 1 del tablero (árbol DuPont) debe tener como raíz:",
+      "opciones": [
+        "El EBITDA.",
+        "El ROE, con descomposición de cinco factores y drill-down al hacer clic.",
+        "Las ventas.",
+        "El EVA."
+      ],
+      "correcta": 1,
+      "justificacion": "La descomposición de cinco factores separa carga fiscal, carga de intereses, margen operativo, rotación y multiplicador de apalancamiento."
+    },
+    {
+      "id": "q14",
+      "pregunta": "El semáforo del monitor de capital de trabajo marca en ámbar:",
+      "opciones": [
+        "Quiebre de stock.",
+        "Sobrestock o rotación en zona de atención.",
+        "Rotación saludable.",
+        "Productos discontinuados."
+      ],
+      "correcta": 1,
+      "justificacion": "El rojo se reserva para quiebre de stock o rotación por debajo del umbral crítico; el verde, para rotación sana."
+    },
+    {
+      "id": "q15",
+      "pregunta": "El módulo 3 (simulador de sensibilidad) cambia la conversación porque:",
+      "opciones": [
+        "Es más rápido.",
+        "La dirección deja de discutir el valor y empieza a discutir los supuestos.",
+        "Usa menos datos.",
+        "No requiere explicación."
+      ],
+      "correcta": 1,
+      "justificacion": "Cuando los supuestos son manipulables en vivo, la discusión se traslada a donde efectivamente vive el desacuerdo."
+    },
+    {
+      "id": "q16",
+      "pregunta": "El módulo 4 (radar de riesgo) muestra:",
+      "opciones": [
+        "El promedio de los escenarios.",
+        "El histograma del valor con P10/P50/P90, el abanico de la proyección y las probabilidades de los eventos que importan.",
+        "Solo el caso base.",
+        "La evolución histórica."
+      ],
+      "correcta": 1,
+      "justificacion": "Los eventos relevantes son quiebre de caja, perforación de covenant y EVA negativo: probabilidades, no promedios."
+    },
+    {
+      "id": "q17",
+      "pregunta": "La clave arquitectónica del tablero es que:",
+      "opciones": [
+        "Recalcula todo en el navegador.",
+        "Consume el mismo JSON que el informe y no recalcula: muestra.",
+        "Se conecta directo a la base de datos.",
+        "Usa su propio motor de cálculo."
+      ],
+      "correcta": 1,
+      "justificacion": "Si el tablero y el informe pueden dar números distintos, el diseño está mal: la única fuente de verdad debe ser el motor de cálculo."
+    },
+    {
+      "id": "q18",
+      "pregunta": "Un tablero que muestra cero cuando falló la lectura de datos:",
+      "opciones": [
+        "Es aceptable.",
+        "Es peor que no tener tablero: por eso cada módulo necesita estado explícito de carga, error y vacío.",
+        "Se corrige solo.",
+        "Es un problema menor."
+      ],
+      "correcta": 1,
+      "justificacion": "Un cero falso se lee como información y produce decisiones equivocadas; un estado de error produce una pregunta, que es lo correcto."
+    },
+    {
+      "id": "q19",
+      "pregunta": "La distinción \"registrado / implícito\" separa:",
+      "opciones": [
+        "Lo aprobado de lo pendiente.",
+        "Lo que el sistema tiene explícito de lo que se deduce por diferencia.",
+        "Lo interno de lo externo.",
+        "Lo contable de lo fiscal."
+      ],
+      "correcta": 1,
+      "justificacion": "El hallazgo valioso casi siempre vive en lo implícito, y por eso el informe tiene que hacer visible el camino del cálculo que lo produjo."
+    },
+    {
+      "id": "q20",
+      "pregunta": "Presentar una hipótesis con la misma tipografía que un dato:",
+      "opciones": [
+        "Simplifica la lectura.",
+        "Es el error más caro: cuando el cliente lo descubre, pierde confianza en todos los números, incluidos los que eran datos.",
+        "Es indiferente.",
+        "Se corrige en el pie."
+      ],
+      "correcta": 1,
+      "justificacion": "La honestidad sobre la incertidumbre no debilita el informe: es lo único que lo sostiene frente a una revisión seria."
+    },
+    {
+      "id": "q21",
+      "pregunta": "\"El precio de no saber\" se refiere a:",
+      "opciones": [
+        "El costo del estudio.",
+        "La diferencia entre los dos escenarios cuando hay incertidumbre sobre un dato clave.",
+        "El costo de oportunidad del capital.",
+        "La prima de riesgo."
+      ],
+      "correcta": 1,
+      "justificacion": "Cuantificar esa diferencia convierte \"falta información\" en una decisión de inversión: cuánto vale conseguir el dato."
+    },
+    {
+      "id": "q22",
+      "pregunta": "Una recomendación sin responsable asignado es:",
+      "opciones": [
+        "Suficiente.",
+        "Una observación, no una recomendación.",
+        "Más objetiva.",
+        "Preferible por prudencia."
+      ],
+      "correcta": 1,
+      "justificacion": "El cierre del informe exige tres a cinco decisiones concretas, cada una con su cuantificación y su responsable cuando se conoce."
+    },
+    {
+      "id": "q23",
+      "pregunta": "El patrón del cierre cuantificado es:",
+      "opciones": [
+        "Δ indicador × factor de conversión × base × períodos.",
+        "Ventas − costos.",
+        "ROIC − WACC.",
+        "Activo − pasivo."
+      ],
+      "correcta": 0,
+      "justificacion": "Toda recomendación tiene que poder expresarse en esa forma; si no se puede, no está lista para ir al informe."
+    },
+    {
+      "id": "q24",
+      "pregunta": "La prueba final del informe es:",
+      "opciones": [
+        "Que no tenga errores de ortografía.",
+        "Que el lector pueda decir qué va a hacer distinto el lunes.",
+        "Que tenga bibliografía.",
+        "Que sea extenso."
+      ],
+      "correcta": 1,
+      "justificacion": "Si no, el análisis fue correcto y el trabajo quedó incompleto: el entregable no es el modelo, es la decisión que habilita."
+    },
+    {
+      "id": "q25",
+      "pregunta": "El problema estructural de la consultoría que este módulo resuelve es:",
+      "opciones": [
+        "El precio del servicio.",
+        "Que el valor del trabajo es proporcional a su profundidad técnica y su adopción es inversamente proporcional a ella.",
+        "La falta de datos.",
+        "La competencia."
+      ],
+      "correcta": 1,
+      "justificacion": "El informe didáctico rompe esa relación sin bajar el nivel técnico: hace que cada paso del razonamiento sea reconstruible por quien decide."
+    },
+    {
+      "id": "q26",
+      "pregunta": "En la cadena del trabajo, cada número del JSON de resultados viaja con:",
+      "opciones": [
+        "Solo su valor.",
+        "Su fórmula, su cálculo con números concretos y su interpretación económica.",
+        "Su fuente únicamente.",
+        "Su fecha."
+      ],
+      "correcta": 1,
+      "justificacion": "El relato del entregable se construye SOBRE eso, no aparte. Por eso el informe no puede contradecir al modelo."
+    },
+    {
+      "id": "q27",
+      "pregunta": "La prosa del informe:",
+      "opciones": [
+        "Debe usar viñetas para ser clara.",
+        "No lleva viñetas: las listas van solo dentro de tablas o del flujograma.",
+        "Debe evitar los números.",
+        "Debe ser lo más breve posible."
+      ],
+      "correcta": 1,
+      "justificacion": "La viñeta fragmenta el argumento y deja al lector la tarea de reconstruir la conexión entre los puntos, que es justamente lo que el informe debería hacer."
+    },
+    {
+      "id": "q28",
+      "pregunta": "Una conclusión incómoda se comunica:",
+      "opciones": [
+        "Suavizándola con adjetivos.",
+        "Con datos y sin adjetivos.",
+        "Omitiéndola del resumen.",
+        "Solo verbalmente."
+      ],
+      "correcta": 1,
+      "justificacion": "\"El margen de la línea B fue negativo en once de doce meses\" pesa más y es más defendible que \"la línea B tiene problemas serios de rentabilidad\"."
+    },
+    {
+      "id": "q29",
+      "pregunta": "La longitud de un informe:",
+      "opciones": [
+        "Correlaciona con su utilidad.",
+        "No correlaciona con su utilidad; la densidad de números verificables sí.",
+        "Debe ser fija.",
+        "Debe superar las veinte páginas."
+      ],
+      "correcta": 1,
+      "justificacion": "Un hallazgo bien escrito no es más largo que uno mal escrito: es más específico."
+    },
+    {
+      "id": "q30",
+      "pregunta": "El registro lingüístico del informe (voseo o usted) se define:",
+      "opciones": [
+        "Al final, al revisar.",
+        "Antes de escribir, según el destinatario.",
+        "Según la preferencia del redactor.",
+        "Es indistinto."
+      ],
+      "correcta": 1,
+      "justificacion": "Voseo para destinatarios argentinos, usted formal para el exterior. Cambiarlo después obliga a reescribir y produce inconsistencias que se notan."
+    }
+  ]
+}
