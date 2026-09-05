@@ -1,4 +1,4 @@
-# Caso maestro — Maderas del Litoral S.A. (hilo conductor de las 16 asignaturas)
+# Caso maestro — Maderas del Litoral S.A. (hilo conductor de los 27 módulos)
 
 > Fuente única de verdad numérica. Cada asignatura toma una "rebanada" de este
 > caso y la profundiza; los **anclas** de abajo NO cambian entre módulos.
@@ -57,6 +57,19 @@ a Brasil y Uruguay (leve descalce de moneda). Alta **dependencia del dueño**
 - **4.2** RONIC y crecimiento: ¿la ampliación de planta crea valor?
 - **4.3** Estructura de financiamiento, DAF-E, DSCR, paradoja crecimiento-liquidez.
 - **4.4** Política de dividendos y gobierno de la empresa familiar.
+
+## Rebanada por Módulo Avanzado
+- **A.1** Fusiones y adquisiciones: sinergias y due diligence sobre el caso.
+- **A.2** Asignación del excedente de 1.200: reinvertir, cancelar deuda o distribuir.
+- **A.3** Sesgos de los tres hermanos en las decisiones del caso.
+- **A.4** ESG y riesgo climático en la valuación de la maderera.
+- **A.5** Menú de financiamiento y BFR de la empresa.
+- **A.6** Auditoría del canal del riesgo sobre una valuación de terceros del caso.
+- **A.7** Puente de valor: atribución de la caída del EVA (629 → 150) a cada driver.
+- **A.8** TSR Sintético y TBR del patrimonio de los Rossi; DLOC/DLOM del hermano menor.
+- **A.9** El plan de crecimiento al 35 %: FCFF, g sostenible, CFADS y DSCR contra covenant.
+- **A.10** Comunicación del diagnóstico: informe didáctico y tablero para los tres hermanos.
+- **A.11** Recomposición desde el sistema: las dos lecturas del EBITDA y la prueba discriminante.
 
 ## Indicadores propios JPR (se introducen donde impactan)
 IDD (dependencia del dueño) → Ke/DLOC/DLOM · CEM (concentración por margen) →

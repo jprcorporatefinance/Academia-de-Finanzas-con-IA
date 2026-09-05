@@ -8155,5 +8155,2351 @@
         "justificacion": "Si la liquidez está tensionada (DAF-E < CCE), el servicio fijo de la deuda es peligroso; y compartir control es una decisión que excede lo financiero."
       }
     ]
+  },
+  {
+    "cod": "A.6",
+    "slug": "av-6",
+    "cuatrimestre": 5,
+    "fase": "Módulo Avanzado · Temas de frontera",
+    "nombre": "El Canal del Riesgo: por dónde entra cada riesgo en una valuación",
+    "horas": "24 h · 12 teóricas / 12 prácticas",
+    "framework": "Koller/McKinsey · Damodaran · Pereiro · metodología propia JPR",
+    "resumen": "El valor de una empresa es un cociente, y todo riesgo tiene exactamente dos lugares donde entrar: el flujo esperado o la tasa de descuento. La elección no es de estilo: la misma creencia sobre el mismo riesgo produce valores que difieren entre un 40 % y un 75 % según el canal. Este módulo enseña a elegir el canal, a traducir exactamente entre uno y otro, y a auditar el doble conteo que subvalúa sistemáticamente a las empresas de la región.",
+    "objetivos": [
+      "Aplicar la regla de oro del canal: un riesgo, un canal, una sola vez.",
+      "Clasificar riesgo por riesgo entre numerador, denominador y patrimonio final.",
+      "Derivar y usar las dos equivalencias exactas prima ↔ recorte de flujo (nivel y absorbente).",
+      "Cuantificar la cuña temporal y demostrar por qué una prima plana reparte mal el castigo.",
+      "Detectar y medir en puntos porcentuales el doble conteo del riesgo país.",
+      "Auditar la tasa de una valuación ajena y defender cada componente de la prima ante un directorio."
+    ],
+    "caso": {
+      "titulo": "La segunda opinión sobre la valuación de Maderas del Litoral",
+      "empresa": "Maderas del Litoral S.A. — auditoría del canal del riesgo",
+      "consigna": [
+        "Clasificar cada componente de la tasa y cada escenario del flujo en numerador, denominador o patrimonio final, e identificar los riesgos cobrados más de una vez.",
+        "Calcular el recorte de flujo h equivalente a la prima total mal asignada, y escribir la frase que esa prima afirma sobre el plan de negocios.",
+        "Estimar el solapamiento en puntos porcentuales entre λ·CRP y el castigo que ya aplicaron los escenarios.",
+        "Cuantificar cuánto valor de patrimonio se recupera al corregir cada error, uno por uno y acumulado.",
+        "Redactar la recomendación de una página para la familia: qué correcciones son técnicamente indiscutibles y cuáles son discutibles de buena fe."
+      ]
+    },
+    "quiz": [
+      {
+        "id": "q1",
+        "pregunta": "La regla de oro del canal del riesgo establece que:",
+        "opciones": [
+          "Todo riesgo va a la tasa.",
+          "Un riesgo, un canal, una sola vez.",
+          "Todo riesgo va al flujo.",
+          "Conviene repartir cada riesgo entre los dos canales."
+        ],
+        "correcta": 1,
+        "justificacion": "Cada riesgo pertenece a un solo destino —numerador, denominador o patrimonio final—. Si aparece en dos, se cobra dos veces y el valor resultante es indefendible."
+      },
+      {
+        "id": "q2",
+        "pregunta": "Un riesgo que afecta la probabilidad o la magnitud de la caja futura debe ir:",
+        "opciones": [
+          "Al denominador como prima.",
+          "Al numerador, con probabilidad y severidad declaradas.",
+          "Al DLOM.",
+          "A ningún lado."
+        ],
+        "correcta": 1,
+        "justificacion": "Los riesgos con forma de evento se modelan como escenarios explícitos, donde un tercero puede rechazar un supuesto sin rechazar el modelo entero."
+      },
+      {
+        "id": "q3",
+        "pregunta": "La pregunta que decide entre las tres rutas de valuación es:",
+        "opciones": [
+          "Cuál es el crecimiento perpetuo.",
+          "Quién es el inversor marginal.",
+          "Cuánto vale el EBITDA.",
+          "Qué software se usa."
+        ],
+        "correcta": 1,
+        "justificacion": "Un fondo global diversificado solo cobra covarianza; un dueño concentrado cobra riesgo total. No es preferencia metodológica: es un hecho sobre quién va a comprar."
+      },
+      {
+        "id": "q4",
+        "pregunta": "La diferencia de valor entre elegir un canal u otro, con los mismos supuestos económicos, puede llegar a:",
+        "opciones": [
+          "Menos del 5 %.",
+          "Entre 40 % y 75 %.",
+          "Exactamente 10 %.",
+          "Cero: son equivalentes."
+        ],
+        "correcta": 1,
+        "justificacion": "Ningún otro supuesto del modelo —ni el crecimiento ni el margen— tiene esa capacidad de mover el resultado. Por eso la elección del canal es de primer orden."
+      },
+      {
+        "id": "q5",
+        "pregunta": "El factor (1 − R²) de Pereiro se aplica sobre:",
+        "opciones": [
+          "El riesgo país (CRP).",
+          "El término del ERP.",
+          "La tasa libre de riesgo.",
+          "El DLOM."
+        ],
+        "correcta": 1,
+        "justificacion": "La prima de mercado local ya contiene riesgo país porque está estimada con datos de ese mercado. Pereiro descuenta esa porción antes de sumar el CRP; aplicarlo sobre el CRP produce el sesgo opuesto al que se quiere corregir."
+      },
+      {
+        "id": "q6",
+        "pregunta": "El SPAM (Stackable Premiums and Adjustments Model) es:",
+        "opciones": [
+          "La corrección anti-doble-conteo de Pereiro.",
+          "Un modelo de ajustes apilables al valor del equity, distinto de la corrección (1−R²).",
+          "Un método de proyección de ventas.",
+          "El nombre del EMBI."
+        ],
+        "correcta": 1,
+        "justificacion": "Confundir el SPAM con la corrección anti-doble-conteo es un error frecuente: son cosas distintas y solo (1−R²) resuelve el solapamiento ERP/CRP."
+      },
+      {
+        "id": "q7",
+        "pregunta": "La prima de iliquidez de la participación debe ir:",
+        "opciones": [
+          "En el WACC.",
+          "Como DLOM sobre el patrimonio, al final de la cascada.",
+          "En el flujo.",
+          "En la tasa libre de riesgo."
+        ],
+        "correcta": 1,
+        "justificacion": "Meterla en la tasa afirma que la empresa se vuelve exponencialmente más ilíquida cada año a perpetuidad, cosa que no describe a ningún activo real. Damodaran, Pereiro y Koller coinciden sin matices."
+      },
+      {
+        "id": "q8",
+        "pregunta": "La equivalencia de nivel Δ = (k − g)·h/(1 − h) exige que k sea:",
+        "opciones": [
+          "La tasa ya con la prima incluida.",
+          "La tasa base, sin la prima.",
+          "La tasa libre de riesgo.",
+          "El WACC después de impuestos."
+        ],
+        "correcta": 1,
+        "justificacion": "Pasar k ya sumada duplica Δ en el denominador y la identidad deja de cerrar. Es un error fácil de cometer y difícil de detectar."
+      },
+      {
+        "id": "q9",
+        "pregunta": "Con k = 8,98 %, g = 2,50 % y una prima de 7,36 pp, el recorte constante equivalente es:",
+        "opciones": [
+          "7,36 %.",
+          "53,2 %.",
+          "2,50 %.",
+          "100 %."
+        ],
+        "correcta": 1,
+        "justificacion": "h = 0,0736/(0,0898 − 0,0250 + 0,0736) = 53,2 %. La tasa afirma, sin decirlo, que el plan sobreestima la caja en un 53 % todos los años, para siempre."
+      },
+      {
+        "id": "q10",
+        "pregunta": "La equivalencia absorbente responde a la pregunta de:",
+        "opciones": [
+          "Qué recorte constante da el mismo valor.",
+          "Qué probabilidad por severidad de un golpe PERMANENTE anual da el mismo valor.",
+          "Cuál es el WACC óptimo.",
+          "Cuál es el DLOM adecuado."
+        ],
+        "correcta": 1,
+        "justificacion": "Es la lectura correcta cuando el riesgo es de salto —expropiación, control de cambios, pérdida irreversible de un contrato— porque el daño se compone año a año."
+      },
+      {
+        "id": "q11",
+        "pregunta": "La cuña temporal muestra que una prima plana en la tasa:",
+        "opciones": [
+          "Castiga uniformemente todos los años.",
+          "Castiga de más el corto plazo y de menos la cola larga.",
+          "Castiga de menos el corto plazo.",
+          "No tiene efecto temporal."
+        ],
+        "correcta": 1,
+        "justificacion": "El riesgo acumulado real crece con el tiempo; el recorte plano es constante. Antes del cruce se cobra de más, después de menos."
+      },
+      {
+        "id": "q12",
+        "pregunta": "La consecuencia más cara de la cuña temporal es que:",
+        "opciones": [
+          "El primer año queda mal medido.",
+          "El valor terminal, que concentra el 60-70 % del valor, queda SUBcastigado.",
+          "El modelo no converge.",
+          "El flujo se vuelve negativo."
+        ],
+        "correcta": 1,
+        "justificacion": "La prima plana sobrecastiga los cinco años planificados y subcastiga la cola larga, que es exactamente donde vive la mayor parte del valor. Es el peor reparto posible del castigo."
+      },
+      {
+        "id": "q13",
+        "pregunta": "La destrucción de valor por una prima Δ se acelera cuando:",
+        "opciones": [
+          "El diferencial (k − g) es amplio.",
+          "El diferencial (k − g) es estrecho.",
+          "El flujo del año 1 es grande.",
+          "La empresa es joven."
+        ],
+        "correcta": 1,
+        "justificacion": "El efecto no es lineal: con (k − g) = 4 pp, una prima de 5 pp borra el 55,6 % del valor. Y el diferencial estrecho es la situación típica de toda empresa madura."
+      },
+      {
+        "id": "q14",
+        "pregunta": "Una empresa madura con (k − g) = 4 pp que recibe una prima de 5 pp pierde:",
+        "opciones": [
+          "5 % del valor.",
+          "Más de la mitad del valor (55,6 %).",
+          "10 % del valor.",
+          "Nada."
+        ],
+        "correcta": 1,
+        "justificacion": "Es el resultado que convierte \"subamos unos puntos por las dudas\" en una decisión de valuación de primer orden y no en una precaución menor."
+      },
+      {
+        "id": "q15",
+        "pregunta": "La prima justificada Δ* se obtiene:",
+        "opciones": [
+          "Por consenso del equipo.",
+          "Buscando por bisección la prima que iguala el valor de la ruta A con el del caso base descontado a k+Δ*.",
+          "Sumando todas las primas del mercado.",
+          "Del EMBI directamente."
+        ],
+        "correcta": 1,
+        "justificacion": "Δ* es la traducción exacta del numerador al denominador para esa empresa, ese horizonte y ese g. No es una regla general: depende de la forma del flujo."
+      },
+      {
+        "id": "q16",
+        "pregunta": "La prima justificada Δ* NO debe compararse contra la prima total porque:",
+        "opciones": [
+          "La prima total es siempre menor.",
+          "Beta Total y prima de tamaño son costo de oportunidad, no pérdida esperada de flujo: no compiten con los escenarios.",
+          "Δ* no es comparable con nada.",
+          "La prima total incluye impuestos."
+        ],
+        "correcta": 1,
+        "justificacion": "Compararla contra la prima total sería el error simétrico al que se denuncia. Solo λ·CRP·We cubre el mismo riesgo que los escenarios."
+      },
+      {
+        "id": "q17",
+        "pregunta": "Un solapamiento de +0,8 pp significa que:",
+        "opciones": [
+          "El denominador subestima el riesgo.",
+          "Hay doble conteo: la tasa cobra riesgo país por encima de lo que los escenarios ya descontaron.",
+          "Los canales están perfectamente alineados.",
+          "Falta información."
+        ],
+        "correcta": 1,
+        "justificacion": "Por encima de +0,25 pp el diagnóstico es doble conteo. La corrección es retirar los escenarios macro del numerador o escalar el CRP: una de las dos, no ambas."
+      },
+      {
+        "id": "q18",
+        "pregunta": "El sesgo del doble conteo va siempre en la dirección de:",
+        "opciones": [
+          "Sobrevaluar.",
+          "Subvaluar.",
+          "No tiene dirección definida.",
+          "Depende del sector."
+        ],
+        "correcta": 1,
+        "justificacion": "Por eso es tan frecuente y tan poco detectado: nadie discute un número conservador. En una compraventa, el vendedor paga ese sesgo íntegro."
+      },
+      {
+        "id": "q19",
+        "pregunta": "La Beta Total de Damodaran se calcula como:",
+        "opciones": [
+          "β_L × ρ.",
+          "β_L / ρ, siendo ρ la correlación con el mercado.",
+          "β_u × (1+D/E).",
+          "β_L + prima de tamaño."
+        ],
+        "correcta": 1,
+        "justificacion": "Dividir por la correlación amplía la beta para compensar al inversor que no puede diversificar. La Beta Total YA ES esa compensación por riesgo total."
+      },
+      {
+        "id": "q20",
+        "pregunta": "Sumar una prima de riesgo específico habiendo usado Beta Total es:",
+        "opciones": [
+          "Metodológicamente correcto.",
+          "Cobrar dos veces el mismo riesgo.",
+          "Obligatorio en mercados emergentes.",
+          "Indiferente para el valor."
+        ],
+        "correcta": 1,
+        "justificacion": "La Beta Total ya compensa el riesgo total del inversor no diversificado; agregar otra prima específica duplica esa compensación."
+      },
+      {
+        "id": "q21",
+        "pregunta": "Para una empresa que exporta el 15 % de sus ventas, usar λ = 1 en el término λ·CRP:",
+        "opciones": [
+          "Es la práctica correcta.",
+          "Sobreestima la exposición real al riesgo país.",
+          "Subestima la exposición.",
+          "No afecta el resultado."
+        ],
+        "correcta": 1,
+        "justificacion": "λ mide exposición real: origen de los ingresos, ubicación de los activos y moneda de facturación. Una exportadora tiene exposición estructuralmente menor que 1."
+      },
+      {
+        "id": "q22",
+        "pregunta": "Una simulación de Monte Carlo puede:",
+        "opciones": [
+          "Demostrar cuál es la tasa de descuento correcta.",
+          "Describir la distribución del flujo y validar que el atajo determinístico reproduce la esperanza, pero NO elegir la tasa.",
+          "Reemplazar el CAPM.",
+          "Eliminar la necesidad del DLOM."
+        ],
+        "correcta": 1,
+        "justificacion": "La tasa es un costo de oportunidad del inversor marginal, no una propiedad del proceso de flujos. Toda simulación que \"demuestra\" una tasa lo hace porque ya la asumió al descontar."
+      },
+      {
+        "id": "q23",
+        "pregunta": "Reportar la mediana llamándola valor esperado es un error porque:",
+        "opciones": [
+          "La mediana siempre es menor.",
+          "Con eventos de salto, la media queda POR DEBAJO de la mediana: el caso típico es mejor que el caso que hay que pagar.",
+          "La mediana no existe en distribuciones asimétricas.",
+          "Son idénticas."
+        ],
+        "correcta": 1,
+        "justificacion": "La asimetría negativa que introducen los eventos de salto separa media y mediana; confundirlas comunica un valor que no es el que corresponde pagar."
+      },
+      {
+        "id": "q24",
+        "pregunta": "Si la estructura de capital de la empresa es variable, la valuación debe migrar a:",
+        "opciones": [
+          "Múltiplos comparables.",
+          "APV, aplicando la ruta elegida sobre Ku.",
+          "WACC constante igual.",
+          "Valor contable."
+        ],
+        "correcta": 1,
+        "justificacion": "No es un problema de canal sino de método: el WACC supone estructura constante. Si D/V se mueve, corresponde APV (asignatura 4.1)."
+      },
+      {
+        "id": "q25",
+        "pregunta": "El DLOC (descuento por participación minoritaria) y el DLOM:",
+        "opciones": [
+          "Se suman.",
+          "Se acumulan multiplicativamente y son cosas distintas.",
+          "Son sinónimos.",
+          "Se anulan entre sí."
+        ],
+        "correcta": 1,
+        "justificacion": "Uno mide falta de control y el otro falta de negociabilidad; confundirlos o sumarlos linealmente produce un descuento mal calculado."
+      },
+      {
+        "id": "q26",
+        "pregunta": "La cuarta respuesta legítima ante un riesgo real sin base para cuantificarlo es:",
+        "opciones": [
+          "Inventar una probabilidad razonable.",
+          "Declararlo en el anexo como riesgo no cuantificado, sin castigo numérico.",
+          "Agregar una prima conservadora.",
+          "Ignorarlo por completo."
+        ],
+        "correcta": 1,
+        "justificacion": "Inventar una probabilidad o inventar una prima son el mismo error con distinta gramática. Declararlo sin cuantificar es honesto y auditable."
+      },
+      {
+        "id": "q27",
+        "pregunta": "El solapamiento menos visible y uno de los más caros es:",
+        "opciones": [
+          "Escenario pesimista junto con g conservador en el valor terminal.",
+          "Prima de tamaño junto con beta.",
+          "Rf junto con ERP.",
+          "CAPEX junto con amortización."
+        ],
+        "correcta": 0,
+        "justificacion": "Castigar el flujo y además bajar g castiga la cola dos veces, justo donde el terminal concentra el valor. Casi nunca se detecta porque los dos ajustes parecen independientes."
+      },
+      {
+        "id": "q28",
+        "pregunta": "Un litigio material en curso debe descontarse:",
+        "opciones": [
+          "Al WACC del negocio.",
+          "A la tasa que refleje el riesgo del propio litigio, no la del negocio.",
+          "A la tasa libre de riesgo siempre.",
+          "No debe valuarse."
+        ],
+        "correcta": 1,
+        "justificacion": "El WACC del negocio no describe el riesgo de un fallo judicial; usar esa tasa mezcla dos procesos de riesgo completamente distintos."
+      },
+      {
+        "id": "q29",
+        "pregunta": "Antes de aplicar cualquiera de las tres rutas, es requisito que:",
+        "opciones": [
+          "La empresa cotice en bolsa.",
+          "La información contable supere el test de admisibilidad (Beneish, reexpresión).",
+          "Haya al menos diez comparables.",
+          "El WACC sea menor al 15 %."
+        ],
+        "correcta": 1,
+        "justificacion": "Información manipulada invalida el numerador de cualquier ruta. Si la contabilidad no es admisible, no se emite valor: ése es un resultado legítimo del trabajo."
+      },
+      {
+        "id": "q30",
+        "pregunta": "El criterio final para aceptar una prima es que:",
+        "opciones": [
+          "Sea similar a la del mercado.",
+          "Se pueda nombrar exactamente qué compensa.",
+          "Sea menor a 5 puntos.",
+          "La proponga el socio de mayor jerarquía."
+        ],
+        "correcta": 1,
+        "justificacion": "Si no se puede decir qué compensa —riesgo total del dueño, tamaño, riesgo país—, es doble conteo. La apertura de la prima en componentes nombrables es la herramienta que lo fuerza."
+      }
+    ]
+  },
+  {
+    "cod": "A.7",
+    "slug": "av-7",
+    "cuatrimestre": 5,
+    "fase": "Módulo Avanzado · Temas de frontera",
+    "nombre": "Mapa Maestro de Interrelaciones: análisis de segundo y tercer orden entre indicadores",
+    "horas": "24 h · 12 teóricas / 12 prácticas",
+    "framework": "Koller/McKinsey · Stern Stewart · HOLT/BCG · Damodaran · Pereiro",
+    "resumen": "Un indicador solo no diagnostica nada. El valor del análisis financiero aparece cuando se cruzan familias de indicadores y se leen los puentes algebraicos exactos que los unen: el spread dice SI se crea valor, DuPont dice DÓNDE está la palanca, el ciclo de efectivo dice CUÁNTA caja está atrapada, y el par GAT-Altman dice CUÁNTO riesgo se está corriendo para conseguirlo. Este módulo es el mapa completo de esas conexiones.",
+    "objetivos": [
+      "Dominar los puentes algebraicos exactos entre NOPAT, ROIC, EVA, RONIC, WACC, CFROI y los tres flujos.",
+      "Construir un value driver tree que llegue desde una decisión operativa hasta el valor del patrimonio.",
+      "Diagnosticar por cruce de familias, no por lectura de indicadores sueltos.",
+      "Reconciliar FCFF = FCFE + FCFD y usar la identidad como test de consistencia del modelo.",
+      "Explicar el caso de la empresa solvente que destruye valor y por qué se necesitan ambos ejes.",
+      "Cuantificar el efecto de segundo y tercer orden: cuánto EVA gana la empresa por cada día de ciclo de efectivo que acorta."
+    ],
+    "caso": {
+      "titulo": "El puente de valor de Maderas del Litoral",
+      "empresa": "Maderas del Litoral S.A. — atribución del EVA a sus generadores",
+      "consigna": [
+        "Descomponer la variación del EVA en la contribución de margen, rotación, capital y costo de capital, verificando que la suma cierre sin residuo.",
+        "Aplicar DuPont de cinco factores a ambos ejercicios y decir cuál de los cinco factores explica más caída.",
+        "Cuantificar cuántos pesos de EVA cuesta cada día de alargamiento del ciclo de conversión de efectivo.",
+        "Verificar la identidad FCFF = FCFE + FCFD con los datos del caso y explicar qué revela el signo de cada flujo.",
+        "Determinar si la empresa es solvente y destructora de valor a la vez, cruzando Altman Z'' con el EVA."
+      ]
+    },
+    "quiz": [
+      {
+        "id": "q1",
+        "pregunta": "El indicador maestro del que cuelga todo el mapa de interrelaciones es:",
+        "opciones": [
+          "El EBITDA.",
+          "El spread (ROIC − WACC), monetizado como EVA.",
+          "El margen bruto.",
+          "La liquidez corriente."
+        ],
+        "correcta": 1,
+        "justificacion": "Los diecinueve conceptos del catálogo se ordenan alrededor del spread, que es la única medida de si la empresa crea o destruye valor económico."
+      },
+      {
+        "id": "q2",
+        "pregunta": "Comparar directamente el ROIC con el EVA es un error porque:",
+        "opciones": [
+          "El EVA es más moderno.",
+          "El ROIC es una tasa y el EVA un monto: no son dimensionalmente comparables.",
+          "El ROIC no considera impuestos.",
+          "El EVA no existe en empresas cerradas."
+        ],
+        "correcta": 1,
+        "justificacion": "El encadenamiento correcto es ROIC (%) vs WACC (%) → spread (%) → × capital → EVA ($). El EVA es el spread traducido a pesos."
+      },
+      {
+        "id": "q3",
+        "pregunta": "La fórmula del key value driver de McKinsey es:",
+        "opciones": [
+          "Valor = EBITDA × múltiplo.",
+          "Valor = NOPAT₁ × (1 − g/RONIC) / (WACC − g).",
+          "Valor = Activos − Pasivos.",
+          "Valor = FCFE / Ke."
+        ],
+        "correcta": 1,
+        "justificacion": "Esa única ecuación une rentabilidad, crecimiento, reinversión y costo de capital, y es también la fórmula del valor terminal."
+      },
+      {
+        "id": "q4",
+        "pregunta": "La identidad de reinversión establece que:",
+        "opciones": [
+          "IR = WACC × g.",
+          "g = RONIC × IR, y por lo tanto IR = g/RONIC.",
+          "IR es una decisión libre de la dirección.",
+          "g = ROIC + WACC."
+        ],
+        "correcta": 1,
+        "justificacion": "La tasa de reinversión no es una decisión libre: dado un objetivo de crecimiento y un retorno del capital nuevo, queda determinada."
+      },
+      {
+        "id": "q5",
+        "pregunta": "El DuPont de cinco factores descompone el ROE en:",
+        "opciones": [
+          "Margen, rotación y apalancamiento.",
+          "Carga fiscal × carga de intereses × margen operativo × rotación de activos × multiplicador de apalancamiento.",
+          "Ventas, costos y gastos.",
+          "ROIC, WACC y spread."
+        ],
+        "correcta": 1,
+        "justificacion": "El factor que distingue la versión de cinco de la de tres es la carga de intereses (EBT/EBIT), que en Argentina explota por las tasas nominales."
+      },
+      {
+        "id": "q6",
+        "pregunta": "El puente ROIC → ROE es ROE = ROIC + [ROIC − Kd(1−t)] × (D/E). Eso significa que apalancarse:",
+        "opciones": [
+          "Siempre mejora el ROE.",
+          "Agrega ROE solo si el ROIC supera al costo de la deuda después de impuestos.",
+          "Nunca conviene.",
+          "No afecta el ROE."
+        ],
+        "correcta": 1,
+        "justificacion": "Si el ROIC es menor que Kd(1−t), el segundo término es negativo y el apalancamiento amplifica la destrucción en lugar de la creación."
+      },
+      {
+        "id": "q7",
+        "pregunta": "La identidad de cierre de los tres flujos es:",
+        "opciones": [
+          "FCFF = FCFE − FCFD.",
+          "FCFF = FCFE + FCFD.",
+          "FCFE = FCFF + FCFD.",
+          "No existe una identidad entre ellos."
+        ],
+        "correcta": 1,
+        "justificacion": "La caja que genera la firma se reparte entre accionistas (FCFE) y acreedores (FCFD). Si la identidad no cierra, hay un error de armado en el modelo."
+      },
+      {
+        "id": "q8",
+        "pregunta": "El test de consistencia obligatorio de un modelo de valuación es:",
+        "opciones": [
+          "Que el EBITDA crezca.",
+          "Que Equity Value = EV − Deuda neta coincida con descontar FCFE a Ke.",
+          "Que el WACC sea menor al ROIC.",
+          "Que el valor terminal sea el 50 % del total."
+        ],
+        "correcta": 1,
+        "justificacion": "Las dos rutas —vía firma y vía accionista— deben converger al mismo valor del patrimonio. Si no lo hacen, hay una inconsistencia entre flujos y tasas."
+      },
+      {
+        "id": "q9",
+        "pregunta": "Que el CFROI sea mucho menor que el ROIC contable es señal de:",
+        "opciones": [
+          "Un error de cálculo.",
+          "Distorsión inflacionaria o activos subvaluados a costo histórico.",
+          "Excelente gestión.",
+          "Exceso de caja."
+        ],
+        "correcta": 1,
+        "justificacion": "Es la huella dactilar del problema argentino: activos viejos depreciados a costo histórico achican el denominador del ROIC y lo inflan artificialmente."
+      },
+      {
+        "id": "q10",
+        "pregunta": "La cadena que va del ciclo de conversión de efectivo al valor es de:",
+        "opciones": [
+          "Primer orden.",
+          "Cuarto orden: CCE → capital de trabajo → capital invertido → ROIC → EVA.",
+          "Segundo orden.",
+          "No existe conexión."
+        ],
+        "correcta": 1,
+        "justificacion": "Cuantificar esa cadena es lo que convierte una gestión operativa de cobranzas en una decisión financiera medible en pesos de valor."
+      },
+      {
+        "id": "q11",
+        "pregunta": "El \"EVA atrapado\" en el capital de trabajo se calcula como:",
+        "opciones": [
+          "Capital de trabajo × ROIC.",
+          "ΔCapital de trabajo evitable × WACC.",
+          "Ventas / 365.",
+          "Inventario × margen."
+        ],
+        "correcta": 1,
+        "justificacion": "El capital inmovilizado innecesariamente igual exige el costo del capital; ese costo es el EVA que se está perdiendo por no acortar el ciclo."
+      },
+      {
+        "id": "q12",
+        "pregunta": "Acortar el ciclo de conversión de efectivo produce:",
+        "opciones": [
+          "Solo un ahorro de intereses.",
+          "Una liberación de caja DE UNA SOLA VEZ más un menor capital invertido permanente.",
+          "Un aumento de las ventas.",
+          "Una suba del WACC."
+        ],
+        "correcta": 1,
+        "justificacion": "El ΔWC negativo es un FCFF positivo extraordinario en el período, y la reducción del capital sube el ROIC de todos los períodos siguientes."
+      },
+      {
+        "id": "q13",
+        "pregunta": "El valor terminal debe calcularse con:",
+        "opciones": [
+          "El ROIC histórico.",
+          "El RONIC de largo plazo, que en competencia tiende al WACC.",
+          "Un múltiplo de salida arbitrario.",
+          "El promedio de los últimos cinco años."
+        ],
+        "correcta": 1,
+        "justificacion": "Usar el ROIC histórico en el terminal proyecta a perpetuidad una ventaja competitiva que la competencia normalmente erosiona: es el error que infla más valuaciones."
+      },
+      {
+        "id": "q14",
+        "pregunta": "Mezclar g nominal en pesos con un WACC en dólares:",
+        "opciones": [
+          "Es la práctica estándar en Argentina.",
+          "Produce un resultado sin sentido económico.",
+          "Es conservador.",
+          "Solo afecta el valor terminal."
+        ],
+        "correcta": 1,
+        "justificacion": "La consistencia de moneda entre flujo y tasa no es un detalle: mezclarlas convierte la valuación en un número que no describe nada."
+      },
+      {
+        "id": "q15",
+        "pregunta": "En el cruce spread + DuPont, el spread responde SI hay problema y DuPont responde:",
+        "opciones": [
+          "CUÁNDO ocurrió.",
+          "DÓNDE está la palanca: margen, rotación o estructura.",
+          "QUIÉN es responsable.",
+          "CUÁNTO vale la empresa."
+        ],
+        "correcta": 1,
+        "justificacion": "Es el primer cruce que corre el motor de diagnóstico, y el que orienta todo el trabajo posterior."
+      },
+      {
+        "id": "q16",
+        "pregunta": "El GMROI se descompone en:",
+        "opciones": [
+          "Margen bruto % × rotación de inventario.",
+          "Ventas / activos.",
+          "NOPAT / capital.",
+          "EBITDA / ventas."
+        ],
+        "correcta": 0,
+        "justificacion": "Esa descomposición muestra que se puede llegar al mismo GMROI con mucho margen y poca rotación, o al revés — y que la palanca a mover es distinta en cada caso."
+      },
+      {
+        "id": "q17",
+        "pregunta": "En la matriz ABC/XYZ, los SKU tipo AX son:",
+        "opciones": [
+          "Candidatos a discontinuar.",
+          "Alto valor y demanda estable: se optimizan a stock mínimo.",
+          "Bajo valor y demanda errática.",
+          "Irrelevantes."
+        ],
+        "correcta": 1,
+        "justificacion": "Al ser predecibles y valiosos, permiten trabajar con stock ajustado sin riesgo de quiebre. Los CZ —bajo valor y errático— son los candidatos a discontinuar."
+      },
+      {
+        "id": "q18",
+        "pregunta": "La matriz de vencimiento contra días de reclamo revela:",
+        "opciones": [
+          "La velocidad de cobranza.",
+          "La CALIDAD de la cartera: deuda vieja poco reclamada es incobrabilidad oculta.",
+          "El margen por cliente.",
+          "La rotación de inventario."
+        ],
+        "correcta": 1,
+        "justificacion": "El promedio de días de cobro no muestra esa concentración de riesgo; la matriz sí, porque cruza antigüedad con esfuerzo de gestión."
+      },
+      {
+        "id": "q19",
+        "pregunta": "El GAT (grado de apalancamiento total) es:",
+        "opciones": [
+          "GAO + GAF.",
+          "GAO × GAF.",
+          "GAO / GAF.",
+          "Independiente de ambos."
+        ],
+        "correcta": 1,
+        "justificacion": "Los dos apalancamientos se multiplican: los costos fijos operativos amplifican la variación de ventas sobre el EBIT, y los intereses amplifican la del EBIT sobre la utilidad."
+      },
+      {
+        "id": "q20",
+        "pregunta": "La combinación GAT alto + ventas cerca del equilibrio + Z'' en zona gris se lee como:",
+        "opciones": [
+          "Una empresa eficiente.",
+          "Una bomba de tiempo.",
+          "Una oportunidad de compra.",
+          "Un cuadro normal."
+        ],
+        "correcta": 1,
+        "justificacion": "Un pequeño retroceso de ventas se amplifica por el GAT sobre una empresa que ya está en el límite y sin colchón de solvencia."
+      },
+      {
+        "id": "q21",
+        "pregunta": "Una empresa con Altman Z'' alto y EVA negativo:",
+        "opciones": [
+          "Es un error de cálculo.",
+          "Es solvente y destructora de valor a la vez: los ejes son ortogonales.",
+          "Es imposible.",
+          "Está a punto de quebrar."
+        ],
+        "correcta": 1,
+        "justificacion": "El Z'' pregunta ¿sobrevive? y el EVA pregunta ¿vale la pena que sobreviva? El caso típico es la empresa madura, sin deuda y con ROIC por debajo del WACC."
+      },
+      {
+        "id": "q22",
+        "pregunta": "En una empresa sin deuda que destruye valor, la ausencia de acreedores:",
+        "opciones": [
+          "Resuelve el problema.",
+          "Es parte del mecanismo: sin nadie que exija, el capital propio se comporta como si fuera gratis.",
+          "No tiene relación.",
+          "Sube el ROIC."
+        ],
+        "correcta": 1,
+        "justificacion": "La empresa no quiebra precisamente porque nadie le cobra el costo del capital que consume, y eso vuelve invisible la destrucción."
+      },
+      {
+        "id": "q23",
+        "pregunta": "Un WACC subestimado produce:",
+        "opciones": [
+          "Un diagnóstico más prudente.",
+          "EVA positivo falso, que contamina todos los cruces posteriores.",
+          "Un valor terminal menor.",
+          "Ningún efecto sobre el diagnóstico."
+        ],
+        "correcta": 1,
+        "justificacion": "Como el EVA depende del WACC, todo error en el costo de capital se traslada directo al diagnóstico de creación de valor. Por eso se audita antes de concluir."
+      },
+      {
+        "id": "q24",
+        "pregunta": "En el marco de BCG, el TSR se descompone en:",
+        "opciones": [
+          "Ventas, costos y gastos.",
+          "Crecimiento fundamental, cambio en el múltiplo y contribución de caja.",
+          "ROIC, WACC y spread.",
+          "Activo, pasivo y patrimonio."
+        ],
+        "correcta": 1,
+        "justificacion": "Esos tres bloques permiten ver de dónde vino el retorno del accionista y qué palanca lo mueve, cosa que el resultado contable no muestra."
+      },
+      {
+        "id": "q25",
+        "pregunta": "La conexión entre las matrices de cartera (BCG, GE-McKinsey) y las finanzas se hace vía:",
+        "opciones": [
+          "El EBITDA por unidad.",
+          "El RONIC por unidad de negocio contra el WACC de esa unidad.",
+          "Las ventas totales.",
+          "La participación de mercado sola."
+        ],
+        "correcta": 1,
+        "justificacion": "Eso operacionaliza la asignación de capital que la KVD exige: capital hacia las unidades con RONIC > WACC, desinversión donde RONIC < WACC."
+      },
+      {
+        "id": "q26",
+        "pregunta": "La tasa de crecimiento sostenible SGR = ROE × (1 − payout) representa:",
+        "opciones": [
+          "El crecimiento máximo posible.",
+          "El crecimiento máximo financiable sin emitir capital ni cambiar el apalancamiento.",
+          "El crecimiento de la industria.",
+          "El crecimiento nominal."
+        ],
+        "correcta": 1,
+        "justificacion": "Crecer por encima del SGR obliga a emitir o a endeudarse, y eso cambia la estructura de capital y por lo tanto el WACC."
+      },
+      {
+        "id": "q27",
+        "pregunta": "La opción real de esperar vale más cuando:",
+        "opciones": [
+          "El riesgo país es bajo y estable.",
+          "El riesgo país es alto y volátil.",
+          "La empresa no tiene deuda.",
+          "El WACC es bajo."
+        ],
+        "correcta": 1,
+        "justificacion": "Bajo alta incertidumbre, conservar la flexibilidad de no hundir capital todavía tiene valor económico cuantificable, y el VAN estático no lo captura."
+      },
+      {
+        "id": "q28",
+        "pregunta": "En Monte Carlo sobre el árbol de generadores, las variables que mandan en el ancho de la distribución en mercados emergentes son:",
+        "opciones": [
+          "El margen bruto y los gastos administrativos.",
+          "Inflación, riesgo país y tipo de cambio.",
+          "El número de empleados.",
+          "La antigüedad de la planta."
+        ],
+        "correcta": 1,
+        "justificacion": "Son las variables de mayor varianza del entorno; concentrar el esfuerzo de modelización en ellas es lo que hace útil la simulación."
+      },
+      {
+        "id": "q29",
+        "pregunta": "El puente de valor que se lleva al directorio debe:",
+        "opciones": [
+          "Mostrar veinte indicadores.",
+          "Atribuir cada punto de variación del EVA a su generador, cerrando sin residuo.",
+          "Concluir con el EBITDA.",
+          "Evitar las fórmulas."
+        ],
+        "correcta": 1,
+        "justificacion": "La diferencia entre un tablero y un diagnóstico es que el segundo explica POR QUÉ los números son los que son, con contribuciones que suman exactamente la variación total."
+      },
+      {
+        "id": "q30",
+        "pregunta": "La convención JPR de capital invertido excluye del denominador:",
+        "opciones": [
+          "Los bienes de uso.",
+          "La caja operativa mínima y la deuda financiera.",
+          "Las cuentas por cobrar.",
+          "Los proveedores."
+        ],
+        "correcta": 1,
+        "justificacion": "El ROIC mide retorno sobre capital operativo, no sobre caja ociosa ni sobre la estructura de pasivos. Además busca los bienes de uso a valor de mercado, no a costo histórico."
+      }
+    ]
+  },
+  {
+    "cod": "A.8",
+    "slug": "av-8",
+    "cuatrimestre": 5,
+    "fase": "Módulo Avanzado · Temas de frontera",
+    "nombre": "TSR Sintético y Total Business Return: medir el retorno del accionista sin precio de pizarra",
+    "horas": "24 h · 12 teóricas / 12 prácticas",
+    "framework": "BCG Value Creators · Pereiro (AL-CAPM) · Damodaran (Beta Total) · Chaffe / Finnerty / Longstaff",
+    "resumen": "El TSR es la métrica con la que el mundo mide creación de valor, y no se puede calcular en una empresa que no cotiza. Este módulo construye el sustituto riguroso: el TSR Sintético y el Total Business Return de BCG, con el valor intrínseco por DCF en lugar del precio, las tres normalizaciones obligatorias de la empresa familiar, y los descuentos DLOC y DLOM aplicados en la secuencia multiplicativa correcta.",
+    "objetivos": [
+      "Derivar la descomposición del TSR en sus cinco generadores y presentarla en forma aditiva.",
+      "Construir el TSR Sintético y el TBR para una empresa de capital cerrado.",
+      "Aplicar las tres normalizaciones obligatorias de la PyME familiar antes de valuar.",
+      "Calcular el DLOM por Chaffe, Finnerty y Longstaff, y elegir el modelo con criterio.",
+      "Aplicar DLOC y DLOM en secuencia multiplicativa y explicar por qué no se suman.",
+      "Definir la política de dividendos óptima según el arquetipo y el spread ROIC − WACC."
+    ],
+    "caso": {
+      "titulo": "Cuánto rindió realmente el patrimonio de los Rossi",
+      "empresa": "Maderas del Litoral S.A. — TSR Sintético del ejercicio",
+      "consigna": [
+        "Calcular el TBR del ejercicio y descomponerlo en yield y ganancia de capital intrínseco.",
+        "Descomponer el TSR Sintético en sus generadores: crecimiento de ventas, cambio de margen y contribución de caja.",
+        "Calcular el DLOM por Chaffe con T = 3 y luego con T = 1, y cuantificar cuánto valor gana el hermano menor si la familia instituye una política creíble de recompras.",
+        "Aplicar DLOC y DLOM en secuencia multiplicativa sobre la participación minoritaria y comparar contra la suma aritmética.",
+        "Con el spread ROIC − WACC de +1,3 pp, recomendar la política de dividendos y justificarla con el marco del módulo."
+      ]
+    },
+    "quiz": [
+      {
+        "id": "q1",
+        "pregunta": "El TSR tradicional no se puede calcular en una PyME de capital cerrado porque:",
+        "opciones": [
+          "No paga dividendos.",
+          "No existe un precio de mercado del que extraer la apreciación.",
+          "No tiene utilidad contable.",
+          "No lleva contabilidad."
+        ],
+        "correcta": 1,
+        "justificacion": "El TSR combina apreciación del precio y dividendos; sin cotización, la primera parte del numerador no existe y hay que construir un sustituto."
+      },
+      {
+        "id": "q2",
+        "pregunta": "La forma multiplicativa del TSR de BCG contiene cinco generadores:",
+        "opciones": [
+          "Activo, pasivo, patrimonio, ventas y costos.",
+          "Crecimiento de ventas, cambio de margen, cambio de múltiplo, efecto del número de acciones y rendimiento de caja.",
+          "ROIC, WACC, EVA, CFROI y RONIC.",
+          "Precio, cantidad, costo, gasto e impuesto."
+        ],
+        "correcta": 1,
+        "justificacion": "Cada factor de la descomposición es una palanca distinta, con un responsable y un plan de acción diferentes."
+      },
+      {
+        "id": "q3",
+        "pregunta": "La conversión de la forma multiplicativa a la aditiva se hace:",
+        "opciones": [
+          "Redondeando.",
+          "Aplicando logaritmo natural a la tasa de acumulación de capital.",
+          "Sumando directamente los factores.",
+          "Con una regresión."
+        ],
+        "correcta": 1,
+        "justificacion": "El logaritmo convierte productos en sumas, que es lo que permite el waterfall aditivo que BCG presenta ante directorios."
+      },
+      {
+        "id": "q4",
+        "pregunta": "La descomposición logarítmica del TSR se quiebra cuando:",
+        "opciones": [
+          "El crecimiento supera el 50 %.",
+          "La utilidad es negativa o cero: no existe el logaritmo de un número no positivo.",
+          "Hay más de tres generadores.",
+          "La empresa no cotiza."
+        ],
+        "correcta": 1,
+        "justificacion": "Pasa en empresas en etapa temprana o en reestructuración profunda; ahí hay que quedarse en escala multiplicativa o migrar al EVA."
+      },
+      {
+        "id": "q5",
+        "pregunta": "El TSR Sintético sustituye el precio de mercado por:",
+        "opciones": [
+          "El valor contable del patrimonio.",
+          "El valor intrínseco del patrimonio estimado periódicamente por DCF.",
+          "El EBITDA.",
+          "El precio de la última transacción."
+        ],
+        "correcta": 1,
+        "justificacion": "Se pregunta cuánto vale el patrimonio según un DCF consistente, período a período, en lugar de cuánto cotizó la acción."
+      },
+      {
+        "id": "q6",
+        "pregunta": "La fórmula del Total Business Return es:",
+        "opciones": [
+          "TBR = EBITDA / Ventas.",
+          "TBR = FCF_t/V_{t−1} + (V_t − V_{t−1})/V_{t−1}.",
+          "TBR = ROIC − WACC.",
+          "TBR = Utilidad / Patrimonio."
+        ],
+        "correcta": 1,
+        "justificacion": "Combina el yield —donde el FCF hace de dividendo interno— con la ganancia de capital intrínseco del período."
+      },
+      {
+        "id": "q7",
+        "pregunta": "La vara que impone el TBR a toda inversión de capital es:",
+        "opciones": [
+          "Que recupere la inversión en tres años.",
+          "Que la ganancia de valor intrínseco supere el dividendo que el accionista habría cobrado con esa caja.",
+          "Que aumente las ventas.",
+          "Que baje los costos."
+        ],
+        "correcta": 1,
+        "justificacion": "Es la disciplina de asignación de capital expresada como métrica de retorno: si no supera esa vara, conviene distribuir."
+      },
+      {
+        "id": "q8",
+        "pregunta": "La condición sin la cual el TBR no significa nada es:",
+        "opciones": [
+          "Que la empresa cotice.",
+          "La consistencia temporal: V_t y V_{t−1} calculados con la misma metodología, tasa y supuestos.",
+          "Que haya más de cinco años de historia.",
+          "Que el FCF sea positivo."
+        ],
+        "correcta": 1,
+        "justificacion": "Sin consistencia, el ΔV mide cambios de supuesto y no creación de valor real. El TBR es tan bueno como el DCF que lo alimenta."
+      },
+      {
+        "id": "q9",
+        "pregunta": "La primera normalización obligatoria de la PyME familiar es:",
+        "opciones": [
+          "Ajustar por inflación.",
+          "Llevar la retribución de socios y directores a valores de mercado por el trabajo efectivamente realizado.",
+          "Eliminar la deuda.",
+          "Cambiar el plan de cuentas."
+        ],
+        "correcta": 1,
+        "justificacion": "Si el dueño cobra de menos, el EBITDA está inflado; si cobra de más, está deprimido. En los dos casos el retorno medido no es el del negocio."
+      },
+      {
+        "id": "q10",
+        "pregunta": "Los gastos personales cargados a la sociedad deben:",
+        "opciones": [
+          "Dejarse como están.",
+          "Eliminarse del gasto y reclasificarse como distribuciones de capital implícitas.",
+          "Sumarse al capex.",
+          "Considerarse gasto financiero."
+        ],
+        "correcta": 1,
+        "justificacion": "Eso hace aparecer el EBITDA real y, de paso, visibiliza cuánta caja sale por decisión de consumo y no de asignación."
+      },
+      {
+        "id": "q11",
+        "pregunta": "La modelización en dólares en economías de alta inflación sirve para:",
+        "opciones": [
+          "Pagar menos impuestos.",
+          "Aislar el crecimiento operativo real de la ilusión nominal de la devaluación.",
+          "Cumplir una norma contable.",
+          "Simplificar el cálculo."
+        ],
+        "correcta": 1,
+        "justificacion": "El crecimiento nominal en pesos puede ser enorme sin que la empresa haya crecido un metro cúbico; el dólar neutraliza esa distorsión."
+      },
+      {
+        "id": "q12",
+        "pregunta": "El DLOC se calcula como:",
+        "opciones": [
+          "1 − 1/(1 + Prima de control).",
+          "Prima de control × valor.",
+          "1 + Prima de control.",
+          "Prima de control / 2."
+        ],
+        "correcta": 0,
+        "justificacion": "Con una prima de control del 30 %, el descuento implícito de la minoritaria es 1 − 1/1,30 = 23,1 %."
+      },
+      {
+        "id": "q13",
+        "pregunta": "La intuición central del DLOM es que la iliquidez equivale:",
+        "opciones": [
+          "A un impuesto.",
+          "Al costo de no contar con una opción de venta (put) líquida durante el horizonte de tenencia.",
+          "A la prima de riesgo país.",
+          "A la amortización."
+        ],
+        "correcta": 1,
+        "justificacion": "Por eso el DLOM se modela con teoría de opciones y no con promedios fijos, que serían arbitrarios y no auditables."
+      },
+      {
+        "id": "q14",
+        "pregunta": "El modelo de Chaffe se basa en:",
+        "opciones": [
+          "Una put asiática.",
+          "Una put europea convencional (Black-Scholes-Merton) con K = S.",
+          "Una call americana.",
+          "Un forward."
+        ],
+        "correcta": 1,
+        "justificacion": "Con tasa libre de riesgo nula y sin dividendos se reduce a DLOM ≈ 2·N(σ√T/2) − 1."
+      },
+      {
+        "id": "q15",
+        "pregunta": "El modelo de Longstaff se caracteriza por:",
+        "opciones": [
+          "Dar el descuento más conservador.",
+          "Ser una put retrospectiva que da la COTA SUPERIOR teórica del descuento.",
+          "No depender de la volatilidad.",
+          "Aplicarse solo a empresas cotizantes."
+        ],
+        "correcta": 1,
+        "justificacion": "Usarlo como estimación central sobrecastiga sistemáticamente: es un máximo teórico, no un valor esperado."
+      },
+      {
+        "id": "q16",
+        "pregunta": "El modelo de Finnerty se distingue por:",
+        "opciones": [
+          "Ser el más agresivo.",
+          "Ser estable y dar rangos conservadores del 12 % al 38 %, con una put asiática de promedio de strike.",
+          "No usar volatilidad.",
+          "Ser idéntico a Chaffe."
+        ],
+        "correcta": 1,
+        "justificacion": "Modera el crecimiento del descuento ante volatilidades altas, lo que lo hace el más robusto de los tres para PyMEs privadas."
+      },
+      {
+        "id": "q17",
+        "pregunta": "DLOC y DLOM se aplican:",
+        "opciones": [
+          "Sumándolos.",
+          "En secuencia multiplicativa: 1 − [(1−DLOC)×(1−DLOM)].",
+          "Tomando el mayor de los dos.",
+          "Promediándolos."
+        ],
+        "correcta": 1,
+        "justificacion": "Con DLOC 20 % y DLOM 30 %, el combinado es 44 % y no 50 %. Sumar sobrecastiga y destruye la trazabilidad del cálculo."
+      },
+      {
+        "id": "q18",
+        "pregunta": "El orden correcto de aplicación es:",
+        "opciones": [
+          "DLOM y después DLOC.",
+          "Valor controlante marketable → DLOC → minoritario marketable → DLOM → minoritario no marketable.",
+          "Los dos a la vez sobre el valor base.",
+          "Es indistinto."
+        ],
+        "correcta": 1,
+        "justificacion": "Primero se pierden los derechos de decisión, y recién sobre ese valor se pregunta cuánto cuesta no poder vender el paquete."
+      },
+      {
+        "id": "q19",
+        "pregunta": "El DLOM escala con:",
+        "opciones": [
+          "El tamaño de la empresa.",
+          "El horizonte hasta el evento de liquidez (T) y la volatilidad (σ).",
+          "La cantidad de socios.",
+          "El nivel de deuda."
+        ],
+        "correcta": 1,
+        "justificacion": "Cuanto más lejos la liquidez y más volátil el activo, mayor el valor de la put que el tenedor no tiene, y por lo tanto mayor el descuento."
+      },
+      {
+        "id": "q20",
+        "pregunta": "Comprimir T de tres años a uno de forma demostrable produce:",
+        "opciones": [
+          "Ningún efecto.",
+          "Una caída drástica del DLOM y un salto inmediato del valor minoritario no marketable.",
+          "Un aumento del WACC.",
+          "Una baja del ROIC."
+        ],
+        "correcta": 1,
+        "justificacion": "Gestionar la liquidez es literalmente crear valor: sube el valor del paquete sin vender un peso más ni bajar un peso de costo."
+      },
+      {
+        "id": "q21",
+        "pregunta": "Las herramientas para comprimir T de forma creíble incluyen:",
+        "opciones": [
+          "Anunciar la intención de vender.",
+          "Recompras periódicas con reglas escritas, planes de pre-salida y política estable de dividendos.",
+          "Aumentar la deuda.",
+          "Cambiar de auditor."
+        ],
+        "correcta": 1,
+        "justificacion": "La palabra clave es demostrable: una intención no comprime el descuento, un mecanismo ejecutado sí."
+      },
+      {
+        "id": "q22",
+        "pregunta": "Con ROIC muy por encima del WACC, la política óptima es:",
+        "opciones": [
+          "Distribuir el 100 % del FCF.",
+          "Retener y crecer: cada peso reinvertido expande V_t más de lo que valía el dividendo.",
+          "Recomprar deuda.",
+          "Vender la empresa."
+        ],
+        "correcta": 1,
+        "justificacion": "La retención optimiza el TSR Sintético porque expande la base de capital propio en mayor medida que el dividendo distribuido."
+      },
+      {
+        "id": "q23",
+        "pregunta": "Con ROIC igual o menor al WACC, la política óptima es:",
+        "opciones": [
+          "Crecer más rápido para mejorar el ROIC.",
+          "Distribuir el 100 % del FCF y frenar el capex de expansión.",
+          "Tomar deuda para invertir.",
+          "Mantener la política actual."
+        ],
+        "correcta": 1,
+        "justificacion": "Si la empresa rinde menos que su costo de capital, devolverle la caja al accionista detiene la dilapidación y eleva el TSR Sintético vía yield."
+      },
+      {
+        "id": "q24",
+        "pregunta": "\"Ganarse el derecho a crecer\" significa:",
+        "opciones": [
+          "Conseguir financiamiento antes de invertir.",
+          "Priorizar eficiencia de los activos existentes y mejora de márgenes ANTES de destinar capital nuevo a expansión.",
+          "Esperar a que baje la tasa.",
+          "Contratar más vendedores."
+        ],
+        "correcta": 1,
+        "justificacion": "Crecer con ROIC deprimido es destruir valor a escala. Primero subir el ROIC por encima del WACC; recién entonces crecer."
+      },
+      {
+        "id": "q25",
+        "pregunta": "En una distribuidora, ganarse el derecho a crecer suele pasar por:",
+        "opciones": [
+          "El numerador: subir precios.",
+          "El denominador: liberar capital de trabajo y acortar el ciclo de conversión de efectivo.",
+          "Reducir el personal.",
+          "Cambiar de rubro."
+        ],
+        "correcta": 1,
+        "justificacion": "Sube el ROIC sin tocar una sola línea del estado de resultados, y libera caja de una sola vez en el proceso."
+      },
+      {
+        "id": "q26",
+        "pregunta": "Según el análisis comparativo de BCG, América Latina atrae predominantemente:",
+        "opciones": [
+          "Capital enfocado en crecimiento de múltiplos.",
+          "Arquetipos rentistas, orientados a dividendos inmediatos y disciplina de caja.",
+          "Inversores de riesgo tecnológico.",
+          "Fondos soberanos."
+        ],
+        "correcta": 1,
+        "justificacion": "Por eso una PyME regional que planea una transición debe priorizar flujos líquidos por sobre la promesa de múltiplos futuros en su comunicación y su política financiera."
+      },
+      {
+        "id": "q27",
+        "pregunta": "El uso más peligroso del TSR Sintético es:",
+        "opciones": [
+          "Calcularlo todos los años.",
+          "Recalcular V_t cambiando supuestos hasta que el ΔV dé agradable.",
+          "Compararlo con el TSR de cotizantes.",
+          "Descomponerlo en generadores."
+        ],
+        "correcta": 1,
+        "justificacion": "Sin consistencia temporal declarada y auditable, el TSR Sintético no mide creación de valor: mide optimismo."
+      },
+      {
+        "id": "q28",
+        "pregunta": "El TBR con proxy de valor para empresas de capital intensivo se aproxima como:",
+        "opciones": [
+          "(Δ EBITDA + FCF) / (EBITDA × múltiplo transaccional).",
+          "EBITDA / Ventas.",
+          "FCF / Patrimonio contable.",
+          "Utilidad / Activos."
+        ],
+        "correcta": 0,
+        "justificacion": "En servicios o activos ligeros conviene reemplazar el EBITDA por EBIT o NOPAT, donde representan mejor el valor del negocio."
+      },
+      {
+        "id": "q29",
+        "pregunta": "Para auditar un DLOM del 35 % hay que exigir que se declaren:",
+        "opciones": [
+          "El nombre del perito.",
+          "El modelo usado, la volatilidad σ con su fuente y el horizonte T con su justificación.",
+          "El valor contable del patrimonio.",
+          "La cantidad de socios."
+        ],
+        "correcta": 1,
+        "justificacion": "Un DLOM sin esos tres parámetros no es una estimación: es un número elegido, y como tal es indefendible."
+      },
+      {
+        "id": "q30",
+        "pregunta": "Si V_{t−1} se calculó con escenarios en el flujo y V_t con prima en la tasa, el ΔV:",
+        "opciones": [
+          "Mide creación de valor.",
+          "Mide el cambio de método y nada más.",
+          "Es más preciso.",
+          "Es equivalente."
+        ],
+        "correcta": 1,
+        "justificacion": "Es la conexión directa con el módulo del canal del riesgo: sin una ruta de riesgo declarada y sostenida, la comparación entre períodos no significa nada."
+      }
+    ]
+  },
+  {
+    "cod": "A.9",
+    "slug": "av-9",
+    "cuatrimestre": 5,
+    "fase": "Módulo Avanzado · Temas de frontera",
+    "nombre": "La Paradoja del Crecimiento: crear valor y quedarse sin caja",
+    "horas": "24 h · 12 teóricas / 12 prácticas",
+    "framework": "Koller/McKinsey · Trade-Off · Damodaran · Higgins · covenants de mercado",
+    "resumen": "Existe una creencia generalizada e incompleta: que mientras la empresa mantenga ROIC por encima del WACC, su salud está garantizada. Es falsa. La rentabilidad es condición necesaria pero no suficiente para la solvencia líquida. Este módulo desarrolla la aritmética de la paradoja, los límites del apalancamiento que aparecen cuando se la intenta tapar con deuda, y la barrera infranqueable que ejecuta el banco: el DSCR.",
+    "objetivos": [
+      "Derivar la fórmula madre de la paradoja: FCFF = NOPAT × (1 − g/ROIC).",
+      "Calcular la tasa de crecimiento sostenible y usarla como límite de gestión.",
+      "Explicar la curva en U del WACC y por qué la estructura óptima no se busca al milímetro.",
+      "Construir el CFADS y el DSCR, y distinguirlos del ICR.",
+      "Diagnosticar el doble estrangulamiento del DSCR en crecimiento acelerado.",
+      "Leer la escalera de covenants y anticipar el cash lock-up antes de que se active."
+    ],
+    "caso": {
+      "titulo": "La ampliación que vendería más y podría hundir la caja",
+      "empresa": "Maderas del Litoral S.A. — plan de expansión y prueba de liquidez",
+      "consigna": [
+        "Calcular la tasa de reinversión que exige crecer al 35 % y el FCFF resultante. ¿En qué escenario de los tres cae la empresa?",
+        "Calcular la tasa de crecimiento sostenible y compararla con el plan.",
+        "Construir el CFADS y el DSCR con y sin la ampliación, y determinar en qué trimestre se perfora el covenant.",
+        "Cuantificar cuántos días de ciclo habría que acortar para que el plan sea financiable sin deuda adicional.",
+        "Redactar la recomendación al directorio: qué combinación de crecimiento, ciclo y financiamiento es sostenible, y qué se pierde en cada escenario."
+      ]
+    },
+    "quiz": [
+      {
+        "id": "q1",
+        "pregunta": "La afirmación \"mientras el ROIC supere al WACC, la salud financiera está garantizada\" es:",
+        "opciones": [
+          "Correcta.",
+          "Falsa: la rentabilidad es necesaria pero no suficiente para la solvencia líquida.",
+          "Correcta solo en mercados desarrollados.",
+          "Correcta si no hay deuda."
+        ],
+        "correcta": 1,
+        "justificacion": "La utilidad se devenga hoy pero el efectivo que sostiene la expansión sale hoy también, y a menudo antes de cobrar. Una empresa puede ser rentable en el papel e insolvente en la caja."
+      },
+      {
+        "id": "q2",
+        "pregunta": "La fórmula madre de la paradoja del crecimiento es:",
+        "opciones": [
+          "FCFF = EBITDA − CapEx.",
+          "FCFF = NOPAT × (1 − g/ROIC).",
+          "FCFF = NOPAT × ROIC.",
+          "FCFF = Ventas × margen."
+        ],
+        "correcta": 1,
+        "justificacion": "El término (1 − g/ROIC) es la fracción del NOPAT que sobra después de financiar el crecimiento. Si g se acerca al ROIC, tiende a cero; si lo supera, se vuelve negativo."
+      },
+      {
+        "id": "q3",
+        "pregunta": "La identidad del crecimiento sostenible establece que:",
+        "opciones": [
+          "g = ROIC + IR.",
+          "g = ROIC × IR, y por lo tanto IR = g/ROIC.",
+          "g = WACC × IR.",
+          "g es independiente del ROIC."
+        ],
+        "correcta": 1,
+        "justificacion": "Cuanto más alto el g o más bajo el ROIC, mayor la fracción del NOPAT que hay que retener, y menos caja queda libre."
+      },
+      {
+        "id": "q4",
+        "pregunta": "En el escenario acelerado (g > ROIC), la tasa de reinversión requerida es:",
+        "opciones": [
+          "Menor al 100 %.",
+          "Mayor al 100 %: hay que reinvertir más que toda la utilidad operativa.",
+          "Exactamente 100 %.",
+          "Cero."
+        ],
+        "correcta": 1,
+        "justificacion": "Ése es el mecanismo del déficit crónico: la expansión exige más caja que la que genera toda la operación."
+      },
+      {
+        "id": "q5",
+        "pregunta": "La trampa del escenario acelerado consiste en que:",
+        "opciones": [
+          "Los proyectos destruyen valor.",
+          "Aunque cada proyecto individual cree valor (ROIC > WACC), el conjunto consume caja porque g > ROIC.",
+          "El WACC sube.",
+          "Las ventas caen."
+        ],
+        "correcta": 1,
+        "justificacion": "La empresa crece, vale más en teoría y se queda sin efectivo. Es la definición exacta de la paradoja."
+      },
+      {
+        "id": "q6",
+        "pregunta": "El \"asesino silencioso\" del efectivo en una expansión es:",
+        "opciones": [
+          "El CapEx de expansión.",
+          "El ΔKTNO: cuentas por cobrar e inventarios que crecen con las ventas.",
+          "Los impuestos.",
+          "Los sueldos."
+        ],
+        "correcta": 1,
+        "justificacion": "El CapEx se aprueba en el directorio y todos saben que sale plata. El ΔKTNO simplemente ocurre, sin que nadie lo apruebe en ninguna reunión."
+      },
+      {
+        "id": "q7",
+        "pregunta": "Un ciclo de conversión de efectivo más largo hace que, al crecer:",
+        "opciones": [
+          "Se necesite menos capital de trabajo.",
+          "El ΔKTNO sea más brutal, porque se financian más días de cada peso de venta.",
+          "Suba el margen.",
+          "Baje el WACC."
+        ],
+        "correcta": 1,
+        "justificacion": "Cuantos más días queda atrapado el dinero en el ciclo operativo, más caja exige cada punto adicional de crecimiento."
+      },
+      {
+        "id": "q8",
+        "pregunta": "La palanca número uno para aliviar el déficit sin pedir deuda es:",
+        "opciones": [
+          "Subir los precios.",
+          "Acortar el ciclo de conversión de efectivo.",
+          "Reducir el personal.",
+          "Diferir impuestos."
+        ],
+        "correcta": 1,
+        "justificacion": "Baja el ΔKTNO requerido por cada punto de crecimiento y libera caja de una sola vez. Es la más rápida y la que menos veces se intenta."
+      },
+      {
+        "id": "q9",
+        "pregunta": "Si el plan comercial exige g > g*, las salidas legítimas son:",
+        "opciones": [
+          "Esperar a ver qué pasa.",
+          "Subir el ROIC, acortar el ciclo, conseguir financiamiento externo — o crecer más despacio a propósito.",
+          "Solo tomar deuda.",
+          "Cambiar de mercado."
+        ],
+        "correcta": 1,
+        "justificacion": "Crecer por encima del g* obliga con certeza aritmética a una de esas alternativas; no existe una quinta opción que no sea deteriorar la empresa."
+      },
+      {
+        "id": "q10",
+        "pregunta": "La Teoría del Trade-Off expresa que:",
+        "opciones": [
+          "V_L = V_U + T_C·D.",
+          "V_L = V_U + T_C·D − VP(Costos de Dificultad Financiera).",
+          "V_L = V_U siempre.",
+          "V_L = D + E."
+        ],
+        "correcta": 1,
+        "justificacion": "El escudo fiscal suma valor y los costos esperados de insolvencia lo restan de forma acelerada. El óptimo está donde los efectos marginales se igualan."
+      },
+      {
+        "id": "q11",
+        "pregunta": "Los costos de dificultad financiera INDIRECTOS:",
+        "opciones": [
+          "Son menores que los directos.",
+          "Suelen ser MAYORES que los directos y aparecen antes de cualquier evento legal.",
+          "No existen en PyMEs.",
+          "Solo aplican en concurso preventivo."
+        ],
+        "correcta": 1,
+        "justificacion": "En una PyME, un proveedor clave que pasa de 90 a 0 días de plazo por percepción de riesgo puede gatillar la crisis de caja por sí solo, sin ningún proceso judicial."
+      },
+      {
+        "id": "q12",
+        "pregunta": "La beta apalancada de Damodaran es:",
+        "opciones": [
+          "β_L = β_U × (1 + D/E).",
+          "β_L = β_U × [1 + (1 − T_C) × (D/E)].",
+          "β_L = β_U / ρ.",
+          "β_L = β_U + spread."
+        ],
+        "correcta": 1,
+        "justificacion": "El factor (1 − T_C) atenúa el efecto del apalancamiento por el escudo fiscal. El accionista, como reclamante residual, absorbe el riesgo de insolvencia."
+      },
+      {
+        "id": "q13",
+        "pregunta": "El costo de la deuda Kd sube con el apalancamiento porque:",
+        "opciones": [
+          "Sube la inflación.",
+          "Cae el ICR, se degrada la calificación sintética y el default spread salta de forma escalonada.",
+          "Los bancos cobran comisiones.",
+          "Aumenta el plazo."
+        ],
+        "correcta": 1,
+        "justificacion": "El salto es escalonado y no continuo: cruzar un escalón de calificación puede subir el Kd varios puntos de golpe."
+      },
+      {
+        "id": "q14",
+        "pregunta": "La curva en U del WACC es asimétrica: eso significa que:",
+        "opciones": [
+          "Es indiferente equivocarse por exceso o por defecto.",
+          "Es plana a la izquierda del óptimo y empinada a la derecha: equivocarse por exceso cuesta mucho más.",
+          "El óptimo no existe.",
+          "Siempre conviene más deuda."
+        ],
+        "correcta": 1,
+        "justificacion": "Esa asimetría, sola, justifica trabajar por debajo del apalancamiento teórico óptimo — sobre todo en entornos donde el shock es la norma."
+      },
+      {
+        "id": "q15",
+        "pregunta": "La capacidad de endeudamiento de reserva:",
+        "opciones": [
+          "Es capital ocioso.",
+          "Tiene valor de opción: es lo que permite absorber un shock sin entrar en distress.",
+          "Reduce el valor de la empresa.",
+          "Solo importa a empresas cotizantes."
+        ],
+        "correcta": 1,
+        "justificacion": "El apalancamiento \"óptimo\" teórico consume toda la capacidad de reserva, y eso es exactamente lo que le falta a la empresa que llega a la crisis apalancada al máximo."
+      },
+      {
+        "id": "q16",
+        "pregunta": "El CFADS se calcula como:",
+        "opciones": [
+          "EBITDA a secas.",
+          "EBITDA − impuestos en efectivo ± ΔKTNO − CapEx de mantenimiento.",
+          "NOPAT + amortizaciones.",
+          "Utilidad neta + depreciación."
+        ],
+        "correcta": 1,
+        "justificacion": "Es lo que de verdad queda para pagar deuda una vez que el negocio se sostuvo a sí mismo. Mucho más estricto y más honesto que el EBITDA."
+      },
+      {
+        "id": "q17",
+        "pregunta": "La diferencia clave entre DSCR e ICR es que:",
+        "opciones": [
+          "Son sinónimos.",
+          "El DSCR usa caja real (CFADS) e incluye la amortización del principal; el ICR usa EBIT y solo mira intereses.",
+          "El ICR es más estricto.",
+          "El DSCR solo se usa en proyectos."
+        ],
+        "correcta": 1,
+        "justificacion": "Una empresa puede tener un ICR cómodo y un DSCR por debajo de 1: paga los intereses sin problema y no puede devolver el capital."
+      },
+      {
+        "id": "q18",
+        "pregunta": "En crecimiento acelerado, el DSCR sufre un \"doble estrangulamiento\" porque:",
+        "opciones": [
+          "Baja el EBITDA.",
+          "El ΔKTNO drena el numerador mientras la deuda tomada eleva el denominador.",
+          "Suben los impuestos.",
+          "Cae el margen bruto."
+        ],
+        "correcta": 1,
+        "justificacion": "La empresa puede mostrar ventas récord y EBITDA creciente y aun así estar perforando covenants: los dos lados de la fracción se mueven en contra a la vez."
+      },
+      {
+        "id": "q19",
+        "pregunta": "Los covenants de DSCR de mercado se pactan típicamente en torno a:",
+        "opciones": [
+          "0,80x.",
+          "1,20x – 1,25x.",
+          "3,00x.",
+          "No se pactan."
+        ],
+        "correcta": 1,
+        "justificacion": "Por debajo de ese umbral se activan automáticamente las cláusulas restrictivas, empezando por el bloqueo de dividendos."
+      },
+      {
+        "id": "q20",
+        "pregunta": "El cash lock-up consiste en:",
+        "opciones": [
+          "Un préstamo puente.",
+          "El bloqueo de la distribución de dividendos cuando se perfora el covenant.",
+          "Un descuento de cheques.",
+          "Una garantía real."
+        ],
+        "correcta": 1,
+        "justificacion": "Es el primer escalón de la escalera de covenants; el siguiente es el cash sweep, que barre la caja excedente hacia la deuda."
+      },
+      {
+        "id": "q21",
+        "pregunta": "El DSCR relevante para tomar una decisión de endeudamiento es:",
+        "opciones": [
+          "El histórico.",
+          "El proyectado, período a período.",
+          "El promedio del sector.",
+          "El del año anterior."
+        ],
+        "correcta": 1,
+        "justificacion": "El covenant se mide por período, no en promedio: un año con DSCR promedio de 1,4x puede tener dos trimestres por debajo de 1,25x."
+      },
+      {
+        "id": "q22",
+        "pregunta": "Los plazos cortos típicos de la deuda PyME regional:",
+        "opciones": [
+          "No afectan el DSCR.",
+          "Elevan el servicio de deuda medido en el calendario real, aunque el nivel de deuda sea el mismo.",
+          "Bajan el Kd.",
+          "Mejoran la calificación."
+        ],
+        "correcta": 1,
+        "justificacion": "La amortización de principal concentrada en 90 o 180 días hace que el DSCR de una estructura corta sea mucho peor que el de una equivalente a largo plazo."
+      },
+      {
+        "id": "q23",
+        "pregunta": "El descalce de moneda (deuda en dólares, ingresos en pesos) produce:",
+        "opciones": [
+          "Un beneficio fiscal.",
+          "Un salto instantáneo del servicio de la deuda ante una devaluación, sin que cambie nada en la operación.",
+          "Una mejora del ICR.",
+          "Menor riesgo."
+        ],
+        "correcta": 1,
+        "justificacion": "El riesgo cambiario entra directo al denominador del DSCR y puede perforar un covenant sin ninguna señal operativa previa."
+      },
+      {
+        "id": "q24",
+        "pregunta": "En inflación, el capital de trabajo nominal crece aunque el negocio no crezca en términos reales. La consecuencia es que:",
+        "opciones": [
+          "El ROIC mejora.",
+          "La empresa puede confundir inflación con crecimiento y tomar deuda para financiar un crecimiento que no existe.",
+          "El ciclo se acorta.",
+          "Sube el FCFF."
+        ],
+        "correcta": 1,
+        "justificacion": "Sin reexpresión a moneda homogénea, el diagnóstico de la paradoja se hace sobre números que no describen la operación real."
+      },
+      {
+        "id": "q25",
+        "pregunta": "La salida relevante de una simulación de Monte Carlo sobre el DSCR es:",
+        "opciones": [
+          "El DSCR promedio.",
+          "La probabilidad de perforar el covenant en los próximos trimestres.",
+          "La mediana del EBITDA.",
+          "El valor terminal."
+        ],
+        "correcta": 1,
+        "justificacion": "Un DSCR esperado de 1,45x con un 22 % de probabilidad de caer por debajo de 1,20x es un problema, no una tranquilidad. El promedio esconde exactamente lo que hay que ver."
+      },
+      {
+        "id": "q26",
+        "pregunta": "El indicador DAF-E (días de autonomía financiera bajo estrés) mide:",
+        "opciones": [
+          "Los días de inventario.",
+          "Cuántos días opera la empresa con la caja disponible si se corta el crédito comercial.",
+          "El plazo promedio de la deuda.",
+          "La rotación de activos."
+        ],
+        "correcta": 1,
+        "justificacion": "Cuando el DAF-E es menor que el ciclo de conversión de efectivo, la empresa está estructuralmente expuesta y ninguna decisión de crecimiento debería tomarse antes de corregir esa relación."
+      },
+      {
+        "id": "q27",
+        "pregunta": "La frase \"nos falta financiamiento\", en una empresa que crece rápido, suele ser:",
+        "opciones": [
+          "Un diagnóstico correcto.",
+          "Un síntoma leído como diagnóstico: el problema es que el ritmo excede lo que el retorno puede financiar.",
+          "Una señal de buena gestión.",
+          "Irrelevante."
+        ],
+        "correcta": 1,
+        "justificacion": "Tomar deuda ahí no resuelve nada: le agrega un calendario de vencimientos al mismo problema, sobre un CFADS que el crecimiento sigue drenando."
+      },
+      {
+        "id": "q28",
+        "pregunta": "El orden de intervención correcto ante la paradoja es:",
+        "opciones": [
+          "Deuda primero, ordenar después.",
+          "Medir g vs g*, atacar el ciclo, subir el ROIC, y recién entonces deuda con DSCR proyectado.",
+          "Distribuir dividendos.",
+          "Aumentar el capex."
+        ],
+        "correcta": 1,
+        "justificacion": "Invertir el orden —tomar deuda primero— es la secuencia que lleva al cash lock-up: la deuda financia el problema en lugar de resolverlo."
+      },
+      {
+        "id": "q29",
+        "pregunta": "El EBITDA creciente no evita la crisis de caja porque:",
+        "opciones": [
+          "El EBITDA está mal calculado.",
+          "El EBITDA no es caja: mide generación operativa ANTES de la inversión que esa misma generación exige.",
+          "Los impuestos suben.",
+          "La depreciación aumenta."
+        ],
+        "correcta": 1,
+        "justificacion": "De ahí que el CFADS —que resta impuestos en efectivo, ΔKTNO y CapEx de mantenimiento— sea la medida honesta de capacidad de pago."
+      },
+      {
+        "id": "q30",
+        "pregunta": "Cuando se perfora un covenant, el banco:",
+        "opciones": [
+          "Renegocia sobre la base del EVA proyectado.",
+          "Ejecuta lo pactado: el covenant no negocia con el argumento de valor.",
+          "Espera al cierre del ejercicio.",
+          "Baja la tasa."
+        ],
+        "correcta": 1,
+        "justificacion": "Por eso el DSCR proyectado tiene que estar en el tablero ANTES de tomar la deuda, y no después de haberla tomado."
+      }
+    ]
+  },
+  {
+    "cod": "A.10",
+    "slug": "av-10",
+    "cuatrimestre": 5,
+    "fase": "Módulo Avanzado · Temas de frontera",
+    "nombre": "Comunicación de Resultados: el informe didáctico y el tablero que el directorio sí usa",
+    "horas": "24 h · 10 teóricas / 14 prácticas",
+    "framework": "Estándar JPR de informe didáctico · React + Recharts · principios de visualización analítica",
+    "resumen": "Un análisis que la dirección no entiende no existe. Este módulo enseña a construir el último eslabón de la cadena: el informe didáctico en HTML donde cada número viaja con su fórmula y su lectura económica, y el tablero interactivo en React donde la dirección mueve los supuestos y ve el efecto sobre el valor. No es diseño: es la disciplina de hacer auditable y accionable un resultado técnico.",
+    "objetivos": [
+      "Aplicar la estructura fija del informe didáctico JPR y justificar por qué cada sección va donde va.",
+      "Elegir el gráfico correcto según la pregunta que responde, no según el gusto.",
+      "Distinguir sistemáticamente hecho de hipótesis, y registrado de implícito.",
+      "Construir la doble comprobación de cada cifra clave por dos caminos independientes.",
+      "Diseñar los cuatro módulos obligatorios de un tablero financiero en React.",
+      "Traducir cada hallazgo a dinero y cerrar con la palanca: cuánto vale un punto de mejora."
+    ],
+    "caso": {
+      "titulo": "El informe de una página que la familia sí va a leer",
+      "empresa": "Maderas del Litoral S.A. — comunicación del diagnóstico integral",
+      "consigna": [
+        "Escribir el masthead y la sección \"en una página\": título como nombre propio, tesis en una frase y cuatro indicadores con su lectura.",
+        "Diseñar el flujograma que va de la utilidad contable al EVA, con la magnitud de cada ajuste.",
+        "Elegir el gráfico para tres preguntas: cómo se llega del EBIT contable al EVA, cuánto pesa cada día de ciclo, y qué pasa con el valor si el WACC se mueve.",
+        "Redactar las tres a cinco decisiones del cierre, cada una con su cuantificación en pesos y su responsable.",
+        "Definir los cuatro módulos del tablero y qué campo del JSON de diagnóstico consume cada uno."
+      ]
+    },
+    "quiz": [
+      {
+        "id": "q1",
+        "pregunta": "El objetivo del informe didáctico es que el lector no técnico entienda:",
+        "opciones": [
+          "El resultado final.",
+          "Cómo se determina cada número, de dónde sale y qué decisión habilita.",
+          "La metodología académica.",
+          "El software utilizado."
+        ],
+        "correcta": 1,
+        "justificacion": "No es simplificar: es la exigencia más alta que se le puede poner a un análisis, porque obliga a que cada cifra tenga trazabilidad hasta el registro primario."
+      },
+      {
+        "id": "q2",
+        "pregunta": "El criterio de calidad de un informe es:",
+        "opciones": [
+          "Que quede visualmente atractivo.",
+          "Que el cliente pueda reconstruir cualquier número mañana, sin nosotros, y llegar al mismo resultado.",
+          "Que tenga más de veinte páginas.",
+          "Que use el mayor número de indicadores."
+        ],
+        "correcta": 1,
+        "justificacion": "Si necesita llamarnos para rehacer un número, lo entregado no fue un análisis sino una dependencia."
+      },
+      {
+        "id": "q3",
+        "pregunta": "La doble comprobación exige que:",
+        "opciones": [
+          "Dos personas revisen el informe.",
+          "Cada total clave cierre por dos caminos independientes; si no cierra, se explica la diferencia EN el informe.",
+          "Se use dos softwares.",
+          "Se revise dos veces."
+        ],
+        "correcta": 1,
+        "justificacion": "Por ejemplo: suma por producto = suma por mes, o entradas − salidas = existencia. Esconder la diferencia invalida todo lo demás."
+      },
+      {
+        "id": "q4",
+        "pregunta": "Cuando una cifra no cierra por los dos caminos, las posibilidades son:",
+        "opciones": [
+          "Siempre un error de carga.",
+          "O el sistema no refleja el movimiento, o el movimiento no está bien registrado — y el informe declara las dos.",
+          "Que falte información.",
+          "Que el modelo esté mal."
+        ],
+        "correcta": 1,
+        "justificacion": "Elegir la lectura conveniente convierte una medición en una opinión. Nombrar el dato que separaría las dos hipótesis es parte del trabajo."
+      },
+      {
+        "id": "q5",
+        "pregunta": "El título del informe debe ser:",
+        "opciones": [
+          "Una descripción técnica completa.",
+          "Un nombre propio de dos a cinco palabras.",
+          "El nombre del cliente y la fecha.",
+          "La metodología usada."
+        ],
+        "correcta": 1,
+        "justificacion": "Un título como \"El kilo que no llega\" identifica el trabajo y transmite la tesis; un título descriptivo largo no se recuerda ni se cita."
+      },
+      {
+        "id": "q6",
+        "pregunta": "La sección \"en una página\" contiene:",
+        "opciones": [
+          "Todo el análisis resumido.",
+          "Cuatro indicadores en tarjetas con su lectura y un párrafo con la tesis, y tiene que bastarse sola.",
+          "El índice.",
+          "Las conclusiones metodológicas."
+        ],
+        "correcta": 1,
+        "justificacion": "Es lo único que un director ocupado va a leer con seguridad; si no se basta sola, el resto del informe se pierde."
+      },
+      {
+        "id": "q7",
+        "pregunta": "La \"regla de las tres apariciones\" establece que cada cifra clave:",
+        "opciones": [
+          "Se repite tres veces en el texto.",
+          "Aparece coherente en el indicador, en el gráfico y en la tabla de respaldo.",
+          "Se calcula de tres formas.",
+          "Se muestra en tres unidades."
+        ],
+        "correcta": 1,
+        "justificacion": "Si las tres no coinciden, hay un error de armado que el lector va a encontrar antes que nosotros — y con él pierde la confianza en el resto."
+      },
+      {
+        "id": "q8",
+        "pregunta": "Para responder \"¿cómo se compone un resultado, qué se sumó y qué se restó?\" el gráfico correcto es:",
+        "opciones": [
+          "Líneas.",
+          "Cascada (waterfall).",
+          "Torta.",
+          "Dispersión."
+        ],
+        "correcta": 1,
+        "justificacion": "La cascada muestra el camino de A a B con cada suma y cada resta identificada, que es exactamente la pregunta planteada."
+      },
+      {
+        "id": "q9",
+        "pregunta": "Para responder \"¿por dónde fluye y cómo se reparte entre conceptos relacionados?\" corresponde:",
+        "opciones": [
+          "Barras apiladas.",
+          "Cintas (sankey).",
+          "Líneas.",
+          "Radar."
+        ],
+        "correcta": 1,
+        "justificacion": "El ancho de la cinta representa la cantidad y las columnas las etapas, lo que hace visible la proporción de cada derivación."
+      },
+      {
+        "id": "q10",
+        "pregunta": "Un gráfico sin tooltip:",
+        "opciones": [
+          "Es aceptable si es simple.",
+          "No se publica: obliga al lector a confiar en vez de permitirle verificar.",
+          "Es preferible para imprimir.",
+          "Mejora la legibilidad."
+        ],
+        "correcta": 1,
+        "justificacion": "La diferencia entre confiar y verificar es todo el valor del informe: el tooltip lleva el valor exacto, la fórmula o la composición."
+      },
+      {
+        "id": "q11",
+        "pregunta": "Los efectos 3D y los degradés en gráficos financieros:",
+        "opciones": [
+          "Mejoran la comprensión.",
+          "Distorsionan la percepción de magnitud sin agregar información.",
+          "Son obligatorios en presentaciones.",
+          "Ayudan a diferenciar series."
+        ],
+        "correcta": 1,
+        "justificacion": "Todo elemento que no aporta información se la quita a los que sí la aportan; en gráficos de magnitud, además, la distorsiona activamente."
+      },
+      {
+        "id": "q12",
+        "pregunta": "Los colores de los gráficos deben:",
+        "opciones": [
+          "Escribirse literalmente en cada gráfico.",
+          "Leerse de variables definidas una sola vez.",
+          "Elegirse gráfico por gráfico.",
+          "Ser siempre los del software."
+        ],
+        "correcta": 1,
+        "justificacion": "Así la pieza entera cambia de identidad visual sin tocar el contenido, y se garantiza que el mismo concepto tenga el mismo color en todo el informe."
+      },
+      {
+        "id": "q13",
+        "pregunta": "El módulo 1 del tablero (árbol DuPont) debe tener como raíz:",
+        "opciones": [
+          "El EBITDA.",
+          "El ROE, con descomposición de cinco factores y drill-down al hacer clic.",
+          "Las ventas.",
+          "El EVA."
+        ],
+        "correcta": 1,
+        "justificacion": "La descomposición de cinco factores separa carga fiscal, carga de intereses, margen operativo, rotación y multiplicador de apalancamiento."
+      },
+      {
+        "id": "q14",
+        "pregunta": "El semáforo del monitor de capital de trabajo marca en ámbar:",
+        "opciones": [
+          "Quiebre de stock.",
+          "Sobrestock o rotación en zona de atención.",
+          "Rotación saludable.",
+          "Productos discontinuados."
+        ],
+        "correcta": 1,
+        "justificacion": "El rojo se reserva para quiebre de stock o rotación por debajo del umbral crítico; el verde, para rotación sana."
+      },
+      {
+        "id": "q15",
+        "pregunta": "El módulo 3 (simulador de sensibilidad) cambia la conversación porque:",
+        "opciones": [
+          "Es más rápido.",
+          "La dirección deja de discutir el valor y empieza a discutir los supuestos.",
+          "Usa menos datos.",
+          "No requiere explicación."
+        ],
+        "correcta": 1,
+        "justificacion": "Cuando los supuestos son manipulables en vivo, la discusión se traslada a donde efectivamente vive el desacuerdo."
+      },
+      {
+        "id": "q16",
+        "pregunta": "El módulo 4 (radar de riesgo) muestra:",
+        "opciones": [
+          "El promedio de los escenarios.",
+          "El histograma del valor con P10/P50/P90, el abanico de la proyección y las probabilidades de los eventos que importan.",
+          "Solo el caso base.",
+          "La evolución histórica."
+        ],
+        "correcta": 1,
+        "justificacion": "Los eventos relevantes son quiebre de caja, perforación de covenant y EVA negativo: probabilidades, no promedios."
+      },
+      {
+        "id": "q17",
+        "pregunta": "La clave arquitectónica del tablero es que:",
+        "opciones": [
+          "Recalcula todo en el navegador.",
+          "Consume el mismo JSON que el informe y no recalcula: muestra.",
+          "Se conecta directo a la base de datos.",
+          "Usa su propio motor de cálculo."
+        ],
+        "correcta": 1,
+        "justificacion": "Si el tablero y el informe pueden dar números distintos, el diseño está mal: la única fuente de verdad debe ser el motor de cálculo."
+      },
+      {
+        "id": "q18",
+        "pregunta": "Un tablero que muestra cero cuando falló la lectura de datos:",
+        "opciones": [
+          "Es aceptable.",
+          "Es peor que no tener tablero: por eso cada módulo necesita estado explícito de carga, error y vacío.",
+          "Se corrige solo.",
+          "Es un problema menor."
+        ],
+        "correcta": 1,
+        "justificacion": "Un cero falso se lee como información y produce decisiones equivocadas; un estado de error produce una pregunta, que es lo correcto."
+      },
+      {
+        "id": "q19",
+        "pregunta": "La distinción \"registrado / implícito\" separa:",
+        "opciones": [
+          "Lo aprobado de lo pendiente.",
+          "Lo que el sistema tiene explícito de lo que se deduce por diferencia.",
+          "Lo interno de lo externo.",
+          "Lo contable de lo fiscal."
+        ],
+        "correcta": 1,
+        "justificacion": "El hallazgo valioso casi siempre vive en lo implícito, y por eso el informe tiene que hacer visible el camino del cálculo que lo produjo."
+      },
+      {
+        "id": "q20",
+        "pregunta": "Presentar una hipótesis con la misma tipografía que un dato:",
+        "opciones": [
+          "Simplifica la lectura.",
+          "Es el error más caro: cuando el cliente lo descubre, pierde confianza en todos los números, incluidos los que eran datos.",
+          "Es indiferente.",
+          "Se corrige en el pie."
+        ],
+        "correcta": 1,
+        "justificacion": "La honestidad sobre la incertidumbre no debilita el informe: es lo único que lo sostiene frente a una revisión seria."
+      },
+      {
+        "id": "q21",
+        "pregunta": "\"El precio de no saber\" se refiere a:",
+        "opciones": [
+          "El costo del estudio.",
+          "La diferencia entre los dos escenarios cuando hay incertidumbre sobre un dato clave.",
+          "El costo de oportunidad del capital.",
+          "La prima de riesgo."
+        ],
+        "correcta": 1,
+        "justificacion": "Cuantificar esa diferencia convierte \"falta información\" en una decisión de inversión: cuánto vale conseguir el dato."
+      },
+      {
+        "id": "q22",
+        "pregunta": "Una recomendación sin responsable asignado es:",
+        "opciones": [
+          "Suficiente.",
+          "Una observación, no una recomendación.",
+          "Más objetiva.",
+          "Preferible por prudencia."
+        ],
+        "correcta": 1,
+        "justificacion": "El cierre del informe exige tres a cinco decisiones concretas, cada una con su cuantificación y su responsable cuando se conoce."
+      },
+      {
+        "id": "q23",
+        "pregunta": "El patrón del cierre cuantificado es:",
+        "opciones": [
+          "Δ indicador × factor de conversión × base × períodos.",
+          "Ventas − costos.",
+          "ROIC − WACC.",
+          "Activo − pasivo."
+        ],
+        "correcta": 0,
+        "justificacion": "Toda recomendación tiene que poder expresarse en esa forma; si no se puede, no está lista para ir al informe."
+      },
+      {
+        "id": "q24",
+        "pregunta": "La prueba final del informe es:",
+        "opciones": [
+          "Que no tenga errores de ortografía.",
+          "Que el lector pueda decir qué va a hacer distinto el lunes.",
+          "Que tenga bibliografía.",
+          "Que sea extenso."
+        ],
+        "correcta": 1,
+        "justificacion": "Si no, el análisis fue correcto y el trabajo quedó incompleto: el entregable no es el modelo, es la decisión que habilita."
+      },
+      {
+        "id": "q25",
+        "pregunta": "El problema estructural de la consultoría que este módulo resuelve es:",
+        "opciones": [
+          "El precio del servicio.",
+          "Que el valor del trabajo es proporcional a su profundidad técnica y su adopción es inversamente proporcional a ella.",
+          "La falta de datos.",
+          "La competencia."
+        ],
+        "correcta": 1,
+        "justificacion": "El informe didáctico rompe esa relación sin bajar el nivel técnico: hace que cada paso del razonamiento sea reconstruible por quien decide."
+      },
+      {
+        "id": "q26",
+        "pregunta": "En la cadena del trabajo, cada número del JSON de resultados viaja con:",
+        "opciones": [
+          "Solo su valor.",
+          "Su fórmula, su cálculo con números concretos y su interpretación económica.",
+          "Su fuente únicamente.",
+          "Su fecha."
+        ],
+        "correcta": 1,
+        "justificacion": "El relato del entregable se construye SOBRE eso, no aparte. Por eso el informe no puede contradecir al modelo."
+      },
+      {
+        "id": "q27",
+        "pregunta": "La prosa del informe:",
+        "opciones": [
+          "Debe usar viñetas para ser clara.",
+          "No lleva viñetas: las listas van solo dentro de tablas o del flujograma.",
+          "Debe evitar los números.",
+          "Debe ser lo más breve posible."
+        ],
+        "correcta": 1,
+        "justificacion": "La viñeta fragmenta el argumento y deja al lector la tarea de reconstruir la conexión entre los puntos, que es justamente lo que el informe debería hacer."
+      },
+      {
+        "id": "q28",
+        "pregunta": "Una conclusión incómoda se comunica:",
+        "opciones": [
+          "Suavizándola con adjetivos.",
+          "Con datos y sin adjetivos.",
+          "Omitiéndola del resumen.",
+          "Solo verbalmente."
+        ],
+        "correcta": 1,
+        "justificacion": "\"El margen de la línea B fue negativo en once de doce meses\" pesa más y es más defendible que \"la línea B tiene problemas serios de rentabilidad\"."
+      },
+      {
+        "id": "q29",
+        "pregunta": "La longitud de un informe:",
+        "opciones": [
+          "Correlaciona con su utilidad.",
+          "No correlaciona con su utilidad; la densidad de números verificables sí.",
+          "Debe ser fija.",
+          "Debe superar las veinte páginas."
+        ],
+        "correcta": 1,
+        "justificacion": "Un hallazgo bien escrito no es más largo que uno mal escrito: es más específico."
+      },
+      {
+        "id": "q30",
+        "pregunta": "El registro lingüístico del informe (voseo o usted) se define:",
+        "opciones": [
+          "Al final, al revisar.",
+          "Antes de escribir, según el destinatario.",
+          "Según la preferencia del redactor.",
+          "Es indistinto."
+        ],
+        "correcta": 1,
+        "justificacion": "Voseo para destinatarios argentinos, usted formal para el exterior. Cambiarlo después obliga a reescribir y produce inconsistencias que se notan."
+      }
+    ]
+  },
+  {
+    "cod": "A.11",
+    "slug": "av-11",
+    "cuatrimestre": 5,
+    "fase": "Módulo Avanzado · Temas de frontera",
+    "nombre": "Diagnóstico Integral: recomponer los números desde el movimiento primario",
+    "horas": "24 h · 10 teóricas / 14 prácticas",
+    "framework": "Método JPR de cuatro fases · recomposición desde el ERP · Beneish · Damodaran/Pereiro",
+    "resumen": "El módulo que cierra el programa. Todo lo aprendido descansa sobre una premisa que casi nunca se verifica: que los saldos contables describen el negocio. Este módulo enseña a no leerlos, sino a RECOMPONERLOS desde los movimientos primarios del sistema de gestión —despachos, comprobantes, kardex, cobranzas— y a exponer la diferencia contra lo que declara la contabilidad. Es el trabajo completo de punta a punta, en el orden en que se hace.",
+    "objetivos": [
+      "Diseñar la extracción de datos primarios de un sistema de gestión y su mapeo al esquema canónico.",
+      "Ejecutar las seis pruebas de recomposición y producir, en cada una, la prueba discriminante.",
+      "Encadenar las cinco fases del trabajo en el orden correcto y respetar sus bloqueos.",
+      "Tratar el país como un input del que cuelgan tasa impositiva, riesgo país, beta sectorial y múltiplos.",
+      "Declarar la ruta de riesgo país y sostenerla sin doble conteo a lo largo de todo el trabajo.",
+      "Producir el expediente completo: recomposición, diagnóstico, proyección, valuación y plan de creación de valor."
+    ],
+    "caso": {
+      "titulo": "Las dos lecturas del EBITDA de Maderas del Litoral",
+      "empresa": "Maderas del Litoral S.A. — recomposición desde el sistema de gestión",
+      "consigna": [
+        "Enunciar las dos lecturas posibles del negocio que surgen de la brecha del costo, con el EBIT que implica cada una.",
+        "Nombrar la prueba discriminante de cada hallazgo, en el orden en que debería pedirse.",
+        "Determinar si la deriva de facturado contra despachado es corte de período o diferencia real, y qué implica para el stock y para el ingreso.",
+        "Decidir si la serie contable mensual habilita la fase predictiva y, si no, sobre qué se construye la proyección.",
+        "Escribir el párrafo del informe que declara qué se puede afirmar y qué queda abierto, sin elegir la lectura conveniente."
+      ]
+    },
+    "quiz": [
+      {
+        "id": "q1",
+        "pregunta": "El principio general de toda prueba de recomposición es:",
+        "opciones": [
+          "Revisar dos veces el mismo cálculo.",
+          "Comparar dos mediciones independientes de la misma cosa.",
+          "Confiar en el balance auditado.",
+          "Usar promedios del sector."
+        ],
+        "correcta": 1,
+        "justificacion": "Cuando coinciden, la cifra está verificada. Cuando no, hay dos posibilidades y ninguna es \"error de carga\"."
+      },
+      {
+        "id": "q2",
+        "pregunta": "Cuando la recomposición no coincide con la contabilidad, las dos posibilidades son:",
+        "opciones": [
+          "Error de carga o error de sistema.",
+          "O la contabilidad no refleja el movimiento, o el movimiento no está bien registrado.",
+          "Fraude o negligencia.",
+          "Inflación o tipo de cambio."
+        ],
+        "correcta": 1,
+        "justificacion": "El informe declara las dos y nombra el dato que las separaría. Elegir la lectura conveniente convierte una medición en una opinión."
+      },
+      {
+        "id": "q3",
+        "pregunta": "La prueba central de la recomposición es:",
+        "opciones": [
+          "Facturado contra ingreso.",
+          "Costo de ventas contra kardex valorizado.",
+          "Calidad de la serie contable.",
+          "Cuentas anómalas."
+        ],
+        "correcta": 1,
+        "justificacion": "Si el costo de ventas contable no coincide con el kardex valorizado, hay dos lecturas del negocio y la diferencia puede ser la mitad del EBITDA."
+      },
+      {
+        "id": "q4",
+        "pregunta": "Al comparar costo recompuesto con costo contable, el error más frecuente es:",
+        "opciones": [
+          "Usar el tipo de cambio equivocado.",
+          "No escalar las dos cifras a la misma base de productos y período.",
+          "Olvidar los impuestos.",
+          "Usar valores nominales."
+        ],
+        "correcta": 1,
+        "justificacion": "Si las dos cifras no miden la misma base, la comparación no significa nada por más que el cálculo esté bien hecho."
+      },
+      {
+        "id": "q5",
+        "pregunta": "Si el sistema no expone la capa de valuación, la prueba del costo:",
+        "opciones": [
+          "No se puede hacer.",
+          "Pasa de ser una medición a ser una aproximación, y hay que declararlo porque cambia la naturaleza del hallazgo.",
+          "Es igualmente concluyente.",
+          "Debe omitirse del informe."
+        ],
+        "correcta": 1,
+        "justificacion": "Un costo estándar viejo o con absorción completa explica por sí solo una brecha grande, sin que la contabilidad tenga nada malo."
+      },
+      {
+        "id": "q6",
+        "pregunta": "La prueba discriminante de la brecha de costo, en primer lugar, es:",
+        "opciones": [
+          "El recuento físico.",
+          "La capa de valuación del sistema: si es legible, la ambigüedad desaparece.",
+          "El estado de resultados.",
+          "El informe del auditor."
+        ],
+        "correcta": 1,
+        "justificacion": "Después vienen la composición del costo unitario (para detectar doble conteo) y el recuento físico valorizado del último cierre."
+      },
+      {
+        "id": "q7",
+        "pregunta": "En la prueba de facturado contra despachado, lo que decide la lectura es:",
+        "opciones": [
+          "El mes con mayor diferencia.",
+          "El acumulado y la persistencia del signo.",
+          "El promedio simple.",
+          "El último trimestre."
+        ],
+        "correcta": 1,
+        "justificacion": "Si oscila alrededor de cero es corte de período; si deriva en una dirección y no vuelve, hay una diferencia real."
+      },
+      {
+        "id": "q8",
+        "pregunta": "La persistencia del signo por encima del 80 % de los meses indica:",
+        "opciones": [
+          "Ruido estadístico normal.",
+          "Un patrón que ya no es ruido de fecha y exige explicación.",
+          "Un error de sistema.",
+          "Estacionalidad."
+        ],
+        "correcta": 1,
+        "justificacion": "Ese umbral convierte una intuición en un hallazgo defendible: es el estadístico que separa el corte de período de la diferencia real."
+      },
+      {
+        "id": "q9",
+        "pregunta": "Mercadería despachada sin facturar implica:",
+        "opciones": [
+          "Reconocimiento anticipado.",
+          "Ingreso no reconocido y stock sobrevaluado.",
+          "Un error de cobranza.",
+          "Nada relevante."
+        ],
+        "correcta": 1,
+        "justificacion": "La contraria —facturación sin entrega— es reconocimiento anticipado. Las dos hipótesis se distinguen revisando los remitos sin comprobante asociado."
+      },
+      {
+        "id": "q10",
+        "pregunta": "Una cuenta puente dentro del resultado por encima del 10 % de las ventas:",
+        "opciones": [
+          "Es normal en PyMEs.",
+          "Hace que ninguna línea del estado signifique lo que dice.",
+          "Solo afecta el balance.",
+          "Se puede ignorar si está documentada."
+        ],
+        "correcta": 1,
+        "justificacion": "Nombres como \"ajustes\", \"varios\", \"por aplicar\" o \"transitoria\" concentran importes que deberían estar clasificados; hasta abrirlos, el estado no es interpretable."
+      },
+      {
+        "id": "q11",
+        "pregunta": "La depreciación en cero en una empresa con planta en producción es:",
+        "opciones": [
+          "Un dato faltante.",
+          "Una ausencia estructural: una afirmación implícita —\"esta empresa no consume sus activos\"— que es falsa.",
+          "Correcto si están amortizados.",
+          "Un problema solo fiscal."
+        ],
+        "correcta": 1,
+        "justificacion": "Contablemente puede ser correcto y económicamente es falso: el resultado declarado no descuenta el consumo de activos que habrá que reponer."
+      },
+      {
+        "id": "q12",
+        "pregunta": "Con la planta totalmente amortizada, el ROIC contable:",
+        "opciones": [
+          "Se subestima.",
+          "Se infla con numerador alto y denominador cerca de cero: tiende al infinito.",
+          "Es correcto.",
+          "No se puede calcular."
+        ],
+        "correcta": 1,
+        "justificacion": "Es literalmente el indicador más engañoso que puede producir un balance, y explica el ROIC del 58 % del caso integrador."
+      },
+      {
+        "id": "q13",
+        "pregunta": "Los indicadores de calidad de la serie contable mensual son:",
+        "opciones": [
+          "Ventas y margen.",
+          "Meses con egresos negativos y coeficiente de variación del egreso sobre el ingreso.",
+          "Liquidez y solvencia.",
+          "ROIC y EVA."
+        ],
+        "correcta": 1,
+        "justificacion": "Deciden si el análisis predictivo puede apoyarse en la contabilidad; en la PyME familiar casi nunca puede."
+      },
+      {
+        "id": "q14",
+        "pregunta": "Cuando la serie contable mensual es ruido, la proyección:",
+        "opciones": [
+          "Se hace igual con intervalos de confianza amplios.",
+          "Se construye sobre los movimientos operativos y el informe declara por qué.",
+          "Se omite.",
+          "Se toma del sector."
+        ],
+        "correcta": 1,
+        "justificacion": "Proyectar sobre ruido y después ponerle intervalos de confianza es la forma elegante de mentir con un modelo."
+      },
+      {
+        "id": "q15",
+        "pregunta": "La razón por la que la extracción se materializa en un archivo antes de correr el motor es:",
+        "opciones": [
+          "Ahorrar tiempo.",
+          "La conexión al sistema es una herramienta del agente, no una biblioteca que el motor pueda invocar — y así el análisis queda reproducible.",
+          "Reducir el costo.",
+          "Requisito legal."
+        ],
+        "correcta": 1,
+        "justificacion": "Con los datos exactos volcados, cualquiera puede reproducir el análisis y auditar de dónde salió cada número."
+      },
+      {
+        "id": "q16",
+        "pregunta": "Lo dinámico del informe interactivo es:",
+        "opciones": [
+          "La conexión en vivo al ERP.",
+          "Que el país, la ruta de riesgo y la lectura del costo se cambian en la página y recalculan Ke, WACC y valuación.",
+          "La actualización automática de precios.",
+          "El envío por correo."
+        ],
+        "correcta": 1,
+        "justificacion": "La interactividad vive en el entregable, no en la extracción: se cambia un supuesto y todo se recalcula sin volver a correr el motor."
+      },
+      {
+        "id": "q17",
+        "pregunta": "El dato más importante a conseguir de un sistema nuevo es:",
+        "opciones": [
+          "El estado de resultados.",
+          "Los movimientos de stock con destino cliente, con cantidad y fecha.",
+          "El balance auditado.",
+          "El plan de cuentas."
+        ],
+        "correcta": 1,
+        "justificacion": "Sin eso no hay recomposición del costo, que es la prueba central de todo el trabajo."
+      },
+      {
+        "id": "q18",
+        "pregunta": "Cuando la fuente es una carpeta de archivos, hay que confirmar el mapeo:",
+        "opciones": [
+          "Después de correr el motor.",
+          "ANTES de correr: un archivo mal asignado produce un diagnóstico entero equivocado y el motor no puede detectarlo.",
+          "Solo si hay dudas.",
+          "No hace falta."
+        ],
+        "correcta": 1,
+        "justificacion": "Es el único punto del proceso donde un error humano se propaga silenciosamente hasta el informe final."
+      },
+      {
+        "id": "q19",
+        "pregunta": "Si el sistema informa precio unitario con impuesto y subtotal neto, el precio neto es:",
+        "opciones": [
+          "El precio unitario.",
+          "Subtotal / cantidad.",
+          "El promedio de ambos.",
+          "El precio de lista."
+        ],
+        "correcta": 1,
+        "justificacion": "Usar el precio unitario sobrestima el margen exactamente en el porcentaje del impuesto, en todos los productos a la vez."
+      },
+      {
+        "id": "q20",
+        "pregunta": "El país, en este marco, es:",
+        "opciones": [
+          "Un dato de contexto.",
+          "Un parámetro del modelo del que cuelgan tasa impositiva, riesgo país, beta sectorial y múltiplos.",
+          "Irrelevante si se trabaja en dólares.",
+          "Una nota metodológica."
+        ],
+        "correcta": 1,
+        "justificacion": "Cambiar el país cambia el Ke, el WACC y la valuación completa; por eso es un input y no una aclaración."
+      },
+      {
+        "id": "q21",
+        "pregunta": "Las tres rutas de riesgo país son:",
+        "opciones": [
+          "Complementarias.",
+          "Mutuamente excluyentes: aplicar dos es contar el mismo riesgo dos veces.",
+          "Equivalentes.",
+          "Opcionales."
+        ],
+        "correcta": 1,
+        "justificacion": "El sesgo del doble conteo va siempre en la misma dirección: subvaluar. Por eso pasa desapercibido."
+      },
+      {
+        "id": "q22",
+        "pregunta": "En la variante Pereiro, el factor (1 − R²) multiplica:",
+        "opciones": [
+          "El beta solo.",
+          "El término completo de la prima de mercado.",
+          "El riesgo país.",
+          "La tasa libre de riesgo."
+        ],
+        "correcta": 1,
+        "justificacion": "Es el error más frecuente y el más caro de la valuación regional: aplicarlo al riesgo país produce el sesgo opuesto al que se busca corregir."
+      },
+      {
+        "id": "q23",
+        "pregunta": "Donde no hay serie de mercado para estimar el R², corresponde:",
+        "opciones": [
+          "Usar 0,5 por convención.",
+          "Marcar el origen como mediana regional o no estimable, y declararlo en el informe.",
+          "Omitir el ajuste.",
+          "Usar el R² de Estados Unidos."
+        ],
+        "correcta": 1,
+        "justificacion": "La mediana regional sale de los mercados más integrados, así que tiende a subestimar el costo del capital: el sesgo va en contra del usuario y por eso se declara."
+      },
+      {
+        "id": "q24",
+        "pregunta": "La fase 0 del trabajo es:",
+        "opciones": [
+          "La proyección.",
+          "Beneish: fija el techo de confianza de todo lo demás y requiere dos ejercicios completos.",
+          "La valuación.",
+          "La entrevista con el dueño."
+        ],
+        "correcta": 1,
+        "justificacion": "Si la información no es admisible, el trabajo puede terminar ahí — y ése es un resultado legítimo del trabajo, no una falla."
+      },
+      {
+        "id": "q25",
+        "pregunta": "Un análisis que ignora sus propios bloqueos metodológicos:",
+        "opciones": [
+          "Es más práctico.",
+          "Produce un número, no un diagnóstico.",
+          "Es aceptable si se aclara.",
+          "Gana en velocidad."
+        ],
+        "correcta": 1,
+        "justificacion": "Los bloqueos son reales: sin información admisible no se valúa, sin serie válida no se proyecta, sin base probabilística la ruta A queda vetada."
+      },
+      {
+        "id": "q26",
+        "pregunta": "El protocolo de la fase predictiva exige, en orden:",
+        "opciones": [
+          "Red neuronal directamente.",
+          "Lineal de referencia, luego métodos de conjunto sobre panel, y recién entonces aprendizaje profundo si el panel lo justifica.",
+          "Promedio móvil.",
+          "Juicio experto."
+        ],
+        "correcta": 1,
+        "justificacion": "Decir \"no hay datos suficientes para esto\" vale más que producir una red neuronal sobre treinta y seis observaciones."
+      },
+      {
+        "id": "q27",
+        "pregunta": "El Monte Carlo de la fase predictiva debe correr:",
+        "opciones": [
+          "Alrededor del modelo, sobre el resultado final.",
+          "A TRAVÉS del modelo ajustado.",
+          "Solo sobre las ventas.",
+          "Con exactamente 1.000 iteraciones."
+        ],
+        "correcta": 1,
+        "justificacion": "Simular alrededor del modelo describe la incertidumbre de un supuesto, no la del proceso; y el criterio de parada es por tolerancia, no por un número fijo de iteraciones."
+      },
+      {
+        "id": "q28",
+        "pregunta": "La verificación que cierra el modelo de valuación es:",
+        "opciones": [
+          "Que el valor terminal no supere el 70 %.",
+          "Que el DCF de FCFF coincida con Capital invertido + Σ EVA descontados.",
+          "Que el WACC sea menor al ROIC.",
+          "Que el crecimiento sea positivo."
+        ],
+        "correcta": 1,
+        "justificacion": "Si no coinciden, hay una inconsistencia entre las definiciones de capital, NOPAT y flujo. Es el mejor test de armado de todo el modelo."
+      },
+      {
+        "id": "q29",
+        "pregunta": "La primera pregunta de todo trabajo nuevo es:",
+        "opciones": [
+          "¿Cuánto vale la empresa?",
+          "¿Dónde vive la información de este cliente?",
+          "¿Cuál es el sector?",
+          "¿Quiénes son los socios?"
+        ],
+        "correcta": 1,
+        "justificacion": "De esa respuesta depende qué pruebas se pueden correr, y por lo tanto qué tan lejos puede llegar el diagnóstico. Ninguna sofisticación posterior compensa una extracción pobre."
+      },
+      {
+        "id": "q30",
+        "pregunta": "El campo obligatorio de toda prueba de recomposición es:",
+        "opciones": [
+          "El importe de la brecha.",
+          "La prueba discriminante: el dato concreto que resolvería la ambigüedad.",
+          "El nombre del responsable.",
+          "La fecha de corte."
+        ],
+        "correcta": 1,
+        "justificacion": "Es lo que convierte un hallazgo incómodo en una tarea concreta, y lo que separa este informe de una opinión."
+      }
+    ]
   }
 ]

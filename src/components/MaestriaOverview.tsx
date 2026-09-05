@@ -49,7 +49,7 @@ export function StudentProgress() {
 }
 
 // ---------------------------------------------------------------------------
-// Matriz del ADMIN: alumnos × 16 asignaturas (mejor puntaje) + entregas.
+// Matriz del ADMIN: alumnos × los 27 módulos del programa (mejor puntaje) + entregas.
 // ---------------------------------------------------------------------------
 export function AdminOverview() {
   const { students, quizAttempts, caseSubmissions } = useStore()

@@ -47,10 +47,46 @@ presentación* a *entender, medir y construir el verdadero valor de una empresa*
 | 11 | Estrategia Financiera | Tasas, tiempo y sistemas de amortización |
 | 12 | Valuación | Valuación integral por DCF y plan de creación de valor |
 
+## La Maestría en Finanzas Corporativas Aplicadas con IA
+
+Además del programa de 12 semanas, la plataforma aloja el corpus completo de la
+**Maestría**: **27 módulos** (16 asignaturas del núcleo, en cuatro cuatrimestres, más
+11 Módulos Avanzados de temas de frontera), con un caso integrador único —**Maderas
+del Litoral S.A.**— que atraviesa todo el programa con anclas numéricas coherentes.
+
+Por cada módulo se generan cinco piezas: **PDF didáctico**, **Excel del caso** con
+matrices dinámicas de Excel 365, **cuestionario** con solucionario justificado,
+**banco de 30 preguntas** (el motor sortea 15 por intento, hasta 3 intentos) y la
+**teoría completa para leer dentro de la app**.
+
+| Cuatrimestre | Fase | Asignaturas |
+|---|---|---|
+| 1 | Descriptiva · ¿Qué sucedió? | 1.1 a 1.4 |
+| 2 | Diagnóstica · ¿Por qué sucedió? | 2.1 a 2.4 |
+| 3 | Predictiva · ¿Qué es probable que ocurra? | 3.1 a 3.4 |
+| 4 | Prescriptiva · ¿Qué debemos hacer? | 4.1 a 4.4 |
+| — | Módulos Avanzados | A.1 a A.11 |
+
+**Módulos Avanzados:** A.1 Fusiones y adquisiciones · A.2 Asignación de capital ·
+A.3 Finanzas conductuales · A.4 ESG y riesgo climático · A.5 Financiamiento
+alternativo · A.6 El canal del riesgo (numerador o denominador) · A.7 Mapa maestro
+de interrelaciones entre generadores de valor · A.8 TSR Sintético y Total Business
+Return · A.9 La paradoja del crecimiento · A.10 Comunicación de resultados ·
+A.11 Diagnóstico integral por recomposición.
+
+Regenerar todos los materiales:
+
+```bash
+npm run maestria
+```
+
+Detalle técnico del sistema de contenidos en [`docs/MAESTRIA.md`](docs/MAESTRIA.md).
+
 ## Stack técnico
 
 - **React 18 + TypeScript + Vite**
-- **TailwindCSS** (diseño premium oscuro con acento dorado)
+- **TailwindCSS** (identidad JPR: base carbón, lectura marfil, verde institucional
+  `#12614A` como único acento · Spectral / IBM Plex)
 - **Recharts** para visualizaciones
 - **React Router** para la navegación
 - Persistencia en `localStorage` (capa de datos aislada en `src/store/` para migrar a un
@@ -134,10 +170,16 @@ src/
   lib/finance.ts  Motor financiero (NOPAT, ROIC, EVA, WACC, FCF, DCF, tasas…)
   pages/          Landing, login, dashboard, programa, lección, simuladores, alumnos, mensajes
   simulators/     Los 10 simuladores interactivos + registro
+    maestria/     Los 27 módulos de la Maestría (16 del núcleo + 11 avanzados),
+                  el modelo de contenido y los índices generados
   store/          Capa de datos: context.ts (API), localStore (localStorage),
                   remoteStore (Supabase), store.tsx (selector de backend)
   lib/supabase.ts Cliente de Supabase (activo solo si hay env vars)
   types.ts        Tipos de dominio
+scripts/
+  maestria/       Generador de PDF, Excel y cuestionarios (npm run maestria)
+  deepdive/       Teoría extendida de las 12 semanas
 supabase/
   migrations/     0001_init.sql — esquema, RLS y triggers
+                  0002_maestria.sql — intentos de cuestionario y entregas de casos
 ```

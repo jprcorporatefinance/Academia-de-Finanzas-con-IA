@@ -1,0 +1,528 @@
+{
+  "cod": "A.7",
+  "nombre": "Mapa Maestro de Interrelaciones: análisis de segundo y tercer orden entre indicadores",
+  "sections": [
+    {
+      "title": "El indicador maestro y la ecuación que ata todo",
+      "intro": "Todo el mapa cuelga de un solo número y de una sola ecuación. Si esos dos se entienden, el resto del catálogo es derivación.",
+      "blocks": [
+        {
+          "t": "p",
+          "md": "El indicador maestro del sistema es el **spread `(ROIC − WACC)`**, monetizado como EVA. Los diecinueve conceptos del catálogo cuelgan de él en una cadena de generadores de valor anclada en la fórmula del *key value driver* de McKinsey."
+        },
+        {
+          "t": "formula",
+          "name": "Key Value Driver (Koller, Goedhart & Wessels)",
+          "expr": "Valor = NOPAT₁ × (1 − g/RONIC) / (WACC − g)",
+          "where": "NOPAT₁ = utilidad operativa después de impuestos del primer año · g = crecimiento · RONIC = retorno del capital NUEVO · WACC = costo de capital",
+          "note": "Una sola ecuación une rentabilidad (ROIC/RONIC), crecimiento (g), reinversión (IR) y costo de capital (WACC). Es también la fórmula del valor terminal."
+        },
+        {
+          "t": "formula",
+          "name": "El nudo central",
+          "expr": "NOPAT = ROIC × Capital Invertido          ROIC = NOPAT / Capital Invertido",
+          "where": "Capital Invertido (convención JPR) = CxC + Bienes de cambio − Proveedores + Bienes de uso, excluyendo caja operativa mínima y deuda financiera",
+          "note": "Todo lo demás se deriva de acá. Si esta identidad no cierra en el modelo, ningún indicador posterior significa lo que dice."
+        },
+        {
+          "t": "formula",
+          "name": "El spread monetizado",
+          "expr": "EVA = NOPAT − WACC × Capital = Capital × (ROIC − WACC)",
+          "where": "MVA = Σ EVA descontados al WACC = valor presente de los EVA futuros = goodwill económico",
+          "note": "El EVA es, literalmente, el spread medido en pesos. Es el puente entre una tasa y un monto."
+        },
+        {
+          "t": "warn",
+          "md": "Error dimensional frecuente: **comparar ROIC con EVA**. No se puede. El ROIC es una **tasa** y el EVA un **monto**. El encadenamiento correcto es: ROIC (%) vs WACC (%) → spread (%) → × capital → EVA ($)."
+        }
+      ]
+    },
+    {
+      "title": "Familia A · Descomposiciones y puentes algebraicos",
+      "intro": "Los seis puentes exactos que hay que tener grabados a fuego.",
+      "blocks": [
+        {
+          "t": "h",
+          "text": "A.3 · ROIC ↔ árbol DuPont de cinco factores"
+        },
+        {
+          "t": "formula",
+          "name": "ROIC operativo",
+          "expr": "ROIC = (NOPAT / Ventas) × (Ventas / Capital) = margen NOPAT × rotación del capital"
+        },
+        {
+          "t": "formula",
+          "name": "DuPont de cinco factores sobre el ROE",
+          "expr": "ROE = (NI/EBT) × (EBT/EBIT) × (EBIT/Ventas) × (Ventas/Activos) × (Activos/Patrimonio)",
+          "where": "carga fiscal × carga de intereses × margen operativo × rotación de activos × multiplicador de apalancamiento",
+          "note": "El segundo factor —EBT/EBIT, la carga financiera— es el que explota en Argentina por tasas nominales altísimas, y el que más veces se omite en las descomposiciones de tres factores."
+        },
+        {
+          "t": "formula",
+          "name": "Puente ROIC → ROE",
+          "expr": "ROE = ROIC + [ROIC − Kd(1−t)] × (D/E)",
+          "where": "El segundo término es el spread de apalancamiento financiero",
+          "note": "Apalancarse agrega ROE solo si el ROIC supera al costo de la deuda después de impuestos. Si no, el apalancamiento amplifica la destrucción."
+        },
+        {
+          "t": "h",
+          "text": "A.4 · La reconciliación de los tres flujos"
+        },
+        {
+          "t": "formula",
+          "name": "Los tres flujos y su identidad de cierre",
+          "expr": "FCFF = NOPAT + Amortizaciones − CAPEX − ΔCapital de Trabajo\nFCFE = FCFF − Intereses×(1−t) + ΔDeuda neta\nFCFD = Intereses×(1−t) + Amortización de capital − Nueva deuda\n\nFCFF = FCFE + FCFD",
+          "where": "Descuento coherente: FCFF a WACC → Enterprise Value · FCFE a Ke → Equity Value · FCFD a Kd → valor de la deuda",
+          "note": "Test de consistencia obligatorio: Equity Value = EV − Deuda neta debe coincidir con descontar FCFE a Ke. Si no coincide, hay un error de armado en el modelo."
+        },
+        {
+          "t": "h",
+          "text": "A.5 · CFROI ↔ ROIC: el puente caja vs. devengado"
+        },
+        {
+          "t": "p",
+          "md": "El **CFROI** es una TIR de los flujos de caja brutos ajustados por inflación sobre la inversión bruta a valores corrientes, con la vida útil del activo. El **ROIC** es un cociente contable nominal de un solo período. Coinciden cuando no hay inflación, los activos son nuevos y la base es consistente; **divergen** cuando hay activos viejos depreciados a costo histórico o inflación."
+        },
+        {
+          "t": "idea",
+          "md": "Si `CFROI << ROIC contable`, hay sospecha fuerte de distorsión inflacionaria o de activos subvaluados. **Ésa es la huella dactilar del problema argentino**, y es la razón metodológica por la que el CFROI es superior al ROIC en mercados emergentes."
+        },
+        {
+          "t": "h",
+          "text": "A.6 · La cadena de cuarto orden que va del ciclo de efectivo al EVA"
+        },
+        {
+          "t": "chain",
+          "title": "Del día de cobranza al valor de la empresa",
+          "nodes": [
+            "CCE más largo",
+            "↑ Capital de trabajo",
+            "↑ Capital invertido",
+            "↓ Rotación",
+            "↓ ROIC",
+            "↓ EVA",
+            "↓ Valor"
+          ],
+          "caption": "Cuatro órdenes de distancia entre una decisión de cobranzas y el valor del patrimonio. Cuantificar esa cadena es lo que convierte una gestión operativa en una decisión financiera."
+        },
+        {
+          "t": "formula",
+          "name": "El EVA atrapado en el capital de trabajo",
+          "expr": "EVA atrapado = ΔCapital de Trabajo evitable × WACC",
+          "note": "Acortar el ciclo libera caja DE UNA SOLA VEZ (un FCFF positivo extraordinario vía ΔWC negativo) y baja el capital invertido de forma permanente, subiendo el ROIC de todos los períodos siguientes."
+        }
+      ]
+    },
+    {
+      "title": "Familia B · La cadena de valor de McKinsey",
+      "intro": "Cómo la fórmula del key value driver ordena las cuatro palancas y define el valor terminal.",
+      "blocks": [
+        {
+          "t": "formula",
+          "name": "Identidad de reinversión",
+          "expr": "g = RONIC × IR    ⟹    IR = g / RONIC    ⟹    (1 − g/RONIC) = (1 − IR)",
+          "where": "IR = tasa de reinversión = fracción del NOPAT que vuelve al negocio",
+          "note": "De acá sale el puente entre la KVD y el DCF clásico: Valor = FCFF₁/(WACC − g) con FCFF₁ = NOPAT₁ × (1 − IR)."
+        },
+        {
+          "t": "table",
+          "title": "Las cuatro palancas y su jerarquía",
+          "headers": [
+            "Palanca",
+            "Qué gobierna",
+            "Regla de decisión"
+          ],
+          "firstColLeft": true,
+          "rows": [
+            [
+              "RONIC",
+              "El retorno del capital NUEVO, no el histórico",
+              "Manda sobre si crecer paga o no"
+            ],
+            [
+              "g (crecimiento)",
+              "La velocidad de expansión",
+              "Solo es bueno si RONIC > WACC; si RONIC < WACC, crecer DESTRUYE"
+            ],
+            [
+              "IR (reinversión)",
+              "El dial entre crecer y distribuir",
+              "IR = g/RONIC: no es una decisión libre, es una consecuencia"
+            ],
+            [
+              "WACC",
+              "El piso de exigencia",
+              "Baja el WACC y sube el valor sin tocar la operación"
+            ]
+          ]
+        },
+        {
+          "t": "warn",
+          "md": "El valor terminal se calcula con la **misma KVD** aplicada al primer año de continuidad, **usando RONIC de largo plazo y no el ROIC histórico**. En competencia perfecta el RONIC tiende al WACC, con lo cual el valor terminal converge a `NOPAT / WACC`. Usar el ROIC histórico en el terminal es el error que infla más valuaciones."
+        },
+        {
+          "t": "idea",
+          "md": "**Consistencia de moneda:** `g` nominal en Argentina puede ser del 100 % y no significar crecimiento real. Si el WACC está en dólares, el flujo va en dólares. Nunca mezclar `g` nominal en pesos con WACC en dólares — es el error que más veces convierte una valuación en un número sin sentido."
+        }
+      ]
+    },
+    {
+      "title": "Familia C · Las sinergias diagnósticas (donde el todo supera a la suma)",
+      "intro": "Éste es el corazón del módulo: los cruces que producen un diagnóstico que ningún indicador aislado puede dar.",
+      "blocks": [
+        {
+          "t": "table",
+          "title": "Los ocho cruces del motor de diagnóstico",
+          "headers": [
+            "Cruce",
+            "Qué revela"
+          ],
+          "firstColLeft": true,
+          "rows": [
+            [
+              "Spread + DuPont",
+              "El spread dice SI hay problema de valor; DuPont dice DÓNDE: margen (pricing/costos), rotación (ciclo, eficiencia de activos) o estructura (apalancamiento). Es el primer cruce que corre el motor"
+            ],
+            [
+              "CCE + CFROI",
+              "Un ciclo largo aparece como CFROI bajo: caja atrapada que no rota. Diagnóstico: cuánto CFROI se recupera por cada día de ciclo reducido"
+            ],
+            [
+              "GMROI + matriz ABC/XYZ",
+              "GMROI = margen bruto % × rotación de inventario. La matriz prioriza qué SKU atacar: los AX se optimizan a stock mínimo, los CZ son candidatos a discontinuar"
+            ],
+            [
+              "Matriz de cobranzas + días de cobro",
+              "Cartera vieja poco reclamada = incobrabilidad oculta que el promedio de días de cobro no revela. Es calidad de cartera, no velocidad"
+            ],
+            [
+              "GAT + punto de equilibrio + Altman Z''",
+              "GAT = GAO × GAF. GAT alto + ventas cerca del equilibrio + Z'' en zona gris = bomba de tiempo"
+            ],
+            [
+              "GAF + WACC + estructura óptima",
+              "El multiplicador sube el ROE pero también el Ke y, pasado el óptimo, el WACC. La estructura óptima minimiza el WACC"
+            ],
+            [
+              "Altman Z'' + EVA",
+              "Ejes ORTOGONALES: Z'' pregunta ¿sobrevive?; EVA pregunta ¿vale la pena que sobreviva? Una empresa puede tener ambos signos cruzados"
+            ],
+            [
+              "CFROI vs ROIC contable",
+              "La divergencia es la huella dactilar de la distorsión inflacionaria. Justifica correr ambos en toda empresa argentina"
+            ]
+          ]
+        },
+        {
+          "t": "h",
+          "text": "El hallazgo no obvio: solvente y destructora de valor a la vez"
+        },
+        {
+          "t": "p",
+          "md": "Sí: una empresa puede tener un **Z'' alto** (no va a quebrar) y un **EVA negativo** (destruye valor). Son ejes ortogonales. El caso típico es la empresa madura, con poca deuda, planta amortizada y ROIC por debajo del WACC: sobrevive cómodamente y, año a año, borra riqueza de sus dueños."
+        },
+        {
+          "t": "idea",
+          "md": "Tener **ambos ejes en el tablero** evita el error de confundir \"no quiebra\" con \"crea valor\". Es, probablemente, el aporte diagnóstico más valioso de todo el catálogo, y el que más veces cambia la conversación con la dirección: la empresa que se sentía segura descubre que su seguridad es exactamente el síntoma."
+        }
+      ]
+    },
+    {
+      "title": "Familia D · Del valor interno al retorno del accionista",
+      "intro": "Cómo se conecta el EVA (métrica interna) con el TSR (métrica externa) del marco de BCG.",
+      "blocks": [
+        {
+          "t": "p",
+          "md": "Las métricas **internas** —EVA, CFROI, spread ROIC−WACC— miden creación de valor con los libros de la empresa. La métrica **externa** —TSR— la mide con el bolsillo del accionista. BCG descompone el TSR en tres bloques: crecimiento fundamental, cambio en el múltiplo de valuación y contribución de caja."
+        },
+        {
+          "t": "chain",
+          "title": "El puente entre lo interno y lo externo",
+          "nodes": [
+            "g (KVD) → crecimiento fundamental del TSR",
+            "Expectativas de spread futuro (RONIC−WACC) → múltiplo",
+            "Política de dividendos y deuda → contribución de caja"
+          ],
+          "caption": "El EVA explica el componente fundamental; el múltiplo captura las expectativas que el EVA contable no ve. Ninguno de los dos alcanza solo."
+        },
+        {
+          "t": "p",
+          "md": "Para empresas cerradas de la región, el TSR se aproxima con la variación del *equity value* del DCF más los dividendos, y el componente \"múltiplo\" se infiere de comparables regionales ajustados por riesgo país. Ese es el **TSR Sintético**, que se desarrolla completo en el módulo A.8."
+        }
+      ]
+    },
+    {
+      "title": "Familia E · Las extensiones del mapa",
+      "intro": "Cinco conexiones que amplían el catálogo hacia la decisión estratégica.",
+      "blocks": [
+        {
+          "t": "ul",
+          "items": [
+            "**DCF y valor terminal.** `EV = Σ FCFF_t/(1+WACC)^t + TV/(1+WACC)^n`; `Equity = EV − Deuda neta + activos no operativos`. El TV se calcula con la KVD, no con un múltiplo de salida arbitrario.",
+            "**Sensibilidad y Monte Carlo sobre los generadores.** Los inputs estocásticos son los nodos del árbol: g, RONIC, WACC, margen, rotación, ciclo. En mercados emergentes las variables de mayor varianza son inflación, riesgo país y tipo de cambio — ésas mandan en el ancho de la distribución.",
+            "**Opciones reales.** Diferir, expandir o abandonar valen más que su VAN estático. La **opción de esperar** vale mucho cuando el riesgo país es alto y volátil: esperar a que baje antes de hundir capital tiene valor económico cuantificable.",
+            "**Matrices de cartera ↔ asignación de capital por unidad.** La matriz BCG y la GE-McKinsey se conectan con finanzas vía **RONIC por unidad de negocio contra WACC de la unidad**: las unidades con RONIC > WACC reciben capital, las de RONIC < WACC se desinvierten. Eso operacionaliza lo que la KVD exige.",
+            "**Tasa de crecimiento sostenible.** `SGR = ROE × (1 − payout)`. Es el crecimiento máximo financiable sin emitir capital ni cambiar el apalancamiento. Crecer por encima obliga a emitir o a endeudarse, y eso cambia el WACC (se desarrolla en A.9)."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "La mirada JPR",
+      "intro": "Cómo se usa este mapa en un trabajo real y qué distingue un diagnóstico de una planilla de ratios.",
+      "blocks": [
+        {
+          "t": "p",
+          "md": "La diferencia entre un tablero de indicadores y un diagnóstico es exactamente ésta: el tablero muestra veinte números, el diagnóstico muestra **los tres puentes que explican por qué esos veinte números son los que son**. Un directorio no necesita ver el GMROI; necesita ver cuántos pesos de EVA le cuesta cada día de inventario de más."
+        },
+        {
+          "t": "steps",
+          "title": "El orden en que se recorre el mapa en un trabajo",
+          "items": [
+            {
+              "k": "1 · Admisibilidad",
+              "d": "Beneish y reexpresión. Sin información admisible, ningún cruce significa nada."
+            },
+            {
+              "k": "2 · El spread",
+              "d": "ROIC contable, ROIC normalizado y CFROI. La divergencia entre ellos ya es un hallazgo."
+            },
+            {
+              "k": "3 · DuPont de cinco factores",
+              "d": "Localizar la palanca: margen, rotación o estructura."
+            },
+            {
+              "k": "4 · Ciclo, ABC/XYZ y cobranzas",
+              "d": "Cuantificar la caja atrapada y traducirla a EVA con el WACC."
+            },
+            {
+              "k": "5 · GAT, equilibrio y Altman Z''",
+              "d": "Medir cuánto riesgo se está corriendo para obtener ese retorno."
+            },
+            {
+              "k": "6 · RONIC y KVD",
+              "d": "Decidir si crecer paga, y con eso la política de dividendos."
+            },
+            {
+              "k": "7 · El puente de valor",
+              "d": "Atribuir cada punto de variación del EVA a su generador. Ése es el entregable."
+            }
+          ]
+        },
+        {
+          "t": "warn",
+          "md": "Un WACC subestimado **fabrica EVA positivo falso**. Como el EVA depende del WACC, todo error en el costo de capital se traslada directo al diagnóstico de valor y contamina cada cruce posterior. Por eso el costo de capital (asignatura 3.1 y módulo A.6) se audita antes de cualquier conclusión sobre creación de valor."
+        }
+      ]
+    }
+  ],
+  "expertos": [
+    {
+      "author": "Tim Koller",
+      "credential": "McKinsey & Company — Valuation",
+      "md": "El crecimiento y el retorno sobre el capital invertido son los dos motores del valor, y su interacción no es intuitiva: crecer rápido con retornos bajos destruye valor más rápido que crecer despacio. Un solo número no puede decir eso; hace falta el árbol completo."
+    },
+    {
+      "author": "G. Bennett Stewart III",
+      "credential": "Stern Stewart & Co. — The Quest for Value",
+      "md": "El EVA no es un indicador más del tablero: es la traducción a pesos de la única pregunta que importa. Todo lo demás en el tablero existe para explicar de dónde salió ese número y qué palanca lo mueve."
+    },
+    {
+      "author": "Bartley Madden",
+      "credential": "HOLT Value Associates — CFROI Valuation",
+      "md": "El retorno contable de un solo período sobre activos depreciados a costo histórico no describe la economía del negocio. El CFROI existe porque, cuando hay inflación y activos viejos, el ROIC contable dice lo contrario de lo que pasa."
+    },
+    {
+      "author": "Juan Pablo Rossi",
+      "credential": "JPR Consulting — Director General",
+      "md": "Ningún indicador diagnostica solo. El diagnóstico aparece en los cruces: el spread dice si hay problema, DuPont dice dónde está, el ciclo dice cuánta caja lo alimenta y el Altman dice cuánto tiempo queda para resolverlo."
+    }
+  ],
+  "caso": {
+    "titulo": "El puente de valor de Maderas del Litoral",
+    "empresa": "Maderas del Litoral S.A. — atribución del EVA a sus generadores",
+    "contexto": "La empresa cerró el ejercicio con un EVA de +150 (miles), apenas positivo, sobre un capital invertido de 11.770 y un spread de +1,3 puntos. El año anterior el EVA había sido de +420. La dirección quiere saber, con nombre y apellido, qué generador se llevó los 270 de diferencia.\n\nLa tentación es explicar la caída \"por el contexto\". El trabajo del módulo es otro: descomponer la variación del EVA en la contribución exacta de cada generador —margen, rotación, capital de trabajo, costo de capital— de modo que la suma de las contribuciones reproduzca la variación total sin residuo.\n\nEse puente de valor es el entregable que va al directorio. No dice \"cayó el EVA\"; dice \"de los 270 que se perdieron, 130 vinieron del margen operativo, 95 del alargamiento del ciclo de efectivo y 45 de la suba del costo de capital\", y cada uno de esos tres números tiene una palanca de gestión asociada.",
+    "datos": [
+      {
+        "t": "table",
+        "title": "Comparativo de generadores (miles de $)",
+        "headers": [
+          "Generador",
+          "Año anterior",
+          "Año actual"
+        ],
+        "firstColLeft": true,
+        "rows": [
+          [
+            "Ventas",
+            "38.500",
+            "42.000"
+          ],
+          [
+            "EBIT normalizado",
+            "4.100",
+            "3.850"
+          ],
+          [
+            "NOPAT normalizado",
+            "2.665",
+            "2.502,5"
+          ],
+          [
+            "Margen NOPAT",
+            "6,9 %",
+            "6,0 %"
+          ],
+          [
+            "Capital invertido",
+            "10.480",
+            "11.770"
+          ],
+          [
+            "Rotación del capital",
+            "3,67x",
+            "3,57x"
+          ],
+          [
+            "ROIC",
+            "25,4 %",
+            "21,3 %"
+          ],
+          [
+            "WACC",
+            "19,4 %",
+            "20,0 %"
+          ],
+          [
+            "Spread",
+            "+6,0 pp",
+            "+1,3 pp"
+          ],
+          [
+            "EVA",
+            "+629",
+            "+150"
+          ],
+          [
+            "Ciclo de conversión de efectivo",
+            "36 días",
+            "43 días"
+          ]
+        ]
+      }
+    ],
+    "consigna": [
+      "Descomponer la variación del EVA en la contribución de margen, rotación, capital y costo de capital, verificando que la suma cierre sin residuo.",
+      "Aplicar DuPont de cinco factores a ambos ejercicios y decir cuál de los cinco factores explica más caída.",
+      "Cuantificar cuántos pesos de EVA cuesta cada día de alargamiento del ciclo de conversión de efectivo.",
+      "Verificar la identidad FCFF = FCFE + FCFD con los datos del caso y explicar qué revela el signo de cada flujo.",
+      "Determinar si la empresa es solvente y destructora de valor a la vez, cruzando Altman Z'' con el EVA."
+    ],
+    "metodologia": [
+      {
+        "k": "Aislar un generador por vez",
+        "d": "Recalcular el EVA cambiando solo un generador y manteniendo los demás en el valor del año base. La diferencia es la contribución de ese generador."
+      },
+      {
+        "k": "Cerrar el puente sin residuo",
+        "d": "La suma de contribuciones más el término de interacción debe reproducir exactamente la variación total del EVA."
+      },
+      {
+        "k": "Traducir días a pesos",
+        "d": "Cada día de ciclo son Ventas/365 pesos de capital adicional; multiplicados por el WACC dan el EVA que cuesta."
+      },
+      {
+        "k": "Cruzar con el eje de riesgo",
+        "d": "Z'' y GAT sobre los mismos ejercicios: ver si la caída de valor vino acompañada de más riesgo."
+      },
+      {
+        "k": "Cerrar con la palanca",
+        "d": "Cada contribución negativa tiene que salir del informe con una decisión asociada y un responsable."
+      }
+    ]
+  },
+  "ejercicio": {
+    "titulo": "Solvente y destructora de valor",
+    "enunciado": "Una empresa familiar de servicios industriales tiene el balance más sano de su sector: casi sin deuda, con caja, y un Altman Z'' de 6,8 —zona segura sin discusión—. Los dueños están tranquilos.\n\nSu NOPAT es de 900 (miles) sobre un capital invertido de 8.000, y su costo de capital, calculado correctamente para una empresa cerrada de mercado emergente, es del 17 %.",
+    "datos": [
+      {
+        "t": "table",
+        "title": "Datos",
+        "headers": [
+          "Concepto",
+          "Valor"
+        ],
+        "firstColLeft": true,
+        "rows": [
+          [
+            "NOPAT",
+            "900 miles $"
+          ],
+          [
+            "Capital invertido",
+            "8.000 miles $"
+          ],
+          [
+            "WACC",
+            "17,0 %"
+          ],
+          [
+            "Altman Z''",
+            "6,8 (zona segura)"
+          ],
+          [
+            "Deuda financiera",
+            "400 miles $"
+          ],
+          [
+            "Antigüedad promedio de la planta",
+            "14 años, casi amortizada"
+          ]
+        ]
+      }
+    ],
+    "preguntas": [
+      "¿La empresa crea o destruye valor?",
+      "¿Cómo se explica que sea solvente y destructora a la vez?",
+      "¿Qué le pasaría al diagnóstico si los bienes de uso se valuaran a mercado en lugar de a valor contable?",
+      "¿Qué decisión debería tomar la dirección?"
+    ],
+    "solucion": [
+      {
+        "t": "formula",
+        "name": "ROIC y spread",
+        "expr": "ROIC = 900 / 8.000 = 11,25 %     Spread = 11,25 % − 17,00 % = −5,75 pp"
+      },
+      {
+        "t": "formula",
+        "name": "EVA",
+        "expr": "EVA = 8.000 × (−0,0575) = −460 miles $ por año"
+      },
+      {
+        "t": "p",
+        "md": "La empresa **destruye 460 mil por año**, todos los años. Y no va a quebrar: el Z'' de 6,8 es correcto. Los dos indicadores dicen la verdad porque **miden ejes ortogonales**: el Z'' pregunta *¿sobrevive?* y el EVA pregunta *¿vale la pena que sobreviva?*."
+      },
+      {
+        "t": "idea",
+        "md": "La ausencia de deuda es, acá, el mecanismo del problema y no la solución. Sin acreedores que exijan, nadie le pone precio al capital de los dueños — y el capital propio se comporta como si fuera gratis. **La empresa no quiebra justamente porque nadie le cobra el costo del capital que consume.**"
+      },
+      {
+        "t": "warn",
+        "md": "Con la planta casi amortizada, el capital invertido a valor contable está **subvaluado**. Valuar los bienes de uso a mercado sube el denominador y hunde todavía más el ROIC: el diagnóstico contable de 11,25 % es el escenario optimista. Es exactamente el fenómeno que separa al CFROI del ROIC contable (familia A.5)."
+      },
+      {
+        "t": "p",
+        "md": "**La decisión:** o el ROIC sube por encima del 17 % —vía margen, vía rotación, o vía desinversión del capital que no rinde—, o el capital tiene que salir de la empresa e ir a un uso que sí lo remunere. Distribuir, en este cuadro, no es imprudencia: es la asignación de capital correcta (módulo A.2)."
+      }
+    ]
+  },
+  "bibliografia": [
+    "Koller, Goedhart & Wessels — *Valuation*, capítulos de value driver tree y análisis de desempeño",
+    "Stewart, G. B. — *The Quest for Value* (EVA, MVA y el spread)",
+    "Madden, B. — *CFROI Valuation: A Total System Approach* (HOLT)",
+    "Damodaran, A. — *Applied Corporate Finance*",
+    "Pereiro, L. — *Valuation of Companies in Emerging Markets*",
+    "Altman, E. — “Corporate Financial Distress” y las versiones Z'' para mercados emergentes",
+    "BCG — *Value Creators Report* (descomposición del TSR)"
+  ]
+}

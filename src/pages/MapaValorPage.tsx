@@ -3,7 +3,8 @@ import { ArrowLeft, ArrowDown } from 'lucide-react'
 
 // ============================================================================
 // Mapa de interrelaciones de los generadores de valor — la cadena causal que
-// atraviesa las 16 asignaturas. Cada nodo enlaza a su asignatura.
+// atraviesa las 16 asignaturas del núcleo. Cada nodo enlaza a su asignatura.
+// Los Módulos Avanzados A.6 y A.7 desarrollan esta misma cadena en profundidad.
 // ============================================================================
 
 type Node = {

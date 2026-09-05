@@ -20,15 +20,27 @@ import { av2_capital } from './av2_capital'
 import { av3_conductual } from './av3_conductual'
 import { av4_esg } from './av4_esg'
 import { av5_financiamiento } from './av5_financiamiento'
+import { av6_canal_riesgo } from './av6_canal_riesgo'
+import { av7_interrelaciones } from './av7_interrelaciones'
+import { av8_tsr } from './av8_tsr'
+import { av9_paradoja } from './av9_paradoja'
+import { av10_comunicacion } from './av10_comunicacion'
+import { av11_diagnostico_integral } from './av11_diagnostico_integral'
 
 // Registro de la Maestría: 16 asignaturas del núcleo (cuatrimestres 1–4) más
-// los Módulos Avanzados (temas de frontera y tendencias).
+// 11 Módulos Avanzados (temas de frontera y tendencias) = 27 módulos.
+// Los avanzados A.6–A.11 profundizan los cuerpos metodológicos propios de la
+// firma: canal del riesgo, interrelaciones entre generadores de valor, TSR
+// sintético, paradoja del crecimiento, comunicación de resultados y
+// diagnóstico integral por recomposición.
 export const asignaturas: Asignatura[] = [
   a1_1, a1_2, a1_3, a1_4,
   a2_1, a2_2, a2_3, a2_4,
   a3_1, a3_2, a3_3, a3_4,
   a4_1, a4_2, a4_3, a4_4,
   av1_ma, av2_capital, av3_conductual, av4_esg, av5_financiamiento,
+  av6_canal_riesgo, av7_interrelaciones, av8_tsr, av9_paradoja,
+  av10_comunicacion, av11_diagnostico_integral,
 ]
 
 export type { Asignatura }

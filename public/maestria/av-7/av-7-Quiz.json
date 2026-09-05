@@ -1,0 +1,366 @@
+{
+  "cod": "A.7",
+  "nombre": "Mapa Maestro de Interrelaciones: análisis de segundo y tercer orden entre indicadores",
+  "preguntas": [
+    {
+      "id": "q1",
+      "pregunta": "El indicador maestro del que cuelga todo el mapa de interrelaciones es:",
+      "opciones": [
+        "El EBITDA.",
+        "El spread (ROIC − WACC), monetizado como EVA.",
+        "El margen bruto.",
+        "La liquidez corriente."
+      ],
+      "correcta": 1,
+      "justificacion": "Los diecinueve conceptos del catálogo se ordenan alrededor del spread, que es la única medida de si la empresa crea o destruye valor económico."
+    },
+    {
+      "id": "q2",
+      "pregunta": "Comparar directamente el ROIC con el EVA es un error porque:",
+      "opciones": [
+        "El EVA es más moderno.",
+        "El ROIC es una tasa y el EVA un monto: no son dimensionalmente comparables.",
+        "El ROIC no considera impuestos.",
+        "El EVA no existe en empresas cerradas."
+      ],
+      "correcta": 1,
+      "justificacion": "El encadenamiento correcto es ROIC (%) vs WACC (%) → spread (%) → × capital → EVA ($). El EVA es el spread traducido a pesos."
+    },
+    {
+      "id": "q3",
+      "pregunta": "La fórmula del key value driver de McKinsey es:",
+      "opciones": [
+        "Valor = EBITDA × múltiplo.",
+        "Valor = NOPAT₁ × (1 − g/RONIC) / (WACC − g).",
+        "Valor = Activos − Pasivos.",
+        "Valor = FCFE / Ke."
+      ],
+      "correcta": 1,
+      "justificacion": "Esa única ecuación une rentabilidad, crecimiento, reinversión y costo de capital, y es también la fórmula del valor terminal."
+    },
+    {
+      "id": "q4",
+      "pregunta": "La identidad de reinversión establece que:",
+      "opciones": [
+        "IR = WACC × g.",
+        "g = RONIC × IR, y por lo tanto IR = g/RONIC.",
+        "IR es una decisión libre de la dirección.",
+        "g = ROIC + WACC."
+      ],
+      "correcta": 1,
+      "justificacion": "La tasa de reinversión no es una decisión libre: dado un objetivo de crecimiento y un retorno del capital nuevo, queda determinada."
+    },
+    {
+      "id": "q5",
+      "pregunta": "El DuPont de cinco factores descompone el ROE en:",
+      "opciones": [
+        "Margen, rotación y apalancamiento.",
+        "Carga fiscal × carga de intereses × margen operativo × rotación de activos × multiplicador de apalancamiento.",
+        "Ventas, costos y gastos.",
+        "ROIC, WACC y spread."
+      ],
+      "correcta": 1,
+      "justificacion": "El factor que distingue la versión de cinco de la de tres es la carga de intereses (EBT/EBIT), que en Argentina explota por las tasas nominales."
+    },
+    {
+      "id": "q6",
+      "pregunta": "El puente ROIC → ROE es ROE = ROIC + [ROIC − Kd(1−t)] × (D/E). Eso significa que apalancarse:",
+      "opciones": [
+        "Siempre mejora el ROE.",
+        "Agrega ROE solo si el ROIC supera al costo de la deuda después de impuestos.",
+        "Nunca conviene.",
+        "No afecta el ROE."
+      ],
+      "correcta": 1,
+      "justificacion": "Si el ROIC es menor que Kd(1−t), el segundo término es negativo y el apalancamiento amplifica la destrucción en lugar de la creación."
+    },
+    {
+      "id": "q7",
+      "pregunta": "La identidad de cierre de los tres flujos es:",
+      "opciones": [
+        "FCFF = FCFE − FCFD.",
+        "FCFF = FCFE + FCFD.",
+        "FCFE = FCFF + FCFD.",
+        "No existe una identidad entre ellos."
+      ],
+      "correcta": 1,
+      "justificacion": "La caja que genera la firma se reparte entre accionistas (FCFE) y acreedores (FCFD). Si la identidad no cierra, hay un error de armado en el modelo."
+    },
+    {
+      "id": "q8",
+      "pregunta": "El test de consistencia obligatorio de un modelo de valuación es:",
+      "opciones": [
+        "Que el EBITDA crezca.",
+        "Que Equity Value = EV − Deuda neta coincida con descontar FCFE a Ke.",
+        "Que el WACC sea menor al ROIC.",
+        "Que el valor terminal sea el 50 % del total."
+      ],
+      "correcta": 1,
+      "justificacion": "Las dos rutas —vía firma y vía accionista— deben converger al mismo valor del patrimonio. Si no lo hacen, hay una inconsistencia entre flujos y tasas."
+    },
+    {
+      "id": "q9",
+      "pregunta": "Que el CFROI sea mucho menor que el ROIC contable es señal de:",
+      "opciones": [
+        "Un error de cálculo.",
+        "Distorsión inflacionaria o activos subvaluados a costo histórico.",
+        "Excelente gestión.",
+        "Exceso de caja."
+      ],
+      "correcta": 1,
+      "justificacion": "Es la huella dactilar del problema argentino: activos viejos depreciados a costo histórico achican el denominador del ROIC y lo inflan artificialmente."
+    },
+    {
+      "id": "q10",
+      "pregunta": "La cadena que va del ciclo de conversión de efectivo al valor es de:",
+      "opciones": [
+        "Primer orden.",
+        "Cuarto orden: CCE → capital de trabajo → capital invertido → ROIC → EVA.",
+        "Segundo orden.",
+        "No existe conexión."
+      ],
+      "correcta": 1,
+      "justificacion": "Cuantificar esa cadena es lo que convierte una gestión operativa de cobranzas en una decisión financiera medible en pesos de valor."
+    },
+    {
+      "id": "q11",
+      "pregunta": "El \"EVA atrapado\" en el capital de trabajo se calcula como:",
+      "opciones": [
+        "Capital de trabajo × ROIC.",
+        "ΔCapital de trabajo evitable × WACC.",
+        "Ventas / 365.",
+        "Inventario × margen."
+      ],
+      "correcta": 1,
+      "justificacion": "El capital inmovilizado innecesariamente igual exige el costo del capital; ese costo es el EVA que se está perdiendo por no acortar el ciclo."
+    },
+    {
+      "id": "q12",
+      "pregunta": "Acortar el ciclo de conversión de efectivo produce:",
+      "opciones": [
+        "Solo un ahorro de intereses.",
+        "Una liberación de caja DE UNA SOLA VEZ más un menor capital invertido permanente.",
+        "Un aumento de las ventas.",
+        "Una suba del WACC."
+      ],
+      "correcta": 1,
+      "justificacion": "El ΔWC negativo es un FCFF positivo extraordinario en el período, y la reducción del capital sube el ROIC de todos los períodos siguientes."
+    },
+    {
+      "id": "q13",
+      "pregunta": "El valor terminal debe calcularse con:",
+      "opciones": [
+        "El ROIC histórico.",
+        "El RONIC de largo plazo, que en competencia tiende al WACC.",
+        "Un múltiplo de salida arbitrario.",
+        "El promedio de los últimos cinco años."
+      ],
+      "correcta": 1,
+      "justificacion": "Usar el ROIC histórico en el terminal proyecta a perpetuidad una ventaja competitiva que la competencia normalmente erosiona: es el error que infla más valuaciones."
+    },
+    {
+      "id": "q14",
+      "pregunta": "Mezclar g nominal en pesos con un WACC en dólares:",
+      "opciones": [
+        "Es la práctica estándar en Argentina.",
+        "Produce un resultado sin sentido económico.",
+        "Es conservador.",
+        "Solo afecta el valor terminal."
+      ],
+      "correcta": 1,
+      "justificacion": "La consistencia de moneda entre flujo y tasa no es un detalle: mezclarlas convierte la valuación en un número que no describe nada."
+    },
+    {
+      "id": "q15",
+      "pregunta": "En el cruce spread + DuPont, el spread responde SI hay problema y DuPont responde:",
+      "opciones": [
+        "CUÁNDO ocurrió.",
+        "DÓNDE está la palanca: margen, rotación o estructura.",
+        "QUIÉN es responsable.",
+        "CUÁNTO vale la empresa."
+      ],
+      "correcta": 1,
+      "justificacion": "Es el primer cruce que corre el motor de diagnóstico, y el que orienta todo el trabajo posterior."
+    },
+    {
+      "id": "q16",
+      "pregunta": "El GMROI se descompone en:",
+      "opciones": [
+        "Margen bruto % × rotación de inventario.",
+        "Ventas / activos.",
+        "NOPAT / capital.",
+        "EBITDA / ventas."
+      ],
+      "correcta": 0,
+      "justificacion": "Esa descomposición muestra que se puede llegar al mismo GMROI con mucho margen y poca rotación, o al revés — y que la palanca a mover es distinta en cada caso."
+    },
+    {
+      "id": "q17",
+      "pregunta": "En la matriz ABC/XYZ, los SKU tipo AX son:",
+      "opciones": [
+        "Candidatos a discontinuar.",
+        "Alto valor y demanda estable: se optimizan a stock mínimo.",
+        "Bajo valor y demanda errática.",
+        "Irrelevantes."
+      ],
+      "correcta": 1,
+      "justificacion": "Al ser predecibles y valiosos, permiten trabajar con stock ajustado sin riesgo de quiebre. Los CZ —bajo valor y errático— son los candidatos a discontinuar."
+    },
+    {
+      "id": "q18",
+      "pregunta": "La matriz de vencimiento contra días de reclamo revela:",
+      "opciones": [
+        "La velocidad de cobranza.",
+        "La CALIDAD de la cartera: deuda vieja poco reclamada es incobrabilidad oculta.",
+        "El margen por cliente.",
+        "La rotación de inventario."
+      ],
+      "correcta": 1,
+      "justificacion": "El promedio de días de cobro no muestra esa concentración de riesgo; la matriz sí, porque cruza antigüedad con esfuerzo de gestión."
+    },
+    {
+      "id": "q19",
+      "pregunta": "El GAT (grado de apalancamiento total) es:",
+      "opciones": [
+        "GAO + GAF.",
+        "GAO × GAF.",
+        "GAO / GAF.",
+        "Independiente de ambos."
+      ],
+      "correcta": 1,
+      "justificacion": "Los dos apalancamientos se multiplican: los costos fijos operativos amplifican la variación de ventas sobre el EBIT, y los intereses amplifican la del EBIT sobre la utilidad."
+    },
+    {
+      "id": "q20",
+      "pregunta": "La combinación GAT alto + ventas cerca del equilibrio + Z'' en zona gris se lee como:",
+      "opciones": [
+        "Una empresa eficiente.",
+        "Una bomba de tiempo.",
+        "Una oportunidad de compra.",
+        "Un cuadro normal."
+      ],
+      "correcta": 1,
+      "justificacion": "Un pequeño retroceso de ventas se amplifica por el GAT sobre una empresa que ya está en el límite y sin colchón de solvencia."
+    },
+    {
+      "id": "q21",
+      "pregunta": "Una empresa con Altman Z'' alto y EVA negativo:",
+      "opciones": [
+        "Es un error de cálculo.",
+        "Es solvente y destructora de valor a la vez: los ejes son ortogonales.",
+        "Es imposible.",
+        "Está a punto de quebrar."
+      ],
+      "correcta": 1,
+      "justificacion": "El Z'' pregunta ¿sobrevive? y el EVA pregunta ¿vale la pena que sobreviva? El caso típico es la empresa madura, sin deuda y con ROIC por debajo del WACC."
+    },
+    {
+      "id": "q22",
+      "pregunta": "En una empresa sin deuda que destruye valor, la ausencia de acreedores:",
+      "opciones": [
+        "Resuelve el problema.",
+        "Es parte del mecanismo: sin nadie que exija, el capital propio se comporta como si fuera gratis.",
+        "No tiene relación.",
+        "Sube el ROIC."
+      ],
+      "correcta": 1,
+      "justificacion": "La empresa no quiebra precisamente porque nadie le cobra el costo del capital que consume, y eso vuelve invisible la destrucción."
+    },
+    {
+      "id": "q23",
+      "pregunta": "Un WACC subestimado produce:",
+      "opciones": [
+        "Un diagnóstico más prudente.",
+        "EVA positivo falso, que contamina todos los cruces posteriores.",
+        "Un valor terminal menor.",
+        "Ningún efecto sobre el diagnóstico."
+      ],
+      "correcta": 1,
+      "justificacion": "Como el EVA depende del WACC, todo error en el costo de capital se traslada directo al diagnóstico de creación de valor. Por eso se audita antes de concluir."
+    },
+    {
+      "id": "q24",
+      "pregunta": "En el marco de BCG, el TSR se descompone en:",
+      "opciones": [
+        "Ventas, costos y gastos.",
+        "Crecimiento fundamental, cambio en el múltiplo y contribución de caja.",
+        "ROIC, WACC y spread.",
+        "Activo, pasivo y patrimonio."
+      ],
+      "correcta": 1,
+      "justificacion": "Esos tres bloques permiten ver de dónde vino el retorno del accionista y qué palanca lo mueve, cosa que el resultado contable no muestra."
+    },
+    {
+      "id": "q25",
+      "pregunta": "La conexión entre las matrices de cartera (BCG, GE-McKinsey) y las finanzas se hace vía:",
+      "opciones": [
+        "El EBITDA por unidad.",
+        "El RONIC por unidad de negocio contra el WACC de esa unidad.",
+        "Las ventas totales.",
+        "La participación de mercado sola."
+      ],
+      "correcta": 1,
+      "justificacion": "Eso operacionaliza la asignación de capital que la KVD exige: capital hacia las unidades con RONIC > WACC, desinversión donde RONIC < WACC."
+    },
+    {
+      "id": "q26",
+      "pregunta": "La tasa de crecimiento sostenible SGR = ROE × (1 − payout) representa:",
+      "opciones": [
+        "El crecimiento máximo posible.",
+        "El crecimiento máximo financiable sin emitir capital ni cambiar el apalancamiento.",
+        "El crecimiento de la industria.",
+        "El crecimiento nominal."
+      ],
+      "correcta": 1,
+      "justificacion": "Crecer por encima del SGR obliga a emitir o a endeudarse, y eso cambia la estructura de capital y por lo tanto el WACC."
+    },
+    {
+      "id": "q27",
+      "pregunta": "La opción real de esperar vale más cuando:",
+      "opciones": [
+        "El riesgo país es bajo y estable.",
+        "El riesgo país es alto y volátil.",
+        "La empresa no tiene deuda.",
+        "El WACC es bajo."
+      ],
+      "correcta": 1,
+      "justificacion": "Bajo alta incertidumbre, conservar la flexibilidad de no hundir capital todavía tiene valor económico cuantificable, y el VAN estático no lo captura."
+    },
+    {
+      "id": "q28",
+      "pregunta": "En Monte Carlo sobre el árbol de generadores, las variables que mandan en el ancho de la distribución en mercados emergentes son:",
+      "opciones": [
+        "El margen bruto y los gastos administrativos.",
+        "Inflación, riesgo país y tipo de cambio.",
+        "El número de empleados.",
+        "La antigüedad de la planta."
+      ],
+      "correcta": 1,
+      "justificacion": "Son las variables de mayor varianza del entorno; concentrar el esfuerzo de modelización en ellas es lo que hace útil la simulación."
+    },
+    {
+      "id": "q29",
+      "pregunta": "El puente de valor que se lleva al directorio debe:",
+      "opciones": [
+        "Mostrar veinte indicadores.",
+        "Atribuir cada punto de variación del EVA a su generador, cerrando sin residuo.",
+        "Concluir con el EBITDA.",
+        "Evitar las fórmulas."
+      ],
+      "correcta": 1,
+      "justificacion": "La diferencia entre un tablero y un diagnóstico es que el segundo explica POR QUÉ los números son los que son, con contribuciones que suman exactamente la variación total."
+    },
+    {
+      "id": "q30",
+      "pregunta": "La convención JPR de capital invertido excluye del denominador:",
+      "opciones": [
+        "Los bienes de uso.",
+        "La caja operativa mínima y la deuda financiera.",
+        "Las cuentas por cobrar.",
+        "Los proveedores."
+      ],
+      "correcta": 1,
+      "justificacion": "El ROIC mide retorno sobre capital operativo, no sobre caja ociosa ni sobre la estructura de pasivos. Además busca los bienes de uso a valor de mercado, no a costo histórico."
+    }
+  ]
+}
